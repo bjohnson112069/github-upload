@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Robot:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --font-family-normal: Arial, Helvetica, sans-serif;
+  --black: #000000;
+  --white: #f0f0f0;
+  --gray: #f4f4f4;
+  --gray-dark: #f9f9f9;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  --brown: #926239;
+  font-family: var(--font-family-normal);
+  margin: 0;
+  font-size: 17px;
+  color: var(--brown);
+  line-height: 1.6;
+}
+
+#showcase {
+  background-image: url("img/showcase.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.2rem;
+}
+
+#showcase h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+#showcase p {
+  font-size: 1.2rem;
+}
+
+#showcase .button:hover {
+  background: var(--brown);
+  color: var(--white);
+}
+
+.button {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--brown);
+  border: var(--brown) 1px solid;
+  padding: 0.6rem;
+  border-radius: 10px;
+  margin-top: 1.2rem;
+}
+
+#section-a {
+  padding: 1.2rem;
+  background: var(--brown);
+  color: var(--white);
+  text-align: center;
+}
+
+#section-b {
+  padding: 1.2rem;
+  background: var(--gray);
+  text-align: center;
+}
+
+#section-c {
+  display: flex;
+}
+
+#section-c .box-1,
+#section-c .box-3 {
+  background: var(--brown);
+  color: var(--white);
+}
+
+#section-c .box-2 {
+  background: var(--gray-dark);
+}
+
+#section-c div {
+  padding: 1.2rem;
+}
+
+<!-- Responsive CSS Styles -- > @media screen and (max-width: 768px) {
+}

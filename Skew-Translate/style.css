@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Robot:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --font-family-normal: "Roboto", Sans-Serif;
+  --black: #000000;
+  --white: #f0f0f0;
+  --gray: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  font-family: var(--font-family-normal);
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  /*display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;*/
+  background-color: var(--yellow);
+}
+
+.image-container {
+  background-color: rgba (0, 0, 0, 0);
+  padding: 0;
+  margin: 0;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.d {
+  width: 500px;
+  height: 500px;
+}
+
+.d1 {
+  background-color: var(--red);
+  padding: 0;
+  transform: skewX(45deg) translateX(50%);
+}
+
+.d2 {
+  background-color: var(--orange);
+}
+
+.d3 {
+  background-color: var(--yellow);
+}
+
+.d4 {
+  background-color: var(--green);
+}
+
+.d5 {
+  background-color: var(--blue);
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+}

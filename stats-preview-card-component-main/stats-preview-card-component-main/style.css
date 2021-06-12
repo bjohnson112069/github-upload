@@ -1,0 +1,134 @@
+:root {
+  --font-family-header: "Inter", sans-serif;
+  --font-family-normal: "Lexend Deca", sans-serif;
+  --black: #000000;
+  --white: #f0f0f0;
+  --gray: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+  font-family: var(--font-family-normal);
+  margin: 0;
+}
+
+body {
+  background-color: var(--main-background);
+  max-width: 1440px;
+  margin: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "left right";
+  background-color: var(--card-background);
+  margin: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#left-container {
+  grid-area: left;
+  padding: 4rem;
+}
+
+#left-container h1,
+h2 {
+  font-family: var(--font-family-header);
+  color: var(--main-heading-stats);
+  font-weight: 700;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+#left-container h2 {
+  margin: 2rem 0 0 0;
+}
+
+#left-container span {
+  color: var(--accent);
+}
+
+#left-container p {
+  color: var(--main-paragraph);
+  line-height: 1.75rem;
+  /*margin-bottom: 4rem;*/
+}
+
+#stats-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.stats-container {
+  display: block;
+}
+
+.stats-container p {
+  color: var(--main-heading-stats);
+  padding: 0;
+  margin: 0;
+}
+
+#right-container {
+  grid-area: right;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--accent);
+}
+
+#right-container img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+/* small screens */
+@media screen and (max-width: 550px) {
+  body {
+    max-width: 375px;
+    margin: auto;
+  }
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "right"
+      "left";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  #left-container {
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+  #left-container h1,
+  h2 {
+    text-align: center;
+  }
+  #stats-grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+  }
+  #left-container p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  #left-container {
+    padding: 0;
+    margin: 0;
+  }
+}

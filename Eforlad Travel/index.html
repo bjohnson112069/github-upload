@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sirin+Stencil&display=swap" rel="stylesheet"> 
+        <script src="script.js"></script>
+        <title>Eforlad Travel</title>
+    </head>
+    <body>
+        <header id="header-section" class="section-container">
+            <div class="content-container">
+                <div id="header-container">
+                    <div class="logo">
+                        <a href="" target="_blank"><img src="img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="header-row-container contact-information-container">
+                        <!--
+                        <div class="skew-image">
+                            <img src="img/top_arrow.png" alt="skew image"> 
+                        </div>
+                        -->
+                        <div class="icon-name-container address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>145 Street Road, New York</p>
+                        </div>
+                        <div class="icon-name-container phone">
+                            <i class="fas fa-phone-square"></i>
+                            <p>+71 5678954378</p>
+                        </div>
+                        <div class="icon-name-container email">
+                            <i class="fas fa-envelope"></i>
+                            <p>Demo@hmail.com</p>
+                        </div>
+                    </div>
+                    <div class="header-row-container nav-bar-container">
+                        <nav class="header-nav-bar">
+                            <ul>
+                                <li><a href="#home-section" class="active">Home</a></li>
+                                <li><a href="#about-section">About</a></li>
+                                <li><a href="#travel-section">Travel</a></li>
+                                <li><a href="#blog-section">Blog</a></li>
+                                <li><a href="#contact-section">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+       
+        <!-- HOME (FORM) SECTION -->
+        <section id="home-section" class="section-container">
+            <!-- No Content Container -->
+            <div id="home-container">
+                <h1 class="cyan-text">AMERICA</h1>
+                <h1 class="white-text">AMAZING TOUR</h1>
+                <div class="orange-button black-hover">
+                    <a href="" target="_blank">Read More</a>
+                </div>
+                <!-- container with inline-block to center align with text above it -->
+                <div class="content-container" id="search-form-container">
+                    <div class="form-header">Find Your Tour</div>
+                    <form class="search-form" action="#">
+                        <label for="keywords" class="label-container keywords-label">Keywords</label>
+                        <input id="keywords" class="input-container keywords-input" name="keywords" placeholder="Enter Key Words" type="text">
+                        <label for="category" class="label-container category-label">Category</label>
+                        <select id="category" class="input-container category-input" name="category">
+                            <option value="Any" selected>Any</option>
+                            <option value="Option 1">Option 1</option>
+                            <option value="Option 2">Option 2</option>
+                            <option value="Option 3">Option 3</option>
+                        </select>
+                        <label for="min-price" class="label-container min-price-label">Min Price</label>
+                        <input id="min-price" class="input-container min-price-input" name="min-price" placeholder="00.0" type="text">
+                        <label for="duration" class="label-container duration-label">Duration</label>
+                        <input id="duration" class="input-container duration-input" name="duration" placeholder="Any" type="text">
+                        <label for="date" class="label-container date-label">Date</label>
+                        <input id="date" class="input-container date-input" name="date" placeholder="mm/dd/yyyy" type="date">
+                        <label for="max-price" class="label-container max-price-label">Max Price</label>
+                        <input id="max-price" class="input-container max-price-input" name="max-price" placeholder="00.0" type="text">
+                        <div class="orange-button search-button">
+                            <a href="" target="_blank">Search</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about-section" class="section-container">
+            <div class="content-container" id="about-us-container">
+                <div class="section-title">
+                    <h2>about our travel agency</h2>
+                    <p >fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                </div>
+            <div id="plane-container">
+                    <img src="img/plane-img.png" alt="plane image"> 
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure thereThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
+                    </p>
+                </div>
+                <div class="orange-button">
+                    <a href="" target="_blank">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAVEL SECTION -->
+        <section id="travel-section" class="section-container">
+            <div class="content-container" id="about-us-container">
+                <div class="section-title">
+                    <h2>Select Offers For Traveling</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                </div>
+                <!-- Travel Offering Grid -->
+                <div id="travel-grid-container">
+                    <div class="travel-offering">
+                        <img src="img/travel-icon.png" alt="different-countries>">
+                        <h3>Different Countrys</h3>
+                        <p>going to use a passage of Lorem Ipsum, you need to be</p>
+                        <div class="orange-button">
+                            <a href="" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="travel-offering">
+                        <img src="img/travel-icon2.png" alt="mountain-tours>">
+                        <h3>Mountain Tours</h3>
+                        <p>going to use a passage of Lorem Ipsum, you need to be</p>
+                        <div class="orange-button">
+                            <a href="" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="travel-offering">
+                        <img src="img/travel-icon3.png" alt="bus-tours>">
+                        <h3>Bus Tours</h3>
+                        <p>going to use a passage of Lorem Ipsum, you need to be</p>
+                        <div class="orange-button">
+                            <a href="" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="travel-offering">
+                        <img src="img/travel-icon4.png" alt="summer-rest>">
+                        <h3>Summer Rest</h3>
+                        <p>going to use a passage of Lorem Ipsum, you need to be</p>
+                        <div class="orange-button">
+                            <a href="" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAVEL SECTION: WEEKEND -->
+        <section id="weekend-section" class="section-container">
+            <div class="content-container" id="weekend-container">
+                <div class="section-title">
+                    <h2>Weekend in New York, London</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                </div>
+            </div>
+            <img src="img/London.jpg" alt="london-image">
+        </section>
+
+        <!-- TRAVEL SECTION: TOURS -->
+        <section id="tour-preview-section" class="section-container">
+            <div class="content-container" id="best-tours-container">
+                <div class="section-title">
+                    <h2>The Best Tours</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                </div>
+                <p><span>WORK IN PROGRESS (javascript: carousel)</span></p>
+                <!-- Best Tours Grid/Carousel -->
+                <div id="preview-grid-container">
+                    <div class="travel-preview-container">
+                        <img src="img/1.jpg" alt="prevew-image>">
+                        <h3>London</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in soe suffk even slightly believable. If y be sure there</p>
+                    </div>
+                    <div class="travel-preview-container">
+                        <img src="img/2.jpg" alt="prevew-image>">
+                        <h3>New York</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in soe suffk even slightly believable. If y be sure there</p>
+                    </div>
+                    <div class="travel-preview-container">
+                        <img src="img/3.jpg" alt="prevew-image>">
+                        <h3>Holiday Tour</h3>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in soe suffk even slightly believable. If y be sure there</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAVEL SECTION: AMAZING -->
+        <section id="amazing-section" class="section-container">
+            <div class="content-container" id="amazing-container">
+                <div class="section-title" id="amazing-section-title">
+                    <h2>Amazing London Tour</h2>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+                </div>
+                <div class="orange-button" id="book-now">
+                    <a href="" target="_blank">Book Now</a>
+                </div>
+                <div class="orange-button" id="get-more">
+                    <a href="" target="_blank">Get More</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TRAVEL SECTION: WEEKEND -->
+        <section id="blog-section" class="section-container">
+            <div class="content-container">
+                <div class="section-title">
+                    <h2>Our Blog</h2>
+                    <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                </div>
+                <div id="blog-grid-container">
+                    <div class="blog-container">
+                        <p class="date-tag">4 Feb 2019</p>
+                        <img src="img/blog-image0.jpg" alt="blog-image">
+                        <div class="blog-social-counters">
+                            <p id="post">Post By: Travel Agency</p>
+                            <p id="like"><span class="span-aqua">05 </span>Like</p>
+                            <p id="comment"><span class="span-teal">06 </span>Comment</p>
+                        </div>
+                        <div class="blog-comments">
+                            <h3>London Amazing Tour</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web</p>
+                        </div>
+                    </div>
+                    <div class="blog-container">
+                        <p class="date-tag">10 Feb 2019</p>
+                        <img src="img/blog-image.jpg" alt="blog-image">
+                        <div class="blog-social-counters">
+                            <p id="post">Post By: Travel Agency</p>
+                            <p id="like"><span class="span-aqua">05 </span>Like</p>
+                            <p id="comment"><span class="span-teal">06 </span>Comment</p>
+                        </div>
+                        <div class="blog-comments">
+                            <h3>London Amazing Tour</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                
+        <!-- FOOTER SECTION -->
+        <footer id="footer-section" class="section-container">
+            <div class="content-container" id="contact-container">
+                <div id="contact-grid-container">
+                    <!-- ICONS -->
+                    <div id="icon-container">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- CONTACT US -->
+                    <div id="contact-us-container">
+                        <h3>Contact Us</h3>
+                        <p>123 Second Street Fifth Avenue</p>
+                        <p>Manhattan, New York</p>
+                        <p>+987 654 3210</p>
+                    </div>
+                    <!-- ADDITIONAL LINKS -->
+                    <div id="additional-links-container">
+                        <h3>Additional Links</h3>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- CONTACT FORM -->
+                    <div id="subscribe-form-container">
+                        <h3>Subscribe to our News Letter</h3>
+                        <form id="subscribe-form">
+                            <input id="subscribe-name" type="text" placeholder="Name">
+                            <input id="subscribe-email" type="email" placeholder="Email">
+                            <textarea id="subscribe-comment" type="text" placeholder="Comment"></textarea>
+                            <button class="subscribe-button" id="subscribe-submit" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="copyright">
+                    <p class="brand">2021 
+                        <span class="span-blue">J</span><span class="span-red">O</span><span class="span-orange">H</span><span class="span-blue">N</span><span class="span-green">S</span><span class="span-red">O</span><span class="span-orange">N</span><i class="fab fa-digital-ocean"></i>DESIGNS
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

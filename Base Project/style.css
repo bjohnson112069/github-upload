@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Robot:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --font-family-normal: "Roboto", Sans-Serif;
+  --font-family-brand: "Black Ops One", cursive;
+  --font-family-brand-alt: "Sirin Stencil", cursive;
+  --black: #000000;
+  --white: #f0f0f0;
+  --gray: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  font-family: var(--font-family-normal);
+  margin: 0;
+}
+.brand {
+  font-family: var(--font-family-brand);
+  font-size: 0.75rem;
+}
+
+.span-blue {
+  color: var(--blue);
+}
+.span-red {
+  color: var(--red);
+}
+.span-orange {
+  color: var(--orange);
+}
+.span-green {
+  color: var(--green);
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+}
