@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Robot:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --font-family-normal: "Kumbh Sans", sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  font-family: var(--font-family-normal);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 284px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark-gray);
+  padding: 0;
+  margin: 0;
+}
+
+span {
+  color: var(--dark-gray);
+  padding: 0 0.5rem;
+}
+
+.page-container {
+  max-width: 1440px;
+  padding: 173px 0;
+  margin: auto;
+  background-image: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-top.svg");
+  background-position: -280px -489px, 150% -150%;
+  background-repeat: no-repeat;
+  background-color: var(--dark-cyan);
+}
+
+.card-container {
+  max-width: 350px;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-top: 87px;
+  background-image: url("images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-color: var(--white);
+}
+.card-top-section {
+  text-align: center;
+}
+.profile-pic {
+}
+.profile-pic img {
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.profile-info {
+}
+
+.profile-info h3 {
+  padding: 0.5rem 0;
+}
+
+.profile-info p {
+  margin-bottom: 1.6rem;
+}
+.card-bottom-section {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid var(--dark-gray);
+}
+.metrics {
+  text-align: center;
+  margin: 1.4rem 0;
+}
+.metrics h3 {
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.metrics p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+  .page-container {
+    max-width: 375px;
+    background-image: url("images/bg-pattern-top.svg"),
+      url("images/bg-pattern-top.svg");
+    background-position: -730px -650px, 100px 350px;
+  }
+}

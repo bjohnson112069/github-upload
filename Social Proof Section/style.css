@@ -164,7 +164,7 @@ body {
 }
 
 /* small screens */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1175px) {
   .page-container {
     padding: 1rem;
     max-width: 1024px;
@@ -176,7 +176,7 @@ body {
   }
 }
 
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 880px) {
   .page-container {
     display: grid;
     grid-template-columns: 1fr;
