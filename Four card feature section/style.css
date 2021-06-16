@@ -34,12 +34,7 @@ body {
 .page-container {
   max-width: 1440px;
   margin: auto;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 25% 75%;
-  grid-template-areas:
-    "header-container"
-    "main-container";
+  min-height: 100vh;
   text-align: center;
   background-color: var(--very-light-gray);
 }
@@ -55,7 +50,7 @@ body {
 .title-container {
   border-radius: var(--main-radius);
   grid-area: title-container;
-  padding: 5rem 2rem;
+  padding: 2rem;
 }
 
 .title-container p {
@@ -63,12 +58,12 @@ body {
   margin-top: 1.5rem;
 }
 
-#normal-title {
+#main-title {
   font-weight: 200;
   color: var(--very-dark-blue);
 }
 
-#bold-title {
+#sub-title {
   color: var(--very-dark-blue);
 }
 
@@ -78,8 +73,8 @@ body {
   padding-bottom: var(--main-padding);
   padding: 5px 10rem;
   display: grid;
-  grid-template-columns: repeat(6, 0.4fr);
-  grid-template-rows: repeat(6, 0.25fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-template-areas:
     ". . team-builder team-builder . ."
     "supervisor supervisor team-builder team-builder calculator calculator"
@@ -94,6 +89,9 @@ body {
   box-shadow: 0 10px 20px var(--grayish-blue);
   padding: 2rem;
   text-align: left;
+  min-height: 175px;
+  width: 280px;
+  height: 175px;
 }
 
 .card-container h3 {
@@ -135,17 +133,9 @@ body {
 }
 
 /* small screens */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1325px) {
   .page-container {
     max-width: 375px;
-    margin: auto;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 25% 75%;
-    grid-template-areas:
-      "header-container"
-      "main-container";
   }
 
   .header-container {
@@ -159,8 +149,8 @@ body {
     padding: 5rem 2rem;
   }
 
-  #normal-title,
-  #bold-title {
+  #main-title,
+  #sub-title {
     font-size: 1.6rem;
   }
 
@@ -169,7 +159,7 @@ body {
     padding-bottom: var(--main-padding);
     padding: 1rem;
     display: grid;
-    grid-template-columns: 0.85fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
       "supervisor"
