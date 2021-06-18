@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Robot:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --font-family-normal: "Karla", sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-transparent: hsl(179, 62%, 43%, 0.7);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-grey: hsl(204, 43%, 93%);
+  --greyish-blue: hsl(218, 22%, 67%);
+  --main-border-radius: 5px;
+  font-family: var(--font-family-normal);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 5rem;
+  background-color: var(--light-grey);
+}
+
+.page-container {
+  max-width: 650px;
+  margin: auto;
+  border-radius: var(--main-border-radius);
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "monthly-subscription why-us";
+}
+
+.content-container {
+  padding: 2rem 2.6rem;
+}
+
+#header-title {
+  background-color: var(--white);
+}
+
+#header-title h2 {
+  padding: 0.5rem 0;
+}
+
+#header-title h3 {
+  padding: 1rem 0;
+}
+
+#header-title p {
+  line-height: 1.5;
+  padding-bottom: 0.5rem;
+}
+
+#monthly-subscription {
+  grid-area: monthly-subscription;
+  background-color: var(--cyan);
+}
+
+#monthly-subscription h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+#monthly-subscription span {
+  padding: 1rem 0.5rem;
+}
+
+#fee {
+  font-size: 2rem;
+}
+
+#monthly-subscription p {
+  padding: 1rem 0;
+}
+
+#why-us {
+  grid-area: why-us;
+  background-color: var(--cyan-transparent);
+}
+
+#why-us h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+#why-us ul {
+  list-style: none;
+}
+
+#why-us li {
+  line-height: 1.2;
+}
+
+.button {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--light-grey);
+  background-color: var(--bright-yellow);
+  border-radius: var(--main-border-radius);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.grey-text {
+  color: var(--light-grey);
+}
+
+.blue-grey-text {
+  color: var(--greyish-blue);
+}
+
+.cyan-text {
+  color: var(--cyan);
+}
+
+.yellow-text {
+  color: var(--bright-yellow);
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 5rem 2rem;
+  }
+
+  .content-container {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas:
+      "monthly-subscription"
+      "why-us";
+  }
+}
