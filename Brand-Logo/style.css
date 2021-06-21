@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Robot:wght@300;400;500;700;900&display=swap");
+
 :root {
   --font-family-normal: "Roboto", Sans-Serif;
+  --font-family-brand: "Black Ops One", cursive;
+  --font-family-brand-alt: "Sirin Stencil", cursive;
   --black: #000000;
   --white: #f0f0f0;
-  --grey: #303841;
+  --gray: #303841;
   --red: #be3144;
   --orange: #ff7f50;
   --yellow: #ffdd40;
@@ -17,7 +21,7 @@ html {
   /* A system font stack so things load nice and quick! */
   font-family: var(--font-family-normal);
   /*font-weight: 900;*/
-  font-size: 16px;
+  font-size: 10px;
   color: var(--black);
   /*text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
 }
@@ -36,34 +40,28 @@ html {
 body {
   /*background-size: 340px, auto;
   min-height: calc(100vh - 100px);
-  margin: 50px;
-  background: var(--white);
-  background-attachment: fixed;
+  margin: 50px;*/
+  /* background: white; */
+  /*background-attachment: fixed;
   letter-spacing: -1px;*/
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 5px 0;
+.brand {
+  font-family: var(--font-family-brand);
+  font-size: 0.75rem;
 }
 
-.item {
-  /* We center the contents of these items. You can also do this with flexbox too! */
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid rgba(0, 0, 0, 0.03);
-  border-radius: 3px;
-  font-size: 35px;
-  background-color: var(--yellow);
+.span-blue {
+  color: var(--blue);
 }
-
-.item p {
-  margin: 0 0 5px 0;
+.span-red {
+  color: var(--red);
+}
+.span-orange {
+  color: var(--orange);
+}
+.span-green {
+  color: var(--green);
 }
 
 /* small screens */

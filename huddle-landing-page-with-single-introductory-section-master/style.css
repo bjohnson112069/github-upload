@@ -1,0 +1,167 @@
+:root {
+  --font-family-body: "Open Sans", sans-serif;
+  --font-family-header: "Poppins", sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--white);
+  max-width: 1440px;
+  /*text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /*background-size: 340px, auto;*/
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  background: var(--violet);
+  /*background-attachment: fixed;
+  letter-spacing: -1px;*/
+  background-image: url("images/bg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-header);
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+header {
+  padding-bottom: 75px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 20px;
+}
+
+.content-container {
+}
+
+
+.content-container-right {
+  padding: 50px 0;
+}
+
+.content-container h1 {
+  text-transform: capitalize;
+}
+
+.content-container p {
+  line-height: 1.75;
+  padding: 10px 0;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--white);
+  color: var(--violet);
+  padding: 15px 55px;
+  border-radius: 30px;
+}
+
+.button:hover {
+  color: var(--white);
+  background: var(--soft-magenta);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: end;
+}
+
+.social-media-container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.social-media-item {
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.social-media-item:hover {
+  border: 2px solid var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+.item p {
+  margin: 0 0 5px 0;
+}
+
+/* small screens */
+@media screen and (max-width: 1000px) {
+  body {
+    background-image: url("images/bg-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  
+.content-container img {
+  max-width: 100%;
+}
+
+  .content-container-right {
+    text-align: center;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
