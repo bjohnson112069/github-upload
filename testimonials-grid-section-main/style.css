@@ -1,0 +1,247 @@
+:root {
+  --font-family-normal: "Barlow Semi Condensed", sans-serif;
+  --black: #000000;
+  --grey: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  --moderate-violet: hsl(263, 55%, 52%);
+  --moderate-violet-opaque: hsla(263, 55%, 52%, 0.5);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --light-gray-50-opaque: hsla(0, 0%, 81%, 0.5);
+  --light-gray-70-opaque: hsla(0, 0%, 81%, 0.7);
+  --very-dark-grayish-blue-50-opaque: hsla(217, 19%, 35%, 0.5);
+  --very-dark-grayish-blue-70-opaque: hsla(217, 19%, 35%, 0.7);
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: var(--font-family-normal);
+  /*font-weight: 900;*/
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--yellow);
+  /*text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /*background-size: 340px, auto;*/
+  min-height: calc(100vh - 100px);
+  background: var(--white);
+  /*background-attachment: fixed;
+  letter-spacing: -1px;*/
+  background-color: var(--light-grayish-blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Grid Container */
+.grid-container {
+  max-width: 1440px;
+  margin: 150px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "profile-1 profile-1 profile-2 profile-3"
+    "profile-4 profile-5 profile-5 profile-3";
+  grid-gap: 30px;
+}
+
+/* Testimonial Container */
+
+.testimonial-item {
+  /*border: 1px solid #000;*/
+  border-radius: 10px;
+  padding: 25px 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.testimonial-item img {
+  border-radius: 50%;
+}
+
+.testimonial-quote {
+}
+
+.testimonial-sub-quote {
+  line-height: 1.5;
+}
+
+.profile-container {
+  /*border: 1px solid #000;*/
+  display: grid;
+  grid-template-columns: 75px auto;
+  grid-template-rows: repeat(4, 20px);
+  align-items: center;
+  grid-column-gap: 20px;
+}
+
+.profile-container img {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  justify-self: center;
+}
+.profile-name {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 16px;
+}
+.profile-verification {
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 16px;
+}
+
+/* Custom Classes */
+
+.profile-1 {
+  grid-area: profile-1;
+}
+.profile-2 {
+  grid-area: profile-2;
+}
+.profile-3 {
+  grid-area: profile-3;
+}
+.profile-4 {
+  grid-area: profile-4;
+}
+.profile-5 {
+  grid-area: profile-5;
+}
+
+.bg-purple {
+  background: var(--moderate-violet);
+}
+
+.bg-white {
+  background: var(--white);
+}
+
+.bg-very-dark-gray-blue {
+  background: var(--very-dark-grayish-blue);
+}
+
+.bg-very-dark-black-blue {
+  background: var(--very-dark-blackish-blue);
+}
+
+.bg-image-quote {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 77% 0%;
+}
+
+.txt-light-gray {
+  color: var(--light-gray);
+}
+
+.txt-light-gray-50-opaque {
+  color: var(--light-gray-50-opaque);
+}
+
+.txt-light-gray-70-opaque {
+  color: var(--light-gray-70-opaque);
+}
+
+.txt-very-dark-gray-blue {
+  color: var(--very-dark-grayish-blue);
+}
+
+.txt-very-dark-gray-blue-50-opaque {
+  color: var(--very-dark-grayish-blue-50-opaque);
+}
+
+.txt-very-dark-gray-blue-70-opaque {
+  color: var(--very-dark-grayish-blue-50-opaque);
+}
+
+.txt-white {
+  color: var(--white);
+}
+
+.profile-border {
+  border: 5px solid var(--light-gray-50-opaque);
+}
+
+.bd-light-gray {
+  border: 5px solid var(--light-gray-50-opaque);
+}
+
+.bd-moderate-purple {
+  border: 5px solid var(--moderate-violet-opaque);
+}
+
+/* small screens */
+@media screen and (max-width: 1320px) {
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "profile-1 profile-1 profile-2"
+      "profile-4 profile-5 profile-5"
+      "profile-3 profile-3 profile-3";
+    grid-gap: 30px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "profile-1 profile-1"
+      "profile-2 profile-4"
+      "profile-5 profile-5"
+      "profile-3 profile-3";
+    grid-gap: 30px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "profile-1"
+      "profile-1"
+      "profile-2"
+      "profile-4"
+      "profile-5"
+      "profile-5"
+      "profile-3"
+      "profile-3";
+    grid-gap: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+}
