@@ -135,7 +135,12 @@ li {
 /* Header Section */
 header {
   padding-top: 100px;
-  background-image: url("images/bg-header-desktop.png");
+  background-image: linear-gradient(
+      to bottom,
+      hsla(201, 11%, 66%, 0),
+      hsla(0, 0%, 100%, 0.8)
+    ),
+    url("images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
