@@ -52,7 +52,6 @@ body {
   max-width: 1440px;
   margin: auto;
   height: 100vh;
-  /*background-color: var(--dark-blue-2);*/
 }
 
 h1,
@@ -161,6 +160,7 @@ header a:hover {
 
 /* Features Section */
 #features {
+  background-color: var(--dark-blue-2);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 65px 130px;
@@ -188,6 +188,7 @@ header a:hover {
 /* How It Works Section */
 
 #how-it-works {
+  background-color: var(--dark-blue-2);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   grid-gap: 50px;
@@ -234,6 +235,7 @@ header a:hover {
 /* Testimonial Section */
 
 #testimonials {
+  background-color: var(--dark-blue-2);
   background-image: url("images/bg-quotes.png");
   background-repeat: no-repeat;
   background-position: 115px 40px;
