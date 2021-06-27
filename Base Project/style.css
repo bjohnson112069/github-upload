@@ -60,6 +60,7 @@ h6 {
   border-radius: 3px;
   font-size: 35px;
   background-color: var(--yellow);
+  border-bottom: 1px solid #000;
 }
 
 .item p {
