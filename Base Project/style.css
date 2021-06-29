@@ -33,7 +33,14 @@ html {
   box-sizing: inherit;
 }
 
+/* Reset all margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  min-height: 100vh;
   /*background-size: 340px, auto;
   min-height: calc(100vh - 100px);
   margin: 50px;
@@ -49,6 +56,17 @@ h4,
 h5,
 h6 {
   margin: 0 0 5px 0;
+}
+/* set default for ul tags */
+ul {
+  list-style: none;
+}
+
+/* set default for anchor tags */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .item {
