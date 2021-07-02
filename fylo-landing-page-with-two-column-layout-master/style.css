@@ -1,0 +1,507 @@
+:root {
+  --font-family-headings: "Raleway", sans-serif;
+  --font-family-body: "Open Sans", sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --bright-blue: hsl(224, 93%, 58%);
+  --bright-blue-opaque: hsla(224, 93%, 58%, 0.7);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+  --main-border-radius: 5px;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  color: var(--very-dark-blue);
+  font-size: 16px;
+}
+
+/* We inherit box-sizing: border-box; from our <html> selector */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Reset all margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+  background-color: var(--grey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headings);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* set default for h1-h3 tag; override section defaults */
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.17em;
+}
+
+/* set default for ul tags */
+ul {
+  list-style: none;
+}
+
+/* set default for anchor tags */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Page Container to hold all of the content */
+
+.page-container {
+  background-color: var(--white);
+}
+
+/* Logo */
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* Header Section */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: start;
+  padding: 60px 75px;
+}
+
+header navbar {
+  font-family: var(--font-family-headings);
+  color: var(--desaturated-blue);
+}
+
+header ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 0 55px;
+}
+
+/* Content Classes */
+
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: center;
+}
+
+.content-wrapper {
+}
+
+.content-wrapper h1 {
+  padding: 25px 0;
+}
+
+.content-wrapper p {
+  font-size: 18px;
+  line-height: 1.5;
+  padding-top: 5px;
+}
+
+.content-wrapper img {
+  width: 100%;
+}
+
+/* Form  Class */
+.input-control {
+  padding: 15px 20px;
+  color: var(--light-gray);
+  border-radius: var(--main-border-radius);
+}
+
+.form-button {
+  padding: 15px 65px;
+  background-color: var(--bright-blue);
+  color: var(--white);
+  border-color: var(--bright-blue);
+  border-radius: var(--main-border-radius);
+}
+
+.form-button:hover {
+  background: var(--bright-blue-opaque);
+  border: none;
+}
+
+/* Section 1 */
+#section-1 {
+  padding: 25px 75px 250px 75px;
+  background-image: url("images/bg-curve-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#section-1 .content-wrapper {
+}
+
+#section-1 .content-wrapper h1 {
+}
+
+#section-1 .content-wrapper p {
+}
+
+#section-1 .content-wrapper form {
+  margin: 20px 0;
+}
+
+#section-1 .input-control {
+  width: 55%;
+  margin-right: 15px;
+}
+
+#section-1 .left {
+}
+
+#section-1 .right {
+}
+
+/* Section 2 */
+
+#section-2 {
+  background-color: var(--light-grayish-blue);
+  padding: 60px 75px 100px 75px;
+}
+
+#section-2 .content-wrapper {
+}
+
+#section-2 .content-wrapper h1 {
+}
+
+#section-2 .content-wrapper p {
+}
+
+.anchor-wrapper {
+  display: inline-block;
+  border-bottom: 1px solid var(--moderate-cyan);
+  padding: 5px 0;
+  margin-top: 10px;
+}
+
+.anchor-wrapper a {
+  color: var(--moderate-cyan);
+}
+
+.anchor-wrapper img {
+  display: inline-block;
+  padding-left: 5px;
+  /* Vertically align the arrow image with the anchor text */
+  vertical-align: middle;
+  width: auto;
+}
+
+.profile-container {
+  margin-top: 50px;
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px 30px;
+}
+
+.profile-container img {
+  width: auto;
+}
+
+.profile-container p {
+  padding: 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.profile-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  justify-items: start;
+}
+
+.profile-wrapper #profile-image {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  grid-row: 1 / -1;
+}
+
+.profile-wrapper #profile-name {
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.profile-wrapper #profile-title {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+#section-2 .left {
+}
+
+#section-2 .right {
+}
+
+/* Section 3 */
+
+#section-3 {
+  background-color: var(--desaturated-blue);
+  padding: 70px 75px;
+  color: var(--white);
+}
+
+#section-3 .left {
+  margin-right: 75px;
+}
+
+#section-3 .content-wrapper form {
+}
+
+#section-3 .input-control {
+  width: 100%;
+  margin: 20px 0;
+}
+
+#section-3 .form-button {
+  /*width: 100%;*/
+}
+
+/* Footer Section */
+
+footer {
+  background: var(--very-dark-blue);
+  color: var(--white);
+  padding: 115px 75px 50px 75px;
+}
+
+footer .logo {
+  padding-bottom: 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  align-items: start;
+}
+
+.contact-info-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  grid-gap: 20px;
+}
+
+.contact-info-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 15px;
+  justify-content: start;
+  align-items: start;
+}
+
+.contact-info-wrapper i {
+  display: inline-block;
+  padding-top: 5px;
+}
+.contact-info-wrapper p {
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.footer-navbar {
+  justify-content: stretch;
+}
+
+.footer-navbar ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 15px 55px;
+}
+
+.footer-navbar li {
+}
+.footer-navbar a {
+}
+
+.footer-navbar a:hover {
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.social-media-container {
+  display: inline-block;
+  text-align: center;
+  justify-items: center;
+}
+
+.social-media-container a {
+  display: inline-block;
+  border-color: inherit;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.social-media-container a:hover {
+  border-color: var(--bright-blue);
+  color: var(--bright-blue);
+}
+
+/* small screens */
+@media screen and (max-width: 900px) {
+  #section-1 .left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #section-1 .right {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #section-2 .left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #section-2 .right {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+  }
+
+  /* Header Section */
+  header .logo {
+    width: 50%;
+    height: 50%;
+  }
+
+  header {
+    padding: 60px 10px;
+  }
+
+  header ul {
+    grid-gap: 15px;
+  }
+
+  /* Content Classes */
+
+  /* Form  Class */
+
+  /* Section 1 */
+  #section-1 {
+    padding: 25px 10px 250px 10px;
+    background-image: url("images/bg-curve-mobile.svg");
+  }
+
+  #section-1 .input-control {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  #section-1 .form-button {
+    width: 100%;
+  }
+
+  #section-1 .left {
+    text-align: center;
+  }
+
+  /* Section 2 */
+
+  #section-2 {
+    padding: 60px 10px 100px 10px;
+  }
+
+  /* Section 3 */
+
+  #section-3 {
+    background-color: var(--desaturated-blue);
+    padding: 70px 10px;
+    color: var(--white);
+  }
+
+  #section-3 .left {
+    margin-right: 0px;
+    text-align: center;
+  }
+
+  #section-3 .content-wrapper form {
+  }
+
+  #section-3 .input-control {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  #section-3 .form-button {
+    width: 100%;
+  }
+
+  /* Footer Section */
+
+  footer {
+    background: var(--very-dark-blue);
+    color: var(--white);
+    padding: 115px 10px 50px 10px;
+  }
+
+  .footer-navbar ul {
+    grid-template-columns: 1fr;
+    grid-gap: 15px 55px;
+  }
+}
