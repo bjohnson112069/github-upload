@@ -35,8 +35,6 @@ html {
 
 /* Reset all margin & padding */
 * {
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -49,40 +47,34 @@ body {
   letter-spacing: -1px;*/
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 5px 0;
-}
-/* set default for ul tags */
-ul {
-  list-style: none;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 25px;
 }
 
-/* set default for anchor tags */
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
+.parallax {
+  background-image: url("images/robynne-hu-HOrhCnQsxnQ-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 20vh;
 }
 
-.item {
-  /* We center the contents of these items. You can also do this with flexbox too! */
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid rgba(0, 0, 0, 0.03);
-  border-radius: 3px;
-  font-size: 35px;
-  background-color: var(--yellow);
-  border-bottom: 1px solid #000;
+.parallax-1 {
+  background-image: url("images/robynne-hu-HOrhCnQsxnQ-unsplash.jpg");
 }
 
-.item p {
-  margin: 0 0 5px 0;
+.parallax-2 {
+  background-image: url("images/timothy-eberly-xjnaXGSzsKA-unsplash.jpg");
+}
+
+.parallax-3 {
+  background-image: url("images/william-daigneault-7c8z4KEvgds-unsplash.jpg");
 }
 
 /* small screens */

@@ -28,8 +28,8 @@ html {
   Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
 */
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
