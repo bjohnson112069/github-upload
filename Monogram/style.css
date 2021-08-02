@@ -1,0 +1,90 @@
+:root {
+  --font-family-normal: "Roboto", Sans-Serif;
+  --black: #000000;
+  --white: #f0f0f0;
+  --grey: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: var(--font-family-normal);
+  /*font-weight: 900;*/
+  font-size: 16px;
+  color: var(--black);
+  /*text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset all margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  /*background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  background: var(--white);
+  background-attachment: fixed;
+  letter-spacing: -1px;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+/* set default for ul tags */
+ul {
+  list-style: none;
+}
+
+/* set default for anchor tags */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  font-size: 35px;
+  background-color: var(--yellow);
+  border-bottom: 1px solid #000;
+}
+
+.item p {
+  margin: 0 0 5px 0;
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+}

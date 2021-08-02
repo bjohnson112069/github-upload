@@ -1,0 +1,281 @@
+:root {
+  --font-family-normal: 'Kumbh Sans', sans-serif;;
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+  /* Text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Background gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%)
+  /*
+  --fz-accordion-content: clamp(1rem, 0.1667rem + 2.7778vw, 3.5rem);
+  --fz-accordion-label: clamp(1rem, 0.1667rem + 3.2407vw, 3.5rem);
+  --fz-header: clamp(1rem, 0.1667rem + 5.5556vw, 3.5rem);
+  */
+  --fz-accordion-content: 1rem;
+  --fz-accordion-label: 1.2rem;
+  --fz-header: 3.5rem;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: var(--font-family-normal);
+  /*font-weight: 900;*/
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--black);
+  /*text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset all margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--grey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+/* set default for ul tags */
+ul {
+  list-style: none;
+}
+
+/* set default for anchor tags */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Page Container */
+.page__container {
+  max-width: 1440px;
+  background-color: var(--white);
+  background-image: linear-gradient(to top right, var(--soft-blue), var(--soft-violet));
+  margin: 5% auto;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.content__container {
+  background-color: var(--white);
+  padding: 75px 0;
+  margin: 150px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 20px;
+  /* width: 75%; */
+  width: clamp(75%, 75%, 95%);
+  min-width: 360px;
+}
+
+.image__container {
+  /*
+  background-image: url("images/illustration-woman-online-desktop.svg"), url("images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
+  background-position: -150% 0%, 120% 65%;
+  */
+  position: relative;
+}
+
+.image-box {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -55%);
+  z-index: 10;
+}
+
+.image-desktop {
+  display: inline-block;
+  position: absolute;
+  left: -17%;
+  z-index: 2;
+  clip-path:inset(0% 0% 0% 18%);
+  overflow: hidden;
+}
+
+.image-desktop-bg {
+  object-fit: contain;
+  display: inline-block;
+  position: absolute;
+  bottom: -12%;
+  right: 28%;
+  z-index: 1;
+  clip-path:inset(31% 0% 0% 60%);
+  overflow: hidden;
+}
+
+.image-mobile {
+  display: none;
+}
+
+.image-mobile-bg {
+  display: none;
+}
+
+.faq__container {
+  margin: 10px;
+}
+
+.faq__header {
+  font-size: var(--fz-header);
+  font-weight: 700;
+}
+
+.accordion__container {
+  width: 65%;
+}
+.accordion {
+  display: block;
+  background: none;
+  border: none;
+  color: var(--very-dark-grayish-blue);
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.1s;
+  font-size: var(--fz-accordion-label);
+  padding: 20px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.accordion::after {
+  content: "";
+  width: 12px;
+  height: 6px;
+  float: right;
+  margin-left: 5px;
+  background-image: url("images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.4s;
+}
+
+.accordion:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--soft-red);
+}
+
+.active {
+  color: var(--very-dark-desaturated-blue);
+  border-bottom:none;
+  font-weight: bold;
+}
+
+.active:after {
+  transform: translateY(-50%) rotate(0.5turn);
+}
+
+.accordion__panel {
+  background: #ffffff;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+  font-size: var(--fz-accordion-content);
+  display: none;
+}
+
+
+/* small screens */
+@media screen and (max-width: 1300px) {
+
+  
+.content__container {
+  padding: 0;
+  margin: 200px 10px;
+  grid-template-columns: 1fr;
+  /* width: 95%; */
+  overflow: visible;
+}
+
+
+.faq__header {
+  text-align: center;
+  align-self: center;
+}
+
+
+.accordion__container {
+  width: 100%;
+}
+
+
+.image__container {
+  background-image: none;
+  position: relative;
+  height: 125px;
+  object-fit: contain;
+}
+
+.image-box {
+  display: none;
+}
+
+.image-desktop {
+  display: none;
+}
+
+.image-desktop-bg {
+  display: none;
+}
+
+.image-mobile {
+  display: block;
+  object-fit: contain;
+  position: absolute;
+  /* top: -110px; */
+  /* left: 30px; */
+  top: 0%;
+  left: 50%;
+  transform: translate(-55%, -55%); 
+}
+
+.image-mobile-bg {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
