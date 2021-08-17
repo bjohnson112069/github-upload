@@ -2,12 +2,15 @@
   --font-family-header: "Cinzel", serif;
   --font-family-body: "Raleway", sans-serif;
   --font-family-announcement: "Courier Prime", monospace;
-  --red: #be3144;
-  --orange: #ff7f50;
+  --font-family-script: "Sacramento", cursive;
   --yellow: #ffdd40;
-  --blue: #45567d;
   --green: #37af65;
   --purple: #ae63e4;
+  /* social media icon */
+  --orange: #f77737;
+  --blue: #3477f2;
+  --red: #ff001d;
+  --light-blue: #1da1f2;
   /* Color Pallette */
   --black: rgb(0, 0, 0);
   --white: rgb(255, 255, 255);
@@ -91,27 +94,45 @@ a {
 .bg-cyan-dark {
   background-color: var(--cyan-dark);
 }
+.bg-grey-neutral {
+  background-color: var(--grey-neutral);
+}
 .bg-gradient {
   background-image: linear-gradient(var(--grey-neutral), var(--blue-dark));
 }
-
 .bg-semi-transparent {
   background-color: var(--blue-dark-semi-transparent);
 }
+/* Social Media Background Colors */
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg-red {
+  background-color: var(--red);
+}
+.bg-orange {
+  background-color: var(--orange);
+}
 
 /* Background Color Filters */
-.filter-white {
-  filter: invert(99%) sepia(3%) saturate(239%) hue-rotate(301deg)
-    brightness(114%) contrast(100%);
-}
 .filter-white-neutral {
   filter: invert(100%) sepia(3%) saturate(1471%) hue-rotate(327deg)
     brightness(96%) contrast(109%);
+}
+.filter-grey-neutral {
+  filter: invert(70%) sepia(1%) saturate(858%) hue-rotate(131deg)
+    brightness(88%) contrast(90%);
 }
 
 /* Text Colors */
 .txt-white-neutral {
   color: var(--white-neutral);
+}
+.txt-red {
+  color: var(--red);
 }
 .txt-red-dark {
   color: var(--red-dark);
@@ -137,6 +158,7 @@ a {
 
 /* Page Container */
 .page__container {
+  position: relative;
 }
 
 /* Content Container */
@@ -364,6 +386,22 @@ a {
   margin: 0 auto;
 }
 
+/* Card Container Class */
+.card__container {
+}
+.card--title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.107em;
+  line-height: 1.25;
+}
+.card--text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
 /* Section About Us */
 .section__about-us {
   padding: 1.25rem;
@@ -380,13 +418,6 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
-.card__container {
-}
-.card--title {
-}
-.card--text {
-}
-
 .section__about-us .card__container {
   padding: 4.5rem 2.5rem;
   display: grid;
@@ -394,25 +425,18 @@ a {
   grid-gap: 1.5rem;
 }
 .section__about-us .card--title {
-  font-size: 1.375rem;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: 0.107em;
-  text-transform: uppercase;
   text-align: center;
 }
 .section__about-us .card--text {
-  font-size: 1rem;
-  line-height: 1.7;
 }
 
-.card-1 {
+.section__about-us .card-1 {
 }
-.card-2 {
+.section__about-us .card-2 {
   border-left: 1px solid var(--grey-neutral);
   border-right: 1px solid var(--grey-neutral);
 }
-.card-3 {
+.section__about-us .card-3 {
 }
 
 /* Section Footer */
@@ -429,11 +453,15 @@ a {
   font-size: 0.75rem;
 }
 .section__footer .card--title {
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 .section__footer .card--text {
+  font-size: inherit;
   margin-bottom: 1rem;
 }
 
@@ -453,6 +481,643 @@ a {
   justify-self: flex-end;
 }
 
+/* Chat Icon */
+.circle {
+  border-radius: 50%;
+}
+
+.circle-large {
+  width: 65px;
+  height: 65px;
+  padding: 10px;
+}
+
+.chat__icon {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.chat__open {
+  display: block;
+}
+.chat__open.active {
+  display: none;
+}
+
+.chat__close {
+  display: none;
+}
+.chat__close.active {
+  display: block;
+}
+
+/* Message Container */
+.message__container {
+  display: none;
+  border-radius: 5px;
+  border: 1px solid var(--grey-neutral);
+  max-width: 382px;
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: default;
+}
+.message__container.active {
+  display: block;
+}
+
+.message--header {
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.message--header .brand--name {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.message__container .content__container {
+  margin: 0 auto;
+  padding: 0 1.5rem 1rem 1.5rem;
+  border: 1px solid #000;
+}
+
+.message--callout {
+  margin-top: -1.5rem;
+  position: relative;
+}
+.message--callout p {
+  border-radius: 5px;
+  line-height: 1.5;
+  padding: 0.75rem 1rem;
+}
+.message--callout .image__wrapper {
+  width: 33px;
+  height: 16px;
+  padding-left: 3px;
+  margin-top: -1px;
+}
+.message--form {
+}
+.form--group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.form--label {
+  position: absolute;
+  top: 5px;
+  left: 1.5rem;
+}
+.form--control {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 5px;
+  width: 100%;
+  resize: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+}
+/* Append " (required)" after all required input controls */
+.form--control:required + .form--label::after {
+  content: " (required)";
+  color: inherit;
+}
+
+/* When input is NOT empty, valid */
+.form--control:valid:not(:placeholder-shown) {
+  position: relative;
+  border-color: var(--green);
+  background-image: url("images/check-svgrepo-com.png");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: 0.25rem 5px;
+}
+
+/* When input is NOT empty, NOT in focus, NOT valid */
+.form--control:invalid:not(:focus):not(:placeholder-shown),
+.form--control:invalid:focus:not(:placeholder-shown) {
+  background-color: pink;
+  border-color: var(--red);
+  background-image: url("images/os-x-svgrepo-com.png");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: 0.25rem 5px;
+}
+/* When that invalid input becomes in focus (and also still isn't empty) */
+.form--control:invalid:focus:not(:placeholder-shown) ~ .form--control-error {
+  display: block;
+}
+
+.form--control-error {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -1.25rem;
+  display: none;
+}
+
+.form--control:optional {
+  border-color: none;
+}
+
+.form--control:focus {
+  /* border: 3px solid var(--red-dark); */
+}
+.terms-n-conditions {
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: center;
+}
+.terms--text {
+}
+.terms--link {
+}
+
+.terms--link:hover {
+  text-decoration: underline;
+}
+
+/* Button Class */
+.btn {
+  position: relative;
+  display: block;
+  background: transparent;
+  text-decoration: none;
+  margin: 1.5rem auto;
+  border: 2px solid var(--blue-dark);
+  border-radius: 30px;
+  padding: 0.875rem 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  background-color: var(--grey-neutral);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.8s ease;
+}
+
+.btn-submit::before {
+  width: 0%;
+  height: 100%;
+}
+
+.btn-submit:hover::before {
+  width: 100%;
+}
+
+.btn-submit.active {
+  background-color: var(--green);
+  color: var(--white-neutral);
+}
+
+/* Page ABOUT US/Section: ABOUT US */
+.section__about--page {
+}
+.section__about--page .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__about--page .section__title {
+}
+.section__about--page .grid__container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  grid-template-areas:
+    "image card-1"
+    ". card-2"
+    ". card-3"
+    ". card-4";
+  grid-gap: 50px;
+}
+.section__about--page .image__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: image;
+}
+.section__about--page .card__container {
+}
+.section__about--page .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__about--page .card--text {
+}
+.section__about--page .card-1 {
+  grid-area: card-1;
+}
+.section__about--page .card-1 ul {
+  margin: 0 1rem;
+  padding-left: 1.3em;
+  list-style: disc;
+}
+.section__about--page .card-1 li {
+}
+.section__about--page .card-2 {
+  grid-area: card-2;
+}
+.section__about--page .card-3 {
+  grid-area: card-3;
+}
+.section__about--page .card-4 {
+  grid-area: card-4;
+}
+
+/* Page ABOUT US/Section: OUR ATTORNEYS */
+.section__our-attorneys {
+}
+.section__our-attorneys .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__our-attorneys .section__title {
+}
+.section__our-attorneys .grid__container {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-gap: 50px;
+  justify-content: center;
+}
+.section__our-attorneys .card__container {
+  text-align: center;
+}
+.section__our-attorneys .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__our-attorneys .card--text {
+}
+.section__our-attorneys .card-1 {
+}
+.section__our-attorneys .card-2 {
+}
+
+/* Page ESTATE PLANNING/Section: What is Estate Planning */
+.section__what-is-estate-planning {
+}
+.section__what-is-estate-planning .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__what-is-estate-planning .section__title {
+}
+.section__what-is-estate-planning .grid__container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  grid-template-areas:
+    "image card-1"
+    "image card-2"
+    ". card-3";
+  grid-gap: 50px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.section__what-is-estate-planning .image__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: image;
+}
+.section__what-is-estate-planning .image__wrapper img {
+}
+.section__what-is-estate-planning .card__container {
+}
+.section__what-is-estate-planning .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__what-is-estate-planning .card--text {
+}
+.section__what-is-estate-planning .card-1 {
+  grid-area: card-1;
+}
+.section__what-is-estate-planning .card-2 {
+  grid-area: card-2;
+}
+.section__what-is-estate-planning .card-3 {
+  grid-area: card-3;
+}
+
+/* Page ESTATE PLANNING/Section: Estate Planning */
+.section__estate-planning {
+}
+.section__estate-planning .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__estate-planning .section__title {
+}
+.section__estate-planning .grid__container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  grid-template-areas:
+    "image card-1"
+    "image card-2"
+    ". card-2"
+    ". card-3"
+    ". card-4"
+    "card-5 card-5";
+  grid-gap: 50px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.section__estate-planning .image__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: image;
+}
+.section__estate-planning .image__wrapper img {
+}
+.section__estate-planning .card__container {
+}
+.section__estate-planning .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__estate-planning .card--text {
+}
+.section__estate-planning .card-1 {
+  grid-area: card-1;
+}
+.section__estate-planning .card-2 {
+  grid-area: card-2;
+}
+.section__estate-planning .card-3 {
+  grid-area: card-3;
+}
+.section__estate-planning .card-4 {
+  grid-area: card-4;
+}
+.section__estate-planning .card-5 {
+  grid-area: card-5;
+}
+.section__estate-planning .card-5 .card--text {
+  font-size: 2.25rem;
+  font-family: var(--font-family-script);
+  overflow-wrap: break-word;
+  max-width: 66%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Page/Section PROBATE & ESTATE/TRUST ADMINISTRATIOjn */
+.section__probate {
+}
+.section__probate .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__probate .section__title {
+}
+.section__probate .grid__container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  grid-template-areas:
+    "image card-1"
+    "image card-2"
+    ". card-3"
+    ". card-4"
+    ".card-5"
+    ".card-6"
+    ".card-7";
+  grid-gap: 50px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.section__probate .image__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: image;
+}
+.section__probate .image__wrapper img {
+}
+.section__probate .card__container {
+}
+.section__probate .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__probate .card--text {
+}
+.section__probate .card-1 {
+  grid-area: card-1;
+}
+.section__probate .card-2 {
+  grid-area: card-2;
+}
+.section__probate .card-3 {
+  grid-area: card-3;
+}
+.section__probate .card-4 {
+  grid-area: card-4;
+}
+.section__probate .card-5 {
+  grid-area: card-5;
+}
+.section__probate .card-6 {
+  grid-area: card-6;
+}
+.section__probate .card-7 {
+  grid-area: card-7;
+}
+
+/* Page/Section REAL ESTATE INCLUDING BUYER AND SELLER REPRESENTATION */
+.section__real-estate {
+}
+.section__real-estate .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__real-estate .section__title {
+}
+.section__real-estate .grid__container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  grid-template-areas:
+    "image card-1"
+    "image card-2"
+    ". card-3"
+    ". card-4"
+    ".card-5";
+  grid-gap: 50px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.section__real-estate .image__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: image;
+}
+.section__real-estate .image__wrapper img {
+}
+.section__real-estate .card__container {
+}
+.section__real-estate .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__real-estate .card--text {
+}
+.section__real-estate .card-1 {
+  grid-area: card-1;
+}
+.section__real-estate .card-2 {
+  grid-area: card-2;
+}
+.section__real-estate .card-3 {
+  grid-area: card-3;
+}
+.section__real-estate .card-4 {
+  grid-area: card-4;
+}
+.section__real-estate .card-5 {
+  grid-area: card-5;
+}
+
+/* Page/Section ELDER LAW */
+.section__elder-law {
+}
+.section__elder-law .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__elder-law .section__title {
+}
+.section__elder-law .grid__container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  grid-template-areas:
+    "image card-1"
+    "image card-2";
+  grid-gap: 50px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.section__elder-law .image__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: image;
+}
+.section__elder-law .image__wrapper img {
+}
+.section__elder-law .card__container {
+}
+.section__elder-law .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__elder-law .card--text {
+}
+.section__elder-law .card-1 {
+  grid-area: card-1;
+}
+.section__elder-law .card-2 {
+  grid-area: card-2;
+}
+
+/* Page/Section CONTACT US */
+.section__contact-us {
+}
+.section__contact-us .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__contact-us .section__title {
+}
+.section__contact-us .grid__container {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.section__contact-us .image__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.section__contact-us .image__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.section__contact-us .location__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 25px;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--grey-neutral);
+}
+.section__contact-us .location__container--info {
+}
+.section__contact-us .location__container--hours {
+}
+.section__contact-us .location__container--email {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+.section__contact-us .location--icon {
+  padding-right: 0.5em;
+  color: var(--cyan-dark);
+}
+.section__contact-us .location--header {
+  color: var(--red-dark);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.section__contact-us .location--text {
+  line-height: 1.5;
+}
+/* Social Media Container */
+.social-media__container {
+}
+
+.social-media__container a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  margin-right: 0.625rem;
+}
+
+.social-media__container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Page/Section RESOURCES */
+.section__resources {
+}
+.section__resources .content__container {
+  margin-bottom: 2.5rem;
+}
+.section__resources .section__title {
+}
+.section__resources .grid__container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  grid-template-areas: "image card-1";
+  grid-gap: 50px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.section__resources .image__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: image;
+}
+.section__resources .image__wrapper img {
+}
+.section__resources .card__container {
+}
+.section__resources .card--title {
+  margin-bottom: 1.5rem;
+}
+.section__resources .card--text {
+}
+.section__resources .card-1 {
+  grid-area: card-1;
+}
+
 /* small screens */
 @media screen and (max-width: 1110px) {
   /* Section Header */
@@ -463,11 +1128,23 @@ a {
   .mobile__navbar--list {
     display: grid;
   }
+
+  /* Page: ABOUT US */
+  .section__about--page .grid__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4";
+    grid-gap: 50px;
+  }
 }
 
 @media screen and (max-width: 900px) {
   /* Section About Us */
-  .card-2 {
+  .section__about-us .card-2 {
     border-left: none;
     border-right: none;
     border-bottom: 1px solid var(--grey-neutral);
@@ -475,14 +1152,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  /* Section About Us */
-  /*
-  .card-2 {
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid var(--grey-neutral);
-  }
-  */
   /* Section Footer */
   .section__footer .grid__container {
     grid-template-columns: 1fr;
@@ -491,11 +1160,20 @@ a {
     text-align: center;
     justify-self: center;
   }
+  /* Message Container */
+  .message__container {
+    width: 100%;
+    right: 0;
+  }
+  /* Page ABOUT US/Section: OUR ATTORNEYS */
+  .section__our-attorneys .grid__container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 617px) {
   /* Section About Us */
-  .card-2 {
+  .section__about-us .card-2 {
     border-top: 1px solid var(--grey-neutral);
   }
 }
