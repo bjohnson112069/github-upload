@@ -1169,6 +1169,68 @@ a {
   .section__our-attorneys .grid__container {
     grid-template-columns: 1fr;
   }
+  /* Page ESTATE PLANNING/Section: What is Estate Planning */
+  .section__what-is-estate-planning .grid__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "card-1"
+      "card-2"
+      "card-3";
+  }
+  /* Page ESTATE PLANNING/Section: Estate Planning */
+  .section__estate-planning .grid__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-5";
+  }
+  /* Page/Section PROBATE & ESTATE/TRUST ADMINISTRATIOjn */
+  .section__probate .grid__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-5"
+      "card-6"
+      "card-7";
+  }
+
+  /* Page/Section REAL ESTATE INCLUDING BUYER AND SELLER REPRESENTATION */
+  .section__real-estate .grid__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-5";
+  }
+
+  /* Page/Section ELDER LAW */
+  .section__elder-law .grid__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "card-1"
+      "card-2";
+  }
+
+  /* Page/Section RESOURCES */
+  .section__resources .grid__container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "card-1";
+  }
 }
 
 @media screen and (max-width: 617px) {
