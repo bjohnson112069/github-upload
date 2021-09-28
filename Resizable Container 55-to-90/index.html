@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sirin+Stencil&display=swap" rel="stylesheet"> 
+        <script src="script.js" defer></script>
+        <title>Resizable Container from 50% to 90%</title>
+    </head>
+    <body>
+        <div class="page--container">Page Container (min-width: 375px, max-width: 1440px)
+            <div class="content--container">Content Container (90% of Page Container; min-width: 337.5 px, max-width: 1296px)
+                <div class="media--query--container">Text container initially set to width of 50%.  As the container shrinks, the width should increase to 100% of the Content Container<br>
+                    <code>@media screen and (min-width: 337px) {<br>
+                        .media--query--container {<br>
+                          width: calc(337px + ((100% - 337px) * 0.3));<br>
+                          background-color: var(--red);<br>
+                        }
+                      }</code></div>
+                <div class="clamp--container">Text container initially set to width of 50%.  As the container shrinks, the width should increase to 100% of the Content Container<br>
+                    <code>clamp(337px, 50%, 100%);</code></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+:root {
+  --font-family-normal: "Roboto", Sans-Serif;
+  --black: #000000;
+  --white: #f0f0f0;
+  --grey: #303841;
+  --red: #be3144;
+  --orange: #ff7f50;
+  --yellow: #ffdd40;
+  --blue: #45567d;
+  --green: #37af65;
+  --purple: #ae63e4;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: var(--font-family-normal);
+  /*font-weight: 900;*/
+  font-size: 16px;
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset all margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  /*background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  background: var(--white);
+  background-attachment: fixed;
+  letter-spacing: -1px;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+/* set default for ul tags */
+ul {
+  list-style: none;
+}
+
+/* set default for anchor tags */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.page--container {
+  min-height: 100vh;
+  max-width: 1440px;
+  min-width: 375px;
+  margin: 0 auto;
+  background-color: var(--grey);
+  color: var(--white);
+  text-align: center;
+}
+
+.content--container {
+  background-color: var(--yellow);
+  color: var(--black);
+  text-align: center;
+  width: 90%; /* 90% width of page container; 10% margin */
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+}
+
+.media--query--container {
+  background-color: var(--green);
+  width: 100%;
+  margin: 4rem auto;
+  padding: 2rem 0;
+}
+
+.clamp--container {
+  background-color: var(--green);
+  width: clamp(337px, 50%, 100%);
+  margin: 4rem auto;
+  padding: 2rem 0;
+}
+
+code {
+  display: block;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  text-align: left;
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Page Container: min-width = 375px */
+/* Content Container = 90% * Page Container (375px) = 337.5px */
+
+/* small screens */
+@media screen and (min-width: 337px) {
+  .media--query--container {
+    width: calc(337px + ((100% - 337px) * 0.3));
+    background-color: var(--red);
+  }
+}
