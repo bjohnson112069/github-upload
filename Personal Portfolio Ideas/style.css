@@ -1,0 +1,269 @@
+:root {
+  --font-family--headings: "Raleway", sans-serif;
+  --font-family--body: "Lato", sans-serif;
+  --black: #02010e;
+  --white: #ffffff;
+  --grey: #303841;
+  --red: #c10206;
+  --orange: #ff7f50;
+  --yellow: #ffff00;
+  --blue: #0000ff;
+  --green: #00ff00;
+  --purple: #ae63e4;
+  --pink: #ff00ff;
+  --cyan: #00ffff;
+  --grayish--blue: #dfe2db;
+
+  --min-width: 375px;
+  --max-width: 1440px;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: var(--font-family-body);
+  /*font-weight: 900;*/
+  font-size: 16px;
+  color: var(--red);
+  scroll-behavior: smooth;
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset all margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  /*background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  background: var(--white);
+  background-attachment: fixed;
+  letter-spacing: -1px;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family--headings);
+  margin: 0 0 5px 0;
+}
+/* set default for ul tags */
+ul {
+  list-style: none;
+}
+
+/* set default for anchor tags */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  line-height: 1.8;
+}
+
+/* Background Classes */
+.bg--white {
+  background-color: var(--white);
+}
+.bg--black {
+  background-color: var(--black);
+}
+.bg--red {
+  background-color: var(--red);
+}
+.bg--grayish--blue {
+  background-color: var(--grayish--blue);
+}
+
+/* Text Color Classes */
+.txt--white {
+  color: var(--white);
+}
+.txt--black {
+  color: var(--black);
+}
+.txt--red {
+  color: var(--red);
+}
+.txt----grayish--blue {
+  color: var(--grayish--blue);
+}
+
+/* Font Weight Classes */
+.fw--light {
+  font-weight: 300;
+}
+.fw--regular {
+  font-weight: 400;
+}
+.fw--medium {
+  font-weight: 500; /* 500 = bold for Lato */
+}
+.fw--bold {
+  font-weight: 700;
+}
+
+.page--container {
+  min-height: 100vh;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.content--container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.text--container {
+  /* margin: 0 auto; */
+  width: clamp(var(--min-width), 70%, 100%);
+}
+.text--header {
+  display: inline-block;
+  font-size: clamp(3rem, 1.2394rem + 7.5117vw, 8rem);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.text--header:nth-of-type(2) {
+  display: inline-block;
+  padding: 0 1rem;
+}
+.text--sub-title {
+  font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+  margin: 1rem 0;
+}
+.text--body {
+  border-left: 3px solid var(--red);
+  padding: 2rem 0 2rem 2rem;
+  /* margin-left: 5rem; */
+  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+}
+.text--span {
+  color: var(--red);
+}
+
+/* Image Classes */
+.image--container {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.image--container img {
+  display: block;
+  min-width: 350px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  position: absolute;
+  top: 0;
+}
+
+/* Section 1 */
+.section--1 {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-flow: column;
+  align-items: flex-start;
+  justify-items: flex-start;
+  grid-gap: 2rem;
+}
+
+.navbar--container {
+  display: block;
+  height: 100%;
+}
+.logo {
+  margin-bottom: 2rem;
+}
+.navbar--list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.navbar--link {
+  display: inline;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  letter-spacing: 5px;
+  padding: 0.75rem;
+  height: 100%;
+}
+.navbar--link:hover,
+.navbar--link:active {
+  background-color: var(--red);
+  color: var(--black);
+  transition: background-color 1000ms ease-in-out;
+}
+
+.section--1 .content--panel {
+  margin-top: 8rem;
+}
+
+.section--1 .image--container {
+  padding-top: calc(100% * (426 / 640));
+}
+
+/* Section 2 */
+.section--2 {
+  margin-bottom: 3rem;
+}
+.grid--container {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: center;
+  justify-items: flex-start;
+}
+.section--2 img {
+  display: block;
+  margin-bottom: 4rem;
+}
+.section--2 .text--header:nth-of-type(1) {
+}
+.section--2 .text--header:nth-of-type(2) {
+}
+.section--2 .text--container {
+  /* margin: 0; */
+}
+.section--2 .image--container {
+  padding-top: calc(100% * (426 / 640));
+}
+
+/* Section 3 */
+.section--3 .image--container {
+  clip-path: url("https://upload.wikimedia.org/wikipedia/en/b/ba/Red_x.svg");
+  /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+}
