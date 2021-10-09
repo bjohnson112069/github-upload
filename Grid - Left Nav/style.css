@@ -19,16 +19,19 @@
 
   --min-width: 375px;
   --max-width: 1440px;
+  --main-radius: 5px;
+  --main-padding: 5px;
+  --main-grid-gap: 5px;
 }
 
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   box-sizing: border-box;
   /* A system font stack so things load nice and quick! */
-  font-family: var(--font-family-body);
+  font-family: var(--font-family-normal);
   /*font-weight: 900;*/
   font-size: 16px;
-  color: var(--red);
+  color: var(--black);
   scroll-behavior: smooth;
 }
 
@@ -66,7 +69,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family--headings);
-  margin: 0 0 5px 0;
 }
 /* set default for ul tags */
 ul {
@@ -78,9 +80,6 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
-}
-p {
-  line-height: 1.8;
 }
 
 /* Background Classes */
@@ -177,214 +176,88 @@ p {
     0 6px 6px rgba(0, 0, 0, 0.53);
 }
 
-.page--container {
-  min-height: 100vh;
-  min-width: var(--min-width);
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.content--container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.text--container {
-  /* margin: 0 auto; */
-  width: clamp(var(--min-width), 70%, 100%);
-}
-.text--header {
-  display: inline-block;
-  font-size: clamp(3rem, 1.2394rem + 7.5117vw, 8rem);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-.text--header:nth-of-type(2) {
-  display: inline-block;
-  padding: 0 1rem;
-}
-.text--sub-title {
-  font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
-  margin: 1rem 0;
-}
-.text--body {
-  padding: 2rem 0 2rem 2rem;
-  /* margin-left: 5rem; */
-  font-size: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
-}
-
 /* Image Classes */
-.image--container {
-  width: 100%;
-  height: 0;
-  padding-top: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.image--container img {
-  display: block;
-  min-width: 350px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top left;
-  position: absolute;
-  top: 0;
-}
-
-/* Section 1 */
-.section--1 {
-  margin-bottom: 3rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-auto-flow: column;
-  align-items: flex-start;
-  justify-items: flex-start;
-  grid-gap: 2rem;
-}
-
-.navbar--container {
-  display: block;
-  height: 100%;
-}
-.logo {
-  margin-bottom: 2rem;
-}
-.navbar--list {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-.navbar--link {
-  display: inline;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  letter-spacing: 5px;
-  padding: 0.75rem;
-  height: 100%;
-}
-.navbar--link:hover,
-.navbar--link:active {
-  background-color: var(--red);
-  color: var(--black);
-  transition: background-color 1000ms ease-in-out;
-}
-
-.section--1 .content--panel {
-  margin-top: 8rem;
-}
-
-.section--1 .image--container {
-  padding-top: calc(100% * (426 / 640));
-}
-
-/* Section 2 */
-.section--3,
-.section--2 {
-  margin-bottom: 3rem;
-}
-.grid--container {
-  margin-bottom: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  align-items: center;
-  justify-items: flex-start;
-}
-.section--3 img,
-.section--2 img {
-  display: block;
-  margin-bottom: 4rem;
-}
-.section--3 .text--header:nth-of-type(1),
-.section--2 .text--header:nth-of-type(1) {
-}
-.section--3 .text--header:nth-of-type(2),
-.section--2 .text--header:nth-of-type(2) {
-}
-.section--3 .text--container,
-.section--2 .text--container {
-  text-align: center;
-  /* margin: 0; */
-}
-.section--3 .image--container,
-.section--2 .image--container {
-  padding-top: calc(100% * (426 / 640));
-}
-
-.section--2 .btn:hover {
-  border: 3px solid var(--blue--0265c1);
-  background-color: var(--white);
-  color: var(--blue--0265c1);
-}
-.section--3 .btn:hover {
-  border: 3px solid var(--green--02c15e);
-  background-color: var(--white);
-  color: var(--green--02c15e);
-}
-
-/* Section 4 */
-.section--4 {
-  margin-bottom: 3rem;
-}
 .image--wrapper {
-  width: 350px;
 }
+
 .image--wrapper img {
   display: block;
   width: 100%;
   height: auto;
 }
-.section--4 .image--wrapper {
-  padding-top: 0;
-  height: 100%;
-  mask-image: url(images/8-grunge-x-brush-stroke-2-934x1024.svg);
-  mask-repeat: no-repeat;
-  mask-position: 0 50%;
-  mask-size: contain;
-  /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+
+.page--container {
+  min-height: 100vh;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--grey);
 }
 
-/* Section 5 */
-.section--5 {
-  border: 1px solid #000;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  margin-bottom: 3rem;
+.content--container {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
   position: relative;
-  /* filter: blur(2px); */
+  border: 1px solid var(--yellow);
 }
 
-.section--5 .logo {
-  margin: 0;
-  padding: 0;
+.sidebar--overlay {
+  position: fixed;
+  height: 100%;
+  padding: 0 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.section--5 .text--container {
-  border: 1px solid #000;
-  background-color: rgba(0, 0, 0, 0.5);
+.logo {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+.navbar--container {
+  display: grid;
+  grid-auto-flow: column;
+  height: 100%;
+}
+
+.navbar--link {
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  letter-spacing: 5px;
+  padding: 2.5rem 0.5rem;
+  height: 100%;
+  position: relative;
+}
+
+.navbar--link:hover {
+  background-color: var(--red);
+  color: var(--black);
+  transition: background-color 1000ms ease-in-out;
+}
+
+.navbar--link:hover::before {
+  content: "\01F704";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 350px;
-  transform: translate(-50%, -50%);
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.section--1,
+.section--2,
+.section--3 {
+  min-height: 50vh;
   text-align: center;
+  border: 1px solid #000;
 }
-.section--5 .text--header {
-  text-align: center;
-  filter: blur(2px);
-}
-.section--5 .text--sub-title {
-  margin: 0;
-  padding: 0;
-}
-.section--5 .text--body {
-  padding: 0;
+
+.parallax {
+  background-image: url("images/pexels-pixabay-373543.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 /* small screens */

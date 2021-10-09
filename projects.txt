@@ -1,0 +1,66 @@
+ Volume in drive D is New Volume
+ Volume Serial Number is C85C-291C
+
+ Directory of D:\HTML\CodePen Projects
+
+10/08/2021  07:05 PM    <DIR>          .
+10/08/2021  07:05 PM    <DIR>          ..
+06/13/2021  01:10 PM    <DIR>          3-column preview card component
+09/14/2021  10:58 AM    <DIR>          45 Degree Image Gallery
+07/25/2021  11:22 AM    <DIR>          Ableton
+07/31/2021  05:03 PM    <DIR>          Accordion - CSS
+08/01/2021  11:38 AM    <DIR>          Base Project
+09/01/2021  07:43 AM    <DIR>          Blogr landing page
+09/21/2021  01:56 PM    <DIR>          Bookmark landing page
+06/21/2021  06:45 AM    <DIR>          Brand-Logo
+06/22/2021  07:35 PM    <DIR>          clipboard-landing-page-master
+07/04/2021  04:03 PM    <DIR>          Collapsable Navbar - Hamburger
+07/05/2021  06:46 AM    <DIR>          Comparto
+06/04/2021  03:07 PM    <DIR>          Eforlad Travel
+06/03/2021  03:05 PM    <DIR>          Elegant Landing Page
+07/19/2021  03:36 PM    <DIR>          Elegant solutions in business
+08/01/2021  11:32 AM    <DIR>          FAQ accordion card
+06/01/2021  08:47 PM    <DIR>          Flexbox Playground
+05/31/2021  03:27 PM    <DIR>          Flexbox Tutorial
+09/16/2021  02:30 PM    <DIR>          Fonts
+06/15/2021  10:06 AM    <DIR>          Four card feature section
+09/15/2021  04:19 PM    <DIR>          Free Versions of Expensive Fonts
+06/23/2021  09:08 PM    <DIR>          Fylo dark theme landing page
+06/29/2021  02:39 PM    <DIR>          fylo-landing-page-with-two-column-layout-master
+06/09/2021  07:13 AM    <DIR>          Gradient Border
+09/14/2021  03:08 PM    <DIR>          Graphic Design - Text Grid
+10/03/2021  07:12 PM    <DIR>          Grid - Left Nav
+09/14/2021  08:08 PM    <DIR>          Hex Clip-Path
+06/28/2021  02:13 PM    <DIR>          huddle-landing-page-with-alternating-feature-blocks-master
+06/21/2021  06:54 AM    <DIR>          huddle-landing-page-with-single-introductory-section-master
+07/04/2021  04:43 PM    <DIR>          Image Carousel
+08/16/2021  08:35 AM    <DIR>          Johnson-Hooper
+06/03/2021  12:24 PM    <DIR>          Landing Page - Responsive
+09/15/2021  11:44 AM    <DIR>          Logo-Ideas
+08/20/2021  07:47 AM    <DIR>          Loopstudios landing page
+08/02/2021  08:35 PM    <DIR>          Monogram
+07/16/2021  09:12 PM    <DIR>          Multimedia technology
+10/04/2021  04:03 PM    <DIR>          My Personal Portfolio
+07/05/2021  07:41 AM    <DIR>          Parallax Scrolling
+06/12/2021  02:41 PM    <DIR>          Personal Portfolio
+10/03/2021  06:25 PM    <DIR>          Personal Portfolio Ideas
+06/14/2021  02:40 PM    <DIR>          Profile card component
+10/08/2021  07:05 PM                 0 projects.txt
+07/04/2021  10:40 AM    <DIR>          Purple Buzz
+08/31/2021  08:53 AM    <DIR>          Qrates
+06/12/2021  03:24 PM                20 README.md
+07/17/2021  11:04 AM    <DIR>          Refuel
+09/26/2021  03:06 PM    <DIR>          Resizable Container 55-to-90
+06/11/2021  08:21 PM    <DIR>          Responsive CSS Grid Tutorial
+09/18/2021  02:41 PM    <DIR>          Room homepage
+06/06/2021  03:50 PM    <DIR>          Section Playground
+06/11/2021  06:04 PM    <DIR>          Showcase (Blur)
+06/17/2021  05:27 PM    <DIR>          Single price grid component
+06/07/2021  03:34 PM    <DIR>          Skew-Translate
+06/12/2021  05:34 PM    <DIR>          Social Proof Section
+06/11/2021  09:09 PM    <DIR>          stats-preview-card-component-main
+07/14/2021  09:19 PM    <DIR>          Sunnyside agency landing page
+06/21/2021  11:56 AM    <DIR>          testimonials-grid-section-main
+07/05/2021  10:38 AM    <DIR>          Urbanic
+               2 File(s)             20 bytes
+              57 Dir(s)  1,999,941,791,744 bytes free
