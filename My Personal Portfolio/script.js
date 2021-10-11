@@ -46,10 +46,19 @@ menuClose.addEventListener('click', () => {
 })
 
 /* Reset to default active states for large screens */
+const timelineCards = document.querySelectorAll('.timeline--card');
+
 window.addEventListener("resize", function() {
      if (window.innerWidth > 1000){
           navbarHeader.classList.remove("active");
           menuOpen.classList.remove("active");
           menuClose.classList.remove("active");
      } 
+     // 
+     // if (window.innerWidth < 875){
+          // timelineCards.forEach(card => {
+               // card.classList.remove("timeline--card--left");
+               // card.classList.add("timeline--card--right");
+          // });
+     // } 
    });
