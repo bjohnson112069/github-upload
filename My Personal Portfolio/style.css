@@ -509,6 +509,11 @@ section {
   border-radius: var(--br--section--primary);
 }
 
+.section--3 h2 {
+  padding: 2rem;
+  font-size: 1rem;
+}
+
 .project--gallery {
   margin: 4rem 0;
   display: grid;
