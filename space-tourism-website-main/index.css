@@ -7,15 +7,6 @@
      --clr-dark: 230 35% 7%;
      --clr-light: 231 77% 90%;
      --clr-white: 0 0% 100%;
-     --black: #000000;
-     --white: #f0f0f0;
-     --grey: #303841;
-     --red: #be3144;
-     --orange: #ff7f50;
-     --yellow: #ffdd40;
-     --blue: #45567d;
-     --green: #37af65;
-     --purple: #ae63e4;
      /* font-sizes */
      --fs-900: 9.375rem;
      --fs-800: 6.25rem;
@@ -171,7 +162,7 @@ select {
      color: hsl(var(--clr-white));
 }
 /* .alpha-20 {
-  background-color: hsl(var(--clr-light) / 0.2);
+     background-color: hsl(var(--clr-light) / 0.2);
 } */
 
 /* typography */
@@ -232,6 +223,15 @@ select {
      line-height: 1.1;
 }
 
-/* small screens */
-@media screen and (max-width: 768px) {
+.numbered-title {
+     font-family: var(--ff-sans-cond);
+     font-size: var(--fs-500);
+     text-transform: uppercase;
+     letter-spacing: 4.75px;
+     margin-bottom: 1rem;
+}
+.numbered-title span {
+     margin-right: 0.5em;
+     font-weight: 700;
+     color: hsl(var(--clr-white) / 0.25);
 }

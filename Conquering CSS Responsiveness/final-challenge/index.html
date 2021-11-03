@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap" rel="stylesheet"> 
+     <title>Conquering Responsive Layouts: Final Challenge</title>
+</head>
+<body>
+     <header class="header bg-very-dark text-white">
+          <div class="container flex-700" style="--gap: 0;">
+               <button class="nav__toggle bg-accent" aria-label="open navigation">
+                    <span class="hamburger bg-white"></span>
+               </button>
+               <a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
+               <nav class="nav uppercase ff-sans-headings fs-400">
+                    <ul class="nav__list nav__list--primary flow-x">
+                         <li class="nav__item"><a class="nav__link" href="#">home</a></li>
+                         <li class="nav__item"><a class="nav__link" href="#">about</a></li>
+                         <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
+                    </ul>
+                    <ul class="nav__list nav__list--secondary flow-x">
+                         <li class="nav__item"><a class="nav__link" href="#">sign in</a></li>
+                         <li class="nav__item"><a class="nav__link btn btn--nav-link bg-accent" href="#">sign up</a></li>
+                    </ul>
+               </nav>
+          </div>
+     </header>
+     <main class="main">
+          <section class="section__one bg-dark text-white">
+               <div class="container flex-700">
+                    <div class="col hero__title">
+                         <h1 class="fs-900">Responsive layouts <span class="text-accent">don't have to be a struggle</span></h1>
+                    </div>
+                    <div class="col fs-600 hero__sub-title">
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                         <a href="#" class="btn btn--cta ff-sans-headings btn uppercase bg-accent">i want to learn</a>
+                    </div>
+               </div>
+          </section>
+          <section class="section__two bg-light text-very-dark">
+               <div class="container flex-700">
+                    <div class="col card">
+                         <h2 class="card__title text-accent fs-700">Mobile-first</h2>
+                         <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.</p>
+                    </div>
+                    <div class="col card">
+                         <h2 class="card__title text-accent fs-700">Efficient</h2>
+                         <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.</p>
+                    </div>
+                    <div class="col card">
+                         <h2 class="card__title text-accent fs-700">Done right</h2>
+                         <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.</p>
+                    </div>
+               </div>
+          </section>
+          <section class="section__three bg-white text-very-dark">
+               <div class="container flex-1000">
+                    <div class="col flow-y" style="--flow-space--y: 2em;">
+                         <h2 class="card__title fs-800 text-accent">It doesn't have to be so hard</h2>
+                         <p class="card__text fs-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.</p>
+                         <img class="card__image" src="img/the-image.jpg" alt="web page design illustration">
+                         <p class="card__text fs-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.</p>
+                    </div>
+                    <div class="col sidebar text-white">
+                         <div class="card bg-dark">
+                              <h2 class="card__title fs-700">Break it down</h2>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                         </div>     
+                         <div class="card bg-dark">
+                              <h2 class="card__title fs-700">Work your way up</h2>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                         </div>     
+                         <div class="card bg-dark">
+                              <h2 class="card__title fs-700">Something Else</h2>
+                              <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                         </div>     
+                    </div>
+               </div>
+          </section>
+          <footer class="footer bg-dark text-light fs-300">
+               <div class="container">
+                    <h3 class="text-white fs-600">just scratching the surface</h3>
+                    <div class="footer__wrapper">
+                         <div class="col--about">
+                              <h4 class="fs-500 text-accent">About our company</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam.</p>
+                         </div>
+                         <nav class="col--nav">
+                              <div class="col--list">
+                                   <ul class="flow-y">
+                                        <h4 class="fs-500 text-accent">Getting around</h4>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                   </ul>
+                              </div>
+                              <div class="col--list">
+                                   <ul class="flow-y">
+                                        <h4 class="fs-500 text-accent">Other things</h4>
+                                        <li><a href="#">Lorem ipsum</a></li>
+                                        <li><a href="#">dolor</a></li>
+                                        <li><a href="#">sit amet</a></li>
+                                        <li><a href="#">consectetur</a></li>
+                                   </ul>
+                              </div>
+                              <div class="col--list">
+                                   <ul class="flow-y">
+                                        <h4 class="fs-500 text-accent">And more</h4>
+                                        <li><a href="#">Lorem ipsum</a></li>
+                                        <li><a href="#">dolor</a></li>
+                                        <li><a href="#">sit amet</a></li>
+                                        <li><a href="#">consectetur</a></li>
+                                   </ul>
+                              </div>
+                              </nav>
+                    </div>
+               </div>
+          </footer>
+     </main>
+    <script src="script.js"></script>
+
+</body>
+</html>
