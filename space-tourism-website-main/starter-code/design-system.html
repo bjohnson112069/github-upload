@@ -49,19 +49,19 @@
                <div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
                     <div> 
                          <p class="text-accent">Heading 1 - Bellefair Regular - 150px</p>
-                         <p class="fs-900 ff-serif uppercase">Earth</p>
+                         <p class="fs-900 ff-serif uppercase text-white">Earth</p>
                     </div>
                     <div> 
                          <p class="text-accent">Heading 2 - Bellefair Regular - 100px</p>
-                         <p class="fs-800 ff-serif uppercase">Venus</p>
+                         <p class="fs-800 ff-serif uppercase text-white">Venus</p>
                     </div>
                     <div> 
                          <p class="text-accent">Heading 3 - Bellefair Regular - 56px</p>
-                         <p class="fs-700 ff-serif uppercase">Jupiter & Saturn</p>
+                         <p class="fs-700 ff-serif uppercase text-white">Jupiter & Saturn</p>
                     </div>
                     <div> 
                          <p class="text-accent">Heading 4 - Bellefair Regular - 32px</p>
-                         <p class="fs-600 ff-serif uppercase">Uranus, Neptune, & Pluto</p>
+                         <p class="fs-600 ff-serif uppercase text-white">Uranus, Neptune, & Pluto</p>
                     </div>
                     <div> 
                          <p class="text-accent">Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character Space</p>
@@ -69,11 +69,10 @@
                     </div>
                
                </div>
-               
                <div class="flow" style="flex-basis: 100%; --flow-space: 4rem;">
                     <div> 
                          <p class="text-accent">Subheading 1 - Bellefair Regular - 28px</p>
-                         <p class="fs-500 ff-serif uppercase">384,400 km</p>
+                         <p class="fs-500 ff-serif uppercase text-white">384,400 km</p>
                     </div>
                     <div> 
                          <p class="text-accent">Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character Space</p>
@@ -89,7 +88,52 @@
                     </div>
                </div>
                </div>
-               </section>
+          </section>
+          <section class="flow" id="interactive-elements">
+               <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
+               
+               <!-- navigation -->
+               <div>
+                    <nav class="fs-300 ff-sans-cond">
+                         <ul class="primary-navigation underline-indicators flex">
+                              <li class="active"><a class="uppercase letter-spacing-2 text-white" style="text-decoration: none;" href="#"><span>01</span>Active</a></li>
+                              <li><a class="uppercase letter-spacing-2 text-white" style="text-decoration: none;" href="#"><span>02</span>Hover</a></li>
+                              <li><a class="uppercase letter-spacing-2 text-white" style="text-decoration: none;" href="#"><span>03</span>Idle</a></li>
+                         </ul>
+                    </nav>
+               </div>
+               
+               <div class="flex" style="--gap: 20rem;">
+                    <div style="margin-top: 5rem">
+                         <!-- explore button -->
+                         <a href="#" class="large-button bg-white text-dark fs-600 ff-serif uppercase">Explore</a>
+                    </div>
+                    
+                    <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
+                         <!-- Tabs -->
+                         <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
+                              <button aria-selected="true" role="tab" aria-controls="moon-tab"  class="uppercase text-accent ff-sans-cond fs-300 letter-spacing-2">moon</button>
+                              <button aria-selected="false" role="tab" aria-controls="moon-tab"  class="uppercase text-accent ff-sans-cond fs-300 letter-spacing-2">mars</button>
+                              <button aria-selected="false" role="tab" aria-controls="moon-tab"  class="uppercase text-accent ff-sans-cond fs-300 letter-spacing-2">europa</button>
+                         </div>
+                         
+                         <!-- Dots -->
+                         <div class="dot-list dot-indicators flex">
+                              <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+                              <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                              <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                         </div>
+                                             
+                         <!-- Numbers -->
+                         <div class="numbered-list numbered-indicators flow fs-600 ff-serif uppercase">
+                              <button aria-selected="true" class="bg-dark text-white fs-600 ff-serif uppercase">1</button>
+                              <button aria-selected="false" class="bg-dark text-white fs-600 ff-serif uppercase">2</button>
+                              <button aria-selected="false" class="bg-dark text-white fs-600 ff-serif uppercase">3</button>
+                         </div>
+                    </div>
+               </div>
+               
+           </section>
      </div>
      
      <script src="index.pack.js"></script>

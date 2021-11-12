@@ -1,5 +1,6 @@
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const nav = document.querySelector(".primary-navigation");
+const srOnly = document.querySelector(".sr-only");
 
 // when someone clise the hambruger button
 navToggle.addEventListener("click", () => {
@@ -15,3 +16,4 @@ navToggle.addEventListener("click", () => {
           navToggle.setAttribute("aria-expanded", false);
      }
 });
+
