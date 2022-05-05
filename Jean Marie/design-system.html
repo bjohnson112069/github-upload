@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet"> 
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Design System</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="uppercase">Design system</h1>
+        <!-- Logo -->
+        <section id="logo" style="margin: 4rem 0">
+            <h2 class="ff-sans-serif fs-500 letter-spacing-1 uppercase" style="margin-bottom: 1rem"><span style="font-weight: 700; color: hsl(var(--clr-white) / 0.25); margin-right: .5em">01</span> logo</h2>
+            <a href="#" class="logo"><img src="./images/logoclearbg-cropped.png" alt="image of logo"></a>
+        </section>
+        <!-- Colors -->
+        <section id="colors" style="margin: 4rem 0">
+            <h2 class="ff-sans-serif fs-500 letter-spacing-1 uppercase" style="margin-bottom: 1rem"><span style="font-weight: 700; color: hsl(var(--clr-white) / 0.25); margin-right: .5em">02</span> colors</h2>
+            <div class="flex">
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-white--off text-dark" style="padding: 3rem 1rem 1rem; border: 1px solid white">
+                    #CFC270
+                    </div>
+                    <p><span class="text-green" style="padding-right: 3rem">RGB</span> 52, 50, 63</p>
+                    <p><span class="text-accent" style="padding-right: 3rem">HSL</span> 207°, 194%, 112%</p>
+                </div>
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-neutral--dark text-dark" style="padding: 3rem 1rem 1rem; border: 1px solid white">
+                    #D5D0BC
+                    </div>
+                    <p><span class="text-green" style="padding-right: 3rem">RGB</span> 213, 208, 188</p>
+                    <p><span class="text-accent" style="padding-right: 3rem">HSL</span> 48°, 23%, 79%</p>
+                </div>
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-neutral--blue text-dark" style="padding: 3rem 1rem 1rem; border: 1px solid white">
+                    #4E557F
+                    </div>
+                    <p><span class="text-green" style="padding-right: 3rem">RGB</span> 78, 75, 127</p>
+                    <p><span class="text-accent" style="padding-right: 3rem">HSL</span> 231°, 24%, 40%</p>
+                </div>
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-green text-white" style="padding: 3rem 1rem 1rem; border: 1px solid white">
+                    #95AF5C
+                    <!-- 7EAB11 -->
+                    </div>
+                    <p><span class="text-green" style="padding-right: 3rem">RGB</span> 149, 175, 92</p>
+                    <p><span class="text-accent" style="padding-right: 3rem">HSL</span> 79°, 34%, 52%</p>
+                </div>
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-plum text-white" style="padding: 3rem 1rem 1rem; border: 1px solid white">
+                    #533440
+                    </div>
+                    <p><span class="text-green" style="padding-right: 3rem">RGB</span> 83, 52, 64</p>
+                    <p><span class="text-accent" style="padding-right: 3rem">HSL</span> 337°, 23%, 26%</p>
+                </div>
+            </div>
+        </section>
+        <!-- Typography -->
+        <section id="typography"  style="margin: 4rem 0">
+            <h2 class="ff-sans-serif fs-500 letter-spacing-1 uppercase" style="margin-bottom: 1rem"><span style="font-weight: 700; color: hsl(var(--clr-white) / 0.25); margin-right: .5em">03 </span>Typography</h2>
+            <div class="flex">
+                <div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
+                    <div class="bg-plum"> 
+                        <p class="text-green">Heading 1 - Oswald (sans serif) - 150px/fs-900/fw-400</p>
+                        <p class="fs-900 fw-regular ff-sans-serif uppercase text-neutral--dark">Heading 1</p>
+                    </div>
+                    <div class="bg-neutral--dark"> 
+                        <p class="text-green">Heading 2 - Oswald (sans serif) - 100px/fs-800/fw-400</p>
+                        <p class="fs-800 fw-regular ff-sans-serif uppercase text-plum">Heading 2</p>
+                    </div>
+                    <div class="bg-neutral--blue"> 
+                        <p class="text-green">Heading 3 - Oswald (sans serif) - 56px/fs-700/fw-400</p>
+                        <p class="fs-700 fw-regular ff-sans-serif uppercase text-white--off">Heading 3</p>
+                    </div>
+                    <div class="bg-neutral--dark"> 
+                        <p class="text-green">Heading 4 - Oswald (sans serif) - 32px/fs-600/fw-400</p>
+                        <p class="fs-600 fw-regular ff-sans-serif uppercase text-neutral--blue">Heading 4</p>
+                    </div>
+                    <div class="bg-green"> 
+                        <p class="text-neutral--blue">Heading 5 - Oswald (sans serif) - 28px - 4.75 Character Space/fs-500/fw-400</p>
+                        <p class="fs-500 fw-regular ff-sans-serif uppercase letter-spacing-1">Heading 5</p>
+                    </div>
+                
+                </div>
+                <div class="flow" style="flex-basis: 100%; --flow-space: 4rem;">
+                    <div> 
+                        <p class="text-neutral--blue">Subheading 1 - Oswald (sans serif) - 28px/fs-500/fw-300</p>
+                        <p class="fs-500 fw-light ff-sans-serif uppercase text-dark">Subheading 1</p>
+                    </div>
+                    <div> 
+                        <p class="text-neutral--blue">Subheading 2 - Oswald (sans serif) - 14px - 2.35 Character Space/fs-200/fw-300</p>
+                        <p class="fs-200 fw-light ff-sans-serif uppercase letter-spacing-3">Subheading 2</p>
+                    </div>
+                    <div> 
+                        <p class="text-neutral--blue">Nav Text - Oswald (sans serif) - 16px - 2.7 Character Space/fs-300/fw-300</p>
+                        <p class="fs-300 fw-light ff-sans-serif uppercase letter-spacing-2">Nav Text</p>
+                    </div>
+                    <div> 
+                        <p class="text-neutral--blue">Body Text - Aleo (serif) - (fs-400)</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. </p>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section class="flow" id="interactive-elements">
+            <h2 class="ff-sans-serif fs-500 letter-spacing-1 uppercase" style="margin-bottom: 1rem"><span style="font-weight: 700; color: hsl(var(--clr-white) / 0.25); margin-right: .5em">04 </span>Interactive elements</h2>
+              
+              <!-- navigation -->
+              <div class="flex">
+                    <a href="#" class="logo"><img src="./images/logoclearbg-cropped.png" alt="image of logo"></a>
+                   <nav class="fs-300 fw-light ff-sans-serif">
+                        <ul class="primary-navigation underline-indicators flex text-plum">
+                             <li class="active"><a class="uppercase letter-spacing-2" style="text-decoration: none;" href="#"><span>01</span>Active</a></li>
+                             <li><a class="uppercase letter-spacing-2" style="text-decoration: none;" href="#"><span>02</span>Hover</a></li>
+                             <li><a class="uppercase letter-spacing-2" style="text-decoration: none;" href="#"><span>03</span>Idle</a></li>
+                        </ul>
+                   </nav>
+              </div>
+              
+              <div class="flex" style="--gap: 20rem;">
+                   <div style="margin-top: 5rem">
+                        <!-- button -->
+                        <a href="#" class="button text-plum border-plum fs-300 fw-light ff-sans-serif uppercase letter-spacing-2">Button</a>
+                   </div>
+                   
+              </div>
+              
+          </section>
+    </div>
+</body>
+</html>
