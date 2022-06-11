@@ -5,48 +5,282 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Style Sheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./sytles.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-   <!-- Javascript -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+     <!-- Javascript -->
     <script src="script.js" defer></script>
     <title>Jean Marie Johnson, LICSW</title>
 </head>
-<body>
-    <body class="home">
-        <!-- <a class="skip-to-content" href="#main">Skip to content</a> -->
-        <header class="primary-header flex">
-             <div>
-                  <a href="#" class="logo"><img src="./images/logoclearbg-cropped.png" alt="image of logo"></a>
-             </div>
-             <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
-             <!-- navigation -->
-             <nav class="fs-300 fw-light ff-sans-serif">
-                  <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-                       <li class="active"><a class="uppercase letter-spacing-2 text-white" style="text-decoration: none;" href="index.html">About</a></li>
-                       <li><a class="uppercase letter-spacing-2 text-white" style="text-decoration: none;" href="#">Services & Fees</a></li>
-                       <li><a class="uppercase letter-spacing-2 text-white" style="text-decoration: none;" href="#">FAQs</a></li>
-                       <li><a class="uppercase letter-spacing-2 text-white" style="text-decoration: none;" href="#">Contact</a></li>
-                       <li><a class="uppercase letter-spacing-2 button text-plum border-plum" style="text-decoration: none;" href="#">Client Portal</a></li>
-                    </ul>
-             </nav>
-             
-             <!-- my ::after is here -->
-        </header>
-        <main id="main" class="grid-container grid-container--main">
-             <section id="welcome" class="grid-container grid-container--about">
-               <p class="fs-900 ff-sans-serif uppercase text-neutral--dark">Welcome</p>
-               <img src="./images/istockphoto-506122072-1024x1024.jpg" alt="image of mental health">
-             </section>
-             <!-- 
-            <div class="hero-img">
-                <img src="./images/logo.png" alt="hero image of logo">
-           </div>
-            -->
-      </main>
-   </body>
+<body class="grid ff-sans-serif bg-blue-navy">
+     <header id="header" class="bg-blue-navy">
+          <div class="content-container">
+               <div class="flex primary-header">
+                    <div>
+                         <img class="logo" src="./images/logoclearbg-cropped.png" alt="logo image">
+                    </div>
+                    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+                    <!-- navigation -->
+                    <nav>
+                         <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators fs-300 ff-sans-serif fw-bold uppercase bg-blue-navy text-white-cream bd-white-cream--hover bd-white-cream--focus text-yellow-ochre--active bd-yellow-ochre--active">
+                              <li class="active"><a class="" href="#header">Home</a></li>
+                              <li><a class="" href="#about">About</a></li>
+                              <li><a class="" href="#services">Services</a></li>
+                              <li><a class="" href="#insurance">Insurance</a></li>                         
+                              <li><a id="client-portal" class="text-yellow-ochre bd-yellow-ochre bg-yellow-ochre--hover text-white-cream--hover" href="#portal">client portal</a></li>
+                         </ul>
+                    </nav>
+                    <!-- my ::after is here -->
+               </div>
+          </div>
+     </header>
+     
+     <main id="main" class="">
+          <div class="content-container">
+               <div class="grid grid--main">
+                    <div id="main--wrapper-1" class="grid content-wrapper text-white-cream">
+                         <div id="logo" class="image-wrapper">
+                              <img src="./images/logoclearbg-cropped.png" alt="logo image">
+                         </div>
+                         <div id="title" class="fs-700 fw-regular ff-serif text-white-cream capitalize">jean marie johnson</div>
+                         <div id="subtitle" class="fs-500 fw-light ff-sans-serif uppercase text-green-olive">Licensed Independent Clinical Social Worker</div>
+                         <div class="horizontal-separator bg-accent"></div>
+                         <div id="web-site" class="fs-400 fw-light ff-sans-serif letter-spacing-1">www.jeanmariejohnsonlicsw.com</div>
+                         <div id="email" class="fs-400 fw-light ff-sans-serif letter-spacing-1"> jeanmariejohnsonlicsw@gmail.com</div>
+                         <div id="phone" class="fs-400 fw-light ff-sans-serif letter-spacing-1">978.728.3595</div>
+                    </div>
+                    <div id="main--wrapper-2" class="grid content-wrapper text-white-cream bd-green-olive">
+                         <ul class="fs-400 fw-regular contact-color flex flow--vertical">
+                              <li class="fs-500 fw-bold capitalize text-green-olive">Welcome to my website</li>
+                              <li>Today you are one step closer to ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestias, labore vel atque minima ipsa odit voluptatem velit culpa incidunt. Sunt non sequi vero, nobis repudiandae nemo. Veniam, ab aperiam!</li>
+                              <li>My goal is to help you, or a loved one, ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda voluptates vel eum quae est nostrum autem voluptatibus corporis non, voluptatem a natus numquam repellendus, aspernatur inventore, odit rem officia cupiditate!</li>
+                              <li>I look forward to working with you to achieve your goals. I provide therapy services to children ages 3 and older, adolescents and adults.  Please <a href="mailto:jeanmariejohnsonlicsw@gmail.com" class="text-yellow-ochre">contact me</a> to schedule an appointment.</li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+     </main>
+     
+     <section id="about" class="bg-green-olive">
+          <div class="content-container bg-green-olive">
+               <div class="section-title fs-700 fw-regular ff-serif text-purple-plum uppercase">about
+                    <a class="to-home" href="#header"><i class="fas fa-arrow-alt-circle-up"></i></a>
+               </div>
+               <div class="grid grid--about">
+                    <div id="about--wrapper-2" class="grid content-wrapper text-blue-navy bd-purple-plum">
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-purple-plum">About Me</li>
+                              <li>Hi!  Welcome to my web site.  My name is Jean Marie Johnson.  I am a Licensed Professional Counselor and have been working with adolescents in residential and outpatient care since 2018.   I am committed to creating a safe, healing and compassionate environment for all my clients.</li>
+                              <li>I am a devoted mother, loving wife, and appreciate spending time with my family and community.
+                         </ul>
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-purple-plum">
+                              License, Certifications and Advanced Training:
+                              </li>
+                              <li>Licensed Independent Clinical Social Worker (LICSW)</li>
+                              <li>Cognitive Behavioral Therapy (CBT)</li>
+                              <li>Dialectical Behavioral Therapy (DBT)</li>
+                              <li>Trauma-Focused Cognitive Behavioral Therapy (TF-CBT)</li>
+                              <li>Solution-Focused Brief Therapy (SFBT)</li>
+                         </ul>
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-purple-plum">Education:</li>
+                              <li>Master of Social Work (MSW) - Simmmons University</li>
+                              <li>Dual Bachelor of Science (BS) - University of Vermont</li>
+                         </ul>
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-purple-plum">Professional Activities and Memberships:</li>
+                              <li>t.b.d.</li>
+                              <li>t.b.d.</li>
+                         </ul>
+                    </div>
+                    <div id="about--wrapper-1" class="grid content-wrapper">
+                         <figure class="profile--card bg-purple-plum has-black-shadow">
+                              <img src="./images/IMG_0820.JPG" alt="image of lotus blossum" />
+                              <figcaption class="flex flow--vertical fs-400 text-white-cream bd-purple-plum">
+                                   <img src="./images/profile-pic-cropped.jpeg" alt="profile image" class="profile" />
+                                   <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Jean Marie Johnson, <span class="">LICSW</span><span class="fw-regular text-green-olive d-block">Therapist</span></p>
+                                   <a href="www.jeanmariejohnsonlicsw.com"><i class='fa fa-home'></i>Home Page</a>
+                                   <a href="mailto:jeanmariejohnsonlicsw@gmail.com"><i class="fas fa-envelope"></i>E-Mail</a>
+                                   <a href="tell:19787283595"><i class="fas fa-phone"></i>Phone</a>
+                              </figcaption>
+                         </figure>
+                    </div>
+               </div>
+          </div>
+     </section>
+          
+     <section id="services" class="bg-white-cream">
+          <div class="content-container">
+               <div class="section-title fs-700 fw-regular ff-serif text-blue-navy uppercase">services
+                    <a class="to-home" href="#header"><i class="fas fa-arrow-alt-circle-up"></i></a>
+               </div>
+               <div class="grid grid--services">
+                    <div id="services--wrapper-1" class="grid content-wrapper">
+                         <figure class="profile--card bg-blue-navy has-black-shadow">
+                              <img src="./images/pexels-shvets-production-7176302.jpg" alt="image of mental-female-specialist-speaking-to-group-of-clients" title="Photo by SHVETS production: https://www.pexels.com/photo/mental-female-specialist-speaking-to-group-of-clients-7176302/"/>
+                              <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
+                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Cognitive Behavioral Therapy <span class="fw-regular text-green-olive">(CBT)</span></p>
+                                   <p class="">A common type of talk therapy (psychotherapy). You work with a mental health counselor (psychotherapist or therapist) in a structured way, attending a limited number of sessions.</p>
+                              </figcaption>
+                         </figure>
+                         <figure class="profile--card bg-blue-navy has-black-shadow">
+                              <img src="./images/pexels-fauxels-3184398.jpg" alt="image of people-taking-group-picture" title="Photo by fauxels: https://www.pexels.com/photo/people-taking-group-picture-3184398/"/>
+                              <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
+                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Dialectical Behavioral Therapy <span class="fw-regular text-green-olive">(DBT)</span></p>
+                                   <p class="">Includes group and individual therapy designed specifically to treat borderline personality disorder. DBT uses a skills-based approach to teach you how to manage your emotions, tolerate distress and improve relationships.</p>
+                              </figcaption>
+                         </figure>
+                         <figure class="profile--card bg-blue-navy has-black-shadow">
+                              <img src="./images/pexels-shvets-production-7176224.jpg" alt="image of couple-hugging-during-session-with-psychologist" title="Photo by SHVETS production: https://www.pexels.com/photo/couple-hugging-during-session-with-psychologist-7176224/"/>
+                              <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
+                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Trauma-Focused Cognitive Behavioral Therapy <span class="fw-regular text-green-olive">(TF-CBT)</span></p>
+                                   <p class="">Evidence-based treatment for children and adolescents, and their caregivers, to deal with the negative impact of traumatic events, such as witnessing violence, experiencing sexual or physical abuse, an unexpected death, or a natural disaster. It incorporates a trauma-sensitive model and interventions with cognitive behavioral, family and humanistic techniques.</p>
+                              </figcaption>
+                         </figure>
+                         <figure class="profile--card bg-blue-navy has-black-shadow">
+                              <img src="./images/pexels-thirdman-5256816.jpg" alt="image of man-and-woman-holding-each-other-s-hands-as-a-team" title="Photo by Thirdman: https://www.pexels.com/photo/man-and-woman-holding-each-other-s-hands-as-a-team-5256816/"/>
+                              <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
+                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Solution-Focused Brief Therapy <span class="fw-regular text-green-olive">(SFBT)</span></p>
+                                   <p class="">Concentrates on finding solutions in the present time and exploring one’s hope for the future to find quicker resolution of one’s problems. This method takes the approach that you know what you need to do to improve your own life and, with the appropriate coaching and questioning, are capable of finding the best solutions.</p>
+                              </figcaption>
+                         </figure>
+                         <figure class="profile--card bg-blue-navy has-black-shadow">
+                              <img src="./images/pexels-edward-jenner-4031710.jpg" alt="image of woman-in-a-video-call-with-a-covid-19-patient" title="Photo by Edward Jenner: https://www.pexels.com/photo/woman-in-a-video-call-with-a-covid-19-patient-4031710/"/>
+                              <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
+                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Telehealth Therapy</p>
+                                   <p class="">I am happy to offer my clients the option of secure telehealth/online therapy.  Easy and confidential access from wherever you are (home, work, car) with no additional drive time in your schedule.  Ensures your physical health and safety from COVID (or other illnesses).  Most insurance companies will cover Telehealth the same as in office meetings.</p>
+                              </figcaption>
+                         </figure>
+                         <figure class="profile--card bg-blue-navy has-black-shadow">
+                              <img src="./images/pexels-brett-jordan-6845709.jpg" alt="image of brown-letter-tiles-on-white-surface" title="Photo by Brett Jordan: https://www.pexels.com/photo/brown-letter-tiles-on-white-surface-6845709/"/>
+                              <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
+                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Treatment Focus Areas</p>
+                                   <ul class="fs-400 fw-regular flex flow--vertical">
+                                        <li>Anxiety</li>
+                                        <li>Depression</li>
+                                        <li>Obsessive Complusive Disorder (OCD)</li>
+                                        <li>Attention-deficit/hyperactivity disorder (ADHD)</li>
+                                   </ul>
+                              </figcaption>
+                         </figure>
+                    </div>
+               </div>
+          </div>
+     </section>
+          
+     <section id="insurance" class="bg-purple-plum">
+          <div class="content-container">
+               <div class="section-title fs-700 fw-regular ff-serif text-green-olive uppercase">insurance & rates
+                    <a class="to-home" href="#header"><i class="fas fa-arrow-alt-circle-up"></i></a>
+               </div>
+               <div class="grid grid--insurance">
+                    <div id="insurance--wrapper-2" class="grid content-wrapper text-white-cream">
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-green-olive">Rates</li>
+                              <li>Please <a href="mailto:jeanmariejohnsonlicsw@gmail.com" class="text-yellow-ochre">contact me</a> for current rates.</li>
+                         </ul>
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-green-olive">Insurance</li>
+                              <li>Mass Health</li>
+                              <li>Blue Cross Blue Shield</li>
+                              <li>Tufts Health Plan</li>
+                         </ul>
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-green-olive">Suggestions to ask your insurance provider:</li>
+                              <li>Do I have mental health insurance benefits?</li>
+                              <li>What is my deductible and has it been met?</li>
+                              <li>How many sessions per year does my health insurance cover?</li>
+                              <li>What is the coverage amount per therapy session/ co-pay?</li>
+                              <li>How much does my plan cover for an out-of-network provider?</li>
+                              <li>What is the coverage amount per therapy session?</li>
+                              <li>Is approval required from my primary care physician?</li>
+                              <li>Are there any limitations to my coverage?</li>
+                         </ul>
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-green-olive">Payment</li>
+                              <li>Your co-pay or deductible amount is due at the time of service. Your insurance company will be billed and, following their payment, a second bill with any remaining balance, will be sent to you for payment. I do not bill a secondary or third insurance. </li>
+                         </ul>
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-green-olive">Cancellation Policy</li>
+                              <li>I request 24-hours for cancellation of sessions. If you do not show up for your scheduled appointment, and/or you have not notified me at least 24 hours in advance, you will be required to pay the full cost of the treatment as booked.  Insurance companies do not pay for missed appointments.</li>
+                         </ul>
+                    </div>
+                    <div id="insurance--wrapper-1" class="grid content-wrapper bg-white-cream">
+                         <ul class="fs-400 fw-regular flex flow--vertical">
+                              <li class="fs-500 fw-bold text-purple-plum">In-Network Insurance Providers</li>
+                              <li id="insurance-logo-wrapper" class="grid content-">
+                                   <div class="image-wrapper">
+                                        <img src="./images/mass-health-logo.png" alt="mass health logo">
+                                   </div>
+                                   <div class="image-wrapper">
+                                        <img src="./images/vectorwiki-blue-cross-blue-shield-1-logo.png" alt="blue cross blue shield logo">
+                                   </div>
+                                   <div class="image-wrapper">
+                                        <img src="./images/TUFTS logo Blue 4C.png" alt="tufts health plan logo">
+                                   </div>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <section id="portal" class="bg-blue-navy">
+          <div class="content-container">
+               <div class="section-title fs-700 fw-regular ff-serif text-yellow-ochre uppercase">client portal
+                    <a class="to-home" href="#header"><i class="fas fa-arrow-alt-circle-up"></i></a>
+               </div>
+               <div class="grid grid--portal">
+                    <div id="portal--wrapper-1" class="grid content-wrapper">
+                         <div class="image-wrapper has-white-shadow">
+                              <img src="./images/pexels-marko-klaric-6408282.jpg" alt="image of clipboard-with-calendar-placed-on-desk-amidst-stationery" title="Photo by Marko Klaric: https://www.pexels.com/photo/clipboard-with-calendar-placed-on-desk-amidst-stationery-6408282/">
+                         </div>
+                    </div>
+                    <div id="portal--wrapper-2" class="grid content-wrapper text-white-cream bd-yellow-ochre">
+                         <ul class="fs-400 fw-regular contact-color flex flow--vertical">
+                              <li class="fs-500 fw-bold capitalize text-green-olive">Access the client portal to:</li>
+                              <li>View scheduled appointments</li>
+                              <li>Join telehealth appointments</li>
+                              <li>View billing documents & pay invoices</li>
+                              <li>Upload forms and documents</li>
+                         </ul>
+                         <a id="client-portal" class="button text-green-olive bd-green-olive bg-purple-plum--hover text-white-cream--hover uppercase" href="#">client portal</a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     
+     <footer id="footer" class="bg-yellow-ochre">
+          <div class="content-container">
+               <div class="grid grid--footer text-blue-navy">
+                    <!-- navigation -->
+                    <div class="grid content-wrapper">
+                         <img class="logo" src="./images/logoclearbg-cropped.png" alt="logo image">
+                         <div id="title" class="fs-500 fw-regular ff-serif text-white-cream capitalize">jean marie johnson</div>
+                    </div>
+                    <div>Thank you for visiting my web site.  I look forward to working with you soon.  Need more information?  Please <a href="mailto:jeanmariejohnsonlicsw@gmail.com" class="text-white-cream">contact me</a>.</div>
+                    <div class="flex copyright-container fs-200">
+                         <div>Copyright © 2022 Jean Marie Johnson, LICSW - All Rights Reserved.</div>
+                         <div>Powered by <span class="ff-serif fs-400 fw-bold text-dev--black">X</span><span class="ff-serif fs-400 fw-bold text-dev--white superscript">4</span><span class="text-dev--red">des</span><span class="text-dev--black">i</span><span class="text-dev--white bg-dev--red">gns</span></div>
+                         </div>
+                    <!-- my ::after is here -->
+               </div>
+          </div>
+     </footer>
+
+</body>
 </html>

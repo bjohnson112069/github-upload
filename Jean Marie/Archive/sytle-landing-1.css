@@ -1,0 +1,622 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+
+     /* --clr-plum--light: #B17376; */
+     /* --clr-plum--dark: #5E334F; */
+     --clr-plum--dark: #DD7BB4;
+     --clr-plum--light: #9C3954;
+     --clr-accent: #FDAB2B;
+
+     /* colors */
+     --clr-dark: 230 35% 7%;
+     /* --clr-white--off: 207 194% 112%; */
+     --clr-white--off: 52 50% 63%;
+     --clr-neutral--dark: 48 23% 79%;
+     /* --clr-neutral--blue: 231 24% 40%; */
+     --clr-neutral--blue: 205 97% 15%;
+     --clr-green: 79 34% 52%;
+     --clr-plum: 305 44% 21%;
+     --clr-white: 0 0% 100%;
+     /* font-sizes: Mobile */
+     --fs-900: clamp(5rem, 8vw + 1rem, 8.75rem);
+     --fs-800: 3.5rem;
+     --fs-700: 1.5rem;
+     --fs-600: 1rem;
+     --fs-500: 1rem;
+     --fs-400: 0.9375rem;
+     --fs-300: 1rem;
+     --fs-200: 0.875rem;
+     /* font-families */
+     --ff-serif: "Aleo", serif;
+     --ff-sans-serif: "Oswald", sans-serif;
+     /* --ff-serif: "Bellefair", serif; */
+     /* --ff-sans-cond: "Barlow Condensed", sans-serif; */
+     /* --ff-sans-serif: "Barlow", sans-serif; */
+     /* font-weights */
+     --fw-400: 400;
+     --fw-300: 300;
+     --fw-700: 700;
+     /* Custom Properties */
+}
+
+/* Tablet 560px */
+@media (min-width: 35em) {
+     :root {
+          /* font-sizes: Tablet */
+          --fs-800: 5rem;
+          --fs-700: 2.5rem;
+          --fs-600: 1.5rem;
+          --fs-400: 1rem;
+          --fs-500: 1.25rem;
+     }
+}
+/* large Sizes */
+@media (min-width: 45em) {
+     :root {
+          /* font-sizes: Desktop */
+          --fs-800: 6.25rem;
+          --fs-700: clamp(2rem, 3vw + 1rem, 3.5rem);
+          /* --fs-700: 3.5rem; */
+          --fs-600: 2rem;
+          --fs-500: 1.75rem;
+          --fs-400: 1.125rem;
+     }
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+     font-weight: var(--fw-400);
+}
+
+/* set up the body */
+body {
+     font-family: var(--ff-serif);
+     font-size: var(--fs-400);
+     /* background-color: hsl(var(--clr-dark)); */
+     /* background-image: linear-gradient(135deg, hsl(var(--clr-green) / 0.5), hsl(var(--clr-neutral--blue) / 0.75)); */
+     /* color: hsl(var(--clr-dark)); */
+     line-height: 1.5;
+     min-height: 100vh;
+
+     display: grid;
+     /* stretch header and main-content to fit the min-height*/
+     grid-template-rows: min-content 1fr;
+
+     /* prevent side-scrolling for animations */
+     overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+     max-width: 100%;
+     /* border-radius: 10px; */
+     /* display: block overrides default behavior of hidden attribute for picture element */
+     /* display: block; */
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+[hidden] {
+     display: none;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+     *,
+     *::before,
+     *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+     }
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+     display: flex;
+     gap: var(--gap, 1rem);
+     /* outline: 3px solid red; */
+}
+
+.grid {
+     display: grid;
+     gap: var(--gap, 1rem);
+}
+
+.d-block {
+     display: block;
+}
+.d-inline-block {
+     display: inline-block;
+}
+
+/* select all adjacent siblings that come before it; select all but 1st child */
+/* "> * + *" */
+/* "> *:not(:first-child)" has specificity problems */
+/* "> *:where(:not(:first-child))" where does not add any specificity so you can overwrite*/
+.flow--vertical > *:where(:not(:first-child)) {
+     margin-top: var(--flow-space, 1rem);
+     /* outline: 1px solid red; */
+}
+
+.flow--space-small {
+     --flow-space: 0.75rem;
+}
+
+
+/* screen reader only; keeps it in the DOM but is not visible */
+.sr-only {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     margin: -1px;
+     overflow: hidden;
+     clip: rect(0, 0, 0, 0);
+     white-space: nowrap; /* added line */
+     border: 0;
+}
+
+/* colors */
+
+.bg-dark {
+     background-color: hsl(var(--clr-dark));
+}
+.bg-white--off {
+     background-color: hsl(var(--clr-white--off));
+}
+.bg-neutral--dark {
+     background-color: hsl(var(--clr-neutral--dark));
+}
+.bg-neutral--blue {
+     background-color: hsl(var(--clr-neutral--blue));
+}
+.bg-green {
+     background-color: hsl(var(--clr-green));
+}
+.bg-plum {
+     background-color: hsl(var(--clr-plum));
+}
+.bg-white {
+     background-color: hsl(var(--clr-white));
+}
+.bg-accent {
+     background-color: var(--clr-accent);
+}
+
+.text-dark {
+     color: hsl(var(--clr-dark));
+}
+.text-white {
+     color: hsl(var(--clr-white));
+}
+.text-white--off {
+     color: hsl(var(--clr-white--off));
+}
+.text-neutral--dark {
+     color: hsl(var(--clr-neutral--dark));
+}
+.text-neutral--blue {
+     color: hsl(var(--clr-neutral--blue));
+}
+.text-green {
+     color: hsl(var(--clr-green));
+}
+.text-plum {
+     color: hsl(var(--clr-plum));
+}
+.text-plum--light {
+     color: var(--clr-plum--light);
+}
+.text-accent {
+     color: var(--clr-accent);
+}
+
+.border-plum {
+     border: 3px solid hsl(var(--clr-plum));
+}
+
+/* .alpha-20 {
+     background-color: hsl(var(--clr-light) / 0.2);
+} */
+
+/* typography */
+
+.ff-serif {
+     font-family: var(--ff-serif);
+}
+.ff-sans-cond {
+     font-family: var(--ff-sans-cond);
+}
+.ff-sans-serif {
+     font-family: var(--ff-sans-serif);
+}
+
+.letter-spacing-1 {
+     letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+     letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+     letter-spacing: 2.35px;
+}
+
+.uppercase {
+     text-transform: uppercase;
+}
+
+.capitalize {
+     text-transform: capitalize;
+}
+
+.fs-900 {
+     font-size: var(--fs-900);
+}
+.fs-800 {
+     font-size: var(--fs-800);
+}
+.fs-700 {
+     font-size: var(--fs-700);
+}
+.fs-600 {
+     font-size: var(--fs-600);
+}
+.fs-500 {
+     font-size: var(--fs-500);
+}
+.fs-400 {
+     font-size: var(--fs-400);
+}
+.fs-300 {
+     font-size: var(--fs-300);
+}
+.fs-200 {
+     font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+     line-height: 1.1;
+}
+
+.fw-light {
+     font-weight: var(--fw-300);
+}
+
+.fw-regular {
+     font-weight: var(--fw-400);
+}
+
+.fw-bold {
+     font-weight: var(--fw-700);
+}
+
+/* --------------------- */
+/* Components            */
+/* --------------------- */
+
+
+@keyframes pulsate {
+     0% {
+          box-shadow: 0 0 25px hsl(var(--clr-plum)), 0 0 50px hsl(var(--clr-white));
+     }
+}
+
+@keyframes pulsate-text {
+     0% {
+          text-shadow: 5px 5px 10px hsl(var(--clr-white)), -5px -5px 15px hsl(var(--clr-white));
+     }
+}
+/
+
+/* must include BOTH the property and the value */
+@supports (backdrop-filter: blur(1.5rem)) {
+     .primary-navigation {
+          background-color: hsl(var(--clr-white) / 0.04);
+          backdrop-filter: blur(1.5rem);
+     }
+}
+/* override defaults for mobile using max-width */
+@media (max-width: 35rem) {
+     .primary-navigation {
+          --underline-gap: 0.5em;
+          position: fixed;
+          z-index: 1000;
+          inset: 0 0 0 30%; /* short-hand for top, right, bottom, left */
+          list-style: none;
+          padding: min(20rem, 15vh) 2rem;
+          margin: 0;
+          flex-direction: column;
+          transform: translateX(100%);
+          transition: transform 500ms ease-in-out;
+     }
+
+     /* modify underline-indicators for pimrary-navigation w/in this media query (e.g. mobile) */
+     .primary-navigation.underline-indicators > .active {
+          border: 0;
+     }
+
+     .primary-navigation[data-visible="true"] {
+          transform: translateX(0);
+     }
+
+     .mobile-nav-toggle {
+          display: block;
+          position: absolute;
+          z-index: 2000;
+          right: 1rem;
+          top: 2rem;
+          background: transparent;
+          border: 0;
+          background-image: url(./assets/shared/icon-hamburger.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 1.5rem;
+          aspect-ratio: 1;
+          cursor: pointer;
+     }
+
+     .mobile-nav-toggle[aria-expanded="true"] {
+          background-image: url(./assets/shared/icon-close.svg);
+     }
+
+     .mobile-nav-toggle:focus-visible {
+          outline: 5px solid white;
+          outline-offset: 5px;
+     }
+}
+
+@media (min-width: 35em) {
+     .primary-navigation {
+          padding-inline: clamp(3rem, 7vw, 7rem);
+     }
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+     .primary-navigation a > span {
+          display: none;
+     }
+}
+
+@media (min-width: 45em) {
+     .primary-navigation {
+          margin-block: 2rem;
+     }
+}
+
+/* --------------------- */
+/* Layout                */
+/* --------------------- */
+
+#main {
+     --gap: 0;
+     flex-direction: column;
+     /* background-image: url(./images/pexels-stijn-dijkstra-3265460.jpg); */
+     /* background-image: url(./images/pexels-adrian-lang-2414442.jpg); */
+     /* background-image: url(./images/IMG_0820.JPG); */
+     /* background-image: url(./images/pexels-andreea-ch-1166644.jpg); */
+     /* background-image: url(./images/pexels-daniel-absi-952670.jpg); */
+     /* background-image: url(./images/pexels-emma-pollard-1534925.jpg); */
+     /* background-image: url(./images/pexels-juan-pablo-serrano-arenas-1242348.jpg); */
+     /* background-image: url(./images/pexels-matheus-bertelli-1144687.jpg); */
+     /* background-image: url(./images/pexels-olya-kobruseva-7089204.jpg); */
+     /* background-image: url(./images/pexels-ovan-62693.jpg); */
+     /* background-image: url(./images/pexels-pixabay-66869.jpg); */
+     /* background-image: url(./images/pexels-tara-winstead-8378726.jpg); */
+     /* background-image: url(./images/pexels-tara-winstead-8378737.jpg); */
+     /* background-image: url(./images/pexels-tara-winstead-8386736.jpg); */
+     /* background-image: url(./images/pexels-tara-winstead-8386748.jpg); */
+     /* background-image: url(./images/pexels-tara-winstead-8407017.jpg); */
+     /* background-image: url(./images/pexels-tara-winstead-8407020.jpg); */
+     /* background-image: url(./images/pexels-kseniya-lapteva-9176086.jpg); */
+     /* background-image: url(./images/pexels-artem-podrez-7233124.jpg); */
+     /* background-image: url(./images/pexels-eriks-abzinovs-3117225.jpg); */
+     /* background-image: url(./images/pexels-fwstudio-131634.jpg); */
+     background-image: url(./images/pexels-martin-péchy-2078266.jpg);
+     /* background-image: url(./images/pexels-eva-elijas-7641223.jpg); */
+     /* background-image: url(./images/.jpg); */
+     /* background-image: url(./images/.jpg); */
+     /* background-image: url(./images/.jpg); */
+     /* background-image: url(./images/.jpg); */
+     /* background-image: url(./images/.jpg); */
+     /* background-image: url(./images/.jpg); */
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+}
+
+.container {
+     max-width: 90%;
+     height: 100vh;
+     margin: 10rem auto;
+     flex-direction: column;
+     /* justify-content: center; */
+}
+
+.container:nth-of-type(1) .image-wrapper {
+     top: 0;
+     left: 0;
+}
+
+.container:nth-of-type(2) .image-wrapper {
+     right: 0;
+     bottom: 0;
+}
+
+.content-wrapper {
+     padding: 2em; /* new property left/right */
+     margin-inline: auto; /* new property left/right */
+     max-width: 80rem;
+     background-color: transparent;
+     text-align: center;
+     /* border-left: 2px solid hsl(var(--clr-green)); */
+     flex-direction: column;
+     position: relative;
+}
+
+.corner--upper-left::before, 
+.corner--upper-left::after,
+.corner--bottom-right::before, 
+.corner--bottom-right::after {
+     content: "";
+     display: block;
+     position: absolute;
+     /* background-color: hsl(var(--clr-green)); */
+     background-color: var(--clr-accent);
+}
+
+.corner--upper-left::before, 
+.corner--bottom-right::before {
+     height: 100px;
+     width: 5px;
+}
+
+.corner--upper-left::after,
+.corner--bottom-right::after {
+     width: 100px;
+     height: 5px;
+}
+
+.corner--upper-left::before,
+.corner--upper-left::after {
+     top: -1rem;
+     left: -1rem;
+}
+
+.corner--bottom-right::before,
+.corner--bottom-right::after {
+     bottom: 1rem;
+     right: 1rem;
+}
+
+.content-wrapper ul {
+     list-style: none;
+     text-align: left;
+     border: 2px solid hsl(var(--clr-white) / 0.5);
+     max-width: 50rem;
+     margin-top: 3rem;
+     margin-inline: auto;
+     padding: .5rem 2rem .5rem 5rem;
+     position: relative;
+}
+
+.content-wrapper li {
+     padding: .5rem 0;
+     /* text-align: center; */
+}
+
+.contact-wrapper {
+     display: grid;
+     grid-template-columns: repeat(2, min-content);
+     grid-template-rows: repeat(3, 1fr);
+     align-items: center;
+     justify-content: center;
+     grid-gap: var(--flow-space, 1rem);
+}
+
+.contact-wrapper a,
+.contact-wrapper p {
+     display: block;
+     font-family: inherit;
+     font-weight: inherit;
+     color: inherit;
+     text-decoration: none;
+     /* align-items: center; */
+     justify-self: start;
+}
+
+.contact-wrapper i {
+     padding-right: 2rem;
+     justify-self: end;
+}
+
+.button {
+     background-color: var(--clr-plum--light);
+     text-decoration: none;
+     padding: 0.25rem 2rem;
+     text-align: center;
+     border-radius: 10px;
+     align-self: start;
+     /* box-shadow: 5px 5px 25px var(--clr-plum--dark); */
+}
+
+
+.grid-container--home {
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-areas: "text-wrapper image-wrapper";
+     align-items: center;
+     padding: 2rem;
+     grid-gap: 2rem;
+}
+
+.image-wrapper {
+     grid-area: image-wrapper;
+     position: relative;
+}
+
+.text-wrapper {
+     --flow-space: 2.25rem;
+     grid-area: text-wrapper;
+     flex-direction: column;
+}
+
+.text-wrapper > p:first-child {
+     border-radius: 10px;
+     text-align: center;
+}
+
+.text-wrapper ul {
+     list-style: none;
+     color: hsl(var(--clr-neutral--blue) / 0.65);
+}
