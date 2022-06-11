@@ -118,7 +118,6 @@ body {
 img,
 picture {
      max-width: 100%;
-     /* border-radius: 10px; */
      /* display: block overrides default behavior of hidden attribute for picture element */
      /* display: block; */
 }
@@ -511,6 +510,15 @@ a {
      border-radius: 10px;
 }
 
+.has-border {
+     border-width: 4px;
+     border-style: solid;
+}
+
+.has-border:hover {
+     transition: .5s ease-in-out;
+}
+
 .image-wrapper {
      border-radius: 10px;
      overflow: hidden;
@@ -766,15 +774,6 @@ footer {
      flex-direction: column;
 }
 
-#client-portal {
-     border-width: 4px;
-     border-style: solid;
-}
-
-#client-portal:hover {
-     transition: .5s ease-in-out;
-}
-
 
 #web-site,
 #email,
@@ -961,13 +960,6 @@ footer {
      padding: 0;
      flex-direction: column;
 }
-
-
-#portal #client-portal {
-     /* margin-top: 20rem;
-     outline: 10px solid red; */
-}
-
 
 /* --------------------- */
 /* Layout - Footer       */
