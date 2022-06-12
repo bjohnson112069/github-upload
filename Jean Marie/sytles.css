@@ -601,9 +601,6 @@ a {
 }
 
 @media (min-width: 35em) {
-     .primary-navigation {
-          /* padding-inline: clamp(3rem, 7vw, 7rem); */
-     }
 }
 
 @media (min-width: 35em) and (max-width: 48.999em) {
@@ -661,13 +658,6 @@ a {
 }
 
 @media (min-width: 45em) {
-     .primary-navigation {
-     }
-
-     /* mov the nav element to the end of the order (default: 0) */
-     nav {
-          order: 1;
-     }
 }
 
 .profile--card {
@@ -918,6 +908,7 @@ footer {
      grid-auto-flow: column;
      grid-auto-columns: 1fr;
      justify-items: center;
+     align-items: center;
 }
 
 /* ---------------------- */
@@ -992,7 +983,7 @@ footer {
 /* ----------------------------------------- */
 
 /* override defaults for mobile using max-width */
-@media (max-width: 35rem) {
+@media (max-width: 35em) {
      #web-site,
      #email,
      #phone {

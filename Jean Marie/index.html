@@ -24,7 +24,7 @@
           <div class="content-container">
                <div class="flex primary-header">
                     <div>
-                         <img class="logo" src="./images/logoclearbg-cropped.png" alt="logo image">
+                         <img class="logo" src="./images/logoclearbg-90.webp" alt="logo image">
                     </div>
                     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
                     <!-- navigation -->
@@ -47,7 +47,15 @@
                <div class="grid grid--main">
                     <div id="main--wrapper-1" class="grid content-wrapper text-white-cream">
                          <div id="logo" class="image-wrapper">
-                              <img src="./images/logoclearbg-cropped.png" alt="logo image">
+                              <picture>
+                                   <source media="(min-width: 1095px)" srcset="./images/logoclearbg-700.webp" type="image/webp">
+                                   <source media="(min-width: 817px) and (max-width: 1095px)" srcset="./images/logoclearbg-485.webp" type="image/webp">
+                                   <source media="(min-width: 706px) and (max-width: 817px)" srcset="./images/logoclearbg-360.webp" type="image/webp">
+                                   <source media="(min-width: 508px) and (max-width: 706px)" srcset="./images/logoclearbg-700.webp" type="image/webp">
+                                   <source media="(min-width: 400px) and (max-width: 508px)" srcset="./images/logoclearbg-485.webp" type="image/webp">
+                                   <source media="(max-width: 400px)" srcset="./images/logoclearbg-360.webp" type="image/webp">
+                                   <img src="./images/logoclearbg-485-fallback.png" alt="logo image" />
+                              </picture>
                          </div>
                          <div id="title" class="fs-700 fw-regular ff-serif text-white-cream capitalize">jean marie johnson</div>
                          <div id="subtitle" class="fs-500 fw-light ff-sans-serif uppercase text-green-olive">Licensed Independent Clinical Social Worker</div>
@@ -103,9 +111,12 @@
                     </div>
                     <div id="about--wrapper-1" class="grid content-wrapper">
                          <figure class="profile--card bg-purple-plum has-black-shadow">
-                              <img src="./images/IMG_0820.JPG" alt="image of lotus blossum" />
+                              <picture>
+                                   <source srcset="./images/lotus-photo-360.webp" type="image/webp">
+                                   <img src="./images/lotus-photo-fallback-360.jpg" alt="image of lotus blossum" />
+                              </picture>
                               <figcaption class="flex flow--vertical fs-400 text-white-cream bd-purple-plum">
-                                   <img src="./images/profile-pic-cropped.jpeg" alt="profile image" class="profile" />
+                                   <img src="./images/profile-pic-90.webp" alt="profile image" class="profile" />
                                    <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Jean Marie Johnson, <span class="">LICSW</span><span class="fw-regular text-green-olive d-block">Therapist</span></p>
                                    <a href="www.jeanmariejohnsonlicsw.com"><i class='fa fa-home'></i>Home Page</a>
                                    <a href="mailto:jeanmariejohnsonlicsw@gmail.com"><i class="fas fa-envelope"></i>E-Mail</a>
@@ -125,49 +136,73 @@
                <div class="grid grid--services">
                     <div id="services--wrapper-1" class="grid content-wrapper">
                          <figure class="profile--card bg-blue-navy has-black-shadow">
-                              <img src="./images/pexels-shvets-production-7176302.jpg" alt="image of mental-female-specialist-speaking-to-group-of-clients" title="Photo by SHVETS production: https://www.pexels.com/photo/mental-female-specialist-speaking-to-group-of-clients-7176302/"/>
+                              <picture>
+                                   <source media="(min-width: 2480px)" srcset="./images/pexels-shvets-production-7176302-458.webp" type="image/webp">
+                                   <source media="(max-width: 2480px)" srcset="./images/pexels-shvets-production-7176302-360.webp" type="image/webp">
+                                   <img src="./images/pexels-shvets-production-7176302.jpg" alt="image of mental-female-specialist-speaking-to-group-of-clients" title="Photo by SHVETS production: https://www.pexels.com/photo/mental-female-specialist-speaking-to-group-of-clients-7176302/" />
+                              </picture>
                               <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
-                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <img src="./images/logoclearbg-90.webp" alt="profile image" class="profile" />
                                    <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Cognitive Behavioral Therapy <span class="fw-regular text-green-olive">(CBT)</span></p>
                                    <p class="">A common type of talk therapy (psychotherapy). You work with a mental health counselor (psychotherapist or therapist) in a structured way, attending a limited number of sessions.</p>
                               </figcaption>
                          </figure>
                          <figure class="profile--card bg-blue-navy has-black-shadow">
-                              <img src="./images/pexels-fauxels-3184398.jpg" alt="image of people-taking-group-picture" title="Photo by fauxels: https://www.pexels.com/photo/people-taking-group-picture-3184398/"/>
+                              <picture>
+                                   <source media="(min-width: 2480px)" srcset="./images/pexels-fauxels-3184398-458.webp" type="image/webp">
+                                   <source media="(max-width: 2480px)" srcset="./images/pexels-fauxels-3184398-360.webp" type="image/webp">
+                                   <img src="./images/pexels-fauxels-3184398.jpg" alt="image of people-taking-group-picture" title="Photo by fauxels: https://www.pexels.com/photo/people-taking-group-picture-3184398/"/>
+                              </picture>
                               <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
-                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <img src="./images/logoclearbg-90.webp" alt="profile image" class="profile" />
                                    <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Dialectical Behavioral Therapy <span class="fw-regular text-green-olive">(DBT)</span></p>
                                    <p class="">Includes group and individual therapy designed specifically to treat borderline personality disorder. DBT uses a skills-based approach to teach you how to manage your emotions, tolerate distress and improve relationships.</p>
                               </figcaption>
                          </figure>
                          <figure class="profile--card bg-blue-navy has-black-shadow">
-                              <img src="./images/pexels-shvets-production-7176224.jpg" alt="image of couple-hugging-during-session-with-psychologist" title="Photo by SHVETS production: https://www.pexels.com/photo/couple-hugging-during-session-with-psychologist-7176224/"/>
+                              <picture>
+                                   <source media="(min-width: 2480px)" srcset="./images/pexels-shvets-production-7176224-458.webp" type="image/webp">
+                                   <source media="(max-width: 2480px)" srcset="./images/pexels-shvets-production-7176224-360.webp" type="image/webp">
+                                   <img src="./images/pexels-shvets-production-7176224.jpg" alt="image of couple-hugging-during-session-with-psychologist" title="Photo by SHVETS production: https://www.pexels.com/photo/couple-hugging-during-session-with-psychologist-7176224/"/>
+                              </picture>
                               <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
-                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <img src="./images/logoclearbg-90.webp" alt="profile image" class="profile" />
                                    <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Trauma-Focused Cognitive Behavioral Therapy <span class="fw-regular text-green-olive">(TF-CBT)</span></p>
                                    <p class="">Evidence-based treatment for children and adolescents, and their caregivers, to deal with the negative impact of traumatic events, such as witnessing violence, experiencing sexual or physical abuse, an unexpected death, or a natural disaster. It incorporates a trauma-sensitive model and interventions with cognitive behavioral, family and humanistic techniques.</p>
                               </figcaption>
                          </figure>
                          <figure class="profile--card bg-blue-navy has-black-shadow">
-                              <img src="./images/pexels-thirdman-5256816.jpg" alt="image of man-and-woman-holding-each-other-s-hands-as-a-team" title="Photo by Thirdman: https://www.pexels.com/photo/man-and-woman-holding-each-other-s-hands-as-a-team-5256816/"/>
+                              <picture>
+                                   <source media="(min-width: 2480px)" srcset="./images/pexels-thirdman-5256816-458.webp" type="image/webp">
+                                   <source media="(max-width: 2480px)" srcset="./images/pexels-thirdman-5256816-360.webp" type="image/webp">
+                                   <img src="./images/pexels-thirdman-5256816.jpg" alt="image of man-and-woman-holding-each-other-s-hands-as-a-team" title="Photo by Thirdman: https://www.pexels.com/photo/man-and-woman-holding-each-other-s-hands-as-a-team-5256816/"/>
+                              </picture>
                               <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
-                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <img src="./images/logoclearbg-90.webp" alt="profile image" class="profile" />
                                    <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Solution-Focused Brief Therapy <span class="fw-regular text-green-olive">(SFBT)</span></p>
                                    <p class="">Concentrates on finding solutions in the present time and exploring one’s hope for the future to find quicker resolution of one’s problems. This method takes the approach that you know what you need to do to improve your own life and, with the appropriate coaching and questioning, are capable of finding the best solutions.</p>
                               </figcaption>
                          </figure>
                          <figure class="profile--card bg-blue-navy has-black-shadow">
-                              <img src="./images/pexels-edward-jenner-4031710.jpg" alt="image of woman-in-a-video-call-with-a-covid-19-patient" title="Photo by Edward Jenner: https://www.pexels.com/photo/woman-in-a-video-call-with-a-covid-19-patient-4031710/"/>
+                              <picture>
+                                   <source media="(min-width: 2480px)" srcset="./images/pexels-edward-jenner-4031710-458.webp" type="image/webp">
+                                   <source media="(max-width: 2480px)" srcset="./images/pexels-edward-jenner-4031710-360.webp" type="image/webp">
+                                   <img src="./images/pexels-edward-jenner-4031710.jpg" alt="image of woman-in-a-video-call-with-a-covid-19-patient" title="Photo by Edward Jenner: https://www.pexels.com/photo/woman-in-a-video-call-with-a-covid-19-patient-4031710/"/>
+                              </picture>
                               <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
-                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <img src="./images/logoclearbg-90.webp" alt="profile image" class="profile" />
                                    <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Telehealth Therapy</p>
                                    <p class="">I am happy to offer my clients the option of secure telehealth/online therapy.  Easy and confidential access from wherever you are (home, work, car) with no additional drive time in your schedule.  Ensures your physical health and safety from COVID (or other illnesses).  Most insurance companies will cover Telehealth the same as in office meetings.</p>
                               </figcaption>
                          </figure>
                          <figure class="profile--card bg-blue-navy has-black-shadow">
-                              <img src="./images/pexels-brett-jordan-6845709.jpg" alt="image of brown-letter-tiles-on-white-surface" title="Photo by Brett Jordan: https://www.pexels.com/photo/brown-letter-tiles-on-white-surface-6845709/"/>
+                              <picture>
+                                   <source media="(min-width: 2480px)" srcset="./images/pexels-brett-jordan-6845709-458.webp" type="image/webp">
+                                   <source media="(max-width: 2480px)" srcset="./images/pexels-brett-jordan-6845709-360.webp" type="image/webp">
+                                   <img src="./images/pexels-brett-jordan-6845709.jpg" alt="image of brown-letter-tiles-on-white-surface" title="Photo by Brett Jordan: https://www.pexels.com/photo/brown-letter-tiles-on-white-surface-6845709/"/>
+                              </picture>
                               <figcaption class="flex flow--vertical fs-400 text-white-cream bd-blue-navy">
-                                   <img src="./images/logoclearbg-cropped.png" alt="profile image" class="profile" />
+                                   <img src="./images/logoclearbg-90.webp" alt="profile image" class="profile" />
                                    <p class="fs-400 fw-bold ff-sans-serif text-yellow-ochre">Treatment Focus Areas</p>
                                    <ul class="fs-400 fw-regular flex flow--vertical">
                                         <li>Anxiety</li>
@@ -224,13 +259,13 @@
                               <li class="fs-500 fw-bold text-purple-plum">In-Network Insurance Providers</li>
                               <li id="insurance-logo-wrapper" class="grid content-">
                                    <div class="image-wrapper">
-                                        <img src="./images/mass-health-logo.png" alt="mass health logo">
+                                        <img src="./images/mass-health-logo-100.webp" alt="mass health logo">
                                    </div>
                                    <div class="image-wrapper">
-                                        <img src="./images/vectorwiki-blue-cross-blue-shield-1-logo.png" alt="blue cross blue shield logo">
+                                        <img src="./images/blue-cross-blue-shield-logo-100.webp" alt="blue cross blue shield logo">
                                    </div>
                                    <div class="image-wrapper">
-                                        <img src="./images/TUFTS logo Blue 4C.png" alt="tufts health plan logo">
+                                        <img src="./images/tufts-logo-100.webp" alt="tufts health plan logo">
                                    </div>
                               </li>
                          </ul>
@@ -247,7 +282,13 @@
                <div class="grid grid--portal">
                     <div id="portal--wrapper-1" class="grid content-wrapper">
                          <div class="image-wrapper has-white-shadow">
-                              <img src="./images/pexels-marko-klaric-6408282.jpg" alt="image of clipboard-with-calendar-placed-on-desk-amidst-stationery" title="Photo by Marko Klaric: https://www.pexels.com/photo/clipboard-with-calendar-placed-on-desk-amidst-stationery-6408282/">
+                              <picture>
+                                   <source media="(min-width: 1095px)" srcset="./images/pexels-marko-klaric-6408282-640.webp" type="image/webp">
+                                   <source media="(min-width: 818px) and (max-width: 1095px)" srcset="./images/pexels-marko-klaric-6408282-485.webp" type="image/webp">
+                                   <source media="(max-width: 818px)" srcset="./images/pexels-marko-klaric-6408282-360.webp" type="image/webp">
+                                   <img src="./images/pexels-marko-klaric-6408282.jpg" alt="image of clipboard-with-calendar-placed-on-desk-amidst-stationery" title="Photo by Marko Klaric: https://www.pexels.com/photo/clipboard-with-calendar-placed-on-desk-amidst-stationery-6408282/">
+                              </picture>
+
                          </div>
                     </div>
                     <div id="portal--wrapper-2" class="grid content-wrapper text-white-cream bd-yellow-ochre">
@@ -270,7 +311,7 @@
                <div class="grid grid--footer text-blue-navy">
                     <!-- navigation -->
                     <div class="grid content-wrapper">
-                         <img class="logo" src="./images/logoclearbg-cropped.png" alt="logo image">
+                         <img class="logo" src="./images/logoclearbg-90.webp" alt="logo image">
                          <div id="title" class="fs-500 fw-regular ff-serif text-white-cream capitalize">jean marie johnson</div>
                     </div>
                     <div>Thank you for visiting my web site.  I look forward to working with you soon.  Need more information?  Please <a href="mailto:jeanmariejohnsonlicsw@gmail.com" class="text-white-cream">contact me</a>.</div>
