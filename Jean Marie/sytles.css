@@ -778,6 +778,7 @@ footer {
 }
 
 #main {
+     margin-top: var( --scroll-padding);
 }
 
 #main--wrapper-1 {
@@ -884,6 +885,11 @@ footer {
      grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
      align-items: stretch;
      justify-items: center;
+}
+
+
+#services--wrapper-1 > .profile--card {
+     max-width: 315px;
 }
 
 #services--wrapper-1 > .profile--card:last-child ul {
@@ -1027,7 +1033,7 @@ footer {
      #web-site,
      #email,
      #phone {
-          letter-spacing: 2.35px;
+          letter-spacing: 2px;
      }         
 
      #insurance--wrapper-1  {
