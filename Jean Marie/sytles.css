@@ -107,7 +107,7 @@ body {
      font-size: var(--fs-400);
      line-height: 1.5;
      background-color: black;
-     min-width: 295px;
+     /* min-width: 295px; */
      grid-auto-flow: row;
      grid-auto-rows: min-content;
      --gap: 0;
@@ -517,6 +517,7 @@ a {
      grid-gap: 1.5rem;
      align-items: center;
      padding-block: 1rem;
+     margin-bottom: 4rem;
      text-align: center;
      background-color: inherit;
 }
@@ -772,7 +773,7 @@ footer {
      align-items: center;
      justify-items: center;
      align-content: center;
-     min-height: 100vh;
+     /* min-height: 100vh; */
      margin: 0 auto;
      /* outline: 1px solid purple; */
 }
@@ -825,7 +826,7 @@ footer {
      align-items: center;
      justify-items: center;
      align-content: center;
-     min-height: 100vh;
+     /* min-height: 100vh; */
      margin: 0 auto;
      /* outline: 1px solid purple; */
 }
@@ -871,7 +872,7 @@ footer {
      align-items: center;
      justify-items: center;
      align-content: center;
-     min-height: 100vh;
+     /* min-height: 100vh; */
      margin: 0 auto;
      /* padding-block: var(--section-padding); */
      /* outline: 1px solid purple; */
@@ -910,7 +911,7 @@ footer {
      align-items: center;
      justify-items: center;
      align-content: center;
-     min-height: 100vh;
+     /* min-height: 100vh; */
      margin: 0 auto;
      /* outline: 1px solid purple; */
 }
@@ -967,7 +968,7 @@ footer {
      align-items: center;
      justify-items: center;
      align-content: center;
-     min-height: 100vh;
+     /* min-height: 100vh; */
      margin: 0 auto;
      /* outline: 1px solid purple; */
 }
@@ -1102,6 +1103,11 @@ footer {
      }
 }
 
-@media (min-width: 57.25em) {
+@media (min-width: 94rem) {
+     
+     .content-container {
+          max-width: 1504px;
+     }
+
 }
 
