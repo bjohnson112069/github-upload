@@ -671,6 +671,10 @@ a {
           transform: translateX(0);
      }
 
+     .disable-scrolling {
+          overflow-y: hidden;
+     }
+
      .mobile-nav-toggle {
           display: block;
           position: absolute;

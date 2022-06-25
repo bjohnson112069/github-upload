@@ -1,20 +1,23 @@
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const nav = document.querySelector(".primary-navigation");
 const navLinks = nav.querySelectorAll("li");
+const body = document.querySelector('body');
 var activeLink = nav.querySelector(".active");
 
 // when someone cliks the hambruger button
 navToggle.addEventListener("click", () => {
-     // if the menu is close, open it
      const visibility = nav.getAttribute("data-visible");
 
+     // if the menu is close, open it
      if (visibility == "false") {
           nav.setAttribute("data-visible", true);
           navToggle.setAttribute("aria-expanded", true);
+          body.classList.add('disable-scrolling');
      } else {
           // if the menu is open, close it
           nav.setAttribute("data-visible", false);
           navToggle.setAttribute("aria-expanded", false);
+          body.classList.remove('disable-scrolling');
      }
 });
 
@@ -46,6 +49,7 @@ navLinks.forEach(navLink => {
           // if the menu is open, close it
           nav.setAttribute("data-visible", false);
           navToggle.setAttribute("aria-expanded", false);
+          body.classList.remove('disable-scrolling');
      });          
 });
 

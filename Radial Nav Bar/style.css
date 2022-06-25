@@ -1,0 +1,235 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+     /* colors */
+     --clr-dark: 230 35% 7%;
+     --clr-light: 231 77% 90%;
+     --clr-white: 0 0% 100%;
+
+     /* font-families */
+     --ff-serif: "Bellefair", serif;
+     --ff-sans-cond: "Barlow Condensed", sans-serif;
+     --ff-sans-normal: "Barlow", sans-serif;
+
+     /* Custom Properties */
+     --btn-size: 150px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+     font-weight: 400;
+}
+
+/* set up the body */
+body {
+     background-color: hsl(var(--clr-dark));
+     color: hsl(var(--clr-white));
+     line-height: 1.5;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+}
+
+/* make images easier to work with */
+img,
+picture {
+     max-width: 100%;
+     /* display: block overrides default behavior of hidden attribute for picture element */
+     /* display: block; */
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+[hidden] {
+     display: none;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+     display: flex;
+     gap: var(--gap, 1rem);
+     /* outline: 3px solid red; */
+}
+
+.grid {
+     display: grid;
+     gap: var(--gap, 1rem);
+}
+
+.d-block {
+     display: block;
+}
+
+/* select all adjacent siblings that come before it; select all but 1st child */
+/* "> * + *" */
+/* "> *:not(:first-child)" has specificity problems */
+/* "> *:where(:not(:first-child))" where does not add any specificity so you can overwrite*/
+.flow > *:where(:not(:first-child)) {
+     margin-top: var(--flow-space, 1rem);
+     /* outline: 1px solid red; */
+}
+
+.container {
+     padding-inline: 2em; /* new property left/right */
+     margin-inline: auto; /* new property left/right */
+     max-width: 80rem;
+     width: 100%;
+     place-items: center;
+     background-color: hsl(var(--clr-light));
+}
+
+/* colors */
+
+
+/* typography */
+
+
+/* --------------------- */
+/* Components            */
+/* --------------------- */
+
+.menu {
+     --gap: 0;
+     grid-template-columns: repeat(20, 25px);
+     grid-template-rows: repeat(20, 25px);
+     grid-template-areas: "";
+}
+
+.nav-item {
+     text-decoration: none;
+     color:white;
+     background-image: radial-gradient(blue, darkblue 75%);
+     box-shadow: 0px 10px 20px black;
+     width: var(--btn-size);
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+     place-items: center;
+     grid-column: 8;
+     grid-row: 8;
+     transform: scale(0);
+}
+
+
+.nav-item i {
+}
+
+/* Style Menu Button */
+.nav-item:first-child,
+.nav-item:last-child {
+     background-image: radial-gradient(grey, hsl(var(--clr-dark)) 75%);
+     transform: scale(1);
+}
+
+/* Menu Close */
+.nav-item:first-child {
+     display: none;
+}
+/* Menu Open */
+.nav-item:last-child {
+     display: grid;
+}
+
+/* Menu Close (On Click) */
+.open-menu > .nav-item:first-child {
+     display: grid;
+}
+
+/* Menu Open (On Click) */
+.open-menu > .nav-item:last-child {
+     display: none;
+}
+
+.open-menu > .nav-item:nth-of-type(2),
+.open-menu > .nav-item:nth-of-type(3),
+.open-menu > .nav-item:nth-of-type(4),
+.open-menu > .nav-item:nth-of-type(5),
+.open-menu > .nav-item:nth-of-type(6) {
+     transition: all .75s ease-in-out;
+     transform: scale(1) rotate(360deg);
+}
+
+/* Home */
+.open-menu > .nav-item:nth-of-type(2) {
+     grid-column: 1;
+     grid-row: 6;
+}
+
+/* Search */
+.open-menu > .nav-item:nth-of-type(3) {
+     grid-column: 8;
+     grid-row: 1;
+}
+
+/* Notifications */
+.open-menu > .nav-item:nth-of-type(4) {
+     grid-column: 15;
+     grid-row: 6;
+}
+
+/* Favorites */
+.open-menu > .nav-item:nth-of-type(5) {
+     grid-row: 14;
+     grid-column: 3;
+}
+
+/* Profile */
+.open-menu > .nav-item:nth-of-type(6) {
+     grid-row: 14;
+     grid-column: 13;
+}
+
+.open-menu > .nav-item:nth-of-type(2):hover,
+.open-menu > .nav-item:nth-of-type(3):hover,
+.open-menu > .nav-item:nth-of-type(4):hover,
+.open-menu > .nav-item:nth-of-type(5):hover,
+.open-menu > .nav-item:nth-of-type(6):hover {
+     transition: scale .5s ease-in-out;
+     transform: scale(1.25) rotate(1deg);
+     background-image: radial-gradient(red, darkred 75%);
+}
+
