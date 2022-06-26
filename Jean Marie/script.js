@@ -4,6 +4,7 @@ const navLinks = nav.querySelectorAll("li");
 const body = document.querySelector('body');
 var activeLink = nav.querySelector(".active");
 
+
 // when someone cliks the hambruger button
 navToggle.addEventListener("click", () => {
      const visibility = nav.getAttribute("data-visible");
@@ -13,11 +14,13 @@ navToggle.addEventListener("click", () => {
           nav.setAttribute("data-visible", true);
           navToggle.setAttribute("aria-expanded", true);
           body.classList.add('disable-scrolling');
+          bodyScrollLock.disableBodyScroll(nav);
      } else {
           // if the menu is open, close it
           nav.setAttribute("data-visible", false);
           navToggle.setAttribute("aria-expanded", false);
           body.classList.remove('disable-scrolling');
+          bodyScrollLock.enableBodyScroll(nav);
      }
 });
 
@@ -50,6 +53,7 @@ navLinks.forEach(navLink => {
           nav.setAttribute("data-visible", false);
           navToggle.setAttribute("aria-expanded", false);
           body.classList.remove('disable-scrolling');
+          bodyScrollLock.enableBodyScroll(nav);
      });          
 });
 
