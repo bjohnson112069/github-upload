@@ -14,13 +14,11 @@ navToggle.addEventListener("click", () => {
           nav.setAttribute("data-visible", true);
           navToggle.setAttribute("aria-expanded", true);
           body.classList.add('disable-scrolling');
-          bodyScrollLock.disableBodyScroll(nav);
      } else {
           // if the menu is open, close it
           nav.setAttribute("data-visible", false);
           navToggle.setAttribute("aria-expanded", false);
           body.classList.remove('disable-scrolling');
-          bodyScrollLock.enableBodyScroll(nav);
      }
 });
 
@@ -39,7 +37,7 @@ const myObserver = new ResizeObserver(entries => {
 // Observer Primary Header for resizing
 myObserver.observe(primaryHeader);
 
-// when someone click on the navigation links
+// when someone clicks on the navigation links
 navLinks.forEach(navLink => {
      navLink.addEventListener("click", () => {
 
@@ -53,7 +51,10 @@ navLinks.forEach(navLink => {
           nav.setAttribute("data-visible", false);
           navToggle.setAttribute("aria-expanded", false);
           body.classList.remove('disable-scrolling');
-          bodyScrollLock.enableBodyScroll(nav);
      });          
+});
+
+window.addEventListener('resize', () => {
+     console.log(`Window Height: ${window.innerHeight}px / Nav Height: ${nav.offsetHeight}px`)
 });
 

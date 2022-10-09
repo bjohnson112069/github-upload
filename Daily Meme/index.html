@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Daily Meme</title>
+</head>
+<body>
+    <div class="container grid">
+        <form class="user-form grid" autocomplete="off">
+            <div class="value">3</div>
+            <input class="range" type="range" name="range" value="3" min="3" max="10" step="1">
+            <div class="min-max flex">
+              <span>3</span>
+              <span>10</span>
+            </div>
+            <button name="submit" type="submit">Generate Meme(s)</button>
+        </form>
+        <div class="slider">
+            <div class="slides" tabindex="0">
+            </div>
+            <div class="controls grid">
+              <button class="goToPrev"><i class="fas fa-angle-double-left"></i>Prev</button>
+              <button class="goToNext">Next<i class="fas fa-angle-double-right"></i></button>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
