@@ -50,7 +50,7 @@
      :root {
           /* font-sizes: Desktop */
           --fs-800: 6.25rem;
-          --fs-700: clamp(2rem, 3vw + 1rem, 3.5rem);
+          --fs-700: clamp(1rem, 2vw + 1rem, 3rem);
           /* --fs-700: 3.5rem; */
           --fs-600: 2rem;
           --fs-500: 1.75rem;
@@ -649,8 +649,8 @@ a {
 
 @media (max-width: 44.999em) {
      .primary-navigation {
-          --underline-gap: 0.75em;
-          --gap: 1.5rem;
+          --underline-gap: 0.25em;
+          --gap: .75em;
           font-size: var(--fs-700);
           position: fixed;
           z-index: 1000;
@@ -716,30 +716,36 @@ a {
      text-align: left;
      line-height: 1.4em;
      border-radius: 10px;
-   }
-   .profile--card img {
-     max-width: 100%;
-     vertical-align: top;
-     opacity: 0.85;
-   }
-   .profile--card .profile {
+}
+
+.profile--card img {
+     /* max-width: 100%; */
+     width: 100%;
+     height: 400px;
+     object-fit: cover;
+     opacity: .85;
+}
+   
+.profile--card .profile {
      border-radius: 50%;
      position: absolute;
      bottom: 100%;
      left: 25px;
      z-index: 1;
-     max-width: 90px;
+     width: 90px;
+     height: auto;
+     object-fit:none;
      opacity: 1;
      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-   }
-   .profile--card figcaption {
+}
+.profile--card figcaption {
      width: 100%;
      padding: 25px;
      position: relative;
      flex-direction: column;
      align-items: start;
-   }
-   .profile--card figcaption:before {
+}
+.profile--card figcaption:before {
      position: absolute;
      content: '';
      bottom: 100%;
@@ -752,10 +758,10 @@ a {
      border-top-color: transparent;
      border-right-color: transparent;
      border-bottom-color: transparent;
-   }
-   .profile--card i {
+}
+.profile--card i {
         margin-right: 1rem;
-   }
+}
 
 /* --------------------- */
 /* Layout - Sections     */
@@ -952,6 +958,10 @@ footer {
      padding: 0;
      flex-direction: column;
      width: 100%;
+}
+
+#insurance--wrapper-2 ul:nth-of-type(3) {
+     --flow-space: 1rem;
 }
 
 #insurance-logo-wrapper {

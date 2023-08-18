@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Design System</title>
+</head>
+<body>
+    <div class="container grid">
+        <header id="header" class="flex fs-300 ff-sans-serif">
+            <div id="logo-container" class="grid grid-column">
+                <picture>
+                    <source srcset="./images/logoclearbg-90.webp" type="image/webp">
+                    <img class="logo" src="./images/logoclearbg-fallback-90.png" alt="image of logo" />
+                </picture>
+                <div class="ff-serif fs-400 fw-bold text-cream capitalize">jean marie johnson LICSW</div>
+            </div>
+            <div id="office-hours" class="grid grid-row">
+                <div class="text-cream"><span class="fw-bold text-blue">Mon to Fri:</span> 9am - 5pm</div>
+                <div class="text-cream"><span class="fw-bold text-blue">Sat to Sun:</span> Closed</div>
+                <div class="text-cream"><span class="fw-bold text-blue">Holidays:</span> Closed</div>
+            </div>
+            <div id="office-location" class="grid grid-row">
+                <div class="text-cream"><span class="fw-bold text-blue">Office:</span> 76 Summer Street, Suite 115 Fitchburg, MA 01420</div>
+            </div>
+            <div id="contact-information" class="grid grid-row">
+                <div class="text-cream"><span class="fw-bold text-blue">Web:</span> <a href="www.jeanmariejohnsonlicsw.com">www.jeanmariejohnsonlicsw.com</a></div>
+                <div class="text-cream"><span class="fw-bold text-blue">Email:</span> <a href="mailto:jeanmariejohnsonlicsw@gmail.com">jeanmariejohnsonlicsw@gmail.com</a></div>
+                <div class="text-cream"><span class="fw-bold text-blue">Phone:</span> <a href="tel:1-978-962-1239" target="_blank">1-978-962-1239</a></div>                
+            </div>
+        </header>
+        <section id="navigation" class="ff-sans-serif fs-400 bg-purple">
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="flex uppercase fw-bold text-alpha">
+                    <li class="active"><a class="" href="./index.html">Home</a></li>
+                    <li><a class="" href="#about">About</a></li>
+                    <li><a class="" href="#services">Services</a></li>
+                    <li><a class="" href="#insurance">Insurance</a></li>                         
+                    <li><a class="" href="#portal">client portal</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="hero" class="grid">
+            <div class="grid">
+                <h1 class="ff-sans-serif--black fs-700 uppercase text-blue">mental <span class="text-yellow">health</span></h1>
+                <p class="ff-sans-serif fs-600 text-cream">Sometimes we need additional support to create stability or balance in our lives.  Scroll down to find out more about my services ...</p>
+            </div>
+        </section>
+        <section id="about" class="grid ff-sans-serif text-cream">
+            <h1 class="ff-sans-serif--black fs-700 uppercase text-blue">wel<span class="text-yellow">come</span></h1>
+            <p class="fs-500">Your mental health is an important part of your well-being. This aspect of your welfare determines how you’re able to operate psychologically, emotionally, and socially among others.  As a licensed therapist I can help you explore barriers to mental health and collaboratively find ways to overcome them.  I have experience working with adolescents and adults struggling with anxiety, depression, and trauma.  I am committed to creating a safe, healing and compassionate environment for all my clients.</p>
+            <div class="grid card--container text-cream">
+                <div class="card flex bg-dark">
+                    <div class="card--figure">
+                        <i class="fas fa-award fa-5x text-green"></i>
+                    </div>
+                    <h2 class="card--header fs-500 fw-bold bg-green">Advanced Training</h2>
+                    <div class="card--body fs-400">
+                        <p>Licensed Independent Clinical Social Worker (LICSW)</p>
+                        <p>Cognitive Behavioral Therapy (CBT)</p>
+                        <p>Trauma-Focused Cognitive Behavioral Therapy (TF-CBT)</p>
+                        <p>Solution-Focused Brief Therapy (SFBT)</p>
+                        <p>Mindfulness Techniques</p>        
+                    </div>
+                </div>
+                <div class="card flex bg-dark">
+                    <div class="card--figure">
+                        <i class="fas fa-school fa-5x text-green"></i>
+                    </div>
+                    <h2 class="card--header fs-500 fw-bold bg-green">Education</h2>
+                    <div class="card--body fs-400">
+                        <p>Master of Social Work (MSW) - Simmons University</p>
+                        <p>Dual Bachelor of Arts (BA) - University of Vermont</p>
+                    </div>
+                </div>
+                <div class="card flex bg-dark">
+                    <div class="card--figure">
+                        <i class="fas fa-users fa-5x text-green"></i>
+                    </div>
+                    <h2 class="card--header fs-500 fw-bold bg-green">Professional Memberships</h2>
+                    <div class="card--body fs-400">
+                        <p>National Asociation of Social Workers (NASW)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="notification_ribbon" class="ff-sans-serif flex">
+            <div class="grid">
+                <h2 class="fs-600 fw-bold text-yellow"><span class="">FREE</span> Initial Consultation</h2>
+                <h4 class="fs-400 text-dark">Offer Ends Soon</h4>
+            </div>
+            <a href="mailto:jeanmariejohnsonlicsw@gmail.com" class="button fw-bold fs-500 uppercase bg-yellow text-dark">Contact Me</a>
+        </section>
+        
+        <section id="testimonials" class="ff-sans-serif text-cream">
+            <!-- <h1 class="ff-sans-serif--black fs-700 uppercase text-blue">professional <span class="text-yellow">services</span></h1>
+            <p class="ff-sans-serif fs-600">When faced with a personal conflict, relationship or family troubles, or a mental health condition such as depression, stress, or anxiety, many people turn to a therapist for help. I offer an array of mental health and supportive services.  These services are intended to reduce psychiatric symptoms, increase independent functioning and self-reliance so that individuals can achieve the fullest and most productive life.  Browse my service offerings to learn more...</p> -->
+            <div class="testimonial-slider">
+                <button class="goToPrev arrow arrowLeft bg-alpha" title="Previous"></button>
+                <div class="slides" tabindex="0">
+                    <div class="slide current">
+                        <div class="card grid">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_0819-458.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_0819-360.webp" type="image/webp"> -->
+                                    <img src="./images/demi-lavato-profile-pic.jpg" alt="image of Demi Lavato" title="needs attribution"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-500 fw-bold text-green">Demi Lovato</h2>
+                                <div class="card--body fs-400">
+                                    <p>“The advice I’d give to somebody that’s silently struggling is, you don’t have to live that way. You don’t have to struggle in silence. You can be un-silent. You can live well with a mental health condition, as long as you open up to somebody about it, because it’s really important you share your experience with people so that you can get the help that you need.”</p>
+                                </div>
+                                </div>
+                        </div>        
+                    </div>
+                    <div class="slide">
+                        <div class="card grid">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_7705-458.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_7705-360.webp" type="image/webp"> -->
+                                    <img src="./images/dwayne-johnson-profile-pic.jpg" alt="image of Dwayne -the rock- Johnson" title="needs attribution"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-500 fw-bold text-green">Dwayne “The Rock” Johnson</h2>
+                                <div class="card--body fs-400">
+                                    <p>“I found that with depression, one of the most important things you can realize is that you’re not alone. You’re not the first to go through it, you’re not gonna be the last to go through it,” </p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="slide">
+                        <div class="card grid">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_8840-343.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_8840-270.webp" type="image/webp"> -->
+                                    <img src="./images/emma-stone-profile-pic.jpg" alt="image of lotus flower (IMG_8840)" title="https://www.hollywoodreporter.com/wp-content/uploads/2017/01/emma_stone_hmu_sag_awards_-_getty_-_p_2017.jpg?w=1024"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-600 fw-bold text-green">Emma Stone</h2>
+                                <div class="card--body fs-400">
+                                    <p>“Everyone experiences a version of anxiety or worry in their lives, and maybe we go through it in a different or more intense way for longer periods of time, but there’s nothing wrong with you.”</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                </div>
+                <button class="goToNext arrow arrowRight bg-alpha" title="Next"></button>
+            </div>
+        </section>
+
+        <section id="services" class="ff-sans-serif grid text-cream">
+            <h1 class="ff-sans-serif--black fs-700 uppercase text-blue">professional <span class="text-yellow">services</span></h1>
+            <p class="ff-sans-serif fs-600">When faced with a personal conflict, relationship or family troubles, or a mental health condition such as depression, stress, or anxiety, many people turn to a therapist for help. I offer an array of mental health and supportive services.  These services are intended to reduce psychiatric symptoms, increase independent functioning and self-reliance so that individuals can achieve the fullest and most productive life.  Browse my service offerings to learn more...</p>
+            <div class="slider">
+                <button class="goToPrev arrow arrowLeft bg-alpha" title="Previous"></button>
+                <div class="slides" tabindex="0">
+                    <div class="slide current">
+                        <div class="card">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_0819-458.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_0819-360.webp" type="image/webp"> -->
+                                    <!-- <img src="./images/IMG_0819-fallback-new.jpg" alt="image of lotus flower (IMG_0819)" title="Photo by Jean Marie Johnson"/> -->
+                                    <img src="./images/pexels-pixabay-65259.jpg" alt="image of lotus flower (IMG_0819)" title="Photo by Jean Marie Johnson"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-600 fw-bold text-blue">Cognitive Behavioral Therapy <span class="">(CBT)</span></h2>
+                                <div class="card--body fs-500">
+                                    <p>A common type of talk therapy (psychotherapy). You work with a mental health counselor (psychotherapist or therapist) in a structured way, attending a limited number of sessions.</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="slide">
+                        <div class="card grid">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_7705-458.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_7705-360.webp" type="image/webp"> -->
+                                    <img src="./images/IMG_7705-fallback-new.jpg" alt="image of lotus flower (IMG_7705)" title="Photo by Jean Marie Johnson"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-500 fw-bold bg-green">Trauma-Focused Cognitive Behavioral Therapy <span class="">(TF-CBT)</span></h2>
+                                <div class="card--body fs-400">
+                                    <p>Evidence-based treatment for children and adolescents, and their caregivers, to deal with the negative impact of traumatic events, such as witnessing violence, experiencing sexual or physical abuse, an unexpected death, or a natural disaster. It incorporates a trauma-sensitive model and interventions with cognitive behavioral, family and humanistic techniques.</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="slide">
+                        <div class="card grid">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_8840-343.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_8840-270.webp" type="image/webp"> -->
+                                    <img src="./images/IMG_8840-fallback-new.jpg" alt="image of lotus flower (IMG_8840)" title="Photo by Jean Marie Johnson"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-600 fw-bold bg-green">Solution-Focused Brief Therapy <span class="f">(SFBT)</span></h2>
+                                <div class="card--body fs-400">
+                                    <p>Concentrates on finding solutions in the present time and exploring one’s hope for the future to find quicker resolution of one’s problems. This method takes the approach that you know what you need to do to improve your own life and, with the appropriate coaching and questioning, are capable of finding the best solutions.</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="slide">
+                        <div class="card grid">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_4227-458.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_4227-360.webp" type="image/webp"> -->
+                                    <img src="./images/IMG_4227-fallback-new.jpg" alt="image of lotus flower (IMG_4427)" title="Photo by Jean Marie Johnson"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-500 fw-bold bg-green text-cream">Telehealth Therapy</h2>
+                                <div class="card--body fs-400">
+                                    <p>I am happy to offer my clients the option of secure telehealth/online therapy.  Easy and confidential access from wherever you are (home, work, car) with no additional drive time in your schedule.  Ensures your physical health and safety from COVID (or other illnesses).  Most insurance companies will cover Telehealth the same as in office meetings.</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="slide">
+                        <div class="card grid">
+                            <div class="card--figure">
+                                <picture>
+                                    <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_1916-458.webp" type="image/webp">
+                                    <source media="(max-width: 2480px)" srcset="./images/IMG_1916-360.webp" type="image/webp"> -->
+                                    <img src="./images/IMG_1916-fallback-new.jpg" alt="image of lotus flower (IMG_1916)" title="Photo by Jean Marie Johnson"/>
+                               </picture>
+                            </div>
+                            <div class="grid">
+                                <h2 class="card--header fs-500 fw-bold bg-green">Treatment Focus Areas</h2>
+                                <div class="card--body grid fs-400">
+                                    <div>
+                                        <h3 class="fw-bold text-green">Anxiety</h3>
+                                        <!-- <p>Do you feel as though your life is being held hostage by stress, fear, or anxiety? Is it getting in the way of leading the life you want to live?</p> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="fw-bold text-green">Depression</h3>
+                                        <!-- <p>Feeling sad, blue or just down in the dumps is something we all experience at times. However, when it becomes persistent, it may be time to seek assistance. </p> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="fw-bold text-green">Trauma</h3>
+                                        <!-- <p>In the aftermath of a traumatic event, such as sexual abuse, violence, betrayal, or sudden loss, difficult and intense feelings of fear, sadness, grief, shock, and shame can be overwhelming. </p> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="fw-bold text-green">Obsessive Complusive Disorder (OCD)</h3>
+                                        <!-- <p>Obsessive-compulsive disorder (OCD) is a chronic mental health condition where obsessions or intrusive thoughts can lead to compulsive behaviors and rituals.</p> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="fw-bold text-green">Attention-deficit/hyperactivity disorder (ADHD)</h3>
+                                        <p>ADHD is a common neurodevelopmental disorder that affects how you behave.  Symptoms often include ongoing, persistent patterns of inattention, an inability to focus, hyperactivity, or impulsivity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                </div>
+                <button class="goToNext arrow arrowRight bg-alpha" title="Next"></button>
+            </div>
+        </section>
+
+        <section id="insurance" class="grid bg-dark text-cream ff-sans-serif">
+            <h1 class="ff-sans-serif--black fs-700 uppercase text-blue">insur<span class="text-yellow">ance</span></h1>
+            <p class="ff-sans-serif fs-600">I currently accept the following Insurance Providers</p>
+            <div id="insurance_ribbon" class="flex bg-cream">
+                <picture>
+                    <source srcset="./images/mass-health-logo-100.webp" type="image/webp">
+                    <img src="./images/mass-health-logo-100.png" alt="mass health logo" title="Mass Health">
+                </picture>               
+                <picture>
+                    <source srcset="./images/blue-cross-blue-shield-logo-100.webp" type="image/webp">
+                    <img src="./images/blue-cross-blue-shield-logo-100.png" alt="blue cross blue shield logo" title="Blue Cross Blue Shield">
+                </picture>               
+                <picture>
+                    <source srcset="./images/tufts-logo-100.webp" type="image/webp">
+                    <img src="./images/tufts-logo-100.png" alt="tufts health plan logo" title="Tufts Health Plan">
+                </picture>
+            </div>
+            <div class="fs-400 grid">
+                <h2 class="fs-500 fw-bold text-green">Suggestions to ask your insurance provider</h2>
+                <ul>
+                    <li>Do I have mental health insurance benefits?</li>
+                    <li>What is my deductible and has it been met?</li>
+                    <li>How many sessions per year does my health insurance cover?</li>
+                    <li>What is the coverage amount per therapy session/ co-pay?</li>
+                    <li>How much does my plan cover for an out-of-network provider?</li>
+                    <li>What is the coverage amount per therapy session?</li>
+                    <li>Is approval required from my primary care physician?</li>
+                    <li>Are there any limitations to my coverage?</li>
+                    </ul>
+            </div>
+            <div class="fs-400 grid">
+                <h2 class="fs-500 fw-bold text-green">Payment</h2>
+                <p>Your co-pay or deductible amount is due at the time of service. Your insurance company will be billed and, following their payment, a second bill with any remaining balance, will be sent to you for payment. I do not bill a secondary or third insurance. </p>
+            </div>
+            <div class="fs-400 grid">
+                <h2 class="fs-500 fw-bold text-green">Cancellation Policy</h2>
+                <p>I request 24-hours for cancellation of sessions. If you do not show up for your scheduled appointment, and/or you have not notified me at least 24 hours in advance, you will be required to pay the full cost of the treatment as booked.  Insurance companies do not pay for missed appointments.</p>
+            </div>
+        </section>
+
+        <section id="portal" class="grid ff-sans-serif text-cream">
+            <h1 class="ff-sans-serif--black fs-700 uppercase text-blue">client <span class="text-yellow">portal</span></h1>
+            <p class="ff-sans-serif fs-600">A customer portal is a secure, personalized hub for customers to submit and manage their requests, payments, and access up-to-date information. On my client portal, customers can:</p>
+            <div class="grid card--container">
+                <div class="card flex">
+                    <div class="card--figure">
+                        <i class="fas fa-calendar-check fa-5x"></i>
+                    </div>
+                    <h2 class="card--header fs-400 fw-bold text-blue">View & Schedule Appointments</h2>
+                </div>
+                <div class="card flex">
+                    <div class="card--figure">
+                        <i class="fas fa-file-video fa-5x"></i>
+                    </div>
+                    <h2 class="card--header fs-400 fw-bold text-blue">Join Telehealth appointments</h2>
+                </div>
+                <div class="card flex">
+                    <div class="card--figure">
+                        <i class="fas fa-file-invoice-dollar fa-5x"></i>
+                    </div>
+                    <h2 class="card--header fs-400 fw-bold text-blue">View billing documents & pay invoices</h2>
+                </div>
+                <div class="card flex">
+                    <div class="card--figure">
+                        <i class="fas fa-file-upload fa-5x"></i>
+                    </div>
+                    <h2 class="card--header fs-400 fw-bold text-blue">Upload forms & documents</h2>
+                </div>
+            </div>
+            <a class="fs-600 fw-bold button bg-yellow text-purple uppercase" href="https://jeanmariejohnsonlicsw.clientsecure.me">client portal</a>
+        </section>
+        <footer id="footer" class="flex ff-sans-serif fs-400 bg-purple text-cream">
+            <div id="logo-container" class="grid grid-column">
+                <picture>
+                    <source srcset="./images/logoclearbg-90.webp" type="image/webp">
+                    <img class="logo" src="./images/logoclearbg-fallback-90.png" alt="image of logo" />
+                </picture>
+                <div class="ff-serif fw-bold fs-400 text-green capitalize">jean marie johnson LICSW</div>
+            </div>
+            <div>Thank you for visiting my web site.  I look forward to working with you soon.  Need more information?  Please <a href="mailto:jeanmariejohnsonlicsw@gmail.com" class="text-blue">contact me</a>.</div>
+            <div id="copyright" class="flex fs-200">
+                    <div>Copyright © 2022 Jean Marie Johnson, LICSW - All Rights Reserved.</div>
+                    <div id="dev-logo">Powered by <span>X</span><span>4</span><span>des</span><span>i</span><span>gns</span></div>
+            </div>            
+       </footer>  
+    </div>
+</body>
+</html>

@@ -1,0 +1,482 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+     /* colors */
+     /* Color Pallette $4531 https://colorpalettes.net/color-palette-4531/ */
+     --theme-1--color-1: #536F01;
+     --theme-1--color-2: #E8B100;
+     --theme-1--color-3: #FCE2AD;
+     --theme-1--color-4: #8A9994;
+     --theme-1--color-5: #3F6358;
+
+     /* Color Pallette #4555 https://colorpalettes.net/color-palette-4555/ */
+     --theme-2--color-1: #3D5220;
+     --theme-2--color-2: #B7CB99;
+     --theme-2--color-3: #778FD2;
+     --theme-2--color-4: #2A3759;
+     --theme-2--color-5: #431D32;
+
+     /* Color Pallette #4568 https://colorpalettes.net/color-palette-4568/ */
+     --theme-3--color-1: #14471E;
+     --theme-3--color-2: #68904D;
+     --theme-3--color-3: #C8D2D1;
+     --theme-3--color-4: #EE9B01;
+     --theme-3--color-5: #DA6A00;
+
+     --theme-number: 1;
+
+     --color-1: var(--theme-1--color-1);
+     --color-2: var(--theme-1--color-2);
+     --color-3: var(--theme-1--color-3);
+     --color-4: var(--theme-1--color-4);
+     --color-5: var(--theme-1--color-5);
+     
+     --border-radius: 10px;
+     /* font-sizes: Mobile */
+     --fs-900: clamp(5rem, 6vw + 1rem, 9.375rem);
+     --fs-800: 3.5rem;
+     --fs-700: 1.5rem;
+     --fs-600: 1rem;
+     --fs-500: 1rem;
+     --fs-400: 0.9375rem;
+     --fs-300: 1rem;
+     --fs-200: 0.875rem;
+
+     /* font-families */
+     --ff-serif: "Bellefair", serif;
+     --ff-sans-cond: "Barlow Condensed", sans-serif;
+     --ff-sans-normal: "Barlow", sans-serif;
+}
+
+/* Tablet 560px */
+@media (min-width: 35em) {
+     :root {
+          /* font-sizes: Tablet */
+          --fs-800: 5rem;
+          --fs-700: 2.5rem;
+          --fs-600: 1.5rem;
+          --fs-400: 1rem;
+          --fs-500: 1.25rem;
+     }
+}
+/* large Sizes */
+@media (min-width: 45em) {
+     :root {
+          /* font-sizes: Desktop */
+          --fs-800: 6.25rem;
+          --fs-700: clamp(2rem, 3vw + 1rem, 3.5rem);
+          /* --fs-700: 3.5rem; */
+          --fs-600: 2rem;
+          --fs-500: 1.75rem;
+          --fs-400: 1.125rem;
+     }
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+fieldset,
+figure,
+picture {
+     margin: 0;
+}
+
+fieldset {
+     padding: 2rem;
+     border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+     font-weight: 400;
+}
+
+/* set up the body */
+body {
+     font-family: var(--ff-sans-normal);
+     font-size: var(--fs-400);
+     background-color: black;
+     color: white;
+     line-height: 1.5;
+     min-height: 100vh;
+
+     display: grid;
+     /* stretch header and main-content to fit the min-height*/
+     grid-template-rows: min-content 1fr;
+
+     /* prevent side-scrolling for animations */
+     overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+     max-width: 100%;
+     /* display: block overrides default behavior of hidden attribute for picture element */
+     /* display: block; */
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+[hidden] {
+     display: none;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+     *,
+     *::before,
+     *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+     }
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+     display: flex;
+     gap: var(--gap, 1rem);
+     /* outline: 3px solid red; */
+}
+
+.grid {
+     display: grid;
+     gap: var(--gap, 1rem);
+}
+
+.d-block {
+     display: block;
+}
+
+/* select all adjacent siblings that come before it; select all but 1st child */
+/* "> * + *" */
+/* "> *:not(:first-child)" has specificity problems */
+/* "> *:where(:not(:first-child))" where does not add any specificity so you can overwrite*/
+.flow--horizontal > *:where(:not(:first-child)) {
+     margin-left: var(--flow-space, 1rem);
+     /* outline: 1px solid purple; */
+}
+
+.flow--vertical > *:where(:not(:first-child)) {
+     margin-top: var(--flow-space, 1rem);
+     /* outline: 1px solid green; */
+}
+
+.container {
+     padding-inline: 2em; /* new property left/right */
+     margin-inline: auto; /* new property left/right */
+     max-width: 90%;
+     height: 100%;
+}
+
+/* screen reader only; keeps it in the DOM but is not visible */
+.sr-only {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     margin: -1px;
+     overflow: hidden;
+     clip: rect(0, 0, 0, 0);
+     white-space: nowrap; /* added line */
+     border: 0;
+}
+
+/* colors */
+.bg--color-1 {
+     background-color: var(--color-1);
+}
+.bg--color-2 {
+     background-color: var(--color-2);
+}
+.bg--color-3 {
+     background-color: var(--color-3);
+}
+.bg--color-4 {
+     background-color: var(--color-4);
+}
+.bg--color-5 {
+     background-color: var(--color-5);
+}
+
+.txt--color-1 {
+     color: var(--color-1);
+}
+.txt--color-2 {
+     color: var(--color-2);
+}
+.txt--color-3 {
+     color: var(--color-3);
+}
+.txt--color-4 {
+     color: var(--color-4);
+}
+.txt--color-5 {
+     color: var(--color-5);
+}
+
+.hov--color-1:hover {
+     background-color: var(--color-1);
+}
+.hov--color-2:hover {
+     background-color: var(--color-2);
+}
+.hov--color-3:hover {
+     background-color: var(--color-3);
+}
+.hov--color-4:hover {
+     background-color: var(--color-4);
+}
+.hov--color-5:hover {
+     background-color: var(--color-5);
+}
+
+.bd--color-3 {
+     border: 3px solid var(--color-3);
+}
+
+/* typography */
+
+.letter-spacing-1 {
+     letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+     letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+     letter-spacing: 2.35px;
+}
+
+.uppercase {
+     text-transform: uppercase;
+}
+
+.ff-serif {
+     font-family: var(--ff-serif);
+}
+.ff-sans-cond {
+     font-family: var(--ff-sans-cond);
+}
+.ff-sans-normal {
+     font-family: var(--ff-sans-normal);
+}
+
+
+.fs-900 {
+     font-size: var(--fs-900);
+}
+.fs-800 {
+     font-size: var(--fs-800);
+}
+.fs-700 {
+     font-size: var(--fs-700);
+}
+.fs-600 {
+     font-size: var(--fs-600);
+}
+.fs-500 {
+     font-size: var(--fs-500);
+}
+.fs-400 {
+     font-size: var(--fs-400);
+}
+.fs-300 {
+     font-size: var(--fs-300);
+}
+.fs-200 {
+     font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+     line-height: 1.1;
+}
+
+/* --------------------- */
+/* Components            */
+/* --------------------- */
+
+/* default values for navigation bar */
+.primary-navigation {
+     --gap: clamp(1.5rem, 5vw, 3.5rem);
+     --underline-gap: 2em;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+}
+
+.primary-navigation a {
+     text-decoration: none;
+     color: inherit;
+}
+
+.primary-navigation a > span {
+     margin-right: 0.5em;
+     font-weight: 700;
+}
+
+
+.underline-indicators > * {
+     cursor: pointer;
+     padding: var(--underline-gap, 0.5rem) 0;
+     border: 0;
+     border-bottom: 0.2rem solid hsl(255 255% 255% / 0);
+     background-color: transparent;
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+     border-color: hsl(255 255% 255% / 0.5);
+}
+
+.underline-indicators > *.active,
+.underline-indicators > [aria-selected="true"] {
+     color: hsl(255 255% 255% / 1);
+     border-color: hsl(255 255% 255% / 1);
+}
+
+
+
+header {
+     padding: 1rem 0;
+}
+
+section {
+     min-height: 100%;
+     justify-items: center;
+     align-content: center;
+     padding-block: 2rem;
+     background-color: var(--background-color);
+     color: var(--text-color);
+}
+
+.pallettes {
+     flex-direction: column;
+     --gap: 2rem;
+}
+
+.color--pallette {
+     --flow-space: 1rem;
+}
+
+.color--pallette label,
+.color--pallette span {
+     padding: .25rem 1rem;
+}
+
+.color--box {
+     border: 1px solid white;
+}
+
+.color--pallette:nth-of-type(1) {
+}
+.color--pallette:nth-of-type(2) {
+}
+
+/* Theme 1 */
+.color--pallette:nth-of-type(1) .color--box:nth-of-type(1) {
+     background-color: var(--theme-1--color-1);
+}
+.color--pallette:nth-of-type(1) .color--box:nth-of-type(2) {
+     background-color: var(--theme-1--color-2);
+     color: black;
+}
+.color--pallette:nth-of-type(1) .color--box:nth-of-type(3) {
+     background-color: var(--theme-1--color-3);
+     color: black;
+}
+.color--pallette:nth-of-type(1) .color--box:nth-of-type(4) {
+     background-color: var(--theme-1--color-4);
+     color: black;
+}
+.color--pallette:nth-of-type(1) .color--box:nth-of-type(5) {
+     background-color: var(--theme-1--color-5);
+}
+
+/* Theme 2 */
+.color--pallette:nth-of-type(2) .color--box:nth-of-type(1) {
+     background-color: var(--theme-2--color-1);
+}
+.color--pallette:nth-of-type(2) .color--box:nth-of-type(2) {
+     background-color: var(--theme-2--color-2);
+     color: black;
+}
+.color--pallette:nth-of-type(2) .color--box:nth-of-type(3) {
+     background-color: var(--theme-2--color-3);
+     color: black;
+}
+.color--pallette:nth-of-type(2) .color--box:nth-of-type(4) {
+     background-color: var(--theme-2--color-4);
+}
+.color--pallette:nth-of-type(2) .color--box:nth-of-type(5) {
+     background-color: var(--theme-2--color-5);
+}
+
+/* Theme 3 */
+.color--pallette:nth-of-type(3) .color--box:nth-of-type(1) {
+     background-color: var(--theme-3--color-1);
+}
+.color--pallette:nth-of-type(3) .color--box:nth-of-type(2) {
+     background-color: var(--theme-3--color-2);
+     color: black;
+}
+.color--pallette:nth-of-type(3) .color--box:nth-of-type(3) {
+     background-color: var(--theme-3--color-3);
+     color: black;
+}
+.color--pallette:nth-of-type(3) .color--box:nth-of-type(4) {
+     background-color: var(--theme-3--color-4);
+}
+.color--pallette:nth-of-type(3) .color--box:nth-of-type(5) {
+     background-color: var(--theme-3--color-5);
+}
+
+.button {
+     text-decoration: none;
+     padding: .25em 1em;
+     border-radius: var(--border-radius);
+     text-align: center;
+     display: inline-grid;
+     place-items: center;
+}

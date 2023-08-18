@@ -54,7 +54,7 @@ navLinks.forEach(navLink => {
      });          
 });
 
-window.addEventListener('resize', () => {
-     console.log(`Window Height: ${window.innerHeight}px / Nav Height: ${nav.offsetHeight}px`)
-});
+// window.addEventListener('resize', () => {
+//      console.log(`Window Height: ${window.innerHeight}px / Nav Height: ${nav.offsetHeight}px`)
+// });
 
