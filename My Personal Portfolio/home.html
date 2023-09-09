@@ -19,18 +19,17 @@
         <!-- HEADER -->
         <header id="top-of-page" class="flex flex--col">
             <div class="container grid">
-                <!-- HEADER/NAV -->
                 <div class="flex flex--row primary-header">
                     <!-- Mobile Menu (hidden) -->
                     <button class="mobile-nav-toggle"  aria-expanded="false" aria-controls="nav-container"><span class="sr-only">Menu</span></button>
                     <nav class="flex flex--row nav-container">
                         <!-- Social Media -->
                         <div class="flex flex--center social-container">
-                            <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="fab fa-facebook"></a>
-                            <a href="https://www.instagram.com/bjohnson1120/" target="_blank" class="fab fa-instagram"></a>
-                            <a href="https://github.com/bjohnson112069" target="_blank" class="fab fa-github"></a>
-                            <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="fab fa-linkedin"></a>
-                            <a href="mailto: johnson-brian@verizon.net" target="_blank" class="fa fa-envelope"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="fab fa-facebook" aria-label="Go to Facebook"></a>
+                            <a href="https://www.instagram.com/bjohnson1120/" target="_blank" class="fab fa-instagram" aria-label="Go to Instagram"></a>
+                            <a href="https://github.com/bjohnson112069" target="_blank" class="fab fa-github" aria-label="Go to Github"></a>
+                            <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="fab fa-linkedin" aria-label="Go to LinkedIn"></a>
+                            <a href="mailto: johnson-brian@verizon.net" target="_blank" class="fa fa-envelope" aria-label="Send Email"></a>
                         </div>
                         <!-- Navigation -->
                         <ul data-visible="false" class="flex primary-navigation underline-indicators">
@@ -54,7 +53,6 @@
         <section id="section--hero" class="flex flex--col">
             <div class="container flex flex--row slide-in slide-right">
                 <div id="hero-content--1" class="flex flex--col">
-                    <!-- Name -->
                     <h1>hello, i am brian johnson</h1>
                     <p>I am a service-centric I/T professional offering 25 years of experience maintaining enterprise networks focusing on LAN/WAN Service Delivery, Service Assurance and Security Compliance.  I am a cross-functional leader successful in cooperating with multi-disciplinary teams and senior level management. Skilled in managing assigned workforce towards the achievement of organizational goals.</p>
                     <div class="flex flex--row">
@@ -64,7 +62,10 @@
                 </div>
                 <div id="hero-content--2"  class="flex flex--col flex--center">
                     <h1>Associate Director of Technology</h1>
-                    <img src="./images/Hero Image Transparent.png" alt="Hero Image">                
+                    <picture>
+                        <source srcset="./images/hero-image-transparent.webp" type="image/webp">
+                        <img src="./images/hero-image-transparent.png" alt="Hero Image">                
+                    </picture>
                     <h2>Brian Johnson</h2>
                 </div>
             </div>
@@ -79,7 +80,7 @@
                     Who.Am.I?  I am an I/T Professional with over 25 years of experience focused primarily in Network Engineering.  I started my career as an engineer leveraging my technical skills.  Over time, I augmented my technical skills with softer skills which opened up opportunties into management.  During my career, I have partnered with dozens of individuals with diverse backgrounds and expertise.  I played an active role in their personal and career development.  I am a proponent of a High-Trust, High-Performance Culture and I try to emulate this in both my professional and personal life.
                 </p>
                 <div id="about-content--3" class="flex flex--col flex--center col-1 about-c-2">
-                    <div class="flex flex--col card">
+                    <div class="flex flex--col card" onclick="">
                         <div class="flex flex--col card--header">
                             <h1>Brian Johnson</h1>
                             <p>Leominster, MA</p>
@@ -87,11 +88,11 @@
                         </div>
                         <!-- Social Media -->
                         <div class="grid social--container">
-                            <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="fab fa-facebook"></a>
-                            <a href="https://www.instagram.com/bjohnson1120/" target="_blank" class="fab fa-instagram"></a>
-                            <a href="https://github.com/bjohnson112069" target="_blank" class="fab fa-github"></a>
-                            <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="fab fa-linkedin"></a>
-                            <a href="mailto: johnson-brian@verizon.net" target="_blank" class="fa fa-envelope"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="fab fa-facebook" aria-label="Go to Facebook"></a>
+                            <a href="https://www.instagram.com/bjohnson1120/" target="_blank" class="fab fa-instagram" aria-label="Go to Instagram"></a>
+                            <a href="https://github.com/bjohnson112069" target="_blank" class="fab fa-github" aria-label="Go to Github"></a>
+                            <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="fab fa-linkedin" aria-label="Go to LinkedIn"></a>
+                            <a href="mailto: johnson-brian@verizon.net" target="_blank" class="fa fa-envelope" aria-label="Send Email"></a>
                         </div>    
                     </div>
                 </div>
@@ -108,6 +109,7 @@
                 </div>
             </div>
         </section>
+
         <!-- SECTION: EXPERIENCE -->
         <section id="section--experience" class="flex flex--col">
             <div class="flex flex--col container slide-in slide-right">
@@ -192,16 +194,16 @@
                     <h1>skills</h1>
                 </div>
                 <div class="grid skill-card--container">
-                    <div class="skill-card flex flex--col">
+                    <div class="skill-card flex flex--col" onclick="">
                         <div class="skill-card--content">
                             <div class="skill-card--front flex flex--col flex--center">
                                 <div class="skill-card--front--container grid">
-                                    <figure class=""></figure>
+                                    <figure aria-label="Background hero image"></figure>
                                     <div class="fa-solid fa-book-open flex flex--center"></div>
                                     <h1 class="">General</h1>
                                 </div>
                             </div>
-                            <div class="skill-card--back flex flex--col">
+                            <ul class="skill-card--back flex flex--col">
                                 <li>Leadership</li>
                                 <li>Technical</li>
                                 <li>Compliance</li>
@@ -212,37 +214,37 @@
                                 <li>Mentoring</li>
                                 <li>Critical Thinking</li>
                                 <li>Conflict Resolution</li>
-                            </div>
+                            </ul>
                         </div>
                     </div>
-                    <div class="skill-card flex flex--col">
+                    <div class="skill-card flex flex--col" onclick="">
                         <div class="skill-card--content">
                             <div class="skill-card--front flex flex--col flex--center">
                                 <div class="skill-card--front--container grid">
-                                    <figure class=""></figure>
+                                    <figure aria-label="Background hero image"></figure>
                                     <div class="fa-solid fa-certificate flex flex--center"></div>
                                     <h1 class="">Certifications</h1>
                                 </div>
                             </div>
-                            <div class="skill-card--back flex flex--col">
+                            <ul class="skill-card--back flex flex--col">
                                 <li>freeCodeCamp Responsive Web Design (2021)</li>
                                 <li>freeCodeCamp JavaScript Algorithms & Data Structures (2021)</li>
                                 <li>Cisco Certified Network Associate (1999)</li>
                                 <li>Novell Certified NetWare Administrator (1994)</li>
                                 <li>Novell Certified NetWare Administrator (3 courses)</li>
-                            </div>
+                            </ul>
                         </div>
                     </div>
-                    <div class="skill-card flex flex--col">
+                    <div class="skill-card flex flex--col" onclick="">
                         <div class="skill-card--content">
                             <div class="skill-card--front flex flex--col flex--center">
                                 <div class="skill-card--front--container grid">
-                                    <figure class=""></figure>
+                                    <figure aria-label="Background hero image"></figure>
                                     <div class="fa-solid fa-network-wired flex flex--center"></div>
                                     <h1 class="">Network Software</h1>
                                 </div>
                             </div>
-                            <div class="skill-card--back flex flex--col">
+                            <ul class="skill-card--back flex flex--col">
                                 <li>Cisco IOS/IOS-XE</li>
                                 <li>Cisco CATOS</li>
                                 <li>Cisco NX-OS</li>
@@ -256,62 +258,62 @@
                                 <li>BMC Remedy</li>
                                 <li>Peregrin Service Center</li>
                                 <li>Ethereal</li>
-                            </div>
+                            </ul>
                         </div>
                     </div>
-                    <div class="skill-card flex flex--col">
+                    <div class="skill-card flex flex--col" onclick="">
                         <div class="skill-card--content">
                             <div class="skill-card--front flex flex--col flex--center">
                                 <div class="skill-card--front--container grid">
-                                    <figure class=""></figure>
+                                    <figure aria-label="Background hero image"></figure>
                                     <div class="fa-solid fa-network-wired flex flex--center"></div>
                                     <h1 class="">Network Hardware</h1>
                                 </div>
                             </div>
-                            <div class="skill-card--back flex flex--col">
+                            <ul class="skill-card--back flex flex--col">
                                 <li>Cisco IOS/IOS-XE: 2000/3000/4000/7000 Series</li>
                                 <li>Cisco CATOS: 5000/6000 Series</li>
                                 <li>Cisco NX-OS: N2000/N5000/N7000 Series</li>
                                 <li>Cisco PIX: 500 Series</li>
                                 <li>Nokia: IP440/660</li>
-                            </div>
+                            </ul>
                         </div>
                     </div>
-                    <div class="skill-card flex flex--col">
+                    <div class="skill-card flex flex--col" onclick="">
                         <div class="skill-card--content">
                             <div class="skill-card--front flex flex--col flex--center">
                                 <div class="skill-card--front--container grid">
-                                    <figure class=""></figure>
+                                    <figure aria-label="Background hero image"></figure>
                                     <div class="fa-solid fa-file-signature flex flex--center"></div>
                                     <h1 class="">Productivity</h1>
                                 </div>
                             </div>
-                            <div class="skill-card--back flex flex--col">
+                            <ul class="skill-card--back flex flex--col">
                                 <li>Microsoft Office Suite</li>
                                 <li>Microsoft Visio</li>
                                 <li>Microsoft Teams</li>
                                 <li>Microsoft One Drive</li>
                                 <li>Cisco WebEx</li>
                                 <li>Lotus Notes</li>
-                            </div>
+                            </ul>
                         </div>
                     </div>
-                    <div class="skill-card flex flex--col">
+                    <div class="skill-card flex flex--col" onclick="">
                         <div class="skill-card--content">
                             <div class="skill-card--front flex flex--col flex--center">
                                 <div class="skill-card--front--container grid">
-                                    <figure class=""></figure>
+                                    <figure aria-label="Background hero image"></figure>
                                     <div class="fa-solid fa-code flex flex--center"></div>
                                     <h1 class="">Programming</h1>
                                 </div>
                             </div>
-                            <div class="skill-card--back flex flex--col">
+                            <ul class="skill-card--back flex flex--col">
                                 <li>HTML5</li>
                                 <li>CSS3</li>
                                 <li>Javascript</li>
                                 <li>Python</li>
                                 <li>ANSI C</li>
-                            </div>
+                            </ul>
                         </div>
                     </div>
 
@@ -330,13 +332,13 @@
                     </button>
                     <div class="slides" tabindex="0">
                         <div class="slide current">
-                            <div class="flex flex--col slide--content">
+                            <div class="flex flex--col slide--content" onclick="">
                                 <div class="slide--figure">
                                     <picture>
-                                        <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_0819-458.webp" type="image/webp">
-                                        <source media="(max-width: 2480px)" srcset="./images/IMG_0819-360.webp" type="image/webp"> -->
-                                        <img src="./images/brian-johnson-mock-thumbnail.JPG" alt="image of Brian Johnson Portfolio (mock)" title="needs attribution"/>
-                                   </picture>
+                                        <source media="(min-width: 800px)" srcset="./images/brian-johnson-mock-800.webp" type="image/webp">
+                                        <source media="(max-width: 800px)" srcset="./images/brian-johnson-mock-500.webp" type="image/webp">
+                                        <img src="./images/brian-johnson-mock-fallback.JPG" alt="image of Brian Johnson Portfolio (mock)"/>
+                                    </picture>
                                 </div>
                                 <div class="flex flex--col slide--caption">
                                     <p class="fs-300">Initial version of my personal portfolio</p>
@@ -345,13 +347,13 @@
                             </div>        
                         </div>
                         <div class="slide">
-                            <div class="flex flex--col slide--content">
+                            <div class="flex flex--col slide--content" onclick="">
                                 <div class="slide--figure">
                                     <picture>
-                                        <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_7705-458.webp" type="image/webp">
-                                        <source media="(max-width: 2480px)" srcset="./images/IMG_7705-360.webp" type="image/webp"> -->
-                                        <img src="./images/jean-marie-prod-thumbnail.JPG" alt="image of Jean Marie Johnson (prod)" title=""/>
-                                   </picture>
+                                        <source media="(min-width: 800px)" srcset="./images/jean-marie-prod-800.webp" type="image/webp">
+                                        <source media="(max-width: 800px)" srcset="./images/jean-marie-prod-500.webp" type="image/webp">
+                                        <img src="./images/jean-marie-prod-fallback.JPG" alt="image of Jean Marie Johnson (prod)" title=""/>
+                                    </picture>
                                 </div>
                                 <div class="flex flex--col slide--caption">
                                     <p class="fs-300">Production website for Jean Marie Johnson, LICSW </p>
@@ -360,13 +362,13 @@
                             </div>        
                         </div>
                         <div class="slide">
-                            <div class="flex flex--col slide--content">
+                            <div class="flex flex--col slide--content" onclick="">
                                 <div class="slide--figure">
                                     <picture>
-                                        <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_8840-343.webp" type="image/webp">
-                                        <source media="(max-width: 2480px)" srcset="./images/IMG_8840-270.webp" type="image/webp"> -->
-                                        <img src="./images/jean-marie-mock-thumbnail.JPG" alt="image of Jean Marie Johnson (mock)" title=""/>
-                                   </picture>
+                                        <source media="(min-width: 800px)" srcset="./images/jean-marie-mock-800.webp" type="image/webp">
+                                        <source media="(max-width: 800px)" srcset="./images/jean-marie-mock-500.webp" type="image/webp">
+                                        <img src="./images/jean-marie-mock-fallback.JPG" alt="image of Jean Marie Johnson (mock)" title=""/>
+                                    </picture>
                                 </div>
                                 <div class="flex flex--col slide--caption">
                                     <p class="fs-300">Mock (incomplete) design for Jean Marie Johnson, LICSW.</p>
@@ -375,13 +377,13 @@
                             </div>        
                         </div>
                         <div class="slide">
-                            <div class="flex flex--col slide--content">
+                            <div class="flex flex--col slide--content" onclick="">
                                 <div class="slide--figure">
                                     <picture>
-                                        <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_8840-343.webp" type="image/webp">
-                                        <source media="(max-width: 2480px)" srcset="./images/IMG_8840-270.webp" type="image/webp"> -->
-                                        <img src="./images//monogram-mock-thumbnail.JPG" alt="image of Monograme mock website" title="Frontend Practice"/>
-                                   </picture>
+                                        <source media="(min-width: 800px)" srcset="./images/monogram-mock-800.webp" type="image/webp">
+                                        <source media="(max-width: 800px)" srcset="./images/monogram-mock-500.webp" type="image/webp">
+                                        <img src="./images//monogram-mock-fallback.JPG" alt="image of Monograme mock website" title="Frontend Practice"/>
+                                    </picture>
                                 </div>
                                 <div class="flex flex--col slide--caption">
                                     <p class="fs-300">Mock Website (Monogram): used to develop skills.  Responsive design, etc.</p>
@@ -390,13 +392,13 @@
                             </div>        
                         </div>
                         <div class="slide">
-                            <div class="flex flex--col slide--content">
+                            <div class="flex flex--col slide--content" onclick="">
                                 <div class="slide--figure">
                                     <picture>
-                                        <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_8840-343.webp" type="image/webp">
-                                        <source media="(max-width: 2480px)" srcset="./images/IMG_8840-270.webp" type="image/webp"> -->
-                                        <img src="./images/refuel-mock-thumbnail.JPG" alt = "image of refuel mock website" title="nicepage"/>
-                                   </picture>
+                                        <source media="(min-width: 800px)" srcset="./images/refuel-mock-800.webp" type="image/webp">
+                                        <source media="(max-width: 800px)" srcset="./images/refuel-mock-500.webp" type="image/webp">
+                                        <img src="./images/refuel-mock-fallback.JPG" alt = "image of refuel mock website" title="nicepage"/>
+                                    </picture>
                                 </div>
                                 <div class="flex flex--col slide--caption">
                                     <p class="fs-300">Mock Website (Refuel): used to develop skills.  Responsive design, etc.</p>
@@ -405,13 +407,13 @@
                             </div>        
                         </div>
                         <div class="slide">
-                            <div class="flex flex--col slide--content">
+                            <div class="flex flex--col slide--content" onclick="">
                                 <div class="slide--figure">
                                     <picture>
-                                        <!-- <source media="(min-width: 2480px)" srcset="./images/IMG_8840-343.webp" type="image/webp">
-                                        <source media="(max-width: 2480px)" srcset="./images/IMG_8840-270.webp" type="image/webp"> -->
-                                        <img src="./images/johnson-hooper-mock-thumbnail.JPG" alt="image of johnson & hooper mock website"/>
-                                   </picture>
+                                        <source media="(min-width: 800px)" srcset="./images/johnson-hooper-mock-800.webp" type="image/webp">
+                                        <source media="(max-width: 800px)" srcset="./images/johnson-hooper-mock-500.webp" type="image/webp">
+                                        <img src="./images/johnson-hooper-mock-fallback.JPG" alt="image of johnson & hooper mock website"/>
+                                    </picture>
                                 </div>
                                 <div class="flex flex--col slide--caption">
                                     <p class="fs-300">Mock Website (Johnson Hooper): used to develop skills.</p>
@@ -427,7 +429,7 @@
             </div>
         </section>
         <!-- SECTION: HOBBIES -->
-        <section id="section--hobbies" class="flex flex--col parallax parallax-bgImage">
+        <section id="section--hobbies" class="flex flex--col parallax">
             <div class="flex flex--col container slide-in slide-left">
                 <div class="flex flex--col section-title">
                     <h1>hobbies</h1>
@@ -453,11 +455,11 @@
                 <div class="flex flex--row">
                     <h1 id="footer-content--1">Brian Johnson</h1>
                     <div id="footer-content--2" class="flex flex--center social-container">
-                        <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="fab fa-facebook"></a>
-                        <a href="https://www.instagram.com/bjohnson1120/" target="_blank" class="fab fa-instagram"></a>
-                        <a href="https://github.com/bjohnson112069" target="_blank" class="fab fa-github"></a>
-                        <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="fab fa-linkedin"></a>
-                        <a href="mailto: johnson-brian@verizon.net" target="_blank" class="fa fa-envelope"></a>
+                        <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="fab fa-facebook" aria-label="Go to Facebook"></a>
+                        <a href="https://www.instagram.com/bjohnson1120/" target="_blank" class="fab fa-instagram" aria-label="Go to Instagram"></a>
+                        <a href="https://github.com/bjohnson112069" target="_blank" class="fab fa-github" aria-label="Go to Github"></a>
+                        <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="fab fa-linkedin" aria-label="Go to LinkedIn"></a>
+                        <a href="mailto: johnson-brian@verizon.net" target="_blank" class="fa fa-envelope" aria-label="Send Email"></a>
                     </div>
                     <p id="footer-content--3">Powered by <a href="http://www.xfourdesigns.com" target="_blank"><span class="bg-dev--white txt-dev--black">X</span><span class="txt-dev--white exponent">4</span><span class="txt-dev--red">des</span><span class="txt-dev--white">i</span><span class="bg-dev--red txt-dev--white">gns</span></a> &copy; 2023</p>                   
                 </div>

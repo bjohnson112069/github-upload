@@ -1,0 +1,899 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+     /* Primary */
+     --preview-orange: hsl(26, 100%, 55%);
+     --preview-pale-orange: hsl(25, 100%, 94%);
+     --clr-orange: 26 100% 55%;
+     --clr-pale-orange: 25 100% 94%;
+     /* Neutral */
+     --preview-very-dark-blue: hsl(220, 13%, 13%);
+     --preview-dark-grayish-blue: hsl(219, 9%, 45%);
+     --preview-grayish-blue: hsl(220, 14%, 75%);
+     --preview-light-grayish-blue: hsl(223, 64%, 98%);
+     --clr-very-dark-blue: 220 13% 13%;
+     --clr-dark-grayish-blue: 21 9% 45%;
+     --clr-grayish-blue: 220 14% 75%;
+     --clr-light-grayish-blue: 223 64% 98%;
+     --clr-white: 0 0% 100%;
+     --clr-black: 0 0% 0%; /* 75% opacity for lightbox */
+     /* font-sizes: Mobile */
+     --fs-900: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+     --fs-800: 2rem;
+     --fs-700: 1.75rem;
+     --fs-600: 1.5rem;
+     --fs-500: 1.25rem;
+     --fs-400: 1rem;
+     --fs-300: 0.9375rem;
+     --fs-200: 0.875rem;
+     /* font-families */
+     --ff-sans-serif: 'Kumbh Sans', sans-serif;
+
+     /* custom properties */
+     --min-width: 375px;
+     --max-width: 1440px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture,
+ul,
+li {
+     margin: 0;
+     padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     font-weight: 700;
+}
+
+/* make images easier to work with */
+img,
+picture {
+     max-width: 100%;
+     display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+/* set up the body */
+body {
+     font-family: var(--ff-sans-serif);
+     font-size: var(--fs-400);
+     font-weight: 400;
+     background-color: #222222;
+     color: white;
+     line-height: 1.5;
+     height: 100vh;
+     display: grid;
+     align-items: center;
+     grid-auto-flow: row;
+     grid-template-rows: 1fr min-content;
+     /* prevent side-scrolling for animations */
+     /* overflow-x: hidden; */
+}
+
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+.outline {
+     outline: 1px solid red;
+ }
+ 
+ .outline-children > * {
+     outline: 1px solid purple;
+ }
+
+ /* Page Container: set min/max widths on page */
+ .page-container {
+     min-width: var(--min-width);
+     max-width: var(--max-width);
+     background-color: hsl(var(--clr-white));
+     color: hsl(var(--clr-black));
+     color: red;
+     /* center horizontally */
+     /* margin-inline: auto; */
+     /* min-height: 100vh; */
+     position: relative;
+     /* margin-block: auto; */
+     margin: auto;
+ }
+
+.content-container {
+     /* center horizontally */
+     margin-inline: auto;
+     width: 100%;
+     height: 100%;
+     max-width: max(var(--min-width), 75%);
+     display: grid;
+     /* stretch header and main-content to fit the min-height*/
+     grid-template-rows: min-content 1fr;
+     background-color: inherit;
+}
+
+
+/* --------------------- */
+/* Header                */
+/* --------------------- */
+
+
+header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border: 0;
+     border-bottom: 1px solid hsl(var(--clr-grayish-blue));
+     background-color: inherit;
+}
+
+.navigation-container {
+     display: flex;
+     align-items: center;
+     gap: clamp(1rem, 0.1197rem + 3.7559vw, 3.5rem);
+     background-color: inherit;
+}
+
+/* default values for navigation bar */
+.primary-navigation {
+     display: flex;
+     gap: clamp(0.1rem, -0.5690rem + 2.8545vw, 2rem);
+     list-style: none;
+     background-color: inherit;
+     color: hsl(var(--clr-grayish-blue));
+     padding: 0;
+     margin: 0;
+     background-color: hsl(var(--clr-white));
+}
+
+.primary-navigation li {
+     padding: 2.5rem 0;
+}
+.primary-navigation a {
+     text-decoration: none;
+     color: inherit
+}
+
+.mobile-nav-open,
+.mobile-nav-close {
+     display: none;
+}
+
+
+.underline-indicators > * {
+     cursor: pointer;
+     border: 0;
+     border-bottom: 5px solid hsl(var(--clr-orange) / 0);
+     background-color: transparent;
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus,
+.underline-indicators > *.active,
+.underline-indicators > [aria-selected="true"] {
+     border-color: hsl(var(--clr-orange));
+     color: hsl(var(--clr-very-dark-blue));
+}
+
+.logo,
+.cart {
+     max-width: none;
+}
+
+.checkout-area {
+     display: flex;
+     gap: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+     align-items: center;
+     justify-content: center;
+}
+
+.checkout-area figure {
+     position: relative;
+     display: flex;
+     align-items: center;
+}
+
+.cart {
+     /* position: relative; */
+     width: 22px;
+     height: 20px;
+     background: none;
+     border: none;
+     background-image: url(./images/icon-cart.svg);
+     background-repeat: no-repeat;
+     background-position: center center;
+     padding: 0;
+     margin: 0;
+}
+
+.cart:hover {
+     filter: brightness(0) saturate(100%) invert(12%) sepia(4%) saturate(1283%) hue-rotate(158deg) brightness(95%) contrast(96%);
+}
+
+.badge {
+     position: absolute;
+     content: "";
+     width: 19px;
+     height: 15px;
+     border-radius: 100px;
+     top: 0;
+     right: 0;
+     padding: 0;
+     margin: 0;
+     font-size: 10px;
+     font-weight: bold;
+     text-align: center;
+     background-color: hsl(var(--clr-orange));
+     color: hsl(var(--clr-white));
+     transform: translate(50%, 0);
+     display: none;
+}
+
+.badge.active {
+     display: block;
+}
+
+.avatar {
+     height: auto;
+     width: clamp(1.5625rem, 1.0123rem + 2.3474vw, 3.125rem);
+     border-radius: 50%;
+     border: 2px solid transparent;
+}
+
+.avatar:hover {
+     border-color: hsl(var(--clr-orange));
+}
+
+/* --------------------- */
+/* Shopping List         */
+/* --------------------- */
+.shopping-list-container {
+     position: absolute;
+     top: 100%;
+     right: 0%;
+     transform: translate(50%, 2rem);
+     width: 365px;
+     border-radius: 10px;
+     box-shadow: 0 0 20px 0px hsla(var(--clr-black) / .5);
+     background-color: hsl(var(--clr-white));
+     display: none;
+     flex-direction: column;
+     justify-content: start;
+     flex-wrap: nowrap;
+     z-index: 10;
+}
+
+.shopping-list-container.active {
+     display: flex;
+}
+
+.shopping-list-header {
+     font-weight: bold;
+     padding: 1.5rem;
+     color: hsl(var(--clr-very-dark-blue));
+     border-bottom: 1px solid hsl(var(--clr-grayish-blue));
+}
+
+.shopping-list {
+     padding: 1.5rem;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     gap: .5rem;
+     list-style: none;
+}
+
+.shopping-list-item {
+     display: flex;
+     flex-direction: row;
+     gap: 1rem;
+     align-items: center;
+}
+
+.shopping-list-empty {
+     text-align: center;
+     font-weight: bold;
+     padding: 3.5rem 0;
+     color: hsl(var(--clr-grayish-blue));
+}
+
+.checkout-thumbnail {
+     width: 50px;
+     height: 50px;
+     border-radius: 5px;
+}
+
+.checkout-product-details {
+     display: flex;
+     flex-direction: column;
+     color: hsl(var(--clr-grayish-blue));
+     font-weight: bold;
+}
+
+.checkout-product-title {
+     text-transform: capitalize;
+     font-size: var(--fs-400);
+}
+
+.checkout-price-details {
+     display: flex;
+     flex-direction: row;
+     gap: .25rem;
+}
+
+.checkout-total {
+     color: hsl(var(--clr-very-dark-blue));
+     padding-left: .5rem;
+}
+
+.checkout-delete-item {
+     width: 16px;
+     height: 16px;
+     background: none;
+     border: none;
+     padding: 0;
+     margin: 0;
+     cursor: pointer;
+     background-image: url(./images/icon-delete.svg);
+     background-repeat: no-repeat;
+     background-position: center center;
+}
+
+.checkout {
+     text-transform: capitalize;
+     white-space: nowrap;
+     background-color: hsl(var(--clr-orange));
+     color: hsl(var(--clr-white));
+     font-weight: bold;
+     margin: 0 1.5rem 1.5rem 1.5rem;
+     display: none;
+}
+
+.checkout.active {
+     display: block;
+}
+
+
+
+/* --------------------- */
+/* Main                  */
+/* --------------------- */
+main {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+     padding: 6rem 2rem;
+}
+
+/* --------------------- */
+/* Product Preview       */
+/* --------------------- */
+
+.product-preview-container {
+     display: grid;
+     grid-template-rows: repeat(2, min-content);
+     /* justify-items: center; */
+     justify-content: center;
+     grid-auto-flow: row;
+     gap: 0;
+     grid-template-areas: 
+          "product-preview"
+          "lighthouse-modal";
+}
+
+.product-preview {
+     display: grid;
+     grid-template-rows: repeat(2, min-content);
+     justify-items: center;
+     grid-auto-flow: row;
+     gap: 2rem;
+     grid-area: product-preview;
+}
+
+.product-preview .carousel {
+     max-width: 25rem;
+     max-height: 25rem;
+     position: relative;
+     cursor: pointer;
+}
+
+.product-preview .thumbnail-container {
+     padding: 0;
+     gap: 1.5rem;
+}
+
+.product-preview .thumbnail {
+     cursor: pointer;
+     width: 5rem;
+}
+
+/* --------------------- */
+/* Lightbox/MOdals       */
+/* --------------------- */
+.outer-modal {
+     position: fixed;
+     z-index: 1000;
+     left: 50%;
+     top: 0;
+     width: var(--max-width);
+     transform: translateX(-50%);
+     height: 100%;
+     background-color: hsla(var(--clr-black) / 0.75);
+     display: none;
+     grid-area: lightouse-modal;
+}
+
+.outer-modal.active {
+     display: grid;
+     place-items: center;
+}
+
+.inner-modal {
+     display: grid;
+     grid-auto-flow: row;
+     justify-items: center;
+     gap: 1rem;
+     position: relative;
+}
+
+.close-lighthouse {
+     position: absolute;
+     content: "";
+     top: 0;
+     right: 0;
+     transform: translate(0, -50px);
+     background: none;
+     padding: 0;
+     border: none;
+     width: 25px;
+     height: 25px;
+     background-image: url(./images/icon-close.svg);
+     background-repeat: no-repeat;
+     background-position: center center;
+}
+
+.inner-modal .carousel {
+     width: 35rem;
+     height: 34rem;
+     position: relative;
+}
+
+.large-image {
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+}
+
+.prev,
+.next {
+     position: absolute;
+     content: "";
+     top: 50%;
+     aspect-ratio: 1 / 1;
+     width: 3.5rem;
+     border-radius: 50%;
+     background: none;
+     padding: 0;
+     border: none;
+     background-color: hsl(var(--clr-light-grayish-blue));
+     background-repeat: no-repeat;
+     background-position: center center;
+}
+
+.prev {
+     /* background-image: url(./images/icon-previous.svg); */
+     left: 0%;
+     transform: translate(-50%, -50%);
+}
+
+.prev img,
+.next img {
+     margin: 0 auto;
+}
+
+.next {
+     /* background-image: url(./images/icon-next.svg); */
+     right: 0%;
+     transform: translate(50%, -50%);
+}
+
+.product-preview .prev,
+.product-preview .next {
+     display: none;
+}
+
+.close-lighthouse:hover,
+.arrow:hover img {
+     -webkit-filter: brightness(0) saturate(100%) invert(63%) sepia(91%) saturate(3136%) hue-rotate(347deg) brightness(101%) contrast(101%);
+     filter: brightness(0) saturate(100%) invert(63%) sepia(91%) saturate(3136%) hue-rotate(347deg) brightness(101%) contrast(101%);
+}
+
+.thumbnail-container {
+     padding: 1rem;
+     display: grid;
+     grid-auto-flow: column;
+     gap: 2rem;
+}
+
+.thumbnail {
+     width: 6rem;
+     position: relative;
+}
+
+.thumbnail-wrapper {
+     border-radius: 10px;
+     background-color: hsl(var(--clr-white));
+     outline: 2px solid transparent;
+     overflow: hidden;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+     opacity: 0.5;
+}
+
+.thumbnail-wrapper.active {
+     outline-color: hsl(var(--clr-orange));
+}
+
+.thumbnail-wrapper.active .thumbnail {
+     opacity: 0.5;
+}
+
+
+/* --------------------- */
+/* Product Details       */
+/* --------------------- */
+.product-details {
+     padding: 1.5rem;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     font-weight: bold;
+}
+
+.company-name {
+     line-height: initial;
+     font-size: var(--fs-200);
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     color: hsl(var(--clr-orange));
+}
+
+.product-title {
+     line-height: initial;
+     text-transform: capitalize;
+     color: hsl(var(--clr-very-dark-blue));
+     /* use linearly scaled font size */
+     font-size: var(--fs-900);
+}
+
+.product-description {
+     color: hsl(var(--clr-grayish-blue));
+}
+
+.price-container {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: 1rem;
+}
+
+.sale-container,
+.original-price {
+     flex: 50%;
+}
+
+.sale-container {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+}
+
+.sale-price {
+     color: hsl(var(--clr-very-dark-blue));
+}
+
+.original-price {
+     font-size: var(--fs-400);
+     color: hsl(var(--clr-grayish-blue));
+     text-decoration: line-through;
+     text-align: left;
+}
+
+.sales-percentage {
+     font-size: var(--fs-400);
+     padding: .125rem .5rem;
+     color: hsl(var(--clr-orange));
+     background-color: hsl(var(--clr-pale-orange));
+     border-radius: 5px;
+}
+
+.add-to-cart-form {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     gap: 1rem;
+}
+
+.quantity-container {
+     flex: 30%;
+     display: flex;
+     justify-content: space-between;
+     padding: 1rem;
+     background-color: hsl(var(--clr-light-grayish-blue));
+     border-radius: 10px;
+}
+
+.quantity-container label {
+     display: none;
+}
+
+.quantity-container button {
+     background: none;
+     border: none;
+}
+
+/* Specified numeric input to take advantage of the prototype functions: stepUp()/stepDown().
+These functions inherently increment/decrement the value in the textfield.  Javascript will
+invoke these functions on button click. */
+.quantity {
+     -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+     appearance: textfield;
+     width: 2rem;
+     /* padding: 0 1rem; */
+     text-align: center;
+     background: none;
+     border: none;
+}
+
+.quantity:focus {
+     border: none;
+     outline: none;
+}
+
+/* (if supported) remove the numeric textfield spinners */
+.quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+}
+
+.button {
+     padding: 1rem 4.5rem;
+     border-radius: 10px;
+     border: none;
+}
+
+.add-to-cart {
+     flex: 60%;
+     white-space: nowrap;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+     background-color: hsl(var(--clr-orange));
+     color: hsl(var(--clr-white));
+     font-weight: bold;
+}
+
+.add-to-cart:hover,
+.quantity-container button:hover {
+     opacity: 0.5;
+}
+
+.colorize-white {
+     -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(131deg) brightness(105%) contrast(101%);
+     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(131deg) brightness(105%) contrast(101%);
+}
+
+
+/* ---------- */
+/* ANIMATIONS */
+/* ---------- */
+
+@keyframes fadeInFromNone {
+     0% {
+         /* display: none; */
+         opacity: 0;
+     }
+ 
+     1% {
+         /* display: flex; */
+         opacity: 0;
+     }
+ 
+     100% {
+         /* display: flex; */
+         opacity: 1;
+     }
+ }
+ 
+
+/* override defaults for mobile using max-width */
+@media (max-width: 57rem) {
+
+     main {
+          padding: 0;
+     }
+
+     header nav {
+          position: fixed;
+          inset: 0 0 0 0;
+          background-color: hsla(var(--clr-black) / 0.75);
+          z-index: 10;
+          display: flex;
+          opacity: 0;
+          visibility: hidden;
+          transition: all .5s ease-in-out;
+     }
+
+     header nav.active {
+          opacity: 1;
+          visibility: visible;
+     }
+     
+     .primary-navigation {
+          --underline-gap: 0.5em;
+          width: 65%;
+          height: 100%;
+          list-style: none;
+          padding: 1rem;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          transform: translateX(-100%);
+          transition: all .5s ease-in-out;
+     }
+     
+     /* modify underline-indicators for pimrary-navigation w/in this media query (e.g. mobile) */
+     .primary-navigation.underline-indicators > .active {
+          border: 0;
+     }
+     
+     .primary-navigation[data-visible="true"] {
+          transform: translateX(0);
+     }
+
+     .primary-navigation li {
+          padding: .5rem 0;
+          font-weight: bold;
+          color: hsl(var(--clr-very-dark-blue));
+     }
+
+     .mobile-nav-open,
+     .mobile-nav-close {
+          display: block;
+          background: hsl(var(--clr-white));
+          border: 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 1.5rem;
+          aspect-ratio: 1;
+          cursor: pointer;
+     }
+     
+     .mobile-nav-open {
+          background-image: url(./images/icon-menu.svg);
+
+     }
+
+     .mobile-nav-close {
+          background-image: url(./images/icon-close.svg);
+          margin-bottom: 2.5rem;
+     }
+
+     header {
+          padding: 1rem;
+     }
+
+     .shopping-list-container {
+          transform: translate(16%, 1.5rem);
+     }
+     
+     .price-container {
+          gap: 0;
+     }
+     
+     .original-price {
+          text-align: right;
+     }
+
+     .product-preview {
+          display: none;
+     }
+
+     .outer-modal {
+          display: grid;
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none;
+          width: 100%;
+          z-index: 1;
+     }
+
+     .inner-modal .carousel {
+          width: 100%;
+          height: 100%;
+     }
+     
+     .inner-modal .large-image {
+          border-radius: 0;
+     }
+
+     .inner-modal .thumbnail-container {
+          display: none;
+     }
+
+     .inner-modal .prev,
+     .inner-modal .next {
+          display: block;
+          width: 2.5rem;
+          background-size: 25%;
+     }
+
+     .inner-modal .prev {
+          transform: translate(1rem, -50%);
+     }
+
+     .inner-modal .next {
+          transform: translate(-1rem, -50%);
+     }
+
+     .close-lighthouse {
+          display: none;
+     }
+
+     .disable-scrolling {
+          overflow-y: hidden;
+     }
+
+}
+
+/* --------------------- */
+/* Attribution           */
+/* --------------------- */
+.attribution { 
+     font-size: 11px; 
+     text-align: center; 
+}
+
+.attribution a { 
+     color: hsl(228, 45%, 44%); 
+}

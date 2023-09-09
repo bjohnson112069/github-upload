@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    
+    <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-container">
+            <header class="">
+                <div class="navigation-container">
+                    <button class="mobile-nav-open" aria-controls="primary-navigation" aria-expanded="false"></button>
+                    <img class="logo" src="./images/logo.svg" alt="sneakers logo">
+                    <nav>
+                        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators">
+                            <button class="mobile-nav-close" aria-controls="primary-navigation" data-visible="false"></button>
+                            <li><a class="" href="#">Collections</a></li>
+                            <li><a class="" href="#">Men</a></li>
+                            <li><a class="" href="#">Women</a></li>
+                            <li><a class="" href="#">About</a></li>
+                            <li><a class="" href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="checkout-area">
+                    <figure>
+                        <button type="button" class="cart" aria-label="Display Cart"></button>
+                        <!-- <img class="cart" src="./images/icon-cart.svg" alt="shopping cart"> -->
+                        <div class="badge" aria-label="Number of items in cart"></div>
+                        <div class="shopping-list-container">
+                            <div class="shopping-list-header">Cart</div>
+                            <ul class="shopping-list">
+                                <!-- inserted by javascript -->
+                            </ul>
+                            <button type="button" class="button checkout">checkout</button>
+                        </div>
+                    </figure>
+                    <div class="avatar">
+                        <img class="" src="./images/image-avatar.png" alt="avatar picture">
+                    </div>
+                </div>
+            </header>
+            <main class="">
+                <div class="product-preview-container">
+                    <div class="product product-preview">
+                        <figure class="carousel">
+                            <img class="large-image" src="./images/image-product-1.jpg" alt="enlarged image of product">
+                        </figure>
+                        <div class="thumbnail-container">
+                            <div class="thumbnail-wrapper active">
+                                <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail Image #1" name="image1">
+                            </div>
+                            <div class="thumbnail-wrapper">
+                                <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail Image #2" name="image2">
+                            </div>
+                            <div class="thumbnail-wrapper">
+                                <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail Image #3" name="image3">
+                            </div>
+                            <div class="thumbnail-wrapper">
+                                <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail Image #4" name="image4">
+                            </div>
+                        </div>
+                </div>
+                    <div class="outer-modal">
+                        <div class="inner-modal">
+                            <button type="button" class="close close-lighthouse colorize-white" aria-label="Close Lighthouse"></button>
+                            <figure class="carousel">
+                                <button type="button" class="arrow prev" name="prev" aria-label="Prev Button"><img src="./images/icon-previous.svg" alt="previous image"></button>
+                                <img class="large-image" src="./images/image-product-1.jpg" alt="enlarged image of product">
+                                <button type="button" class="arrow next" name="next" aria-label="Next Button"><img src="./images/icon-next.svg" alt="next image"></button>
+                            </figure>
+                            <div class="thumbnail-container">
+                                <div class="thumbnail-wrapper active">
+                                    <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail Image #1" name="image1">
+                                </div>
+                                <div class="thumbnail-wrapper">
+                                    <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail Image #2" name="image2">
+                                </div>
+                                <div class="thumbnail-wrapper">
+                                    <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail Image #3" name="image3">
+                                </div>
+                                <div class="thumbnail-wrapper">
+                                    <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail Image #4" name="image4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <div class="product product-details">
+                    <p class="company-name">sneaker company</p>
+                    <h1 class="product-title">fall limited edition sneakers</h1>
+                    <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                    <div class="price-container">
+                        <div class="sale-container">
+                            <h2 class="sale-price">$125</h2>
+                            <span class="sales-percentage">50%</span>
+                        </div>
+                        <p class="original-price">$250</p>
+                    </div>
+                    <form class="add-to-cart-form" autocomplete="off">
+                        <div class="quantity-container">
+                            <label for="quantity">Quantity</label>
+                            <button type="button" class="decrement" aria-label="Decrease quantity">
+                                <img src="./images/icon-minus.svg" alt="minus sign">
+                            </button>
+                            <input class="quantity" type="number" name="quantity" id="quantity" min="0" value="1" readonly>
+                            <button type="button" class="increment" aria-label="Increase Quantity">
+                                <img src="./images/icon-plus.svg" alt="plus sign">
+                            </button>
+                        </div>
+                        <button type="submit" class="button add-to-cart"><img class="colorize-white" src="./images/icon-cart.svg" alt="shopping cart">Add to cart</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+</body>
+</html>

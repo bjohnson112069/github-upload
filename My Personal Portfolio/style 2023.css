@@ -57,6 +57,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding, 100px);
+    overflow-x: hidden;
 }
 
 /* set up the body */
@@ -71,6 +72,7 @@ body {
     /* prevent side-scrolling for animations */
     overflow-x: hidden;
     min-width: 22.5rem;
+
 }
 
 /* make images easier to work with */
@@ -346,12 +348,16 @@ h6 {
 
 .fab:hover,
 .fab:active,
+.fab:focus,
 .fa:hover,
 .fa:active,
+.fa:focus,
 .redirect-link:hover,
 .redirect-link:active,
+.redirect-link:focus,
 footer li > a:hover,
-footer li > a:active {
+footer li > a:active,
+footer li > a:focus {
     opacity: 0.7;
 }
 
@@ -406,6 +412,13 @@ header {
     background-size: cover;
     background-blend-mode: multiply;
     /* min-height: 100vh; */
+}
+
+/* must include BOTH the property and the value */
+@supports (background-image: url(./images/_8604fe55-f9e3-4402-8ab4-5d75326000f3.webp)) {
+    header {
+        background-image: url(./images/_8604fe55-f9e3-4402-8ab4-5d75326000f3.webp);
+    }
 }
 
 header .container {
@@ -573,7 +586,8 @@ section {
     flex: 1;
 }
 #button--call-to-action:hover,
-#button--call-to-action:active {
+#button--call-to-action:active,
+#button--call-to-action:focus {
     background-color: hsla(var(--clr-primary) / 0.5);
 }
 
@@ -583,7 +597,8 @@ section {
     flex: 1;
 }
 #button--basic:hover,
-#button--basic:active {
+#button--basic:active,
+#button--basic:focus {
     background-color: hsla(var(--clr-secondary) / 0.5);
 }
 
@@ -657,8 +672,16 @@ section {
     transition: background .8s ease-in-out;
 }
 
+/* must include BOTH the property and the value */
+@supports (background-image: url(./images/bg-card-image.webp)) {
+    .card {
+        background-image: url(./images/bg-card-image.webp);
+    }
+}
+
 .card:hover,
-.card:active {
+.card:active,
+.card:focus {
     background-color: hsla(var(--clr-background) / .5);
     background-blend-mode: multiply;
     background-size: 250%;
@@ -712,8 +735,10 @@ section {
 
 .card:hover .social--container,
 .card:active .social--container,
+.card:focus .social--container,
 .card:hover .card--header,
-.card:active .card--header {
+.card:active .card--header,
+.card:focus .card--header {
     opacity: 1;
 }
 
@@ -1004,7 +1029,8 @@ section {
 }
 
 .skill-card:hover .skill-card--content,
-.skill-card:active .skill-card--content {
+.skill-card:active .skill-card--content,
+.skill-card:focus .skill-card--content {
     transform: rotateY( 180deg );
 }
 
@@ -1038,11 +1064,20 @@ section {
 }
 
 .skill-card--front--container figure {
-    background-image: url(./images/_8604fe55-f9e3-4402-8ab4-5d75326000f3.jpg);
+    
+    background-image: url(./images/skill-card-background-360.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+/* must include BOTH the property and the value */
+@supports (background-image: url(./images/skill-card-background-360.webp)) {
+    .skill-card--front--container figure {
+        background-image: url(./images/skill-card-background-360.webp);
+    }
+}
+
 .skill-card--front--container div {
     font-family: "Font Awesome 5 Free";
     font-size: 75px;
@@ -1070,6 +1105,7 @@ section {
     background-color: hsla(var(--clr-text));
     justify-content: center;
     text-align: left;
+    list-style: disc;
 }
 
 .skill-card--back h2 { 
@@ -1161,7 +1197,6 @@ section {
     transition: all .2s;
     transform: translateX(-200%);
     max-width: 50rem;
-
 }
 
 .slide.next + .slide {
@@ -1193,7 +1228,8 @@ section {
 }
 
 .slide--content:hover .slide--caption,
-.slide--content:active .slide--caption {
+.slide--content:active .slide--caption,
+.slide--content:focus .slide--caption {
     opacity: 1;
     transform: translate(-50%, -50%);
 }
@@ -1220,7 +1256,8 @@ section {
 
 .goToProject,
 .goToProject:hover,
-.goToProject:active {
+.goToProject:active,
+.goToProject:focus {
     border: 5px double hsla(var(--clr-primary));
 }
 
@@ -1235,7 +1272,8 @@ section {
 }
 
 .goToProject:hover,
-.goToProject:active {
+.goToProject:active,
+.goToProject:focus {
     background-color: hsla(var(--clr-primary) / 0.5);
     /* color: hsla(var(--clr-primary) / 1); */
 }
@@ -1248,22 +1286,27 @@ section {
 #section--hobbies {
     background-color: hsla(var(--clr-background) / .7);
     color: hsl(var(--clr-text));
-    /* padding: 0; */
 }
 
 .parallax {
     background-repeat: no-repeat;
-    background-position: center 75%;
-    background-size: 70%;
-    background-attachment: fixed;
+    background-position: center center;
     background-blend-mode: multiply;
-
-    /* width: 100%;
-    height: 20vh; */
+    background-image: url("./images/spartan-trifecta-metals-transparent.png");  
 }
 
-.parallax-bgImage {
-    background-image: url("./images/spartan-trifecta-metals-transparent.png");  
+/* must include BOTH the property and the value */
+@supports (background-attachment: fixed) {
+    .parallax {
+        background-attachment: fixed;
+    }
+}
+
+/* must include BOTH the property and the value */
+@supports (background-image: url("./images/spartan-trifecta-metals-transparent.webp")) {
+    .parallax {
+        background-image: url("./images/spartan-trifecta-metals-transparent.webp");
+    }
 }
 
 /* --------------------- */
@@ -1426,4 +1469,7 @@ footer ul {
         text-align: center;
     }
     
+    .disable-scrolling {
+        overflow-y: hidden;
+   }
 }

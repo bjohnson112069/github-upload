@@ -94,13 +94,13 @@ const mySlider = Slider(document.querySelector('.slider'));
 
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const nav = document.querySelector(".nav-container");
-const body = document.querySelector('body');
+const htmlElement = document.documentElement;
 
 
 function setNavMenuStatus(boolean) {
      nav.setAttribute("data-visible", boolean);
      navToggle.setAttribute("aria-expanded", boolean);
-     body.classList.toggle("disable-scrolling", boolean);
+     htmlElement.classList.toggle("disable-scrolling", boolean);
 }
 
 // when someone cliks the hambruger button

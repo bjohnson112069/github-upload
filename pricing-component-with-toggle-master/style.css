@@ -1,0 +1,313 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+     /* colors */
+     --clr-very-light-grayish-blue: 240 78% 98%;
+     --clr-light-grayish-blue: 234 14% 74%;
+     --clr-grayish-blue: 233 13% 49%;
+     --clr-dark-grayish-blue: 232 13% 33%;
+     --clr-gradient-start: 236 72% 79%;
+     --clr-gradient-end: 237 63% 64%;
+     /* font-sizes: Mobile */
+     --fs-900: 4rem;
+     --fs-500: 1rem;
+     --fs-400: 0.9375rem;
+     /* font weigfht */
+     --fw-700: 700;
+     /* font-families */
+     --ff-sans-serif: 'Montserrat', sans-serif;
+     
+     --max-width: 1440px;
+     --min-width: 375px;
+     --page-padding: 2rem;
+     --min-content: calc(var(--min-width) - var(--page-padding));
+     --card-radius: 10px;
+     --button-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+     margin: 0;
+     padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+     font-weight: 400;
+}
+
+/* set up the body */
+body {
+     font-family: var(--ff-sans-serif);
+     font-size: var(--fs-400);
+     font-weight: var(--fw-700);
+     background-color: black;
+     color: hsl(var(--clr-dark-grayish-blue));
+     line-height: 1.5;
+     min-height: 100vh;
+     display: grid;
+     grid-template-rows: 1fr min-content;
+     place-items: center;
+}
+
+/* make images easier to work with */
+img,
+picture {
+     max-width: 100%;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+.outline {
+     outline: 1px solid red;
+ }
+ 
+ .outline-children > * {
+     outline: 1px solid purple;
+ }
+ 
+.page-container {
+     padding-inline: 1rem;
+     margin-inline: auto;
+     max-width: var(--max-width);
+     min-width: var(--min-width);
+     background-color: hsl(var(--clr-very-light-grayish-blue));
+     background-image: url(./images/bg-top.svg);
+     background-repeat: no-repeat;
+     background-position: 250% 0%;
+     background-size: 75%;
+     width: 100%;
+}
+
+.content-container {
+     background: none;
+     height: 100%;
+     display: grid;
+     grid-template-rows: repeat(2, min-content);
+     justify-content: center;
+     gap: 4rem;
+     padding: 4rem 0;
+}
+
+/* --------------------- */
+/* Components            */
+/* --------------------- */
+
+
+.pricing-options {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 2rem;
+ }
+
+ .pricing-options h1 {
+     color: hsl(var(--clr-grayish-blue));
+ }
+
+.toggle-container {
+     display: flex;
+     gap: 1rem;
+     align-items: center;
+}
+
+.toggle-container span {
+     color: hsl(var(--clr-light-grayish-blue));
+}
+
+.checkbox {
+     display: none;
+}
+
+.toggle {
+     position: relative ;
+     display: inline-block;
+     width: 46px;
+     height: 26px;
+     background: linear-gradient(to right, hsl(var(--clr-gradient-start)), hsl(var(--clr-gradient-end)));
+     border-radius: 100px;
+ }
+
+.toggle::after {
+     content: '';
+     position: absolute;
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     background-color: hsl(var(--clr-very-light-grayish-blue));
+     top: 50%;
+     left: 0;
+     transform: translate(3px, -50%);
+     transition:  all 0.5s;
+}
+
+.checkbox:checked + .toggle::after {
+     transform: translate(calc(100% + 3px), -50%);
+}
+
+.cards {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 2rem;
+}
+
+.card {
+     width: var(--min-content);
+     display: flex;
+     flex-direction: column;
+     border-radius: var(--card-radius);
+     text-align: center;
+     padding: 2rem;
+     background-color: hsl(var(--clr-very-light-grayish-blue));
+     color: hsl(var(--clr-grayish-blue));
+     box-shadow: 0px 0px 40px 0px hsla(var(--clr-gradient-end) / 0.5);
+}
+
+.card h1 {
+     font-size: var(--fs-400);
+     margin-bottom: 1rem;
+}
+
+.price {
+     font-size: var(--fs-900);
+     color: hsl(var(--clr-dark-grayish-blue));
+}
+
+.card ul {
+     list-style: none;
+     padding: 0;
+     margin: 2rem 0;
+     display: flex;
+     flex-direction: column;
+}
+
+.card li {
+     padding: 1rem 0;
+     border-top: 1px solid hsl(var(--clr-light-grayish-blue));
+}
+
+.button {
+     padding: 1rem 0;
+     border-radius: var(--button-radius);
+     background: linear-gradient(to right, hsl(var(--clr-gradient-start)), hsl(var(--clr-gradient-end)));
+     color: hsl(var(--clr-very-light-grayish-blue));
+     border: 1px solid hsl(var(--clr-very-light-grayish-blue));
+     text-transform: uppercase;
+     text-decoration: none;
+     letter-spacing: 1.2px;
+}
+
+.button:hover {
+     background: hsl(var(--clr-very-light-grayish-blue));
+     color: hsl(var(--clr-gradient-end));
+     border: 1px solid hsl(var(--clr-dark-grayish-blue));
+}
+
+.card--professional {
+     background: linear-gradient(to bottom, hsl(var(--clr-gradient-start)), hsl(var(--clr-gradient-end)));
+}
+
+.card--professional,
+.card--professional .price {
+     color: hsl(var(--clr-very-light-grayish-blue));    
+
+}
+
+.card--professional .button {
+     background: hsl(var(--clr-very-light-grayish-blue));
+     color: hsl(var(--clr-gradient-end));
+     border: 1px solid hsl(var(--clr-gradient-end));
+}
+     
+.card--professional .button:hover {
+     background: hsl(var(--clr-gradient-end));
+     color: hsl(var(--clr-very-light-grayish-blue));
+     border: 1px solid hsl(var(--clr-very-light-grayish-blue));
+}
+     
+@media (min-width: 70rem) {
+
+     
+     .page-container {
+          background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+          background-position: top right, bottom left;
+          background-size: initial;
+     }
+     .cards {
+          gap: 0;
+      }
+
+     .card {
+          margin: 1rem 0;
+     }
+           
+     .card--professional {
+          margin: 0;
+          padding: 3rem 2rem;              
+     }
+
+     .card--basic {
+          border-radius: var(--card-radius) 0 0 var(--card-radius);
+     }
+     
+     .card--master {
+          border-radius: 0 var(--card-radius) var(--card-radius) 0;
+     }
+     
+     
+}
+
+/* --------------------- */
+/* Attribution           */
+/* --------------------- */
+
+.attribution { 
+     font-size: 11px; 
+     text-align: center; 
+}
+
+.attribution a { 
+     color: hsl(228, 45%, 44%); 
+}
