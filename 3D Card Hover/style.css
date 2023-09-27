@@ -1,0 +1,279 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-dev--red: #B00707;
+    --clr-dev--black: #000000;
+    --clr-dev--white: #FFFFFF;
+    --clr-text: 211 41% 90%; /* hsl(211,41,90), #dbe5f0; off white */
+    --clr-background: 200 60% 1%; /* hsl(200,60,1), #010304; dark blue */
+    --clr-primary: 30 80% 54%; /* hsl(30,80,54), #e88a2c; light orange */
+    --clr-secondary: 210 42% 15%; /* hsl(210,42,15), #162636; blue-grey */
+    --clr-accent: 210 89% 49%; /* hsl(210,89,49), #0e7dec; light blue */
+    
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 9.6vw - 0.41rem, 7.75rem);
+    --fs-700: clamp(1.5rem, 0.96rem + 2.4vw, 3rem);
+    --fs-500: clamp(1.25rem, 1.07rem + 0.8vw, 1.75rem);
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+
+    /* font-weights */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    /* font-families */
+    --ff-body: "Lato", sans-serif;
+    --ff-header: "Montserrat", sans-serif;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+     font-family: var(--ff-header);
+     font-weight: 400;
+}
+
+html {
+     overflow-x: hidden;
+}
+
+/* set up the body */
+body {
+     font-family: var(--ff-body);
+     font-size: var(--fs-400);
+     font-weight: var(--fw-400);
+     background-color: hsl(var(--clr-background));
+     color: var(--clr-dev--white);
+     line-height: 1.5;
+
+     /* prevent side-scrolling for animations */
+     overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+     /* max-width: 100%; */
+     /* display: block overrides default behavior of hidden attribute for picture element */
+     /* display: block; */
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+.container {
+     padding-inline: 2em; /* new property left/right */
+     margin-inline: auto; /* new property left/right */
+     max-width: 80rem;
+     background-color: hsl(var(--clr-secondary));
+     min-height: 100vh;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.outline {
+     outline: 1px solid red;
+ }
+ 
+ .outline-children > * {
+     outline: 1px solid purple;
+ }
+ 
+
+/* typography */
+
+.card {
+     width: 200px;
+     height: 300px;
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: end;
+     gap: 1rem;
+     perspective: 2500px;
+     /* overflow: hidden; */
+}
+
+.wrapper{
+     position: absolute;
+     width: 100%;
+     inset: 0;
+     z-index: -1;
+     transition: all 0.5s;
+}
+
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+/* Gradient for top of wrapper image */
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+/* Gradient for bottom of wrapper image */
+.wrapper::after {
+  bottom: 0;
+  /* opacity: 1; */
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+
+.card:hover .wrapper::before,
+.card:hover .wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+
+.cover-image {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+
+.card:hover .wrapper {
+     transform: perspective(900px) translateY(-5%) rotateX(35deg) translateZ(0);
+     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+     opacity: 0.5;
+}
+
+.title {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     transition: transform 0.5s;
+}
+
+.title h1 {
+     font-size: var(--fs-400);
+     font-weight: var(--fw-900);
+     text-shadow: 1px 1px 1px hsl(var(--clr-background));
+}
+
+.title p {
+     font-size: var(--fs-300);
+}
+
+.card:hover .title {
+     transform: translate3d(0%, -50px, 100px);
+}
+   
+.back-image {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: end;
+     gap: .125rem;
+     opacity: 0;
+     transition: all 0.75s;
+     position: absolute;
+     z-index: -1;
+}
+   
+.card:hover .back-image {
+     opacity: 1;
+     transform: 
+          scale(1.2)
+          translate3d(10%, -22%, 100px);
+}
+
+.social-container {
+     display: flex;
+     justify-content: center;
+     gap: .25rem;
+}
+
+.social-container a {
+     text-decoration: none;
+}
+
+/* override defaults for mobile using max-width */
+@media (max-width: 35rem) {
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

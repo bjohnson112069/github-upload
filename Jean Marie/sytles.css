@@ -936,6 +936,8 @@ footer {
      padding-left: 1rem;
      --gap: 1rem;
      border-radius: 10px;
+     min-height: auto;
+     align-self: start;
 }
 
 #insurance--wrapper-1 .image-wrapper {
@@ -1061,7 +1063,6 @@ footer {
      
      #insurance-logo-wrapper {
           grid-auto-flow: row;
-          grid-auto-rows: 1fr;
      }
 }
 

@@ -1,0 +1,315 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+     /* colors */
+
+     --clr-preview-dark-blue: hsl(219, 65%, 83%);
+     --clr-preview-light-blue: hsl(221,60,84);
+     --clr-preview-light-yellow: hsl(42,100,63);
+     --clr-preview-neutral-yellow: hsl(42,85,54);
+     --clr-preview-dark-yellow: hsl(42,88,34);
+     /* --clr-dark-blue: 220 29% 23%; */
+     --clr-dark-blue: 219 65% 83%;
+     --clr-light-blue: 221 60% 84%;
+     --clr-light-yellow: 42 100% 63%;
+     --clr-neutral-yellow: 42 85% 54%;
+     --clr-dark-yellow: 42 88% 34%;
+
+
+     /* font-sizes: Mobile */
+     --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+     --fs-800: 5rem;
+     --fs-700: 3rem;
+     --fs-600: 3rem;
+     --fs-500: 2rem;
+     --fs-400: 1.125rem;
+     --fs-300: 1rem;
+
+     /* font-families */
+     --ff-sans-serif: 'Lato', sans-serif;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* https://andy-bell.co.uk/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+/* @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} */
+
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+     display: flex;
+     gap: var(--gap, 1rem);
+     /* outline: 3px solid red; */
+}
+
+.grid {
+     display: grid;
+     gap: var(--gap, 1rem);
+}
+
+.container {
+     padding-inline: 2em; /* new property left/right */
+     margin-inline: auto; /* new property left/right */
+     max-width: 80rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+
+.outline-children > * {
+     outline: 1px solid limegreen;
+}
+
+/* colors */
+
+
+/* typography */
+
+
+/* --------------------- */
+/* Components            */
+/* --------------------- */
+
+
+body {
+     font-family: var(--ff-sans-serif);
+     font-size: var(--fs-400);
+     font-weight: 400;
+     background-color: hsl(var(--clr-dark-blue));
+     color: white;
+     min-height: 100vh;
+     position: relative;
+}
+
+.title {
+     font-size: var(--fs-900);
+     font-weight: 900;
+     line-height: 1;
+     text-align: center;
+     text-transform: uppercase;
+     color: hsl(var(--clr-light-yellow));
+     text-shadow: 3px 3px 10px black;
+     margin-bottom: 3rem;
+}
+
+.gallery {
+     grid-template-columns: repeat(2, 400px);
+     grid-auto-rows: 200px;
+     transform: rotateX(60deg) rotateY(0deg) rotateZ(-35deg);
+}
+
+.gallery,
+.card,
+.card__dest,
+.card__thumb {
+     transform-style: preserve-3d;
+     backface-visibility: hidden;
+     position: relative;
+}
+
+.cover {
+     position: absolute;
+     inset: 0;
+     display: block;
+}
+
+.card {
+     display: block;
+     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card__thumb {
+     width: 100%;
+     height: 100%;
+     transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+     transform: translate3d(0, 0, 20px);
+}
+
+.card__thumb img,
+.inner__modal img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: top;
+     z-index: 1;
+     position: relative;
+     cursor: pointer;
+}
+
+.shadow {
+     /* opacity: .9; */
+     background-color: rgba(0, 0, 0, 0.1);
+     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+ 
+.card:hover .card__dest {
+     z-index: 10;
+}
+ 
+ .card:hover .card__dest,
+ .card:hover .card__thumb {
+     transform: translate3d(0, 0, 50px) rotateX(-30deg);
+     transform-origin: center bottom;
+}
+ 
+.card:hover .card__thumb .shadow {
+     opacity: .6;
+     background-color: rgba(0, 0, 0, 0.1);
+     box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.1);
+}
+ 
+.outer__modal {
+     position: fixed;
+     inset: 0;
+     background-color: rgba(0, 0, 0, 0.8);
+     opacity: 0;
+     visibility: hidden;
+     align-items: center;
+     transition: all .5s ease-in-out;
+}
+
+.active,
+.active > .inner__modal {
+     opacity: 1;
+     visibility: visible;
+}
+
+.active > .inner__modal {
+     transform-origin: top left;
+     animation: fadeInFromNone 2s forwards;
+     /* transition: all 2s ease-in-out; */
+}
+
+.inner__modal {
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     opacity: 0;
+     visibility: hidden;
+     width: 725px;
+     height: 465px;
+     border: 5px solid hsl(var(--clr-dark-yellow));
+     translate: var(--clientX) var(--clientY);
+}
+
+
+/* ---------- */
+/* ANIMATIONS */
+/* ---------- */
+
+@keyframes fadeInFromNone {
+     0% {
+          top: 0%;
+          left: 0%;
+          translate: var(--clientX) var(--clientY);
+          transform: scale(0);
+     }
+     100% {
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          transform: scale(1) rotateZ(360deg);
+     }
+ }
+
+/* override defaults for mobile using max-width */
+@media (max-width: 35rem) {
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}
+

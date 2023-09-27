@@ -1,0 +1,223 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+     /* colors */
+     --clr-dark: 230 35% 7%;
+     --clr-light: 231 77% 90%;
+     --clr-white: 0 0% 100%;
+     /* font-sizes: Mobile */
+     --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+     --fs-800: 3.5rem;
+     --fs-700: 1.5rem;
+     --fs-600: 1rem;
+     --fs-500: 1rem;
+     --fs-400: 0.9375rem;
+     --fs-300: 1rem;
+     --fs-200: 0.875rem;
+
+     /* font-families */
+     --ff-serif: "Bellefair", serif;
+     --ff-sans-cond: "Barlow Condensed", sans-serif;
+     --ff-sans-normal: "Barlow", sans-serif;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+     font-weight: 400;
+}
+
+@font-face 
+{ 
+     font-family: "Ndugal Society";  
+     src: url("./fonts/Ndugal-Society/Ndugal/NdugalSociety.otf") format("opentype"),
+          url("./fonts/Ndugal-Society/NdugalSociety.ttf") format("truetype");
+}
+
+@font-face 
+{ 
+     font-family: "Thalugie";  
+     src: url("./fonts/thalugie-fonts-2023-07-26-19-17-15-utc/Thalugie.otf") format("opentype"),
+          url("./fonts/thalugie-fonts-2023-07-26-19-17-15-utc/Thalugie.ttf") format("truetype");
+}
+
+@font-face 
+{ 
+     font-family: "Blurred Stroke";  
+     src: url("./fonts/blured-stroke-font/BluredStroke-OV6g6.otf") format("opentype");
+}
+
+@font-face 
+{ 
+     font-family: "Tigbrush";  
+     src: url("./fonts/tigbrush-natural-brush-font-2023-06-27-20-44-51-utc/TIGBRUSH.otf") format("opentype"),
+          url("./fonts/tigbrush-natural-brush-font-2023-06-27-20-44-51-utc/TIGBRUSH.ttf") format("truetype"),
+          url("./fonts/tigbrush-natural-brush-font-2023-06-27-20-44-51-utc/TIGBRUSH.woff") format("woff"),
+          url("./fonts/tigbrush-natural-brush-font-2023-06-27-20-44-51-utc/TIGBRUSH.woff2") format("woff2"),
+}
+
+.ff-ndugal-society {
+     font-family: "Ndugal Society";
+}
+.ff-thalugie {
+     font-family: "Thalugie";
+}
+.ff-blurred-stroke {
+     font-family: "Blurred Stroke";
+}
+.ff-tigbrush {
+     font-family: "Tigbrush";
+}
+
+/* set up the body */
+body {
+     font-family: "Times New Roman";
+     font-size: var(--fs-400);
+     background-color: hsl(var(--clr-dark));
+     /* color: hsl(var(--clr-white)); */
+     color: hsl(var(--clr-white));
+     line-height: 1.5;
+     min-height: 100vh;
+
+     display: grid;
+     /* stretch header and main-content to fit the min-height*/
+     grid-template-rows: min-content 1fr;
+
+     /* prevent side-scrolling for animations */
+     overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+     max-width: 100%;
+     /* display: block overrides default behavior of hidden attribute for picture element */
+     /* display: block; */
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+.container {
+     padding-inline: 2em; /* new property left/right */
+     margin-inline: auto; /* new property left/right */
+     max-width: 80rem;
+     background-color: hsl(var(--clr-light));
+     min-height: 100vh;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.card {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-width: 350px;
+     min-height: 400px;
+     border-radius: 10px;
+     background-color: lightgray;
+     border: 5px solid lightgray;
+     padding: 2rem;
+}
+
+.card:hover {
+     animation: animateBorderColor .25s ease-in-out forwards;
+}
+
+.sticker {
+     display: inline-grid;
+     grid-template-areas: "text-area";
+     place-items: center;
+     font-size: 9rem;
+     color: purple;
+     grid-area: text-area;
+}
+
+.sticker::before {
+     content: attr(data-text);
+     -webkit-text-stroke: 0.21em white;
+     grid-area: text-area;
+}
+
+.sticker::after {
+     content: attr(data-text);
+     /* text-shadow: 0.07em 0.08em 0.05em rgba(0, 0, 0, 0.75),
+      -0.07em -0.05em 0.05em rgba(0, 0, 0, 0.75); */
+    /* z-index: -2; */
+    grid-area: text-area;
+}
+
+.sticker span {
+     grid-area: text-area;
+}
+
+
+
+@keyframes animateBorderColor {
+     0% {border-color: red black black black;}
+     25% {border-color: red red black black;}
+     75% {border-color: red red red black;}
+     100% {border-color: red}
+}
+
+
+/* typography */
+
+
+/* override defaults for mobile using max-width */
+@media (max-width: 35rem) {
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}
