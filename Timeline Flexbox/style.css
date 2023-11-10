@@ -1,0 +1,266 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-dev--red: #B00707;
+    --clr-dev--black: #000000;
+    --clr-dev--white: #FFFFFF;
+    --clr-text: 211 41% 90%; /* hsl(211,41,90), #dbe5f0; off white */
+    --clr-background: 200 60% 1%; /* hsl(200,60,1), #010304; dark blue */
+    --clr-primary: 30 80% 54%; /* hsl(30,80,54), #e88a2c; light orange */
+    --clr-secondary: 210 42% 15%; /* hsl(210,42,15), #162636; blue-grey */
+    --clr-accent: 210 89% 49%; /* hsl(210,89,49), #0e7dec; light blue */
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 9.6vw - 0.41rem, 7.75rem);
+    --fs-700: clamp(1.5rem, 0.96rem + 2.4vw, 3rem);
+    --fs-500: clamp(1.25rem, 1.07rem + 0.8vw, 1.75rem);
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    
+    /* font-families */
+    --ff-body: "Lato", sans-serif;
+    --ff-header: "Montserrat", sans-serif;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+  text-wrap: balance;
+  font-family: var(--ff-header);
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+     display: flex;
+     gap: var(--gap, 1rem);
+     /* outline: 3px solid red; */
+}
+
+.grid {
+     display: grid;
+     gap: var(--gap, 1rem);
+}
+
+.container {
+     padding-inline: 2em; /* new property left/right */
+     margin-inline: auto; /* new property left/right */
+     max-width: 90%;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* colors */
+
+
+/* typography */
+
+
+/* --------------------- */
+/* Components            */
+/* --------------------- */
+
+.panels {
+     min-height: 100vh;
+     overflow: hidden;
+     display: flex;
+}
+
+.panel {
+     box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+     color: hsl(var(--clr-text));
+     text-align: center;
+     /* Safari transitionend event.propertyName === flex */
+     /* Chrome + FF transitionend event.propertyName === flex-grow */
+     transition:
+          font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+          flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+          background 0.2s;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     flex: 1;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+
+.panel1 { background-image:url(./images/alan-scales-1_WMZARl81c-unsplash.jpg); }
+.panel2 { background-image:url(./images/jon-tyson-WB9TRkyrlzk-unsplash.jpg); }
+.panel3 { background-image:url(./images/majid-gheidarlou-Bi9Gzg4MjjM-unsplash.jpg); }
+.panel4 { background-image:url(./images/rohro-clark-VMz-AFdjKFY-unsplash.jpg); }
+.panel5 { background-image:url(./images/tengyart-GyAETRiOOE4-unsplash.jpg); }
+.panel6 { background-image:url(./images/tengyart-MgjCAtcjpu8-unsplash.jpg); }
+
+.panel > * {
+     margin: 0;
+     padding-inline: .25rem;
+     width: 100%;
+     transition: transform 0.5s;
+     /* flex: 1 0 auto; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+
+.panel > *:first-child {
+     flex: 10%;
+     transform: translate3d(0, -100%, 0);
+     text-transform: uppercase;
+     font-weight: bold;
+     color: hsl(var(--clr-accent));
+}
+
+.panel span {
+     font-size: var(--fs-300);
+     text-transform: none;
+     font-weight: normal;
+     color: hsl(var(--clr-text));
+}
+
+.panel h1 {
+     flex: 10%;
+     text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+     font-size: var(--fs-500);
+}
+
+.panel > *:last-child {
+     flex: 80%;
+     transform: translate3d(0, 100%, 0);
+}
+
+.panel.open {
+     flex: 3;
+}
+
+.panel.open > h1 {
+     color: hsl(var(--clr-accent));
+     font-size: var(--fs-700);
+}
+
+.panel.open > * {
+     background-color: hsl(var(--clr-background) / 0.8);
+}
+
+.panel.open-active > *:first-child,
+.panel.open-active > *:last-child { 
+     transform: translate3d(0, 0 , 0); 
+}
+
+/* override defaults for mobile using max-width */
+@media (max-width: 90rem) {
+
+     .panels {
+          flex-direction: column;
+     }
+
+          
+     .panel > *:first-child {
+          transform: translate3d(-100%, 0, 0);
+     }
+     .panel > *:last-child {
+          transform: translate3d(100%, 0, 0);
+     }
+
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

@@ -1,0 +1,605 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+  /* colors */
+  --clr-dark: #0F1412;
+  --clr-light: #F6F6F4;
+  --clr-light-grey: #EAEAEA;
+  --clr-grey: #6A6A6A;
+  --clr-accent: #CCFA46;
+
+  /* font-sizes: Mobile */
+  --fs-900: clamp(1.75rem, 9.6vw - 0.41rem, 7.75rem);
+  --fs-700: clamp(1.5rem, 0.6667rem + 3.7037vw, 4rem);
+  --fs-500: 4rem;
+  --fs-400: 1rem;
+  --fs-300: .75rem;
+  
+  /* font-families */
+  --ff-body: 'Lato', sans-serif;
+  --ff-header: 'Playfair Display', serif;
+
+  /* custom properties */
+  --rDeg: -15deg;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  background-color: grey;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+  font-family: var(--ff-header);
+  text-wrap: balance;
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 1400px;
+  min-width: 360px;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--clr-light);
+  color: var(--clr-grey);
+  padding: 1rem 3rem;
+  margin-inline: auto;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+  outline: 1px solid red;
+}
+
+.outline-children > * {
+  outline: 1px solid blue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  text-transform: capitalize;
+  padding: .5rem 2rem;
+  background: var(--button-bg, yellow);
+  color: var(--button-color, purple);
+  border-radius: 100px;
+}
+
+.circle {
+  aspect-ratio: 1 / 1;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  background: var(--circle-bg, yellow);
+  color: var(--circle-color, purple);
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle-outline::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  z-index: -1;
+  background: none;
+  border: 1px solid var(--clr-dark);
+}
+
+.row {
+  align-items: start;
+  justify-content: space-between;
+}
+
+.col {
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+/* SECTION */
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--clr-dark);
+  letter-spacing: -2px;
+}
+
+.logo::first-letter {
+  font-size: 2.25rem;
+  color: var(--clr-accent);
+}
+
+ul {
+  display: flex;
+  gap: var(--gap, 1rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--clr-dark);  
+}
+
+li {
+  text-transform: uppercase;
+}
+
+header .button {
+  --button-bg: var(--clr-dark);
+  --button-color: var(--clr-light);
+}
+
+/* SECTION-GRID */
+
+.section-grid {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  isolation: isolate;
+}
+
+.panel {
+  border-radius: var(--border-radius, 15px);
+  background: var(--panel-bg, yellow);
+  color: var(--panel-color, purple);
+}
+
+.panel-1 {
+  grid-row: 1 / span 5;
+  grid-column: 1 / span 5;  
+  flex-direction: column;
+  z-index: -2;
+  --panel-bg: var(--clr-light);
+  --panel-color: var(--clr-dark);
+  --button-bg: var(--clr-dark);
+  --button-color: var(--clr-light);
+  --circle-bg: var(--clr-accent);
+  --circle-color: var(--clr-dark);
+}
+
+.panel-1 > h1 {
+  font-size: var(--fs-700);
+  font-weight: 700;
+  max-width: 10ch;
+  color: var(--clr-dark);
+}
+
+.panel-1 > h1 span {
+  color: var(--clr-accent);
+}
+
+.panel-1 > p {
+  max-width: 47ch;
+}
+
+.panel-1 .button {
+  max-width: fit-content;
+  position: relative;
+}
+
+.panel-1 .circle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(75%, -50%);
+}
+
+.panel-2 {
+  grid-row: 1 / span 2;
+  grid-column: 10 / -1;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 1rem 1rem 40%;
+  position: relative;
+  isolation: isolate;
+  z-index: -2;
+  --panel-bg: var(--clr-accent);
+  --panel-color: var(--clr-dark);
+  --circle-bg: var(--clr-dark);
+  --circle-color: var(--clr-light);
+}
+
+.panel-2 > .flex {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-2 > img {
+  position: absolute;
+  max-width: 225px;
+  bottom: -10%;
+  left: -5%
+}
+
+.panel-2 > img:nth-of-type(1) {
+  transform: translateX(-20%);
+}
+.panel-2 > img:nth-of-type(2) {
+  transform: translateX(-40%) rotateZ(-35deg);
+  z-index: -1;
+}
+
+.panel-2 .arrow {
+  transform: rotateZ(-20deg);
+}
+
+.panel-3 {
+  grid-row: 6 / span 3;
+  grid-column: 1 / span 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  --panel-bg: var(--clr-dark);
+  --panel-color: var(--clr-light);
+  --circle-bg: var(--clr-accent);
+  --circle-color: var(--clr-dark);
+}
+
+.panel-3 > .row {
+  --gap: 2rem;
+}
+
+.panel-3 h2 {
+  font-size: 2rem;
+}
+.panel-3 p {
+  color: var(--clr-grey);
+}
+
+.fa-qrcode {font-size: 105px;}
+
+.panel-3 .col {
+  --gap: .5rem;
+}
+
+.profile-pics {
+  display: flex;
+  isolation: isolate;
+}
+
+.profile-pics > img {
+  aspect-ratio: 1 / 1;
+  width: 40px;
+  border-radius: 50%;
+  background: var(--clr-light);
+  border: 1px solid var(--clr-dark);
+}
+
+.profile-pics > img:nth-of-type(1) {
+transform: translateX(50%);
+}
+.profile-pics > img:nth-of-type(2) {
+  z-index: -1;
+  
+}
+.profile-pics > img:nth-of-type(3) {
+  z-index: -2;
+  transform: translateX(-50%);  
+}
+
+.panel-4 {
+  grid-row: 5 / span 5;
+  grid-column: 7 / -1;
+  z-index: -2;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  padding: 3rem;
+  --panel-bg: var(--clr-light-grey);
+  --panel-color: var(--clr-dark);
+  --circle-bg: var(--clr-accent);
+  --circle-color: var(--clr-dark);
+}
+
+.panel-4 > .flex {
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  --gap: 0;
+  isolation: isolate;
+
+}
+
+.panel-4 span {
+  background: var(--clr-light-grey);
+  padding-inline: 1rem;
+}
+
+.panel-4 > p {
+  font-size: 2rem;
+  font-weight: 700;
+  max-width: 20ch;
+  text-align: right;
+}
+
+.panel-5 {
+  grid-row: 10 / -1;
+  grid-column: 1 / -1;
+  padding: 4rem;
+  --panel-bg: var(--clr-dark);
+  --panel-color: var(--clr-grey);
+  --border-radius: 50px;
+  --gap: 0rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.metric {
+  flex-direction: column;
+  justify-content: start;
+  align-items: space-between;
+  --gap: 1rem;
+}
+
+.metric > h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--clr-light);
+}
+
+.metric > p {
+  max-width: 25ch;
+}
+
+.image-wrapper {
+  grid-row: 1 / -1;
+  grid-column: 4 / span 6;
+  z-index: -1;
+  /* background: steelblue; */
+}
+
+.image-wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+/* override defaults for mobile using max-width */
+@media (max-width: 1440px) {
+
+  header ul {
+    display: none;
+  }
+
+  .panel-1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 6;  
+  }
+
+  .panel-2 {
+    grid-row: 1 / span 2;
+    grid-column: 8 / -1;
+  }
+
+  .panel-3 {
+    grid-row: 6 / span 3;
+    grid-column: 1 / span 6;
+  }
+  
+  .panel-4 {
+    grid-row: 5 / span 5;
+    grid-column: 7 / -1;
+  }
+
+  .panel-5 {
+    grid-row: 10 / -1;
+    grid-column: 1 / -1;
+  }
+  
+  .image-wrapper {
+    grid-row: 3 / -1;
+    grid-column: 4 / span 6;
+    /* background: steelblue; */
+  }
+    
+  .image-wrapper > img {
+    object-position: 0px 0px;
+  }
+
+}
+
+@media (max-width: 750px) {
+  .panel-1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    align-items: center;
+  }
+
+  .panel-2 {
+    grid-row: 5 / span 1;
+    grid-column: 1 / -1;
+    justify-content: start;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  .panel-2 > .flex {
+    justify-content: center;
+  }
+  
+  .panel-2 > img {
+    max-width: 225px;
+    bottom: -10%;
+    left: 50%;
+  }
+
+  .panel-2 > img:nth-of-type(1) {
+    transform: translateX(-30%);
+  }
+  .panel-2 > img:nth-of-type(2) {
+    transform: translateX(-50%) rotateZ(-35deg);
+  }
+    
+  .panel-3 {
+    grid-row: 2 / span 2;
+    grid-column: 1 / -1;
+  }
+
+
+  .panel-3 > .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .panel-3 .col {
+    align-items: center;
+  }
+
+  .panel-4 {
+    grid-row: 4 / span 3;
+    grid-column: 1 / -1;
+    justify-content: start;
+  }
+
+  .panel-5 {
+    grid-row: 8 / -1;
+    grid-column: 1 / -1;
+    align-self: start;
+  }
+
+  .metric {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .image-wrapper {
+    grid-row: 6 / span 2;
+    grid-column: 1 / -1;
+    /* background: steelblue; */
+  }
+    
+  .image-wrapper > img {
+    object-position: center top;
+    /* object-position: -140px -100px; */
+  }
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

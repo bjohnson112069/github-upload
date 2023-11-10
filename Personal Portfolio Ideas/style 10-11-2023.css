@@ -1,0 +1,319 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+  /* colors */
+  --clr-dark: #262626;
+  --clr-dark-alpha: #26262680;
+  --clr-light: #EEEFF3;
+  --clr-light-alpha: #EEEFF380;
+  --clr-grey: #E2E3E7;
+  --clr-blue: #1eb8b8;
+  --clr-orange: #ff5c25;
+
+  /* font-sizes: Mobile */
+  --fs-900: clamp(1.75rem, 9.6vw - 0.41rem, 7.75rem);
+  --fs-700: clamp(1.5rem, 0.96rem + 2.4vw, 3rem);
+  --fs-500: 4rem;
+  --fs-400: 1rem;
+  --fs-300: .75rem;
+  
+  /* font-families */
+  --ff-body: 'Anton', sans-serif;
+
+  /* custom properties */
+  --rDeg: -15deg;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  background-color: grey;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+  text-wrap: balance;
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 1400px;
+  min-width: 360px;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--clr-dark);
+  padding: 2rem;
+  margin-inline: auto;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr)); */
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+  outline: 1px solid red;
+}
+
+.outline-children > * {
+  outline: 1px solid blue;
+}
+
+/* colors */
+
+
+/* typography */
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+}
+
+.text-wrapper,
+.change-pixels,
+.change-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.text-wrapper {
+  overflow: hidden;
+}
+
+.change-pixels,
+.change-color {
+  height: 100%;
+  width: 10%;
+  position: relative;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.change-color.active {
+  background: var(--clr-dark);
+  mix-blend-mode: screen;
+}
+
+.change-pixels > h1,
+.change-color > h1,
+.letter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: move-right-to-left 6000ms linear infinite;
+}
+
+.change-pixels > h1,
+.change-color > h1,
+.letter-container > h1 {
+  color: transparent;
+  font-size: var(--fs-900);
+  font-weight: normal;
+  line-height: 1;
+  -webkit-text-stroke: 1px var(--clr-blue);
+  white-space: nowrap;
+}
+
+.space {
+  width: 2rem;
+}
+
+span.intersecting,
+h1.intersecting {
+  /* -webkit-text-stroke: 1px var(--clr-orange);
+  color: var(--clr-blue); */
+  color: var(--clr-orange);
+}
+
+
+@keyframes move-right-to-left {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+li {
+  color: transparent;
+  text-transform: uppercase;
+  font-size: var(--fs-900);
+  line-height: 1;
+  -webkit-text-stroke: 1px var(--clr-blue);
+  transition: color 500ms ease-in-out;
+}
+
+li:hover,
+li:focus {
+  color: var(--clr-orange);
+}
+
+ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--clr-light);
+  padding: 1rem 1rem 4rem 1rem;
+  box-shadow: 2px 2px 5px var(--clr-blue);
+  /* max-width: 350px; */
+  max-width: 75%;
+  transform: rotateZ(var(--rDeg));
+  display: none;
+}
+
+.card > img {
+  width: 100%;
+  height: 100%;
+  border: 1px inset var(--clr-dark);
+}
+
+.card.active {
+  display: block;
+}
+
+#section-2 {
+  background: var(--clr-light-alpha);
+  padding: 1rem;
+}
+
+#section-2 li {
+  -webkit-text-stroke: 1px var(--clr-dark);
+}
+
+.panel {
+  border-radius: 10px;
+  overflow: hidden
+}
+/* override defaults for mobile using max-width */
+@media (max-width: 90rem) {
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

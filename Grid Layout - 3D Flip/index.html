@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=family=Sofia+Sans+Extra+Condensed:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Grid Layout - 3D Flip</title>
+</head>
+<body>
+    <div class="container grid">
+        <header>
+            <nav class="flex">
+                <ul class="flex nav-list">
+                    <li><img class="logo" src="./images/circular-business-graphic-of-two-circles-with-percentages-parts-svgrepo-com.svg" alt="image of logo"></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">App</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <div class="action-container">
+                    <a href="#" class="btn">log in</a>
+                    <a href="#" class="btn">sign up</a>
+                </div>
+            </nav>        
+        </header>
+        <main class="grid">
+            <div class="flex panel panel-1">
+                <div class="flex text">
+                    <h1>more offers</h1>
+                    <h2>There is something else for you</h2>
+                </div>
+                <div class="flex shop">
+                    <div class="flex">
+                        <h1>shop</h1>
+                        <p>All products</p>
+                    </div>
+                    <div class="fa-solid fa-cart-shopping"></div>
+                </div>
+            </div>
+            <div class="flex panel panel-2">
+                <div class="flex">
+                    <h1>world of hearing technology</h1>
+                    <div class="fa-solid fa-up-right-from-square"></div>
+                </div>
+                <h2>View our blog</h2>
+            </div>
+            <div class="flex panel panel-3">
+                <div class="flex">
+                    <h1>discover our history</h1>
+                    <div class="fa-solid fa-up-right-from-square"></div>
+                </div>
+                <h2>About us</h2>
+            </div>
+            <div class="flex panel panel-4">
+                <div class="flex">
+                    <h1>have some questions?</h1>
+                    <div class="fa-solid fa-location-arrow"></div>
+                </div>
+                <h2>Contact us</h2>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

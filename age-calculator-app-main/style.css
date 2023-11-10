@@ -1,0 +1,303 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-purple: hsl(259, 100%, 65%);
+    --clr-light-red: hsl(0, 100%, 67%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-off-white: hsl(0, 0%, 94%);
+    --clr-light-grey: hsl(0, 0%, 86%);
+    --clr-smokey-grey: hsl(0, 1%, 44%);
+    --clr-off-black: hsl(0, 0%, 8%);
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 0.2134rem + 6.8293vw, 3.5rem);
+    --fs-800: 3rem;
+    --fs-500: clamp(1.5rem, 1.0610rem + 1.9512vw, 2rem);
+    --fs-400: 1rem;
+    --fs-300: .75rem;
+    
+    /* font-families */
+    --ff-body: 'Poppins', sans-serif;
+
+    /* custom properties */
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    max-width: 1440px;
+    min-width: 360px;
+    background-color: var(--clr-off-white);
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+    grid-template-rows: 1fr auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    background: var(--clr-light);
+    min-height: 10vh;
+    padding: 2rem;
+    margin-inline: auto;
+    width: min(95%, 770px);
+    background: var(--clr-white);
+    border-radius: 25px 25px 200px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.enter-date {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 1.5rem;
+    position: relative;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--clr-light-grey);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.input-group > label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--clr-smokey-grey);
+}
+
+input[type="text"] {
+    outline: none;
+    width: 10rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--clr-light-grey);
+    font-size: var(--fs-500);
+    font-weight: 700;
+    color: var(--clr-off-black);
+}
+
+input[type="text"]:focus {
+    border: 1px solid var(--clr-purple);
+    caret-color: var(--clr-purple); /* cursor */
+}
+
+input[type="submit"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(50%);
+    border: none;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    width: 100px;
+    border-radius: 50%;
+    background: var(--clr-purple);
+    background-image: url(./assets/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    /* filter: brightness(0) saturate(100%) invert(4%) sepia(0%) saturate(5514%) hue-rotate(254deg) brightness(100%) contrast(92%); */
+    background: var(--clr-off-black);
+    background-image: url(./assets/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.error-message {
+    display: none;
+}
+
+.error label {
+    color: var(--clr-light-red);
+}
+
+.error input[type="text"] {
+    border: 1px solid var(--clr-light-red);
+    /* color: var(--clr-smokey-grey); */
+}
+
+.error .error-message {
+    display: flex;
+    font-style: italic;
+    color: var(--clr-light-red);
+}
+
+.results {
+    font-size: var(--fs-900);
+    font-weight: 800;
+    font-style: italic;
+    color: var(--clr-off-black);
+}
+
+.results span {
+    /* font-size: var(--fs-900); */
+    color: var(--clr-purple);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* override defaults for mobile using max-width */
+@media (max-width: 45rem) {
+
+    .container {
+        padding: 1rem;
+    }
+
+    .enter-date {
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+        gap: 1rem;
+    }
+
+    input[type="text"] {
+        padding: 1rem;
+        width: 5.5rem;
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"] {
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    
+    .results {
+        padding-top: 3rem;
+    }
+
+}
+
+@media (min-width: 35em) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

@@ -1,123 +1,102 @@
-window.addEventListener("scroll", setScrollVar);
-window.addEventListener("resize", setScrollVar);
 
 const htmlElement = document.documentElement;
-let prevScrollValue = htmlElement.scrollTop;
-let scrollCounter = 0;
-let scrollMultiplier = 0;
-let initialScrollValue = 0;
-let scrollLeftValue = 25;
-let pageCounter = 1;
-let currentPageScrollValue = 0;
+const sections = document.querySelectorAll("section");
+const sliders = document.querySelectorAll(".slide-in")
 
-function setScrollVar(event) {
-     const currentScrollValue = htmlElement.scrollTop;
-     const scrollTopMax = htmlElement.scrollTopMax;
-     const clientHeight = htmlElement.clientHeight;
-     const documentHeight = htmlElement.scrollHeight;
-     // console.log(`Current Scroll Value: ${currentScrollValue}`);
-     // console.log(`Client Height: ${clientHeight}`);
+
+let previousY = 0;
+const scrollRangeMin = 0;
+const scrollRangeMax = 100;
+let scrollRange = scrollRangeMin;
+
+function debounce(func, wait = 20, immediate = true) {
+     var timeout;
+     return function() {
+       var context = this, args = arguments;
+       var later = function() {
+         timeout = null;
+         if (!immediate) func.apply(context, args);
+       };
+       var callNow = immediate && !timeout;
+       clearTimeout(timeout);
+       timeout = setTimeout(later, wait);
+       if (callNow) func.apply(context, args);
+     };
+};
+
+function setScrollVar(e) {
+     // console.log(e);
+     // console.log(`scrollX:${window.scrollX}, scrollY:${window.scrollY}, scrollMaxX:${window.scrollMaxX}, scrollMaxY:${window.scrollMaxY}`);
+     // console.log(`innerHeight:${window.innerHeight}, innerWidth:${window.innerWidth}`);
+     let currentY = window.scrollY;
+
+     sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.clientHeight;
+          const sliders = section.querySelectorAll(".slide-in"); 
+          let action = "";
+
+          if (currentY + 1 >= sectionTop && currentY +1 <= sectionBottom) {
+               sliders.forEach(slider => slider.classList.add("appear"));
+          } else {
+               sliders.forEach(slider => slider.classList.remove("appear"));
+          }
+
+          // const slideInAt = sectionTop + (section.clientHeight / 2);
+          const slideInAt = sectionTop + (section.clientHeight / 3);
+          // console.log(`currentY: ${currentY}, sectionTop:${sectionTop}, sectionBottom:${sectionBottom}, slideInAt:${slideInAt}`);
+          // if (currentY + 1 >= sectionTop && currentY +1 <= slideInAt) {
+          if (currentY >= sectionTop && currentY <= slideInAt) {
+                    const scrollPercentage = (currentY - sectionTop) / (slideInAt - sectionTop) * 100;
+               // console.log(scrollPercentage)
+               
+               sliders.forEach(slider => {
+                    if (slider.classList.contains("slide-right")) {
+                         slider.style.setProperty("transform",`translateX(${100 - scrollPercentage}%)`);
+                    } 
+                    if (slider.classList.contains("slide-left")) {
+                         slider.style.setProperty("transform",`translateX(${-100 + scrollPercentage}%)`);
+                    }
+               })
+
+          }
+     })
      
 
-     const percentOfScreenHeightScrolled = currentScrollValue / clientHeight * 100;
-     const percentOfDocumentScrolled = currentScrollValue / scrollTopMax * 100;
-     // calculate the scroll direction: +1 = down; -1 = up
-     const scrollDirection = (currentScrollValue - prevScrollValue) < 0 ? -1 : 1;
+     // scrollRange += distanceScrolled;
+     // scrollRange = Math.min(scrollRangeMax, scrollRange);
+     // scrollRange = Math.max(scrollRangeMin, scrollRange);
+     // console.log(`scrollRange: ${scrollRange}`);
+     // htmlElement.style.setProperty("--horiz-scroll", `${scrollRange}%`);
 
-     // console.log(`Percent of Screen Scrolled: ${percentOfScreenHeightScrolled}`);
-     // console.log(`Percent of Document Scrolled: ${percentOfDocumentScrolled}`);
-     // console.log(`Scroll Direction: ${scrollDirection}`);
+     previousY = currentY;
+
+}
+
+function handlIntersect(entries, observer) {
+     
+     entries.forEach(entry => {
+          // toggle class based on currnet value of visibility/intersection
+          entry.target.classList.toggle("appear", entry.isIntersecting);
+          const sliders = entry.target.querySelectorAll(".slide-in");
+          sliders.forEach(slider => slider.classList.toggle("appear", entry.isIntersecting));
+          
+          if(entry.isIntersecting) scrollRange = scrollRangeMin;
+     })
 
 
-     // console.log("scrollDirection:", scrollDirection);
+}
 
-     scrollCounter += scrollDirection;
-     // console.log(`scrollCounter: ${scrollCounter}`);
-
-     prevScrollValue = currentScrollValue;
-
-     // targetElement.dataset.scrollValue = scrollMultiplier;
-
-     scrollMultiplier += scrollDirection;
-     // console.log(scrollMultiplier);
-     // console.log(percentOfScreenHeightScrolled, percentOfDocumentScrolled);
-     // set the custom property on the root element
-
-     const scrollMin = 0;
-     const scrollMax = 25;
-     scrollLeftValue = Math.max(scrollMin, Math.min(scrollMax, scrollLeftValue + -1*scrollDirection));
-     // console.log("scrollLeftValue:", scrollLeftValue)
-     htmlElement.style.setProperty("--scroll", percentOfScreenHeightScrolled);
-     htmlElement.style.setProperty("--scrollValue", scrollDirection);
-     htmlElement.style.setProperty("--scrollDirection", scrollLeftValue);
-
-     moveElement(slideRight, scrollLeftValue, 0)
-
+const options = {
+     // root: htmlElement,
+     rootMargin: "0px 0px 0px 0px", // top, right, bottom, left
+     // threshold: 1
 };
+const observer = new IntersectionObserver(handlIntersect, options);
 
-function moveElement(element, distanceX, distanceY) {
-     element.style.transform = `translate(${distanceX}, ${distanceY})`;
-};
-
-const slideRight = document.querySelector('.slide-right');
-// moveElement(slideRight, "25%", "-50%");
-
-
-const sections = document.querySelectorAll("section");
-const faders = document.querySelectorAll('.fade-in');
-const sliders = document.querySelectorAll('.slide-in');
-
-const appearOptions = {
-     // it is the viewport
-     root: null, 
-     // 0 - 1 scale; 0=initial part of element; 1 = all of the element
-     threshold: 0, 
-     // similar to margin top/right/bottom/left
-     rootMargin: "0px 0px 0px 0px" 
-};
-
-const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-               entry.target.classList.toggle("appear", entry.isIntersecting);
-               // if visibile stop observing
-               if (entry.isIntersecting) observer.unobserve(entry.target);
-               scrollLeftValue = 25;
-               // console.log(entry.target)
-               // entry.target.dataset.scrollValue = 0;
-          });
-     }, appearOptions);
-
-faders.forEach(fader => {
-     observer.observe(fader);
-});
-
-sliders.forEach(slider => {
-     observer.observe(slider);
-});
-
-
-
-const sectionOptions = {
-     // it is the viewport
-     root: null, 
-     // 0 - 1 scale; 0=initial part of element; 1 = all of the element
-     threshold: 0, 
-     // similar to margin top/right/bottom/left
-     rootMargin: "0px 0px -1px 0px" 
-};
-
-const sectionObserver = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-               entry.target.classList.toggle("appear", entry.isIntersecting);
-               // if (entry.isIntersecting) sectionObserver.unobserve(entry.target);
-               // console.log("section observer", entry.target);
-               // console.log(entry.target.offsetHeight);
-          });
-     }, sectionOptions);
-
-sections.forEach(section => {
-     sectionObserver.observe(section);
-})
+// sections.forEach(section => observer.observe(section));
+window.addEventListener("scroll", debounce(setScrollVar));
+window.addEventListener("resize", setScrollVar);
 
 // on page load
-setScrollVar();
+// setScrollVar();

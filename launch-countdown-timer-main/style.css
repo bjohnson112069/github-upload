@@ -1,0 +1,341 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-grayish-blue: hsl(237, 18%, 59%);
+    --clr-soft-red: hsl(345, 95%, 68%);
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-dark-desaturated-blue: hsl(236, 21%, 26%);
+    --clr-very-dark-blue: hsl(235, 16%, 14%);
+    --clr-very-dark: hsl(234, 17%, 12%);
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 9.6vw - 0.41rem, 7.75rem);
+    --fs-700: clamp(1.5rem, 0.96rem + 2.4vw, 3rem);
+    --fs-600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
+    /* --fs-300: .875rem; */
+    --fs-300: clamp(0.75rem, 0.7060rem + 0.1878vw, 0.875rem);
+    
+    /* font-families */
+    --ff-body: 'Red Hat Text', sans-serif;
+
+    /* custom properties */
+    --max-width: 1440px;
+    --min-width: 375px;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-300);
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: grey;
+    color: var(--clr-grayish-blue);
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--clr-very-dark-blue);
+    background-image: url(./images/bg-stars.svg), url(./images/pattern-hills.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, auto;
+    background-position: center center, center bottom;
+
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.title {
+    color: var(--clr-White);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: var(--fs-500);
+    text-align: center;
+}
+
+.time-container {
+    display: flex;
+    /* gap: 2rem; */
+    gap: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+}
+
+.time-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.time-segment {
+    background: var(--clr-dark-desaturated-blue);
+    box-shadow: 0 10px 15px var(--clr-very-dark);
+    font-size: var(--fs-900);
+    color: var(--clr-soft-red);
+    /* width: 200px; */
+    width: clamp(4.6875rem, 1.9366rem + 11.7371vw, 12.5rem);
+    /* Do NOT specify explicit height */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    /* border-radius: 10px; */
+    border-radius: clamp(0.3125rem, 0.2025rem + 0.4695vw, 0.625rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.time-segment::before,
+.time-segment::after {
+    content: '';
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: clamp(0.3125rem, -0.0176rem + 1.4085vw, 1.25rem);
+    /* width: 20px; */
+    border-radius: 50%;
+    top: 50%;
+    background: var(--clr-very-dark);
+    z-index: 10;
+}
+
+.time-segment::before {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.time-segment::after {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.segment-display {
+    position: relative;
+    isolation: isolate;
+    height: 100%;
+    width: 100%;
+}
+
+.segment-display__top,
+.segment-display__bottom {
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    background: var(--clr-dark-desaturated-blue);
+}
+
+.segment-display__top {
+    line-height: 1.5;
+}
+
+.segment-display__bottom {
+    line-height: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.segment-overlay {
+    position: absolute;
+    inset: 0;
+    perspective: 400px;
+}
+
+.segment-overlay__top,
+.segment-overlay__bottom {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    background: var(--clr-dark-desaturated-blue);
+}
+
+.segment-overlay__top {
+    top: 0;
+    line-height: 1.5;
+    transform-origin: bottom;
+}
+
+.segment-overlay__bottom {
+    bottom: 0;
+    line-height: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    transform-origin: top;
+}
+
+.segment-overlay.flip .segment-overlay__top {
+    animation: flip-top 800ms linear;
+}
+
+.segment-overlay.flip .segment-overlay__bottom {
+    animation: flip-bottom 800ms linear;
+}
+
+@keyframes flip-top {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50%, 100% {
+        transform: rotateX(-90deg);
+    }
+}
+
+@keyframes flip-bottom {
+    0%, 50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+i {
+    font-size: var(--fs-600);
+}
+
+i:hover {
+    color: var(--clr-soft-red);
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* override defaults for mobile using max-width */
+@media (max-width: 90rem) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}
