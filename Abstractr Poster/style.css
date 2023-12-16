@@ -1,0 +1,239 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-orange: #BB6D40;
+    --clr-green: #929D46;
+    --clr-purple: #85688D;
+    --clr-black: #000000;
+
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(7rem, -1.8028rem + 37.5587vw, 32rem);
+    --fs-800: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+    --fs-700: 2.125rem;
+    --fs-600: 2rem;
+    --fs-550: 1.5rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    /* --fs-300: .875rem; */
+    --fs-300: clamp(0.75rem, 0.7060rem + 0.1878vw, 0.875rem);
+    
+    /* custom properties */
+    --max-width: 1440px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Fonts                 */
+/* --------------------- */
+
+@font-face 
+{ 
+     font-family: "Miracle Fairway";  
+     src: url("./fonts/miracle-fairway/Miracle-Fairway.otf") format("opentype");
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: Miracle Fairway;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    background: grey;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    height: 100vh;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+    background-color: var(--clr-purple);
+    color: var(--clr-black);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    justify-items: center;
+    overflow: hidden;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.hero-text {
+    font-size: var(--fs-900);
+    grid-column: 1 / -1;
+    grid-row: 4 / span 6;
+    z-index: 3;
+}
+
+.circle {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+
+}
+
+.cutout {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%, 15% 85%, 85% 85%, 85% 15%, 15% 15%, 15% 85%, 15% 100%, 0 100%);
+}
+
+.circle:nth-of-type(1) { 
+    background: var(--clr-orange);
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 9;
+    z-index: 2;
+}
+.circle:nth-of-type(2) { 
+    background: var(--clr-green);
+    grid-column: 5 / span 4;
+    grid-row: 6 / span 9;
+    transform: rotateZ(-15deg);
+    z-index: 4;
+}
+.circle:nth-of-type(3) { 
+    background: var(--clr-green);
+    grid-column: 2 / span 2;
+    grid-row: 12 / span 2;
+    transform: rotateZ(15deg);
+}
+.circle:nth-of-type(4) { 
+    background: var(--clr-orange);
+    grid-column: 4 / span 2;
+    grid-row: 14 / span 2;
+}
+
+.image-wrapper {
+    grid-column: 1 / -1;
+    grid-row: 10 / span 4;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* override defaults for mobile using max-width */
+@media (max-width: 90rem) {
+}
+
+@media (max-width: 865px) {
+    
+}
+
+@media (max-width: 776px) {
+    
+}
+
+@media (max-width: 470px) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

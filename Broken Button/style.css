@@ -1,0 +1,313 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-orange: #BB6D40;
+    --clr-green: #929D46;
+    --clr-purple: #85688D;
+    --clr-black: #000000;
+    --clr-white: #FFFFFF;
+
+    /* font */
+    --ff-body: 'Anton', sans-serif;
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(7rem, -1.8028rem + 37.5587vw, 32rem);
+    --fs-800: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+    --fs-700: 2.125rem;
+    --fs-600: 2rem;
+    --fs-550: 1.5rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    /* --fs-300: .875rem; */
+    --fs-300: clamp(0.75rem, 0.7060rem + 0.1878vw, 0.875rem);
+    
+    /* custom properties */
+    --max-width: 1440px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    background: var(--clr-black);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    height: 100vh;
+    width: min(100% - 2rem, var(--max-width));
+    margin-inline: auto;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    display: grid;
+    place-items: center;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.button-wrapper {
+    display: grid;
+    grid-area: "stack";
+}
+
+.button-wrapper > * {
+    grid-area: stack;
+    --d: 3px;
+}
+
+.btn {
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(180deg, blue, purple);
+    transition: transform 750ms ease-in-out;
+    border-radius: 5px;
+}
+
+.button-one {
+    clip-path: polygon(0% 0%, 5% 0%, 10% 10%, 7% 30%, 8% 50%, 0% 50%, 0% 0%);
+}
+
+.button-two {
+    clip-path: polygon(5% 0%, 50% 0%, 30% 10%, 25% 5%, 10% 10%, 5% 0%);
+}
+
+.button-three {
+    clip-path: polygon(50% 0%, 60% 10%, 50% 50%, 30% 10%, 50% 0%);
+}
+
+.button-four {
+    clip-path: polygon(50% 0%, 77% 0%, 80% 5%, 75% 12.5%, 60% 10%, 50% 0%);
+}
+
+.button-five {
+    clip-path: polygon(77% 0%, 100% 0%, 100% 60%, 85% 27%, 77% 45%, 80% 5%, 77% 0%);
+}
+
+.button-six {
+    clip-path: polygon(100% 70%, 84% 60%, 75% 70%, 76% 100%, 100% 100%, 100% 70%);
+}
+
+.button-seven {
+    clip-path: polygon(100% 60%, 85% 27%, 77% 45%, 80% 5%, 75% 12.5%, 60% 10%, 70% 49%, 75% 49%, 65% 65%, 70% 80%, 60% 85%, 55% 100%, 76% 100%, 75% 70%, 84% 60%, 100% 70%);
+}
+
+.button-eight {
+    clip-path: polygon(60% 10%, 50% 50%, 60% 85%, 70% 80%, 65% 65%, 75% 49%, 70% 49%, 60% 10%);
+}
+
+.button-nine {
+    clip-path: polygon(55% 100%, 60% 85%, 50% 50%, 27% 70%, 25% 100%, 55% 100%);
+}
+
+.button-ten {
+    clip-path: polygon(50% 50%, 30% 10%, 25% 5%, 10% 10%, 7% 30%, 8% 50%, 27% 70%, 50% 50%);
+}
+
+.button-eleven {
+    clip-path: polygon(0% 50%, 8% 50%, 27% 70%, 25% 100%, 0% 100%);
+}
+
+.button-wrapper:hover > * {
+    /* mask: url(./images/vecteezy_broken-glass-on-black-background-vector-illustration_.svg); */
+    /* mask: url(./images/pf-s98-td-0039.svg); */
+    /* mask-repeat: no-repeat; */
+    /* mask-position: 23% 67%; */
+    /* mask-size: 400%; */
+    /* mask-size: cover; */
+    /* mask-position: center center; */
+}
+
+.button-wrapper:hover > .button-one {
+    --x: calc(var(--d) * -1);
+    --y: calc(var(--d) * -1);
+}
+
+.button-wrapper:hover > .button-two {
+    --x: calc(var(--d) * 0);
+    --y: calc(var(--d) * -2);
+}
+
+.button-wrapper:hover > .button-three {
+    --x: calc(var(--d) * 0);
+    --y: calc(var(--d) * -1);
+}
+
+.button-wrapper:hover > .button-four {
+    --x: calc(var(--d) * 1);
+    --y: calc(var(--d) * -1);
+}
+
+.button-wrapper:hover > .button-five {
+    --x: calc(var(--d) * 2);
+    --y: calc(var(--d) * -2);
+}
+
+.button-wrapper:hover > .button-six {
+    --x: calc(var(--d) * 2);
+    --y: calc(var(--d) * 1);
+}
+
+.button-wrapper:hover > .button-seven {
+    --x: calc(var(--d) * 1);
+    --y: calc(var(--d) * 0);
+}
+
+.button-wrapper:hover > .button-eight {
+    --x: calc(var(--d) * 0);
+    --y: calc(var(--d) * 0);
+}
+
+.button-wrapper:hover > .button-nine {
+    --x: calc(var(--d) * 0);
+    --y: calc(var(--d) * 1);
+}
+
+.button-wrapper:hover > .button-ten {
+    --x: calc(var(--d) * 0);
+    --y: calc(var(--d) * 0);
+}
+
+.button-wrapper:hover > .button-eleven {
+    --x: calc(var(--d) * -1);
+    --y: calc(var(--d) * 1);
+}
+
+.button-wrapper:hover > .btn {
+    /* transform: translate(var(--x), var(--y)); */
+    animation: cracked 2s cubic-bezier(0.1, 2.7, 0.58, 1) forwards;
+}
+
+@keyframes cracked {
+    100% {
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+/* override defaults for mobile using max-width */
+@media (max-width: 90rem) {
+}
+
+@media (max-width: 865px) {
+    
+}
+
+@media (max-width: 776px) {
+    
+}
+
+@media (max-width: 470px) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

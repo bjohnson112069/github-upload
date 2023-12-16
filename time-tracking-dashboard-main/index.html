@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- CSS Style Sheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Javascript -->
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="user">
+      <div class="section__top">
+        <div class="profile__pic">
+          <img src="./images/image-jeremy.png" alt="picture of jeremy">
+        </div>
+        <div class="profile__header">
+          <p>Report for</p>
+          <span class="profile__name">Jeremy Robson</span>
+        </div>
+      </div>
+      <ul class="section__bottom">
+        <li><a href="#" data-value="daily">Daily</a></li>
+        <li><a href="#" data-value="weekly" class="active">Weekly</a></li>
+        <li><a href="#" data-value="monthly">Monthly</a></li>
+      </ul>
+    </div>
+
+    <div class="cards">
+      
+      <div class="card card__1">
+        <div class="card__background">
+          <div class="card__content" data-title="Work">
+            <div class="row row__1">
+              <p>Work</p>
+              <div class="ellipsis"></div>
+            </div>
+            <div class="row row__2">
+              <div class="current-value"><span>0</span>hrs</div>
+              <div class="previous-value">Last Week - <span>0</span>hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card__2">
+        <div class="card__background">
+          <div class="card__content" data-title="Play">
+            <div class="row row__1">
+              <p>Play</p>
+              <div class="ellipsis"></div>
+            </div>
+            <div class="row row__2">
+              <div class="current-value"><span>0</span>hrs</div>
+              <div class="previous-value">Last Week - <span>0</span>hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card__3">
+        <div class="card__background">
+          <div class="card__content" data-title="Study">
+            <div class="row row__1">
+              <p>Study</p>
+              <div class="ellipsis"></div>
+            </div>
+            <div class="row row__2">
+              <div class="current-value"><span>0</span>hrs</div>
+              <div class="previous-value">Last Week - <span>0</span>hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card__4">
+        <div class="card__background">
+          <div class="card__content" data-title="Exercise">
+            <div class="row row__1">
+              <p>Exercise</p>
+              <div class="ellipsis"></div>
+            </div>
+            <div class="row row__2">
+              <div class="current-value"><span>0</span>hrs</div>
+              <div class="previous-value">Last Week - <span>0</span>hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card__5">
+        <div class="card__background">
+          <div class="card__content" data-title="Social">
+            <div class="row row__1">
+              <p>Social</p>
+              <div class="ellipsis"></div>
+            </div>
+            <div class="row row__2">
+              <div class="current-value"><span>0</span>hrs</div>
+              <div class="previous-value">Last Week - <span>0</span>hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card__6">
+        <div class="card__background">
+          <div class="card__content" data-title="selfCare">
+            <div class="row row__1">
+              <p>Self Care</p>
+              <div class="ellipsis"></div>
+            </div>
+            <div class="row row__2">
+              <div class="current-value"><span>0</span>hrs</div>
+              <div class="previous-value">Last Week - <span>0</span>hrs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

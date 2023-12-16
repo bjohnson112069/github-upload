@@ -1,0 +1,377 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-blue: hsl(246, 80%, 60%);
+    --clr-light-orange: hsl(15, 100%, 70%); /* work */
+    --clr-soft-blue: hsl(195, 74%, 62%); /*  play */
+    --clr-light-red: hsl(348, 100%, 68%); /*  study */
+    --clr-lime-green: hsl(145, 58%, 55%); /*  exercise */
+    --clr-violet: hsl(264, 64%, 52%); /*  social */
+    --clr-soft-yellow: hsl(43, 84%, 65%); /*  self care */
+    --clr-very-dark-blue: hsl(226, 43%, 10%);
+    --clr-dark-blue: hsl(235, 46%, 20%);
+    --clr-desaturated-blue: hsl(235, 45%, 61%);
+    --clr-pale-blue: hsl(236, 100%, 87%);
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 1.1338rem + 2.6291vw, 3.5rem);
+    --fs-800: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+    --fs-600: 2rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    /* --fs-300: .875rem; */
+    --fs-300: clamp(0.75rem, 0.7060rem + 0.1878vw, 0.875rem);
+    
+    /* font-families */
+    --ff-body: 'Rubik', sans-serif;
+
+    /* custom properties */
+    --max-width: 1440px;
+    --min-width: 375px;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-300);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: #202020;
+    color: var(--clr-white);
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    padding-inline: 1rem;
+    background: var(--clr-very-dark-blue);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.user {
+    background: var(--clr-dark-blue);
+    border-radius: 10px;
+    /* grid-row: 1 / span 2; */
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex: 3%;
+}
+
+.section__top {
+    padding: 1.75rem 1.25rem;
+    background: var(--clr-blue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    flex: 66%;
+}
+
+.profile__pic {
+    /* max-width: 85px;
+    min-width: 60px; */
+    width: clamp(3.75rem, 3.1998rem + 2.3474vw, 5.3125rem);
+    border-radius: 50%;
+    border: 3px solid var(--clr-white);
+}
+
+.profile__pic > img {}
+
+.profile__header {
+    color: var(--clr-pale-blue);
+}
+
+.profile__header > p {
+    color: var(--clr-pale);
+}
+
+.profile__header span {
+    font-size: var(--fs-800);
+    color: var(--clr-white);
+}
+
+.profile__name {}
+
+.section__bottom {
+    list-style: none;
+    margin: 0;
+    padding: 1.75rem 1.25rem;
+    color: var(--clr-desaturated-blue);
+    flex: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.section__bottom > li {
+}
+
+.section__bottom > li > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section__bottom > li > a:hover,
+.section__bottom > li > a.active {
+    color: var(--clr-white);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    align-content: start;
+    gap: 2rem;
+    flex: 60%;
+}
+
+.card {
+}
+
+.card__background {
+    background: var(--card-bg, tan);
+    padding-top: 3rem;
+    border-radius: 10px;
+    background-image: var(--card-bg-image, url(./images/icon-ellipsis.svg));
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+}
+
+/* Work */
+.card__1 > .card__background {
+    --card-bg: var(--clr-light-orange);
+    --card-bg-image: url(./images/icon-work.svg);
+}
+
+/* PLay */
+.card__2 > .card__background {
+    --card-bg: var(--clr-soft-blue);
+    --card-bg-image: url(./images/icon-play.svg);
+}
+
+/* Studfy */
+.card__3 > .card__background {
+    --card-bg: var(--clr-light-red);
+    --card-bg-image: url(./images/icon-study.svg);
+}
+
+/* Exercise */
+.card__4 > .card__background {
+    --card-bg: var(--clr-lime-green);
+    --card-bg-image: url(./images/icon-exercise.svg);
+}
+
+/* Social */
+.card__5 > .card__background {
+    --card-bg: var(--clr-violet);
+    --card-bg-image: url(./images/icon-social.svg);
+}
+
+/* Self Care */
+.card__6 > .card__background {
+    --card-bg: var(--clr-soft-yellow);
+    --card-bg-image: url(./images/icon-self-care.svg);
+}
+
+.card__content {
+    padding: 1.75rem 1.25rem;
+    background: var(--clr-dark-blue);
+    border-radius: 10px;
+}
+
+.card__content:hover {
+    background: var(--clr-desaturated-blue);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row__1 {
+}
+
+.row__1 > p {
+    font-size: var(--fs-500);
+    font-weight: 500;
+}
+
+.ellipsis {
+    background-image: url(./images/icon-ellipsis.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 5px;
+    width: 21px;
+    cursor: pointer;
+}
+
+.ellipsis:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7472%) hue-rotate(312deg) brightness(100%) contrast(101%);
+}
+
+.row__2 {
+    flex-wrap: wrap;
+}
+
+.current-value {
+    font-size: var(--fs-900);
+    font-weight: 300;
+}
+
+.current-value > span {}
+
+.previous-value {
+    color: var(--clr-pale-blue);
+}
+
+.previous-value > span {}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* override defaults for mobile using max-width */
+@media (max-width: 90rem) {
+}
+
+@media (max-width: 750px) {
+    .user {
+        flex: 100%;
+    }
+
+    .section__top {
+        flex-direction: row;
+    }
+
+    .section__bottom {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

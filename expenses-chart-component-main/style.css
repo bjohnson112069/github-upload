@@ -1,0 +1,342 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    /* --clr-soft-red: hsl(10, 79%, 65%); */
+    --clr-soft-red: 10 79% 65%;
+    /* --clr-cyan: hsl(186, 34%, 60%); */
+    --clr-cyan: 186 34% 60%;
+    --clr-dark-brown: hsl(25, 47%, 15%);
+    --clr-medium-brown: hsl(28, 10%, 53%);
+    --clr-cream: hsl(27, 66%, 92%);
+    --clr-very-pale-orange: hsl(33, 100%, 98%);
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 1.1338rem + 2.6291vw, 3.5rem);
+    --fs-800: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+    /* --fs-700: 3.125rem; */
+    --fs-700: clamp(2rem, 1.6039rem + 1.6901vw, 3.125rem);
+    /* --fs-600: 2rem; */
+    --fs-600: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+    /* --fs-500: 1.125rem; */
+    --fs-500: clamp(1rem, 0.9560rem + 0.1878vw, 1.125rem);
+    --fs-400: 1rem;
+    /* --fs-300: .875rem; */
+    --fs-300: clamp(0.75rem, 0.7060rem + 0.1878vw, 0.875rem);
+    
+    /* font-families */
+    --ff-body: 'DM Sans', sans-serif;
+
+    /* custom properties */
+    --max-width: 1440px;
+    --min-width: 375px;
+    /* --padding-content: 2rem; */
+    --padding-content: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+    --border-radius: 15px;
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-500);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: #202020;
+    color: #FFFFFF;
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--clr-cream);
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;    
+}
+
+.content > * {
+    padding: var(--padding-content);
+    border-radius: var(--border-radius, 5px);
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsla(var(--clr-soft-red) / 1.0);
+    color: var(--clr-cream);
+    gap: 1rem;
+}
+
+.section-top > .col-one {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 1rem;    
+
+}
+
+.col > h1 {
+    font-size: var(--fs-500);
+    font-weight: 400;
+}
+
+.total-balance {
+    font-size: var(--fs-600);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.section-bottom {
+    background: var(--clr-very-pale-orange);
+    color: var(--clr-medium-brown);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* padding-block: 2.5rem; */
+}
+
+header {
+    font-size: var(--fs-600);
+    font-weight: 700; 
+    color: var(--clr-dark-brown);
+}
+
+.chart {
+    display: flex;
+    padding-top: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+    --chart-gap: clamp(0.75rem, 0.6620rem + 0.3756vw, 1rem);
+    gap: var(--chart-gap);
+}
+
+.bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    width: clamp(2rem, 1.5599rem + 1.8779vw, 3.25rem);
+    flex: 1;
+}
+
+.bar {
+    width: 100%;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: .5rem;
+}
+
+.bar-value {
+    --border-radius: 5px;
+    border-radius: var(--border-radius);
+    background: hsla(var(--clr-soft-red) / 1.0);
+    width: 100%;
+    position: relative;
+}
+
+.amount {
+    --border-radius: 5px;
+    border-radius: var(--border-radius);
+    background: var(--clr-dark-brown);
+    color: var(--clr-cream);
+    opacity: 0;
+    position: absolute;
+    width: calc(100% + (2 * var(--chart-gap)));
+    padding-block: .25rem;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - .5rem));
+}
+
+.bar-value:hover {
+    background: hsla(var(--clr-soft-red) / 0.7);
+}
+
+.bar-wrapper:hover .amount {
+    opacity: 1;
+}
+
+.max-amount .bar-value {
+    background: hsla(var(--clr-cyan) / 1.0);
+}
+
+.max-amount:hover .bar-value {
+    background: hsla(var(--clr-cyan) / 0.7);
+}
+
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid var(--clr-medium-brown);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+footer > .col-one,
+footer > .col-two {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .col-one {
+    gap: .5rem;
+}
+
+footer > .col-two {
+    align-items: end;
+}
+
+.monthly-balance {
+    font-size: var(--fs-700);
+    font-weight: 700;
+    color: var(--clr-dark-brown);
+    line-height: 1;
+}
+
+.monthly-interest {
+    font-weight: 700;
+    color: var(--clr-dark-brown);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* override defaults for mobile using max-width */
+@media (max-width: 450px) {
+
+}
+
+@media (max-width: 750px) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

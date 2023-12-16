@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- CSS Style Sheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
+  <!-- Javascript -->
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="section-top">
+        <div class="col col-one">
+          <h1>My balance</h1>
+          <p class="total-balance">$921.48</p>
+        </div>
+        <div class="col col-two">
+          <img src="./images/logo.svg" alt="">
+        </div>
+      </div>
+      <div class="section-bottom">
+        <header>Spending - Last 7 days</header>
+        <main class="chart">
+          <div class="bar-wrapper" data-value="mon">
+            <div class="bar">
+              <div class="bar-value">
+                <div class="amount"></div>
+              </div>
+            </div>
+            <div class="day"></div>
+          </div>
+          <div class="bar-wrapper" data-value="tue">
+            <div class="bar">
+              <div class="bar-value">
+                <div class="amount"></div>
+              </div>
+            </div>
+            <div class="day"></div>
+          </div>
+          <div class="bar-wrapper" data-value="wed">
+            <div class="bar">
+              <div class="bar-value">
+                <div class="amount"></div>
+              </div>
+            </div>
+            <div class="day"></div>
+          </div>
+          <div class="bar-wrapper" data-value="thu">
+            <div class="bar">
+              <div class="bar-value">
+                <div class="amount"></div>
+              </div>
+            </div>
+            <div class="day"></div>
+          </div>
+          <div class="bar-wrapper" data-value="fri">
+            <div class="bar">
+              <div class="bar-value">                
+                <div class="amount"></div>
+              </div>
+            </div>
+            <div class="day"></div>
+          </div>
+          <div class="bar-wrapper" data-value="sat">
+            <div class="bar">
+              <div class="bar-value">
+                <div class="amount"></div>
+              </div>
+            </div>
+            <div class="day"></div>
+          </div>
+          <div class="bar-wrapper" data-value="sun">
+            <div class="bar">
+              <div class="bar-value">                
+                <div class="amount"></div>
+              </div>
+            </div>
+            <div class="day"></div>
+          </div>
+        </main>
+        <footer>
+          <div class="col col-one">
+            <h1>Total this month</h1>
+            <p class="monthly-balance">$478.33</p>  
+          </div>
+          <div class="col col-two">
+            <p class="monthly-interest">+2.4%</p>
+            <h1>from last month</h1>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Brian Johnson</a>.
+  </div>
+</body>
+</html>
