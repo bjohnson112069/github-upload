@@ -1,0 +1,481 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    /* --hover-opacity: .15; */
+    --hover-opacity: .5;
+
+    /* -------- */
+    /* Theme #1 */
+    /* -------- */
+    --theme-1-main--bg: hsl(222, 26%, 31%);
+    --theme-1-toggle--bg: hsl(223, 31%, 20%);
+    --theme-1-keypad--bg: hsl(223, 31%, 20%);
+    --theme-1-screen--bg:  hsl(224, 36%, 15%);
+
+    --theme-1-key--input--bg: hsl(30, 25%, 89%);
+    --theme-1-key--input--shadow: hsl(28, 16%, 65%);
+    /* --theme-1-key--input--hover: hsla(30, 25%, 89%, var(--hover-opacity)); */
+    --theme-1-key--input--hover: hsl(0, 0%, 100%);
+    --theme-1-key--control--bg: hsl(225, 21%, 49%);
+    --theme-1-key--control--shadow: hsl(224, 28%, 35%);
+    /* --theme-1-key--control--hover: hsla(225, 21%, 49%, var(--hover-opacity)); */
+    --theme-1-key--control--hover: hsl(224, 51%, 76%);
+    --theme-1-key--action--bg: hsl(6, 63%, 50%);
+    --theme-1-key--action--shadow: hsl(6, 70%, 34%);
+    /* --theme-1-key--action--hover: hsla(6, 63%, 50%, var(--hover-opacity)); */
+    --theme-1-key--action--hover: hsl(6, 93%, 67%);
+
+    --theme-1-screen--text: hsl(0, 0%, 100%);
+    --theme-1-key--control--text: hsl(0, 0%, 100%);
+    --theme-1-key--action--text: hsl(0, 0%, 100%);
+    --theme-1-label--text: hsl(0, 0%, 100%);
+    --theme-1-key--input--text: hsl(221, 14%, 31%);
+
+    /* -------- */
+    /* Theme #2 */
+    /* -------- */
+    --theme-2-main--bg: hsl(0, 0%, 90%);
+    --theme-2-toggle--bg: hsl(0, 5%, 81%);
+    --theme-2-keypad--bg: hsl(0, 5%, 81%);
+    --theme-2-screen--bg:  hsl(0, 0%, 93%);
+
+    --theme-2-key--input--bg: hsl(45, 7%, 89%);
+    --theme-2-key--input--shadow: hsl(35, 11%, 61%);
+    /* --theme-2-key--input--hover: hsla(45, 7%, 89%, var(--hover-opacity)); */
+    --theme-2-key--input--hover: hsl(0, 0%, 100%);
+    --theme-2-key--control--bg: hsl(185, 42%, 37%);
+    --theme-2-key--control--shadow: hsl(185, 58%, 25%);
+    /* --theme-2-key--control--hover: hsla(185, 42%, 37%, var(--hover-opacity)); */
+    --theme-2-key--control--hover: hsl(185, 41%, 56%);
+    --theme-2-key--action--bg: hsl(25, 98%, 40%);
+    --theme-2-key--action--shadow: hsl(25, 99%, 27%);
+    /* --theme-2-key--action--hover: hsla(25, 98%, 40%, var(--hover-opacity)); */
+    --theme-2-key--action--hover: hsl(25, 100%, 61%);
+
+    --theme-2-screen--text: hsl(60, 10%, 19%);
+    --theme-2-key--control--text: hsl(0, 0%, 100%);
+    --theme-2-key--action--text: hsl(0, 0%, 100%);
+    --theme-2-label--text: hsl(60, 10%, 19%);
+    --theme-2-key--input--text: hsl(60, 10%, 19%);
+
+    /* -------- */
+    /* Theme #3 */
+    /* -------- */
+    --theme-3-main--bg: hsl(268, 75%, 9%);
+    --theme-3-toggle--bg: hsl(268, 71%, 12%);
+    --theme-3-keypad--bg: hsl(268, 71%, 12%);
+    --theme-3-screen--bg:  hsl(268, 71%, 12%);
+
+    --theme-3-key--input--bg: hsl(268, 47%, 21%);
+    --theme-3-key--input--shadow: hsl(290, 70%, 36%);
+    /* --theme-3-key--input--hover: hsla(268, 47%, 21%, var(--hover-opacity)); */
+    --theme-3-key--input--hover: hsl(267, 54%, 44%);
+    --theme-3-key--control--bg: hsl(281, 89%, 26%);
+    --theme-3-key--control--shadow: hsl(285, 91%, 52%);
+    /* --theme-3-key--control--hover: hsla(281, 89%, 26%, var(--hover-opacity)); */
+    --theme-3-key--control--hover: hsl(280, 56%, 44%);
+    --theme-3-key--action--bg: hsl(176, 100%, 44%);
+    --theme-3-key--action--shadow: hsl(177, 92%, 70%);
+    /* --theme-3-key--action--hover: hsla(176, 100%, 44%, var(--hover-opacity)); */
+    --theme-3-key--action--hover: hsl(177, 100%, 79%);
+
+    --theme-3-screen--text: hsl(52, 100%, 62%);
+    --theme-3-key--control--text: hsl(0, 0%, 100%);
+    --theme-3-key--action--text: hsl(198, 20%, 13%);
+    --theme-3-label--text: hsl(52, 100%, 62%);
+    --theme-3-key--input--text: hsl(52, 100%, 62%);
+    
+
+    /* -------- */
+    /* System  */
+    /* -------- */
+
+    --clr-main--bg: var(--theme-1-main--bg);
+    --clr-toggle--bg: var(--theme-1-toggle--bg);
+    --clr-keypad--bg: var(--theme-1-keypad--bg);
+    --clr-screen--bg: var(--theme-1-screen--bg);
+
+    --clr-key--input--bg: var(--theme-1-key--input--bg);
+    --clr-key--input--shadow: var(--theme-1-key--input--shadow);
+    --clr-key--input--hover: var(--theme-1-key--input--hover);
+    --clr-key--control--bg: var(--theme-1-key--control--bg);
+    --clr-key--control--shadow: var(--theme-1-key--control--shadow);
+    --clr-key--control--hover: var(--theme-1-key--control--hover);
+    --clr-key--action--bg: var(--theme-1-key--action--bg);
+    --clr-key--action--shadow: var(--theme-1-key--action--shadow);
+    --clr-key--action--hover: var(--theme-1-key--action--hover);
+
+    --clr-screen--text: var(--theme-1-screen--text);
+    --clr-key--control--text: var(--theme-1-key--control--text);
+    --clr-key--action--text: var(--theme-1-key--action--text);
+    --clr-label--text: var(--theme-1-label--text);
+    --clr-key--input--text: var(--theme-1-key--input--text);
+
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 1.1338rem + 2.6291vw, 3.5rem);
+    --fs-800: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+    --fs-700: 3rem;
+    --fs-600: 2.5rem;
+    /* --fs-500: 2rem; */
+    --fs-500: clamp(1.125rem, 0.8169rem + 1.3146vw, 2rem);
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    
+    /* font-families */
+    --ff-body: 'League Spartan', sans-serif;
+
+    /* custom properties */
+    --max-width: 1440px;
+    --min-width: 375px;
+    --border-radius: 10px;
+
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    /* line-height: 1.5; */
+    line-height: 1;
+    font-family: var(--ff-body);
+    font-size: var(--fs-500);
+    font-weight: 700;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    /* background-color: #202020; */
+    background-color: var(--clr-main--bg);
+    color: #FFFFFF;
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.calculator {
+    min-height: 100vh;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* -------------------- */
+/* Theme Selector       */
+/* -------------------- */
+#selector {
+    color: var(--clr-label--text);
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#selector > h1 {
+    font-size: 1em;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.theme {
+    font-size: .375em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.theme > label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: .5rem;
+}
+
+.slider {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 4.5rem; /* Specific width is required for Firefox. */
+    margin: 0;
+    padding: .125rem .25rem;
+    border-radius: 100px;
+    background: var(--clr-toggle--bg);
+    position: relative;
+}
+
+.theme::before {
+    content: "theme";
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+    font: inherit;
+    padding-bottom: 4px;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+  
+.slider:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+  
+.slider::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: var(--clr-key--action--bg);
+    cursor: pointer;
+}
+  
+/* All the same stuff for Firefox */
+.slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: var(--clr-key--action--bg);
+    cursor: pointer;
+}
+  
+/* All the same stuff for IE */
+.slider::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: var(--clr-key--action--bg);
+    cursor: pointer;
+}
+
+.slider:hover::-moz-range-thumb {
+    /* background: var(--clr-key--action--hover); */
+    filter: brightness(1.6);
+}
+
+
+/* -------------------- */
+/* Design Components    */
+/* -------------------- */
+
+.screen {
+    width: 100%;
+    height: 132px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: var(--clr-screen--bg);
+    color: var(--clr-screen--text);
+    border-radius: var(--border-radius);
+    padding-inline: 1em;
+}
+
+.keypad {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min(65px, 100%), 100px));
+    grid-template-rows: repeat(5, 65px);
+    gap: .75em;
+    background: var(--clr-keypad--bg);
+    border-radius: var(--border-radius);
+}
+
+.key {
+    --clr-key--bg: var(--clr-key--input--bg);
+    --clr-key--text: var(--clr-key--input--text);
+    --clr-key--shadow: var(--clr-key--input--shadow);
+    background: var(--clr-key--bg);
+    color: var(--clr-key--text);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 0 var(--clr-key--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    /* padding: .5em 1.25em; */
+}
+
+.key:hover{
+    --clr-key--hover: var(--clr-key--input--hover);
+    background: var(--clr-key--hover);
+}
+
+.control {
+    --clr-key--bg: var(--clr-key--control--bg);
+    --clr-key--shadow: var(--clr-key--control--shadow);
+    --clr-key--text: var(--clr-key--control--text);
+}
+
+.control:hover {
+    --clr-key--hover: var(--clr-key--control--hover);
+}
+
+.action {
+    --clr-key--bg: var(--clr-key--action--bg);
+    --clr-key--shadow: var(--clr-key--action--shadow);
+    --clr-key--text: var(--clr-key--action--text);
+}
+
+.action:hover {
+    --clr-key--hover: var(--clr-key--action--hover);
+}
+
+
+.reset,
+.total {
+    grid-column: span 2;
+}
+
+/* override defaults for mobile using max-width */
+@media (max-width: 1200px) {
+
+    
+}
+
+@media (max-width: 750px) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}

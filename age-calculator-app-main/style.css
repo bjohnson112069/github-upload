@@ -200,7 +200,7 @@ input[type="text"]:focus {
     caret-color: var(--clr-purple); /* cursor */
 }
 
-input[type="submit"] {
+button[type="submit"] {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -212,19 +212,26 @@ input[type="submit"] {
     width: 100px;
     border-radius: 50%;
     background: var(--clr-purple);
-    background-image: url(./assets/images/icon-arrow.svg);
+    /* background-image: url(./assets/images/icon-arrow.svg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; */
     cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-    /* filter: brightness(0) saturate(100%) invert(4%) sepia(0%) saturate(5514%) hue-rotate(254deg) brightness(100%) contrast(92%); */
+button[type="submit"]:hover {
     background: var(--clr-off-black);
-    background-image: url(./assets/images/icon-arrow.svg);
+    /* background-image: url(./assets/images/icon-arrow.svg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; */
+}
+
+button[type="submit"]:focus-visible {
+    background: var(--clr-purple);
+}
+
+.submit-arrow {
+    fill: none;
+    stroke: var(--clr-white);
 }
 
 .error-message {
