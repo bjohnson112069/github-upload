@@ -27,19 +27,21 @@
   </head>
   <body>
       <header>
-        <div class="container outline">
+        <div class="container">
           <form action="" class="search">
-            <input class="input" type="text" placeholder="Search for any IP address or domain">
-            <label class="title">IP Address Tracker
+            <label class="title" for="search">IP Address Tracker
+              <div class="input-wrapper">
+                <input class="input" id="search" type="text" placeholder="Search for any IP address or domain">
+                <button class="submit" type="submit" aria-label="Submit Form">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="11" height="14"><path fill="none" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+                </button>
+              </div>
             </label>
-            <button class="submit" type="submit" aria-label="Submit Form">
-              <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="11" height="14"><path fill="none" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
-            </button>
           </form>  
         </div>
       </header>
       <main>
-        <div class="container outline">
+        <div class="container">
           <div class="details">
             <div class="detail detail--one">
               <div class="detail-title">ip address</div>
