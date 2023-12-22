@@ -1,0 +1,300 @@
+/* --------------------- */
+/* Custom Properties     */
+/* --------------------- */
+
+:root {
+    /* colors */
+    --clr-very-dark-gray: hsl(0, 0%, 17%);
+    --clr-dark-gray: hsl(0, 0%, 59%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /* font-sizes: Mobile */
+    --fs-900: clamp(1.75rem, 1.1338rem + 2.6291vw, 3.5rem);
+    --fs-800: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+    --fs-700: 3rem;
+    --fs-600: 1.6rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .85rem;
+    
+    /* font-families */
+    --ff-body: 'Rubik', sans-serif;
+
+    /* custom properties */
+    --max-width: 1440px;
+    --min-width: 375px;
+    --image-height--desktop: 280px;
+    --image-height--mobile: 300px;
+    --border-radius: 10px;
+
+}
+
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: #202020;
+    color: #FFFFFF;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-inline: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4,
+h5, h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --------------------- */
+/* Utility Classes       */
+/* --------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* --------------------- */
+/* Header                */
+/* --------------------- */
+header {
+    --header-height: var(--image-height--desktop, 20vh);
+    width: 100%;
+    height: var(--header-height);
+    background-image: url(./images/pattern-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+    background: red;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input,
+.submit {
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+.input {
+    background: var(--clr-white);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.submit {
+    padding: .5rem;
+    background: var(--clr-very-dark-gray);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.submit > .arrow {
+    stroke: var(--clr-white);
+}
+
+
+/* --------------------- */
+/* Main                  */
+/* --------------------- */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+main > .container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    outline: 10px solid red;
+}
+
+.details {
+    width: 100%;
+    display: grid;
+    align-items: start;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 250px));
+    border-radius: var(--border-radius);
+    background: var(--clr-white);
+    /* padding: 2rem 2rem; */
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: var(--fs-400);
+    background: purple;
+}
+
+.detail-title {
+    font-size: var(--fs-300);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--clr-dark-gray);
+}
+
+.detail-content {
+    font-size: var(--fs-600);
+    font-weight: 500;
+    color: var(--clr-very-dark-gray);
+}
+
+
+/* --------------------- */
+/* Footer                */
+/* --------------------- */
+footer {
+    width: 100%;
+    z-index: 1;
+}
+
+#map {
+    height: 500px;
+}
+
+/* override defaults for mobile using max-width */
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 750px) {
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+}
+
+@media (min-width: 45em) {
+}
