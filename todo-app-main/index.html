@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+<body>
+  <div class="page--container">
+    <div class="content--container">
+      <div class="wrapper title">
+        <h1>todo</h1>
+        <button class="theme" data-dark-mode="true" aria-label="switch color theme"></button>
+      </div>
+      <form action="" class="wrapper">
+        <label class="circle" for="todo"></label>
+        <input type="text" id="todo" name="todo" class="input" placeholder="Create a new todo..." required>
+      </form>
+      <div class="list-container">
+        <ul class="list" role='list'>
+          <!-- content to be injected by javascript -->
+        </ul>
+        <div class="wrapper footer">
+          <div>
+            <span class="items-left">5</span>
+            <span> items left</span>
+          </div>
+          <div class="filter">
+            <button type="button"value="All">All</button>
+            <button type="button" value="Active">Active</button>
+            <button type="button" value="Completed">Completed</button>
+          </div>
+          <button type="button" class="clear" value="Clear">Clear Completed</button>  
+        </div>  
+      </div>
+      <span class="drag-n-drop">Drag and drop to reorder list</span>
+    </div>  
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Brian Johnson</a>.
+  </div>
+</body>
+</html>
