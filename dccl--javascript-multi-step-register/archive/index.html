@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <!-- CSS Style Sheet -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Javascript -->
+        <script src="script.js" defer></script>
+        <title>devChallenges.io: Multi-step Register Form</title>
+    </head>
+<body>
+    <div class="container">
+        <form class="steps" action="">
+            <div class="step active" data-value="1">
+                <fieldset class="step-content step-one">
+                    <legend class="step-title">Register</legend>
+                    <div class="input-wrapper">
+                        <label for="name">Name<span>*required</span></label>
+                        <input type="text" id="name" name="name" placeholder="enter your name"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="email">Email<span>*required</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com"/>
+                    </div>
+                </fieldset>
+                <button type="button" class="btn" data-value="1">Continue</button>
+            </div>
+            <div class="step step-two" data-value="2">
+                <fieldset class="step-content step-two">
+                    <legend class="step-title">Which topics are you interested in?</legend>
+                    <ul class="items" role="list">
+                        <li class="item">
+                            <input class="item-input" value="Software Development" type="checkbox" id="option-one" name="option-one">
+                            <label class="item-value" for="option-one" tabindex="0">Software Development</label>
+                        </li>
+                        <li class="item">
+                            <input class="item-input" value="User Experience" type="checkbox" id="option-two" name="option-two">
+                            <label class="item-value" for="option-two" tabindex="0">User Experience</label>
+                        </li>
+                        <li class="item">
+                            <input class="item-input" value="Graphic Design" type="checkbox" id="option-three" name="option-three">
+                            <label class="item-value" for="option-three" tabindex="0">Graphic Design</label>
+                        </li>    
+                    </ul>
+                </fieldset>
+                <button type="button" class="btn" data-value="2">Continue</button>
+            </div>
+            <div class="step step-three" data-value="3">
+                <h1 class="step-title">Summary</h1>
+                <div class="step-content step-three">
+                    <div class="registration-info">
+                        <p>Name: <span class="display-name"></span></p>
+                        <p>Email: <span class="display-email"></span></p>    
+                    </div>
+                    <ul class="topic-info">Topics:</ul>
+                </div>
+                <button type="submit" class="btn" data-value="3">Confirm</button>
+            </div>
+        </form>
+        <div class="tabs" title="Step 1 of 3">
+            <span class="tab active" data-value="1" aria-label="tab 1"></span>
+            <span class="tab" data-value="2" aria-label="tab 2"></span>
+            <span class="tab" data-value="3" aria-label="tab 3"></span>
+        </div>
+
+    </div>
+
+</body>
+</html>

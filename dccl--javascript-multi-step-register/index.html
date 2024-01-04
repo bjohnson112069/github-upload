@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <!-- CSS Style Sheet -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Javascript -->
+        <script src="script.js" defer></script>
+        <title>devChallenges.io: Multi-step Register Form</title>
+    </head>
+<body>
+    <div class="container">
+        <!-- Start: Step -->
+        <!-- End: Step -->
+        <div class="step">
+            <!-- Start: Form 1 -->
+            <form action="#" class="active" id="form-1" data-step="1">
+                <h1 class="title">Register</h1>
+                <div class="content">
+                    <label class="register-label" for="name">Name
+                        <input type="text" id="name" name="name" placeholder="enter your name" autofocus/>
+                        <span class="input-error">Invalid name entered</span>
+                    </label>
+                    <label class="register-label" for="email">Email
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com"/>
+                        <span class="input-error">Invalid email entered</span>
+                    </label>
+                </div>
+                <div class="btn-box">
+                    <button class="next" type="button" data-to-step="2">Continue</button>
+                </div>
+            </form>
+            <!-- End: Form 1 -->
+
+            <!-- Start: Form 2 -->
+            <form action="#" id="form-2" data-step="2">
+                <h1 class="title">Which topics you are interested in?</h1>
+                <div class="content">
+                    <ul class="topics" role="list">
+                        <li class="topic">
+                            <input class="" value="Software Development" type="checkbox" id="option-one" name="option-one">
+                            <label class="topic-label" for="option-one" tabindex="0" autofocus>Software Development</label>
+                        </li>
+                        <li class="topic">
+                            <input class="" value="User Experience" type="checkbox" id="option-two" name="option-two">
+                            <label class="topic-label" for="option-two" tabindex="0">User Experience</label>
+                        </li>
+                        <li class="topic">
+                            <input class="" value="Graphic Design" type="checkbox" id="option-three" name="option-three">
+                            <label class="topic-label" for="option-three" tabindex="0">Graphic Design</label>
+                        </li>    
+                    </ul>
+                </div>
+                <div class="btn-box">
+                    <button class="prev" type="button" data-to-step="1">Back</button>
+                    <button class="next" type="button" data-to-step="3">Continue</button>
+                </div>
+            </form>
+            <!-- End: Form 2 -->
+
+            <!-- Start: Form 3 -->
+            <form action="#" id="form-3" data-step="3">
+                <h1 class="title">Summary</h1>
+                <div class="content">
+                    <div class="user-box">
+                        <p>Name: <span class="user-name"></span></p>
+                        <p>Email: <span class="user-email"></span></p>    
+                    </div>
+                    <div class="topic-box">
+                        <span>Topics:</span>
+                        <!-- <li> elements to be injected by javascript -->
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button class="prev" type="button" data-to-step="2">Back</button>
+                    <button type="submit" name="confirm" autofocus>Confirm</button>
+                </div>
+            </form>
+            <!-- End: Form 3 -->
+        </div>
+        <!-- Start: Progress Bar -->
+        <div class="progress-bar" title="Step 1 of 3">
+            <span class="circle active" data-number="1"></span>
+            <span class="circle" data-number="2"></span>
+            <span class="circle" data-number="3"></span>
+        </div>
+        <!-- End: Progress Bar -->
+    </div>
+
+</body>
+</html>
