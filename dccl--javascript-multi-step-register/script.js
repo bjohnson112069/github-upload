@@ -80,7 +80,7 @@ function handleInputError(input, error) {
           // ensure parameters are passed in
           if (input === undefined || error === undefined) return;
 
-          // select the ".input-error" sibling
+          // select the <span> ".input-error" sibling
           const errorMsg = input.nextElementSibling;
 
           if (error) {
@@ -130,10 +130,7 @@ function handleButtonClick(e) {
           // we need a variable to store the state of the form validation
           let formValidated = false;
 
-          // select the <li> topics
-          const topics = document.querySelectorAll("input[type=checkbox]");
-
-          // validate form 1 input values when transition from step 1 to step 2
+          // validate form 1 input values when transitioning from step 1 to step 2
           if (currentStep === "1" && targetStep === 2) {
                     const name = document.querySelector("#name");
                     const email = document.querySelector("#email");
@@ -161,28 +158,37 @@ function handleButtonClick(e) {
                     user.email = email.value;
           } 
 
-          // all field validated or not further validation required
-          formValidated = true;
-
           
           // store the topics when transitioning from step 1 to step 2
           if (currentStep === "2" && targetStep === 3) {
-                    // initialize the topics array
-                    user.topics = [];
+                    // select *only* the :checked <input> topics form the current form
+                    const topics = this.form.querySelectorAll("input[type=checkbox]:checked");
+                    const errorMsg = this.form.querySelector(".input-error");
 
-                    // iterate through each topic, select the <input> and store the value in the array
-                    topics.forEach(topic => {
-                              topic.checked ? user.topics.push(topic.value) : "";
-                    })
+                    // clear any errors
+                    errorMsg.classList.remove("active");
 
-                    // Proceed with Summarizing the data on Step 3 
+                    // check the length of the nodelist and handle the error if no topic was selected
+                    if (topics.length === 0) {
+                              // throw an error message on the screen
+                              errorMsg.classList.add("active");
+                              return;
+                    } else {
+                              // (re)initialize the topics array
+                              user.topics = [];
+
+                              // iterate through each topic, select the <input> and store the value in the array
+                              topics.forEach(topic => user.topics.push(topic.value));
+                    }
+
+                    // All data validated.  Proceed with Summarizing the data on Step 3 
                     summarizeData();
-
           }
 
+          // all input values validated
+          formValidated = true;
 
-          // TODO: add form validation prior to moving to next step
-          // TODO: throw error if form validation fails
+          // If all data is validated move to the next step
           if (formValidated) {
                     moveToStep(targetStep);
           }
@@ -217,7 +223,7 @@ function handleSubmit(e) {
           const form = document.querySelector(`#form-${stepNum}`);
 
           // throw an alert to confirm form submission
-          alert("Form Submitted");
+          alert("✅ Success");
 
           // reset the form
           form.reset();

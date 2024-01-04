@@ -26,7 +26,7 @@
 
     /* custom properties */
     --max-width: 1280px;
-    --min-width: 640px;
+    --min-width: 470px;
     --border-radius: 15px;
 
 }
@@ -309,6 +309,10 @@ form button:disabled {
 /* --------------------- */
 #form-2 {
     left: 100%;
+}
+
+#form-2 > .content {
+    position: relative;
 }
 
 .topics {
