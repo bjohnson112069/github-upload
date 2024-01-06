@@ -1,0 +1,305 @@
+/* Add CSS here */
+:root {
+     --clr-very-dark-blue: #111841;
+     --clr-very-dark-desaturated-blue: #10163B;
+     --clr-dark-blue: #151D4F;
+     --clr-medium-blue: #1A225D;
+     --clr-off-white: #FCFEFE;
+     --clr-purple: #B968C6;
+     --clr-red: #EB427D;
+     --clr-orange: #EC6E00;
+     --clr-yellow: #FDD840;
+     --clr-green: #67F1AF;
+ 
+     --clr-main-bg: var(--clr-very-dark-blue);
+     --clr-header-bg: var(--clr-dark-blue);
+     --clr-content-bg: var(--clr-medium-blue);
+     --clr-text: var(--clr-off-white);
+     --clr-shadow: var(--clr-very-dark-desaturated-blue);
+     --clr-shadow: #0F153A;
+ 
+     --fs-500: 3rem;
+     --fs-400: 1rem;
+     --fs-350: .9rem;
+     --fs-300: .75rem;
+ 
+     --max-width: 1240px;
+     --min-width: 375px;
+     --border-radius: 10px;
+ }
+ 
+ /* --------------------- */
+ /* Reset                 */
+ /* --------------------- */
+ 
+ /* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+ /* Box sizing rules */
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }
+ 
+ /* Prevent font size inflation */
+ html {
+     -moz-text-size-adjust: none;
+     -webkit-text-size-adjust: none;
+     text-size-adjust: none;
+ }
+ 
+ /* Remove default margin in favour of better control in authored CSS */
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ p,
+ figure,
+ blockquote,
+ dl,
+ dd {
+     margin: 0;
+ }
+ 
+ /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ ul[role='list'],
+ ol[role='list'] {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ /* Set core body defaults */
+ body {
+     line-height: 1.5;
+     font-size: var(--fs-400);
+     font-weight: 400;
+     max-width: var(--max-width);
+     min-width: var(--min-width);
+     background-color: var(--clr-main-bg);
+     color: var(--clr-off-white);
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 0;
+     margin: auto;
+     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ }
+ 
+ /* Set shorter line heights on headings and interactive elements */
+ h1,
+ h2,
+ h3,
+ h4,
+ button,
+ input,
+ label {
+     line-height: 1.1;
+     
+ }
+ 
+ /* Balance text wrapping on headings */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     text-wrap: balance;
+     line-height: 1.1;
+ }
+ 
+ /* A elements that don't have a class get default styles */
+ a:not([class]) {
+     text-decoration-skip-ink: auto;
+     color: currentColor;
+ }
+ 
+ /* Make images easier to work with */
+ img,
+ picture {
+     max-width: 100%;
+     display: block;
+ }
+ 
+ .container {
+     max-width: 672px; /* 640px + 16px * 2 */
+     min-height: 480px;
+     width: 100%;
+     padding-inline: 1rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: auto;
+     box-shadow: 0 0 50px var(--clr-shadow);
+     border-radius: var(--border-radius);
+     overflow: hidden;
+ }
+ 
+ .outline {
+     outline: 1px solid red;
+ }
+ 
+ .outline-children > * {
+     outline: 1px solid blue;
+ }
+ 
+ /* --------------------- */
+ 
+ header {
+     width: 100%;
+     height: 72px;
+     background: var(--clr-header-bg);
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     font-size: var(--fs-350);
+     font-weight: 600;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ main {
+     flex: 1;
+     width: 100%;
+     background: var(--clr-content-bg);
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+ 
+ .panel {
+     height: 100%;
+     background: inherit;
+ }
+ 
+ /* ------- */
+ /* Panel 1 */
+ /* ------- */
+ 
+ .panel-one {
+     flex: 1 0 60%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .circle {
+     aspect-ratio: 1 / 1;
+     border-radius: 50%;
+ }
+ 
+ .circle--outer {
+     width: 250px;
+     position: relative;
+ }
+ 
+ .conical {
+     --point-1: calc(360deg * .41);
+     --point-1: 41deg;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     background: conic-gradient(var(--clr-purple) var(--point-1),
+                 var(--clr-red) var(--point-1) var(--point-2),
+                 var(--clr-orange) var(--point-2) var(--point-3),
+                 var(--clr-yellow) var(--point-3) var(--point-4),
+                 var(--clr-green) var(--point-4) var(--point-5));
+ 
+ }
+ 
+ .circle--inner {
+     width: 200px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background: var(--clr-content-bg);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     /* display: none; */
+ }
+ 
+ .circle--inner > h1 {
+     font-size: var(--fs-500);
+     font-weight: 600;
+ }
+ 
+ 
+ /* ------- */
+ /* Panel 2 */
+ /* ------- */
+ 
+ .panel-two {
+     flex: 1 0 40%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+ 
+ .panel-two>* {
+     /* flex: 1; */
+ }
+ 
+ .legend {
+         font-size: var(--fs-300);
+         font-weight: 600;
+         color: var(--clr-text);
+         background: inherit;
+         display: flex;
+         flex-direction: column;
+         gap: 2rem;
+ }
+ 
+ .legend > li {
+     background: inherit;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
+ 
+ .legend > li > span {
+     width: 40px;
+     height: 20px;
+     border-radius: 100px;
+     color: var(--clr-content-bg);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ 
+ }
+ .legend>li:nth-child(1) > span {
+     background: var(--clr-purple);
+ }
+ .legend>li:nth-child(2)>span {
+     background: var(--clr-red);
+ }
+ .legend>li:nth-child(3)>span {
+     background: var(--clr-orange);
+ }
+ .legend>li:nth-child(4)>span {
+     background: var(--clr-yellow);
+ }
+ .legend>li:nth-child(5)>span {
+     background: var(--clr-green);
+ }
+ 
+ @media (max-width: 448px) {
+     .panel-one {
+          padding-block: 1rem;
+     }
+     .legend {
+          gap: .5rem;
+          padding: 0;
+          align-items: center;
+    }
+    .legend > li {
+          width: 155px;
+          justify-content: start;
+    }
+ }

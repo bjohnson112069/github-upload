@@ -1,0 +1,296 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #202020;
+
+    --clr-black: #000000;
+    --clr-white: #ffffff;
+    --clr-white-opaque: #ffffff5c;
+    --clr-dark-blue: #111115;
+
+    --clr-grayish-yellow: #999076;
+    --clr-grayish-yellow-shade-1: #F0E2B9;
+    --clr-grayish-yellow-shade-2: #C7BB99;
+    --clr-grayish-yellow-shade-3: #756F5A;
+    --clr-grayish-yellow-shade-4: #4D483B;
+    
+    --clr-grayish-blue: #b0afc0;
+    --clr-grayish-blue-shade-1: #D9D8ED;
+    --clr-grayish-blue-shade-2: #8E8E9C;
+    --clr-grayish-blue-shade-3: #696873;
+    --clr-grayish-blue-shade-4: #44434A;
+
+    --clr-red:#96112c;
+    --clr-red-shade-1: #ED1A44;
+    --clr-red-shade-2: #C41639;
+    --clr-red-shade-3: #730D21;
+    --clr-red-shade-4: #4A0815;
+
+    --clr-text: var(--clr-white);
+    --clr-bg-calc: var(--clr-dark-blue);
+    --clr-bg-display: var(--clr-grayish-blue);
+
+    --fs-500: 3rem;
+    --fs-400: 2rem;
+    --fs-350: .9rem;
+    --fs-300: .75rem;
+
+    --max-width: 1240px;
+    --min-width: 525px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.5;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: var(--clr-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background: inherit;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--clr-bg-calc);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 
+        0 0  2px var(--clr-grayish-blue),
+        2px 2px 2px var(--clr-grayish-blue-shade-4),
+        2px 2px 7px var(--clr-grayish-blue-shade-3),
+        2px 2px 10px var(--clr-grayish-blue-shade-2);
+    border: 5px solid var(--clr-grayish-blue-shade-4);
+}
+
+.screen {
+    width: 100%;
+    height: 132px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding-inline: 1em;
+    border: 5px groove var(--clr-bg-display);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 15px;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    width: calc(100% - (2 * var(--btn-margin)));
+    height: calc(100% - (2 * var(--btn-margin)));
+    top: var(--btn-margin);
+    left: var(--btn-margin);
+    background: radial-gradient(circle at center, var(--clr-btn-grad-start, yellow), var(--clr-btn-grad-end, yellow));
+    box-shadow: 
+        -5px -5px 15px rgba(0, 0, 0, 0.1), 
+        10px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+    --btn-margin: 10px;
+    --button-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--button-radius, 50%);
+    background: radial-gradient(circle at center, var(--clr-btn-grad-start, yellow), var(--clr-btn-grad-end, yellow));
+    box-shadow: 
+        inset -8px 0 8px rgba(0, 0, 0, 0.15), 
+        inset 0 -8px 8px rgba(0, 0, 0, 0.25), 
+        0 0 0 2px rgba(0, 0, 0, 0.75), 
+        10px 20px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+    cursor: pointer;
+}
+
+.normal {
+    --clr-btn-grad-start: var(--clr-grayish-blue-shade-2);
+    --clr-btn-grad-end: var(--clr-grayish-blue);
+}
+.normal:before {
+    --clr-btn-grad-end: transparent;
+    --clr-btn-grad-start: transparent;
+}
+.normal:hover {
+    --clr-btn-grad-start: var(--clr-grayish-blue-shade-3);
+    --clr-btn-grad-end: var(--clr-grayish-blue-shade-1);
+}
+.normal:active::before {
+    --clr-btn-grad-start: transparent;
+    --clr-btn-grad-end: var(--clr-grayish-blue-shade-4);
+}
+
+.operator {
+    --clr-btn-grad-start: var(--clr-red-shade-2);
+    --clr-btn-grad-end: var(--clr-red);
+}
+.operator:before {
+    --clr-btn-grad-end: transparent;
+    --clr-btn-grad-start: transparent;
+}
+.operator:hover {
+    --clr-btn-grad-start: var(--clr-red-shade-3);
+    --clr-btn-grad-end: var(--clr-red-shade-2);
+}
+.operator:active::before {
+    --clr-btn-grad-start: transparent;
+    --clr-btn-grad-end: var(--clr-red-shade-4);
+}
+
+.control {
+    --clr-btn-grad-start: var(--clr-grayish-yellow-shade-2);
+    --clr-btn-grad-end: var(--clr-grayish-yellow);
+}
+.control:before {
+    --clr-btn-grad-end: transparent;
+    --clr-btn-grad-start: transparent;
+}
+.control:hover {
+    --clr-btn-grad-start: var(--clr-grayish-yellow-shade-3);
+    --clr-btn-grad-end: var(--clr-grayish-yellow-shade-2);
+}
+.control:active::before {
+    --clr-btn-grad-start: transparent;
+    --clr-btn-grad-end: var(--clr-grayish-yellow-shade-4);
+}
+
+.total {
+    --button-radius: 100px;
+    grid-column: span 2;
+}
+.total:hover {
+    --clr-btn-grad-start: var(--clr-grayish-yellow-shade-3);
+    --clr-btn-grad-end: var(--clr-grayish-yellow-shade-3);
+}
+
+.icon {
+    display: inline-block;
+    font-size: var(--fs-400);
+    color: var(--clr-text);
+    text-shadow: 2px 2px 2px var(--clr-black);
+    position: relative;
+}
+
+@media (max-width: 448px) {
+}
