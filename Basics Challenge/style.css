@@ -1,0 +1,570 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #252531;
+
+    --clr-text: rgb(233, 231, 236); /* #e9e7ec; */
+    --clr-background: rgb(38, 37, 40); /* #262528 */;
+    --clr-primary: rgb(143, 191, 255); /* #8fbfff; */
+    --clr-secondary: rgb(140, 34, 51); /* #8c2233; */
+    --clr-accent: rgb(239, 159, 46); /* #ef9f2e; */
+
+    --fs-1100: 4rem;
+    --fs-1000: 2.5rem;
+    --fs-900: 2rem;
+    --fs-800: 1.75rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --ff-body: 'Hind', sans-serif;
+    --ff-header: 'Montserrat', sans-serif;
+
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-background);
+    color: red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    font-family: var(--ff-header);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children > * {
+    outline: 1px solid blue;
+}
+
+/* -- Design System Layout--- */
+
+.design-system {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "nav content";
+    border-radius: var(--border-radius);
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: sticky; /* important: ancestoer cannot have overflow:hidden */
+    top: 0;
+    max-height: 100svh;
+    padding: 1rem 0 1rem 1rem;
+    background: var(--clr-secondary);
+    color: var(--clr-text);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+nav > h1 {
+    font-size: var(--fs-600);
+    padding: 1rem;
+}
+
+.nav-list {
+    display: grid;
+    gap: 1rem;
+    padding-block: 2rem;
+    font-size: var(--fs-500);
+}
+
+.nav-list > li {
+    padding: 1rem 2rem;
+}
+
+.nav-list > li.active {
+    background: var(--clr-primary);
+    color: var(--clr-background);
+    font-weight: 700;
+    border-radius: 100px 0 0 100px;
+    position: relative;
+}
+
+.nav-list > li.active:before,
+.nav-list > li.active:after {
+    --border-radius: 2rem;
+    content: "";
+    position: absolute;
+    right: 0;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    background: var(--clr-secondary);
+    
+}
+
+.nav-list > li.active:before {
+    top: calc(var(--border-radius) * -1);
+    border-radius: 0 0 100px 0;
+    box-shadow: 5px 5px 0 5px var(--clr-primary);
+}
+
+.nav-list > li.active:after {
+    bottom: calc(var(--border-radius) * -1);
+    border-radius: 0 100px 0 0;
+    box-shadow: 5px -5px 0 5px var(--clr-primary);
+}
+
+.nav-list > li > a {
+    text-decoration: none;
+}
+
+main {
+    grid-area: content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--clr-primary);
+    color: var(--clr-background);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+main > * {
+    padding: 2rem;
+}
+
+section {
+    color: inherit;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap, 1rem);
+
+}
+
+.title {
+    font-size: var(--fs-1100);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    color: var(--clr-secondary);
+    text-align: center;
+}
+
+#home {
+    align-items: center;
+    background: var(--clr-accent);
+    border-radius: var(--border-radius);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+
+#layout {
+    min-height: 90vh;
+}
+
+footer {
+    color: var(--clr-secondary);
+}
+
+/* -- Typography -- */
+.ff-montserrat {
+    font-family: var(--ff-header);
+}
+
+.ff-hind {
+    font-family: var(--ff-body);
+}
+
+.panel-fonts .card {
+    --card-bg-color: none;
+    --card-text-color: var(--clr-background);
+}
+
+.panel-font-weights .card {
+    --card-bg-color: none;
+    --card-text-color: var(--clr-background);
+
+}
+
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.fw-900 { font-weight: 900; }
+
+.panel-text-styles .card {
+    --card-bg-color: none;
+    --card-text-color: var(--clr-background);
+    --gap: 1rem;
+}
+
+.fs-1100 { 
+    font-size: var(--fs-1100); 
+    line-height: 1.1;
+}
+.fs-1000 { font-size: var(--fs-1000); }
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+
+h1 { font-size: var(--fs-1000);}
+h2 { font-size: var(--fs-900);}
+h3 { font-size: var(--fs-800);}
+h4 { font-size: var(--fs-700);}
+h5 { font-size: var(--fs-600);}
+h6 { font-size: var(--fs-500);}
+p, span { font-size: var(--fs-400);}
+
+
+/* -- Colors -- */
+.panel-colors .card { 
+    text-transform: uppercase;
+}
+.panel-colors .card:nth-of-type(2) {
+    --card-bg-color: var(--clr-text);
+    --card-text-color: var(--clr-background);
+}
+.panel-colors .card:nth-of-type(3) {
+    --card-bg-color: var(--clr-primary);
+    --card-text-color: var(--clr-background);
+    --card-border-color: var(--clr-text);
+}
+.panel-colors .card:nth-of-type(4) {
+    --card-bg-color: var(--clr-secondary);
+    --card-text-color: var(--clr-text);
+}
+.panel-colors .card:nth-of-type(5) {
+    --card-bg-color: var(--clr-accent);
+    --card-text-color: var(--clr-background);
+}
+
+
+/* -- Components -- */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap, 1rem);
+    padding: 1rem;
+    border-radius: var(--card-border-radius, var(--border-radius));
+    border: 2px solid var(--card-border-color);
+    background: var(--card-bg-color, var(--clr-background));
+    color: var(--card-text-color, var(--clr-text));
+
+}
+
+.panel-components .card {
+    --card-border-radius: 5px;
+    --card-bg-color: none;
+    --card-text-color: var(--clr-background);
+}
+
+.panel-components .card > .grid {
+    align-items: center;
+    justify-items: center;
+}
+
+/* --------------------- */
+
+.icon {
+    --icon-bg-color: none;
+    --icon-border-color: none;
+    --icon-border-radius: none;
+    --icon-shadow-color: none;
+    --icon-text-color: none;
+    outline: none;
+    text-decoration: none;
+    width: 75px;
+    height: 75px;
+    background: var(--icon-bg-color, red);
+    background-image: var(--icon-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid var(--icon-border-color, red);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, red);
+    color: var(--icon-text-color, inherit);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon:hover {
+    opacity: .8;
+}
+
+.icon-open {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/ab68614df92a1dd9e859b50e798c9ff107fa0214/Basics%20Challenge/bars-solid.svg);
+}
+
+.icon-close {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/ab68614df92a1dd9e859b50e798c9ff107fa0214/Basics%20Challenge/x-solid.svg);
+}
+
+.icon-record {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/ab68614df92a1dd9e859b50e798c9ff107fa0214/Basics%20Challenge/play-solid.svg);
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-background);
+}
+
+.icon-pause {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/ab68614df92a1dd9e859b50e798c9ff107fa0214/Basics%20Challenge/pause-solid.svg);
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-background);
+}
+
+.icon-zoom-in {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/ab68614df92a1dd9e859b50e798c9ff107fa0214/Basics%20Challenge/magnifying-glass-plus-solid.svg);
+    --icon-border-radius: 5px;
+    --icon-border-color: var(--clr-background);
+}
+
+.icon-zoom-out {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/ab68614df92a1dd9e859b50e798c9ff107fa0214/Basics%20Challenge/magnifying-glass-minus-solid.svg);
+    --icon-border-radius: 5px;
+    --icon-border-color: var(--clr-background);
+}
+
+/* --------------------- */
+
+.button {
+    width: auto;
+    height: auto;
+    padding: var(--btn-padding-block, .5em) var(--btn-padding-inline, 1em);
+    font-weight: 700;
+}
+
+.button-normal {
+    --icon-bg-color: var(--clr-accent);
+}
+
+.button-large {
+    --btn-padding-block: 1em;
+    --btn-padding-inline: 3.5rem;
+    --icon-bg-color: var(--clr-accent);
+}
+
+.button-rounded {
+    --btn-padding-block: 1em;
+    --btn-padding-inline: 3.5rem;
+    --icon-bg-color: var(--clr-accent);
+    --icon-border-radius: 100px;
+}
+
+.button-outline {
+    --icon-bg-color: none;
+    --icon-border-color: var(--clr-accent);
+    --icon-border-radius: 100px;
+}
+
+.button-shadow {
+    --btn-padding-block: 1em;
+    --btn-padding-inline: 3.5rem;
+    --icon-bg-color: var(--clr-accent);
+    --icon-shadow-color: rgb(0, 0, 0, 0.5);
+}
+
+/* --------------------- */
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.option {
+    position: relative;
+}
+
+.option > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.option > input:checked ~ label > .icon-check {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/ab68614df92a1dd9e859b50e798c9ff107fa0214/Basics%20Challenge/check-solid.svg);
+}
+
+.option > label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+}
+
+.icon-check {
+    width: 32px;
+    height: 32px;
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-background);
+}
+
+/* -- Layout -- */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns, 2), 1fr);
+    grid-template-rows: auto;
+    gap: var(--gap, 1rem);
+}
+
+.grid-col--6 {
+    --grid-columns: 6;
+}
+
+.panel-grids .card {
+    --card-bg-color: var(--clr-text);
+    --card-text-color: none;
+    --card-border-color: var(--clr-background);
+    --card-border-radius: 5px;
+}
+
+.grid-col--5 {
+    --grid-columns: 5;
+}
+
+.grid-col--4 {
+    --grid-columns: 4;
+}
+
+.grid-col--3 {
+    --grid-columns: 3;
+}
+
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 900px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 400px) {
+}

@@ -1,0 +1,374 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-light-orange: #EFB980;
+    --clr-dark-orange: #F67F06;
+    --clr-light-blue: #699BC3;
+    --clr-dark-blue: #0E5896;
+    
+    --clr-body-bg: #202020;
+    
+
+    /* Gradient Colors */
+    --clr-grad-1: #cabda9;
+    --clr-grad-2: #f8f4ed;
+
+
+    /* Shadow Color */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Lato', sans-serif;
+    --ff-header: 'Oswald', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 30px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-very-dark-blue);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--clr-dark-blue);
+    background: white;
+    background: radial-gradient( var(--clr-grad-1), var(--clr-grad-2));
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes entrance {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes exit {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+    }
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    min-width: 10px;
+    min-height: 10px;
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------- */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: clamp(1rem, 0.3497rem + 2.7746vw, 2.5rem) clamp(1rem, -0.5173rem + 6.4740vw, 4.5rem);
+    border-radius: var(--border-radius);
+    background: white;
+    box-shadow: 0px 15px 30px var(--clr-light-orange), -50px -50px 0 0 var(--clr-light-orange);
+    box-shadow: 0px 15px 30px var(--clr-light-blue), -50px -50px 0 0 var(--clr-light-blue);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > h2 {
+    font-family: var(--ff-body);
+    font-size: var(--fs-500);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.icon-elipses {
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-light-orange);
+    width: 32px;
+    height: 32px;
+    transition: background .3s ease-in-out;
+}
+
+.icon-elipses:hover {
+    background: var(--clr-dark-blue);
+    color: var(--clr-dark-orange);
+}
+
+.about-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Details%20Card/th-830863674.webp");
+    width: 340px;
+    height: 225px;
+    background-size: cover;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    color: var(--clr-dark-blue);
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: var(--fs-800);
+    font-weight: 700;
+}
+
+.title::after {
+    content: attr(title);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--clr-dark-orange);
+    line-height: 1;
+}
+
+.title:nth-of-type(1) {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -16px;
+    top: 0;
+    line-height: .5;
+}
+
+.title:nth-of-type(1)::after {
+    line-height: .5;
+    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+}
+
+.title:nth-of-type(2) {
+    top: 0;
+    transform: translate(2rem, 50%);
+}
+
+
+.title:nth-of-type(2)::after {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+
+.text-content {
+    max-width: 27ch;
+    font-size: var(--fs-500);
+}
+
+.grid-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%),1fr));
+    gap: 1rem;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric > h3 {
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+button {
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding-block: 1em;
+}
+
+.join {
+    border-color: var(--clr-dark-orange);
+}
+
+
+.post {
+    background: var(--clr-dark-orange);
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+
+.post:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: var(--clr-dark-blue);
+    transition: width 350ms ease-in-out;
+    z-index: -1;
+}
+
+.post:hover {
+    color: white;
+    border-color: var(--clr-dark-orange);
+}
+.post:hover:after {
+    width: 110%;
+}
+
+/* --------------------- */
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 500px) {
+    
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+} 
+
+@media (max-width: 375px) {
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Account UI</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-link" data-value="one">
+                    <span class="fa-regular fa-user"></span>
+                </li>
+                <li class="nav-link" data-value="two">
+                    <span class="fa-solid fa-tv"></span>
+                </li>
+                <li class="nav-link unread" data-value="three">
+                    <span class="fa-regular fa-bell"></span>
+                    <div class="notifications">2</div>
+                </li>
+                <li class="nav-link" data-value="four">
+                    <span class="fa-solid fa-gear"></span>
+                </li>
+                <li class="eyes">
+                    <span class="eye" aria-label="eye"></span>
+                    <span class="eye" aria-label="eye"></span>
+                </li>
+            </ul>
+        </nav>
+        <main class="panels">
+            <!-- Panel One -->
+            <section class="panel panel-one">
+                <div class="profile-image" aria-label="User Profile Image">
+                    <!-- background image -->
+                </div>
+                <div class="profile-box">
+                    <h1>Doctor Evil</h1>
+                    <p>Arch Nemesis</p>
+                </div>
+            </section>
+            <!-- Panel Two -->
+            <section class="panel panel-two">
+                <div class="title-box">
+                    <span class="fa-solid fa-lock"></span>
+                    <h1>App Permissions</h1>
+                </div>
+                <p><strong>1,000,000 apps</strong> have access to your data</p>
+                <p>Manage which apps have access to your data.  You can revoke permission whenever you want.
+                </p>
+                <button type="button">Change app permissions</button>
+            </section>
+            <!-- Panel three -->
+            <section class="panel panel-three">
+                <div class="filter-box">
+                    <div class="filter active" data-value="unread">Unread</div>
+                    <div class="filter" data-value="all">All</div>
+                </div>
+                <ul class="notifications-list" role="list">
+                    <li class="notification-item">
+                        <p class="notification-content">You have unread message from Austin Powers</p>
+                        <div class="notification-timestamp">22 minutes ago</div>
+                    </li>
+                    <li class="notification-item">
+                        <p class="notification-content">Big Brother is watching</p>
+                        <div class="notification-timestamp">365 days ago</div>
+                    </li>
+                </ul>
+            </section>
+            <!-- Panel Four -->
+            <section class="panel panel-four">
+                <h1>App Watcher</h1>
+                <label class="toggle-switch">
+                    <input class="toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </section>
+        </main>
+
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@300;400;500;600;700&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

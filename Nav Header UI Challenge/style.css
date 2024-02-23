@@ -1,0 +1,385 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #303030;
+
+    /* Text Colors */
+    --clr-white: rgb(255, 255, 255);
+    --clr-white-opaque: rgba(255, 255, 255, .8);
+
+    /* Gradient Colors */
+    --clr-purple-1: #B682FE;
+    --clr-purple-2: #D17ADC;
+    --clr-pink-1: #EB71B1;
+    --clr-pink-2: #FF6A93;
+
+    --fs-600: 2rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .5rem;
+    --font-family: 'Poppins', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--font-family);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: red;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+text-wrap: balance;
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+header {
+    color: var(--clr-white);
+    background: linear-gradient(90deg,
+        var(--clr-purple-1),
+        var(--clr-purple-2),
+        var(--clr-pink-1),
+        var(--clr-pink-2));
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--clr-white-opaque);
+    position: relative;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: var(--fs-600);
+    font-weight: 700;;
+}
+
+.day-counter {
+    margin-top: -1rem;
+
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-300);
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    border: 1px solid var(--clr-white-opaque);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.day-counter > span {
+    color: var(--clr-white);
+    font-size: var(--fs-500);
+    font-weight: 700;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-box.opened {
+    flex: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: start;
+    padding-block: 1rem;
+    border: 2px solid var(--clr-white-opaque)
+}
+
+.subscribe-form {
+    margin-top: -1rem;
+    font-size: var(--fs-300);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+}
+
+.nav-box.opened > .subscribe-form {
+    margin-top: initial;
+}
+
+
+.subscribe-form > h1 {
+    font-size: var(--fs-300);
+    font-weight: 400;
+}
+
+.subscribe-box {
+    width: 250px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    position: relative;
+}
+
+.subscribe-box > input {
+    width: 100%;
+    height: 100%;
+    padding: 1em 1em 1em 1em;
+    outline: none;
+    border: 1px solid var(--clr-white);
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: var(--clr-white);
+}
+
+.subscribe-box > label {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    text-transform: capitalize;
+    transform-origin: left center;
+    transition: all .25s;
+    color: var(--clr-white-opaque);
+}
+
+.subscribe-box > span {
+    position: absolute;
+    inset: 0;
+    padding: 1em;
+    border-radius: var(--border-radius);
+    transition: all .25s;
+    display: block;
+    background: green;
+    z-index: -1;
+    opacity: 0;
+}
+
+.subscribe-box > span.active {
+    z-index: 1;
+    opacity: 1;
+}
+
+.subscribe-box > input:focus ~ label {
+    top: 1em;
+    transform: translate(0, -10px) scale(0.8);
+}
+
+.subscribe-box > input:focus ~ .icon-submit {
+    opacity: 1;
+}
+
+.nav-list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-box.opened > .nav-list {
+    flex-direction: column;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-item:hover > .nav-link {
+    --link-border-color: var(--clr-white-opaque);
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    text-transform: capitalize;
+    text-align: center;
+    padding-block: .5em;
+    border-bottom: 2px solid var(--link-border-color, transparent);
+}
+
+.icon {
+    outline: none;
+    aspect-ratio: 1 / 1;
+    width: 35px;
+    background: var(--icon-bg-color, red);
+    background-image: var(--icon-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid var(--icon-border-color, red);
+    box-shadow: 0 3px 15px var(--icon-shadow-color, red);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-menu,
+.icon-submit {
+    --icon-bg-color: transparent;
+    --icon-border-color: none;
+    --icon-shadow-color: none;
+}
+
+.icon-menu {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/bars-solid.svg?raw=true);
+    display: none;
+}
+
+.icon-menu[data-opened="true"] {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/x-solid.svg?raw=true);
+}
+
+.icon-submit {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main//bell-regular.svg?raw=true);
+    opacity: 0;
+}
+
+/* --------------------- */
+
+/* --------------------- */
+
+/* --------------------- */
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+    .icon-menu {
+        display: block;
+    }
+
+
+    .nav-box {
+        display: none;
+    } 
+    
+}
+
+@media (max-width: 900px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 400px) {
+
+    .day-counter {
+        display: none;}
+}

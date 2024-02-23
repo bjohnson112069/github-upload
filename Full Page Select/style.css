@@ -1,0 +1,458 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #303030;
+
+    --clr-off-white: #FDFDFD;
+    --clr-blue: #7E99FD;
+    --clr-medium-red: #FF807E;
+    --clr-orange-red: #FE9479;
+    --clr-medium-orange-red: #FD8C87;
+    --clr-light-red: #FF8499;
+    --clr-very-dark-blue: #1F2D4A;
+    --clr-light-grey: #F2F2F2;
+
+    --fs-900: 15rem;
+    --fs-700: 2.65rem;
+    --fs-600: 2rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+    --fs-350: .875rem;
+    --fs-300: .75rem;
+
+    --max-width: 1240px;
+    --min-width: 450px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.5;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+text-wrap: balance;
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: var(--clr-very-dark-blue);
+    max-width: 1150px;
+    width: 100%;
+    padding-inline: 1rem;
+}
+ 
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    padding-block: 1rem;
+}
+
+/* --------------------- */
+
+header {
+    background: var(--clr-off-white);
+}
+
+.top-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    display: grid;
+    grid-template-areas: "stack";
+    align-items: center;
+}
+
+.text-box > * {
+    grid-area: stack;
+}
+
+.text-box > span {
+    font-size: var(--fs-900);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--clr-light-grey);
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content-box > h1 {
+    font-size: var(--fs-700);
+    font-weight: 600;
+}
+
+.content-box > p {
+    font-size: var(--fs-500);
+    max-width: 33ch;
+}
+
+/* --------------------- */
+
+main {
+    background: linear-gradient(180deg, white 50%, var(--clr-medium-orange-red) 50%, var(--clr-orange-red) 100%);
+    padding-block: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.card {
+    width: 350px;
+    height: 360px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    perspective: 2500px;
+}
+
+.image-front {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: white;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--clr-light-grey);
+    padding-top: 3rem;
+    overflow: hidden;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.image-front::before,
+.image-front::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+/* Gradient for top of wrapper image */
+.image-front::before {
+ top: 0;
+ height: 100%;
+ background-image: linear-gradient(
+   to top,
+   transparent 46%,
+   rgba(12, 13, 19, 0.5) 68%,
+   rgba(12, 13, 19) 97%
+ );
+}
+
+/* Gradient for bottom of wrapper image */
+.image-front::after {
+ bottom: 0;
+ background-image: linear-gradient(
+   to bottom,
+   transparent 46%,
+   rgba(12, 13, 19, 0.5) 68%,
+   rgba(12, 13, 19) 97%
+ );
+}
+
+.card:hover .image-front {
+    transform: perspective(900px) translateY(-5%) rotateX(35deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    opacity: 0.5;
+}
+
+.card:hover .image-front::before,
+.card:hover .image-front::after {
+ opacity: 1;
+}
+
+.card:hover .image-front::after {
+ height: 120px;
+}
+
+.image-front > img {
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.selection-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.card:hover .selection-box {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.selection-box h1 {
+    font-size: var(--fs-600);
+    font-weight: 600;
+    text-shadow: 1px 1px 1px grey;
+}
+
+.btn {
+    --button-radius: 5px;
+    outline: none;
+    margin: none;
+    text-decoration: none;
+    background: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding: .5em 3.25em;
+    border-radius: var(--button-radius, border-radius);
+    font-size: var(--fs-500);
+    font-weight: 700;
+}
+
+.selection-box .select {
+    background: white;
+    text-align: center;
+    color: grey;
+    border: 2px solid grey;
+}
+
+.card:hover .select {
+    background: var(--clr-blue);
+    border-color: var(--clr-blue);
+    color: white;
+}
+
+.image-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.75s;
+    z-index: -1;
+    opacity: 0;
+}
+
+.image-back > img {
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+  
+.card:hover .image-back {
+    opacity: 1;
+    transform: 
+        translate3d(0%, -45%, 100px);
+}
+
+
+/* --------------------- */
+
+footer {
+    background: linear-gradient(180deg, var(--clr-orange-red), var(--clr-light-red));
+}
+
+
+.button-box {
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    color: var(--clr-light-grey);
+}
+
+.continue,
+.icon-box {
+    border: 1px solid var(--clr-light-grey);
+}
+
+.continue {
+    padding: 1em 2.25em;
+    border-radius: var(--button-radius) 0 0 var(--button-radius);
+}
+
+.continue:hover {
+    background: var(--clr-blue);
+    border-color: var(--clr-blue);
+    color: white;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-arrow-right {
+    padding-inline: 1.25em;
+    border-radius: 0 var(--button-radius) var(--button-radius) 0;
+    border-left: none;
+}
+
+.icon-arrow-right > svg {
+    fill: var(--clr-light-grey);
+}
+
+.icon-plus {
+    background: white;
+    border-color: grey;
+    padding: 1.25em;
+}
+
+.icon-plus:hover {
+    background: var(--clr-blue);
+    border-color: var(--clr-blue);
+    color: white;
+}
+
+.icon-plus > svg {
+    fill: var(--clr-medium-red);
+}
+
+@media (max-width: 1050px) {
+}
+
+@media (max-width: 900px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 575px) {
+    .top-row {
+        justify-content: center;
+    }
+    .button-box {
+        align-self: center;
+    }
+}
+ 

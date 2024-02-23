@@ -1,0 +1,410 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #202020;
+
+    /* Background Colors */
+    --clr-text: white;
+    --clr-text-background: 0 0 0;
+    --clr-background: #fdf1f1;
+    --clr-shadow-purple: #E5E4F9;
+    --clr-shadow-red: #E9D9F1;
+
+    /* Gradient Colors */
+    --clr-yellow-1: #ffd400;
+    --clr-yellow-2: #ffbc00;
+
+    --clr-purple-1: #8D62F0;
+    --clr-purple-2: #7350C3;
+    --clr-purple-3: #5D419E;
+    --clr-purple-4: #453075;
+    --clr-purple-5: #2D1F4D;
+
+    --clr-red-1: #F255A9;
+    --clr-red-2: #C44589;
+    --clr-red-3: #A13870;
+    --clr-red-4: #782A53;
+    --clr-red-5: #4F1C37;
+
+    --fs-900: 9.5rem;
+    --fs-800: 6rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --ff-body: 'Montserrat', sans-serif;
+    --ff-header: 'Bebas Neue', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 700;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px rgb(var(--clr-text-background) / 0.6);
+
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--clr-background);
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    --icon-bg-color: none;
+    --icon-border-color: none;
+    --icon-border-radius: none;
+    --icon-shadow-color: none;
+    --icon-text-color: none;
+    outline: none;
+    width: 36px;
+    height: 36px;
+    background: var(--icon-bg-color, red);
+    background-image: var(--icon-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid var(--icon-border-color, red);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, red);
+    color: var(--icon-text-color, inherit);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-cart {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/fee0722267553d64fdd0822d264982cb76fad798/Simple%20Pricing%202/plus-solid.svg);
+}
+
+
+/* --------------------- */
+
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 375px);
+    justify-content: center;
+    justify-items: center;
+    gap: clamp(2rem, 0.6994rem + 5.5491vw, 5rem);
+}
+
+/* --------------------- */
+
+
+
+
+.card {
+    --pseudo-width: 400px;
+    --pseudo-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    color: var(--clr-text);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: linear-gradient(90deg,
+        var(--clr-card-grad-1),
+        var(--clr-card-grad-2),
+        var(--clr-card-grad-3),
+        var(--clr-card-grad-4),
+        var(--clr-card-grad-5)
+    );
+    box-shadow: 0 0 10px 10px var(--clr-card-shadow);
+    position: relative;
+}
+
+#starter {
+    --clr-card-grad-1: var(--clr-purple-1);
+    --clr-card-grad-2: var(--clr-purple-2);
+    --clr-card-grad-3: var(--clr-purple-3);
+    --clr-card-grad-4: var(--clr-purple-4);
+    --clr-card-grad-5: var(--clr-purple-5);
+    --clr-card-shadow: var(--clr-shadow-purple);
+}
+
+#professional {
+    --clr-card-grad-1: var(--clr-red-1);
+    --clr-card-grad-2: var(--clr-red-2);
+    --clr-card-grad-3: var(--clr-red-3);
+    --clr-card-grad-4: var(--clr-red-4);
+    --clr-card-grad-5: var(--clr-red-5);
+    --clr-card-shadow: var(--clr-shadow-red);
+}
+
+.hot:after {
+    content: "HOT";
+    position: absolute;
+    top: 40px;
+    right: -35px;
+    width: 150px;
+    text-align: center;
+    background: linear-gradient(90deg, var(--clr-yellow-1), var(--clr-yellow-2));
+    color: black;
+    transform: translate(0%, -50%) rotateZ(45deg);
+    font-family: var(--ff-header);
+    font-size: inherit;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    text-shadow: none;
+}
+
+header {
+    width: 100%;
+}
+
+.type {
+    font-size: var(--fs-400);
+    letter-spacing: 2px;
+    padding-block: 1.25rem;
+    text-align: center;
+}
+
+main,
+footer {
+    --padding: 1.5rem;
+    padding: var(--padding);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price {
+    font-size: var(--fs-800);
+    position: relative;
+    z-index: 2;
+}
+
+.price:before {
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-text);
+    opacity: 0.1;
+    font-size: var(--fs-900);
+    z-index: -1;
+}
+
+.price > span {
+    font-size: var(--fs-600);
+}
+
+.plan {
+    --line-spacing: 1rem;
+    font-size: var(--fs-600);
+    position: relative;
+}
+
+.plan:before,
+.plan:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 2px;
+    background: var(--clr-text, white);
+}
+
+.plan:before {
+    left: 0;
+    transform: translate(calc((100% + var(--line-spacing)) * -1), -50%)
+}
+
+.plan:after {
+    right: 0;
+    transform: translate(calc((100% + var(--line-spacing))), -50%)    
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-transform: capitalize;
+}
+
+.details > li {
+}
+
+footer {
+    border: 2px solid transparent;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    width: 100%;
+    transition: transform 1s cubic-bezier( 0.455, 0.03, 0.515, 0.955 );
+    transform: translateX(calc(100% - ((2 * var(--padding)) + 2rem)));
+}
+
+footer:hover {
+    transform: translateX(0);
+    border-color: var(--clr-text);
+}
+
+.submit {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    text-transform: uppercase;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit > span {
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 1px rgb(var(--clr-text-background) / 0.6);
+
+}
+
+/* --------------------- */
+
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 400px) {
+}

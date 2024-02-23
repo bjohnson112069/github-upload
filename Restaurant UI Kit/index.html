@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Restaurant UI Kit</title>
+</head>
+<body>
+    <div class="content-container">
+        <div class="restaurants">
+            <header>
+                <span class="fa-solid fa-bars-staggered"></span>
+                <h1>Restaurants</h1>
+                <span class="fa-solid fa-magnifying-glass"></span>
+            </header>
+            <main>
+                <div class="restaurant" data-value="restaurant-one">
+                    <div class="image-wrapper" aria-label="Image of Food"><!-- background image --></div>
+                    <div class="content-wrapper">
+                        <div class="title-box">
+                            <h2>Cl<span>a&#x0308</span>rchens Ballhaus</h2>
+                            <div class="icon-box">
+                                <span class="fa-solid fa-star"></span>
+                                <p>4.5</p>
+                            </div>
+                        </div>
+                        <div class="icon-box">
+                            <span class="fa-solid fa-location-dot"></span>
+                            <p>Cl<span>a&#x0308</span>rchens Ballhaus Auguststra<span>&#x03B2</span>e 24 101117 Berlin</p>
+                        </div>
+                        <div class="icon-box">
+                            <span class="fa-regular fa-clock"></span>
+                            <p><strong>Open now</strong> - Closes at 2:00 am</p>
+                        </div>
+                        <div class="icon-box reserve">
+                            <span class="fa-solid fa-calendar"></span>
+                            <p>Reserve a table</p>
+                        </div>
+                    </div>
+                    <form class="reservation">
+                        <span class="close fa-solid fa-xmark"></span>
+                        <h1>reservation</h1>
+                        <div class="form-row">
+                            <select name="days" id="days" required>
+                                <option value="">Select Day</option>
+                                <option value="sunday">Sunday</option>
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="satday">Satday</option>
+                            </select>    
+                            <select name="hour" id="hour" required>
+                                <option value="">Select Hour</option>
+                                <option value="18.0">6:00 PM</option>
+                                <option value="18.5">6:30 PM</option>
+                                <option value="19.0">7:00 PM</option>
+                                <option value="19.5">7:30 PM</option>
+                                <option value="20.0">8:00 PM</option>
+                                <option value="20.5">8:30 PM</option>
+                                <option value="21.0">9:00 PM</option>
+                                <option value="21.5">9:30 PM</option>
+                            </select>
+                            <select name="people" id="people" required>
+                                <option value="">How Many?</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="7">8</option>
+                                <option value="7">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="text" placeholder="Phone Number" required>
+                            <button class="submit" type="submit" value="BOOK TABLE">book table
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+</html>

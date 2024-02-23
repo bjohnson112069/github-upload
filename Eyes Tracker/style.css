@@ -193,6 +193,24 @@ textarea:not([rows]) {
     translate: var(--x) var(--y);
 }
 
+
+.box {
+    width: 150px;
+    height: 150px;
+    background: lightgreen;
+    position: relative;
+}
+
+.rectangle {
+    width: 300px;
+    height: 150px;
+    background: lightcoral;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(0, -50%);
+}
+
 /* override defaults for mobile using max-width */
 @media (max-width: 90rem) {
 }

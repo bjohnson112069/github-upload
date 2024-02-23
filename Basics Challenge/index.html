@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Basics (Design System)</title>
+</head>
+<body class="ff-body">
+    <div class="content-container">
+        <div class="design-system">
+            <nav>
+                <h1>Design System</h1>
+                <ul class="nav-list" role="list">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#components">Components</a></li>
+                    <li><a href="#layout">Layout</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section id="home" class="panel">
+                    <h1 class="title">Style Guide</h1>
+                    <p>This style guide page contains styles and components that are to be used throughout a website.</p>
+                </section>
+                <section id="typography" class="panel">
+                    <h1 class="title">Typography</h1>
+                    <div class="panel panel-fonts">
+                        <h2>Font Families</h2>
+                        <div class="grid fs-1100">
+                            <div class="card ff-montserrat">Montserrat</div>
+                            <div class="card">Hind</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-font-weights">
+                        <h2>Font Weights</h2>
+                        <div class="grid">
+                            <div class="card card-font-1 ff-montserrat">
+                                <span class="fw-300">Montserrat, (300)</span>
+                                <span class="fw-400">Montserrat, (400)</span>
+                                <span class="fw-500">Montserrat, (500)</span>
+                                <span class="fw-600">Montserrat, (600)</span>
+                                <span class="fw-700">Montserrat, (700)</span>
+                                <span class="fw-800">Montserrat, (800)</span>
+                                <span class="fw-900">Montserrat, (900)</span>
+                            </div>
+                            <div class="card card-font-2">
+                                <span class="fw-400">Hind, (400)</span>
+                                <span class="fw-500">Hind, (500)</span>
+                                <span class="fw-600">Hind, (600)</span>
+                                <span class="fw-900">Hind, (700)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-text-styles">
+                        <h2>Text Styles</h2>
+                        <div class="card">
+                            <p><span class="ff-montserrat fs-1100">X-Large</span>, 4rem/64px/(1.1/70.4px)</p>
+                            <p><span class="fs-1000">Header 1</span>, 2.5rem/40px/(1.1/44px)</p>
+                            <p><span class="fs-900">Header 2</span>, 2rem/32px/(1.1/35.2px)</p>
+                            <p><span class="fs-800">Header 3</span>, 1.75rem/28px/(1.1/30.8px)</p>
+                            <p><span class="fs-700">Header 4</span>, 1.5rem/24px/(1.1/26.4px)</p>
+                            <p><span class="fs-600">Header 5</span>, 1.25rem/20px/(1.5/30px)/</p>
+                            <p><span class="fs-600">Header 6</span>, 1.125rem/18px/(1.5/27px)</p>
+                            <p><span class="fs-400 fw-600">Body Text</span>, 1rem/16px/(1.5/24px)</p>
+                            <p><span class="fs-300 fw-600">Fine Print</span>, .875rem/14px/(1.5/21px)</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="colors" class="panel">
+                    <h1 class="title">Colors</h1>
+                    <div class="panel panel-colors">
+                        <h2>Color Pallette</h2>
+                        <div class="grid grid-col--5">
+                            <div class="card">
+                                <span>#262528</span>
+                                <span>rgb(38, 37, 40)</span>
+                            </div>
+                            <div class="card">
+                                <span>#e9e7ec</span>
+                                <span>rgb(233, 231, 236)</span>
+                            </div>
+                            <div class="card">
+                                <span>#8fbfff</span>
+                                <span>rgb(143, 191, 255)</span>
+                            </div>
+                            <div class="card">
+                                <span>#8c2233</span>
+                                <span>rgb(140, 34, 51)</span>
+                            </div>
+                            <div class="card">
+                                <span>#ef9f2e</span>
+                                <span>rgb(239, 159, 46)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="components" class="panel">
+                    <h1 class="title">Components</h1>
+                    <div class="panel panel-components">
+                        <div class="panel panel-buttons">
+                            <h2>Buttons</h2>
+                            <div class="card">
+                                <div class="grid grid-col--5">
+                                    <a href="#" class="icon button button-normal">Normal</a>
+                                    <a href="#" class="icon button button-large">Large</a>
+                                    <a href="#" class="icon button button-rounded">Rounded</a>
+                                    <a href="#" class="icon button button-outline">Outline</a>
+                                    <a href="#" class="icon button button-shadow">Shadow</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-icons">
+                            <h2>Icons</h2>
+                            <div class="card">
+                                <div class="grid grid-col--6">
+                                    <div class="icon icon-open" aria-label="Menu Open"></div>
+                                    <div class="icon icon-close" aria-label="Menu Close"></div>
+                                    <div class="icon icon-record" aria-label="Record"></div>
+                                    <div class="icon icon-pause" aria-label="Pause"></div>
+                                    <div class="icon icon-zoom-in" aria-label="Zoom in"></div>
+                                    <div class="icon icon-zoom-out" aria-label="Zoom out"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-inputs">
+                            <h2>Inputs</h2>
+                            <div class="card">
+                                <div class="grid">
+                                    <form>
+                                        <span class="fs-500 fw-700">Make a choice:</span>
+                                        <ul class="choices" role="list">
+                                            <li class="option">
+                                                <input type="radio" id="radio-one" name="radio" value="1">
+                                                <label for="radio-one">
+                                                    <div class="icon icon-check" aria-label="Choice"></div>
+                                                    <span>Option 1</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <input type="radio" id="radio-two" name="radio" value="2" checked>
+                                                <label for="radio-two">
+                                                    <div class="icon icon-check" aria-label="Choice"></div>
+                                                    <span>Option 2</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <input type="radio" id="radio-three" name="radio" value="3">
+                                                <label for="radio-three">
+                                                    <div class="icon icon-check" aria-label="Choice"></div>
+                                                    <span>Option 3</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                    <form>
+                                        <span class="fs-500 fw-700">Make a choice:</span>
+                                        <ul class="choices" role="list">
+                                            <li class="option">
+                                                <input type="checkbox" id="check-one" name="check" value="1" checked>
+                                                <label for="check-one">
+                                                    <div class="icon icon-check" aria-label="Choice"></div>
+                                                    <span>Option 1</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <input type="checkbox" id="check-two" name="check" value="2">
+                                                <label for="check-two">
+                                                    <div class="icon icon-check" aria-label="Choice"></div>
+                                                    <span>Option 2</span>
+                                                </label>
+                                            </li>
+                                            <li class="option">
+                                                <input type="checkbox" id="check-three" name="check" value="3" checked>
+                                                <label for="check-three">
+                                                    <div class="icon icon-check" aria-label="Choice"></div>
+                                                    <span>Option 3</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </form>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="layout" class="panel">
+                    <h1 class="title">Layout</h1>
+                    <div class="panel panel-grids">
+                        <h2>Grids</h2>
+                        <div class="grid grid-col--6">
+                            <div class="card">6 column</div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                        <div class="grid grid-col--5">
+                            <div class="card">5 column</div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                        <div class="grid grid-col--4">
+                            <div class="card">4 column</div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                        <div class="grid grid-col--3">
+                            <div class="card">3 column</div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                        <div class="grid"></div>
+                    </div>
+                </section>
+                <footer>
+                    <p class="fs-300">&copy 2023  Powered by &#x1F355 &#x1F355 &#x1F355</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+</style>
+</html>

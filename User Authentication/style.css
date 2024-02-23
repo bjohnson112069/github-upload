@@ -1,0 +1,499 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-light-purple: #F7F4FA; /* profile image outline, metrics */
+    --clr-dark-blue: #26345E; /* text color */
+    --clr-purple: #A20062; /* button, accents, etc. */
+
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+    --clr-grad-1: #F8F5FB;
+    --clr-grad-2: #FDF0F5;
+    --clr-grad-3: #FFEDEC;
+
+    --clr-grad-4: #F5F0F6;
+    --clr-grad-5: #EDDFED;
+    --clr-grad-6: #F8EBEF;
+
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: 'Poppins', sans-serif;
+    --ff-body: 'Poppins', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg,
+        var(--clr-grad-1),
+        var(--clr-grad-2),
+        var(--clr-grad-3)
+    );
+    color: var(--clr-dark-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+.user-auth {
+    --v-padding: 3.5rem;
+    --h-padding: 6rem;
+    width: 100%;
+    max-width: 540px;
+    padding: var(--v-padding) var(--h-padding);
+    border-radius: var(--border-radius);
+    background: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 20px -10px var(--clr-dark-blue);
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header > .icon-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/blob/main/User%20Authentication/pexels-andrea-piacquadio-774909.jpg?raw=true");
+    --icon-outline-width: 10px;
+    --icon-outline-color: var(--clr-very-light-purple);
+    --icon-border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    background-size: cover;
+}
+
+header > p {}
+
+header > h1 {
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+.metrics-box {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    background: var(--clr-very-light-purple);
+}
+
+.separator {
+    background: var(--clr-dark-blue);
+    aspect-ratio: 1 / 1;
+    width: 5px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+/* --------------------- */
+
+.steps {
+    width: 100%;
+    height: 240px;
+    padding-block: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.steps > form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    transition: left 0.5s linear;
+}
+
+#step-one {
+    left: 0;
+}
+
+#step-two {
+    left: 100%;
+}
+
+.credential-box {
+    --credential-padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.credential-box > input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: var(--credential-padding);
+    border: 1px solid var(--clr-dark-blue);
+    border-radius: 5px;
+}
+
+.placeholder {
+    position: absolute;
+    top: var(--credential-padding);
+    left: var(--credential-padding);
+    padding-inline: .5rem;
+    transform-origin: center left;
+    transition: transform 250ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+    background: white;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.credential-box > input:focus {
+    border: 2px solid var(--clr-purple);
+}
+
+.credential-box > input:focus + .placeholder,
+.placeholder.active {
+    top: 0;
+    transform: translateY(-50%) scale(0.8);
+}
+
+.tos {}
+
+
+.tos > label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-check {
+    flex: 0 0 auto;
+    --icon-border-width: 1px;
+    --icon-border-color: var(--clr-dark-blue);
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    border-radius: 5px;
+}
+
+.icon-check::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    transition: opacity .3s ease-in-out;
+    color: var(--clr-purple);
+    opacity: 0;
+}
+
+.underline {
+    text-decoration: underline;
+    color: var(--clr-purple);
+    transition: .3s linear;
+}
+
+.underline:hover {
+    opacity: .6;
+}
+
+.tos input {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    z-index: -1;
+}
+
+.tos input:checked + .icon-check::after {
+    opacity: 1;
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-box > button {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    padding-block: 1em;
+    border-radius: 5px;
+    background: var(--clr-purple);
+    color: white;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.btn-box > button:hover {
+    opacity: .6;
+}
+
+.notification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background: var(--clr-purple);
+    color: white;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    font-size: var(--fs-700);
+    font-weight: 700;
+    transition: width .5s linear, height 1s linear;
+    z-index: -1
+}
+
+.notification.active {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* --------------------- */
+
+.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 var(--h-padding);
+    background: white;
+	transform: translateY(calc(100% - 3rem));
+	transition: .8s ease-in-out;
+    z-index: 1;
+}
+
+.login > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#chk {
+    display: none;
+}
+
+#chk:checked + .login {
+    transform: translateY(0);
+}
+
+.login > form > label {
+    width: 100%;
+    text-align: center;
+    font-size: var(--fs-700);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

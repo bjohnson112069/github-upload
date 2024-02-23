@@ -1,0 +1,472 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --text: #050709;
+    --background: #f9fbfc;
+    --primary: #5b85a8;
+    --secondary: #dfae97;
+    --accent: #3AA2EF;
+    --clr-body-bg: #202020;
+
+    /* shades */
+    --text-50: #eff2f6;
+    --text-100: #dee6ed;
+    --text-200: #bdccdb;
+    --text-300: #9cb2c9;
+    --text-400: #7b99b7;
+    --text-500: #5b7fa4;
+    --text-600: #486684;
+    --text-700: #364c63;
+    --text-800: #243342;
+    --text-900: #121921;
+    --text-950: #090d10;
+    
+    --background-50: #eef4f6;
+    --background-100: #dde8ee;
+    --background-200: #bbd2dd;
+    --background-300: #99bbcc;
+    --background-400: #77a4bb;
+    --background-500: #558eaa;
+    --background-600: #447188;
+    --background-700: #335566;
+    --background-800: #223944;
+    --background-900: #111c22;
+    --background-950: #090e11;
+    
+    --primary-50: #eef3f6;
+    --primary-100: #dee6ed;
+    --primary-200: #bccedc;
+    --primary-300: #9bb5ca;
+    --primary-400: #799cb9;
+    --primary-500: #5883a7;
+    --primary-600: #466986;
+    --primary-700: #354f64;
+    --primary-800: #233543;
+    --primary-900: #121a21;
+    --primary-950: #090d11;
+    
+    --secondary-50: #f9f0eb;
+    --secondary-100: #f3e1d8;
+    --secondary-200: #e7c2b1;
+    --secondary-300: #dba48a;
+    --secondary-400: #cf8563;
+    --secondary-500: #c3673c;
+    --secondary-600: #9c5230;
+    --secondary-700: #753e24;
+    --secondary-800: #4e2918;
+    --secondary-900: #27150c;
+    --secondary-950: #140a06;
+    
+    --accent-50: #e7f4fd;
+    --accent-100: #d0e8fb;
+    --accent-200: #a1d2f7;
+    --accent-300: #71bbf4;
+    --accent-400: #42a5f0;
+    --accent-500: #138eec;
+    --accent-600: #0f72bd;
+    --accent-700: #0b558e;
+    --accent-800: #08395e;
+    --accent-900: #041c2f;
+    --accent-950: #020e18;
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 1.75rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Open Sans", sans-serif;
+    --ff-body: "Open Sans", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: var(--background-200);
+    background: linear-gradient(-135deg,
+    var(--background-100),
+    var(--background-50),
+    var(--background)
+    );
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+#switch-account {
+    display: grid;
+    place-items: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 20px -10px var(--secondary-800);
+    height: auto;
+    width: auto;
+    max-height: 100vh;
+    max-width: 500px;
+    transition: max-height .5s linear, max-width .5s linear;
+    overflow: hidden;
+}
+
+#switch-account.sign-out {
+    opacity: 0;
+    max-height: 0;
+    max-width: 0;
+}
+
+/* --------------------- */
+header,
+main {
+    width: 100%;
+    padding: 2rem;
+}
+
+header {
+    display: grid;
+    place-items: start;
+    gap: 1.5rem;
+    background: var(--primary-200);
+    border-bottom: 2px solid var(--primary-300);
+}
+
+header > h1 {
+    font-size: var(--fs-800);
+    font-weight: 700;
+}
+
+.slider {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    place-items: center;
+}
+
+.accounts {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    /* important: offsetLeft relative to scroll element */
+    position: relative; 
+    /* padding-right: 1rem; */
+    padding-block: 1rem;
+    scroll-behavior: smooth;
+}
+    
+/* Hide scrollbar for Chrome, Safari and Opera */
+.albumse::-webkit-scrollbar {
+    display: none;
+}
+
+.acct {
+    display: inline-block; /* important */
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+.acct-img {
+    aspect-ratio: 1 / 1;
+    width: 105px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px var(--primary-800);
+    transition: 
+        border-radius .5s cubic-bezier(0, 0, 0.2, 1),
+        border .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.acct-img:hover {
+    border-radius: 5px;
+    border: 3px solid var(--accent);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    outline: none;
+    border: none;
+    display: grid;
+    place-items: center;
+    font-size: 2.5rem;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+    color: var(--primary-800);
+}
+
+.arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; 
+}
+
+#add {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: var(--fs-600);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .75em 1em;
+    border-radius: 10px;
+    background: var(--primary);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#add:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: var(--accent);
+    transition: width 350ms ease-in-out;
+    z-index: -1;
+}
+
+#add:hover {
+    color: var(--primary-700);
+    color: var(--text-100);
+}
+#add:hover:after {
+    width: 100%;
+}
+
+/* --------------------- */
+
+main {
+    background: var(--secondary-50);
+    font-size: var(--fs-700);
+    font-weight: 600;
+}
+
+.acct-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: .5rem;
+}
+
+.acct-item {
+    width: 100%;
+    display: grid;
+    place-items: start;
+    padding-block: 1rem;
+}
+
+.acct-item:hover > .acct-link {
+    transform: translateX(1rem);
+}
+
+.acct-item i {
+    transition: color .3s .3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.acct-item:hover i {
+    color: var(--accent);
+}
+
+.acct-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: transform .3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 550px) {
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

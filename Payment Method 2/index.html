@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Payment Method 2 (Non-Responsive)</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <form action="#" method="">
+            <h1>Choose a payment method</h1>
+            <section class="payment active">
+                <input type="radio" id="paynow" name="radio" value="paynow" checked>
+                <label for="paynow">
+                    <div class="icon icon-circle" aria-label="Choice"></div>
+                    <span>Pay Now with Card</span>                    
+                </label>
+
+                <section class="payment-box">
+                    <section>
+                        <label for="cc-number">Card number</label>
+                        <!-- pattern match 10-30 digits -->
+                        <input id="cc-number" name="cc-number" autocomplete="cc-number" inputmode="numeric" pattern="[\d ]{10,30}" placeholder="XXXX XXXX XXXX XXXX" required>
+                    </section>
+                    
+                    <section>
+                        <label for="cc-name">Name on card</label>
+                        <!-- pattern match any character including - and . -->
+                        <input id="cc-name" name="cc-name" autocomplete="cc-name" pattern="[\p{L} \-\.]+" placeholder="First Name, Last Name" required>
+                    </section>
+                    
+                    <section id="cc-exp-csc">
+                        <div>
+                            <label for="cc-exp">Expiry date</label>
+                            <input id="cc-exp" name="cc-exp" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div>
+                            <label for="cc-csc">Security code</label>
+                            <input id="cc-csc" name="cc-csc" autocomplete="cc-csc" inputmode="numeric" maxlength="3" placeholder="CVC" required>
+                            <div class="explanation">Back of card, last 3 digits</div>
+                        </div>
+                    </section>
+
+                    <section id="remember">
+                        <input type="checkbox" id="cc-remember" name="cc-remember">
+                        <label for="cc-remember">
+                            <div class="icon icon-check" aria-label="Choice"></div>
+                            <span>Remember my card</span>                            
+                        </label>
+                    </section>
+
+                </section>
+            </section>
+            <section class="payment">
+                <input type="radio" id="paylater" name="radio" value="paylater">
+                <label for="paylater">
+                    <div class="icon icon-circle" aria-label="Choice"></div>
+                    <span>Pay Later</span>
+                </label>
+                <section class="payment-box">
+                    <p class="learn-more">Apply at checkout with just a fiew pieces of information.  <span>Learn more</span></p>
+                </section>
+            </section>
+            <button id="continue">Continue</button>
+        </form>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Ine Time Pricing</title>
+</head>
+<body>
+    <div class="content-container">
+        <div class="checkout">
+            <div class="price-box">
+                <h1 class="price">NOK 549, -</h1>
+                <p>Pay now, later or split up</p>
+            </div>
+            <div class="availability">
+                <h2>Product Availability</h2>
+                <div class="option-box">
+                    <button type="button" class="option option-pickup" value="pickup">
+                        <div class="icon-box">
+                            <i class="icon icon-store" aria-label="Store Pickukp"></i>
+                            <h3>Pickup</h3>
+                        </div>
+                        <div class="features-box">
+                            <p><span class="store-qty">18</span> left in stock</p>
+                        </div>
+                    </button>
+                    <button type="button" class="option option-delivery" value="delivery" selected>
+                        <div class="icon-box">
+                            <i class="icon icon-shipping" aria-label="Delivery"></i>
+                            <h3>Shipping</h3>
+                        </div>
+                        <div class="features-box">
+                            <p><span class="online-qty">53</span> available online</p>
+                        </div>
+                    </dbuttonv>
+                </div>
+                <form class="offering-details">
+                    <label for="zipcode">
+                        <ul class="features">
+                        </ul>
+                    </label>
+                    <div class="input-box">
+                        <div class="icon icon-search" aria-label="Search"></div>
+                        <input type="text" id="zipocode" name="zipcode" placeholder="Zip Code" required>
+                    </div>
+                    <button type="submit" class="check">Check</button>
+                </form>
+            </div>        
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@200..700&display=swap')
+</style>
+</html>

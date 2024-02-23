@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Account Settings</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <!-- Login and Security-->
+        <form id="email" class="settings">
+            <header>
+                <div class="icon icon-logo"></div>
+                <h1>Login and security</h1>
+                <p>Add or remove email address on your account.</p>
+            </header>
+            <main>
+                <h2>Email Addresses</h2>
+                <ul class="list" id="emails">
+                </ul>
+            </main>
+            <footer class="tab">
+                <input type="checkbox" name="email-content" id="email-content">
+                <label for="email-content" class="tab-label">
+                    <div class="icon icon-add" aria-label="Add Email Address"><!-- BG Image --></div>
+                    <span>Add email address</span>
+                </label>
+                <div class="tab-content">
+                    <label for="email-address" class="user-input">
+                        <input type="email" id="email-address" name="email"  autocomplete="email-address" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required/>
+                        <span>Enter Email Address</span>
+                    </label>
+                    <button type="submit">submit</button>
+                </div>
+            </footer>
+        </form>
+        
+        <!-- Phone Numbers -->
+        <form id="phone" class="settings">
+            <header>
+                <div class="icon icon-logo"></div>
+                <h1>Phone Numbers</h1>
+                <p>Add a phone number in case you have trouble signing in.</p>
+            </header>
+            <main>
+                <h2>Phone Numbers</h2>
+                <ul class="list" id="phones">
+                    </li>
+                </ul>
+            </main>
+            <footer class="tab">
+                <input type="checkbox" name="phone-content" id="phone-content">
+                <label for="phone-content" class="tab-label">
+                    <div class="icon icon-add" aria-label="Add PHone Number"><!-- BG Image --></div>
+                    <span>Add Phone Number</span>
+                </label>
+                <div class="tab-content">
+                    <label for="phone-number" class="user-input">
+                        <input type="tel" id="phone-number" name="phone"  autocomplete="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12"  title="Ten digits code (ex. 123-456-7890)" required/>
+                        <span>Enter Phone Number</span>
+                    </label>
+                    <button type="submit">submit</button>
+                </div>
+            </footer>
+        </form>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

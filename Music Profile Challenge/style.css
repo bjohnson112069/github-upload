@@ -1,0 +1,353 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #303030;
+
+    --clr-yelow: #FDAB2B;
+    --clr-very-dark-grey: #010101;
+    --clr-dark-grey: #171717;
+    --clr-medium-grey: #171719;
+    --clr-grey: #696D7A;
+
+    --fs-600: 2rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --font-family: 'Oswald', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 50px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--font-family);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: red;
+    margin: auto;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+text-wrap: balance;
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-very-dark-blue);
+    padding: 1rem;
+}
+ 
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+.card {
+    --card-width: 500px;
+    width: var(--card-width);
+    height: 775px;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--clr-yelow);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: var(--fs-600);
+    font-weight: 900;
+}
+
+.icon {
+    aspect-ratio: 1 / 1;
+    width: 75px;
+    border-radius: 50%;
+    background: var(--icon-bg-color, red);
+    background-image: var(--icon-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 3px 15px var(--icon-shadow-color);
+}
+
+/* --------------------- */
+
+.card--image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding: 2rem 2.75rem;
+    background-image: url(https://github.com/bjohnson112069/web-images/blob/main/56fbda6e1e00009500711bfb.webp?raw=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    -moz-transition:all 1s;
+}
+
+.card--image:hover {
+    background-size: 120% 120%;
+}
+
+.card--image > span {
+    font-family: 'Road Rage', sans-serif;
+    font-size: 8rem;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-yelow);
+}
+
+.icon--left-arrow {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/arrow-left-long-solid.svg?raw=true);
+    --icon-bg-color: transparent;
+    background-position: left center;
+    transition: all 0.5s;;
+}
+
+.icon--left-arrow:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------- */
+
+.card--caption {
+    --h-padding: 2.75rem;
+    --diag-height: 75px;
+    flex: 1;
+    padding: 2rem 2.75rem;
+    position: relative;
+    background: linear-gradient(180deg,
+        var(--clr-very-dark-grey),
+        var(--clr-dark-grey),
+        var(--clr-medium-grey),
+        var(--clr-grey));
+    color: var(--clr-yelow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card--caption::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    border: 0 solid var(--clr-very-dark-grey);
+    border-width: var(--diag-height) var(--card-width) 0 0;
+    border-top-color: transparent;
+}
+
+.icon--plus {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/plus-solid.svg?raw=true);
+    --icon-bg-color: var(--clr-yelow);
+    --icon-shadow-color: rgba(255, 255,255, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(calc(-1 * var(--h-padding)), calc(-1 * var(--diag-height) - 25px));
+}
+
+.icon--plus:hover {
+    opacity: .8;
+}
+
+/* --------------------- */
+
+.card--profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card--profile > p {
+    color: white;
+}
+
+/* --------------------- */
+
+.card--albums {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.card--albums > h1 {
+    text-transform: uppercase;
+    font-size: var(--fs-500);
+}
+
+.albums {
+    /* important: must be a <div> w/in-line child elements */
+    width: 100%; /* important for horizontal scrolling */
+    padding-bottom: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.albumse::-webkit-scrollbar {
+    display: none;
+}
+
+.albums.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.album {
+    display: inline-block; /* important */
+    --border-radius: 5px;
+    width: 135px;
+    height: 135px;
+    background-image: var(--album-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .25);
+    transition: all 0.5s;
+    -webkit-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    -moz-transition:all 0.5s;
+
+    overflow: hidden;
+}
+
+.album:not(:last-child){
+    margin-right: 1.25rem;
+}
+
+.album:hover {
+    transform: scale(1.1);
+}
+
+.album-1 { --album-image: url(https://github.com/bjohnson112069/web-images/blob/main/stormseeker-rX12B5uX7QM-unsplash.jpg?raw=true); }
+.album-2 { --album-image: url(https://github.com/bjohnson112069/web-images/blob/main/stefano-pollio-ZC0EbdLC8G0-unsplash.jpg?raw=true); }
+.album-3 { --album-image: url(https://github.com/bjohnson112069/web-images/blob/main/jr-korpa-E2cbYfx9g64-unsplash.jpg?raw=true); }
+.album-4 { --album-image: url(https://github.com/bjohnson112069/web-images/blob/main/mathew-macquarrie-u6OnpbMuZAs-unsplash.jpg?raw=true); }
+.album-5 { --album-image: url(https://github.com/bjohnson112069/web-images/blob/main/jason-rosewell-ASKeuOZqhYU-unsplash.jpg?raw=true); }
+.album-6 { --album-image: url(https://github.com/bjohnson112069/web-images/blob/main/fabrice-villard-Jrl_UQcZqOc-unsplash.jpg?raw=true); }
+
+/* --------------------- */
+
+@media (max-width: 1050px) {
+}
+
+@media (max-width: 900px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 575px) {
+}
+ 

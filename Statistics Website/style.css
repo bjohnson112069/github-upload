@@ -1,0 +1,537 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-yellow: #FEB80E;
+    --clr-light-grey-blue: #EBEEF2;
+    --clr-blue: #0D62DF;
+    --clr-dark-blue: #001733;
+
+    --clr-body-bg: #0F1023;
+    
+    /* Gradient Colors */
+
+
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Open Sans', sans-serif;
+    --ff-header: 'Poppins', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr--dark-brown);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-body-bg);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+/* --------------------- */
+
+#hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    place-items: center;
+    background: url("https://github.com/bjohnson112069/web-images/raw/main/Statistics%20Website/hero-bg.webp") no-repeat center center;
+    background-size: cover;
+    min-height: 50vh;
+    padding: 2rem;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#hero-form {
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: rgb(0, 0, 0, .5);
+    color: white;
+}
+
+#hero-form > h1 {
+    font-size: var(--fs-900);
+    font-weight: 700;
+}
+
+#hero-form > h1 > span {
+    text-transform: uppercase;
+    color: var(--clr-yellow);
+    position: relative;
+}
+
+
+#hero-form > h1 > span:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -.6em;
+    height: 1em;
+    background-image: url("https://raw.githubusercontent.com/bjohnson112069/web-images/f77b12de84ec87ae3e4df64b127b09e41148c76a/Statistics%20Website/underline.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#hero-form > fieldset {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#hero-form input, 
+#submit {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+    background: white;
+}
+
+#hero-form input {
+    padding: 1rem;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+#submit {
+    display: grid;
+    place-items: center;
+    padding: 1em;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+}
+
+#submit:hover > .fa-solid {
+    transform: scale(1.2);
+}
+
+
+#submit > .fa-solid {
+    font-size: 1.5rem;
+    transition: transform .3s linear;
+}
+
+/* --------------------- */
+
+#reports {
+    width: 100%;
+    min-height: 20vh;
+    background: var(--clr-light-grey-blue);
+    color: var(--clr-dark-blue);
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "card-1 card-3 trending"
+        "card-2 card-3 trending";
+    gap: 2rem 1rem;
+    padding: 3rem 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+#card-1 { grid-area: card-1; }
+#card-2 { grid-area: card-2; }
+#card-3 { grid-area: card-3; }
+#trending { grid-area: trending; }
+
+.card-image {
+    aspect-ratio: 2 / 1;
+    width: 100%;
+    background: var(--card-bg-color, transparent) var(--card-bg-image, none) no-repeat center center;
+    background-size: contain;
+}
+
+#card-1 > .card-image {
+    --card-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Statistics%20Website/th-1676115195.webp");
+}
+
+#card-2 > .card-image {
+    --card-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Statistics%20Website/th-2087952860.webp");
+}
+
+#card-3 > .card-image {
+    --card-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Statistics%20Website/th-4024886782.webp");
+}
+
+.card-header {
+    text-transform: uppercase;
+    font-size: var(--fs-400);
+    font-weight: 300;
+}
+
+.card-excerpt {
+    font-size: var(--fs-700);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+#trending {
+    gap: 1rem;
+    justify-content: start;
+}
+
+#trending > h2 {
+    text-transform: uppercase;
+    font-size: var(--fs-400);
+    font-weight: 700;   
+
+}
+
+.trend-list {}
+
+.trend-list > li {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.trend-list > li:not(:last-child) {
+    border-bottom: 2px solid rgb(0, 0, 0, .15);
+}
+
+.trend-list > li:hover {
+    background: var(--clr-dark-blue);
+    color: white;
+    transition: all .3s linear;
+}
+
+/* --------------------- */
+
+#newsletter {
+    width: 100%;
+}
+
+#subscribe {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: var(--clr-blue);
+    color: var(--clr-light-grey-blue);
+}
+
+.label-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.label-box > .fa-regular {
+    font-size: 2rem;
+}
+
+.label-box > h2 {
+    font-size: var(--fs-500);
+}
+
+#subscribe > fieldset {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#subscribe input, 
+#sign-up {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+    background: var(--clr-light-grey-blue);
+    color: var(--clr-dark-blue);
+}
+
+#subscribe input {
+    padding: .5em 1rem;
+    border-radius: var(--border-radius);
+}
+
+#sign-up {
+    display: grid;
+    place-items: center;
+    padding: .5em 1em;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#sign-up:hover {
+    transition: all .3s linear;
+    background: var(--clr-dark-blue);
+    color: var(--clr-light-grey-blue);
+}
+
+/* --------------------- */
+
+footer {
+    width: 100%;
+    background: var(--clr-dark-blue);
+    color: var(--clr-light-grey-blue);
+    padding: 2rem;
+}
+
+footer > nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+footer .nav-list {
+    font-family: var(--ff-header);
+    font-size: var(--fs-500);
+    font-weight: 500;
+}
+
+footer .nav-list > li {
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 300;
+    cursor: pointer;
+}
+
+
+footer .nav-list > li:hover {
+    transition: color .3s linear;
+    color: var(--clr-yellow);
+}
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+    
+    #hero {
+        grid-template-columns: 1fr;
+    }
+    
+    #reports {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "card-3 card-3"
+            "card-1 card-2"
+            "trending trending";
+    }
+
+    .card {
+        padding: 1rem;
+        box-shadow: 0 20px 20px -10px var(--clr-dark-blue);
+    }
+
+    #trending { align-items: center; }
+
+}
+
+@media (max-width: 800px) {
+    #subscribe {
+        grid-template-columns: min-content;
+        grid-auto-rows: auto;
+    }
+
+} 
+
+@media (max-width: 600px) {
+
+    #reports {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "card-3"
+            "card-1"
+            "card-2"
+            "trending";
+    }
+
+    .card {
+        align-items: center;
+    }
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

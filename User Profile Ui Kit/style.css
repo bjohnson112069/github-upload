@@ -1,0 +1,549 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-blue: #446392; /* main background */
+    --clr-very-light-blue: #E6ECFA; /* border color */
+    --clr-light-blue: #4E72AA; /* circle background */
+    --clr-dark-blue: #294267; /* button background */
+    --clr-very-dark-blue: #131D2A; /* text */
+
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+    --clr-grad-1: #F8F5FB;
+    --clr-grad-2: #FDF0F5;
+    --clr-grad-3: #FFEDEC;
+
+    --clr-grad-4: #F5F0F6;
+    --clr-grad-5: #EDDFED;
+    --clr-grad-6: #F8EBEF;
+
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: 'Mulish', sans-serif;
+    --ff-body: 'Mulish', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 25px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+        "customize user-profile"
+        "views user-profile";
+    gap: 5rem 4rem;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+
+    background: var(--clr-blue);
+    color: var(--clr-very-dark-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.content-container::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    width: 700px;
+    border-radius: 50%;
+    background: var(--clr-light-blue);
+    z-index: -1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+section {
+    width: 100%;
+    border-radius: var(--border-radius);
+    background: white;
+}
+/* --------------------- */
+
+#customize {
+    grid-area: customize;
+    justify-self: end;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 1.5rem 2rem;
+}
+
+.app-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeaT(2, 1fr);
+    grid-template-areas: 
+        "image title"
+        "image value";
+    column-gap:1rem;
+    font-size: var(--fs-300);
+    cursor: pointer;
+}
+
+.app-box > .icon {
+    --icon-border-width: 8px;
+    --icon-border-color: var(--clr-very-light-blue);
+    --icon-text-color: var(--clr-dark-blue);
+    --icon-border-radius: 50%;
+    grid-area: image;
+    width: 85px;
+    height: 85px;
+    font-size: 2rem;
+}
+
+.icon-app {
+    --icon-bg-image: url("https://raw.githubusercontent.com/bjohnson112069/web-images/238905c5ad1fbe5d7e8c98e328d8e8b548fe850e/User%20Profile%20Ui%20Kit/category.svg");
+    background-size: 2rem;
+}
+
+.title-box {
+    grid-area: title;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.separator {
+    aspect-ratio: 1 / 1;
+    width: 5px;
+    border-radius: 50%;
+    background: var(--clr-very-dark-blue);
+}
+
+.value {
+    grid-area: value;
+    align-self: start;
+    font-size: var(--fs-700);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#submit {
+    font-family: inherit;
+    outline: none;
+    font-size: inherit;
+    text-transform: uppercase;
+    width: 100%;
+    padding-block: 1em;
+    border-radius: 15px;
+    border: 2px solid white;
+    background: var(--clr-dark-blue);
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover{
+    animation: pulsate 1.5s linear infinite;
+}
+
+@keyframes pulsate {
+    0% {
+         box-shadow: 0 0 25px var(--clr-very-dark-blue), 0 0 50px var(--clr-very-dark-blue);
+    }
+}
+
+/* --------------------- */
+
+#user-profile {
+    grid-area: user-profile;
+    justify-self: start;
+    width: auto;
+    background: none;
+}
+
+.card {
+    width: 300px;
+    height: 360px;
+    position: relative;
+    border-radius: var(--border-radius);
+    perspective: 2500px;
+}
+
+.card-front {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-rows: repeat(3, auto) 1fr;
+    justify-items: center;
+    align-items: start;
+    gap: 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    padding-block: 3rem;
+    overflow: hidden;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.card-front::before,
+.card-front::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+/* Gradient for top of wrapper image */
+.card-front::before {
+ top: 0;
+ height: 100%;
+ background-image: linear-gradient(
+   to top,
+   transparent 46%,
+   rgba(12, 13, 19, 0.5) 68%,
+   rgba(12, 13, 19) 97%
+ );
+}
+
+/* Gradient for bottom of wrapper image */
+.card-front::after {
+ bottom: 0;
+ background-image: linear-gradient(
+   to bottom,
+   transparent 46%,
+   rgba(12, 13, 19, 0.5) 68%,
+   rgba(12, 13, 19) 97%
+ );
+}
+
+.card:hover .card-front {
+    transform: perspective(1000px) translateY(-5%) rotateX(35deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    opacity: 0.5;
+}
+
+.card:hover .card-front::before,
+.card:hover .card-front::after {
+ opacity: 1;
+}
+
+.card:hover .card-front::after {
+ height: 120px;
+}
+
+.icon-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/User%20Profile%20Ui%20Kit/11808.webp");
+    --icon-border-width: 10px;
+    --icon-border-color: var(--clr-very-light-blue);
+    --icon-border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    background-size: cover;
+    position: relative;
+}
+
+.icon-image > span {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background: var(--clr-dark-blue);
+    color: var(--clr-very-light-blue);
+    font-size: var(--fs-300);
+    padding: .25em .5em;
+    border-radius: 100px;
+    transform: translate(-50%, 50%);
+}
+
+.card-front > h1 {
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+.card-front > span {
+    font-size: var(--fs-300);
+}
+
+.card-front > div {
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    line-height: 1;
+}
+
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.75s;
+    z-index: -1;
+    opacity: 0;
+}
+
+.card-back > img {
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+  
+.card:hover .card-back {
+    opacity: 1;
+    transform: 
+        translate3d(0%, -45%, 100px);
+}
+
+
+
+/* --------------------- */
+#views {
+    grid-area: views;
+    max-width: 480px;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.5rem;
+    background: white;
+}
+
+.icon-views {
+    width: 36px;
+    height: 36px;
+    font-size: 2rem;
+    color: var(--clr-very-dark-blue);
+}
+
+#views > h1 {
+    font-size: var(--fs-700);
+    font-weight: 900;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.icon-profile {
+    --icon-outline-width: 3px;
+    --icon-outline-color: white;
+    --icon-border-radius: 50%;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    transition: all .3s linear;
+    transform: translateX(var(--h-distance, 0));
+    cursor: pointer;
+}
+
+.icon-profile:hover {
+    transform: scale(1.2) translateY(8px);
+    z-index: 2;
+}
+
+.profile-box > .icon-profile:nth-of-type(1) {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/User%20Profile%20Ui%20Kit/pexels-amar-preciado-13913217.webp");
+    --h-distance: 25%;
+    /* transform: translateX(25%); */
+    z-index: 2;
+}
+.profile-box > .icon-profile:nth-of-type(2) {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/User%20Profile%20Ui%20Kit/pexels-rajaa-lemnari-20065834.webp");
+    z-index: 1;
+}
+.profile-box > .icon-profile:nth-of-type(3) {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/User%20Profile%20Ui%20Kit/pexels-tejinder-ladi-photography-13530974.webp");
+    --h-distance: -25%;
+    /* transform: translateX(-25%); */
+}
+
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

@@ -1,0 +1,528 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --text: #081421;
+    --background: #f3f7fc;
+    --primary: #1977D4;
+    --secondary: #e4d08b;
+    --accent: #d15de2;
+    --clr-body-bg: #202020;
+
+    /* shades */
+    --text-50: #eaf2fa;
+    --text-100: #d6e5f5;
+    --text-200: #adcbeb;
+    --text-300: #84b1e1;
+    --text-400: #5b97d7;
+    --text-500: #327dcd;
+    --text-600: #2864a4;
+    --text-700: #1e4b7b;
+    --text-800: #143252;
+    --text-900: #0a1929;
+    --text-950: #050c15;
+
+    --background-50: #ebf1fa;
+    --background-100: #d6e4f5;
+    --background-200: #adc9eb;
+    --background-300: #85aee0;
+    --background-400: #5c93d6;
+    --background-500: #3378cc;
+    --background-600: #2960a3;
+    --background-700: #1f487a;
+    --background-800: #143052;
+    --background-900: #0a1829;
+    --background-950: #050c14;
+
+    --primary-50: #e8f2fc;
+    --primary-100: #d1e5fa;
+    --primary-200: #a4ccf4;
+    --primary-300: #76b2ef;
+    --primary-400: #4899ea;
+    --primary-500: #1b7fe4;
+    --primary-600: #1566b7;
+    --primary-700: #104c89;
+    --primary-800: #0b335b;
+    --primary-900: #05192e;
+    --primary-950: #030d17;
+
+    --secondary-50: #faf7ea;
+    --secondary-100: #f5eed6;
+    --secondary-200: #ecdeac;
+    --secondary-300: #e2cd83;
+    --secondary-400: #d8bd5a;
+    --secondary-500: #cfac30;
+    --secondary-600: #a58a27;
+    --secondary-700: #7c671d;
+    --secondary-800: #534513;
+    --secondary-900: #29220a;
+    --secondary-950: #151105;
+
+    --accent-50: #f9e9fb;
+    --accent-100: #f3d4f7;
+    --accent-200: #e6a8f0;
+    --accent-300: #da7de8;
+    --accent-400: #cd52e0;
+    --accent-500: #c126d9;
+    --accent-600: #9a1fad;
+    --accent-700: #741782;
+    --accent-800: #4d0f57;
+    --accent-900: #27082b;
+    --accent-950: #130416;
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Oswald", sans-serif;
+    --ff-body: "Lato", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    justify-items: center;
+    padding: 1rem;
+    background: var(--background);
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+header,
+main {
+    width: 100%;
+}
+
+header {
+    background: var(--primary);
+    color: var(--text-50);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-600);
+}
+
+.nav-item:not(:last-child) {
+    padding: .5em 1em;
+    transition: transform .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.nav-item:not(:last-child):hover {
+    transform: scale(1.5);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    display: grid;
+    grid-template-areas: "stacked";
+    place-items: center;
+}
+
+.nav-link > * {
+    grid-area: stacked;
+}
+
+.notification {
+    align-self: start;
+    justify-self: end;
+    aspect-ratio: 1 / 1;
+    width: 5px;
+    border-radius: 50%;
+}
+
+.notification.active {
+    background: var(--accent);
+    box-shadow: 0 0 4px 2px var(--accent), 0 0 0 3px var(--primary), 0 0 4px 4px var(--accent);
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-btn {
+    align-self: end;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    padding: .5em 1em;
+    border: 2px solid transparent;
+    background: inherit;
+    color: inherit;
+    transition: background .5s linear, border .5s linear;
+    cursor: pointer;
+}
+
+.dropdown-btn.active {
+    background: var(--primary-700);
+    border-color: var(--accent);
+}
+
+.fa-caret-down {
+    font-size: var(--fs-700);
+    transition: transform .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.dropdown-btn.active > .fa-caret-down {
+    transform: rotate(-180deg);
+}
+
+.dropdown-items {
+    --v-offset: 1rem;
+    position: absolute;
+    top: calc(100% + var(--v-offset));
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: auto;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: all .75s linear;
+    box-shadow: 0 20px 20px -10px var(--secondary-800);
+    background: var(--secondary-100);
+    color: var(--text);
+}
+
+.dropdown-items[aria-hidden="true"] {
+    max-height: 0;
+    max-width: 0;
+    transition: all .75s .3s linear;
+}
+
+.dropdown-items[aria-hidden="false"] {
+    max-height: 100vh;
+    max-width: 100vw;
+    padding-block: 2rem;
+    transition: all .75s linear;
+}
+
+.dropdown-items[aria-hidden="false"] > .dropdown-item {
+    scale: 1;
+    transition: all .3s .3s linear;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 2rem;
+    position: relative;
+    scale: 0;
+    font-size: var(--fs-600);
+    transition: all .3s .3s linear;    
+    position: relative;
+}
+
+.dropdown-item:not(.profile)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: var(--primary-200);
+    transition: width .5s cubic-bezier(0, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.dropdown-item:hover::after { 
+    width: 100%;
+}
+
+.dropdown-item:not(.profile):hover > .dropdown-link {
+    /* color: var(--text-50); */
+    transform: translateX(1rem);
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.dropdown-link > span {
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "image name"
+        "image title"
+        "image buttons";
+    align-items: start;
+    justify-items: start;
+    gap: .25rem;
+    column-gap: 1rem;
+    font-size: var(--fs-400);
+    line-height: 1;
+    border-bottom: 2px solid var(--secondary-200);
+}
+
+.profile > img {
+    grid-area: image;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: drop-shadow(10px 0px 5px rgb(0, 0, 0, .5));
+}
+
+.profile > h1 {
+    grid-area: name;
+    align-self: end;
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+.profile > p {
+    grid-area: title;
+}
+
+.btn-box {
+    grid-area: buttons;
+    align-self: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.btn-box > button {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding: .25em 1.25em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .5s linear;
+}
+
+.btn-box > button:hover {
+    border-color: var(--primary);
+}
+
+.btn-box > button.active {
+    background: var(--primary);
+    color: var(--text-50);
+}
+
+main {
+    background: var(--background);
+}
+
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 550px) {
+    .btn-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        gap: .5rem;
+    }
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

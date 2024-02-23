@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Clock In App</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="app">
+            <form action="">
+                <i class="fa-solid fa-xmark close-modal"></i>
+                <section id="form--top">
+                    <label for="date" class="date-input">
+                        <span>Date</span>
+                        <input type="date" id="date" name="date" required>
+                    </label>
+                </section>
+                <section id="form--bottom">
+                    <label for="Sun" class="hours-input">
+                        <input type="number" id="Sun" name="Sun" min="0" max="24" step="0.25" maxlength="5" pattern="^\d*(\.\d{0,2})?$" required>
+                        <span>Sun</span>
+                    </label>
+                    <label for="Mon" class="hours-input">
+                        <input type="number" id="Mon" name="Mon" min="0" max="24" step="0.25" maxlength="5" pattern="^\d*(\.\d{0,2})?$" required>
+                        <span>Mon</span>
+                    </label>
+                    <label for="Tue" class="hours-input">
+                        <input type="number" id="Tue" name="Tue" min="0" max="24" step="0.25" maxlength="5" pattern="^\d*(\.\d{0,2})?$" required>
+                        <span>Tue</span>
+                    </label>
+                    <label for="Wed" class="hours-input">
+                        <input type="number" id="Wed" name="Wed" min="0" max="24" step="0.25" maxlength="5" pattern="^\d*(\.\d{0,2})?$" required>
+                        <span>Wed</span>
+                    </label>
+                    <label for="Thu" class="hours-input">
+                        <input type="number" id="Thu" name="Thu" min="0" max="24" step="0.25" maxlength="5" pattern="^\d*(\.\d{0,2})?$" required>
+                        <span>Thu</span>
+                    </label>
+                    <label for="Fri" class="hours-input">
+                        <input type="number" id="Fri" name="Fri" min="0" max="24" step="0.25" maxlength="5" pattern="^\d*(\.\d{0,2})?$" required>
+                        <span>Fri</span>
+                    </label>
+                    <label for="Sat" class="hours-input">
+                        <input type="number" id="Sat" name="Sat" min="0" max="24" step="0.25" maxlength="5" pattern="^\d*(\.\d{0,2})?$" required>
+                        <span>Sat</span>
+                    </label>
+                    <button type="submit" id="submit">Submit</button>
+                </section>
+            </form>
+            <header>
+                <span class="icon">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                <h1>Clock In</h1>
+                <span class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+            </header>
+            <main>
+                <h2><span class="month">FEB</span> hours</h2>
+                <ul class="weeks">
+                    <li class="week">
+                        <div class="icon edit">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </div>
+                        <ul class="days">
+                        </ul>
+                        <div class="total-box">Total Hours<span class="total">40</span></div>
+                    </li>
+                </ul>
+            </main>
+            <footer>
+                <button id="add">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </footer>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

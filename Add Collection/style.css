@@ -1,0 +1,476 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #202020;
+    
+    /* Colors */
+    --clr-very-dark-blue: #090b0d;
+    --clr-off-white: #f3f5f7;
+    --clr-greyish-blue: #6d849f;
+    --clr-greyish-red: #cbb7af;
+    --clr-greyish-green: #a6af85;
+    --clr-opaque-green: #a6af857f;
+
+    --clr-text: var(--clr-very-dark-blue);
+    --clr-background: var(--clr-off-white);
+    --clr-primary: var(--clr-greyish-blue);
+    --clr-secondary: var(--clr-greyish-red);
+    --clr-accent: var(--clr-greyish-green);
+
+    
+
+    /* Gradient Colors */
+    --clr-grad-1: #cbb7af;
+    --clr-grad-2: #6d849f;
+    --clr-grad-3: #d5c5bf;
+    --clr-grad-4: #cbb7af;
+    --clr-grad-5: #e0d3ce;
+    --clr-grad-6: #e5dbd6;
+
+
+    /* Shadow Color */
+
+    --fs-900: clamp(1.5rem, 1.2832rem + 0.9249vw, 2rem);;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Poppins', sans-serif;
+    --ff-header: 'Poppins', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-background);
+    color: var(--clr-text);
+    padding: 1rem;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    min-width: 10px;
+    min-height: 10px;
+    background: var(--icon-bg-color, red) var(--icon-bg-image) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, red);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, red);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    line-height: 1;
+}
+
+.fa-solid {
+    font-size: var(--fs-800);
+}
+
+/* --------------------- */
+
+.add-to-collection {
+    background: var(--clr-background);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: 1rem;
+    transition: all .400s ease-in-out;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .25), -5px -5px 10px rgb(0, 0, 0, .25);
+    width: 100%;
+}
+
+.add-to-collection.close {
+    display: none;
+}
+
+/* --------------------- */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > h1 {
+    font-size: var(--fs-900);
+    line-height: 1;
+    padding-block: 1rem;  
+    color: var(--clr-primary);
+}
+
+header > .icon-close {
+    --icon-bg-image: none;
+    --icon-bg-color: var(--clr-primary);
+    --icon-border-radius: 50%;
+    --icon-border-width: 0;
+    --icon-shadow-color: none;
+    width: 4rem;
+    height: 4rem;
+    color: var(--clr-background);
+}
+header > .icon-close:hover {
+    filter: brightness(1.2);
+}
+
+/* --------------------- */
+
+main {
+    padding-block: 1.5rem;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 310px);
+    gap: 2rem;
+    align-items: start;
+    justify-content: center;
+    justify-items: center;
+    border-radius: var(--border-radius);
+}
+
+.collection {
+    justify-self: stretch;
+
+    position: relative;
+    border-radius: inherit;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, .5);
+}
+
+.collection.selected {
+    outline: 10px solid var(--clr-accent);
+}
+
+.collection > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.collection > input:checked ~ label > .icon-add {
+    --icon-bg-color: var(--clr-primary);
+    color: var(--clr-background);
+}
+
+.collection > label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: inherit;
+    background: rgb(109,132,159);
+    background: linear-gradient(180deg, rgba(109,132,159,1) 0%, rgba(209,217,226,.5) 50%, rgba(203,183,175,1) 100%); 
+    transition: all .150s .300s ease-in-out;
+}
+
+.collection .icon-image {
+    --icon-border-radius: var(--border-radius);
+    --icon-border-color: var(--clr-accent);
+    --icon-shadow-color: var(--clr-accent);
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+}
+
+.collection-1 .icon-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/blob/main/Add%20Collection/pexels-oliver-schlotfeldt-6869384.jpg?raw=true");
+}
+
+.collection-2 .icon-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/blob/main/Add%20Collection/pexels-rachel-claire-5490182.jpg?raw=true");
+}
+
+.collection-3 .icon-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/blob/main/Add%20Collection/pexels-helin-gezer-19870568.jpg?raw=true");
+}
+
+.icon-image1 {
+    --icon-border-radius: var(--border-radius);
+    font-family: var(--ff-icon);
+    cursor: pointer;
+}
+
+.content-box {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    border-radius: inherit;
+}
+
+.content-box > h2 {
+    font-size: var(--fs-500);
+}
+.content-box > span {
+    font-weight: 300;
+}
+
+.icon-more,
+.icon-add {
+    --icon-bg-image: none;
+    --icon-bg-color: none;
+    --icon-border-radius: 50%;
+    --icon-border-color: none;
+    --icon-shadow-color: var(--clr-accent);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.icon-more {
+    --icon-border-color: var(--clr-accent);
+    --icon-shadow-color: none;
+    color: var(--clr-accent);
+    transition: transform .5s ease-in-out;
+}
+
+.icon-more:hover {
+    --icon-bg-color: var(--clr-accent);
+    color: var(--clr-background);
+}
+
+.icon-more.active {
+    transform: rotate(180deg);
+}
+
+.icon-add {
+    --icon-border-color: var(--clr-primary);
+    --icon-shadow-color: var(--clr-primary);
+    color: var(--clr-primary);
+    z-index: 1;
+}
+
+.icon-add:hover {
+    --icon-bg-color: var(--clr-primary);
+    color: var(--clr-background);
+}
+
+.more-info-box {
+    width: 100%;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: .25rem;
+    transition: all .2s .3s ease-in-out;
+    transform-origin: top center;
+    opacity: 0;
+    height: 0;
+}
+
+.more-info-box.active {
+    padding: 1rem !important;
+    opacity: 1;
+    height: 100%;
+}
+
+.more-info-box > li {
+    transition: transform .2s ease-in-out;
+    cursor: pointer;
+}
+
+.more-info-box > li:not(:last-child) {
+    border-bottom: 2px solid rgb(0, 0, 0, .1);
+}
+
+.more-info-box > li:hover {
+    transform: translate(5px, -5px);
+}
+
+/* --------------------- */
+
+.new-collection {
+    width: 100%;
+    min-height: 440px;
+    height: 100%;
+    border: 10px dotted var(--clr-primary);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.new-collection > h2,
+.boop {
+    text-transform: uppercase;
+}
+
+.boop {
+    opacity: 0;
+    height: 0;
+    transition: all .3s ease-in-out;
+}
+
+.boop.active {
+    opacity: 1;
+    height: auto;
+}
+
+/* --------------------- */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    padding: 1em 2.5em;
+    background: var(--clr-primary);
+    color: var(--clr-background);
+    border-radius: var(--border-radius);
+    z-index: 1;
+}
+
+.submit:hover {
+    filter: brightness(1.2);
+}
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 375px) {
+}

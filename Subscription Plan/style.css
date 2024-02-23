@@ -1,0 +1,409 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-light-blue: #F1F4FF;
+    --clr-dark-blue: #1B245A;
+    --clr-beige: #D9D4AD;
+    --clr-blue: #16CEFA;
+    --clr-yellow: #FAD70C;
+    --clr-green: #0CFA7E;
+    --clr-red: #FA2812;
+
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+
+
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Raleway', sans-serif;
+    --ff-header: 'Oswald', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-very-light-blue);
+    color: var(--clr-dark-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+form {
+    --form-bg-color: var(--clr-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 480px;
+    padding: 2rem 3rem;
+    border-radius: var(--border-radius);
+    background: white;
+    transition: all .8s linear;
+    position: relative;
+}
+
+form::before {
+    --v-offset: 25px;
+    --h-offset: 5px;
+    content: "";
+    position: absolute;
+    width: calc(100% + (2 * var(--h-offset)));
+    height: calc(100% + var(--v-offset) + var(--h-offset));
+    top: calc(-1 * var(--v-offset));
+    left: calc(-1 * var(--h-offset));
+    border-radius: inherit;
+    background: var(--form-bg-color);
+    z-index: -1;
+
+}
+
+.slides {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    color: var(--clr-very-dark-blue);
+    font-size: inherit;
+    transition: all .75s linear;
+    padding: 1rem;
+}
+
+.slide[data-value="10"] {
+    transform: translateX(0);
+}
+
+.slide[data-value="25"] {
+    transform: translateX(100%);
+}
+
+.slide[data-value="50"] {
+    transform: translateX(200%);
+}
+
+.slide[data-value="100"] {
+    transform: translateX(300%);
+}
+
+.price[data-value="10"] {
+    transform: translateX(0);
+}
+
+.price[data-value="25"] {
+    transform: translateX(-100%);
+}
+
+.price[data-value="50"] {
+    transform: translateX(-200%);
+}
+
+.price[data-value="100"] {
+    transform: translateX(-300%);
+}
+
+
+header,
+#price-plans,
+#downloads {
+    width: 100%;
+    isolation: isolate;
+}
+
+header > .slides {
+    height: 180px;
+}
+
+.header {
+    justify-content: stretch;
+}
+
+.header > h1 {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: var(--fs-1000);
+    text-align: center;
+    border-radius: 10px;
+    padding-block: .5em;
+    background: var(--form-bg-color);
+    color: var(--clr-dark-blue);
+}
+
+#price-plans > .slides {
+    height: 120px;
+}
+
+.value {
+    font-size: var(--fs-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.value > span {
+    font-size: var(--fs-400);
+}
+
+.price > p {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.buttons-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.download,
+.subscribe {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+.download {
+    padding: .5em;
+    aspect-ratio: 1 / 1;
+    width: 50px;
+    border: 1px solid var(--clr-dark-blue);
+    border-radius: 5px;
+    background: inherit;
+}
+
+.download.active {
+    background: var(--form-bg-color);
+}
+
+.download:hover {
+    background: var(--clr-dark-blue);
+    color: white;
+    transition: all .3s linear;
+}
+
+.subscribe {
+    width: 100%;
+    padding-block: 1em;
+    text-transform: capitalize;
+    font-weight: 700;
+    border: 2px solid var(--clr-dark-blue);
+    border-radius: var(--border-radius);
+    background: var(--clr-dark-blue);
+    color: white;
+}
+
+.subscribe:hover {
+    background: white;
+    color: var(--clr-dark-blue);
+    transition: all .3s linear;
+}
+
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

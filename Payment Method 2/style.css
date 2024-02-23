@@ -1,0 +1,417 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-dark-blue: #0F1111;
+    --clr-orange: #C45500;
+    --clr-light-orange: #FCF5EE;
+    --clr-yellow: #FFD814;
+    --clr-medium-yellow: #ccad10;
+    --clr-turquoise: #38909F;
+
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+
+    /* Gradient Colors */
+    --clr-grad-1: #cabda9;
+    --clr-grad-2: #f8f4ed;
+
+
+    /* Shadow Color */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Lato', sans-serif;
+    --ff-header: 'Lato', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 500px;
+    --border-radius: 30px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-very-dark-blue);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #6190E8;
+    background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);
+    background: linear-gradient(to right, #A7BFE8, #6190E8);
+    position: relative;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    width: 10px;
+    height: 10px;
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+/* --------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    border-radius: var(--border-radius);
+    background: white;
+    box-shadow: 5px 5px 25px rgb(0, 0, 0, .5);
+    max-width: 550px;
+}
+
+form > h1 {
+    font-size: var(--fs-700);
+    font-weight: 700;
+    color: var(--clr-orange);
+}
+
+/* --------------------- */
+
+.payment {
+    width: 100%;
+    display: grid;
+    place-items: start;
+    gap: 1.5rem;
+    position: relative;
+    padding: 1rem;
+}
+
+.payment.active {
+    background: var(--clr-light-orange);
+}
+
+.payment:nth-of-type(1) {
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid var(--clr-very-dark-blue);
+}
+
+.payment:nth-of-type(2) {
+    border-radius: 0 0 15px 15px;
+}
+
+.payment > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.payment > input:checked ~ label > .icon-circle {
+    --icon-bg-image: url("https://raw.githubusercontent.com/bjohnson112069/web-images/88005957671483e0220fb393039f30e5bc1fb121/Payment%20Method%202/dollar-sign-solid.svg");
+    outline: 8px solid var(--clr-turquoise);
+    transition: all .3s ease-in-out;
+}
+
+.payment > label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.payment > label > .icon-circle {
+    --icon-border-radius: 50%;
+    --icon-border-width: 1px;
+    --icon-border-color: var(--clr-very-dark-blue);
+    --icon-bg-color: white;
+    width: 32px;
+    height: 32px;
+}
+
+.payment > label > span {
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+.payment-box {
+    margin-left: 3rem;
+    display: grid;
+    place-items: start;
+    gap: .5rem;
+}
+
+.payment-box > section,
+.payment-box > section > div  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: .25rem;
+}
+
+#cc-exp-csc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.payment-box > section > *,
+.payment-box > section > div > * {
+    width: 100%;
+}
+
+#cc-number {
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/88005957671483e0220fb393039f30e5bc1fb121/Payment%20Method%202/credit-card-regular.svg") no-repeat 1rem;
+}
+
+#cc-name {
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/88005957671483e0220fb393039f30e5bc1fb121/Payment%20Method%202/signature-solid.svg") no-repeat 1rem;
+}
+
+#cc-exp {
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/88005957671483e0220fb393039f30e5bc1fb121/Payment%20Method%202/calendar-regular.svg") no-repeat 1rem;
+}
+
+#cc-csc {
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/88005957671483e0220fb393039f30e5bc1fb121/Payment%20Method%202/lock-solid.svg") no-repeat 1rem;
+}
+
+#cc-number,
+#cc-name,
+#cc-exp,
+#cc-csc {
+    background-size: 1.5rem;
+    padding: 1rem 1rem 1rem 3rem;
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid var(--clr-orange);
+    outline: none;
+    border-radius: 5px;
+}
+
+
+#cc-number:focus,
+#cc-name:focus,
+#cc-exp:focus,
+#cc-csc:focus {
+    outline: 2px solid var(--clr-orange);
+}
+
+.explanation {
+    font-size: var(--fs-300);
+}
+
+#remember {
+    width: 100%;
+    position: relative;
+}
+
+#remember > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+#remember > label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#remember > label > .icon-check {
+    --icon-border-width: 2px;
+    --icon-border-color: var(--clr-very-dark-blue);
+    width: 25px;
+    height: 25px;
+    transition: all .3s ease-in-out;
+}
+
+#remember > input:checked ~ label > .icon-check {
+    --icon-bg-image: url("https://raw.githubusercontent.com/bjohnson112069/web-images/88005957671483e0220fb393039f30e5bc1fb121/Payment%20Method%202/check-solid.svg");
+    --icon-border-color: var(--clr-orange);
+}
+
+.learn-more {
+    max-width: 45ch;
+}
+
+.learn-more > span {
+    cursor: pointer;
+    color: var(--clr-turquoise);
+}
+
+.learn-more > span:hover {
+    color: var(--clr-orange);
+    transition: color .3s ease-in-out;
+}
+
+#continue {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    padding-block: 2em;
+    border-radius: 15px;
+    background: var(--clr-yellow);
+}
+
+#continue:hover {
+    background: var(--clr-medium-yellow);
+    transition: background .3s ease-in-out;
+}
+
+/* --------------------- */
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 500px) {
+    
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+} 
+
+@media (max-width: 375px) {
+}

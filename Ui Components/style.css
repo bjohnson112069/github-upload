@@ -1,0 +1,684 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-dark-grey: #101010;
+    
+    --clr-body-bg: #202020;
+    
+
+    /* Gradient Colors */
+    --clr-grad-1: #101010;
+    --clr-grad-2: #232323;
+    --clr-grad-3: #373737;
+    --clr-grad-4: #232323;
+    --clr-grad-5: #101010;
+
+
+    /* Shadow Color */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 4rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Lato', sans-serif;
+    --ff-header: 'Oswald', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 30px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-very-dark-blue);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "product-slider locations"
+    "product-slider business-card";
+    color: var(--clr-text);
+    padding: 1rem;
+    background: #9796f0;
+    background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);
+    background: linear-gradient(to right, #fbc7d4, #9796f0); 
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes entrance {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes exit {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+    }
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    min-width: 10px;
+    min-height: 10px;
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------- */
+
+.locations {
+    grid-area: locations;
+    justify-self: center;
+}
+
+.dropdown,
+.dropdown-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown {
+    justify-content: center;
+    transition: all 1s;
+}
+
+.dropdown-btn {
+    --border-radius: 10px;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1em 1.5em;
+    border-radius: var(--border-radius);
+    background: linear-gradient(90deg,
+        var(--clr-grad-1),
+        var(--clr-grad-2),
+        var(--clr-grad-3),
+        var(--clr-grad-4),
+        var(--clr-grad-5)
+    );
+    color:white;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .25);
+}
+
+.fa-chevron-down {
+    transition: transform .3s ease-in-out;
+}
+
+.dropdown-btn.active > .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.dropdown-items {
+    justify-content: start;
+    transition: all .3s ease-in-out;
+}
+
+.dropdown-items[aria-hidden="true"] {
+    height: 0;
+}
+
+.dropdown-items[aria-hidden="false"] {
+    height: 100%;
+}
+
+.dropdown-items[aria-hidden="false"] > .dropdown-item {
+    scale: 1;
+}
+
+.dropdown-item {
+    --border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    scale: 0;
+    transition: all .3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    color: white;
+}
+
+.dropdown-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    transition: width .5s;
+    border-radius: inherit;
+    background: linear-gradient(90deg,
+        var(--clr-grad-1),
+        var(--clr-grad-2),
+        var(--clr-grad-3),
+        var(--clr-grad-4),
+        var(--clr-grad-5)
+    );
+    border-radius: var(--border-radius);
+    z-index: -1;
+}
+
+.dropdown-item:hover::after { 
+    width: 100%;
+}
+
+.icon-flag {
+    width: 100px;
+    height: 50px;
+    background-size: cover;
+}
+
+.icon-de {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/de.webp");
+}
+.icon-no {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/no.webp");
+}
+.icon-fi {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/fi.webp");
+}
+.icon-eu {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/eu.webp");
+}
+.icon-dk {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/dk.webp");
+}
+.icon-se {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/se.webp");
+}
+
+
+/* --------------------- */
+
+.business-card {
+    grid-area: business-card;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    aspect-ratio: 2 / 1;
+    width: 100%;
+    max-width: 570px;
+    position: relative;
+    perspective: 150rem;;
+}
+
+.card:hover .card-front {
+    transform: rotateX(-180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateX(0deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    background: linear-gradient(90deg,
+        var(--clr-grad-1),
+        var(--clr-grad-2),
+        var(--clr-grad-3),
+        var(--clr-grad-4),
+        var(--clr-grad-5)
+    );
+    line-height: 1;
+}
+
+.card-front {
+    justify-content: center;
+}
+
+.sticker {
+    font-family: 'Caveat Brush', sans-serif;
+    display: inline-grid;
+    grid-template-areas: "text-area";
+    place-items: center;
+    font-size: var(--fs-1000);
+    color: purple;
+    grid-area: text-area;
+}
+
+.sticker::before {
+    content: attr(data-text);
+    -webkit-text-stroke: 0.21em white;
+    grid-area: text-area;
+}
+
+.sticker::after {
+    content: attr(data-text);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.75),
+        -1px -1px 2px rgba(0, 0, 0, 0.75);
+   grid-area: text-area;
+}
+
+.sticker span {
+    grid-area: text-area;
+}
+
+.card-back {
+    transform: rotateX(180deg);
+    color: white;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas: 
+        "image name"
+        "image email"
+        "image phone"
+        "image web"
+        "image location";
+    align-items: center;
+    align-content: center;
+    column-gap: 1rem;
+    row-gap: .25rem;
+}
+
+.card-back::before {
+    content: "";
+    position: absolute;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+    background: purple;
+    z-index: -1;
+}
+
+.icon-profile-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/th-2633759514.webp");
+    --icon-border-radius: 50%;
+    --icon-border-width: 5px;
+    --icon-border-color: white;
+    grid-area: image;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+}
+
+.name-box {
+    grid-area: name;
+    margin-bottom: 1rem;
+}
+
+.name-box > h2 {
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box-email { grid-area: email; }
+.box-phone { grid-area: phone; }
+.box-web { grid-area: web; }
+.box-location { grid-area: location; }
+
+.icon-box > .icon {
+    --icon-bg-color: purple;
+    --icon-border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+/* --------------------- */
+
+.product-slider {
+    grid-area: product-slider;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 375px;
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+}
+
+.slides {
+    /* flex: 1; */
+    width: 100%; /* important for horizontal scrolling */
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; /* important */
+    user-select: none;
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    /* remove whitespaces between inline-block elements using comments in html ref. index.html */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    /* width: 100%;
+    height: 100%; */
+    width: 375px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    white-space: initial;
+    background: linear-gradient(90deg,
+        var(--clr-grad-1),
+        var(--clr-grad-2),
+        var(--clr-grad-3),
+        var(--clr-grad-4),
+        var(--clr-grad-5)
+    );
+    color: white;
+    position: relative;
+    padding: 2.25rem;
+}
+
+.image-wrapper {
+    /* --icon-bg-image: url("./images/pexels-garrett-morrow-1649771.webp"); */
+    width: 100%;
+    height: 220px;
+    background-size: contain;
+}
+
+.slide[data-value="1"] > .image-wrapper {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/pexels-garrett-morrow-1649771.webp");
+}
+
+.slide[data-value="2"] > .image-wrapper {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/pexels-alex-kinkate-205926.webp");
+}
+
+.slide[data-value="3"] > .image-wrapper {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/pexels-jessica-lewis-%F0%9F%A6%8B-thepaintedsquare-2919003.webp");
+}
+
+.slide[data-value="4"] > .image-wrapper {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/pexels-pixabay-164710.webp");
+}
+
+.title {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.profile-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "image name"
+        "image date";
+    align-items: center;
+    column-gap: 1rem;
+    line-height: 1;
+}
+
+.profile-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Ui%20Components/th-2633759514.webp");
+    --icon-border-radius: 50%;
+    grid-area: image;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+}
+
+.profile-name {
+    grid-area: name;
+}
+
+.profile-date {
+    grid-area: date;
+}
+
+.description {
+}
+
+.controls {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.icon-circle {
+    --icon-border-radius: 50%;
+    --icon-border-width: 1px;
+    --icon-border-color: var(--clr-very-dark-grey);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.icon-circle:hover {
+    --icon-bg-color: purple;
+}
+
+.icon-circle.active {
+    --icon-bg-color: var(--clr-very-dark-grey);
+}
+
+/* --------------------- */
+
+@media (max-width: 1000px) {
+    
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-template-areas: 
+    "product-slider"
+    "business-card"
+    "locations";
+}
+}
+
+@media (max-width: 500px) {
+    
+
+    .card-back {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(6, min-content);
+        grid-template-areas: 
+            "image name"
+            "image name"
+            "email email"
+            "phone phone"
+            "web web"
+            "location location";
+        padding: 0;
+        row-gap: 0;
+    }
+
+    
+    .card-back::before {
+        grid-column: 1 / -1;
+        grid-row: 1 / 3;
+    }
+
+    
+    .icon-profile-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .name-box {
+        margin-bottom: 0;
+    }
+
+    .icon-box {
+        gap: .25rem;
+        margin-left: 1rem;
+    }
+    
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+} 
+
+@media (max-width: 375px) {
+}

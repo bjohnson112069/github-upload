@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Settings Widget (Non-Responsive)</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <section id="more-options" class="dropdown slide slide-left">
+            <button class="dropdown-btn active" type="button">
+                <span class="fa-solid fa-ellipsis"></span>
+            </button>
+            <ul class="dropdown-items" aria-hidden="false">
+                <li class="dropdown-item" data-value="edit">Edit your list</li>
+                <li class="dropdown-item active" data-value="account">Account Settings</li>
+                <li class="dropdown-item" data-value="profile">View your profile</li>
+            </ul>
+        </section>
+        <section id="customize" class="panel slide slide-up">
+            <h1>Customize your widget</h1>
+            <ul class="choices" role="list">
+                <li class="option">
+                    <input type="radio" id="radio-one" name="radio" value="1">
+                    <label for="radio-one">
+                        <div class="icon icon-circle" aria-label="Choice"></div>
+                        <span>Display Contact button</span>
+                    </label>
+                </li>
+                <li class="option">
+                    <input type="radio" id="radio-two" name="radio" value="2">
+                    <label for="radio-two">
+                        <div class="icon icon-circle" aria-label="Choice"></div>
+                        <span>Hide email address</span>
+                    </label>
+                </li>
+                <li class="option">
+                    <input type="radio" id="radio-three" name="radio" value="3">
+                    <label for="radio-three">
+                        <div class="icon icon-circle" aria-label="Choice"></div>
+                        <span>Display Publish button</span>
+                    </label>
+                </li>
+            </ul>
+            <div class="buttons-box">
+                <button type="button" value="cancel">Cancel</button>
+                <button type="button" value="save">Save</button>
+            </div>
+            <div class="notification">
+                <p>Settings Saved ...</p>
+            </div>
+        </section>
+        <section id="other" class="panel slide slide-right">
+            <h1>Other</h1>
+            <ul class="choices" role="list">
+                <li class="option">
+                    <input type="checkbox" id="check-one" name="check" value="1">
+                    <label for="check-one">
+                        <div class="icon icon-square" aria-label="Choice"></div>
+                        <span>Turn on in-app notifications.</span>
+                    </label>
+                </li>
+                <li class="option">
+                    <input type="checkbox" id="check-two" name="check" value="2">
+                    <label for="check-two">
+                        <div class="icon icon-square" aria-label="Choice"></div>
+                        <span>Receive weekly newsletters and other offers.</span>
+                    </label>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;500;600;700;900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

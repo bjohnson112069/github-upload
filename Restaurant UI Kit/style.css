@@ -1,0 +1,384 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #202020;
+    
+    /* Colors */
+    --clr-very-dark-grey: #1F2125;
+    --clr-yellow: #FFB206;
+    --clr-blue: #919AEB;
+    
+
+    /* Gradient Colors */
+
+    /* Shadow Color */
+
+    --fs-900: 9.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.325rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Poppins', sans-serif;
+    --ff-header: 'Poppins', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 440px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--clr--dark-blue-grey);
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: var(--border-radius);
+    background: var(--clr-very-dark-grey);
+}
+
+/* --------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-800);
+    color: white;
+}
+
+header > h1 {
+    font-size: inherit;
+}
+
+header > .fa-solid {
+    color: var(--clr-yellow);
+    cursor: pointer;
+}
+
+header > .fa-solid:hover {
+    filter: brightness(1.2);
+}
+
+/* --------------------- */
+
+main {}
+
+
+/* --------------------- */
+
+.restaurant {
+    height: 100%;
+    width: 375px;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: .75rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-size: var(--fs-200);
+    position: relative;
+    overflow: hidden;
+    background: white;
+    color: var(--clr-very-dark-grey);
+}
+
+.image-wrapper {
+    aspect-ratio: 1 / 1;
+    background: url(https://github.com/bjohnson112069/web-images/blob/main/Restaurant%20UI%20Kit/pexels-julie-aagaard-2097090.jpg?raw=true) no-repeat center center;
+    background-size: cover;
+    border-radius: inherit;
+    box-shadow: 0 10px 10px -5px rgb(0, 0, 0, 0.5);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.title-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-box > h2 {
+    font-size: var(--fs-400);
+}
+
+.icon-box:nth-of-type(2) {
+    align-items: flex-start;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    line-height: 1.1;
+}
+
+.icon-box > .fa-regular,
+.icon-box > .fa-solid {
+    font-size: 1rem;
+    color: var(--clr-yellow);
+}
+
+.icon-box:nth-of-type(1) > .fa-solid {
+    color: var(--clr-blue);
+}
+
+.reserve {
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+    transform-origin: bottom left;
+}
+
+.reserve > p {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-weight: 700;
+}
+
+.reserve:hover {
+    transform: scale(1.2);
+}
+
+
+/* --------------------- */
+
+.reservation {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding-inline: 1rem;
+    border-radius: inherit;
+    background: rgba(0, 0, 0, 0.8);
+    transition: transform 1s ease-in-out;
+    transform: translateX(100%);
+}
+
+.reservation.active {
+    transform: translateX(0);
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--clr-yellow);
+}
+
+.reservation > h1 {
+    font-size: var(--fs-400);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.form-row {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    justify-content: center;
+    align-items: center;
+    gap: .25rem 1rem;
+}
+
+.reservation select,
+.reservation input,
+.submit {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 300;
+    outline: none;
+    background: black;
+    padding: 0.25em 0.5em;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.reservation input::placeholder {
+    color: white;
+}
+
+.submit {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 350ms ease-in-out;
+    overflow: hidden;
+    color: var(--clr-yellow);
+    z-index: 1;
+}
+
+.submit:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: var(--clr-yellow);
+    transition: width 350ms ease-in-out;
+    z-index: -1;
+}
+
+.submit:hover {
+    color: black;
+    border-color: var(--clr-yellow);
+}
+.submit:hover:after {
+    width: 110%;
+}
+
+
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 375px) {
+}

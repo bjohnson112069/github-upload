@@ -1,0 +1,358 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-dark-blue: #1F2246;
+    --clr-very-light-blue: #E3E0EF; /* borders */
+    --clr-light-blue: #F4F7FF; /* main bg */
+    --clr-medium-blue: #c8d9f0;
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+    --clr-design-1: #C1CDFC;
+    --clr-design-2: #E4D2FB;
+    --clr-engineering-1: #F4C3D9;
+    --clr-engineering-2: #FBD2DA;
+    --clr-operations-1: #C0EBFE;
+    --clr-operations-2: #E8D8FD;
+    --clr-people-1: #C1F7E4;
+    --clr-people-2: #CEE5FB;
+    --clr-sales-1: #BED8F4;
+    --clr-sales-2: #F3D5DE;
+    --clr-university-1: #FDDDC8;
+    --clr-university-2: #D9D9F8;
+    
+    
+
+    /* Gradient Colors */
+    --clr-grad-1: #cabda9;
+    --clr-grad-2: #f8f4ed;
+
+
+    /* Shadow Color */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Roboto', sans-serif;
+    --ff-header: 'Merriweather', serif;;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-very-dark-blue);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    background: var(--clr-light-blue);
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes entrance {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes exit {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+    }
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    min-width: 10px;
+    min-height: 10px;
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------- */
+
+.job-board {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.job-board > * {
+    transform: translateY(100vh);
+    transition: all 2s ease-in-out;
+}
+.job-board.slide-up > * {
+    transform: translateY(0);
+}
+
+.job-board > h1 {
+    font-size: var(--fs-800);
+    font-weight: 700;
+}
+
+.job-board > p {
+    text-align: center;
+    max-width: 82ch;
+}
+
+.jobs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.job {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.75rem 2.5rem;
+    border-radius: var(--border-radius);
+    background: white;
+    box-shadow: 0px 10px 30px var(--clr-medium-blue);
+    transition: all .75s ease-in-out;
+}
+
+.job:hover .icon {
+    animation: spin 1s forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: inherit;
+}
+
+.title > span {
+    font-size: var(--fs-600);
+    font-weight: 500;
+}
+
+.job > button {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    color: inherit;
+    border-radius: inherit;
+    border: 2px solid var(--clr-very-light-blue);
+    width: 100%;
+    padding-block: 1em;
+    transition: all .5s ease-in-out;
+}
+
+.job > button:hover {
+    border-color: var(--clr-very-dark-blue);
+    background: var(--clr-very-dark-blue);
+    color: white;
+}
+
+.icon {
+    --icon-border-radius: var(--border-radius);
+    width: 55px;
+    height: 55px;
+    font-size: var(--fs-700);
+}
+
+.icon-design {
+    background: linear-gradient(135deg, var(--clr-design-1), var(--clr-design-2));
+}
+
+.icon-engineering {
+    background: linear-gradient(135deg, var(--clr-engineering-1), var(--clr-engineering-2));
+}
+
+.icon-operations {
+    background: linear-gradient(135deg, var(--clr-operations-1), var(--clr-operations-2));
+}
+
+.icon-people {
+    background: linear-gradient(135deg, var(--clr-people-1), var(--clr-people-2));
+}
+
+.icon-sales {
+    background: linear-gradient(135deg, var(--clr-sales-1), var(--clr-sales-2));
+}
+
+.icon-university {
+    background: linear-gradient(135deg, var(--clr-university-1), var(--clr-university-2));
+}
+
+/* --------------------- */
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 500px) {
+    
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+} 
+
+@media (max-width: 375px) {
+}

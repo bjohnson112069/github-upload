@@ -1,0 +1,518 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-light-blue: #F2F8FF; /* BG Color */
+    --clr-light-blue: #DBDCE6; /* border color */
+    --clr-desaturated-blue: #E3E7F8; /* Circle BG color */
+    --clr-purple: #5847BC;
+    --clr-facebook: #3C5B93;
+    --clr-twitter: #28A4EF;
+
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+
+
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Poppins', sans-serif;
+    --ff-header: 'PT Serif', serif;
+
+    --max-width: 1240px;
+    --min-width: 500px;
+    --border-radius: 30px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-purple);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 1fr 75px 1fr;
+    background: var(--clr-very-light-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    width: 10px;
+    height: 10px;
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+/* --------------------- */
+
+.dropdown,
+.dropdown-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown {
+    justify-content: center;
+}
+
+.dropdown-btn {
+    --border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1em 1.5em;
+    border: 2px solid var(--clr-light-blue);
+    background: white;
+    color: inherit;
+    cursor: pointer;
+}
+
+.fa-chevron-down {
+    transition: transform .3s ease-in-out;
+}
+
+.dropdown-btn.active > .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.dropdown-items {
+    justify-content: start;
+    background: white;
+    border: 2px solid transparent;
+    height: auto;
+    transition: all .8s ease-in-out;
+}
+
+.dropdown-items[aria-hidden="true"] {
+    max-height: 0;
+    /* height: 0; */
+}
+
+.dropdown-items[aria-hidden="false"] {
+    max-height: 300px;
+    border-color: var(--clr-light-blue);
+    /* height: 100%; */
+}
+
+.dropdown-items[aria-hidden="false"] > .dropdown-item {
+    scale: 1;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    scale: 0;
+    transition: all .3s ease-in;
+}
+
+.dropdown-item:hover {
+    color: white;
+}
+
+.dropdown-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    transition: width .5s;
+    border-radius: inherit;
+    background: var(--clr-purple);
+    color: white;
+    z-index: -1;
+}
+
+.dropdown-item:hover::after { 
+    width: 100%;
+}
+
+/* --------------------- */
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    padding: 6rem 4rem;
+    box-shadow: 0px 15px 50px var(--clr-desaturated-blue);
+    border-radius: var(--border-radius);
+    background: white;
+    transition: all 1s ease-in-out;
+}
+
+/* Create */
+.panel:nth-of-type(1) {
+    grid-area: 1 / 2 / 3 / 4;
+    align-self: end;
+    justify-self: start;
+    z-index: 2;
+}
+
+/* Promote */
+.panel:nth-of-type(2) {
+    grid-area: 2 / 1 / 4 / 3;
+    align-self: start;
+    justify-self: end;
+}
+
+.panel > h1 {
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+.description > span {
+    font-size: var(--fs-300);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+}
+
+.create > .input-box {
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.promote > .input-box {
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+}
+
+.input-box > * {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.input-box > section > label {
+    display: none;
+}
+
+.input-box > section > input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    border-radius: inherit;
+    border: 2px solid var(--clr-light-blue);
+    padding: 1em 1.5em;
+}
+
+.input-box > section > input:placeholder {
+    color: inherit;
+}
+
+.buttons-box,
+.icons-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 10px;
+}
+
+.buttons-box > button {
+    outline: none;
+    border-radius: inherit;
+    background: white;
+    border: 2px solid var(--clr-light-blue);
+    color: var(--clr-purple);
+    width: 100%;
+    padding-block: 1em;
+    transition: color .35s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.buttons-box > button::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: var(--clr-purple);
+    transition: width 350ms ease-in-out;
+    z-index: -1;
+}
+
+.buttons-box > button:hover {
+    border-color: var(--clr-purple);
+    color: white;
+}
+
+.buttons-box > button:hover::after {
+    width: 110%;
+}
+
+
+.icon {
+    --icon-border-radius: 5px;
+    --icon-text-color: white;
+    --icon-border-width: 2px;
+    width: 42px;
+    height: 42px;
+    transition: color 350ms ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: width 350ms ease-in-out;
+    z-index: -1;
+}
+
+.icon:hover:after {
+    width: 110%;
+}
+
+.icon-twitter {
+    --icon-bg-color: var(--clr-twitter);
+    --icon-border-color: var(--clr-twitter);
+}
+
+.icon-twitter:hover {
+    --icon-text-color: var(--clr-twitter);
+}
+
+.icon-facebook {
+    --icon-bg-color: var(--clr-facebook);
+    --icon-border-color: var(--clr-facebook);
+}
+
+.icon-facebook:hover {
+    --icon-text-color: var(--clr-facebook);
+}
+
+/* --------------------- */
+
+.bg-circle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    width: 600px;
+    border-radius: 50%;
+    border: 25px solid var(--clr-very-light-blue);
+    outline: 15px solid var(--clr-desaturated-blue);
+    background: var(--clr-desaturated-blue);
+    z-index: -1;
+}
+
+.bg-circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    width: 800px;
+    border-radius: inherit;
+    border: 100px solid var(--clr-very-light-blue);
+    outline: 8px solid var(--clr-desaturated-blue);
+}
+
+/* --------------------- */
+
+
+/* --------------------- */
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 500px) {
+    
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+} 
+
+@media (max-width: 375px) {
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Billing Cards</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <section id="profile">
+            <img src="https://github.com/bjohnson112069/web-images/raw/main/Billing%20Cards/51070.webp" alt="user avatar" title="https://www.freepik.com/free-ai-image/3d-illustration-young-man-with-beard-mustache_89262702.htm#query=avatar&position=15&from_view=keyword&track=sph&uuid=c7549062-0753-416b-96ac-52eb10df84a9 Image by flatart on Freepik">
+            <h1>John Smith</h1>
+            <p>Premium Plan</p>
+            <div class="btn-box">
+                <button class="pri-btn" type="button">Upgrade Plan</button>
+                <button class="sec-btn" type="button">Cancel Plan</button>
+            </div>
+        </section>
+
+        <section id="billing">
+            <h1>Account Summary</h1>
+            <div class="summary">
+                <span class="label">Account Number</span>
+                <span class="value">XXXX XXXX XXXX XXXX</span>
+                <span class="label">Previous Balance</span>
+                <span class="value">$XXX.XX</span>
+                <span class="label">Payment Credits</span>
+                <span class="value">$XXX.XX</span>
+                <span class="label">Purchases</span>
+                <span class="value">$XXX.XX</span>
+                <span class="label">New Balance</span>
+                <span class="value">$XXX.XX</span>
+                <span class="label">Minimum Payment Due</span>
+                <span class="value">$XXX.XX</span>
+                <span class="label">Payment Due Date</span>
+                <span class="value">MM/DD/YYYY</span>
+            </div>
+        </section>
+
+        <section id="history">
+            <h1>Transactions</h1>
+            <ul class="transactions" role="list">
+                <li class="transaction">
+                    <span class="date">June 26, 2021</span>
+                    <span class="amount">$25.00</span>
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </li>
+                <li class="transaction">
+                    <span class="date">June 26, 2021</span>
+                    <span class="amount">$25.00</span>
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </li>
+                <li class="transaction">
+                    <span class="date">June 26, 2021</span>
+                    <span class="amount">$25.00</span>
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </li>
+                <li class="transaction">
+                    <span class="date">June 26, 2021</span>
+                    <span class="amount">$25.00</span>
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </li>
+                <li class="transaction">
+                    <span class="date">June 26, 2021</span>
+                    <span class="amount">$25.00</span>
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </li>
+                <li class="transaction">
+                    <span class="date">June 26, 2021</span>
+                    <span class="amount">$25.00</span>
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </li>
+            </ul>
+            <button class="sec-btn" type="button">Show All Invoices</button>
+        </section>
+
+        <section id="invoice" class="active">
+            <div class="invoice--hdr">
+                <span>invoice</span>
+                <h2 class="name">John Smith</h2>
+                <p clas="address">123 Anywhere St., Any City, ST 12345</p>
+            </div>
+            <ul class="items" role="list">
+                <li class="items--hdr">
+                    <span>Items</span>
+                    <span>Qty</span>
+                    <span>Price</span>
+                    <span>Total</span>
+                </li>
+                <li class="item">
+                    <span class="item--name">Consulting</span>
+                    <span class="item--qty">2</span>
+                    <span class="item--price">$100</span>
+                    <span class="item--total">$200</span>
+                </li>
+                <li class="item">
+                    <span class="item--name">Development</span>
+                    <span class="item--qty">1</span>
+                    <span class="item--price">$100</span>
+                    <span class="item--total">$100</span>
+                </li>
+            </ul>
+            <div class="invoice--total">
+                <h2>Total Amount
+                    <span class="total">$300</span>
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis optio dignissimos impedit perferendis. Expedita rerum sint in esse debitis! Veritatis.</p>
+            </div>
+            <button class="sec-btn" type="button">
+                <span>Download this invoice</span>
+                <i class="fa-solid fa-download"></i>
+            </button>
+
+            <div id="payment">
+                <div class="payment--hdr">
+                    <h2>Pay this invoice</h2>
+                    <p>Make payment for this invoice by filling in the details</p>
+                </div>
+                <form action="">
+                    <div id="cc-box">
+                        <label for="cc-number">Card number</label>
+                        <input id="cc-number" name="cc-number" autocomplete="cc-number" inputmode="numeric" pattern="[\d ]{10,30}" placeholder="XXXX XXXX XXXX XXXX" required>
+                    </div>
+                    <div id="cc-exp-csc">
+                        <div>
+                            <label for="cc-exp">Expiry date</label>
+                            <input id="cc-exp" name="cc-exp" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div>
+                            <label for="cc-csc">Security code</label>
+                            <input id="cc-csc" name="cc-csc" autocomplete="cc-csc" inputmode="numeric" maxlength="3" placeholder="CVC" required>
+                        </div>
+                    </div>
+                    <button id="pay-now" class="sec-btn" type="submit">PAY NOW</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

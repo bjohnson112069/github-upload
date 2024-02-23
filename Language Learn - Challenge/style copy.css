@@ -1,0 +1,539 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #303030;
+
+    /* Text Color */
+    --clr-very-dark-blue: #231F49;
+    /* Backgroun Colors */
+    --clr-blue-1: #161C3F;
+    --clr-blue-2: #1F264F;
+    --clr-blue-3: #EAEDFA;
+    /* Blue Accesnt */
+    --clr-blue-4: #6D83FF;
+    /* Grey Accent */
+    --clr-grey-1: #EBEBF0;
+    /* Gradient */
+    --clr-orange-1: #FF7F60;
+    --clr-orange-2: #FF814E;
+    --clr-orange-3: #FF8F43;
+    --clr-orange-4: #FF972E;
+
+    --fs-600: 2rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+
+    --max-width: 1600px;
+    --max-height: 1200px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.5;
+    font-family: 'Biryani', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    background-color: var(--clr-body-bg);
+    color: red;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-container {
+    max-width: var(--max-width);
+    min-height: var(--max-height);
+    min-width: var(--min-width);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg,
+        var(--clr-blue-1),
+        var(--clr-blue-1) 30%,
+        var(--clr-blue-2) 30%,
+        var(--clr-blue-2) 70%,
+        var(--clr-blue-1) 70%,
+        var(--clr-blue-1) 100%
+    );
+
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+text-wrap: balance;
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: var(--clr-very-dark-blue);
+    max-width: 1150px;
+    width: 100%;
+    padding-inline: 1rem;
+}
+ 
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(34, 33px);
+    grid-template-rows: repeat(23, 33px);
+    padding: 1rem;
+}
+
+/* --------------------- */
+
+.modal {
+    min-width: 100px;
+    min-height: 100px;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: -10px -10px 20px rgb(0, 0, 0, .1), 10px 10px 20px rgb(0, 0, 0, .25);
+}
+
+.modal-one {
+    grid-area: 1 / 16 / 23 / 35;
+}
+
+.modal-two {
+    grid-area: 3 / 1 / 13 / 14;
+}
+
+.modal-three {
+    grid-area: 15 / 10 / 24 / 18;
+    z-index: 2;
+}
+
+h1 {
+    font-size: var(--fs-500);
+    font-weight: 900;
+}
+
+h2 {
+    font-size: var(--fs-400);
+    font-weight: 900;
+}
+
+/* --------------------- */
+.btn {
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border: var(--btn-border-width, 2px) solid var(--btn-border-color, red);
+    background: linear-gradient(90deg,
+        var(--btn-grad-color-1, white) 25%,
+        var(--btn-grad-color-2, red) 50%,
+        var(--btn-grad-color-3, green) 75%,
+        var(--btn-grad-color-4, blue) 100%);
+    border-radius: var(--btn-border-radius, var(--border-radius));
+    color: var(--btn-text-color, red);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .8
+}
+
+.btn-normal {
+    --btn-border-color: var(--clr-orange-1);
+    --btn-grad-color-1: white;
+    --btn-grad-color-2: white;
+    --btn-grad-color-3: white;
+    --btn-grad-color-4: white;
+    --btn-text-color: var(--clr-very-dark-blue);
+}
+
+.btn-fancy,
+.btn.selected {
+    --btn-border-color: none;
+    --btn-grad-color-1: var(--clr-orange-1);
+    --btn-grad-color-2: var(--clr-orange-2);
+    --btn-grad-color-3: var(--clr-orange-3);
+    --btn-grad-color-4: var(--clr-orange-4);
+    --btn-text-color: white;
+}
+
+/* --------------------- */
+
+.modal-one {}
+
+.modal-one > form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-one .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.modal-one h1 {
+    text-align: center;
+}
+
+.progress-bar {
+    height: 5px;
+    border-radius: 100px;
+}
+
+.outer-bar {
+    width: 225px;
+    background: var(--clr-grey-1);
+}
+
+.inner-bar {
+    width: 70%;
+    background: var(--clr-blue-4);
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--fs-500);
+    font-weight: 900;
+    margin-top: 1.125rem;
+}
+
+.answer {
+    position: relative;
+    font-weight: initial;
+    font-size: initial;
+    margin-left: 2rem;
+}
+
+.answer > input {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.answer > input:checked ~ label > .circle {
+    background: linear-gradient(90deg,
+        var(--clr-orange-1, white) 25%,
+        var(--clr-orange-2, red) 50%,
+        var(--clr-orange-3, green) 75%,
+        var(--clr-orange-4, blue) 100%);
+}
+
+.answer > input:checked ~ label > .circle > svg {
+    display: block;
+}
+
+.answer > label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.circle {
+    aspect-ratio: 1 / 1;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-blue-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.circle > svg {
+    display: none;
+}
+
+.btn-skip {
+    --btn-border-color: var(--clr-grey-1);
+    --btn-border-radius: none;
+    --btn-grad-color-1: white;
+    --btn-grad-color-2: white;
+    --btn-grad-color-3: white;
+    --btn-grad-color-4: white;
+    color: grey;
+    width: 100%;
+    padding-block: 1em;
+}
+
+.btn-submit {
+    --btn-border-width: none;
+    --btn-border-radius: none;
+    font-size: var(--fs-500);
+    width: 100%;
+    padding-block: 3.75em;
+}
+
+
+/* --------------------- */
+.modal-two {}
+
+.modal-two > .container {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.modal-two > .container > h1 {}
+
+.tier-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.tier-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.tier-item.selected {
+    background: var(--clr-blue-3);
+}
+
+.tier-box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.tier-box > h2 {}
+
+.tier-box > p {}
+
+.btn-select {
+    padding: 1em 1.5em;
+}
+
+
+
+/* --------------------- */
+.modal-three {}
+
+.modal-three > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 3.25rem;
+}
+
+.progress-circle {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-circle {
+    --angle: 240deg;
+    width: 105px;
+    background: conic-gradient( 
+        var(--clr-blue-4) var(--angle),
+        var(--clr-grey-1) var(--angle));
+}
+
+.inner-circle {
+    width: 95px;
+    background: white;
+}
+
+.inner-circle > img {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-continue {
+    font-size: var(--fs-300);
+    padding: .75em 3.375em;
+}
+
+/* --------------------- */
+
+@media (max-width: 1175px) {
+    .grid-container {
+        grid-template-columns: repeat(22, 33px);
+        grid-template-rows: repeat(33, 33px);
+    }
+    
+    .modal-one {
+        grid-area: 1 / 3 / 23 / 21;
+    }
+
+    .modal-two {
+        grid-area: 24 / 1 / 34 / 14;
+    }
+
+    .modal-three {
+        grid-area: 24 / 15 / 33 / 23;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 775px) {
+    .grid-container {
+        grid-template-columns: repeat(17, 33px);
+        grid-template-rows: repeat(43, 33px);
+    }
+    
+    .modal-one {
+        grid-area: 1 / 1 / 23 / 18;
+    }
+
+    .modal-two {
+        grid-area: 24 / 3 / 34 / 16;
+    }
+
+    .modal-three {
+        grid-area: 35 / 5 / 44 / 13;
+        z-index: 2;
+    }
+} 
+
+@media (max-width: 630px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(43, 33px);
+    }
+    
+    .modal-one {
+        grid-area: 1 / 1 / 23 / 3;
+    }
+
+    .modal-two {
+        grid-area: 24 / 1 / 34 / 3;
+    }
+
+    .modal-three {
+        grid-area: 35 / 1 / 44 / 2;
+        z-index: 2;
+    }
+} 
+
+@media (max-width: 450px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(43, 33px);
+    }
+    
+    .modal-one {
+        grid-area: 1 / 1 / 23 / 1;
+    }
+
+    .modal-two {
+        grid-area: 24 / 1 / 34 / 1;
+    }
+
+    .modal-three {
+        grid-area: 35 / 1 / 44 / 2;
+        z-index: 2;
+    }
+
+} 
+
+ 

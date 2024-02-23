@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+   <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Projects Board (Not Responsive)</title>
+</head>
+<body>
+    <div class="content-container">
+        <div class="recorder">
+            <header class="controls window-controls">
+                <div class="wrapper recording-wrapper">
+                    <div class="timer">00:00:00</div>
+                    <div class="icon icon-record" aria-label="Record"></div>
+                    <div class="icon icon-pause" aria-label="Pause"></div>
+                    <div class="icon icon-stop" aria-label="Stop"></div>
+                </div>
+                <div class="wrapper window-wrapper">
+                    <div class="icon icon-minimize" aria-label="Minimize"></div>
+                    <div class="icon icon-close" aria-label="Close"></div>
+                </div>
+            </header>
+            <main>
+                <canvas class="draw"></canvas>
+                <video class="player" preload="none"></video>
+            </main>
+            <footer class="controls media-controls">
+                <div class="wrapper draw-wrapper">
+                    <div class="icon icon-draw" aria-label="Draw"></div>
+                    <p>Draw</p>
+                </div>
+                <div class="wrapper zoom-wrapper">
+                    <div class="icon icon-zoom-in" aria-label="Zoom in"></div>
+                    <div class="icon icon-zoom-out" aria-label="Zoom out"></div>
+                    <p class="zoom-level">X1.0</p>
+                </div>
+                <div class="wrapper media-wrapper">
+                    <div class="icon icon-camera" aria-label="Camera On/Off"></div>
+                    <div class="icon icon-microphone" aria-label="Microphone On/Off"></div>
+                    <div class="icon icon-volume disabled" aria-label="Volume On/Off"></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+</style>
+</html>

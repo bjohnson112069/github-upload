@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Account Panel</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <section id="switch-account">
+            <header>
+                <h1>Switch Account</h1>
+                <div class="slider">
+                    <div class="accounts">
+                        <div class="acct" data-account="1">
+                            <img class="acct-img" src="https://github.com/bjohnson112069/web-images/blob/main/Account%20Panel/pexels-streetwindy-2663803.jpg?raw=true" alt="image of user" title="Photo by Streetwindy: https://www.pexels.com/photo/woman-red-lipstick-2663803/">
+                        </div>
+                        <div class="acct current" data-account="2">
+                            <img class="acct-img" src="https://github.com/bjohnson112069/web-images/blob/main/Account%20Panel/pexels-jonnas-duarte-3116018.jpg?raw=true" alt="image of user" title="Photo by Jonnas Duarte: https://www.pexels.com/photo/man-in-brown-crew-neck-t-shirt-and-black-denim-jeans-3116018/">                        
+                        </div>
+                        <div class="acct" data-account="3">
+                            <img class="acct-img" src="https://github.com/bjohnson112069/web-images/blob/main/Account%20Panel/pexels-sam-lion-6001808.jpg?raw=true" alt="image of user" title="Photo by Sam Lion: https://www.pexels.com/photo/charming-woman-with-freckles-in-room-6001808/">
+                        </div>
+                        <div class="acct" data-account="4">
+                            <img class="acct-img" src="https://github.com/bjohnson112069/web-images/blob/main/Account%20Panel/pexels-ralph-rabago-3214772.jpg?raw=true" alt="image of user" title="Photo by Ralph Rabago: https://www.pexels.com/photo/man-in-black-crew-neck-top-leaning-on-metal-fence-3214772/">
+                        </div>
+                        <div class="acct" data-account="5">
+                            <img class="acct-img" src="https://github.com/bjohnson112069/web-images/blob/main/Account%20Panel/pexels-anna-tarazevich-4926674.jpg?raw=true" alt="image of user" title="Photo by Anna Tarazevich: https://www.pexels.com/photo/a-beautiful-smiling-woman-4926674/">
+                        </div>
+                        <div class="acct" data-account="6">
+                            <img class="acct-img" src="https://github.com/bjohnson112069/web-images/blob/main/Account%20Panel/pexels-wallace-chuck-2287252.jpg?raw=true" alt="image of user" titel="Photo by Wallace Chuck: https://www.pexels.com/photo/man-wearing-blue-crew-neck-shirt-2287252/">
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="arrow goToPrev" disabled>
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="arrow goToNext">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <button id="add" type="button">
+                    <span>Add account</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </header>
+            <main>
+                <ul class="acct-list">
+                    <li class="acct-item">
+                        <a href="#" class="acct-link">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Account settings</span>
+                        </a>
+                    </li>
+                    <li class="acct-item">
+                        <a href="#" class="acct-link">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <span>Subscription</span>
+                        </a>
+                    </li>
+                    <li class="acct-item">
+                        <a href="#" class="acct-link">
+                            <i class="fa-solid fa-ticket"></i>
+                            <span>Support</span>
+                        </a>
+                    </li>
+                    <li class="acct-item">
+                        <a href="#" class="acct-link" id="sign-out">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </main>
+        </section>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

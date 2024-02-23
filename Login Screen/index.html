@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Login Screen</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="panel panel-one">
+            <img src="https://github.com/bjohnson112069/web-images/raw/main/Login%20Screen/pexels-photo-7180738.webp" alt="Image of ballons">
+        </div>
+        <form class="panel panel-two">
+            <div class="login-wrapper">
+                <h1>Log in</h1>
+                <fieldset class="email">
+                    <label for="email">Email<span class="error"></span></label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email address">
+                </fieldset>
+                <fieldset class="password">
+                    <label for="password">Password<span class="error"></span></label>
+                    <input type="text" id="password" name="password" placeholder="Enter your password">
+                </fieldset>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-login">Log in</button>
+                    <span>Or</span>
+                    <button type="button" class="btn btn-linkedin">
+                        <span class="fa-brands fa-linkedin-in"></span>
+                        <span>Continue with LinkedIn</span>
+                    </button>
+                </div>    
+            </div>
+            <a href="" class="sign-up">Can't log in? - Sign up for an account</a>
+        </form>
+    </div>
+    <div class="success"></div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

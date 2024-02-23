@@ -9,6 +9,9 @@ function moveEyes(e) {
           let { offsetX: x, offsetY: y } = e;
           const walk = 75;
 
+          console.log("X", e.offsetX, "Y", e.offsetY, "offsetW", e.target.offsetWidth, "offsetH", e.target.offsetHeight);
+          console.log("offsetLeft", e.target.offsetLeft, "offsetTop", e.target.offsetTop);
+          console.log(e.target.clientLeft, e.target.clientTop);
           if (this !== e.target) {
                     x += e.target.offsetLeft;
                     y += e.target.offsetTop;
@@ -18,7 +21,7 @@ function moveEyes(e) {
           const xWalk = Math.round((x / width * walk) - (walk / 2));
           const yWalk = Math.round((y / height * walk) - (walk / 2));
           
-          console.log(xWalk, yWalk)
+          // console.log(xWalk, yWalk)
           htmlElement.style.setProperty("--x", `${xWalk}px`);
           htmlElement.style.setProperty("--y", `${yWalk}px`);
 }

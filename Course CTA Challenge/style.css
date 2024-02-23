@@ -1,0 +1,453 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #202020;
+
+    --clr-off-white: #d9dbe7;
+    --clr-grey: #808080;
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+    --clr-very-dark-green: 120 100% 1.37%; /* hsl(120, 100%, 1.37%); #000700 */
+    --clr-yellow-shade-1: #B07C4A;
+    --clr-yellow-shade-2: #FBBF69F2;
+    --clr-yellow-shade-3: #FFE188;
+    --clr-yellow-shade-4: #FCF0DD;
+    
+    --clr-box-bg: var(--clr-black);
+    --clr-box-text: var(--clr-grey);
+    --clr-box-text--hdr: var(--clr-white);
+
+    --fs-500: clamp(1rem, 0.5665rem + 1.8497vw, 2rem);
+    --fs-400: 1rem;
+    --fs-350: .875rem;
+    --fs-300: .75rem;
+
+    --max-width: 1240px;
+    --min-width: 450px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.5;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: auto;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+text-wrap: balance;
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: var(--clr-yellow-shade-1);
+}
+ 
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+.box {
+    --box-bg: var(--clr-box-bg);
+    --box-text: var(--clr-box-text);
+    --box-border: var(--clr-box-border);
+    --box-radius: var(--border-radius);
+    --box-hdr: var(--clr-box-text--hdr);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--box-gap, 1rem);
+    background: var(--box-bg, red);
+    color: var(--box-text, red);
+    border: 2px solid var(--box-border, transparent);
+    border-radius: var(--box-radius, 0px);
+}
+
+.box > h1 {
+    color: var(--box-hdr, red);
+
+}
+
+h1 {
+    font-size: var(--fs-500);
+}
+
+/* --------------------- */
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1rem;
+}
+/* --------------------- */
+.hero {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.hero > img {
+    object-fit: cover;
+    object-position: left top;
+    width: 100%;
+    height: 400px;
+    transition: 1s ease-out;
+}
+
+.hero:hover > img {
+    transform: scale(1.2);
+}
+
+.hero-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 4rem;
+    background: linear-gradient(0deg, 
+        hsl(var(--clr-very-dark-green) / 1.0),
+        hsl(var(--clr-very-dark-green) / 1) 20%,
+        hsl(var(--clr-very-dark-green) / .8) 50%,
+        hsl(var(--clr-very-dark-green) / .5) 75%,
+        hsl(var(--clr-very-dark-green) / 0) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    color: var(--clr-white);
+}
+
+.hero-content > h1 {
+    text-shadow: 2px 2px 5px var(--clr-black);
+}
+
+.hero-content > p {
+    max-width: 70ch;
+}
+
+.cta {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1em 1.5em;
+    border-radius: 100px;
+    color: var(--clr-white);
+    background: linear-gradient(90deg, var(--clr-yellow-shade-1), var(--clr-yellow-shade-2));
+}
+
+.cta:hover {
+    opacity: .8;
+}
+
+/* --------------------- */
+
+.benefits {
+    --box-bg: var(--clr-off-white);
+    --box-hdr: var(--clr-black);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: min-content repeat(2, 150px);
+    align-items: stretch;
+    justify-content: center;
+}
+
+.benefits > h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.benefits > .box {
+    text-align: center;
+    justify-content: center;
+}
+
+.box-one {
+    grid-area: 2 / 1 / 3 / 3;
+}
+.box-two {
+    grid-area: 3 / 1 / 4 / 3;
+}
+.box-three {
+    grid-area: 2 / 3 / 4 / 4;
+}
+.box-four {
+    grid-area: 2 / 4 / 3 / 5;
+}
+.box-five {
+    grid-area: 3 / 4 / 4 / 5;
+}
+.box-six {
+    grid-area: 2 / 5 / 4 / 6;
+}
+.box-seven {
+    grid-area: 2 / 6 / 3 / 7;
+}
+
+/* --------------------- */
+.enrollment {
+    --box-bg: var(--clr-off-white);
+    --box-hdr: var(--clr-black);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+}
+
+.enrollment > h1 {
+    grid-column: span 2;
+    align-self: start;
+    text-align: center;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.tabs {
+    --box-gap: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700
+}
+
+.tab {
+    width: 100%;
+    padding-block: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.tab.active {
+    color: var(--clr-yellow-shade-1);
+}
+
+.tab:hover {
+    background: var(--clr-box-text--hdr);
+    color: var(--clr-box-bg);
+}
+
+.month {
+    font-size: var(--fs-400);
+}
+
+.tab-display {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.date {
+    aspect-ratio: 1 / 1;
+    --box-radius: 50%;
+    --box-border: var(--clr-box-text);
+    --box-gap: 0.5rem;
+    width: 150px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.date-one {
+    grid-area: 1 / 1 / 3 / 3;
+    z-index: 2;
+}
+.date-two {
+    grid-area: 2 / 2 / 4 / 4;
+}
+.date-three{
+    grid-area: 1 / 3 / 3 / 5;
+}
+
+@media (max-width: 1050px) {
+    .benefits {
+        grid-template-columns: repeat(5, 150px);
+        grid-template-rows: min-content repeat(2, 150px);
+    }        
+    .box-six {
+        grid-area: 2 / 5 / 3 / 6;
+    }
+    .box-seven {
+        grid-area: 3 / 5 / 4 / 6;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .benefits {
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: min-content repeat(3, 150px);
+    }
+    .box-six {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .box-seven {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    
+} 
+
+@media (max-width: 750px) {
+    .benefits {
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: min-content repeat(4, 150px);
+    }
+    .box-four {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    .box-five {
+        grid-area: 5 / 2 / 6 / 3;
+    }    
+    .box-six {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .box-seven {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    
+} 
+
+@media (max-width: 600px) {
+    .benefits {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: min-content repeat(5, 150px);
+    }
+    .box-three {
+        grid-area: 6 / 1 / 7 / 3;
+    }    
+    .box-four {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    .box-five {
+        grid-area: 5 / 2 / 6 / 3;
+    }    
+    .box-six {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .box-seven {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    
+} 
+
+@media (max-width: 688px) {
+    .enrollment {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+    }
+ }
+ 

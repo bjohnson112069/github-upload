@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Inbox UI</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="inbox">
+            <h1>Your messages</h1>
+            <ul class="messages" role="list">
+                <li class="compose">
+                    <button>
+                        <p>Compose</p>
+                        <span class="fa-solid fa-pencil"></span>
+                    </button>        
+                </li>
+                <li class="message" data-value="1">
+                    <div class="icon profile-image" title="Photo by Italo Melo: https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-white-wall-2379004/">
+                        <!-- Background Image -->
+                        <div class="icon icon-status" aria-label="User Status"></div>
+                    </div>
+                    <div class="profile-name">Rafel Jay</div>
+                    <div class="message-content">Hi there, how are you?</div>
+                    <div class="timestamp">4 days ago</div>
+                </li>
+                <li class="message" data-value="2">
+                    <div class="icon profile-image" title="Photo by Creation Hill: https://www.pexels.com/photo/man-in-red-jacket-1681010/">
+                        <!-- Background Image -->
+                        <div class="icon icon-status" aria-label="User Status"></div>
+                    </div>
+                    <div class="profile-name">Frank Johnson</div>
+                    <div class="message-content">How was the trip?</div>
+                    <div class="timestamp">5 days ago</div>
+                </li>
+                <li class="message" data-value="3">
+                    <div class="icon profile-image" title="Photo by Andrea Piacquadio: https://www.pexels.com/photo/woman-in-collared-shirt-774909/">
+                        <!-- Background Image -->
+                        <div class="icon icon-status" aria-label="User Status"></div>
+                    </div>
+                    <div class="profile-name">Ashley Pierce</div>
+                    <div class="message-content">I hope you are well.</div>
+                    <div class="timestamp">Mar 12, 2022</div>
+                </li>
+                <li class="message" data-value="4">
+                    <div class="icon profile-image" title="Photo by Pixabay: https://www.pexels.com/photo/woman-wearing-black-spaghetti-strap-top-415829/">
+                        <!-- Background Image -->
+                        <div class="icon icon-status" aria-label="User Status"></div>
+                    </div>
+                    <div class="profile-name">Nancy Meyer</div>
+                    <div class="message-content">Thank you for answering.</div>
+                    <div class="timestamp">Feb 3, 2022</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

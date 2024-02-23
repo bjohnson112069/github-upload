@@ -1,0 +1,387 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-light-blue: #EFF3FE;
+    --clr-dark-blue: #3B3B70;
+    --clr-creme: #fffef9;
+
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+
+
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: 'Merriweather', serif;
+    --ff-body: 'Poppins', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-very-light-blue);
+    color: var(--clr-dark-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+.shopping-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    background: var(--clr-creme);
+    padding: 2rem;
+    border-radius: 40px;
+    width: var(--min-width);
+    box-shadow: 5px 5px 15px var(--clr-dark-blue);
+    overflow: hidden;
+}
+
+/* --- Header ---*/
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: auto;
+    gap: 1rem;
+}
+
+#header > h1 {
+    font-size: var(--fs-800);
+    font-weight: 700;
+}
+
+#header > .icon-elipsis {
+    width: 2rem;
+    height: 2rem;
+    font-size: var(--fs-800);
+    cursor: pointer;
+}
+
+#header > .icon-elipsis:hover {
+    opacity: .5;
+}
+
+#header > p {
+    grid-column: 1 / -1;
+    font-size: var(--fs-300);
+    opacity: .5;
+}
+
+#header > p > span {
+    text-decoration: underline;
+}
+
+/* --- List(s) ---*/
+
+.list {
+}
+
+.list > p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: var(--fs-300);
+    font-weight: 300;
+}
+
+#open-items,
+#completed-items {
+    display: flex;
+    flex-direction: column;
+}
+
+#open-items {
+    margin-bottom: 2rem;
+}
+
+/* --- Shopping Items ---*/
+.shopping-item {
+    padding: .75rem 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    transition: all .3s linear;
+    position: relative;
+}
+
+.shopping-item:hover {
+    font-weight: 700;
+}
+  
+.shopping-item > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.shopping-item > label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.icon-check {
+    width: 32px;
+    height: 32px;
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-dark-blue);
+}
+  
+.shopping-item > input:checked ~ label > .icon-check {
+    --icon-bg-image: url("https://raw.githubusercontent.com/bjohnson112069/web-images/fb6f1cbf5d5c00919dc03ee96b7f62e74460cff5/To%20Do%202/check-solid.svg");
+}
+  
+.shopping-item > input:checked ~ label {
+    opacity: 0.5;
+}
+  
+.shopping-item > button {
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/fb6f1cbf5d5c00919dc03ee96b7f62e74460cff5/To%20Do%202/trash-can-regular.svg") no-repeat center center;
+}
+  
+.shopping-item > button:hover {
+    transform: scale(1.4);
+}
+
+
+/* --- Shopping Form ---*/
+.shopping {
+    --button-width: 4.75rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#submit {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: .5em 1.5em;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    background: none;
+    background: var(--clr-dark-blue);
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover {
+    opacity: .5;
+}
+
+#submit > .fa-plus {
+    font-size: var(--fs-800);
+}
+
+.shopping > input {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    padding: 1rem;
+    border: 1px solid var(--clr-dark-blue);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    color: var(--clr-dark-blue);
+}
+
+.shopping > input::placeholder {
+    color: var(--clr-dark-blue);
+}
+
+
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

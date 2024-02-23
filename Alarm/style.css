@@ -1,0 +1,497 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #dfe7ee;
+    --background: #052D50;
+    --primary: #aac1d3;
+    --secondary: #265279;
+    --accent: #4a92d2;
+    --accent-opaque: #4a92d280;
+
+    /* shades */
+    --text-50: #eef3f6;
+    --text-100: #dee6ed;
+    --text-200: #bccddc;
+    --text-300: #9bb4ca;
+    --text-400: #799bb9;
+    --text-500: #5882a7;
+    --text-600: #466886;
+    --text-700: #354e64;
+    --text-800: #233443;
+    --text-900: #121a21;
+    --text-950: #090d11;
+
+    --background-50: #e7f3fd;
+    --background-100: #cfe7fc;
+    --background-200: #9fcff9;
+    --background-300: #6fb7f6;
+    --background-400: #3f9ff3;
+    --background-500: #0f87f0;
+    --background-600: #0c6cc0;
+    --background-700: #095190;
+    --background-800: #063660;
+    --background-900: #031b30;
+    --background-950: #020d18;
+
+    --primary-50: #eef3f6;
+    --primary-100: #dde7ee;
+    --primary-200: #bccedc;
+    --primary-300: #9ab6cb;
+    --primary-400: #789dba;
+    --primary-500: #5785a8;
+    --primary-600: #456a87;
+    --primary-700: #345065;
+    --primary-800: #233543;
+    --primary-900: #111b22;
+    --primary-950: #090d11;
+
+    --secondary-50: #ecf3f9;
+    --secondary-100: #d8e6f3;
+    --secondary-200: #b1cee7;
+    --secondary-300: #8bb5da;
+    --secondary-400: #649dce;
+    --secondary-500: #3d84c2;
+    --secondary-600: #316a9b;
+    --secondary-700: #254f74;
+    --secondary-800: #18354e;
+    --secondary-900: #0c1a27;
+    --secondary-950: #060d13;
+
+    --accent-50: #ebf3fa;
+    --accent-100: #d6e7f5;
+    --accent-200: #adceeb;
+    --accent-300: #85b6e0;
+    --accent-400: #5c9dd6;
+    --accent-500: #3385cc;
+    --accent-600: #296aa3;
+    --accent-700: #1f507a;
+    --accent-800: #143552;
+    --accent-900: #0a1b29;
+    --accent-950: #050d14;
+
+    /* Gradients */
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2.25rem;
+    --fs-700: 2rem;
+    --fs-650: 1.75rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;;
+    --ff-body: "Mulish", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--background);
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+.alarm-app {
+    --h-padding: 2rem;
+    --v-padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    color: var(--text);
+    width: 100%;
+    max-width: var(--min-width);
+    border-radius: var(--border-radius);
+    box-shadow: 5px 5px 15px var(--accent-900);
+    overflow: hidden;
+}
+
+.alarm-app > * { 
+    width: 100%;
+}
+
+header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    place-items: center;
+    background: var(--secondary);
+    padding: var(--v-padding) var(--h-padding);
+}
+
+.icon-header {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+.fa-solid {
+    cursor: pointer;
+    transition: color .3s linear;
+}
+
+.fa-solid:hover {
+    color: var(--background);
+}
+
+header > h1 {
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+#top {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    place-items: center;
+    align-content: center;
+    background: var(--secondary);
+    min-height: 190px;
+    padding: var(--v-padding) var(--h-padding);
+    font-weight: 700;
+}
+
+.current-time {
+    font-size: var(--fs-800);
+}
+
+.current-date {
+    font-size: var(--fs-500);
+}
+
+#bg-gradient {
+    min-height: 4rem;
+    background: linear-gradient(176deg,
+        var(--secondary) 0%,
+        var(--secondary) 33%,
+        var(--primary) 33%,
+        var(--primary) 45%,
+        var(--secondary) 45%,
+        var(--secondary) 47%,
+        var(--primary) 47%,
+        var(--primary) 59%,
+        var(--secondary) 59%,
+        var(--secondary) 65%,
+        var(--primary) 65%,
+        var(--primary) 100%
+    );
+    position: relative;
+}
+
+#add {
+    position: absolute;
+    top: calc(var(--v-padding) * -1);
+    right: var(--h-padding);
+    outline: none;
+    border: none;
+    font-family: inherit;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 2rem;
+    background: var(--accent);
+    color: var(--background);
+    cursor: pointer;
+}
+
+#add:hover {
+    animation: pulse 2s infinite;
+    color: var(--text);
+}
+
+#add > i {
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px var(--accent-opaque);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+#bottom {
+    padding: var(--v-padding) var(--h-padding);
+    background: var(--primary);
+    color: var(--background);
+    min-height: 30vh; /* temp */
+}
+
+.alarms {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* Default Styling */
+
+.alarm {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "time toggle"
+        "days days";
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.alarm > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.alarm-time {
+    grid-area: time;
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+.toggle {
+    --toggle-width: 3rem;
+    grid-area: toggle;
+    width: var(--toggle-width);
+    height: 8px;
+    border-radius: 100px;
+    background: var(--background);
+    position: relative;
+}
+
+.toggle::before {
+    --slider-width: var(--fs-650);
+    content: "";
+    aspect-ratio: 1 / 1;
+    width: var(--slider-width);
+    border-radius: 50%;
+    background: var(--background);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    transition: transform .3s linear;
+}
+
+.alarm > input:checked ~ .toggle::before {
+    background: var(--accent);
+    transform: translate(calc(var(--toggle-width) - var(--slider-width)), -50%);
+}
+
+.days {
+    grid-area: days;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 1.5rem;
+}
+
+.day {
+    color: var(--primary-500);
+}
+
+.day.selected {
+    color: var(--background);
+}
+
+/* Active state Styling */
+
+.alarm.active .day {
+    color: var(--background);
+    transition: scale .1s linear, transform .2s .1s linear;
+    font-weight: 700;
+}
+
+.alarm.active .day:hover {
+    transform: scale(1.2) translate(2px, -2px);
+}
+
+.alarm.active > .alarm-time,
+.alarm.active .selected {
+    color: var(--accent);
+}
+
+
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 550px) {
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

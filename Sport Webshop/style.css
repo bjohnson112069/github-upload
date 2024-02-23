@@ -1,0 +1,467 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-light-blue: #D9E1E8;
+    --clr-off-white: #ECF0F3;
+    --clr-very-dark-green: #090A07;
+    --clr-pink: #FFA0AD;
+    --clr-yellow: #FFD100;
+    --clr-bluish-grey: #7AA3BC;
+
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+
+
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Nunito Sans', sans-serif;
+    --ff-header: 'Mulish', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr--dark-brown);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-off-white);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+/* --------------------- */
+
+#hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 200px) 1fr;
+    grid-template-rows: repeat(4, 150px);
+    column-gap: 2rem;
+    background: rgb(255, 255, 255) url("https://github.com/bjohnson112069/web-images/raw/main/Sport%20Webshop/pexels-cottonbro-studio-9665189.webp") no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    isolation: isolate;
+    z-index: -1;
+}
+
+.text-overlay {
+    grid-area: 1 / 1 / 5 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    background: rgb(0, 0, 0, .5);
+    padding: 2rem 0 2rem 2rem;
+    color: white;
+}
+
+.text-overlay > h1 {
+    font-size: var(--fs-900);
+    font-weight: 700;
+    color: var(--clr-pink);
+}
+
+#view-collection {
+    outline: none;
+    border: none;
+    padding: .5em 1em;
+    font-size: var(--fs-600);
+    background: var(--clr-yellow);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.icon-chevron {
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    transition: width .5s linear;
+}
+#view-collection:hover > .icon-chevron {
+    width: 24px;
+}
+
+#image-one {
+    grid-area: 2 / 2 / 4 / 3;
+}
+
+#image-two {
+    grid-area: 2 / 3 / 4 / 4;
+}
+
+#image-one,
+#image-two {
+    border: 5px solid var(--clr-bluish-grey);
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+#image-one > img,
+#image-two > img{
+    width: 100%;
+    height: 100%;
+}
+
+#image-three {
+    grid-area: 1 / 2 / 5 / 5;
+    background: url("https://github.com/bjohnson112069/web-images/raw/main/Sport%20Webshop/pexels-melvin-buezo-2529148.webp") no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+}
+
+/* --------------------- */
+
+#collection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(375px, 100%), 1fr));
+    justify-items: center;
+    gap: 1rem;
+    background: white;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 1rem;
+    /* border: 1px solid black; */
+    box-shadow: 0 20px 20px -10px var(--clr-bluish-grey, none);
+    width: 100%;
+    max-width: 600px;
+    transition: transform .3s linear;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card > .image-wrapper {
+    grid-area: 1/ 1 / -1 / 2;
+}
+
+.card > .image-wrapper > img {
+    width: 100%;
+    height: 100%;
+}
+
+#air-monarch {
+    background: url("https://github.com/bjohnson112069/web-images/raw/main/Sport%20Webshop/pexels-melvin-buezo-2529148.webp") no-repeat center center;
+    background-size: contain;
+}
+
+#legend-essential {
+    background: url("https://github.com/bjohnson112069/web-images/raw/main/Sport%20Webshop/pexels-melvin-buezo-18946650.webp") no-repeat center center;
+    background-size: contain;
+}
+
+#night-shade {
+    background: url("https://github.com/bjohnson112069/web-images/raw/main/Sport%20Webshop/pexels-melvin-buezo-2529158.webp") no-repeat center center;
+    background-size: contain;
+}
+
+#double-swoosh {
+    background: url("https://github.com/bjohnson112069/web-images/raw/main/Sport%20Webshop/pexels-melvin-buezo-2529157.webp") no-repeat center center;
+    background-size: contain;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.product-box {
+}
+
+.product-box > h2 {
+    font-size: var(--fs-600);
+    font-weight: 600;
+}
+
+.product-box > span {
+    font-size: var(--fs-800);
+    font-weight: 700;
+}
+
+.sold-out {
+    width: 95px;
+    height: 60px;
+    align-self: end;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+}
+
+.sold-out.active {
+    visibility: visible;
+    padding: 1em;
+    font-weight: 700;
+    background: var(--clr-pink);
+    color: white;
+}
+
+.add-to-cart {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    padding: 1em 2.5em;
+    border-radius: 5px;
+    background: var(--clr-very-dark-green);
+    color: var(--clr-pink);
+}
+
+.add-to-cart.active {
+    display: block;
+}
+
+.add-to-cart:hover {
+    background: var(--clr-pink);
+    color: var(--clr-very-dark-green);
+    transition: all .5s linear;
+}
+
+
+/* --------------------- */
+
+@media (max-width: 1150px) {
+    #hero {
+        grid-template-columns: 1fr repeat(2, 200px) 1fr;
+        grid-template-rows: repeat(6, 150px);
+        column-gap: 2rem;
+        justify-content: center;
+    }
+    
+    .text-overlay {
+        grid-area: 5 / 1 / 7 / -1;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .text-overlay > p {
+        text-align: center;
+        max-width: 40ch;
+    }
+
+    #image-one {
+        grid-area: 2 / 2 / 4 / 3;
+    }
+
+    #image-two {
+        grid-area: 2 / 3 / 4 / 4;
+    }
+
+    #image-three {
+        grid-area: 1 / 1 / 5 / 5;
+        background-position: center center;
+    }
+}
+
+@media (max-width: 600px) {
+    #hero {
+        grid-template-columns: 1fr;
+        /* grid-auto-rows: 100px; */
+        grid-template-rows: 50vh auto;
+        column-gap: 0;
+        row-gap: 2rem;
+    }
+    
+    .text-overlay {
+        grid-area: 2 / 1 / 3 / -1;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .fa-chevron-right {
+    }
+
+    #image-one {
+        display: none;
+    }
+
+    #image-two {
+        display: none;
+    }
+
+    #image-three {
+        grid-area: 1 / 1 / 2 / -1;
+        background-position: center center;
+    }
+    
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+} 
+
+@media (max-width: 375px) {
+}

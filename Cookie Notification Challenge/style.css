@@ -255,7 +255,7 @@ picture {
     width: 100%;
     border-radius: var(--border-radius);
     background: var(--clr-white);
-    background-image: url(./images/desktop-728x410.jpg);
+    background-image: url(https://github.com/bjohnson112069/web-images/blob/main/desktop-728x410.jpg?raw=true);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;

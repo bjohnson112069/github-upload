@@ -1,0 +1,309 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #E3E1EF;
+
+    --clr-very-light-blue: #E3E1EF;
+    --clr-very-dark-blue: #001F3F;
+    --clr-off-white: #F4F1FE;
+    --clr-light-grey: #D2CFE0;
+    --clr-medium-grey: #B6B4BF;
+    --clr-black-opaque: rgba(0, 0, 0, 0.252);
+
+    --clr-shadow-light: var(--clr-off-white);
+    --clr-shadow-dark: var(--clr-medium-grey);
+
+
+    --fs-500: clamp(1rem, 0.5665rem + 1.8497vw, 2rem);
+    --fs-400: 1rem;
+    --fs-350: .875rem;
+    --fs-300: .75rem;
+
+    --max-width: 1240px;
+    --min-width: 450px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.5;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: auto;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+text-wrap: balance;
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: var(--clr-very-light-blue);
+    color: var(--clr-very-dark-blue);
+    gap: 1rem;
+    padding: 2rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: -10px -10px 20px var(--clr-shadow-light), 10px 10px 20px var(--clr-shadow-dark);
+}
+ 
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.progress-circle {
+    position: relative;
+}
+
+.outer-circle,
+.inner-circle {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.outer-circle {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.5);
+}
+
+.inner-circle {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .125rem;
+    box-shadow: 
+        inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), 
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.5), 
+        -0.5px -0.5px 0 rgba(255, 255, 255, 1), 
+        -0.5px -0.5px 0 rgba(0, 0, 0, 0.15), 
+        0 12px 10px -10px rgba(0, 0, 0, 0.05);
+    line-height: 1.1;
+}
+
+.inner-circle > p {
+    text-align: center;
+}
+
+.percent {
+    font-size: var(--fs-500);
+    font-weight: 700;
+}
+
+.svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circle {
+    /* path-length is ~440px */
+    --initial-offset: 472;
+    fill: none;
+    stroke: url("#gradient-color");
+    stroke-width: 20px;
+    stroke-dasharray: 472; /* make length of the dash greater than the length of the path */
+    stroke-dashoffset: var(--initial-offset); /* offset is a percentage/px within the (dash)array */
+    transform: rotateZ(-90deg); /* rotate so rendering starts at the top */
+    transform-origin: 50% 50% 0; /* move the origin from the center to the top */
+    transition: all 1s linear;
+    /* JS will calculate the % of the offset w/in the array and set the '--initial-offset' property */
+}
+
+/* --------------------- */
+
+.chapters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--fs-500);
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chapter {
+    position: relative;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    text-align: left;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.chapter > input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.chapter-label {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    font-size: inherit;
+    border: 1px solid var(--clr-black-opaque);
+    border-radius: inherit;
+    transition: all .5s ease-in-out;
+}
+
+.chapter > input:checked + .chapter-label {
+    box-shadow: -10px -10px 20px var(--clr-shadow-light), 10px 10px 20px var(--clr-shadow-dark);
+}
+
+.chapter-label:hover {
+    background: var(--clr-medium-grey);
+}
+
+.check-box {
+    aspect-ratio: 1 / 1;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--clr-black-opaque);
+}
+
+.chapter > input:checked + .chapter-label > .check-box {
+    background: var(--clr-very-dark-blue);
+}
+
+.check-box > i {
+    color: white;
+    display: none;
+}
+
+.chapter > input:checked + .chapter-label > .check-box > i{
+    display: block;
+}
+
+.label-box {
+    font-size: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.label-box > h1 {
+    font-size: inherit;
+}
+
+.label-box > p {}
+
+@media (max-width: 1050px) {
+}
+
+@media (max-width: 900px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 688px) {
+}
+ 

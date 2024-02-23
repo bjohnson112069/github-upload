@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Account Dopdown</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <header>
+            <nav>
+                <ul class="nav-list" role="list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" aria-label="email icon">
+                            <span class="fa-regular fa-envelope"></span>
+                            <span class="notification" aria-label="new notificiation"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" aria-label="notification icon">
+                            <span class="fa-regular fa-bell"></span>
+                            <span class="notification active" aria-label="new notificiation"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <button class="dropdown-btn active" type="button">
+                                <p>John</p>
+                                <span class="fa-solid fa-caret-down"></span>
+                            </button>
+                            <ul class="dropdown-items" aria-hidden="false">
+                                <li class="dropdown-item profile">
+                                    <img src="https://github.com/bjohnson112069/web-images/raw/main/Account%20Dropdown/pexels-andrea-piacquadio-3785104.webp" alt="image of user" title="Photo by Andrea Piacquadio: https://www.pexels.com/photo/man-in-black-suit-holding-a-calling-card-3785104/">
+                                    <h1>John Smith</h1>
+                                    <p>Manager</p>
+                                    <div class="btn-box">
+                                        <button class="active" type="button" data-profile="view">View Profile</button>
+                                        <button type="button" data-profile="add">Add Account</button>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item" data-value="upgrade">
+                                    <a href="#" class="dropdown-link">
+                                        Upgrade to <span>pro</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" data-value="invite">
+                                    <a href="#" class="dropdown-link">
+                                        Invite team member
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" data-value="feedback">
+                                    <a href="#" class="dropdown-link">
+                                        Feedback
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" data-value="help">
+                                    <a href="#" class="dropdown-link">
+                                        Help
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" data-value="signout">
+                                    <a href="#" class="dropdown-link">
+                                        Sign Out
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main></main>
+
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

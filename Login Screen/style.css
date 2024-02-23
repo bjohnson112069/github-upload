@@ -1,0 +1,369 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-brown: #A04625;
+    --clr-blue: #0D64C2;
+    --clr-pink: #E4C9BA;
+    --clr-bronze: #CE9E80;
+    --clr-very-dark-blue: #141730;
+    --clr-light-grey: #EBE9E9;
+    --clr-grey: #ADABA8;
+    --clr-off-white: #FFFBFB;
+    
+    --clr-body-bg: var(--clr-off-white);
+    
+
+    /* Gradient Colors */
+    /* Shadow Color */
+
+    --fs-900: clamp(1.5rem, 1.2832rem + 0.9249vw, 2rem);;
+    --fs-800: 2rem;
+    --fs-700: 1.375rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Poppins', sans-serif;
+    --ff-header: 'Merriweather', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-very-dark-blue);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    max-width: 54rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--clr-text);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: white;
+    box-shadow: 0 10px 30px 5px var(--clr-pink);
+    animation: entrance 1.5s forwards;
+}
+
+@keyframes entrance {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1.0;
+    }
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    min-width: 10px;
+    min-height: 10px;
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------- */
+
+.panel {
+    border-radius: 5px;
+}
+
+.panel-one {}
+
+.panel-one > img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+/* --------------------- */
+
+.panel-two {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    padding: 0 clamp(1rem, -0.7341rem + 7.3988vw, 5rem);
+    font-size: var(--fs-300);
+    font-weight: 500;
+}
+
+.login-wrapper {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content) 1fr;
+    align-items: center;
+    gap: 1rem;
+    border-radius: inherit;
+}
+
+.login-wrapper > h1 {
+    font-size: var(--fs-600);
+    font-weight: 900;
+}
+
+fieldset {
+    border: none;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    gap:.25rem;
+}
+
+fieldset > label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--fs-200);
+    font-weight: 600;
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+.error.active {
+    display: inline-block;
+}
+
+fieldset > input {
+    outline: none;
+    width: 100%;
+    padding: 1em 1.5em;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    border: 1px solid var(--clr-grey);
+    border-radius: inherit;
+    background: var(--clr-off-white);
+}
+
+fieldset > input::placeholder {
+    color: var(--clr-grey);
+}
+
+fieldset>input:focus {
+    outline: none;
+    border-color: var(--clr-very-dark-blue);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: inherit;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: inherit;
+    background: transparent;
+    padding-block: 1.25em;
+    width: 100%;
+    color: white;
+    box-shadow: 0 20px 20px -10px var(--button-shadow-color, none);
+    transition: transform .3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-login {
+    --button-shadow-color: var(--clr-brown);
+    background: var(--clr-brown);
+}
+
+.btn-linkedin {
+    --button-shadow-color: var(--clr-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--clr-blue);
+    padding-block: 1.05em !important;
+}
+
+.btn-linkedin > .fa-linkedin-in {
+    padding: .25em;
+    outline: 2px solid white;
+    border-radius: 2px;
+}
+
+.buttons > span {
+    color: var(--clr-grey);
+}
+
+.sign-up {
+    align-self: end;
+    font-size: var(--fs-200);
+    text-decoration: none;
+    color: var(--clr-blue);
+    transition: transform .3s ease-in-out;
+}
+
+.sign-up:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------- */
+
+.success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 280px;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-image: url(https://github.com/bjohnson112069/web-images/blob/main/Login%20Screen/rick-astly-rick-rolled.gif?raw=true);
+    background-size: cover;
+}
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+    .content-container {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        gap: clamp(1rem, -0.7341rem + 7.3988vw, 5rem);
+    }
+
+    .panel-one > img {
+        border-radius: var(--border-radius);
+    }
+} 
+
+@media (max-width: 375px) {
+}

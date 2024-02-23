@@ -1,0 +1,439 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #202020;
+
+    /* Background Colors */
+    --clr-text: #14110d;
+    --clr-background: #fbfbf9;
+    --clr-primary: #EBD9B4;
+    --clr-secondary: #c2c9ab;
+    --clr-accent: rgb(169, 184, 145); /* #a9b891; */
+
+    /* Gradient Colors */
+    --clr-grad-1: #EBD9B4;
+    --clr-grad-2: #C7B899;
+    --clr-grad-3: #9E927A;
+    --clr-grad-4: #756C5A;
+    --clr-grad-5: #4D473B;
+
+    --fs-900: 2.75rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --ff-body: 'Khula', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--clr-background);
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    --icon-bg-color: none;
+    --icon-border-color: none;
+    --icon-border-radius: none;
+    --icon-shadow-color: none;
+    --icon-text-color: none;
+    outline: none;
+    width: 36px;
+    height: 36px;
+    background: var(--icon-bg-color, red);
+    background-image: var(--icon-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid var(--icon-border-color, red);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, red);
+    color: var(--icon-text-color, inherit);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-open {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/042311c0d0a234edda7a43dbfae89779ae2b69b0/Resturants%20Location/bars-staggered-solid.svg);
+}
+
+.icon-search {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/042311c0d0a234edda7a43dbfae89779ae2b69b0/Resturants%20Location/magnifying-glass-solid.svg);
+}
+
+.icon-open:hover,
+.icon-search:hover {
+    filter: brightness(1.2);
+}
+
+.icon-right-turn {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/042311c0d0a234edda7a43dbfae89779ae2b69b0/Resturants%20Location/turn-down-solid.svg);
+    transform: rotatez(-90deg);
+}
+
+.icon-phone {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/042311c0d0a234edda7a43dbfae89779ae2b69b0/Resturants%20Location/phone-flip-solid.svg);
+}
+
+.icon-bookmark {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/042311c0d0a234edda7a43dbfae89779ae2b69b0/Resturants%20Location/bookmark-solid.svg);
+}
+
+.icon-star,
+.icon-star-active {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-star {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/042311c0d0a234edda7a43dbfae89779ae2b69b0/Resturants%20Location/star-regular.svg);
+}
+
+.icon-star-active {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/042311c0d0a234edda7a43dbfae89779ae2b69b0/Resturants%20Location/star-solid.svg);
+}
+
+.icon-food-1 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/pexels-ash-376464.jpg?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+.icon-food-2 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/pexels-jang-%E2%80%98s-%F0%9F%8D%82-699953.jpg?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+.icon-food-3 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/pexels-julie-aagaard-2097090.jpg?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+.icon-food-4 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/pexels-lisa-fotios-1279330.jpg?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+.icon-food-5 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/th-255459586.png?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+.icon-food-6 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/pexels-robin-stickel-70497.jpg?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+.icon-food-7 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/pexels-sydney-troxell-718742.jpg?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+.icon-food-8 {
+    --icon-bg-image: url(https://github.com/bjohnson112069/web-images/blob/main/Resturants%20Location/pexels-malidate-van-769289.jpg?raw=true);
+    --icon-border-color: var(--clr-accent);
+    background-size: cover;
+}
+
+/* --------------------- */
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    overflow-x: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .25), -5px -5px 5px rgba(0, 0, 0, .25);
+}
+
+/* --------------------- */
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--clr-secondary);
+    color: var(--clr-text);
+    padding: 1.75rem 2.75rem;
+}
+
+header > h1 {
+    font-size: var(--fs-700);
+    font-weight: 600;
+    letter-spacing: -.5px;
+}
+
+
+/* --------------------- */
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    overflow-y: scroll;
+    scrollbar-color: var(--clr-primary) var(--clr-primary);
+    scrollbar-width: thin;
+}
+
+.restaurant {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: 480px;
+    grid-template-areas: "stacked";
+    border-top: 2px solid var(--clr-accent);
+    color: var(--clr-text);
+    overflow: hidden;
+}
+
+.details-box,
+.addtl-details-box {
+    grid-area: stacked;
+    padding: 1rem 2rem;
+}
+
+.details-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: transform 1s cubic-bezier( 0.68, -0.55, 0.265, 1.55 ) ;
+    background: linear-gradient(90deg,
+        var(--clr-grad-5),
+        var(--clr-grad-4),
+        var(--clr-grad-3),
+        var(--clr-grad-2),
+        var(--clr-grad-1)
+    );
+    z-index: 2;
+}
+
+.details-box:hover {
+    opacity: .8;
+    transform: translateX(-50%);
+}
+
+.food-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.food-box > .icon {
+    width: 75px;
+    height: 75px;
+    --icon-border-radius: 20px;
+}
+
+.ratings-box {
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;
+
+}
+
+.ratings-box > h2 {
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+.star-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .125rem;
+}
+
+.tag-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .125rem;
+    font-size: var(--fs-300);
+}
+
+.tag-box > .icon {
+    width: auto;
+    height: auto;
+    --icon-border-radius: 100px;
+    --icon-border-color: var(--clr-text);
+    padding: 0 .5em;
+}
+
+.distance-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+.addtl-details-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2.5rem;
+    font-size: var(--fs-400);
+    background: var(--clr-primary);
+    z-index: 1;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 900px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 400px) {
+}

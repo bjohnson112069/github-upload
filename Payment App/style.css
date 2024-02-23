@@ -1,0 +1,621 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-very-dark-blue: #353641;
+    --clr-light-grey: #98999D;
+    --clr-pink: #F3919E;
+    --clr-body-bg: #202020;
+    
+    /* Gradient Colors */
+    --clr-red-1: #E64366;
+    --clr-red-2: #EB485D;
+    --clr-red-3: #F04E51;
+
+    /* Gradient Colors */
+    --clr-grad-1: #cabda9;
+    --clr-grad-2: #f8f4ed;
+
+
+    /* Shadow Color */
+    --fs-1000: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-body: 'Lato', sans-serif;
+    --ff-header: 'Lato', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: var(--clr-very-dark-blue);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    background: linear-gradient(90deg,
+        var(--clr-red-1),
+        var(--clr-red-2),
+        var(--clr-red-3)
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.content-container::after {
+    content: "";
+    position: absolute;
+    width: 58vw;
+    height: 63vh;
+    top: -5%;
+    left: -10%;
+    border-radius: 35%;
+    background: white;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    outline: none;
+    min-width: 64px;
+    min-height: 64px;
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+/* --------------------- */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    background: white;
+    width: var(--min-width);
+    box-shadow: 0px 5px 25px rgb(0, 0, 0, .5);
+    position: relative;
+    z-index: 10;
+}
+
+/* --------------------- */
+
+nav {
+    width: 100%;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    font-size: var(--fs-300);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .25rem;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.nav-item > span {}
+
+nav .icon {
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-red-1);
+    min-width: 60px;
+    min-height: 60px;
+    font-size: var(--fs-700);
+    cursor: pointer;
+}
+
+nav .icon:hover {
+    background: var(--clr-very-dark-blue);
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+nav .icon.active {
+    background: linear-gradient(90deg,
+        var(--clr-red-1),
+        var(--clr-red-2),
+        var(--clr-red-3)
+    );
+    color: white;
+}
+
+/* --------------------- */
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+#frequent-payments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1rem; */
+    background: linear-gradient(90deg,
+        var(--clr-red-1),
+        var(--clr-red-2),
+        var(--clr-red-3)
+    );
+    color: white;
+    padding: 1rem;
+    transition: all .75s ease-in-out;
+}
+
+#frequent-payments > header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#frequent-payments > header > h1 {
+    font-size: inherit;
+    font-weight: 700;
+}
+
+#frequent-payments > header > .icon {
+    min-width: auto;
+    min-height: auto;
+    font-size: var(--fs-700);
+    cursor: pointer;
+}
+
+#frequent-payments > header > .icon:hover {
+    color: var(--clr-very-dark-blue);
+    transition: all .3s ease-in-out;
+}
+
+#frequent-payments > .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding-block: 1rem;
+    overflow: hidden;
+}
+
+#frequent-payments > .content > .icon {
+    --icon-border-width: 5px;
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-pink);
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+#frequent-payments > .content > .icon:nth-of-type(1) {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-arsham-haghani-3536991.webp");
+    background-size: cover;
+}
+#frequent-payments > .content > .icon:nth-of-type(2) {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-cottonbro-studio-9613978.webp");
+}
+#frequent-payments > .content > .icon:nth-of-type(3) {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-jacky-hong-18866335.webp");
+
+}
+#frequent-payments > .content > .icon:nth-of-type(4) {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-craig-mckay-842980.webp");
+
+}
+
+
+#frequent-payments > .content > .icon:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------- */
+
+#recent-contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    place-items: center;
+    overflow: hidden;
+}
+
+.contact {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    border: 1px solid var(--clr-light-grey);
+    padding: 1rem 2rem 2rem 2rem;
+    transition: all .75s ease-in-out;
+}
+
+.contact > .icon-v-elipsis {
+    min-width: auto;
+    min-height: auto;
+    font-size: var(--fs-700);
+    justify-self: end;
+    color: var(--clr-light-grey);
+    cursor: pointer;
+}
+
+.contact > .icon-v-elipsis:hover {
+    color: var(--clr-very-dark-blue);
+    transition: all .3s ease-in-out;
+
+}
+
+.contact > .profile-image {
+    --icon-border-width: 5px;
+    --icon-border-radius: 50%;
+    --icon-border-color: var(--clr-pink);
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+}
+
+.contact:nth-of-type(1) > .profile-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-rachel-valdes-martinez-19987431.webp");
+    background-size: cover;
+}
+.contact:nth-of-type(2) > .profile-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-daniel-xavier-1239291.webp");
+}
+.contact:nth-of-type(3) > .profile-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-jeffrey-reed-769690.webp");
+
+}
+.contact:nth-of-type(4) > .profile-image {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/raw/main/Payment%20App/pexels-moose-photos-1036622.webp");
+
+}
+
+.name-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-box > h2 {
+    font-size: inherit;
+    font-weight: 700;
+    color: var(--clr-very-dark-blue);
+}
+
+.name-box > span {
+    color: var(--clr-light-grey);
+}
+
+.contact > button {
+    padding: .5em 1em;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    background: linear-gradient(90deg,
+        var(--clr-red-1),
+        var(--clr-red-2),
+        var(--clr-red-3)
+    );
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.contact > button::after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--clr-very-dark-blue);
+    color: inherit;
+    transition: width .3s ease-in-out;
+    z-index: -1;
+}
+
+.contact > button:hover::after {
+    width: 100%;
+}
+  
+/* --------------------- */
+
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    /* height: 100%; */
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--clr-very-dark-blue);
+    isolation: isolate;
+}
+
+.slider.active {
+    display: flex;
+}
+
+.icon-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    min-width: 20px;
+    min-height: 20px;
+    font-size: var(-fs-600);
+    color: var(--clr-very-dark-blue);
+    cursor: pointer;
+    z-index: 11;
+}
+
+.icon-close:hover {
+    color: var(--clr-red-1);
+    transition: all .3s ease-in-out;
+}
+
+.slides {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    background: var(--pink);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background: white;
+    color: var(--clr-very-dark-blue);
+    font-size: inherit;
+    transition: all .5s;
+    transform: translateX(-200%);
+    padding: 1rem;
+  }
+
+  .slide > p {
+    text-align: center;
+  }
+  
+  .slide.next + .slide {
+    transform: translateX(200%);
+  }
+  
+  .slide.prev {
+    z-index: 10;
+    transform: translateX(-100%);
+  }
+  .slide.current {
+    z-index: 10;
+    transform: translateX(0);
+  }
+  .slide.next {
+    z-index: 10;
+    transform: translateX(100%);
+  }
+  
+  .controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .goToPrev,
+  .goToNext {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1em 1.5em;
+    border-radius: 100px;
+    border: 1px solid var(--clr-red-1);
+    background: white;
+    color: var(--clr-red-1);
+  }
+
+  
+  .goToPrev:hover,
+  .goToNext:hover {
+    background: var(--clr-red-1);
+    color: white;
+    transition: all .3s ease-in-out;
+  }
+
+  .circles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr-light-grey);
+  }
+
+  .circle.current {
+    background: var(--clr-red-1);
+  }
+
+/* --------------------- */
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 500px) {
+    
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 650px) {
+} 
+
+@media (max-width: 375px) {
+}

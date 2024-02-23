@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Payment App</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="app">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <div class="icon icon-home">
+                            <span class="fa-solid fa-house"></span>
+                        </div>
+                        <span>Home</span>
+                    </li>
+                    <li class="nav-item">
+                        <div class="icon icon-cards">
+                            <span class="fa-solid fa-credit-card"></span>
+                        </div>
+                        <span>Cards</span>                    
+                    </li>
+                    <li class="nav-item">
+                        <div class="icon icon-payment active">
+                            <span class="fa-solid fa-bag-shopping"></span>
+                        </div>
+                        <span>Payment</span>
+                    </li>
+                    <li class="nav-item">
+                        <div class="icon icon-tax">
+                            <span class="fa-solid fa-percent"></span>
+                        </div>
+                        <span>Tax</span>
+                    </li>
+                    <li class="nav-item">
+                        <div class="icon icon-profile">
+                            <span class="fa-solid fa-user"></span>
+                        </div>
+                        <span>Profile</span>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                <section id="frequent-payments" class="slide-left">
+                    <header>
+                        <h1>Frequent Payments</h1>
+                        <div class="icon icon-elipsis">
+                            <span class="fa-solid fa-ellipsis"></span>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="icon" title="Photo by Arsham Haghani: https://www.pexels.com/photo/woman-in-gold-colored-diagonal-earrings-3536991/"><!-- BG image --></div>
+                        <div class="icon" title="Photo by cottonbro studio: https://www.pexels.com/photo/portrait-of-brunette-man-9613978/"><!-- BG image --></div>
+                        <div class="icon" title="Photo by Jacky Hong : https://www.pexels.com/photo/blonde-in-white-tank-top-18866335/"><!-- BG image --></div>
+                        <div class="icon" title="Photo by Craig  McKay: https://www.pexels.com/photo/gray-scale-bearded-man-842980/"><!-- BG image --></div>
+                    </div>
+                </section>
+                <section id="recent-contacts">
+                    <div class="contact slide-left" data-value="1">
+                        <div class="icon icon-v-elipsis">
+                            <span class="fa-solid fa-ellipsis-vertical"></span>
+                        </div>
+                        <div class="icon profile-image" title="Photo by Rachel Valdes Martinez: https://www.pexels.com/photo/portrait-of-man-with-dyed-blonde-hair-19987431/"><!-- BG image --></div>
+                        <div class="name-box">
+                            <h2>Lee Pearson</h2>
+                            <span>@pears</span>
+                        </div>
+                        <button type="button" value="1">Add Contact</button>
+                    </div>
+                    <div class="contact slide-right" data-value="2">
+                        <div class="icon icon-v-elipsis">
+                            <span class="fa-solid fa-ellipsis-vertical"></span>
+                        </div>
+                        <div class="icon profile-image" title="Photo by Daniel Xavier: https://www.pexels.com/photo/woman-wearing-black-eyeglasses-1239291/"><!-- BG image --></div>
+                        <div class="name-box">
+                            <h2>Curtis Thornton</h2>
+                            <span>@c-thornton</span>
+                        </div>
+                        <button type="button" value="2">Add Contact</button>
+                    </div>
+                    <div class="contact slide-left" data-value="3">
+                        <div class="icon icon-v-elipsis">
+                            <span class="fa-solid fa-ellipsis-vertical"></span>
+                        </div>
+                        <div class="icon profile-image" title="Photo by Jeffrey Reed: https://www.pexels.com/photo/man-in-plaid-button-down-shirt-769690/"><!-- BG image --></div>
+                        <div class="name-box">
+                            <h2>Amy Moss</h2>
+                            <span>@amy-m</span>
+                        </div>
+                        <button type="button" value="3">Add Contact</button>
+                    </div>
+                    <div class="contact slide-right" data-value="4">
+                        <div class="icon icon-v-elipsis">
+                            <span class="fa-solid fa-ellipsis-vertical"></span>
+                        </div>
+                        <div class="icon profile-image" title="Photo by Moose Photos: https://www.pexels.com/photo/woman-wearing-blue-shawl-lapel-suit-jacket-1036622/"><!-- BG image --></div>
+                        <div class="name-box">
+                            <h2>Elva Burke</h2>
+                            <span>@elva-burk</span>
+                        </div>
+                        <button type="button" value="4">Add Contact</button>
+                    </div>                    
+                </section>
+            </main>
+            <div class="slider">
+                <div class="icon icon-close">
+                    <span class="fa-solid fa-x"></span>
+                </div>
+                <div class="slides">
+                    <div class="slide" data-value="1">
+                        <p>Accept payments on your phone with simple payment buttons, or one of our flexible payment solutions, which can be customized to the needs of your business.</p>
+                    </div>
+                    <div class="slide" data-value="2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius explicabo, numquam quasi ducimus eligendi maxime minima quam similique! Dolore odit.</p>
+                    </div>
+                    <div class="slide" data-value="3">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius explicabo, numquam quasi ducimus eligendi maxime minima quam similique! Dolore odit.</p>
+                    </div>
+                    <div class="slide" data-value="4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius explicabo, numquam quasi ducimus eligendi maxime minima quam similique! Dolore odit.</p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="goToPrev">
+                        <span class="fa-solid fa-arrow-left"></span>
+                        <span>Prev</span>
+                    </button>
+                    <div class="circles">
+                        <div class="circle" data-value="1" aria-label="progress circle"></div>
+                        <div class="circle" data-value="2" aria-label="progress circle"></div>
+                        <div class="circle" data-value="3" aria-label="progress circle"></div>
+                        <div class="circle" data-value="4" aria-label="progress circle"></div>
+                    </div>
+                    <button class="goToNext">
+                        <span>Next</span>
+                        <span class="fa-solid fa-arrow-right"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

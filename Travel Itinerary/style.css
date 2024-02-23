@@ -1,0 +1,410 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #202020;
+
+    /* Colors */
+    --clr-light-grey: #EDEFF1;
+    --clr-dark-grey: #4F6F7C;
+    --clr-medium-grey: #98B3C9;
+    --clr-blue: #0F96E7;
+    --clr-green: #5DE201;
+
+    /* Gradient Colors */
+    --clr-blue-grad-1: #00B7C2;
+    --clr-blue-grad-2: #00B2C3;
+    --clr-blue-grad-3: #009DBE;
+    --clr-blue-grad-4: #0187C6;
+    --clr-blue-grad-5: #0090CF;
+    --clr-blue-grad-6: #0085D3;
+
+    /* Shadow Color */
+
+    --fs-900: 9.5rem;
+    --fs-800: 1.575rem;
+    --fs-700: 1.325rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --ff-body: 'Prompt', sans-serif;
+    --ff-header: 'Mulish', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 10px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(90deg,
+        var(--clr-blue-grad-6),
+        var(--clr-blue-grad-5),
+        var(--clr-blue-grad-4),
+        var(--clr-blue-grad-3),
+        var(--clr-blue-grad-2),
+        var(--clr-blue-grad-1)
+    );
+    color: var(--clr-dark-blue);
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    --icon-bg-color: none;
+    --icon-border-color: none;
+    --icon-border-radius: none;
+    --icon-shadow-color: none;
+    --icon-text-color: none;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    background: var(--icon-bg-color, red);
+    background-image: var(--icon-bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid var(--icon-border-color, red);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, red);
+    color: var(--icon-text-color, inherit);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-chevron {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/b7bcfcfa191c3b4abe703aca9f96b95bdb49adb4/Travel%20Itinerary/chevron-left-solid.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.icon-elipses {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/b7bcfcfa191c3b4abe703aca9f96b95bdb49adb4/Travel%20Itinerary/ellipsis-solid.svg);
+}
+
+.icon-caret {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/b7bcfcfa191c3b4abe703aca9f96b95bdb49adb4/Travel%20Itinerary/caret-right-solid.svg);
+}
+
+/* --------------------- */
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* --------------------- */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: var(--clr-light-grey);
+    color: var(--clr-dark-grey);
+}
+
+header > h1 {
+    font-size: var(--fs-800);
+    font-weight: 900;
+}
+
+/* --------------------- */
+
+.itinerary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    padding: 2.5rem 3rem;
+    background: white;
+}
+
+.tab {
+    --tab-padding: 1.75rem;
+    flex: 1 0 auto;
+    width: 100%;
+    border-left: 2px solid transparent;
+}
+
+.tab:not(:last-child) {
+    border-left: 2px solid var(--clr-light-grey);
+}
+
+.tab > input {
+    position: absolute;
+    top: 0%;
+    right: 0;
+}
+
+.tab-label {
+    display: flex;
+    padding-inline: var(--tab-padding);
+    position: relative;
+    cursor: pointer;
+}
+
+.tab-label > h2 {
+    font-size: var(--fs-700);
+    font-weight: 700;
+    color: var(--clr-blue);
+}
+
+.icon-caret {
+    --icon-bg-color: var(--clr-light-grey);
+    --icon-border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.icon-caret.complete {
+    --icon-bg-color: var(--clr-green);
+    --icon-shadow-color: var(var(--clr-light-grey));
+}
+
+.tab > input:checked ~ .tab-label > .icon-caret {
+    --icon-bg-image: url(https://raw.githubusercontent.com/bjohnson112069/web-images/b7bcfcfa191c3b4abe703aca9f96b95bdb49adb4/Travel%20Itinerary/caret-down-solid.svg);
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.tab > input:checked ~ .tab-content {
+    padding-inline: var(--tab-padding);
+    height: 100%;
+    opacity: 1;
+}
+
+/* Arrow animation */
+.tab > input:not(:checked) + .tab-label:hover {
+    animation: bounce .5s infinite;
+  }
+  @keyframes bounce {
+    25% {
+      transform: translate(.25rem);
+    }
+    75% {
+      transform: translate(-.25rem);
+    }
+  }
+  
+
+/* --------------------- */
+
+button {
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 1em;
+    border-radius: var(--border-radius);
+    background: var(--clr-blue);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+button:hover {
+    opacity: .8;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    color: var(--clr-dark-grey);
+    font-size: var(--fs-300);
+}
+
+.flight > .tab-content { 
+    margin-top: 1.5rem; 
+    margin-bottom: 3.5rem;
+}
+
+.flight .content-box {}
+.flight .content-box > p {  }
+.flight .content-box > h3 {
+    font-size: var(--fs-800);
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.preparation > .tab-content {
+    margin-top: .75rem; 
+    margin-bottom: 3.5rem;
+}
+
+.preparation .content-box {}
+
+.check-in > .tab-content {
+    margin-top: .5rem; 
+    margin-bottom: 3.75rem;
+}
+
+.check-in .content-box {
+    gap: 1rem;
+}
+
+.packing > .tab-content {
+    margin-top: .5rem; 
+    gap: 1rem;
+}
+
+.packing .content-box {}
+
+.tag-box {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.tag {
+    padding: 0 1em;
+    border-radius: 100px;
+    background: var(--clr-light-grey);
+}
+
+
+/* --------------------- */
+
+@media (max-width: 950px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 375px) {
+}

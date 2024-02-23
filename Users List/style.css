@@ -1,0 +1,446 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-accent: #574df4;
+    --clr-secondary: #7e89f7;
+    --clr-primary: #1688f1;
+    --clr-background: #f6fbfe;
+    --clr-text: #01070e;
+
+    --clr-body-bg: #E5EAF8;
+    
+    /* Gradient Colors */
+    --clr-pri-grad-1: #d0e7fc;
+    --clr-pri-grad-2: #b9dbfb;
+    --clr-pri-grad-3: #a2cff9;
+    
+    --clr-sec-grad-1: #e5e7fd;
+    --clr-sec-grad-2: #d8dcfd;
+    --clr-sec-grad-3: #cbd0fc;
+    
+    /* Shadow Color */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1419rem + 3.6613vw, 5rem);
+    --fs-900: clamp(2rem, 1.3497rem + 2.7746vw, 3.5rem);
+    --fs-800: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .65rem;
+    --ff-header: "Playfair Display", serif;
+    --ff-body: 'Poppins', sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    /* max-width: 100%; */
+    display: block;
+}
+
+/* --------------------- */
+
+.content-container {
+    margin: auto;
+    width: 100%;
+    /* min-height: 100vh; */
+    padding: clamp(1rem, -0.7341rem + 7.3988vw, 5rem);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    justify-items: center;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--clr-background);
+    color: var(--clr-text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 10px;
+    height: 10px;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 5px 10px var(--icon-shadow-color, none), 0 -5px 10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+/* --------------------- */
+
+header {
+    --border-radius: 8px;
+    width: 100%;
+    background: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+    /* outline: 1px solid black; */
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: inherit;
+}
+
+.icon-users {
+    width: 40px;
+    height: 40px;
+    font-size: var(--fs-800);
+}
+
+label[for=search] {
+    width: 100%;
+    position: relative;
+    background: inherit;
+}
+
+label[for=search] > input {
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--clr-text);
+    background: inherit;
+    color: inherit;
+}
+
+label[for=search] > span {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    user-select: none;
+    pointer-events: none;
+    transform-origin: bottom left;
+    transition: 0.25s;
+    background: inherit;
+    color: inherit;
+}
+
+label[for=search] > input:focus,
+label[for=search] > input:valid {
+    border-color: var(--clr-accent);
+}
+
+label[for=search] > input:focus + span,
+label[for=search] > input:valid + span {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: var(--fs-300);
+    padding-inline: 2px;
+    color: var(--clr-accent);
+}
+
+nav {}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-list > li {
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    transition: background .25s ease-in-out, color .25s ease-in-out;
+}
+
+.nav-list > li:hover {
+    background: var(--clr-accent);
+    color: var(--clr-background);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------------- */
+
+main {
+    width: 100%;
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 290px);
+    grid-auto-rows: min-content;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    --card-bg-grad-1: var(--clr-sec-grad-1, none);
+    --card-bg-grad-2: var(--clr-sec-grad-2, none);
+    --card-bg-grad-3: var(--clr-sec-grad-3, none);
+    --card-border-color: var(--clr-secondary, none);
+    max-width: 290px;
+    height: 185px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto) 1fr;
+    grid-template-areas: 
+        "image name"
+        "image location"
+        ". tags";
+    gap: 0 1rem;
+    padding: 1.5rem;
+    align-items: start;
+    justify-items: start;
+    border-radius: var(--border-radius);
+    /* background: var(--clr-primary); */
+    background: linear-gradient(135deg,
+        var(--card-bg-grad-1),
+        var(--card-bg-grad-2),
+        var(--card-bg-grad-3)
+    );
+    position: relative;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+.card::before {
+    --card-bg-grad-1: var(--clr-pri-grad-1, none);
+    --card-bg-grad-2: var(--clr-pri-grad-2, none);
+    --card-bg-grad-3: var(--clr-pri-grad-3, none);
+    --card-border-color: var(--clr-primary, none);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(135deg,
+        var(--card-bg-grad-1),
+        var(--card-bg-grad-2),
+        var(--card-bg-grad-3)
+    );
+    opacity: 0;
+    transition: opacity .3s linear;
+    z-index: -1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover > .card-image,
+.card:hover > .card-image > img {
+    --icon-border-radius: none;
+    border-radius: unset;
+}
+
+.card-image {
+    --icon-border-radius: 50%;
+    --icon-outline-color: var(--clr-accent);
+    --icon-shadow-color: var(--clr-accent);
+    grid-area: image;
+    width: auto;
+    height: auto;
+    transition: all .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.card-image > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.card-name {
+    grid-area: name;
+    align-self: end;
+    font-size: var(--fs-500);
+    font-weight: 700;
+}
+
+.card-location {
+    grid-area: location;
+
+}
+
+.tag-box {
+    grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: .25rem;
+}
+
+.tag {
+    font-size: var(--fs-200);
+    line-height: 1;
+    padding: .5em .6em;
+    border-radius: 100px;
+    border: 1px solid var(--card-border-color);
+    transition: border .3s linear;
+
+}
+
+.not-found {
+    font-size: var(--fs-800);
+    font-weight: 700;
+}
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 800px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+}

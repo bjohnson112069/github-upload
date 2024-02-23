@@ -1,0 +1,403 @@
+/* Add CSS here */
+:root {
+    --clr-body-bg: #303030;
+
+    --clr-black: 0 0% 0%; /* hsl(0, 0%, 0%), #000000; */
+    --clr-white: 0 0% 100%; /* hsl(0, 0%, 100%), #FFFFFF; */
+    --clr-yellow: 34.12 100% 60%; /* hsl(34.12, 100%, 60%), #FFA733; */
+    --clr-orange: 14.39 100% 56.67%; /* hsl(14.39, 100%, 56.67%), #FF5722; */
+    --clr-blue: 211.93 80.28% 41.76%; /* hsl(211.93, 80.28%, 41.76%), #1565C0; */
+    --clr-medium-blue: 206.3 58.87% 51.37%; /* hsl(206.3, 58.87%, 51.37%), #3A8CCC; */
+    --clr-very-light-blue: 182.7 64.03% 72.75%; /* hsl(182.7, 64.03%, 72.75%), #8DE2E6; */
+    --clr-light-blue: 186.87 63.16% 70.2%; /* hsl(186.87, 63.16%, 70.2%), #83D8E3; */
+    --clr-medium-blue-2: 190.59 63.75% 68.63%; /* hsl(190.59, 63.75%, 68.63%), #7CD0E2; */
+    --clr-very-dark-grey: 214.74 12.58% 29.61%; /* hsl(214.74, 12.58%, 29.61%), #424A55; */
+
+    --fs-500: clamp(1rem, 0.5665rem + 1.8497vw, 2rem);
+    --fs-500: 2rem;
+    --fs-400: 1rem;
+    --fs-350: .875rem;
+    --fs-300: .75rem;
+
+    --max-width: 1240px;
+    --min-width: 450px;
+    --border-radius: 15px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.5;
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    background-color: var(--clr-body-bg);
+    color: red;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: auto;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+    
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+text-wrap: balance;
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: hsl(var(--clr-white));
+    color: var(--clr-very-dark-blue);
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+ 
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid hsl(var(--icon-border-color, red));
+    background: hsl(var(--icon-bg-color, red) / .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon > img {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-word {
+    --icon-border-color: var(--clr-blue);
+    --icon-bg-color: var(--clr-blue);
+}
+
+.icon-adobe {
+    --icon-border-color: var(--clr-yellow);
+    --icon-bg-color: var(--clr-yellow);
+}
+
+.icon-office {
+    --icon-border-color: var(--clr-orange);
+    --icon-bg-color: var(--clr-orange);
+}
+
+.mouse-svg {
+    fill: hsl(var(--clr-light-blue));
+}
+
+/* --------------------- */
+.modal {
+    --x-size: 64px;
+    max-width: 415px;
+    width:  100%;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--x-size);
+    height: var(--x-size);
+    font-size: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    padding-top: .5rem;
+    padding-right: .5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    background: hsl(var(--clr-medium-blue-2));
+    color: hsl(var(--clr-white));
+}
+
+.close:hover {
+    background: hsl(var(--clr-medium-blue));
+}
+
+.fa-xmark {
+    font-size: 1.5rem;
+}
+
+.terms-wrapper {
+    --padding: 5px;
+    height: 85px;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    clip-path: polygon(0 0, calc(100% - var(--x-size) - var(--padding)) 0, 100% calc(0% + var(--x-size) + var(--padding)), 100% 100%, 0% 100%);
+    background: linear-gradient(90deg, hsl(var(--clr-medium-blue)), hsl(var(--clr-very-light-blue)));
+}
+
+.mouse-svg {
+    align-self: start;
+}
+
+.terms-wrapper > p {
+    max-width: 30ch;
+    color: hsl(var(--clr-white));
+}
+.terms-wrapper > p > a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* --------------------- */
+
+.documents {
+    max-width: 415px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    color: hsl(var(--clr-very-dark-grey));
+    border-radius: var(--border-radius);
+    box-shadow: -10px -10px 20px #B6B4BF, 10px 10px 20px #B6B4BF;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-box > h1 {
+    font-size: var(--fs-500);
+    font-weight: 500;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    cursor: pointer;
+}
+
+.add-new {
+    padding: 1em 1.5em;
+    border-radius: 100px;
+    color: hsl(var(--clr-medium-blue));
+    border: 2px solid hsl(var(--clr-medium-blue));
+    font-weight: 700;
+}
+
+.add-new:hover {
+    background: linear-gradient(90deg, hsl(var(--clr-medium-blue)), hsl(var(--clr-very-light-blue)));
+    color: hsl(var(--clr-white));
+}
+
+.remove {
+    gap: 0;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    border: 1px solid grey;
+    overflow: hidden;
+}
+
+.search-box > label {
+    font-size: 2rem;
+}
+
+.search-box > #search {
+    flex: 1;
+    font-size: inherit;
+    font-weight: 700;
+    width: 100%;
+    height: 64px;
+    padding-left: 1rem;
+    border: none;
+}
+
+.search-box > #search:focus {
+    outline: none;
+}
+
+.list-box {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: var(--fs-400);
+}
+
+.list-box > li {
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.list-box > li > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list-box > li > div > h2 {
+    font-size: inherit;
+}
+
+/* --------------------- */
+
+.file-select {
+    position: fixed;
+    display: none;
+}
+
+.file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: hsl(var(--clr-white));
+    color: hsl(var(--clr-very-dark-grey));
+    border-radius: inherit;
+    border: 5px solid grey;
+    padding: 2rem;
+}
+
+.file > #name,
+.file > #file-type {
+    flex: 1;
+    font-size: inherit;
+    width: 100%;
+    height: 64px;
+    padding: .5rem;
+    border: 1px solid grey;
+}
+
+.file > #name:focus {
+    outline: none;
+}
+
+
+@media (max-width: 1050px) {
+}
+
+@media (max-width: 900px) {
+} 
+
+@media (max-width: 750px) {
+} 
+
+@media (max-width: 600px) {
+} 
+
+@media (max-width: 688px) {
+}
+ 
