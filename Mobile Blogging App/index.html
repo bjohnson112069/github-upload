@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Mobile Blogging App</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="smartphone scale">
+            <div class="content">
+                <article id="survey" class="active">
+                    <div class="icon x-survey">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <header>
+                        <h1>Choose Your Interests</h1>
+                        <p>Select your interest(s) then click continue</p>
+                    </header>
+                    <form class="interests">
+                        <main>
+                            <!-- Science -->
+                            <label class="interest" for="science">
+                                <input type="checkbox" id="science" name="interest" value="science">
+                                <div class="icon" aria-label="science icon" title="Atom icons created by Icon home - Flaticon"><!-- BG image --></div>
+                                <span>Science</span>
+                            </label>
+                            <!-- Culture -->
+                            <label class="interest" for="culture">
+                                <input type="checkbox" id="culture" name="interest" value="culture">
+                                <div class="icon" aria-label="culture icon" title="Partner icons created by Nhor Phai - Flaticon"><!-- BG image --></div>
+                                <span>Culture</span>
+                            </label>
+                            <!-- Creativity -->
+                            <label class="interest" for="creativity">
+                                <input type="checkbox" id="creativity" name="interest" value="creativity">
+                                <div class="icon" aria-label="creativity icon" title="Creativity icons created by yut1655 - Flaticon"><!-- BG image --></div>
+                                <span>Creativity</span>
+                            </label>
+                            <!-- Politics -->
+                            <label class="interest" for="politics">
+                                <input type="checkbox" id="politics" name="interest" value="politics">
+                                <div class="icon" aria-label="politics icon" title="Capitol icons created by Freepik - Flaticon"><!-- BG image --></div>
+                                <span>Politics</span>
+                            </label>
+                            <!-- Self -->
+                            <label class="interest" for="self">
+                                <input type="checkbox" id="self" name="interest" value="self">
+                                <div class="icon" aria-label="self icon" title="Books icons created by Freepik - Flaticon"><!-- BG image --></div>
+                                <span>Self</span>
+                            </label>
+                            <!-- Media -->
+                            <label class="interest" for="media">
+                                <input type="checkbox" id="media" name="interest" value="media">
+                                <div class="icon" aria-label="media icon" title="Video icons created by Freepik - Flaticon"><!-- BG image --></div>
+                                <span>Media</span>
+                            </label>
+                            <!-- Productivity -->
+                            <label class="interest" for="productivity">
+                                <input type="checkbox" id="productivity" name="interest" value="productivity">
+                                <div class="icon" aria-label="productivity icon" title="roductivity icons created by juicy_fish - Flaticon"><!-- BG image --></div>
+                                <span>Productivity</span>
+                            </label>
+                            <!-- Design -->
+                            <label class="interest" for="design">
+                                <input type="checkbox" id="design" name="interest" value="design">
+                                <div class="icon" aria-label="design icon" title="Sketch icons created by Freepik - Flaticon"><!-- BG image --></div>
+                                <span>Design</span>
+                            </label>
+                            <!-- More -->
+                            <label class="interest" for="more">
+                                <input type="checkbox" id="more" name="interest" value="more">
+                                <div class="icon" aria-label="more icon" title="More icons created by Kirill Kazachek - Flaticon"><!-- BG image --></div>
+                                <span>More</span>
+                            </label>
+                        </main>
+                        <footer>
+                            <button id="continue" class="btn" type="submit">continue</button>
+                        </footer>
+                    </form>
+                </article>
+                <article id="browser">
+                    <header>
+                        <h1>Articles<br> based on your interest</h1>
+                    </header>
+                    <main>
+                        <section class="article">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/Mobile%20Blogging%20App/austin-schmid-hRdVSYpffas-unsplash.jpg?raw=true" alt="random image" title="Photo by Austin Schmid on Unsplash - https://unsplash.com/photos/silhouette-of-person-jumping-during-dawn-hRdVSYpffas">
+                            <div class="title">
+                                <h2 class="title">harvard study shows how to have lifetime joy</h2>
+                                <i class="fa-solid fa-bookmark favorite" aria-selected="false"></i>
+                            </div>
+                            <div class="profile">
+                                <img src="https://github.com/bjohnson112069/web-images/raw/main/Mobile%20Blogging%20App/pexels-ali-pazani-2787341.webp" alt="avatar image" title="Photo by Ali Pazani: https://www.pexels.com/photo/woman-in-grey-long-sleeved-shirt-2787341/">
+                                <h3 class="name">Ceceilia Duncan</h3>
+                                <div class="details">
+                                    <span>3 Apr</span>
+                                    <span>|</span>
+                                    <span>7 min</span>
+                                    <span>read</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="article">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/Mobile%20Blogging%20App/eberhard-grossgasteiger-6R3dGQJ3qOI-unsplash.jpg?raw=true" alt="random image" title="Photo by eberhard 🖐 grossgasteiger on Unsplash - https://unsplash.com/photos/rainbow-over-green-tree-covered-hill-6R3dGQJ3qOI">
+                            <div class="title">
+                                <h2 class="title">ready to give up a bad habit</h2>
+                                <i class="fa-solid fa-bookmark favorite" aria-selected="false"></i>
+                            </div>
+                            <div class="profile">
+                                <img src="https://github.com/bjohnson112069/web-images/raw/main/Mobile%20Blogging%20App/pexels-ali-pazani-2787341.webp" alt="avatar image" title="Photo by Ali Pazani: https://www.pexels.com/photo/woman-in-grey-long-sleeved-shirt-2787341/">
+                                <h3 class="name">Austin Schmid</h3>
+                                <div class="details">
+                                    <span>3 Apr</span>
+                                    <span>|</span>
+                                    <span>7 min</span>
+                                    <span>read</span>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    <footer>
+                        <button class="btn icon-box active" id="home">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span>Home</span>
+                        </button>
+                        <button class="btn icon-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Search</span>
+                        </button>
+                        <button class="btn icon-box">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </button>
+                        <button class="btn icon-box">
+                            <i class="fa-solid fa-award"></i>
+                            <span>Premium</span>
+                        </button>
+                    </footer>
+                </article>
+            </div>
+          </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Hiring Profile</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="profile">
+            <img class="bg-image" src="https://github.com/bjohnson112069/web-images/blob/main/Hiring%20Profile/pexels-mister-mister-2442888.jpg?raw=true" alt="background image" title="https://www.pexels.com/photo/tumbler-beside-black-dslr-camera-lens-2442888/">
+            <nav>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="icon">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </div>
+            </nav>
+            <header>
+                <h1>Jon B. Elliott</h1>
+                <div class="icon" aria-label="profile image"><!--BG Image  --></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui debitis quia voluptatibus accusantium repellat ipsa molestias corrupti fuga.</p>
+            </header>
+            <main>
+                <div class="tab-group">
+                    <button class="tab" value="about">about me</button>
+                    <button class="tab active" value="skills">skills</button>
+                    <button class="tab" value="portfolio">portfolio</button>
+                </div>
+                <div class="tab-content">
+                    <div class="content" id="about">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus repudiandae magnam ipsam eos dolorum voluptates cumque dolore nemo odit nesciunt optio culpa eum doloremque rem ullam nam dolor, dolorem necessitatibus.</p>
+                    </div>
+                    <div class="content active" id="skills">
+                        <div class="skill-group">
+                            <label for="advertising">Advertising</label>
+                            <progress id="advertising" max="100" value="70" title="Proficient"></progress>    
+                        </div>
+                        <div class="skill-group">
+                            <label for="wedding">Wedding</label>
+                            <progress id="wedding" max="100" value="85" title="Expert"></progress>    
+                        </div>
+                        <div class="skill-group">
+                            <label for="fashion">Fashion</label>
+                            <progress id="fashion" max="100" value="40" title="Competent"></progress>    
+                        </div>
+                    </div>
+                    <div class="content" id="portfolio">
+                        <h2>(click and drag to scroll)</h2>
+                        <div class="albums">
+                            <a href="#" class="album album-1" draggable="false"></a>
+                            <a href="#" class="album album-2" draggable="false"></a>
+                            <a href="#" class="album album-3" draggable="false"></a>
+                            <a href="#" class="album album-4" draggable="false"></a>
+                            <a href="#" class="album album-5" draggable="false"></a>
+                            <a href="#" class="album album-6" draggable="false"></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <button>hire me</button>
+            </footer>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+
+</html>

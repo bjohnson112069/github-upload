@@ -1,0 +1,591 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #ffffff;
+    --background: #030303;
+    --primary: #FF9500;
+    --secondary: #8c0d0d;
+    --accent: #1ED760;
+
+    
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #fff4e5;
+    --primary-100: #ffeacc;
+    --primary-200: #ffd599;
+    --primary-300: #ffbf66;
+    --primary-400: #ffaa33;
+    --primary-500: #ff9500;
+    --primary-600: #cc7700;
+    --primary-700: #995900;
+    --primary-800: #663c00;
+    --primary-900: #331e00;
+    --primary-950: #1a0f00;
+    
+    --secondary-50: #fde8e8;
+    --secondary-100: #fbd0d0;
+    --secondary-200: #f6a2a2;
+    --secondary-300: #f27373;
+    --secondary-400: #ee4444;
+    --secondary-500: #e91616;
+    --secondary-600: #bb1111;
+    --secondary-700: #8c0d0d;
+    --secondary-800: #5d0909;
+    --secondary-900: #2f0404;
+    --secondary-950: #170202;
+    
+    --accent-50: #e9fcef;
+    --accent-100: #d2f9e0;
+    --accent-200: #a5f3c0;
+    --accent-300: #78eda1;
+    --accent-400: #4be782;
+    --accent-500: #1fe062;
+    --accent-600: #18b44f;
+    --accent-700: #12873b;
+    --accent-800: #0c5a27;
+    --accent-900: #062d14;
+    --accent-950: #03160a;
+
+    /* Gradients */
+    --linearPrimarySecondary: linear-gradient(#FF9500, #8c0d0d);
+    --linearPrimaryAccent: linear-gradient(#FF9500, #1ED760);
+    --linearSecondaryAccent: linear-gradient(#8c0d0d, #1ED760);
+    --radialPrimarySecondary: radial-gradient(#FF9500, #8c0d0d);
+    --radialPrimaryAccent: radial-gradient(#FF9500, #1ED760);
+    --radialSecondaryAccent: radial-gradient(#8c0d0d, #1ED760);
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    /* --fs-900: 3rem; */
+    --fs-900: clamp(2rem, 0.0476rem + 3.8095vw, 3rem);
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background);
+    background: url("https://github.com/bjohnson112069/web-images/blob/main/Login%20Dark%20Theme/avatars-000738852403-9c2eig-t500x500.jpg?raw=true") center no-repeat;
+    background-size: cover;
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+#hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "login content";
+    align-items: center;
+    gap: clamp(1rem, -8.7619rem + 19.0476vw, 6rem);
+    padding: 2.5rem clamp(1rem, 0.0238rem + 1.9048vw, 1.5rem);
+    border-radius: var(--border-radius);
+    /* background: url("https://github.com/bjohnson112069/web-images/blob/main/Login%20Dark%20Theme/avatars-000738852403-9c2eig-t500x500.jpg?raw=true") center no-repeat; */
+    background-size: cover;
+}
+
+
+#hero > * {
+    max-width: var(--min-width);
+}
+
+.content {
+    grid-area: content;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content > h1 {
+    font-size: var(--fs-900);
+    font-size: 700;
+    text-transform: capitalize;
+}
+
+.content > p {
+    max-width: 50ch;
+}
+
+.login {
+    grid-area: login;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+    background: rgb(0, 0, 0, .5);
+    border-radius: var(--border-radius);
+}
+
+.login > * {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header > h1 {
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-block: 1rem;
+    width: 100%;
+    border-radius: 100px;
+    border: 2px solid transparent;
+}
+
+#google {
+    border-color: var(--text-600);
+    transition: border .25s linear;
+}
+
+#google:hover {
+    border-color: var(--text);
+}
+
+#google > .icon {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/blob/main/Login%20Dark%20Theme/google-logo.png?raw=true");
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.content > .separator {
+    display: none;
+}
+.separator {
+    width: 100%;
+    background: var(--text-600);
+    height: 2px;
+    border-radius: 100px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    background: inherit;
+    border-radius: var(--border-radius);
+}
+
+.form-control > i {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: var(--fs-650);
+    color: var(--text-600);
+}
+
+.form-control > input {
+    width: 100%;
+    padding: 1rem calc(2rem + var(--fs-650));
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--text-600);
+    background: var(--background);
+    color: inherit;
+}
+
+.form-control > span {
+    --offset: calc(2rem + var(--fs-650));
+    position: absolute;
+    left: var(--offset);
+    top: 1rem;
+    width: calc(100% - var(--offset) - 2px);
+    user-select: none;
+    pointer-events: none;
+    transform-origin: bottom left;
+    transition: 0.25s;
+    background: var(--background);
+    color: var(--text-600);
+    white-space: nowrap;
+}
+
+.form-control > input:focus,
+.form-control > input:valid {
+    border-color: var(--text);
+}
+
+.form-control > input:focus + span,
+.form-control > input:valid + span {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: var(--fs-300);
+    background: transparent;
+    color: var(--text);
+    padding-inline: 2px;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.toggle {
+    --toggle-width: 3rem;
+    --slider-width: var(--fs-650);
+    grid-area: toggle;
+    width: var(--toggle-width);
+    height: var(--slider-width);
+    border-radius: 100px;
+    background: var(--text-600);
+    position: relative;
+}
+
+.toggle::before {
+    content: "";
+    aspect-ratio: 1 / 1;
+    width: var(--slider-width);
+    border-radius: 50%;
+    background: var(--text);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    transition: transform .3s linear;
+}
+
+.switch > input:checked ~ .toggle {
+    background: var(--primary);
+}
+
+.switch > input:checked ~ .toggle::before {
+    /* background: var(--accent); */
+    transform: translate(calc(var(--toggle-width) - var(--slider-width)), -50%);
+}
+
+
+
+#login {
+    background: var(--primary);
+    color: var(--background);
+    font-weight: 700;
+    transition: transform .3s linear;
+    position: relative;
+    z-index: 1;    
+}
+
+#login:hover {
+    color: var(--text);
+}
+
+#login::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary-600);
+    transform: translateX(-50%);
+    transition: width 350ms ease-in-out;
+    z-index: -1;
+}
+
+#login:hover::after {
+    width: 100%;
+}
+
+#login-form > a {
+    text-decoration: underline 2px var(--text);
+    text-underline-offset: 5px;
+    text-decoration-skip-ink: none;
+}
+
+#login-form:invalid #login {
+    pointer-events: none;
+    opacity: .5;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    margin-left: .5rem;
+    color: var(--primary) !important;
+}
+
+
+/* --------------------- */
+
+@media (max-width: 820px) {
+    #hero {
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-template-areas: 
+            "content"
+            "login";
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .content > .separator {
+        display: block;
+    }
+}
+
+@media (max-width: 475px) {
+    
+
+} 
+
+@media (max-width: 375px) {
+} 
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Photos Slider</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="gallery">
+            <header>
+                <h1>recently uploaded photos</h1>
+                <button id="view-all" value="false">View All</button>
+            </header>
+            <div class="album">
+                <button class="arrow active goToPrev" disabled>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide current" data-slide="1">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/spartan-4801160_640.jpg?raw=true" alt="spartan race photo" title="Image by Romy from Pixabay">
+                        </div>
+                        <div class="slide" data-slide="2">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/spartan-4982720_640.jpg?raw=true" alt="spartan race photo" title="Image by Romy from Pixabay">
+                        </div>
+                        <div class="slide" data-slide="3">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/spartan-4804468_640.jpg?raw=true" alt="spartan race photo" title="Image by Romy from Pixabay">
+                        </div>
+                        <div class="slide" data-slide="4">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/spartan-4649323_640.jpg?raw=true" alt="spartan race photo" title="Image by Fals Tros from Pixabay">
+                        </div>
+                        <div class="slide" data-slide="5">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/spartan-4801156_640.jpg?raw=true" alt="spartan race photo" title="Image by Romy from Pixabay">
+                        </div>
+                        <div class="slide" data-slide="6">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/spartan-4649326_640.jpg?raw=true" alt="spartan race photo" title="Image by Fals Tros from Pixabay">
+                        </div>
+                        <div class="slide" data-slide="7">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/spartan-4982722_640.jpg?raw=true" alt="spartan race photo" title="Image by Romy from Pixabay">
+                        </div>
+                        <div class="slide" data-slide="8">
+                            <img class="slide-image" src="https://github.com/bjohnson112069/web-images/blob/main/Photos%20Slider/race-3527735_640.jpg?raw=true" alt="spartan race photo" title="Image by Lou Blazquez from Pixabay">
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow active goToNext">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

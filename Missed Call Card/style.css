@@ -1,0 +1,480 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #e6e5eb;
+    --background: #3B3B49;
+    --primary: #7F85F5;
+    --secondary: #5a495c;
+    --accent: #91C152;
+    
+    /* shades */
+    --text-50: #f1f1f4;
+    --text-100: #e3e2e9;
+    --text-200: #c8c5d3;
+    --text-300: #aca9bc;
+    --text-400: #908ca6;
+    --text-500: #746f90;
+    --text-600: #5d5973;
+    --text-700: #464356;
+    --text-800: #2f2c3a;
+    --text-900: #17161d;
+    --text-950: #0c0b0e;
+    
+    --background-50: #f1f1f4;
+    --background-100: #e3e3e8;
+    --background-200: #c6c6d2;
+    --background-300: #aaaabb;
+    --background-400: #8e8ea4;
+    --background-500: #71718e;
+    --background-600: #5b5b71;
+    --background-700: #444455;
+    --background-800: #2d2d39;
+    --background-900: #17171c;
+    --background-950: #0b0b0e;
+    
+    --primary-50: #e7e8fd;
+    --primary-100: #d0d2fb;
+    --primary-200: #a0a5f8;
+    --primary-300: #7177f4;
+    --primary-400: #414af1;
+    --primary-500: #121ded;
+    --primary-600: #0e17be;
+    --primary-700: #0b118e;
+    --primary-800: #070c5f;
+    --primary-900: #04062f;
+    --primary-950: #020318;
+    
+    --secondary-50: #f3f1f4;
+    --secondary-100: #e8e2e9;
+    --secondary-200: #d1c6d2;
+    --secondary-300: #baa9bc;
+    --secondary-400: #a38da5;
+    --secondary-500: #8c708f;
+    --secondary-600: #705a72;
+    --secondary-700: #544356;
+    --secondary-800: #382d39;
+    --secondary-900: #1c161d;
+    --secondary-950: #0e0b0e;
+    
+    --accent-50: #f3f8ec;
+    --accent-100: #e7f1da;
+    --accent-200: #cfe4b4;
+    --accent-300: #b7d68f;
+    --accent-400: #9fc969;
+    --accent-500: #87bb44;
+    --accent-600: #6c9636;
+    --accent-700: #517029;
+    --accent-800: #364b1b;
+    --accent-900: #1b250e;
+    --accent-950: #0e1307;
+
+    /* Gradients */
+    --linearPrimarySecondary: linear-gradient(#7F85F5, #5a495c);
+    --linearPrimaryAccent: linear-gradient(#7F85F5, #91C152);
+    --linearSecondaryAccent: linear-gradient(#5a495c, #91C152);
+    --radialPrimarySecondary: radial-gradient(#7F85F5, #5a495c);
+    --radialPrimaryAccent: radial-gradient(#7F85F5, #91C152);
+    --radialSecondaryAccent: radial-gradient(#5a495c, #91C152);
+    
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background-200);
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+#notification {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 4rem;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: var(--background);
+    width: 100%;
+    max-width: 540px;
+    box-shadow: 0 20px 20px var(--background-500);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#notification::before {
+    content: "\f095";
+    font-family: "Font Awesome";
+    font: var(--fa-font-solid);
+    font-size: var(--fs-1000);
+    font-size: 20rem;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#notification > * {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header i {
+    font-size: var(--fs-800);
+    pointer-events: none;
+}
+
+.title {
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+header > .icon {
+    width: var(--fs-900);
+    height: var(--fs-900);
+    cursor: pointer;
+    position: relative;
+}
+
+header > .icon::before {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: rgb(255,255,255, 0.2);
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header > .icon:hover::before {
+    border-color: var(--text);
+    inset: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    grid-template-areas: 
+        "avatar message"
+        "avatar name"
+        "avatar timestamp";
+}
+
+.avatar {
+    grid-area: avatar;
+    aspect-ratio: 1 / 1;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    box-shadow: 0 0 20px var(--primary);
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.avatar:hover {
+    border-radius: var(--border-radius);
+}
+
+.message {
+    grid-area: message;
+    align-self: end;
+}
+
+.name {
+    grid-area: name;
+    align-self: start;
+    font-weight: 700;
+}
+
+.timestamp {
+    grid-area: timestamp;
+    font-size: var(--fs-300);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 1rem;
+}
+
+footer i {
+    font-size: var(--fs-600);
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    white-space: nowrap;
+    position: relative;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    background: transparent;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover::before {
+    border-color: var(--text);
+    background: rgb(255,255,255, 0.2);
+    inset: 0;
+}
+
+#send-message {
+    background: var(--secondary);
+}
+
+#call-back {
+    background: var(--primary);
+}
+
+/* --------------------- */
+
+@media (max-width: 480px) {
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3, min-content);
+        justify-items: center;
+        gap: 0;
+        grid-template-areas: 
+            "avatar"
+            "message"
+            "name"
+            "timestamp";
+    }
+
+    .avatar {
+        margin-bottom: 1rem;
+    }
+
+    .timestamp {
+        margin-top: 1rem;
+    }
+    
+    footer {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+}
+
+@media (max-width: 475px) {
+} 
+
+@media (max-width: 375px) {
+} 
+

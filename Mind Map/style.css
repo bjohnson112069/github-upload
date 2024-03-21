@@ -1,0 +1,431 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --focus: #4C90E2;
+    --background: #F5F7FB;
+    --memory: #D79CA0;
+    --intuitive: #E1AB4A;
+    --collaboration: #76DAE7;
+    --text: #000000;
+
+    
+    /* shades */
+    --focus-50: #e9f1fb;
+    --focus-100: #d3e4f8;
+    --focus-200: #a7c8f1;
+    --focus-300: #7badea;
+    --focus-400: #5092e2;
+    --focus-500: #2476db;
+    --focus-600: #1d5faf;
+    --focus-700: #154784;
+    --focus-800: #0e2f58;
+    --focus-900: #07182c;
+    --focus-950: #040c16;
+    
+    --background-50: #ffffff;
+    --background-100: #dbe2f0;
+    --background-200: #b6c5e2;
+    --background-300: #92a8d3;
+    --background-400: #6d8ac5;
+    --background-500: #496db6;
+    --background-600: #3a5792;
+    --background-700: #2c426d;
+    --background-800: #1d2c49;
+    --background-900: #0f1624;
+    --background-950: #070b12;
+    
+    --memory-50: #f8edee;
+    --memory-100: #f0dbdc;
+    --memory-200: #e1b7b9;
+    --memory-300: #d39297;
+    --memory-400: #c46e74;
+    --memory-500: #b54a51;
+    --memory-600: #913b41;
+    --memory-700: #6d2c31;
+    --memory-800: #481e20;
+    --memory-900: #240f10;
+    --memory-950: #120708;
+    
+    --intuitive-50: #fbf5e9;
+    --intuitive-100: #f8ebd3;
+    --intuitive-200: #f1d7a7;
+    --intuitive-300: #eac37b;
+    --intuitive-400: #e2af50;
+    --intuitive-500: #db9b24;
+    --intuitive-600: #af7c1d;
+    --intuitive-700: #845d15;
+    --intuitive-800: #583e0e;
+    --intuitive-900: #2c1f07;
+    --intuitive-950: #161004;
+    
+    --collaboration-50: #e9f9fb;
+    --collaboration-100: #d4f3f7;
+    --collaboration-200: #a8e7f0;
+    --collaboration-300: #7ddce8;
+    --collaboration-400: #52d0e0;
+    --collaboration-500: #26c4d9;
+    --collaboration-600: #1f9dad;
+    --collaboration-700: #177682;
+    --collaboration-800: #0f4e57;
+    --collaboration-900: #08272b;
+    --collaboration-950: #041416;
+    
+    
+
+    /* Gradients */
+
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    /* --fs-900: 3rem; */
+    --fs-900: clamp(2rem, 0.0476rem + 3.8095vw, 3rem);
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background);
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 20px -10px rgb(0, 0, 0, .5);
+    padding: 1rem;
+    background: var(--background-50);
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 100px);
+}
+
+.hyphen {
+    flex-grow: 0;
+    position: relative;
+}
+
+.hyphen::before,
+.hyphen::after {
+    content: "-";
+    position: absolute;
+    top: 50%;
+}
+
+.hyphen::before {
+    left: -.25rem;
+    transform: translate(-100%, -50%);
+}
+
+.hyphen::after {
+    right: -.25rem;
+    transform: translate(100%, -50%);
+}
+
+.topic {
+    position: relative;
+    padding: .5rem 1rem;
+    background: var(--topic-bg, yellow);
+    border-bottom: 2px solid var(--topic-bd-color, green);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    position: absolute;
+}
+
+/* Memory & Retention */
+.topic[data-value="1"] {
+    --topic-bg: var(--memory-300);
+    --topic-bd-color: var(--memory-500);
+    align-self: end;
+    top: 60%;
+    left: 5%;
+}
+
+/* Intuitive */
+.topic[data-value="2"] {
+    --topic-bg: var(--intuitive-300);
+    --topic-bd-color: var(--intuitive-500);
+    top: 15%;
+    left: 30%;
+}
+
+/* Collaboration */
+.topic[data-value="3"] {
+    --topic-bg: var(--collaboration-300);
+    --topic-bd-color: var(--collaboration-500);
+    top: 30%;
+    left: 65%;
+}
+
+/* Focus */
+.topic[data-value="4"] {
+    --topic-bg: var(--focus-300);
+    --topic-bd-color: var(--focus-500);
+    top: 65%;
+    left: 65%;
+}
+
+.sub-topic {
+    position: absolute;
+    padding: .5rem 1rem;
+    background: var(--background);
+    border-bottom: 2px solid var(--topic-bd-color, green);
+    white-space: nowrap;
+}
+
+.sub-topic[data-value="1"] {
+    right: -350%;
+    top: -150%;
+}
+
+.sub-topic[data-value="2"] {
+    right: -350%;
+    top: 100%;
+}
+
+.sub-topic[data-value="3"] {
+    right: -300%;
+    top: 350%;
+}
+
+
+/* --------------------- */
+
+@media (max-width: 1030px) {
+    
+    .sub-topic[data-value="1"] {
+        right: -220%;
+        top: 125%;
+    }
+
+    .sub-topic[data-value="2"] {
+        right: -250%;
+        top: 350%;
+    }
+
+    .sub-topic[data-value="3"] {
+        right: 100%;
+        top: 350%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    /* Focus */
+    .topic[data-value="4"] {
+        top: 60%;
+    }
+    
+    .sub-topic[data-value="1"] {
+        right: 200%;
+        top: 200%;
+    }
+
+    .sub-topic[data-value="2"] {
+        right: -20%;
+        top: 475%;
+    }
+
+    .sub-topic[data-value="3"] {
+        right: 160%;
+        top: 350%;
+    }
+} 
+
+@media (max-width: 375px) {
+} 
+

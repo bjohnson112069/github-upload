@@ -1,0 +1,442 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #404149;
+    --background: #FFFFFF;
+    --primary: #7C91FE;
+
+    
+    /* shades */
+    --text-50: #f1f2f3;
+    --text-100: #e4e4e7;
+    --text-200: #c8c9d0;
+    --text-300: #adaeb8;
+    --text-400: #9294a0;
+    --text-500: #777988;
+    --text-600: #5f616d;
+    --text-700: #474852;
+    --text-800: #2f3037;
+    --text-900: #18181b;
+    --text-950: #0c0c0e;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #e6eaff;
+    --primary-100: #cdd5fe;
+    --primary-200: #9aabfe;
+    --primary-300: #6881fd;
+    --primary-400: #3556fd;
+    --primary-500: #032cfc;
+    --primary-600: #0223ca;
+    --primary-700: #021b97;
+    --primary-800: #011265;
+    --primary-900: #010932;
+    --primary-950: #000419;
+
+    /* Gradients */
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--background);
+    background: linear-gradient(-135deg,
+        var(--background),
+        var(--background-50),
+        var(--background-100),
+        var(--background-200)
+    );
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 3rem;
+}
+
+section {
+    width: 100%;
+    max-width: var(--min-width);
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 20px -10px var(--text-200);
+    overflow: hidden;
+}
+
+section > * {
+    padding: 1rem;
+}
+
+#filters-box {}
+
+#filters-box > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--primary);
+    color: var(--background);
+
+    & h1 {
+        font-size: var(--fs-500);
+        font-weight: 700;
+    }
+}
+
+#filters-box > main {
+    background: var(--background);
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    cursor: pointer;
+
+    & input[type="checkbox"] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+
+    & input[type="checkbox"]:checked ~ .icon > img {
+        transform: translateX(0);
+    }
+        
+    & .icon {
+        --icon-border-radius: var(--border-radius);
+        width: 2rem;
+        height: 2rem;
+        background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        box-shadow:  4px 4px 8px #858585,
+             -4px -4px 8px #ffffff;
+        overflow: hidden;
+    }
+
+    & img {
+        width: 1rem;
+        object-fit: cover;
+        object-position: center;
+        transform: translateX(-2rem);
+        transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    }
+
+    & span {}
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: var(--border-radius);
+    padding: .5em 1.5em;
+}
+
+.btn-primary {
+    background: var(--primary);
+    box-shadow:  4px 4px 8px #697bd8,
+                 -4px -4px 8px #8fa7ff;
+    color: var(--background);
+}
+
+.btn-primary:active {
+    box-shadow:  inset 2px 2px 4px #697bd8,
+                 inset -2px -2px 4px #8fa7ff;
+}
+
+.btn-secondary {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  4px 4px 8px #d9d9d9,
+                 -4px -4px 8px #ffffff;
+}
+
+.btn-secondary:active {
+    box-shadow:  inset 2px 2px 4px #d9d9d9,
+                 inset -2px -2px 4px #ffffff;
+}
+
+#certs-box {
+}
+
+#certs-box > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--background);
+
+}
+
+#certs-box > main {
+    background: var(--primary);
+}
+
+.certificates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--primary);
+    box-shadow: inset 5px 5px 10px #5b6ab9,
+            inset -5px -5px 10px #9db8ff;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    
+    & i {
+        font-size: 2.5rem;
+        color: var(--primary-300);
+    }
+    
+    & p {
+        color: var(--background);
+        max-width: 15ch;
+        text-align: center;
+    }
+}
+
+
+
+/* --------------------- */
+
+@media (max-width: 900px) {
+    
+}
+
+@media (max-width: 500px) {
+} 
+
+@media (max-width: 375px) {
+} 
+

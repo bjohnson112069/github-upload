@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Neumorphic Ui 2</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <article>
+            <section id="filters-box">
+                <header>
+                    <h1>Filters</h1>
+                    <button class="btn btn-primary">Done</button>
+                </header>
+                <main>
+                    <div class="filters">
+                        <!-- Date -->
+                        <label class="filter" for="date">
+                            <input type="checkbox" id="date" name="filter" value="date">
+                            <div class="icon">
+                                <img class="checkmark" src="https://raw.githubusercontent.com/bjohnson112069/web-images/7d6c3e595e7e4f988c8381bb1181764976131bf4/Neumorphic%20Ui%202/check-solid.svg" alt="check mark">
+                            </div>
+                            <span>Date</span>
+                        </label>
+                        <!-- Amount -->
+                        <label class="filter" for="amount">
+                            <input type="checkbox" id="amount" name="filter" value="amount">
+                            <div class="icon">
+                                <img class="checkmark" src="https://raw.githubusercontent.com/bjohnson112069/web-images/7d6c3e595e7e4f988c8381bb1181764976131bf4/Neumorphic%20Ui%202/check-solid.svg" alt="check mark">
+                            </div>
+                            <span>Amount</span>
+                        </label>
+                        <!-- Status -->
+                        <label class="filter" for="status">
+                            <input type="checkbox" id="status" name="filter" value="status">
+                            <div class="icon">
+                                <img class="checkmark" src="https://raw.githubusercontent.com/bjohnson112069/web-images/7d6c3e595e7e4f988c8381bb1181764976131bf4/Neumorphic%20Ui%202/check-solid.svg" alt="check mark">
+                            </div>
+                            <span>Status</span>
+                        </label>
+                        <!-- Payment method -->
+                        <label class="filter" for="payment">
+                            <input type="checkbox" id="payment" name="filter" value="payment">
+                            <div class="icon">
+                                <img class="checkmark" src="https://raw.githubusercontent.com/bjohnson112069/web-images/7d6c3e595e7e4f988c8381bb1181764976131bf4/Neumorphic%20Ui%202/check-solid.svg" alt="check mark">
+                            </div>
+                            <span>Payment method</span>
+                        </label>
+                        
+                    </div>
+                </main>
+            </section>
+            <section id="certs-box">
+                <header>
+                    <button class="btn btn-secondary">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Add new</span>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fa-solid fa-file-export"></i>
+                        <span>Export</span>
+                    </button>    
+                </header>
+                <main>
+                    <ul class="certificates">
+                        <li class="empty">
+                            <i class="fa-solid fa-award"></i>
+                            <p>You don't have any certificates</p>
+                            <button class="btn btn-primary">Learn more</button>
+                        </li>
+                    </ul>
+                </main>
+            </section>
+        </article>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

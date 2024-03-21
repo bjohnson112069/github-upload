@@ -1,0 +1,602 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #ecf6f6;
+    --background: #050b0a;
+    --primary: #9cd3cb;
+    --secondary: #325770;
+    --accent: #5d84b7;    
+    
+    /* shades */
+    --text-50: #eef7f7;
+    --text-100: #dcefef;
+    --text-200: #badede;
+    --text-300: #97cece;
+    --text-400: #74bebe;
+    --text-500: #52adad;
+    --text-600: #418b8b;
+    --text-700: #316868;
+    --text-800: #214545;
+    --text-900: #102323;
+    --text-950: #081111;
+
+    --background-50: #edf7f5;
+    --background-100: #dcefec;
+    --background-200: #b9dfd9;
+    --background-300: #95d0c6;
+    --background-400: #72c0b3;
+    --background-500: #4fb0a0;
+    --background-600: #3f8d80;
+    --background-700: #2f6a60;
+    --background-800: #204640;
+    --background-900: #102320;
+    --background-950: #081210;
+
+    --primary-50: #edf7f6;
+    --primary-100: #dcefec;
+    --primary-200: #b9dfda;
+    --primary-300: #95d0c7;
+    --primary-400: #72c0b4;
+    --primary-500: #4fb0a1;
+    --primary-600: #3f8d81;
+    --primary-700: #2f6a61;
+    --primary-800: #204641;
+    --primary-900: #102320;
+    --primary-950: #081210;
+
+    --secondary-50: #edf3f7;
+    --secondary-100: #dce7ef;
+    --secondary-200: #b9d0df;
+    --secondary-300: #95b8d0;
+    --secondary-400: #72a1c0;
+    --secondary-500: #4f89b0;
+    --secondary-600: #3f6e8d;
+    --secondary-700: #2f526a;
+    --secondary-800: #203746;
+    --secondary-900: #101b23;
+    --secondary-950: #080e12;
+
+    --accent-50: #edf2f7;
+    --accent-100: #dce4ef;
+    --accent-200: #b9c9df;
+    --accent-300: #95afd0;
+    --accent-400: #7294c0;
+    --accent-500: #4f79b0;
+    --accent-600: #3f618d;
+    --accent-700: #2f496a;
+    --accent-800: #203046;
+    --accent-900: #101823;
+    --accent-950: #080c12;
+    
+    /* Gradients */
+    --angle: 0deg;
+    --linearPrimarySecondary: linear-gradient(var(--angle), #9cd3cb, #325770);
+    --linearPrimaryAccent: linear-gradient(var(--angle), #9cd3cb, #5d84b7);
+    --linearSecondaryAccent: linear-gradient(var(--angle), #325770, #5d84b7);
+    --radialPrimarySecondary: radial-gradient(#9cd3cb, #325770);
+    --radialPrimaryAccent: radial-gradient(#9cd3cb, #5d84b7);
+    --radialSecondaryAccent: radial-gradient(#325770, #5d84b7);
+
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+        "chat notification"
+        "chat newsletter";
+    place-items: center;
+    align-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background);
+    background: linear-gradient(180deg,
+        var(--background-900),
+        var(--background-950),
+        var(--background)
+    );
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+section {
+    width: 100%;
+    max-width: var(--min-width);
+}
+
+#chat,
+#chat-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap, 1rem);
+}
+
+
+#chat {
+    grid-area: chat;
+    justify-self: end;
+}
+
+#chat-form {
+    --gap: 2rem;
+    background: var(--background);
+    height: auto;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 1s linear, opacity .3s linear;
+    border-radius: var(--border-radius);
+    background: var(--secondary-800);
+    overflow: hidden;
+}
+
+#chat-form.active {
+    padding: 1rem;
+    max-height: 100vh;
+    opacity: 1;
+    transition: max-height .3s linear, opacity 1s .3s linear;
+}
+
+.greeting {
+    max-width: 30ch;
+}
+
+.greeting > br {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    position: relative;
+    background: inherit;
+    border-radius: var(--border-radius);
+}
+
+.form-control > i {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: var(--fs-650);
+    color: var(--accent);
+}
+
+.form-control > input,
+.form-control > textarea {
+    width: 100%;
+    padding: 1rem calc(2rem + var(--fs-650));
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--text);
+    background: inherit;
+    color: inherit;
+    max-width: 300px;
+}
+
+.form-control > span {
+    --offset: calc(2rem + var(--fs-650));
+    position: absolute;
+    left: var(--offset);
+    top: 1rem;
+    width: calc(100% - var(--offset) - 2px);
+    user-select: none;
+    pointer-events: none;
+    transform-origin: bottom left;
+    transition: 0.25s;
+    background: inherit;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.form-control > input:focus,
+.form-control > input:valid,
+.form-control > textarea:focus,
+.form-control > textarea:valid {
+    border-color: var(--accent);
+}
+
+.form-control > input:focus + span,
+.form-control > input:valid + span,
+.form-control > textarea:focus + span,
+.form-control > textarea:valid + span  {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: var(--fs-300);
+    background: transparent;
+    color: var(--accent);
+    padding-inline: 2px;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    padding-block: .75em;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    background: var(--accent);
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;    
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent-600);
+    transform: translateX(-50%);
+    transition: width 350ms ease-in-out;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+.icon-chat {
+    outline: none;
+    border: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 8px 10px 20px 0px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.53);
+    position: relative;
+    font-size: 2rem;
+}
+
+.icon-chat::before,
+.icon-chat::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Font Awesome 6 Free';
+    transform: translate(-50%, -50%);
+    transition: .3s opacity ease-in-out, .3s visibility ease-in-out;
+}
+
+.icon-chat::before {
+    content: "\f27a";
+}
+
+.icon-chat::after {
+    content: "\58";
+    opacity: 0;
+    visibility: hidden;
+}
+
+.icon-chat[aria-expanded=true]::before {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.icon-chat[aria-expanded=true]::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --------------------- */
+
+#notification {
+    grid-area: notification;
+    justify-self: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    place-items: start;
+    gap: 1rem;
+    background: var(--secondary-800);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.icon-notification {
+    --icon-bg-image: url("https://github.com/bjohnson112069/web-images/blob/main/Form%20Dark%20Theme/shield-icon.png?raw=true");
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#notification > h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: var(--fs-400);
+    font-weight: 600;
+    color: var(--accent);
+    text-wrap:unset;
+}
+
+/* --------------------- */
+
+#newsletter,
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap, 1rem);
+}
+
+#newsletter {
+    grid-area: newsletter;
+    justify-self: start;
+
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--secondary-800);
+}
+
+#subscribe-form {
+    --gap: 1.5rem;
+}
+
+.icon-email {
+    --icon-bg-color: var(--accent);
+    --icon-border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+}
+
+#subscribe-form > h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(0deg,
+        var(--primary-200),
+        var(--primary),
+        var(--primary-300),
+        var(--accent-400),
+        var(--accent),
+        var(--accent-500)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#subscribe-form > p {
+    text-align: center;
+}
+
+#subscribe-email {
+    overflow: hidden;
+}
+
+.after-submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: inherit;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+    background: var(--primary-500);
+}
+ .after-submit.done {
+    transform: translateX(0);
+ }
+
+/* --------------------- */
+
+@media (max-width: 650px) {
+    .content-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-template-areas: 
+            "chat"
+            "notification"
+            "newsletter";
+        place-items: center;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    #chat,
+    #notification,
+    #newsletter {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 550px) {
+} 
+
+@media (max-width: 375px) {
+} 
+

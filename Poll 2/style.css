@@ -1,0 +1,446 @@
+/* Add CSS here */
+:root {
+
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #767D7E;
+    --background: #f3f5f6;
+    --primary: #2173fc;
+    --secondary: #f96d6c;
+    --accent: #94f355;
+
+    /* shades */
+    --text-50: #f2f3f3;
+    --text-100: #e5e6e6;
+    --text-200: #cacdce;
+    --text-300: #b0b4b5;
+    --text-400: #969b9c;
+    --text-500: #7c8283;
+    --text-600: #636869;
+    --text-700: #4a4e4f;
+    --text-800: #313435;
+    --text-900: #191a1a;
+    --text-950: #0c0d0d;
+
+    --background-50: #f0f3f4;
+    --background-100: #e2e7e9;
+    --background-200: #c5ced3;
+    --background-300: #a8b6bd;
+    --background-400: #8b9ea7;
+    --background-500: #6e8591;
+    --background-600: #586b74;
+    --background-700: #425057;
+    --background-800: #2c353a;
+    --background-900: #161b1d;
+    --background-950: #0b0d0f;
+
+    --primary-50: #e6efff;
+    --primary-100: #cddffe;
+    --primary-200: #9bbffd;
+    --primary-300: #689ffd;
+    --primary-400: #367ffc;
+    --primary-500: #045ffb;
+    --primary-600: #034cc9;
+    --primary-700: #023997;
+    --primary-800: #022664;
+    --primary-900: #011332;
+    --primary-950: #000919;
+
+    --secondary-50: #fee7e7;
+    --secondary-100: #fdcece;
+    --secondary-200: #fb9d9d;
+    --secondary-300: #f96c6c;
+    --secondary-400: #f73b3b;
+    --secondary-500: #f50a0a;
+    --secondary-600: #c40808;
+    --secondary-700: #930606;
+    --secondary-800: #620404;
+    --secondary-900: #310202;
+    --secondary-950: #180101;
+
+    --accent-50: #f0fde7;
+    --accent-100: #e1fccf;
+    --accent-200: #c3f8a0;
+    --accent-300: #a5f570;
+    --accent-400: #87f240;
+    --accent-500: #69ee11;
+    --accent-600: #54bf0d;
+    --accent-700: #3f8f0a;
+    --accent-800: #2a5f07;
+    --accent-900: #153003;
+    --accent-950: #0b1802;
+
+    /* Gradients */
+    --linearPrimarySecondary: linear-gradient(#2173fc, #f96d6c);
+    --linearPrimaryAccent: linear-gradient(#2173fc, #94f355);
+    --linearSecondaryAccent: linear-gradient(#f96d6c, #94f355);
+    --radialPrimarySecondary: radial-gradient(#2173fc, #f96d6c);
+    --radialPrimaryAccent: radial-gradient(#2173fc, #94f355);
+    --radialSecondaryAccent: radial-gradient(#f96d6c, #94f355);
+    
+
+    /* Typography */
+    --fs-1000: 3.75rem;
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.375rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--background);
+    background: linear-gradient(-135deg,
+        var(--primary-400),
+        var(--primary-300),
+        var(--primary-200)
+    );
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children>* {
+    outline: 1px solid blue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.survey {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: clamp(1rem, -3.8214rem + 20.5714vw, 3.25rem);
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px 10px rgb(0, 0, 0, .5);
+    background: var(--background);
+    overflow: hidden;
+}
+
+.survey > * {
+    width: 100%;
+}
+
+header {
+    padding-block: .5rem;
+    border-bottom: 1px solid var(--text);
+
+    & h1 {
+        font-size: var(--fs-600);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+/* --------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    & h2 {
+        font-size: var(--fs-600);
+        font-weight: 400;
+        max-width: 35ch;
+    }
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.radio-group {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.radio__input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+
+.radio__input:checked + .radio__icon {
+    stroke: var(--primary);
+    stroke-dashoffset: 0;
+}
+
+.radio__icon {
+    width: 1.375em;
+    height: 1.375em;
+    border-radius: 50%;;
+    flex-shrink: 0;
+    overflow: visible;
+    stroke-dasharray: 20px;
+    stroke-dashoffset: 20px;
+    transition: stroke-dashoffset .2s ease-out;
+
+    outline: 2px solid var(--text-100);
+    outline-offset: 3px;
+}
+
+.radio__label {}
+
+.hover {
+    position: relative;
+    z-index: 1;
+}
+
+.hover::before {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    background: transparent;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.hover:hover::before {
+    background: rgb(0, 0, 0, 0.2);
+    inset: 0;
+}
+
+
+
+/* --------------------- */
+
+footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+}
+
+.btn {
+    padding-block: 1rem;
+    white-space: nowrap;
+    font-size: var(--fs-650);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+}
+
+#submit {
+    text-transform: uppercase;
+    background: var(--primary);
+    color: var(--background);
+}
+
+#skip {
+}
+
+
+/* --------------------- */
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 525px) {
+}

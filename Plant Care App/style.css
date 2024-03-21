@@ -1,0 +1,576 @@
+/* Add CSS here */
+:root {
+
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #081307;
+    --background: #ffffff;
+    --primary: #014148;
+    --secondary: #21361E;
+    --accent: #30B397;
+
+    /* shades */
+    --text-50: #edf8ec;
+    --text-100: #dcf1da;
+    --text-200: #b8e3b5;
+    --text-300: #95d68f;
+    --text-400: #72c86a;
+    --text-500: #4fba45;
+    --text-600: #3f9537;
+    --text-700: #2f7029;
+    --text-800: #1f4a1c;
+    --text-900: #10250e;
+    --text-950: #081307;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #e6fcff;
+    --primary-100: #cdf9fe;
+    --primary-200: #9bf4fd;
+    --primary-300: #68eefd;
+    --primary-400: #36e8fc;
+    --primary-500: #04e2fb;
+    --primary-600: #03b5c9;
+    --primary-700: #028897;
+    --primary-800: #025b64;
+    --primary-900: #012d32;
+    --primary-950: #001719;
+    
+    --secondary-50: #f0f6ef;
+    --secondary-100: #e0edde;
+    --secondary-200: #c1dbbd;
+    --secondary-300: #a2c99c;
+    --secondary-400: #83b77b;
+    --secondary-500: #64a45b;
+    --secondary-600: #508448;
+    --secondary-700: #3c6336;
+    --secondary-800: #284224;
+    --secondary-900: #142112;
+    --secondary-950: #0a1009;
+    
+    --accent-50: #ebfaf6;
+    --accent-100: #d7f4ee;
+    --accent-200: #aeeadd;
+    --accent-300: #86dfcc;
+    --accent-400: #5ed4bb;
+    --accent-500: #36c9a9;
+    --accent-600: #2ba188;
+    --accent-700: #207966;
+    --accent-800: #155144;
+    --accent-900: #0b2822;
+    --accent-950: #051411;    
+
+    /* Gradients */
+    --clr-grad-1: #4DCF9A;
+    --clr-grad-2: #54C876;
+    --clr-grad-3: #60BC60;
+
+    /* Typography */
+    --fs-1000: 3.75rem;
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.375rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--background);
+    /* background: linear-gradient(-135deg,
+        var(--background),
+        var(--background-50),
+        var(--background-100),
+        var(--background-200)
+    ); */
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children>* {
+    outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.app-container {
+    width: 100%;
+    max-width: var(--min-width);
+    height: 700px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px 10px rgb(0, 0, 0, .5);
+    position: relative;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.app-container > * {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+#landing-page {
+    left: -100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    text-align: center;
+    gap: 1rem;
+    padding: 3rem;
+    background: url("https://github.com/bjohnson112069/web-images/blob/main/Plant%20Care%20App/pexels-scott-webb-1048035-removebg-preview.png?raw=true") no-repeat 150px 100%;
+    background-size: 125%;
+    transform: scale(0);
+    transition: transform .3s linear, left .3s .6s linear;
+    position: relative;
+    z-index: 1;
+
+    & h1 {
+        font-size: var(--fs-1000);
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+    p {
+        align-self: start;
+        font-size: var(--fs-300);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at bottom right, transparent 0, var(--background) 75%),
+        radial-gradient(ellipse at top right, transparent 0, var(--background) 62%);
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgb(1, 65, 72, 0.1);
+        background: linear-gradient(180deg,
+            transparent,
+            rgb(1, 65, 72, 0.1) 30%
+        );
+        z-index: -1;
+    }
+}
+
+#landing-page.active {
+    left: 0;
+    transform: scale(1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    place-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    width: 100%;
+    padding-block: 1.5rem;
+    border-radius: 100px;
+    font-weight: 700;
+    outline: 2px solid var(--clr-grad-1);
+    outline-offset: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    background: transparent;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover::before {
+    background: rgb(0, 0, 0, 0.2);
+    inset: 0;
+}
+
+#sign-up {
+    background: linear-gradient(90deg,
+        var(--clr-grad-1),
+        var(--clr-grad-2),
+        var(--clr-grad-3)
+    );
+    color: var(--background);
+}
+
+#app {
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 2rem;
+    background: var(--background);
+    transform: scale(0);
+    transition: transform .3s .6s linear, left .3s linear;
+
+    & header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-inline: 2rem;
+
+        & .icon {
+            width: 2rem;
+            height: 2rem;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color .3s ease-in-out;
+        }
+
+        & .icon:hover {
+            color: var(--accent);
+        }
+
+        & h2 {
+            width: 100%;
+            text-align: center;
+            font-size: var(--fs-650);
+            font-weight: 500;
+        }
+    }
+
+    & main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+#app.active {
+    left: 0;
+    transform: scale(1);
+}
+
+.plants-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.plants {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.25rem;
+    width: 100%;
+    padding-block: 2rem;
+    position: relative;
+    left: 0;
+    transition: left .5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.plant {
+    flex: 1 0 auto;
+    display: inline-block;
+    aspect-ratio: 1;
+    width: 180px;
+    position: relative;
+    isolation: isolate;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+
+.plant.active {
+    transform: scale(1.4);
+}
+
+.plant-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.plant-info {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding-inline: 2rem;
+
+    & h3 {
+        text-align: center;
+        font-size: var(--fs-650);
+    }
+
+    & a {
+        transition: color .3s ease-in-out;
+
+        & span {
+        }
+
+        & i {
+            color: var(--accent);
+        }
+    }
+
+    & a:hover {
+        color: var(--accent);
+    }
+}
+
+.watering-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.watering-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    padding: .5rem;
+    border-radius: var(--border-radius);
+    outline: 2px solid var(--primary);
+
+    & h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        color: var(--accent);
+        font-size: var(--fs-400);
+        font-weight: 400;
+
+        & i {}
+
+        & span {
+        }
+    }
+    
+    & .value {
+        font-size: var(--fs-600);
+    }
+}
+
+/* --------------------- */
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 525px) {
+}

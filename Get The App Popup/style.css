@@ -1,0 +1,435 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #000000;
+    --background: #FFB516;
+    --primary: #d33331;
+    --secondary: #f8f97c;
+    --accent: #1769FF;
+       
+    
+    /* shades */
+    --text-50: #ffffff;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #fff7e5;
+    --background-100: #ffefcc;
+    --background-200: #ffdf99;
+    --background-300: #ffcf66;
+    --background-400: #ffbe33;
+    --background-500: #ffae00;
+    --background-600: #cc8b00;
+    --background-700: #996900;
+    --background-800: #664600;
+    --background-900: #332300;
+    --background-950: #1a1100;
+    
+    --primary-50: #fbeaea;
+    --primary-100: #f6d5d5;
+    --primary-200: #edacab;
+    --primary-300: #e48281;
+    --primary-400: #db5957;
+    --primary-500: #d22f2d;
+    --primary-600: #a82624;
+    --primary-700: #7e1c1b;
+    --primary-800: #541312;
+    --primary-900: #2a0909;
+    --primary-950: #150504;
+    
+    --secondary-50: #fefee7;
+    --secondary-100: #fdfdce;
+    --secondary-200: #fafa9e;
+    --secondary-300: #f8f86d;
+    --secondary-400: #f6f63c;
+    --secondary-500: #f4f40b;
+    --secondary-600: #c3c309;
+    --secondary-700: #929207;
+    --secondary-800: #616105;
+    --secondary-900: #313102;
+    --secondary-950: #181801;
+    
+    --accent-50: #e5eeff;
+    --accent-100: #ccdeff;
+    --accent-200: #99bdff;
+    --accent-300: #669cff;
+    --accent-400: #337aff;
+    --accent-500: #0059ff;
+    --accent-600: #0047cc;
+    --accent-700: #003699;
+    --accent-800: #002466;
+    --accent-900: #001233;
+    --accent-950: #00091a;
+    
+    
+    
+    /* Gradients */
+    --angle: 0deg;
+    --linearPrimarySecondary: linear-gradient(var(--angle), #d33331, #f8f97c);
+    --linearPrimaryAccent: linear-gradient(var(--angle), #d33331, #1769FF);
+    --linearSecondaryAccent: linear-gradient(var(--angle), #f8f97c, #1769FF);
+    --radialPrimarySecondary: radial-gradient(#d33331, #f8f97c);
+    --radialPrimaryAccent: radial-gradient(#d33331, #1769FF);
+    --radialSecondaryAccent: radial-gradient(#f8f97c, #1769FF);
+
+
+
+    /* Typography */
+    --fs-1000: clamp(3rem, 2.1329rem + 3.6994vw, 5rem);
+    --fs-900: clamp(1.5rem, 1.2832rem + 0.9249vw, 2rem);
+    --fs-900: 1.75rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Oswald", sans-serif;
+    --ff-body: "Open Sans", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background-50);
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: 2rem;
+    border-radius: var(--border-radius);
+    background: var(--background);
+    background: linear-gradient(180deg,
+        var(--background-400),
+        var(--background),
+        var(--background-500),
+        var(--background-600)
+    );
+}
+
+.fa-x {
+    align-self: end;
+    font-size: var(--fs-800);
+    padding-inline: 2rem;
+    cursor: pointer;
+    transition: color .3s linear;
+}
+
+.fa-x:hover {
+    color: var(--background-800)
+}
+
+.title {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--fs-1000);
+    font-weight: 700;
+    background: var(--text);
+    color: var(--background);
+    padding: 2rem;
+}
+
+.sub-title {
+    font-size: var(--fs-900);
+    font-weight: 300;
+    max-width: 40ch;
+    text-align: center;
+    color: var(--text-50);
+    padding-inline: 1rem;
+    margin-bottom: 5rem;
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "phone qr"
+        "link .";
+    gap: .5rem;
+    transform: rotate(45deg);
+    transition: transform .3s linear;
+}
+
+.icon {
+    gap: .5rem;
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+    font-size: 3rem;
+    border: 2px solid var(--text);
+    background: transparent;
+    filter: grayscale(100%);
+    transition: filter .3s linear, border .5s linear;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.icon > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(-45deg) scale(1.5);
+}
+
+.icon:hover {
+    filter: grayscale(0);
+    border-color: transparent;
+}
+
+.icon:hover > span {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg) ;
+}
+
+.icon > span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: var(--fs-400);
+    background: var(--text);
+    color: var(--background);
+    padding: .5em;
+    white-space: nowrap;
+    border-radius: var(--border-radius);
+    transform: translate(-50%, -100%);
+    transition: top .3s linear, transform .2s linear;
+}
+
+.icon[data-value="phone"] {
+    grid-area: phone;
+}
+
+.icon[data-value="qr"] {
+    grid-area: qr;
+}
+
+.icon[data-value="link"] {
+    grid-area: link;
+}
+
+
+/* --------------------- */
+
+@media (max-width: 500px) {
+    
+    .sub-title {
+        margin-bottom: 1rem;
+    }
+
+    .icon-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "phone"
+            "qr"
+            "link";
+        transform: rotate(0deg);
+    }
+    
+    .icon > img {
+        transform: rotate(0deg) scale(1.5);
+    }
+    
+    .icon:hover > span {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(0deg) ;
+    }
+
+}
+
+@media (max-width: 550px) {
+} 
+
+@media (max-width: 375px) {
+} 
+

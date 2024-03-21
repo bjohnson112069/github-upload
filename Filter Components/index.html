@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Filter Components</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <header>
+            <button class="nav-toggle" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <form action="">
+                    <label for="search">
+                        <input type="text" id="search" name="search"  autocomplete="search" pattern="[\p{L} \-\.]+" required/>
+                        <span>Search for apps</span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </form>
+                <div class="dropdown" id="sort">
+                    <button class="dropdown-btn" type="button">
+                        <span>Sort</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <menu class="dropdown-items" aria-hidden="true">
+                        <li class="dropdown-item disabled" data-value="">
+                            <a href="#" class="dropdown-link">Sort</a>
+                        </li>
+                        <li class="dropdown-item" data-value="rated">
+                            <a href="#" class="dropdown-link">Top rated</a>
+                        </li>
+                        <li class="dropdown-item" data-value="trending">
+                            <a href="#" class="dropdown-link">Top trending</a>
+                        </li>
+                        <li class="dropdown-item" data-value="selling">
+                            <a href="#" class="dropdown-link">Top selling</a>
+                        </li>
+                        <li class="dropdown-item" data-value="newest">
+                            <a href="#" class="dropdown-link">Newest</a>
+                        </li>
+                    </menu>
+                </div>
+                <label for="free">
+                    <input type="checkbox" id="free" name="free" value="free">
+                    <div class="icon icon-check">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span>Free for all teams</span>
+                </label>
+                <div class="dropdown" id="filters">
+                    <button class="dropdown-btn" type="button">
+                        <span>More Filters</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <menu class="dropdown-items" aria-hidden="true">
+                        <li class="dropdown-item disabled" data-value="">
+                            <a href="#" class="dropdown-link">More Filters</a>
+                        </li>
+                        <li class="dropdown-item" data-value="1">
+                            <a href="#" class="dropdown-link">Option 1</a>
+                        </li>
+                        <li class="dropdown-item" data-value="2">
+                            <a href="#" class="dropdown-link">Option 2</a>
+                        </li>
+                        <li class="dropdown-item" data-value="3">
+                            <a href="#" class="dropdown-link">Option 3</a>
+                        </li>
+                        <li class="dropdown-item" data-value="4">
+                            <a href="#" class="dropdown-link">Option 4</a>
+                        </li>
+                    </menu>
+                </div>
+                <div class="dropdown" id="Categories">
+                    <button class="dropdown-btn" type="button">
+                        <span>Categories</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <menu class="dropdown-items" aria-hidden="true">
+                        <li class="dropdown-item disabled" data-value="">
+                            <a href="#" class="dropdown-link">Categories</a>
+                        </li>
+                        <li class="dropdown-item" data-value="rated">
+                            <a href="#" class="dropdown-link">Category 1</a>
+                        </li>
+                        <li class="dropdown-item" data-value="trending">
+                            <a href="#" class="dropdown-link">Category 2</a>
+                        </li>
+                        <li class="dropdown-item" data-value="selling">
+                            <a href="#" class="dropdown-link">Category 3</a>
+                        </li>
+                        <li class="dropdown-item" data-value="newest">
+                            <a href="#" class="dropdown-link">Category 4</a>
+                        </li>
+                    </menu>
+                </div>                
+            </nav>
+        </header>
+        <main>
+            <div class="products">
+                <div class="product">
+                    <div class="icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h1>Intranet Suite</h1>
+                    <p>Your fully personalized central collaboration hub that connects teams, locations, tools and people.</p>
+                    <div class="reviews">
+                        <div class="stars">
+                            <span class="icon star active">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="icon star active">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="icon star active">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="icon star active">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="icon star active">
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                        <a href="#"><span class="review-count">45</span> reviews</a>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">mobile</span>
+                        <span class="tag">project management</span>
+                        <span class="tag">themes & styles</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+
+</html>

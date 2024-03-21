@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Post Section</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <form class="post">
+            <header class="profile">
+                <img src="https://github.com/bjohnson112069/web-images/raw/main/Billing%20Cards/51070.webp" alt="user avatar" title="https://www.freepik.com/free-ai-image/3d-illustration-young-man-with-beard-mustache_89262702.htm#query=avatar&position=15&from_view=keyword&track=sph&uuid=c7549062-0753-416b-96ac-52eb10df84a9 Image by flatart on Freepik">
+                <span class="name">John Doe</span>
+            </header>
+            <ul class="messages">
+            </ul>
+            <label class="form-control" for="message">
+                <textarea name="messasge" id="message" autocomplete="messasge" required></textarea>
+                <span><i class="fa-regular fa-message"></i>What's on your mind?</span>
+                
+            </label>
+            <div class="icons">
+                <button class="btn" data-name="Attach Image">
+                    <svg class="icon">
+                        <use xlink:href="#camera"></use>
+                    </svg>    
+                </button>
+                <button class="btn" data-name="Attach File">
+                    <svg class="icon">
+                        <use xlink:href="#attach"></use>
+                    </svg>    
+                </button>
+                <button class="btn" data-name="Attach Emoji">
+                    <svg class="icon">
+                        <use xlink:href="#happy"></use>
+                    </svg>    
+                </button>
+        </form>
+        <svg width="0" height="0" class="hidden">
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="camera">
+              <circle cx="256" cy="272" r="64"></circle>
+              <path d="M432 144h-59c-3 0-6.72-1.94-9.62-5l-25.94-40.94a15.52 15.52 0 00-1.37-1.85C327.11 85.76 315 80 302 80h-92c-13 0-25.11 5.76-34.07 16.21a15.52 15.52 0 00-1.37 1.85l-25.94 41c-2.22 2.42-5.34 5-8.62 5v-8a16 16 0 00-16-16h-24a16 16 0 00-16 16v8h-4a48.05 48.05 0 00-48 48V384a48.05 48.05 0 0048 48h352a48.05 48.05 0 0048-48V192a48.05 48.05 0 00-48-48zM256 368a96 96 0 1196-96 96.11 96.11 0 01-96 96z"></path>
+            </symbol>
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="happy">
+              <path d="M414.39 97.61A224 224 0 1097.61 414.39 224 224 0 10414.39 97.61zM184 208a24 24 0 11-24 24 23.94 23.94 0 0124-24zm167.67 106.17c-12 40.3-50.2 69.83-95.62 69.83s-83.62-29.53-95.72-69.83a8 8 0 017.83-10.17h175.69a8 8 0 017.82 10.17zM328 256a24 24 0 1124-24 23.94 23.94 0 01-24 24z"></path>
+            </symbol>
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="attach">
+              <path d="M216.08 192v143.85a40.08 40.08 0 0080.15 0l.13-188.55a67.94 67.94 0 10-135.87 0v189.82a95.51 95.51 0 10191 0V159.74" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"></path>
+            </symbol>
+          </svg>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

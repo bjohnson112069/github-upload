@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Empty Board</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <header>
+            <div class="logo">Namey McNamerson</div>
+            <nav id="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <div class="profile-avatar">A</div>
+                        <button class="profile-name">
+                            <span>Hi, Anthony</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <aside>
+            <ul id="menu-nav">
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="icon menu-icon">
+                            <i class="fa-solid fa-table-columns"></i>
+                        </span>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-section" data-name="boards">
+                    <span class="menu-text">Boards</span>
+                </li>
+                <li class="menu-item">
+                    <ul class="boards-list"></ul>
+                    <button id="add">
+                        <div class="icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <span>Create New Board</span>
+                    </button>        
+                </li>
+        </aside>
+        <main>
+            <section id="boards">
+                <div class="section-hdr">
+                    <div class="title-box">
+                        <h1>My Boards</h1>
+                        <p><span class="num-boards">0</span>Boards</p>
+                        <span class="separator"></span>
+                        <p><span class="num-tasks">0</span>Tasks</p>
+                    </div>
+                    <div class="controls">
+                        <button data-value="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button class="active" data-value="grid">
+                            <i class="fa-solid fa-grip-vertical"></i>
+                        </button>
+                        <button data-value="list">
+                            <i class="fa-solid fa-grip"></i>
+                        </button>
+                    </div>        
+                </div>
+                <div class="section-body">
+                    <section id="empty">
+                        <div class="image-wrapper">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/Empty%20Board/signup.png?raw=true" alt="image of data widgets">
+                            <div class="image-circle"></div>
+                        </div>
+                        <h2>no boards created yet</h2>
+                        <div>
+                            <p>Every board you create will appear here.</p>
+                            <p>To get started, click on the + button from the menu on the left and create a board.</p>    
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+
+</html>

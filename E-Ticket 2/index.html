@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - E-Ticket 2s</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="app">
+            <header>
+                <div class="icon-box">
+                    <span>iPhone</span>
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+                <span class="time">4:21PM</span>
+                <i class="fa-brands fa-bluetooth-b"></i>
+                <div class="icon-box">
+                    <span>75%</span>
+                    <i class="fa-solid fa-battery-three-quarters"></i>
+                </div>
+            </header>
+            <main class="slide slide-up">
+                <h1>my tickets</h1>
+                <section id="ticket">
+                    <section id="stub">
+                        <h2 class="title">dark superman</h2>
+                        <p>booking nr: <span id="booking-number">#25668</span></p>
+                        <div class="seat-info">
+                            <div>
+                                <span>room</span>
+                                <span id="room">14</span>
+                            </div>
+                            <div>
+                                <span>row</span>
+                                <span id="row">7</span>
+                            </div>
+                            <div>
+                                <span>seat</span>
+                                <span id="seat">18</span>
+                            </div>
+                        </div>
+                        <div class="price-date">
+                            <p>price <span id="price">$5</span></p>
+                            <p>date <span id="date">09.05.2024</span></p>
+                        </div>
+                    </section>
+                    <section id="barcode">                        
+                        <svg id="barcode-svg" width="644px" height="120px" x="0px" y="0px" viewBox="0 0 644 120" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0,0)"><g transform="translate(10, 10)" style="fill:undefined;"><rect x="0" y="0" width="8" height="100"></rect><rect x="12" y="0" width="4" height="100"></rect><rect x="24" y="0" width="4" height="100"></rect><rect x="44" y="0" width="4" height="100"></rect><rect x="60" y="0" width="8" height="100"></rect><rect x="72" y="0" width="4" height="100"></rect><rect x="88" y="0" width="16" height="100"></rect><rect x="112" y="0" width="4" height="100"></rect><rect x="124" y="0" width="4" height="100"></rect><rect x="132" y="0" width="4" height="100"></rect><rect x="144" y="0" width="4" height="100"></rect><rect x="152" y="0" width="8" height="100"></rect><rect x="176" y="0" width="16" height="100"></rect><rect x="196" y="0" width="12" height="100"></rect><rect x="212" y="0" width="4" height="100"></rect><rect x="220" y="0" width="4" height="100"></rect><rect x="228" y="0" width="4" height="100"></rect><rect x="240" y="0" width="16" height="100"></rect><rect x="264" y="0" width="8" height="100"></rect><rect x="280" y="0" width="4" height="100"></rect><rect x="288" y="0" width="4" height="100"></rect><rect x="308" y="0" width="4" height="100"></rect><rect x="316" y="0" width="8" height="100"></rect><rect x="332" y="0" width="4" height="100"></rect><rect x="352" y="0" width="8" height="100"></rect><rect x="364" y="0" width="8" height="100"></rect><rect x="380" y="0" width="8" height="100"></rect><rect x="396" y="0" width="4" height="100"></rect><rect x="404" y="0" width="12" height="100"></rect><rect x="420" y="0" width="16" height="100"></rect><rect x="440" y="0" width="4" height="100"></rect><rect x="448" y="0" width="8" height="100"></rect><rect x="464" y="0" width="12" height="100"></rect><rect x="484" y="0" width="4" height="100"></rect><rect x="500" y="0" width="4" height="100"></rect><rect x="508" y="0" width="8" height="100"></rect><rect x="528" y="0" width="4" height="100"></rect><rect x="536" y="0" width="8" height="100"></rect><rect x="548" y="0" width="12" height="100"></rect><rect x="572" y="0" width="8" height="100"></rect><rect x="592" y="0" width="12" height="100"></rect><rect x="608" y="0" width="4" height="100"></rect><rect x="616" y="0" width="8" height="100"></rect></g></svg>
+                    </section>
+                </section>
+                <p>Use the booking number to pick up your tickets before the show</p>
+            </main>
+            <footer>
+                <div class="icon-box">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </div>
+                <div class="icon-box">
+                    <i class="fa-solid fa-film"></i>
+                    <span>Movies</span>
+                </div>
+                <div class="icon-box">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Favorites</span>
+                </div>
+                <div class="icon-box">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>My Tickets</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+
+</html>

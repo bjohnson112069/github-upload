@@ -1,0 +1,718 @@
+/* Add CSS here */
+:root {
+    
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #060a12;
+    --background: #f9fbfd;
+    --primary: #3161d2;
+    --secondary: #7f9fea;
+    --accent: #1354ed;
+    
+    --clr-star: #F7C643;
+    
+    /* shades */
+    --text-50: #ecf0f9;
+    --text-100: #d9e1f2;
+    --text-200: #b3c3e6;
+    --text-300: #8ca6d9;
+    --text-400: #6688cc;
+    --text-500: #406abf;
+    --text-600: #335599;
+    --text-700: #264073;
+    --text-800: #192a4d;
+    --text-900: #0d1526;
+    --text-950: #060b13;
+
+    --background-50: #ecf2f9;
+    --background-100: #d9e6f2;
+    --background-200: #b3cce6;
+    --background-300: #8cb2d9;
+    --background-400: #6699cc;
+    --background-500: #407fbf;
+    --background-600: #336699;
+    --background-700: #264c73;
+    --background-800: #19334d;
+    --background-900: #0d1926;
+    --background-950: #060d13;
+
+    --primary-50: #eaeffa;
+    --primary-100: #d5dff6;
+    --primary-200: #abbfed;
+    --primary-300: #829fe3;
+    --primary-400: #587fda;
+    --primary-500: #2e5fd1;
+    --primary-600: #254ca7;
+    --primary-700: #1c397d;
+    --primary-800: #122654;
+    --primary-900: #09132a;
+    --primary-950: #050915;
+
+    --secondary-50: #e9effb;
+    --secondary-100: #d3def8;
+    --secondary-200: #a7bdf1;
+    --secondary-300: #7b9cea;
+    --secondary-400: #507ce2;
+    --secondary-500: #245bdb;
+    --secondary-600: #1d49af;
+    --secondary-700: #153684;
+    --secondary-800: #0e2458;
+    --secondary-900: #07122c;
+    --secondary-950: #040916;
+
+    --accent-50: #e7eefd;
+    --accent-100: #d0ddfb;
+    --accent-200: #a0baf8;
+    --accent-300: #7198f4;
+    --accent-400: #4176f1;
+    --accent-500: #1254ed;
+    --accent-600: #0e43be;
+    --accent-700: #0b328e;
+    --accent-800: #07215f;
+    --accent-900: #04112f;
+    --accent-950: #020818;
+
+
+    
+    /* Gradients */
+    --linearPrimarySecondary: linear-gradient(#3161d2, #7f9fea);
+    --linearPrimaryAccent: linear-gradient(#3161d2, #1354ed);
+    --linearSecondaryAccent: linear-gradient(#7f9fea, #1354ed);
+    --radialPrimarySecondary: radial-gradient(#3161d2, #7f9fea);
+    --radialPrimaryAccent: radial-gradient(#3161d2, #1354ed);
+    --radialSecondaryAccent: radial-gradient(#7f9fea, #1354ed);
+    
+
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: clamp(4rem, 1.3988rem + 11.0983vw, 10rem);
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 8px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* --------------------- */
+.content-container {
+    --degree: 90deg;
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: var(--background);
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+     outline: 1px solid red;
+}
+ 
+.outline-children > * {
+     outline: 1px solid blue;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 20px 20px -10px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: inherit;
+    color: inherit;
+    padding: 1rem;
+    position: relative;
+}
+
+.nav-toggle {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+    font-size: var(--fs-800);
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    display: none;
+}
+
+.nav-toggle:hover {
+    color: var(--primary-200);
+}
+
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    background: inherit;
+    color: inherit;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: inherit;
+}
+
+label[for=search] {
+    width: 100%;
+    position: relative;
+    background: inherit;
+    border-radius: var(--border-radius);
+}
+
+label[for=search] > i {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: var(--fs-650);
+    color: var(--accent);
+}
+
+label[for=search] > input {
+    width: 100%;
+    padding: 1rem calc(2rem + var(--fs-650));
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--text);
+    background: inherit;
+    color: inherit;
+    max-width: 300px;
+}
+
+label[for=search] > span {
+    position: absolute;
+    left: calc(2rem + var(--fs-650));
+    top: 1rem;
+    user-select: none;
+    pointer-events: none;
+    transform-origin: bottom left;
+    transition: 0.25s;
+    background: inherit;
+    color: inherit;
+    white-space: nowrap;
+}
+
+label[for=search] > input:focus,
+label[for=search] > input:valid {
+    border-color: var(--accent);
+}
+
+label[for=search] > input:focus + span,
+label[for=search] > input:valid + span {
+    top: 0;
+    transform: translateY(-100%);
+    font-size: var(--fs-300);
+    background: inherit;
+    color: var(--accent);
+    padding-inline: 2px;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    cursor: pointer;
+    position: relative;
+    background: inherit;
+    color: inherit;
+}
+
+.dropdown-btn {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    padding: 1rem;
+    border: 2px solid var(--text);
+    background: inherit;
+    color: inherit;
+    transition: background .5s linear, border .5s linear;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background: var(--primary-100);
+}
+
+.dropdown-btn.active {
+    background: inherit;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.fa-chevron-down {
+    color: var(--accent);
+    font-size: var(--fs-500);
+    transition: transform .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.dropdown-btn.active > .fa-chevron-down {
+    transform: rotate(-180deg);
+}
+
+.dropdown-btn > span {
+    white-space: nowrap;
+}
+
+.dropdown-items {
+    --v-offset: .25rem;
+    position: absolute;
+    top: calc(100% + var(--v-offset));
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: auto;
+    height: auto;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    transition: all .75s linear;
+    box-shadow: 0 20px 20px -10px var(--primary-800);
+    background: inherit;
+    color: var(--text);
+}
+
+.dropdown-items[aria-hidden="true"] {
+    max-height: 0;
+    max-width: 0;
+    transition: all .75s .3s linear;
+}
+
+.dropdown-items[aria-hidden="false"] {
+    max-height: 100vh;
+    max-width: 100vw;
+    padding-block: 1rem;
+    border-color: var(--accent);
+    transition: all .75s linear;
+}
+
+.dropdown-items[aria-hidden="false"] > .dropdown-item {
+    scale: 1;
+    transition: all .3s .3s linear;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 2rem;
+    position: relative;
+    scale: 0;
+    white-space: nowrap;
+    transition: all .3s .3s linear;    
+    position: relative;
+}
+
+.dropdown-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    background: var(--primary-100);
+    transition: width .5s cubic-bezier(0, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.dropdown-item:not(.disabled):hover::after { 
+    width: 100%;
+}
+
+.dropdown-item:not(.disabled):hover > .dropdown-link {
+    transform: translateX(1rem);
+}
+
+.dropdown-item.disabled {
+    color: var(--text-200);
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform .5s cubic-bezier(0, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+label[for=free] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: inherit;
+    color: inherit;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+label[for=free] > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+label[for=free] > .icon-check {
+    --icon-border-color: var(--text);
+    --icon-border-radius: var(--border-radius);
+    width: var(--fs-800);
+    height: var(--fs-800);
+    font-size: 0;
+    transition: font-size .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+label[for=free] > input:checked + .icon-check{
+    font-size: var(--fs-500);
+    color: var(--accent);
+}
+
+label[for=free] > input:checked ~ span{
+    color: var(--accent);
+}
+
+/* --------------------- */
+
+main {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.products {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: var(--secondary-50);
+    padding: 3rem;
+    width: 100%;
+    max-width: 550px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 15px var(--primary-800), 0 20px 20px -10px var(--primary-800);
+}
+
+.product > .icon {
+    --icon-text-color: var(--accent);
+    --icon-border-radius: var(--border-radius);
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
+}
+
+.product > h1 {
+    font-size: var(--fs-800);
+    font-weight: 700;
+    text-align: center;
+}
+
+.product > p {
+    max-width: 32ch;
+    text-align: center;
+}
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.reviews > a {
+    color: inherit;
+    transition: color .3s ease-in-out;
+}
+
+.reviews > a:hover {
+    color: var(--accent);
+}
+
+.star {
+    display: none;
+}
+
+.star.active {
+    display: inline-block;
+    color: var(--clr-star);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.tag {
+    padding: .25em .5em;
+    border-radius: 100px;
+    background: var(--primary-200);
+    font-size: var(--fs-300);
+    white-space: nowrap;
+}
+
+
+/* --------------------- */
+
+@media (max-width: 925px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-toggle[aria-expanded=true] + nav {
+        /* display: flex; */
+        padding: 1rem;
+        max-width: 100%;
+        opacity: 1;
+    }
+
+    nav {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-radius: var(--border-radius);
+        background: var(--primary-200);
+        max-width: 0;
+        opacity: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+        z-index: 1;
+    }
+    
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-btn {
+        border-color: var(--text);
+        justify-content: end;
+    }
+
+    .fa-chevron-down {
+        transform: rotate(-90deg);
+    }
+    
+    .dropdown-btn.active > .fa-chevron-down {
+        transform: rotate(0deg);
+    }    
+    
+    .dropdown-items {
+        top: 0%;
+        left: calc(100% + var(--v-offset));
+    }
+}
+
+@media (max-width: 550px) {
+    nav {
+        width: 100%;
+    }
+
+
+    .dropdown-btn {
+        justify-content: center;
+    }
+
+    .dropdown-items {
+        position: static;
+    }
+
+    .fa-chevron-down {
+        transform: rotate(0deg);
+    }
+    
+    .dropdown-btn.active > .fa-chevron-down {
+        transform: rotate(-180deg);
+    }    
+} 
+
+@media (max-width: 375px) {
+} 
+

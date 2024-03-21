@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Plant Care App</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <article class="app-container">
+            <section id="landing-page" class="active">
+                <h1>Plant.</h1>
+                <p>Libero faucibus aliquam imperdiet, eros eros, vitae id, nibh dolor cras venenatis ac tortor, faucibus justo</p>
+                <div class="buttons">
+                    <button class="btn" id="sign-up">Sign Up</button>
+                    <button class="btn" id="login">Log In</button>
+                </div>
+            </section>
+            <section id="app">
+                <header>
+                    <div class="icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <h2>Your Plants</h2>
+                </header>
+                <main>
+                    <div class="plants-container">
+                        <div class="plants">
+                            <div class="plant" data-value="1">
+                                <img  class="plant-image" src="https://github.com/bjohnson112069/web-images/blob/main/Plant%20Care%20App/pexels-brett-sayles-1073078.jpg?raw=true" title="Photo by Brett Sayles: https://www.pexels.com/photo/green-and-blue-leaf-plant-1073078/" alt="image of a plant">
+                            </div>
+                            <div class="plant active" data-value="2">
+                                <img  class="plant-image" src="https://github.com/bjohnson112069/web-images/blob/main/Plant%20Care%20App/pexels-myicahel-tamburini-2043739.jpg?raw=true" title="Photo by Myicahel Tamburini: https://www.pexels.com/photo/green-leafed-plants-2043739/" alt="image of a plant">
+                            </div>
+                            <div class="plant" data-value="3">
+                                <img  class="plant-image" src="https://github.com/bjohnson112069/web-images/blob/main/Plant%20Care%20App/pexels-irina-iriser-1090977.jpg?raw=true" title="Photo by Irina Iriser: https://www.pexels.com/photo/macro-photograph-of-grass-1090977/" alt="image of a plant">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plant-info">
+                        <h3 class="name">Hemerocallis fulva</h3>
+                        <div class="watering-container">
+                            <div class="watering-info">
+                                <h3>
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>Last Watered</span>
+                                </h3>
+                                <span class="value" id="last-watered">Yesterday</span>
+                            </div>
+                            <div class="watering-info">
+                                <h3>
+                                    <i class="fa-regular fa-circle-right"></i>
+                                    <span>Next Watering</span>
+                                </h3>
+                                <span class="value" id="next-watering">1 Day</span>
+                            </div>    
+                        </div>
+                        <a href="#" id="activity">
+                            <span>Activity</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </main>
+            </section>
+        </article>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

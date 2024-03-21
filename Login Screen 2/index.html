@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Login Screen 2</title>
+</head>
+
+<body>
+    <div class="content-container" title="Photo by Matt Hardy: https://www.pexels.com/photo/body-of-water-under-blue-and-white-skies-1533720/">
+        <div id="app">
+            <div class="tab-group">
+                <button class="tab active" value="signin">Sign In</button>
+                <button class="tab " value="signup">Sign Up</button>
+            </div>
+            <div class="tab-content">
+                <form action="" id="signin" class="active">
+                    <div class="input-group">
+                        <label class="form-control" for="username">
+                            <input type="text" id="username" name="username"  autocomplete="username" placeholder="Username" pattern="[\p{L} \-\.]+" required/>
+                            <i class="fa-solid fa-user"></i>
+                        </label>
+                        <label class="form-control" for="password">
+                            <input type="password" id="password" name="password" autocomplete="password"  minlength="8" placeholder="Password" required/>
+                            <i class="fa-solid fa-lock"></i>
+                        </label>    
+                    </div>
+                    <div class="options-group">
+                        <label class="switch" for="remember">
+                            <input type="checkbox" id="remember" name="remember" value="false">
+                            <span class="toggle"></span>
+                            <span class="label">Remember me</span>
+                        </label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="buttons-group">
+                        <button class="btn btn-action" type="submit" id="login">Log In</button>
+                        <span class="separator">or</span>
+                        <button class="btn btn-facebook" type="button" id="login">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Log In with Facebook</span>
+                        </button>
+                    </div>
+                </form>
+                <form action="" id="signup" class="">
+                    <div class="input-group">
+                        <label class="form-control" for="name">
+                            <input type="text" id="usernnameme" name="name"  autocomplete="name" placeholder="Name" pattern="[\p{L} \-\.]+" required/>
+                            <i class="fa-solid fa-user"></i>
+                        </label>
+                        <label class="form-control" for="email">
+                            <input type="email" id="email" name="email"  autocomplete="email" placeholder="Email" required/>
+                            <i class="fa-regular fa-envelope"></i>
+                        </label>    
+                        <label class="form-control" for="new-password">
+                            <input type="new-password" id="new-password" name="new-password" autocomplete="new-password"  minlength="8" placeholder="Password" required/>
+                            <i class="fa-solid fa-lock"></i>
+                        </label>    
+                    </div>
+                    <div class="options-group">
+                        <label class="switch" for="sex">
+                            <input type="checkbox" id="sex" name="sex" value="male">
+                            <span class="label">Male</span>
+                            <span class="toggle"></span>
+                            <span class="label">Female</span>
+                        </label>
+                    </div>
+                    <div class="buttons-group">
+                        <button class="btn btn-action" type="submit" id="login">Sign Up</button>
+                        <span class="separator">or</span>
+                        <button class="btn btn-facebook" type="button" id="login">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Sign Up with Facebook</span>
+                        </button>
+                    </div>
+                </form>
+            </div>    
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>
