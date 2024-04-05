@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Verify Code</title>
+</head>
+
+<body>
+    <div class="content-container">
+
+        <main class="verify scale">
+
+            <section class="email">
+
+                <h1>Verify your email address</h1>
+                <p>To verify your email address, enter this code in your browser</p>
+                <div class="digits">
+                    <div class="digit" data-digit="1">1</div>
+                    <div class="digit" data-digit="2">1</div>
+                    <div class="digit" data-digit="3">1</div>
+                    <div class="digit" data-digit="4">1</div>
+                    <div class="digit" data-digit="5">1</div>
+                    <div class="digit" data-digit="6">1</div>
+                </div>
+                <p>If you didn't request a code, you can safely ignore this email.</p>
+                <p">Code not working?  <a href="#" class="generate">Send a new code</a></p>
+
+            </section>
+
+            <section class="code">
+                <h1>Verify your email address</h1>
+                <p>We emailed you a six digit code to verify-mcverify@email.com.  Enter the code below to confirm your email address.</p>
+                <form>
+                    <div class="digits">
+                        <input type="text" class="digit" data-digit="1" maxlength="1" placeholder="0" required autofocus>
+                        <input type="text" class="digit" data-digit="2" maxlength="1" placeholder="0" required>
+                        <input type="text" class="digit" data-digit="3" maxlength="1" placeholder="0" required>
+                        <input type="text" class="digit" data-digit="4" maxlength="1" placeholder="0" required>
+                        <input type="text" class="digit" data-digit="5" maxlength="1" placeholder="0" required>
+                        <input type="text" class="digit" data-digit="6" maxlength="1" placeholder="0" required>
+                    </div>
+                    <button type="submit">confirm</button>
+                </form>
+                <p class="important">Make sure you keep this window open while you check your email.</p>
+    
+            </section>
+
+        </main>
+
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Javascript -->
+    <script src="./node_modules\splitting\dist\splitting.min.js"></script>
+    <!-- <script src="./node_modules\luxy.js\src\js\luxy.js"></script> -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="script.js" defer></script>
+    <title>Parallax Scroll</title>
+</head>
+
+<body>
+    <div id="" class="content-container wrapper">
+
+        <header class="header">
+            <h1 class="header__name" data-splitting>
+                <span class="header__name-parallax">brian</span> 
+                <span class="stroke">johnson</span>
+            </h1>
+            <h2 class="header__title">
+                <div class="header__title-bl">
+                    <div class="header__title-line">
+                        <span data-speed="100">a</span>
+                        <span data-speed="50">s</span>
+                        <span data-speed="100">s</span>
+                        <span data-speed="-1">o</span>
+                        <span data-speed="50">c</span>
+                        <span data-speed="75">i</span>
+                        <span data-speed="10">a</span>
+                        <span data-speed="15">t</span>
+                        <span data-speed="100">e</span>
+                    </div>
+                    <div class="header__title-line">
+                        <span class="stroke" data-speed="50">d</span>
+                        <span class="stroke" data-speed="60">i</span>
+                        <span class="stroke" data-speed="50">r</span>
+                        <span class="stroke" data-speed="-40">e</span>
+                        <span class="stroke" data-speed="-10">c</span>
+                        <span class="stroke" data-speed="15">t</span>
+                        <span class="stroke" data-speed="5">o</span>    
+                        <span class="stroke" data-speed="-5">r</span>    
+                    </div>
+                    <div class="header__title-line">
+                        <span data-speed="-35">o</span>    
+                        <span data-speed="-50">f</span>    
+                    </div>
+                    <div class="header__title-line">
+                        <span class="stroke accent" data-speed="-15">t</span>
+                        <span class="stroke accent" data-speed="15">e</span>
+                        <span class="stroke accent" data-speed="-10">c</span>
+                        <span class="stroke accent" data-speed="25">h</span>
+                        <span class="stroke accent" data-speed="-50">n</span>
+                        <span class="stroke accent" data-speed="-40">o</span>
+                        <span class="stroke accent" data-speed="-20">l</span>
+                        <span class="stroke accent" data-speed="25">o</span>
+                        <span class="stroke accent" data-speed="-45">g</span>
+                        <span class="stroke accent" data-speed="35">y</span>
+                    </div>
+                </div>
+            </h2>  
+            <div class="header__img">
+                <img src="./images/hero-image-transparent.webp" alt="header image">
+            </div>
+            <div class="header__marq">
+                <div class="header__marq-bl">
+                    <span class="header__marq-text">open to work
+                        <span class="header__marq-star">
+                            <img src="./images/star-figure-form-geometry-graphic-line-svgrepo-com.svg" alt="star">
+                        </span>
+                    </span>
+                    <span class="header__marq-text">open to work
+                        <span class="header__marq-star">
+                            <img src="./images/star-figure-form-geometry-graphic-line-svgrepo-com.svg" alt="star">
+                        </span>
+                    </span>
+                    <span class="header__marq-text">open to work
+                        <span class="header__marq-star">
+                            <img src="./images/star-figure-form-geometry-graphic-line-svgrepo-com.svg" alt="star">
+                        </span>
+                    </span>
+                    <span class="header__marq-text">open to work
+                        <span class="header__marq-star">
+                            <img src="./images/star-figure-form-geometry-graphic-line-svgrepo-com.svg" alt="star">
+                        </span>
+                    </span>
+                    <span class="header__marq-text">open to work
+                        <span class="header__marq-star">
+                            <img src="./images/star-figure-form-geometry-graphic-line-svgrepo-com.svg" alt="star">
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <section class="about">
+            <div class="about__wrapper">
+                
+                <div class="about__left">
+                    <div class="about__img">
+                        <img src="./images/bg-card-image.png" alt="2">
+                    </div>    
+                </div>
+                
+                <div class="about__right">
+                    <h2 class="section__title">ab<span class="stroke">out</span></h2>
+                    <div class="about__bl">
+                        <p class="about__txt">
+                            Who Am I?  I am an I/T Professional with over 25 years of experience focused primarily in Network Engineering.  I started my career as an engineer leveraging my technical skills.  Over time, I augmented my technical skills with softer skills which opened up opportunties into management.  During my career, I have partnered with dozens of individuals with diverse backgrounds and expertise.  I played an active role in their personal and career development.  I am a proponent of a High-Trust, High-Performance Culture and I try to emulate this in both my professional and personal life.
+                        </p>
+                        <div class="about__social">
+                            <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="about__social-link" aria-label="Go to Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bjohnson1120/" target="_blank" class="about__social-link" aria-label="Go to Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://github.com/bjohnson112069" target="_blank" class="about__social-link" aria-label="Go to Github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="about__social-link" aria-label="Go to LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto: johnson-brian@verizon.net" target="_blank" class="about__social-link" aria-label="Send Email">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>  
+                    </div>    
+                </div>
+
+            </div>
+        </section>
+
+        <section class="history">
+            <h2 class="section__title">car<span class="stroke">eer </span><span class="stroke">pa</span>th</h2>
+
+            <div class="work">
+
+                <div class="work__left">
+                    <div class="year__info" data-year="1">
+                        <div class="year__info-bl">
+                            <h1 class="stroke">1992</h1>
+                            <h2>Integrated Systems Analysts</h2>
+                            <h3>Engineer</h3>
+                        </div>
+                    </div>
+
+                    <div class="year__info" data-year="2">
+                        <div class="year__info-bl">
+                            <h1 class="stroke">1997</h1>
+                            <h2>IBM, Corporation</h2>
+                            <h3>I/T Specialist</h3>
+                        </div>
+                    </div>
+
+                    <div class="year__info" data-year="3">
+                        <div class="year__info-bl">
+                            <h1 class="stroke">2001</h1>
+                            <h2>IBM, Corporation</h2>
+                            <h3>Network Engineer</h3>
+                        </div>
+                    </div>
+
+                    <div class="year__info" data-year="4">
+                        <div class="year__info-bl">
+                            <h1 class="stroke">2006</h1>
+                            <h2>AT&T Inc.</h2>
+                            <h3>Network Engineer/Team Lead</h3>
+                        </div>
+                    </div>
+
+                    <div class="year__info" data-year="5">
+                        <div class="year__info-bl">
+                            <h1 class="stroke">2012</h1>
+                            <h2>AT&T Inc.</h2>
+                            <h3>Associate Director-Technology</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work__right">
+
+                    <div class="work__right-bl">
+
+                        <div class="job__info">
+                            <div class="job__info-item" data-year="1">
+                                <p>Started my carerer with a small, Government contractor based out of New London, CT.  Improved my programming skills with ANSI C and X-Windows OSF Motif.  Eventually branched out into Networking leading several projects configuring and installing Routers and Switches.</p>
+                            </div>
+
+                            <div class="job__info-item" data-year="2">
+                                <p>Rapidly increased my skills in network technologies including firewalls and load balancers.  Led multiple projects to deploy enterpise solutions to clients throughout the New England area.</p>
+                            </div>
+
+                            <div class="job__info-item" data-year="3">
+                                <p>Continued improving expertise within networking technologies.  Accepted a position providing LAN and Firewall services within IBM's internal enterprise network.  In 2003, promoted to Team Lead overseeing operations and partnering with senior level management.</p>
+                            </div>
+
+                            <div class="job__info-item" data-year="4">
+                                <p>Accepted a position within AT&T providing network outsourcing services to multiple enterprise clients.  Led multiple projects to deploy enterprise solutions throughout data centers, continuous 24x7x365 operational support and security compliance.</p>
+                            </div>
+
+                            <div class="job__info-item" data-year="5">
+                                <p>Started my journey as a supervisor.  I enjoy coaching, mentoring, empoloyees and having an active role in their personal and career development.  During my tenure, I have partnered with dozens of employees with diverse backgrounds and expertise. I have a proven track record of cross-functional leadership working with multi-disciplinary teams and senior level management.  I am skilled in managing and prioritizing team activities and workload; appraising personnel against Key Performance Indicators (KPIs); analyzing business processes and recommending improvements to increase productivity; developing and implementing I/T strategies to meet organizational goals.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section class="skills">
+            <h2 class="section__title">ski<span class="stroke">lls </span></h2>
+
+            <ul class="skills__list">
+
+                <li class="skills__item">
+                    <span class="skills__item-name stroke" data-speed="50">general</span>
+                    <ul class="skills__item-bl">
+                        <li class="skills__item-skill"></li>
+                        <li class="skills__item-skill">Technical</li>
+                        <li class="skills__item-skill">Compliance</li>
+                        <li class="skills__item-skill">Communication</li>
+                        <li class="skills__item-skill">Supervisory</li>
+                        <li class="skills__item-skill">Time Management</li>
+                        <li class="skills__item-skill">Priority Management</li>
+                        <li class="skills__item-skill">Mentoring</li>
+                        <li class="skills__item-skill">Critical Thinking</li>
+                        <li class="skills__item-skill">Conflict Resolution</li>
+                    </ul>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__item-name stroke" data-speed="75">certifications</span>
+                    <ul class="skills__item-bl">
+                        <li class="skills__item-skill">freeCodeCamp Responsive Web Design (2021)</li>
+                        <li class="skills__item-skill">freeCodeCamp JavaScript Algorithms & Data Structures (2021)</li>
+                        <li class="skills__item-skill">Cisco Certified Network Associate (1999)</li>
+                        <li class="skills__item-skill">Novell Certified NetWare Administrator (1994)</li>
+                        <li class="skills__item-skill">Novell Certified NetWare Engineer (3 courses) </li>
+                    </ul>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__item-name stroke" data-speed="100">Software</span>
+                    <ul class="skills__item-bl">
+                        <li class="skills__item-skill">Cisco IOS/IOS-XE</li>
+                        <li class="skills__item-skill">Cisco CATOS</li>
+                        <li class="skills__item-skill">Cisco NX-OS</li>
+                        <li class="skills__item-skill">Cisco PIX</li>
+                        <li class="skills__item-skill">Checkpoint/Nokia IPSO</li>
+                        <li class="skills__item-skill">ServiceNow</li>
+                        <li class="skills__item-skill">Cisco CiscoWorks</li>
+                        <li class="skills__item-skill">Cisco Secure ACS</li>
+                        <li class="skills__item-skill">Network Compliance Manager</li>
+                        <li class="skills__item-skill">Tivoli VitalNet</li>
+                        <li class="skills__item-skill">BMC Remedy</li>
+                        <li class="skills__item-skill">Peregrin Service Center</li>
+                        <li class="skills__item-skill">Ehtereal</li>
+                    </ul>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__item-name stroke" data-speed="35">Hardware</span>
+                    <ul class="skills__item-bl">
+                        <li class="skills__item-skill">Cisco IOS/IOS-XE: 2000/3000/4000/7000 Series</li>
+                        <li class="skills__item-skill">Cisco CATOS: 5000/6000 Series</li>
+                        <li class="skills__item-skill">Cisco NX-OS: N2000/N5000/N7000 Series</li>
+                        <li class="skills__item-skill">Cisco PIX: 500 Series</li>
+                        <li class="skills__item-skill">Nokia: IP440/660</li>
+                    </ul>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__item-name stroke" data-speed="50">Productivity</span>
+                    <ul class="skills__item-bl">
+                        <li class="skills__item-skill">Microsoft Office Suite</li>
+                        <li class="skills__item-skill">Microsoft Visio</li>
+                        <li class="skills__item-skill">Microsoft Teams</li>
+                        <li class="skills__item-skill">Microsoft OneDrive</li>
+                        <li class="skills__item-skill">Cisco WebEx</li>
+                        <li class="skills__item-skill">Lotus Notes</li>
+                    </ul>
+                </li>
+                <li class="skills__item">
+                    <span class="skills__item-name stroke" data-speed="80">Programming</span>
+                    <ul class="skills__item-bl">
+                        <li class="skills__item-skill">HTML</li>
+                        <li class="skills__item-skill">CSS3</li>
+                        <li class="skills__item-skill">JAVASCRIPT</li>
+                        <li class="skills__item-skill">GSAP</li>
+                        <li class="skills__item-skill">Python</li>
+                        <li class="skills__item-skill">ANSI C</li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+        </section>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        
+    </div>
+</body>
+
+</html>

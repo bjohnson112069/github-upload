@@ -1,0 +1,417 @@
+/* Add CSS here */
+:root {
+
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #000574;
+    --secondary: #D20116;
+    --accent: #b4a981;
+    
+    
+    
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+
+    --primary-50: #e5e7ff;
+    --primary-100: #cccfff;
+    --primary-200: #999eff;
+    --primary-300: #666eff;
+    --primary-400: #333dff;
+    --primary-500: #000dff;
+    --primary-600: #000acc;
+    --primary-700: #000899;
+    --primary-800: #000566;
+    --primary-900: #000333;
+    --primary-950: #00011a;
+
+    --secondary-50: #ffe6e8;
+    --secondary-100: #ffccd1;
+    --secondary-200: #fe9aa4;
+    --secondary-300: #fe6776;
+    --secondary-400: #fe3448;
+    --secondary-500: #fe011b;
+    --secondary-600: #cb0115;
+    --secondary-700: #980110;
+    --secondary-800: #65010b;
+    --secondary-900: #330005;
+    --secondary-950: #190003;
+
+    --accent-50: #f5f4ef;
+    --accent-100: #ece9df;
+    --accent-200: #d9d3bf;
+    --accent-300: #c6bd9f;
+    --accent-400: #b3a780;
+    --accent-500: #9f9260;
+    --accent-600: #80744d;
+    --accent-700: #605739;
+    --accent-800: #403a26;
+    --accent-900: #201d13;
+    --accent-950: #100f0a;
+
+
+
+    /* Gradients */
+
+    /* Typography */
+    --fs-1000: 3.75rem;
+    --fs-900: 3rem;
+    --fs-800: 1.875rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 6px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    background: var(--background);
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children>* {
+    outline: 1px solid blue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 10px 10px -5px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.coupon {
+    max-width: 480px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    padding-block: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px 10px rgb(0, 0, 0, .5);
+
+    
+    & h1 {
+        font-size: var(--fs-600);
+        font-weight: 900;
+        text-transform: uppercase;
+        padding-inline: 2rem;
+    }
+
+}
+
+header {
+
+    & .bg-image {
+        aspect-ratio: 1;
+        width: 100%;
+        background: url("https://github.com/bjohnson112069/web-images/blob/main/Redeem%20Coupon/pexels-jorge-fakhouri-filho-6263703-cropped.png?raw=true") no-repeat top center;
+        background-size: cover;
+        position: relative;
+    }
+
+    & .bg-image::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(0deg, var(--background), transparent 90%);
+    }
+}
+
+main {
+    text-align: center;
+    padding-inline: 2rem;
+
+    & h2 {
+        font-size: var(--fs-650);
+        font-weight: 700;
+        margin-block: 1rem;
+    }
+    
+    & span {
+        text-transform: uppercase;
+        color: var(--primary);
+        position: relative;
+    }
+    
+    .line {
+        position: relative;
+        display: inline-block;
+    }
+
+    .line:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: .125em;
+        bottom: -.7em;
+        background-image: url("https://raw.githubusercontent.com/bjohnson112069/web-images/24d48d61210de99d05bf15aaa8f8ff08f52d2cd1/Redeem%20Coupon/underline.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    & p {
+        margin-bottom: 1rem;
+
+    }
+
+    & a {
+        color: var(--primary) !important;
+        font-style: italic;
+        text-decoration: underline transparent;
+        transition: text-decoration .3s linear;
+    }
+
+    & a:hover {
+        text-decoration-color: var(--primary);
+    }
+}
+
+footer {
+    text-align: center;
+    padding-inline: 2rem;
+
+    & .code {
+        display: block;
+        font-size: clamp(1.25rem, -0.5357rem + 7.6190vw, 1.75rem);
+        padding: 1rem;
+        text-transform: uppercase;
+        white-space: nowrap;
+        border-radius: var(--border-radius);
+        background: rgb(0, 0, 0, .3);
+        color: var(--background);
+        margin-bottom: .25rem;
+        transition: color .3s linear;
+    }
+
+    & .code:hover {
+        color: var(--primary);
+    }
+
+    & span {
+        display: inline-block;
+        color: var(--text-400);
+    }
+
+}
+
+
+
+/* --------------------- */
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 525px) {
+}

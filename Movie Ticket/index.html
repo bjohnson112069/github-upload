@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Movie Ticket</title>
+</head>
+
+<body>
+    <div class="content-container">
+
+        <form class="movie">
+            <!-- Header -->
+            <header>
+                <div class="movie__img">
+                    <div class="overlay">
+                        <svg class="arrow-left"><use xlink:href="#arrow_back_left"></use></svg>
+                        <div class="overlay__bl">
+                            <div class="movie__title">Guardians of the Galaxy Vol. 2</div>
+                            <a href="#" class="cinema">
+                                <svg class="location__icon"><use xlink:href="#location-dot-solid"></use></svg>
+                                <span class="location__info">Cineplex Entertainment, Toronto ON</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main -->
+            <main>
+                <!-- Legend -->
+                <section class="legend">
+                    <div class="legend__item">
+                        <span class="legend__icon available">
+                            <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                        </span>
+                        <span class="legend__item-title">Available</span>
+                    </div>
+                    <div class="legend__item">
+                        <span class="legend__icon booked">
+                            <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                        </span>
+                        <span class="legend__item-title">Booked</span>
+                    </div>
+                    <div class="legend__item">
+                        <span class="legend__icon selected">
+                            <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                        </span>
+                        <span class="legend__item-title">Selected</span>
+                    </div>
+                </section>
+
+                <!-- Seats -->
+                <section class="seats">
+                    <div class="seats__left">
+                        <!-- Row: G -->
+                        <div class="row" data-row="G">
+                            <span class="seat available" data-seat="1">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="2">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="3">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="4">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: F -->
+                        <div class="row" data-row="F">
+                            <span class="seat available" data-seat="1">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="2">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="3">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="4">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: E -->
+                        <div class="row" data-row="E">
+                            <span class="seat available" data-seat="1">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="2">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="3">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="4">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: D -->
+                        <div class="row" data-row="D">
+                            <span class="seat available" data-seat="1">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="2">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="3">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="4">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: C -->
+                        <div class="row" data-row="C">
+                            <span class="seat available" data-seat="1">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="2">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="3">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="4">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: B -->
+                        <div class="row" data-row="B">
+                            <span class="seat booked" data-seat="1">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="2">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="3">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="4">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: A -->
+                        <div class="row" data-row="A">
+                            <span class="seat available" data-seat="1">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="2">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="3">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="4">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="seats__right">
+                        <!-- Row: G -->
+                        <div class="row" data-row="G">
+                            <span class="seat available" data-seat="5">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="6">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="7">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="8">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: F -->
+                        <div class="row" data-row="F">
+                            <span class="seat available" data-seat="5">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="6">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="7">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="8">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: E -->
+                        <div class="row" data-row="E">
+                            <span class="seat available" data-seat="5">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="6">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="7">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="8">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: D -->
+                        <div class="row" data-row="D">
+                            <span class="seat available" data-seat="5">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="6">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="7">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="8">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: C -->
+                        <div class="row" data-row="C">
+                            <span class="seat booked" data-seat="5">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat booked" data-seat="6">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="7">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="8">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: B -->
+                        <div class="row" data-row="B">
+                            <span class="seat available" data-seat="5">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="6">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="7">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="8">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                        <!-- Row: A -->
+                        <div class="row" data-row="A">
+                            <span class="seat available" data-seat="5">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="6">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="7">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                            <span class="seat available" data-seat="8">
+                                <svg class="couch"><use xlink:href="#couch-solid"></use></svg>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Screen -->
+                <section class="screen">
+                    <div class="screen__bl">
+                        <span class="screen__label">Screen</span>
+                        <div class="screen__img"></div>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="details">
+                <seciton class="details__left">
+                    <div class="details__bl">
+                        <span class="details__label">Date</span>
+                        <span class="details__label">Tickets</span>
+                        <span class="details__label">total</span>
+                    </div>
+                </seciton>
+                <section class="details__right">
+                    <div class="details__bl">
+                        <span class="details__value" id="date">Jul 11, 19:15</span>
+                        <span class="details__value" id="num-tickets">3</span>
+                        <span class="details__value" id="total">$31</span>
+                    </div>
+                    <button type="submit" class="btn" id="btn-next">
+                        <span>Next</span>
+                        <svg class="chevron-right"><use xlink:href="#chevron-right-solid"></use></svg>
+                    </button>
+                </section>
+            </footer>
+
+            <!-- Receipt -->
+            <section class="receipt">
+                <svg class="close"><use xlink:href="#xmark-solid"></use></svg>
+                <h1 class="receipt__title">Guardians of the Galaxy Vol. 2</h1>
+                <div class="receipt__bl-row">
+                    <span class="receipt__label">receipt #:</span>
+                    <span class="receipt__num">112233</span>
+                </div>
+                <ul class="receipt__tickets">
+                    <li class="receipt_ticket-item">
+                        <div class="receipt__bl-col">
+                            <span class="receipt__label">row:</span>
+                            <span class="receipt__row">g</span>
+                        </div>
+                        <div class="receipt__bl-col">
+                            <span class="receipt__label">seat:</span>
+                            <span class="receipt__row">1</span>
+                        </div>    
+                    </li>
+                </ul>
+                <div class="receipt__bl-row">
+                    <span class="receipt__label">price:</span>
+                    <span class="receipt__price">$5</span>
+                </div>
+                <div class="receipt__bl-row">
+                    <span class="receipt__label">date:</span>
+                    <span class="receipt__date">01.01.2021</span>
+                </div>
+                <div class="receipt__barcode">
+                    <svg class="barcode"><use xlink:href="#barcode"></use></svg>
+                </div>
+            </section>
+        </form>
+
+    </div>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="arrow_back_left">
+          <title></title>
+          <g id="Layer_2">
+            <path d="M10.1,23a1,1,0,0,0,0-1.41L5.5,17H29.05a1,1,0,0,0,0-2H5.53l4.57-4.57A1,1,0,0,0,8.68,9L2.32,15.37a.9.9,0,0,0,0,1.27L8.68,23A1,1,0,0,0,10.1,23Z"></path>
+          </g>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="location-dot-solid">
+          <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" id="couch-solid">
+          <path d="M64 160C64 89.3 121.3 32 192 32H448c70.7 0 128 57.3 128 128v33.6c-36.5 7.4-64 39.7-64 78.4v48H128V272c0-38.7-27.5-71-64-78.4V160zM544 272c0-20.9 13.4-38.7 32-45.3c5-1.8 10.4-2.7 16-2.7c26.5 0 48 21.5 48 48V448c0 17.7-14.3 32-32 32H576c-17.7 0-32-14.3-32-32H96c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V272c0-26.5 21.5-48 48-48c5.6 0 11 1 16 2.7c18.6 6.6 32 24.4 32 45.3v48 32h32H512h32V320 272z"></path>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="chevron-right-solid">
+          <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="xmark-solid">
+          <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol id="barcode" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 234 142">
+          <rect x="0" y="0" width="234" height="142"></rect>
+          <g transform="translate(10, 10)"><text text-anchor="start" x="0" y="122">1</text></g>
+          <g transform="translate(34, 10)">
+            <rect x="0" y="0" width="2" height="112"></rect>
+            <rect x="4" y="0" width="2" height="112"></rect><text text-anchor="middle" x="3" y="134"></text>
+          </g>
+          <g transform="translate(40, 10)">
+            <rect x="6" y="0" width="4" height="100"></rect>
+            <rect x="12" y="0" width="2" height="100"></rect>
+            <rect x="20" y="0" width="4" height="100"></rect>
+            <rect x="26" y="0" width="2" height="100"></rect>
+            <rect x="30" y="0" width="2" height="100"></rect>
+            <rect x="36" y="0" width="6" height="100"></rect>
+            <rect x="48" y="0" width="4" height="100"></rect>
+            <rect x="54" y="0" width="2" height="100"></rect>
+            <rect x="58" y="0" width="2" height="100"></rect>
+            <rect x="64" y="0" width="6" height="100"></rect>
+            <rect x="74" y="0" width="4" height="100"></rect>
+            <rect x="80" y="0" width="4" height="100"></rect><text text-anchor="middle" x="42" y="122">000002</text>
+          </g>
+          <g transform="translate(124, 10)">
+            <rect x="2" y="0" width="2" height="112"></rect>
+            <rect x="6" y="0" width="2" height="112"></rect><text text-anchor="middle" x="5" y="134"></text>
+          </g>
+          <g transform="translate(134, 10)">
+            <rect x="0" y="0" width="4" height="100"></rect>
+            <rect x="8" y="0" width="4" height="100"></rect>
+            <rect x="14" y="0" width="6" height="100"></rect>
+            <rect x="24" y="0" width="2" height="100"></rect>
+            <rect x="28" y="0" width="2" height="100"></rect>
+            <rect x="34" y="0" width="6" height="100"></rect>
+            <rect x="42" y="0" width="2" height="100"></rect>
+            <rect x="46" y="0" width="2" height="100"></rect>
+            <rect x="56" y="0" width="2" height="100"></rect>
+            <rect x="64" y="0" width="2" height="100"></rect>
+            <rect x="70" y="0" width="4" height="100"></rect>
+            <rect x="76" y="0" width="4" height="100"></rect><text text-anchor="middle" x="42" y="122">105672</text>
+          </g>
+          <g transform="translate(218, 10)">
+            <rect x="0" y="0" width="2" height="112"></rect>
+            <rect x="4" y="0" width="2" height="112"></rect><text text-anchor="middle" x="3" y="134"></text>
+          </g>
+        </symbol>
+    </svg>
+
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

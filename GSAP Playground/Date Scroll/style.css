@@ -1,0 +1,496 @@
+/* Add CSS here */
+:root {
+
+    /* Colors */
+    --text: #ffffff;
+    --background: #232323;
+    --background: #000000;
+    --accent: #BB2827;
+    --clr-body-bg: var(--background);
+
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+
+    --accent-50: #fbeaea;
+    --accent-100: #f6d5d5;
+    --accent-200: #edabab;
+    --accent-300: #e48181;
+    --accent-400: #db5757;
+    --accent-500: #d22d2d;
+    --accent-600: #a82424;
+    --accent-700: #7e1b1b;
+    --accent-800: #541212;
+    --accent-900: #2a0909;
+    --accent-950: #150404;
+
+    /* Gradients */
+
+
+    /* Typography */
+    --fs-1000: 10rem;
+    --fs-900: 5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Medium";
+    --ff-body: "Lato", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 6px;
+}
+
+@font-face {
+    font-family: "Medium";
+    src: url('./fonts/medium.otf') format('opentype');
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-auto-rows: auto;
+    padding: 1rem;
+    background: var(--background);
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children>* {
+    outline: 1px solid blue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+
+h1 {
+    font-size: var(--fs-1000);
+}
+
+h2 {
+    font-family: var(--ff-body);
+    font-size: var(--fs-700);
+}
+
+h3 {
+    font-family: var(--ff-body);
+    font-size: var(--fs-650);
+}
+
+/* Header */
+
+.stroke {
+    -webkit-text-stroke-color: var(--text);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+header {
+    --index: 2rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: var(--index);
+    overflow: hidden;
+    text-align: center;
+}
+
+.header__bl {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--index);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.title {
+    height: auto;
+    margin: 0;
+    font-family: var(--ff-header);
+    font-size: var(--fs-900);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.title__line {
+    display: flex;
+    align-items: center;
+    gap: var(--index);
+}
+
+.title__line:nth-child(2) {
+    margin-top: var(--index);
+    padding-right: 20%;
+}
+
+.title__line:nth-child(3)  {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+}
+
+.title__line:nth-child(3) > span {
+    white-space: nowrap;
+}
+
+.title__img {
+    flex: 1 1 100%;
+    min-width: 1px;
+    height: var(--fs-900);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.title__img > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    flex: 1 1 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.background > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Loader */
+
+.loader {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: .3s;
+}
+
+.loader__item {
+    width: 5.555vw;
+    height: 100%;
+    background: var(--background-950);
+}
+
+.gs_anim1,
+.gs_anim2 img,
+.gs_anim3 {
+    will-change: transform;
+}
+
+.gs_anim1 {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.gs_anim2 {
+    clip-path:  polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.gs_anim2 img {
+    transform: scale(1.2);
+}
+
+.gs_anim3 {
+    transform: translateX(100%);
+}
+
+/* History */
+
+.history {
+    --index: 2rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: var(--index);
+    z-index: 1;
+}
+
+.spacer {
+    width: 100%;
+    height: 50vh;
+}
+
+.work {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+}
+
+.work__left {
+    position: relative;
+    z-index: 2;
+}
+
+.year__info {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.year__info-bl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & h2 {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+        padding: .5em 1.5em;
+        box-shadow: 0px 0px 6px var(--accent-400);
+        border: 3px solid var(--accent);
+        border-radius: 100px;
+    }
+}
+
+.work__right {
+    height: auto;
+    isolation: isolate;
+}
+
+.work__right-bl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.job__info {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    
+}
+
+.job__info-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    font-size: var(--fs-600);
+    background: var(--background);
+}
+
+
+
+/* --------------------- */
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 525px) {
+}

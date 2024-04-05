@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Quiz Game</title>
+</head>
+<body>
+    <div class="container">
+          <header>
+                <h1 class="title">THE QUIZ GAME</h1>
+                <h2 class="questions-counter">Question <span id="current-question" data-question-index>1</span>/<span
+                            id="total-questions" data-total-questions>10</span></h2>
+          </header>
+          <main>
+                <section class="question-wrapper">
+                      <h3 class="question" data-question>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Labore,
+                            recusandae voluptates maxime corporis?</h3>
+                      <form class="quiz-form">
+                            <div class="answer-wrapper">
+                                  <label data-answer for="option-1">Praesentium odio laborum quis magni repellendus
+                                        repellat</label>
+                                  <input type="radio" name="answer" id="option-1" value="option-1" data-option>
+                                  <div class="answer-box">
+                                  </div>
+                            </div>
+                            <div class="answer-wrapper">
+                                  <label data-answer for="option-2">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Veniam a sit quia nam recusandae accusamus itaque</label>
+                                  <input type="radio" name="answer" id="option-2" value="option-2" data-option>
+                                  <div class="answer-box">
+                                  </div>
+                            </div>
+                            <div class="answer-wrapper">
+                                  <label data-answer for="option-3">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.</label>
+                                  <input type="radio" name="answer" id="option-3" value="option-3" data-option>
+                                  <div class="answer-box">
+                                  </div>
+                            </div>
+                            <div class="answer-wrapper">
+                                  <label data-answer for="option-4">Lorem ipsum dolor sit amet consectetur</label>
+                                  <input type="radio" name="answer" id="option-4" value="option-4" data-option>
+                                  <div class="answer-box">
+                                  </div>
+                            </div>
+
+                      </form>
+                </section>
+                <button id="next-question-btn" class="next-question-btn">Next</button>
+          </main>
+          <dialog class="end-dialog" id="end-dialog">
+                <svg xmlns="http://www.w3.org/2000/svg" class="star-icon" width="50" height="50" viewBox="0 0 24 24"
+                      stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 12h18" />
+                      <path d="M12 21v-18" />
+                      <path d="M7.5 7.5l9 9" />
+                      <path d="M7.5 16.5l9 -9" />
+                </svg>
+                <h2>You answered <span id="total-correct-answers">X</span> correct questions.</h2>
+                <button class="try-again-btn">Try again</button>
+          </dialog>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

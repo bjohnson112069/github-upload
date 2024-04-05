@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Progress Bars</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="progress-container">
+            <div class="loading">
+                <div class="bar">
+                    <div class="label">
+                        <span class="value"></span>
+                        <p>Please wait while the page is loading</p>
+                    </div>
+                    <span class="progress"></span>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="bar">
+                    <span class="progress">
+                        <span class="value"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="rate">
+                <div class="bar">
+                    <span class="progress"></span>
+                    <span class="value"></span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="bar">
+                    <span class="progress" data-step="1">
+                        <span class="value"></span>
+                    </span>
+                    <span class="icon" data-value="1">
+                        <svg class="check">
+                            <use xlink:href="#check-solid"></use>
+                        </svg>
+                        <div class="label">
+                            <span class="number">Step 1</span>
+                            <span class="name">Initiation</span>
+                        </div>
+                    </span>
+                    <span class="icon" data-value="2">
+                        <svg class="check">
+                            <use xlink:href="#check-solid"></use>
+                        </svg>
+                        <div class="label">
+                            <span class="number">Step 2</span>
+                            <span class="name">Loading</span>
+                        </div>
+                    </span>
+                    <span class="icon" data-value="3">
+                        <svg class="check">
+                            <use xlink:href="#check-solid"></use>
+                        </svg>
+                        <div class="label">
+                            <span class="number">Step 3</span>
+                            <span class="name">Verification</span>
+                        </div>
+                    </span>
+                    <span class="icon" data-value="4">
+                        <svg class="check">
+                            <use xlink:href="#check-solid"></use>
+                        </svg>
+                        <div class="label">
+                            <span class="number">Step 4</span>
+                            <span class="name">Completion</span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="progress-circle">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                        <span class="percent">0%</span>
+                    </div>
+                </div>
+                <!-- Attribution: Aviral.  Trying to learn more about SVG -->
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="gradient-color">
+                            <stop offset="0%" stop-color="rgb(47, 110, 243)"></stop>
+                            <stop offset="100%" stop-color="rgb(8, 52, 145)"></stop>
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle" cx="80" cy="80" r="70" stroke-linecap="round"></circle>
+                </svg>
+            </div>
+        </div>
+        <svg width="0" height="0" class="hidden">
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="check-solid">
+              <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path>
+            </symbol>
+          </svg>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

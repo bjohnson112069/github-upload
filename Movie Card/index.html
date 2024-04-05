@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Movie Card</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <article class="movie">
+            <header>
+                <div class="movie__wrapper--title">
+                    <h1 class="movie__title">Star Wars: The Last Jedi</h1>
+                    <a href="#" class="movie__genre">Action & Adventure</a>
+                </div>
+                <div class="movie__wrapper--rating">
+                    <p><span class="movie__rating">7.4</span> / 10</p>
+                </div>
+            </header>
+            <main>
+                <section class="movie__wrapper--poster">
+                    <div class="movie__poster">
+                        <img src="https://github.com/bjohnson112069/web-images/blob/main/Movie%20Card/star-wars-the-last-jedi-2017-10.jpg?raw=true" alt="poster for the last jedi">
+                    </div>
+                    <div class="movie__wrapper--price">
+                        <span class="movie__price">$19.00</span>
+                        <button class="btn" id="buy">buy</button>
+                    </div>
+                </section>
+                <section class="movie__wrapper--details">
+                    <!-- Introduction -->
+                    <section class="movie__wrapper--intro">
+                        <div class="movie__details">
+                            <h3 class="movie__details--header">About the movie</h3>
+                            <ul class="movie__details--list">
+                                <li class="movie__details--item">
+                                    <p class="movie__details--abstract">In Lucasfilm's Star Wars: The Last Jedi, the Skywalker saga continues as the heroes of the The Force Awakens join the galactic legends in an epic adventure that unlocks new mysteries of the Force and shocking revlations of the past.</p>
+                                </li>
+                            </ul>
+                        </div>    
+                    </section>
+                    <!-- Cast -->
+                    <section class="movie__wrapper--cast">
+                        <!-- Actors -->
+                        <div class="movie__details" id="actors">
+                            <h3 class="movie__details--header">Actors</h3>
+                            <ul class="movie__details--list">
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Oscar Isaac</a>
+                                </li>
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Mark Hamill</a>
+                                </li>
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Daisy Ridley</a>
+                                </li>
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">John Boyega</a>
+                                </li>
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Kelly Marie Tran</a>
+                                </li>
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link movie__details--more">More</a>
+                                </li>
+                            </ul>
+                        </div>    
+                        <!-- Director -->
+                        <div class="movie__details" id="directors">
+                            <h3 class="movie__details--header">Director</h3>
+                            <ul class="movie__details--list">
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Rian Johnson</a>
+                                </li>
+                            </ul>
+                        </div>    
+                        <!-- ScreenWriter -->
+                        <div class="movie__details" id="screenwriter">
+                            <h3 class="movie__details--header">Screenwriter</h3>
+                            <ul class="movie__details--list">
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Rian Johnson</a>
+                                </li>
+                            </ul>
+                        </div>    
+                        <!-- Producers -->
+                        <div class="movie__details" id="producers">
+                            <h3 class="movie__details--header">Producers</h3>
+                            <ul class="movie__details--list">
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Kathleen Kennedy</a>
+                                </li>
+                                <li class="movie__details--item">
+                                    <a href="" class="movie__details--link">Ram Bergman</a>
+                                </li>
+                            </ul>
+                        </div>    
+                    </section>
+                    <!-- Trailer -->
+                    <section class="movie__wrapper--trailer">
+                        <button class="btn" id="trailer">
+                            <span>watch trailer</span>
+                            <i class="fa-solid fa-circle-play"></i>
+                        </button>
+                    </section>
+                </section>
+            </main>
+        </article>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+</style>
+
+</html>

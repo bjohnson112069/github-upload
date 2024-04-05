@@ -1,0 +1,649 @@
+/* Add CSS here */
+:root {
+
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #FEFEFF;
+    --background: #F6FAFB;
+    --available: #5B889D;
+    --booked: #C9D8DF;
+    --selected: #DB3769;
+    
+    
+    /* shades */
+    --text-50: #e5e5ff;
+    --text-100: #ccccff;
+    --text-200: #9999ff;
+    --text-300: #6666ff;
+    --text-400: #3333ff;
+    --text-500: #0000ff;
+    --text-600: #0000cc;
+    --text-700: #000099;
+    --text-800: #000066;
+    --text-900: #000033;
+    --text-950: #00001a;
+    
+    --background-50: #edf5f7;
+    --background-100: #dcebef;
+    --background-200: #b9d8df;
+    --background-300: #95c4d0;
+    --background-400: #72b0c0;
+    --background-500: #4f9db0;
+    --background-600: #3f7d8d;
+    --background-700: #2f5e6a;
+    --background-800: #203f46;
+    --background-900: #101f23;
+    --background-950: #081012;
+    
+    --available-50: #eff4f6;
+    --available-100: #dfe8ec;
+    --available-200: #bed1da;
+    --available-300: #9ebac7;
+    --available-400: #7da3b5;
+    --available-500: #5d8ca2;
+    --available-600: #4a7082;
+    --available-700: #385461;
+    --available-800: #253841;
+    --available-900: #131c20;
+    --available-950: #090e10;
+    
+    --booked-50: #eff3f6;
+    --booked-100: #dfe8ec;
+    --booked-200: #bfd1d9;
+    --booked-300: #9fbac6;
+    --booked-400: #7ea3b4;
+    --booked-500: #5e8ca1;
+    --booked-600: #4b7081;
+    --booked-700: #395460;
+    --booked-800: #263840;
+    --booked-900: #131c20;
+    --booked-950: #090e10;
+    
+    --selected-50: #fbe9ef;
+    --selected-100: #f7d4de;
+    --selected-200: #efa9be;
+    --selected-300: #e77e9d;
+    --selected-400: #df537d;
+    --selected-500: #d7285c;
+    --selected-600: #ac204a;
+    --selected-700: #811837;
+    --selected-800: #561025;
+    --selected-900: #2b0812;
+    --selected-950: #160409;
+    
+    
+
+    /* Gradients */
+
+    
+    /* Typography */
+    --fs-1000: clamp(2rem, 0.6842rem + 5.6140vw, 3rem);
+    --fs-900: clamp(1.25rem, 0.7733rem + 2.0339vw, 2rem);
+    --fs-800: 1.875rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Mulish", sans-serif;
+    --ff-body: "Mulish", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 6px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--background);
+    color: var(--text);
+    position: relative;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children>* {
+    outline: 1px solid blue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 10px 10px -5px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.movie {
+    width: 100%;
+    max-width: var(--min-width);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 20px 40px 10px rgb(0, 0, 0, .5);
+    position: relative;
+}
+
+/* Header */
+header {}
+
+.movie__img {
+    aspect-ratio: 2 / 1.15;
+    width: 100%;
+    background: url("https://www.tvguide.com/a/img/resize/37927db9b380c0a6858253e63ed9bdabeeaea763/catalog/provider/1/2/1-5164672802.jpg?auto=webp&fit=crop&height=675&width=1200") no-repeat top;
+    background-size: 120%;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    background: linear-gradient(90deg,
+    rgb(0, 0, 0, .7), rgb(255, 255, 255, .3)
+    );
+    color: var(--text);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    fill: var(--text);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.arrow-left:hover {
+    filter: brightness(1.3);
+    transform-origin: bottom left;
+    transform: scale(1.2);
+}
+
+.overlay__bl {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: .25rem;
+}
+
+.movie__title {
+    font-weight: 600;
+}
+
+.cinema {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    transition: all .3s ease-in-out;
+}
+
+.cinema:hover {
+    color: var(--background-100);
+}
+
+.cinema:hover > .location__icon {
+    fill: var(--background-100);
+}
+
+.location__icon {
+    width: 1rem;
+    height: 1rem;
+    fill: var(--text);
+}
+
+.location__info {
+    font-size: var(--fs-300);
+}
+
+/* Main */
+
+main {
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.legend__item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.legend__icon {
+    display: grid;
+    place-items: center;
+}
+
+.legend .couch {
+    width: 1rem;
+    height: 1rem;
+}
+
+.legend__item-title {
+    font-size: var(--fs-300);
+    color: var(--available-800);
+}
+
+.seats {
+    --gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 2rem;
+}
+
+.seats__left,
+.seats__right {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: var(--gap);
+}
+
+.seats__left {
+    justify-items: start;
+}
+
+.seats__right {
+    justify-items: end;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    position: relative;
+}
+
+.seat {
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}
+
+.seat:hover {
+    filter: brightness(.5);
+}
+
+.seat .couch {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.seats__left > .row::before {
+    content: attr(data-row);
+    position: absolute;
+    top: 50%;
+    left: -1.25rem;
+    font-size: var(--fs-300);
+    color: var(--available-800);
+    transform: translate(0, -50%);
+}
+
+.available { 
+    fill: var(--available); 
+}
+
+.booked { 
+    fill: var(--booked); 
+    cursor:default;
+    pointer-events: none;
+}
+
+.selected { 
+    fill: var(--selected); 
+}
+
+.screen {
+    font-size: var(--fs-300);
+    color: var(--available-300);
+    padding: 1rem 2rem;
+}
+
+.screen__bl {
+    text-align: center;
+}
+
+.screen__img {
+    --radial-bp: 55%;
+    height: 1rem;
+    border-radius: 0;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom: 5px solid var(--available);
+}
+
+/* Footer */
+
+.details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    color: var(--text);
+}
+
+.details__left,
+.details__right {
+    padding: 1rem;
+}
+
+.details__left {
+    background: var(--selected-500);
+}
+
+.details__right {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background: var(--selected);
+}
+
+.details__bl {
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+.details__label:last-child, 
+.details__value:last-child {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    background: var(--background);
+    color: var(--available-800);
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    background: transparent;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover,
+.btn:hover > .chevron-right {
+    color: var(--background);
+    fill: var(--background);
+}
+
+.btn:hover::before {
+    inset: 0;
+    border-color: var(--accent);
+    background: rgb(255, 255, 255, 0.1);
+    background: var(--available-800);
+}
+
+.chevron-right {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--available-800);
+}
+
+/* Receipt */
+
+.receipt {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgb(0, 0, 0, 1);
+    transition: transform .8s linear;
+    transform: translateY(100%);
+    z-index: 1;
+}
+
+.receipt.active {
+    transform: translateY(0);
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1rem;
+    height: 1rem;
+    fill: var(--text);
+    cursor: pointer;
+}
+
+.receipt__title {
+    font-size: var(--fs-600);
+    font-weight: 700;
+}
+
+.receipt__tickets {
+    width: 100%;
+    max-height: 30vh;
+    overflow-y: auto;
+}
+
+.receipt__tickets,
+.receipt__bl-row,
+.receipt__bl-col,
+.receipt_ticket-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    text-transform: uppercase;
+}
+
+.receipt__tickets,
+.receipt__bl-col { flex-direction: column; }
+
+.receipt_ticket-item { gap: 2rem; }
+
+.receipt__label {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.receipt__barcode {
+    fill: none;
+    stroke: var(--text);
+}
+
+/* --------------------- */
+
+@media (max-width: 775px) {
+
+}
+
+@media (max-width: 560px) {
+}

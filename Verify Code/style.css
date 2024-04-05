@@ -1,0 +1,451 @@
+/* Add CSS here */
+:root {
+
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #202128;
+    --background: #ffffff;
+    --primary: #BB0F16;
+    --secondary: #c5aea4;
+    --accent: #2F6EF3; 
+    
+    /* shades */
+    --text-50: #f1f1f4;
+    --text-100: #e3e3e8;
+    --text-200: #c6c8d2;
+    --text-300: #aaacbb;
+    --text-400: #8e91a4;
+    --text-500: #71758e;
+    --text-600: #5b5e71;
+    --text-700: #444655;
+    --text-800: #2d2f39;
+    --text-900: #17171c;
+    --text-950: #0b0c0e;
+
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+
+    --primary-50: #fde7e8;
+    --primary-100: #fbd0d1;
+    --primary-200: #f7a1a4;
+    --primary-300: #f47176;
+    --primary-400: #f04248;
+    --primary-500: #ec131a;
+    --primary-600: #bd0f15;
+    --primary-700: #8e0b10;
+    --primary-800: #5e080b;
+    --primary-900: #2f0405;
+    --primary-950: #180203;
+
+    --secondary-50: #f5f1ef;
+    --secondary-100: #ebe3e0;
+    --secondary-200: #d7c8c1;
+    --secondary-300: #c3aca2;
+    --secondary-400: #af9083;
+    --secondary-500: #9c7463;
+    --secondary-600: #7c5d50;
+    --secondary-700: #5d463c;
+    --secondary-800: #3e2f28;
+    --secondary-900: #1f1714;
+    --secondary-950: #100c0a;
+
+    --accent-50: #e7eefe;
+    --accent-100: #cfddfc;
+    --accent-200: #9fbbf9;
+    --accent-300: #6e9af7;
+    --accent-400: #3e78f4;
+    --accent-500: #0e56f1;
+    --accent-600: #0b45c1;
+    --accent-700: #083491;
+    --accent-800: #062260;
+    --accent-900: #031130;
+    --accent-950: #010918;
+
+    /* Gradients */
+    --linearPrimarySecondary: linear-gradient(#BB0F16, #c5aea4);
+    --linearPrimaryAccent: linear-gradient(#BB0F16, #2F6EF3);
+    --linearSecondaryAccent: linear-gradient(#c5aea4, #2F6EF3);
+    --radialPrimarySecondary: radial-gradient(#BB0F16, #c5aea4);
+    --radialPrimaryAccent: radial-gradient(#BB0F16, #2F6EF3);
+    --radialSecondaryAccent: radial-gradient(#c5aea4, #2F6EF3);
+    
+    /* Typography */
+    --fs-1000: clamp(2rem, 0.6842rem + 5.6140vw, 3rem);
+    --fs-900: clamp(1.25rem, 0.7733rem + 2.0339vw, 2rem);
+    --fs-800: 1.875rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Mulish", sans-serif;
+    --ff-body: "Mulish", sans-serif;
+
+    --max-width: 1240px;
+    --min-width: 375px;
+    --border-radius: 6px;
+}
+
+/* --------------------- */
+/* Reset                 */
+/* --------------------- */
+
+/* Variation of the following modern CSS reset https://andy-bell.co.uk/a-more-modern-css-reset// */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    background-color: var(--clr-body-bg);
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* text-wrap: balance; */
+    line-height: 1.1;
+    font-family: var(--ff-header);
+    font-weight: 700;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* --------------------- */
+.content-container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--background);
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/355af2820f63b4b83e9393bd66780fcd16f3ec36/Verify%20Code/background-image.svg") no-repeat center center;
+    background-size: cover;
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.outline {
+    outline: 1px solid red;
+}
+
+.outline-children>* {
+    outline: 1px solid blue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------- */
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    outline: var(--icon-outline-width, 2px) solid var(--icon-outline-color, none);
+    background: var(--icon-bg-color, transparent) var(--icon-bg-image, none) no-repeat center center;
+    border: var(--icon-border-width, 2px) solid var(--icon-border-color, none);
+    border-radius: var(--icon-border-radius, none);
+    box-shadow: 0 10px 10px -5px var(--icon-shadow-color, none);
+    color: var(--icon-text-color, inherit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.verify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: all .5s ease-in-out;
+}
+
+section {
+    width: 100%;
+    max-width: 660px;
+    padding: clamp(1rem, -1.6316rem + 11.2281vw, 3rem);
+    background: var(--background);
+    outline: 5px solid black;
+    border-radius: var(--border-radius);
+}
+
+h1 {
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+.email,
+.code,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+
+    & p {
+        max-width: 40ch;
+    }
+
+
+}
+
+.digits {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-items: center;
+    font-size: var(--fs-1000);
+    border-radius: var(--border-radius);
+    background: var(--background-100);
+    padding-inline: 1.25rem;
+}
+
+.digit {
+    border-radius: var(--border-radius);
+    aspect-ratio: 1 / 1.5;
+    width: 100%;
+    height: 100%;
+    padding: .4em .3em;
+    caret-color: transparent !important;
+}
+
+.email {
+    & .digits {
+        grid-auto-columns: min-content;
+        justify-content: center;
+        
+    }
+}
+
+.code {
+    
+    & .digits {
+        background: transparent;
+        padding: 0;
+        gap: 1rem;
+    }
+    
+    & .digit {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        border: 2px solid var(--text-100);
+        outline: 2px solid transparent;
+        text-align: center;
+    }
+
+    & .digit:focus,
+    & .digit:focus-visible,
+    & .digit:focus-within {
+        outline-color: var(--accent);
+    }
+
+    & .digit.active {
+        border-color: var(--accent);
+        box-shadow: 0 10px 10px -8px var(--accent);
+    }
+    
+    & .digit::placeholder {
+        color: var(--text-100);
+    }
+}
+
+button[type="submit"] {
+    outline: none;
+    border: none;
+    padding: .5rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: var(--border-radius);
+    background: var(--background-100);
+    position: relative;
+    z-index: 1;
+}
+
+button[type="submit"]::before {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    background: var(--accent);
+    border-radius: var(--border-radius);
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    color: var(--background)
+}
+
+button[type="submit"]:hover::before,
+button[type="submit"]:focus::before {
+    inset: 0;
+}
+
+.generate {
+    color: var(--accent);
+    font-weight: 700;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+}
+
+.generate:hover {
+    background: var(--accent);
+    color: var(--background);
+}
+
+.important {
+    font-size: var(--fs-200);
+    max-width: 70ch !important;
+    padding: .5em 2em;
+    border-radius: var(--border-radius);
+    background: var(--background-100);
+}
+
+/* --------------------- */
+
+@media (max-width: 775px) {
+
+}
+
+@media (max-width: 560px) {
+}
