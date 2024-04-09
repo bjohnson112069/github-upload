@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script> 
+</head>
+
+<body>
+      <nav>
+            <!-- Turn the nav bar into a hamburger menu, on smaller screen sizes -->
+            <ul>
+                  <li id="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane-tilt"
+                              width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                              fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path
+                                    d="M14.5 6.5l3 -2.9a2.05 2.05 0 0 1 2.9 2.9l-2.9 3l2.5 7.5l-2.5 2.55l-3.5 -6.55l-3 3v3l-2 2l-1.5 -4.5l-4.5 -1.5l2 -2h3l3 -3l-6.5 -3.5l2.5 -2.5l7.5 2.5z" />
+                        </svg>
+                        iTravel
+                  </li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Newsletter</a></li>
+                  <li><a href="#">Information</a></li>
+                  <!-- The "log-in-btn" should change to a text saying: "Hello, [name]!" -->
+                  <li><button id="log-in-btn" aria-label="log in">Log in</button></li>
+            </ul>
+      </nav>
+      <main>
+            <section id="home">
+                  <div class="motto-wrapper">
+                        <h1 class="motto-1">A better way <br class="mobile-hide"> to
+                              <span class="colored-words">travel <br class="mobile-hide"> the world</span>!
+                        </h1>
+                        <h2 class="motto-2">Plan.Organize.Enjoy.</h2>
+                  </div>
+                  <div class="travel-img-container">
+                        <div class="travel-img-wrapper">
+                              <img class="travel-img"
+                                    src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?q=80&w=2964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Traveling image">
+                        </div>
+                  </div>
+            </section>
+            <section id="newsletter">
+                  <h2>Subscribe to our newsletter</h2>
+                  <label class="newsletter-label" for="newsletter">Subscribe to our newsletter and get exclusive deals
+                        you won't find anywhere else, straight to your inbox!</label>
+                  <form class="newsletter-form">
+                        <!-- After the user enters their correct email, show a text saying "Thank you for subscribing!" -->
+                        <input id="newsletter-input" type="email" placeholder="Enter your email" spellcheck="false"
+                              required>
+                        <button id="email-btn" aria-label="subscribe to newsletter">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="right-arrow-icon" width="28" height="28"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M9 6l6 6l-6 6" />
+                              </svg>
+                        </button>
+                  </form>
+            </section>
+      </main>
+      <footer>
+            <section id="footer-information">
+                  <ul>
+                        <h3>iTravel</h3>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Awards</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                  </ul>
+                  <ul>
+                        <h3>Services</h3>
+                        <li><a href="#">Plane Tickets</a></li>
+                        <li><a href="#">Hotels</a></li>
+                        <li><a href="#">Car Rentals</a></li>
+                  </ul>
+                  <ul>
+                        <h3>Tips</h3>
+                        <li><a href="#">Legal Terms</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                  </ul>
+            </section>
+            <div class="copywright">
+                  <p>All rights reserved to iTravel Agency.</p>
+                  <p>Copyright © 2024</p>
+            </div>
+      </footer>
+</body>
+</html>
