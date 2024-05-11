@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    --text: #0C1743;
+    --background: #FEFDF7;
+    --primary: #FDC687;
+    --secondary: #B5B1FF;
+    --accent: #FEB4BE;
+    
+    --text-50: #e9edfb;
+    --text-100: #d4dbf7;
+    --text-200: #a8b7f0;
+    --text-300: #7d92e8;
+    --text-400: #526ee0;
+    --text-500: #264ad9;
+    --text-600: #1f3bad;
+    --text-700: #172c82;
+    --text-800: #0f1e57;
+    --text-900: #080f2b;
+    --text-950: #040716;
+    
+    --background-50: #ffffff;
+    --background-100: #f9f3d2;
+    --background-200: #f4e8a4;
+    --background-300: #eedc77;
+    --background-400: #e9d149;
+    --background-500: #e3c51c;
+    --background-600: #b69e16;
+    --background-700: #887611;
+    --background-800: #5b4f0b;
+    --background-900: #2d2706;
+    --background-950: #171403;
+    
+    --primary-50: #fff3e6;
+    --primary-100: #fee7cd;
+    --primary-200: #fdcf9b;
+    --primary-300: #fdb768;
+    --primary-400: #fca036;
+    --primary-500: #fb8804;
+    --primary-600: #c96d03;
+    --primary-700: #975102;
+    --primary-800: #643602;
+    --primary-900: #321b01;
+    --primary-950: #190e00;
+    
+    --secondary-50: #e7e5ff;
+    --secondary-100: #cfccff;
+    --secondary-200: #9e99ff;
+    --secondary-300: #6e66ff;
+    --secondary-400: #3d33ff;
+    --secondary-500: #0d00ff;
+    --secondary-600: #0a00cc;
+    --secondary-700: #080099;
+    --secondary-800: #050066;
+    --secondary-900: #030033;
+    --secondary-950: #01001a;
+    
+    --accent-50: #ffe6e9;
+    --accent-100: #fecdd3;
+    --accent-200: #fd9ba8;
+    --accent-300: #fd687c;
+    --accent-400: #fc3650;
+    --accent-500: #fb0425;
+    --accent-600: #c9031d;
+    --accent-700: #970216;
+    --accent-800: #64020f;
+    --accent-900: #320107;
+    --accent-950: #190004;
+
+    /* Gradient Colors */
+    --linearPrimarySecondary: linear-gradient(#FDC687, #B5B1FF);
+    --linearPrimaryAccent: linear-gradient(#FDC687, #FEB4BE);
+    --linearSecondaryAccent: linear-gradient(#B5B1FF, #FEB4BE);
+    --radialPrimarySecondary: radial-gradient(#FDC687, #B5B1FF);
+    --radialPrimaryAccent: radial-gradient(#FDC687, #FEB4BE);
+    --radialSecondaryAccent: radial-gradient(#B5B1FF, #FEB4BE);
+    
+
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Open Sans", sans-serif;
+    --ff-body: "Open Sans", sans-serif;
+
+    --border-radius: 8px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-auto-rows: min-content;
+    place-content: center;
+    gap: 4rem;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+.accordion {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: .5rem;
+    padding: 2rem;
+    background: var(--background-50);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 480px;
+    font-size: var(--fs-300);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+h1 {
+    font-size: var(--fs-600);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.panel {
+    --icon-size: 1.5rem;
+    --padding: 1.5rem;
+    --gap: 1rem;
+    display: grid;
+    grid-auto-rows: min-content;
+    position: relative;
+    /* padding-bottom: var(--padding); */
+    background: var(--panel-bg-color, transparent);
+    border-left: 5px solid var(--panel-border-color, transparent);
+    border-radius: var(--border-radius);
+}
+
+.panel:nth-of-type(1) {
+    --panel-border-color: var(--primary);
+    --panel-bg-color: var(--primary-50);
+}
+
+.panel:nth-of-type(2) {
+    --panel-border-color: var(--secondary);
+    --panel-bg-color: var(--secondary-50);
+}
+
+.panel:nth-of-type(3) {
+    --panel-border-color: var(--accent);
+    --panel-bg-color: var(--accent-50);
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    padding: var(--padding);
+    cursor: pointer;
+}
+
+.fa-plus {
+    font-size: var(--icon-size);
+    transition: transform .3s linear;
+}
+
+.panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: calc(var(--padding) + var(--icon-size) + var(--gap));
+    transition: max-height .5s ease-in-out, padding 0s .5s linear;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+input[type="checkbox"]:checked ~ .panel-content {
+    padding-bottom: var(--padding);
+    max-height: 20rem;
+    visibility: visible;
+}
+
+
+input[type="checkbox"]:checked ~ label > .fa-plus {
+    transform: rotate(45deg);
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 525px) {
+}
+

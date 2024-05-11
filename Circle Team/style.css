@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    --text: #0a0f14;
+    --background: #F2F8FD;
+    --primary: #3759CD;
+    --secondary: #b2aad3;
+    --accent: #9179ba;
+    
+    --text-50: #eef2f6;
+    --text-100: #dde6ee;
+    --text-200: #bbccdd;
+    --text-300: #99b2cc;
+    --text-400: #7799bb;
+    --text-500: #557faa;
+    --text-600: #446688;
+    --text-700: #334c66;
+    --text-800: #223344;
+    --text-900: #111922;
+    --text-950: #090d11;
+    
+    --background-50: #e9f3fc;
+    --background-100: #d3e7f8;
+    --background-200: #a7d0f1;
+    --background-300: #7bb8ea;
+    --background-400: #4fa0e3;
+    --background-500: #2289dd;
+    --background-600: #1c6db0;
+    --background-700: #155284;
+    --background-800: #0e3758;
+    --background-900: #071b2c;
+    --background-950: #030e16;
+    
+    --primary-50: #ebeefa;
+    --primary-100: #d6ddf5;
+    --primary-200: #adbceb;
+    --primary-300: #859ae0;
+    --primary-400: #5c78d6;
+    --primary-500: #3357cc;
+    --primary-600: #2945a3;
+    --primary-700: #1f347a;
+    --primary-800: #142352;
+    --primary-900: #0a1129;
+    --primary-950: #050914;
+    
+    --secondary-50: #f0eef6;
+    --secondary-100: #e1ddee;
+    --secondary-200: #c2bcdc;
+    --secondary-300: #a49acb;
+    --secondary-400: #8578ba;
+    --secondary-500: #6757a8;
+    --secondary-600: #524587;
+    --secondary-700: #3e3465;
+    --secondary-800: #292343;
+    --secondary-900: #151122;
+    --secondary-950: #0a0911;
+    
+    --accent-50: #f1eef6;
+    --accent-100: #e3ddee;
+    --accent-200: #c8bcdc;
+    --accent-300: #ac9acb;
+    --accent-400: #9078ba;
+    --accent-500: #7557a8;
+    --accent-600: #5d4587;
+    --accent-700: #463465;
+    --accent-800: #2f2343;
+    --accent-900: #171122;
+    --accent-950: #0c0911;
+    
+    --linearPrimarySecondary: linear-gradient(#3759CD, #b2aad3);
+    --linearPrimaryAccent: linear-gradient(#3759CD, #9179ba);
+    --linearSecondaryAccent: linear-gradient(#b2aad3, #9179ba);
+    --radialPrimarySecondary: radial-gradient(#3759CD, #b2aad3);
+    --radialPrimaryAccent: radial-gradient(#3759CD, #9179ba);
+    --radialSecondaryAccent: radial-gradient(#b2aad3, #9179ba);
+    
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Roboto Mono", monospace;
+    --ff-body: "Roboto Mono", monospace;
+
+    --border-radius: 8px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    background: linear-gradient(
+        var(--text-50),
+        var(--text-100),
+        var(--text-200)
+    );
+    color: #373232;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: transparent;
+    color: var(--text);
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.avatars {
+    --image-size: clamp(4rem, 1.5000rem + 10.6667vw, 6.5rem);
+    aspect-ratio: 1;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.avatars::after {
+    content: 'The Team';
+    font-family: inherit;
+    font-size: clamp(0.5rem, 0.0000rem + 2.1333vw, 1rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    aspect-ratio: 1;
+    width: var(--image-size);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(2);
+    color: var(--text);
+    background: transparent;
+    z-index: -1;
+}
+
+.avatar {
+    --angle: 0deg; /* set by JS */
+    --font-size: 0.5rem;
+    font-size: var(--font-size);
+    position: absolute;
+    inset: 0;
+    transform: rotate(var(--angle));
+    pointer-events: none;
+}
+
+.avatar__img {
+    aspect-ratio: 1;
+    width: var(--image-size);
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: all;
+    cursor: pointer;
+    outline: 3px solid transparent;
+    outline-offset: 2px;
+    transition: top .5s linear, transform .8s linear, outline .3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar:hover > .avatar__img {
+    outline-color: var(--primary);
+    z-index: 1;
+}
+
+.avatar__img.active {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.avatar__img.active:hover {
+    outline-color: transparent;
+}
+
+.avatar__img.active > .avatar__txt {
+    opacity: 1;
+    transition: opacity .2s 1s linear;
+    animation: anim 10s linear infinite;
+}
+
+.avatar__img > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: rotate(calc(-1 * var(--angle)));
+}
+
+.avatar__txt {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 100%;
+    opacity: 0;
+    transform: rotate(calc(-1 * var(--angle)));    
+    transform-origin: center center;
+}
+
+@keyframes anim {
+    0%{
+        transform: rotate(calc(-1 * var(--angle)));
+    }
+    100%{
+        transform: rotate(calc(360deg - var(--angle)));
+    }
+}
+
+.avatar__txt > .char {
+    --gap: 3px;
+    line-height: 1;
+    position: absolute;
+    top: calc(-1 * (var(--font-size) + var(--gap)));
+    left: 50%;
+    transform-origin: 0 calc( (var(--image-size) / 2) + var(--font-size) + var(--gap));
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 700px) {
+}
+

@@ -1,0 +1,38 @@
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+      <script src="./script.js" defer></script> 
+      <title>iCodeThis - Followers</title>
+</head>
+
+<body>
+      <div class="container">
+            <article>
+                  <header>
+                        <div class="header-bl">
+                              <button id="go-back">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                              </button>
+                              <h1>Find Friends</h1>
+                        </div>
+                        <form id="form" class="form">
+                              <label class="form-control" for="search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <div class="input-wrapper">
+                                          <input type="text" id="search" name="search" required/>
+                                          <span class="placeholder">Enter a friend's name</span>
+                                    </div>
+                              </label>
+                        </form>
+                  </header>
+                  <main>
+                        <ul class="friends">
+                              <!-- injected by JS -->
+                        </ul>
+                  </main>
+            </article>
+      </div>
+</body>
+</html>

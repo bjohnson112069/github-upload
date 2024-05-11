@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #ffffff;
+    --background: #101010;
+    --primary: #00BCD4;
+    --secondary: #A637EC;
+    --accent: #FF994E;
+    
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #e5fcff;
+    --primary-100: #ccf9ff;
+    --primary-200: #99f3ff;
+    --primary-300: #66edff;
+    --primary-400: #33e7ff;
+    --primary-500: #00e1ff;
+    --primary-600: #00b4cc;
+    --primary-700: #008799;
+    --primary-800: #005a66;
+    --primary-900: #002d33;
+    --primary-950: #00171a;
+    
+    --secondary-50: #f5e8fd;
+    --secondary-100: #ead0fb;
+    --secondary-200: #d6a2f6;
+    --secondary-300: #c173f2;
+    --secondary-400: #ad44ee;
+    --secondary-500: #9816e9;
+    --secondary-600: #7a11bb;
+    --secondary-700: #5b0d8c;
+    --secondary-800: #3d095d;
+    --secondary-900: #1e042f;
+    --secondary-950: #0f0217;
+    
+    --accent-50: #fff0e5;
+    --accent-100: #ffe1cc;
+    --accent-200: #ffc499;
+    --accent-300: #ffa666;
+    --accent-400: #ff8833;
+    --accent-500: #ff6a00;
+    --accent-600: #cc5500;
+    --accent-700: #994000;
+    --accent-800: #662b00;
+    --accent-900: #331500;
+    --accent-950: #1a0b00;
+
+    /* Gradients */
+    --linearPrimarySecondary: linear-gradient(#00BCD4, #A637EC);
+    --linearPrimaryAccent: linear-gradient(#00BCD4, #FF994E);
+    --linearSecondaryAccent: linear-gradient(#A637EC, #FF994E);
+    --radialPrimarySecondary: radial-gradient(#00BCD4, #A637EC);
+    --radialPrimaryAccent: radial-gradient(#00BCD4, #FF994E);
+    --radialSecondaryAccent: radial-gradient(#A637EC, #FF994E);
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Montserrat", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 8px;
+    /* --max-width: 1240px; */
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.plans {
+    --max-width: 375px;
+    --padding: 1rem;
+    --border-radius: 30px;
+    display: flex;
+    padding: var(--padding);
+    justify-content: center;
+    border-radius: var(--border-radius);
+    background: rgb(0, 0, 0, .1);
+}
+
+.plan {
+    --border-radius: 8px;
+    width: 100%;
+    max-width: var(--max-width);
+    flex: 1 0 auto;
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: var(--background);
+    background: linear-gradient(
+        var(--clr-grad-1),
+        var(--clr-grad-2),
+        var(--clr-grad-3),
+        var(--clr-grad-4),
+        var(--clr-grad-5)
+    );
+    position: relative;
+}
+
+.plan::before {
+    content: '';
+    position: absolute;
+    aspect-ratio: 1;
+    width: 300px;
+    border-radius: 50%;
+    background: var(--clr-circle);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+#free {
+    --clr-grad-1: var(--secondary);
+    --clr-grad-2: var(--secondary-500);
+    --clr-grad-3: var(--secondary-600);
+    --clr-grad-4: var(--secondary-700);
+    --clr-grad-5: var(--secondary-800);
+    --clr-circle: var(--secondary);
+    --hover-text-color: var(--secondary);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+#free:before {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+}
+
+#standard {
+    --clr-grad-1: var(--primary-500);
+    --clr-grad-2: var(--primary);
+    --clr-grad-3: var(--primary-600);
+    --clr-grad-4: var(--primary-700);
+    --clr-grad-5: var(--primary-800);
+    --clr-circle: var(--primary);
+    --hover-text-color: var(--primary);
+    border-radius: 0;
+}
+
+#standard:before {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#premium {
+    --clr-grad-1: var(--accent);
+    --clr-grad-2: var(--accent-400);
+    --clr-grad-3: var(--accent-500);
+    --clr-grad-4: var(--accent-600);
+    --clr-grad-5: var(--accent-700);
+    --clr-circle: var(--accent);
+    --hover-text-color: var(--accent);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+#premium:before {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.price-bl {
+    font-size: var(--fs-300);
+    line-height: 1;
+}
+
+.price-bl > * {
+    display: block;
+}
+
+.price {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.btn {
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--text);
+    background: var(--button-bg-color, transparent);
+    color: var(--button-text-color, var(--text));
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:hover {
+    color: var(--hover-text-color, var(--background));
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 50%;
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--hover-bg-color, var(--text));
+    z-index: -1;
+}
+
+.btn:hover::before {
+    inset: 0;
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 1200px) {
+    .plans {
+        flex-direction: column;
+    }
+
+    #free {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    
+    #free:before {
+        bottom: unset;
+        left: unset;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+
+    #premium {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+}
+

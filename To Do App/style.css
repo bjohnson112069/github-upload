@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom right, #856bfe, #c573fa);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #151153;
+    box-shadow: 0 10px 15px #1511536e;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 30rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+header {
+    color: #efefef;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.task-list {
+    background-color: #262560;
+    border-radius: 7px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    margin-bottom: 1.5rem;
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 999px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom , #ff5090, #ff9659);;
+    border-radius: 999px;
+}
+
+
+.task-item {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.checkmark-wrapper {
+    aspect-ratio: 1/1;
+    background: #8484a5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 2rem;
+}
+
+.checkmark-wrapper::before {
+    background-color: #262560;
+    border-radius: 50%;
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.checkmark-wrapper .checkmark {
+    aspect-ratio: 1 / 1;
+    color: transparent;
+    position: relative;
+    top: -2px;
+    right: -2px;
+    max-width: 1.5rem;
+    width: 100%;
+    z-index: 3;
+}
+
+.task-name {
+    color: #efefef;
+}
+
+.task-item.completed .task-name {
+    color: #8484a5;
+    text-decoration: line-through;
+}
+
+.task-item.completed .checkmark-wrapper {
+    background: linear-gradient(to bottom right, #ff5090, #ff9659);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.task-item.completed .checkmark-wrapper::before {
+    background-color: #262560;
+    border-radius: 50%;
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+}
+
+.task-item.completed .checkmark-wrapper::after {
+    background-color: #262560;
+    content: "";
+    width: 1.15rem;
+    height: 1.15rem;
+    position: absolute;
+    top: -3px;
+    right: -8px;
+    z-index: -1;
+}
+
+.task-item.completed .checkmark-wrapper .checkmark {
+    color: #ff9659;
+    width: 100%;
+    max-width: 1.5rem;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    top: -2px;
+    right: -2px;
+    z-index: 1;
+}
+
+.add-task-btn {
+    background: linear-gradient(to right, #ff5090, #ff9659);
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: auto;
+    width: 100%;
+    max-width: 15rem;
+    cursor: pointer;
+}
+
+.add-task-btn:hover {
+    background: linear-gradient(to left, #ff5090, #ff9659);
+}
+
+.add-task-btn:active {
+    background-color: #330b9bb8;
+}
+
+/* Modal styling */
+.modal-wrapper {
+    background-color: #00000066;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.modal {
+    background-color: #fff;
+    box-shadow: 0 5px 15px #00000066;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    position: absolute;
+    width: 100%;
+    max-width: 25rem;
+}
+
+.modal h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.new-task-input {
+    border: 2px solid #ff9659;
+    padding: 0.5rem;
+}
+
+.new-task-input:focus {
+    outline: 2px solid #ff5090;
+}
+
+.confirm-task-btn {
+    align-self: center;
+    background: linear-gradient(to left, #ff5090, #ff9659);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    max-width: max-content;
+    cursor: pointer;
+    transition: box-shadow 150ms;
+}
+
+.confirm-task-btn:hover {
+    box-shadow: 0 3px 6px #00000041;
+}
+
+.confirm-task-btn:active {
+    background: linear-gradient(to right, #ff5090, #ff9659);
+}
+
+/* The modal is hidden by default. Remove this class to make it visible */
+.hidden {
+    display: none;
+}

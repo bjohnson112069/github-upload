@@ -1,0 +1,167 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script> 
+    <title>iCodeThis - Sound Settings</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="app">
+
+            <!-- Header -->
+            <header>
+                <button class="icon" aria-label="left arrow">
+                    <svg class="icon-left-arrow">
+                        <use xlink:href="#chevron-left-solid"></use>
+                    </svg>
+                </button>
+                <h1>sound settings</h1>
+            </header>
+
+            <!-- Settings -->
+            <form class="settings">
+
+                <!-- Volume -->
+                <div class="volume-bl">
+                    <div class="input-group input-col">
+                        <label for="ring-volume">Ring Volume</label>
+                        <input name="ring-volume" type="range" min="0" max="100" value="60" step="1">
+                    </div>
+                    <div class="input-group input-col">
+                        <label for="alarm-volume">Alarm Volume</label>
+                        <input name="alarm-volume" type="range" min="0" max="100" value="40" step="1">
+                    </div>
+                </div>
+
+                <!-- Virbrate -->
+                <div class="vibrate-bl">
+                    <div class="input-group input-row">
+                        <label for="vibrate">
+                            <span>Vibrate on ring</span>
+                            <div class="switch">
+                                <input type="checkbox" id="vibrate" name="vibrate" checked>
+                                <span class="toggle"></span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Sounds -->
+                <div class="sounds-bl">
+
+                    <div class="input-group input-row">
+                        <span>Ringtone</span>
+                        <button class="options-btn" value="ringtone">
+                            <span class="selection">Playtime</span>
+                            <svg class="icon-right-arrow">
+                                <use xlink:href="#chevron-right-solid"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="input-group input-row">
+                        <span>Message</span>
+                        <button class="options-btn" value="message">
+                            <span class="selection">Bamboo</span>
+                            <svg class="icon-right-arrow">
+                                <use xlink:href="#chevron-right-solid"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="input-group input-row">
+                        <span>Notifications</span>
+                        <button class="options-btn" value="notifications">
+                            <span class="selection">Tri-tone</span>
+                            <svg class="icon-right-arrow">
+                                <use xlink:href="#chevron-right-solid"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button class="btn" id="cancel">cancel</button>
+                    <button class="btn" id="save">save</button>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal">
+                    <button class="menu">
+                        <svg class="icon-close">
+                            <use xlink:href="#xmark-solid"></use>
+                        </svg>
+                    </button>
+                    <h1 >Choose a Sound:</h1>
+                    <ul class="sounds">
+                        <li class="sound">
+                            <input type="radio" id="radio-one" name="radio" value="Playtime">
+                            <label for="radio-one">
+                                <div class="selection-box" aria-label="Sound">
+                                    <svg class="icon-check">
+                                        <use xlink:href="#check-solid"></use>
+                                    </svg>
+                                </div>
+                                <span class="sound-name">Playtime</span>
+                            </label>
+                        </li>
+                        <li class="sound">
+                            <input type="radio" id="radio-two" name="radio" value="Bamboo">
+                            <label for="radio-two">
+                                <div class="selection-box" aria-label="Sound">
+                                    <svg class="icon-check">
+                                        <use xlink:href="#check-solid"></use>
+                                    </svg>
+                                </div>
+                                <span class="sound-name">Bamboo</span>
+                            </label>
+                        </li>
+                        <li class="sound">
+                            <input type="radio" id="radio-three" name="radio" value="Tri-tone">
+                            <label for="radio-three">
+                                <div class="selection-box" aria-label="Sound">
+                                    <svg class="icon-check">
+                                        <use xlink:href="#check-solid"></use>
+                                    </svg>
+                                </div>
+                                <span class="sound-name">Tri-tone</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+            </form>
+
+        </article>
+
+    </div>
+
+    <!-- SVG Sprites -->
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="chevron-left-solid">
+        <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="chevron-right-solid">
+        <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="xmark-solid">
+        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+        </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="check-solid">
+        <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path>
+        </symbol>
+    </svg>
+</body>
+</html>

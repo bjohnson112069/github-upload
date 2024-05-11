@@ -1,0 +1,158 @@
+.wrapper {
+    position: relative;
+
+    width: 140px;
+    aspect-ratio: 1;
+
+    border-radius: 100vw;
+}
+
+.bubble {
+    --imgSize: 70px;
+    --imgOffset: 200px;
+    --translateX: calc(cos(var(--deg)) * var(--imgOffset));
+    --translateY: calc(sin(var(--deg)) * var(--imgOffset));
+
+    position: absolute;
+
+    left: calc(var(--imgSize) / 2);
+    top: calc(var(--imgSize) / 2);
+
+    transform: 
+        translate(
+            var(--translateX),
+            var(--translateY)
+        );
+    transform-origin: center;
+    transition: 500ms;
+
+    width: var(--imgSize);
+    aspect-ratio: 1;
+
+    border-radius: 100vw;
+
+    box-shadow: 5px 5px 12px 1px #bbb;
+}
+
+/* class to hide the bubbles on load, then laoding them in whent he page is loaded */
+.hide-bubble {
+    transform: translate(0,0) scale(0);
+}
+
+img {
+    border-radius: 100vw;
+}
+
+.bubble svg {
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    width: 150%;
+    height: 150%;
+    pointer-events: none;
+    border: 1px solid red;
+}
+
+.bubble:nth-of-type(1) {
+    --deg: calc(1 * (360deg / 12));
+}
+
+.bubble:nth-of-type(2) {
+    --deg: calc(2 * (360deg / 12));
+}
+
+.bubble:nth-of-type(3) {
+    --deg: calc(3 * (360deg / 12));
+}
+
+.bubble:nth-of-type(4) {
+    --deg: calc(4 * (360deg / 12));
+}
+
+.bubble:nth-of-type(5) {
+    --deg: calc(5 * (360deg / 12));
+}
+
+.bubble:nth-of-type(6) {
+    --deg: calc(6 * (360deg / 12));
+}
+
+.bubble:nth-of-type(7) {
+    --deg: calc(7 * (360deg / 12));
+}
+
+.bubble:nth-of-type(8) {
+    --deg: calc(8 * (360deg / 12));
+}
+
+.bubble:nth-of-type(9) {
+    --deg: calc(9 * (360deg / 12));
+}
+
+.bubble:nth-of-type(10) {
+    --deg: calc(10 * (360deg / 12));
+}
+
+.bubble:nth-of-type(11) {
+    --deg: calc(11 * (360deg / 12));
+}
+
+.bubble:nth-of-type(12) {
+    --deg: calc(12 * (360deg / 12));
+}
+
+input[type="radio"] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    opacity: 0;
+}
+
+.bubble[data-shift="true"] {
+    transform: translate(0,0) scale(2.5);
+}
+
+/* wrapping text */
+.text {
+    position: absolute;
+    top: -.875rem;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: 400ms;
+    transition-delay: 300ms;
+    /* Update */
+    font-family: "Roboto Mono", monospace;
+}
+
+
+.text span {
+    position: absolute;
+    left: 50%;
+
+    transform-origin: 0 50px;
+
+    font-size: 0.55rem;
+    color: #0e96f0;
+}
+
+.text[data-show="true"] {
+    opacity: 1;
+}
+@media (max-width: 40rem) {
+    .wrapper {
+        width: 100px;
+    }
+
+    .bubble {
+        --imgSize: 50px;
+        --imgOffset: 150px;
+    }
+
+    .text span {
+        font-size: 0.45rem;
+        transform-origin: 0 40px;
+    }
+}

@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    --text: #ffffff;
+    --background: #252F4C;
+    --primary: #D274B9;
+    --secondary: #FF6A94;
+    --accent: #F76EAC;
+    
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+
+    --background-50: #eef0f7;
+    --background-100: #dde1ee;
+    --background-200: #bac3de;
+    --background-300: #98a5cd;
+    --background-400: #7587bd;
+    --background-500: #5369ac;
+    --background-600: #42548a;
+    --background-700: #323f67;
+    --background-800: #212a45;
+    --background-900: #111522;
+    --background-950: #080b11;
+
+    --primary-50: #f9ecf5;
+    --primary-100: #f3d8ec;
+    --primary-200: #e6b2d8;
+    --primary-300: #da8bc5;
+    --primary-400: #cd65b1;
+    --primary-500: #c13e9e;
+    --primary-600: #9a327e;
+    --primary-700: #74255f;
+    --primary-800: #4d193f;
+    --primary-900: #270c20;
+    --primary-950: #130610;
+    
+    --secondary-50: #ffe5ed;
+    --secondary-100: #ffccda;
+    --secondary-200: #ff99b6;
+    --secondary-300: #ff6691;
+    --secondary-400: #ff336d;
+    --secondary-500: #ff0048;
+    --secondary-600: #cc003a;
+    --secondary-700: #99002b;
+    --secondary-800: #66001d;
+    --secondary-900: #33000e;
+    --secondary-950: #1a0007;
+    
+    --accent-50: #fee7f1;
+    --accent-100: #fccfe3;
+    --accent-200: #fa9ec7;
+    --accent-300: #f76eac;
+    --accent-400: #f53d90;
+    --accent-500: #f20d74;
+    --accent-600: #c20a5d;
+    --accent-700: #910846;
+    --accent-800: #61052e;
+    --accent-900: #300317;
+    --accent-950: #18010c;
+
+    --linearPrimarySecondary: linear-gradient(#D274B9, #FF6A94);
+    --linearPrimaryAccent: linear-gradient(#D274B9, #F76EAC);
+    --linearSecondaryAccent: linear-gradient(#FF6A94, #F76EAC);
+    --radialPrimarySecondary: radial-gradient(#D274B9, #FF6A94);
+    --radialPrimaryAccent: radial-gradient(#D274B9, #F76EAC);
+    --radialSecondaryAccent: radial-gradient(#FF6A94, #F76EAC);
+    
+
+    /* Typography */
+    --fs-1000: clamp(17rem, 11.3642rem + 24.0462vw, 30rem);
+    --fs-900: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --border-radius: 30px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text);
+    color: #373232;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: transparent;
+    color: var(--text);
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-auto-rows: auto 1fr;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 5px solid var(--background);
+    background: linear-gradient(90deg,
+        var(--primary),
+        /* var(--accent), */
+        var(--secondary)
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    padding-top: 5rem;
+}
+
+.text-block {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+    place-content: center;
+    gap: 3rem;
+
+    position: relative;
+    z-index: 1;
+}
+
+.text-block::before {
+    content: '404';
+    font-family: "Bebas Neue", sans-serif;
+    font-size: var(--fs-1000);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+.title {
+    font-size: var(--fs-300);
+}
+
+.message {
+    font-size: var(--fs-500);
+    max-width: 35ch;
+    font-weight: 700;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    transition: color .3s ease-in-out;
+}
+
+a:hover {
+    color: var(--background);
+}
+
+.circle-bg {
+    position: absolute;
+    aspect-ratio: 1;
+    width: var(--circle-diameter, 100px);
+    border-radius: 50%;
+    background: linear-gradient(var(--circle-bg-angle, 0deg), 
+        transparent 15%,
+        var(--circle-bg-color, rgb(255, 255, 255, 0.3))
+    );
+}
+
+/* Top-Right Circle */
+#circle-1 {
+    --circle-diameter: 700px;
+    --circle-bg-angle: 90deg;
+    --circle-bg-color: rgb(255, 255, 255, 0.3);
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+}
+
+/* Bottom-Left Circle */
+#circle-2 {
+    --circle-diameter: 425px;
+    --circle-bg-angle: 215deg;
+    --circle-bg-color: rgb(255, 255, 255, 0.3);
+    bottom: 0;
+    left: 0;
+    transform: translate(-25%, 25%);
+}
+
+/* Center-Right Circle */
+#circle-3 {
+    --circle-diameter: 150px;
+    --circle-bg-angle: 135deg;
+    --circle-bg-color: rgb(255, 255, 255, 0.1);
+    top: 50%;
+    right: 20%;
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 700px) {
+}
+

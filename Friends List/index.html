@@ -1,0 +1,85 @@
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+      <script src="./script.js" defer></script> 
+      <title>iCodeThis - Friends List</title>
+</head>
+<body>
+      <div class="container">
+            <header>
+            <h1>Find Friends</h1>
+            <!-- Searchbar component -->
+            <div class="searchbar-wrapper">
+                  <input id="searchbar" type="search" class="searchbar" placeholder="Enter a friend's name" spellcheck="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="searchbar-icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                  </svg>
+            </div>
+            </header>
+
+            <main>
+            <!-- Friends List -->
+            <ul id="friends-list" class="friends-list">
+                  <!-- Use this template for adding new friends to the list -->
+                  <template id="tpl-friend-item">
+                        <li class="friend-item">
+                        <div class="img-wrapper">
+                              <img src="" alt="">
+                        </div>
+                        <p data-friend-name class="friend-name">Friend's Name</p>
+                        <button data-follow-btn class="follow-btn" aria-label="Follow user">Follow</button>
+                        </li>
+                  </template>
+                  <!-- Friend 1 -->
+                  <li class="friend-item">
+                        <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww" alt="Jason Graham profile picture">
+                        </div>
+                        <p data-friend-name class="friend-name">Jason Graham</p>
+                        <button data-follow-btn class="follow-btn" aria-label="Follow user">Follow</button>
+                  </li>
+                  <!-- Friend 2 -->
+                  <li class="friend-item">
+                        <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww" alt="Ophelia Gaddy profile picture">
+                        </div>
+                        <p data-friend-name class="friend-name">Ophelia Gaddy</p>
+                        <button data-follow-btn class="follow-btn followed">Following</button>
+                  </li>
+                  <!-- Friend 3 -->
+                  <li class="friend-item">
+                        <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww" alt="Lillian Whitmire profile picture">
+                        </div>
+                        <p data-friend-name class="friend-name">Lillian Whitmire</p>
+                        <button data-follow-btn class="follow-btn" aria-label="Follow user">Follow</button>
+                  </li>
+                  <!-- Friend 4 -->
+                  <li class="friend-item">
+                        <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww" alt="Joseph Shepherd profile picture">
+                        </div>
+                        <p data-friend-name class="friend-name">Joseph Shepherd</p>
+                        <button data-follow-btn class="follow-btn" aria-label="Follow user">Follow</button>
+                  </li>
+                  <!-- Friend 5 -->
+                  <li class="friend-item">
+                        <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1624298357597-fd92dfbec01d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQzfHxwcm9maWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D" alt="Alex R. Prowell profile picture">
+                        </div>
+                        <p data-friend-name class="friend-name">Alex R. Prowell</p>
+                        <button data-follow-btn class="follow-btn" aria-label="Follow user">Follow</button>
+                  </li>
+            </ul>
+            </main>
+      </div>
+</body>
+
+</html>

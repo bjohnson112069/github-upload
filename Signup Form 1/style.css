@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #f02029;
+    --secondary: #71f6eb;
+    --accent: #496af3;    
+    --clr-facebook: #0866FF;
+    --clr-twitter: #00B3FF;
+    
+    
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #fde7e8;
+    --primary-100: #fccfd2;
+    --primary-200: #f8a0a4;
+    --primary-300: #f57077;
+    --primary-400: #f24049;
+    --primary-500: #ee111c;
+    --primary-600: #bf0d16;
+    --primary-700: #8f0a11;
+    --primary-800: #5f070b;
+    --primary-900: #300306;
+    --primary-950: #180203;
+    
+    --secondary-50: #e7fdfc;
+    --secondary-100: #cffcf8;
+    --secondary-200: #9ff9f1;
+    --secondary-300: #6ff6eb;
+    --secondary-400: #3ff3e4;
+    --secondary-500: #0ff0dd;
+    --secondary-600: #0cc0b1;
+    --secondary-700: #099085;
+    --secondary-800: #066058;
+    --secondary-900: #03302c;
+    --secondary-950: #021816;
+    
+    --accent-50: #e7ecfd;
+    --accent-100: #cfd8fc;
+    --accent-200: #9fb1f9;
+    --accent-300: #6f8af6;
+    --accent-400: #3f63f3;
+    --accent-500: #0f3cf0;
+    --accent-600: #0c30c0;
+    --accent-700: #092490;
+    --accent-800: #061860;
+    --accent-900: #030c30;
+    --accent-950: #020618;
+    
+    
+
+    /* Gradients */
+
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Montserrat", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 8px;
+    /* --max-width: 1240px; */
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-50);
+    color: var(--text);
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+#sign-up {
+    --padding: 2rem;
+    width: 100%;
+    max-width: 540px;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 2rem;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    background: var(--background);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    position: relative;
+}
+
+header {
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+}
+
+.fa-xmark {
+    font-size: 2rem;
+    justify-self: end;
+    cursor: pointer;
+    color: var(--text-300);
+    transition: color .3s ease-in-out;
+}
+
+.fa-xmark:hover {
+    color: var(--accent);
+}
+
+h1 {
+    font-size: var(--fs-500);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+header > p {
+    max-width: 30ch;
+    text-align: center;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-auto-rows: min-content;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.link {
+    --border-radius: 4px;
+    text-decoration: none;
+    font-size: var(--fs-300);
+    color: inherit;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 1.125rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--text-300);
+    background: var(--button-bg-color, transparent);
+    color: var(--button-text-color, var(--text));
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.link:hover {
+    color: var(--hover-text-color, var(--background));
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    inset: 50%;
+    transition: all .8s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--hover-bg-color, var(--text));
+    background: linear-gradient(90deg,
+        var(--text-800),
+        var(--text-700),
+        var(--text-600)
+    );
+    z-index: -1;
+}
+
+.link:hover::before {
+    inset: 0;
+}
+
+img {
+    aspect-ratio: 1;
+    width: 1.75rem;
+}
+
+.link > i {
+    font-size: 1.75rem;
+}
+
+.fa-facebook-f {
+    color: var(--clr-facebook);
+}
+
+.fa-twitter {
+    color: var(--clr-twitter);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: var(--fs-300);
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.box {
+    --border-radius: 4px;
+    aspect-ratio: 1;
+    width: 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    border: 1px solid var(--text-300);
+    position: relative;
+    overflow: hidden;
+}
+
+.box > i {
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent);
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+input[type="checkbox"]:checked ~ .box > i {
+    left: 50%;
+}
+
+button[type="submit"] {
+    justify-self: center;
+    font-weight: 700;
+    padding-block: .25rem;
+    color: var(--accent);
+    transition: transform .3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.3);
+    text-decoration: underline 2px;
+    text-underline-offset: 5px;
+}
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 1200px) {
+}
+

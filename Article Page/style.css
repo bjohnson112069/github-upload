@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    --text: #0F172F;
+    --background: #ffffff;
+    --primary: #727b97;
+    --secondary: #b8b3c7;
+    --accent: #9b8eac;
+    
+    --text-50: #eceff9;
+    --text-100: #d8dff3;
+    --text-200: #b1bfe7;
+    --text-300: #8b9fda;
+    --text-400: #647ece;
+    --text-500: #3d5ec2;
+    --text-600: #314b9b;
+    --text-700: #253974;
+    --text-800: #18264e;
+    --text-900: #0c1327;
+    --text-950: #060913;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #f0f1f4;
+    --primary-100: #e2e4e9;
+    --primary-200: #c4c8d4;
+    --primary-300: #a7adbe;
+    --primary-400: #8a91a8;
+    --primary-500: #6c7693;
+    --primary-600: #575e75;
+    --primary-700: #414758;
+    --primary-800: #2b2f3b;
+    --primary-900: #16181d;
+    --primary-950: #0b0c0f;
+    
+    --secondary-50: #f1f0f4;
+    --secondary-100: #e4e2e9;
+    --secondary-200: #c8c4d4;
+    --secondary-300: #ada7be;
+    --secondary-400: #918aa8;
+    --secondary-500: #766c93;
+    --secondary-600: #5e5775;
+    --secondary-700: #474158;
+    --secondary-800: #2f2b3b;
+    --secondary-900: #18161d;
+    --secondary-950: #0c0b0f;
+    
+    --accent-50: #f2f0f4;
+    --accent-100: #e5e2e9;
+    --accent-200: #cbc4d4;
+    --accent-300: #b1a7be;
+    --accent-400: #978aa8;
+    --accent-500: #7d6c93;
+    --accent-600: #645775;
+    --accent-700: #4b4158;
+    --accent-800: #322b3b;
+    --accent-900: #19161d;
+    --accent-950: #0c0b0f;
+
+    /* Gradient Colors */
+    --linearPrimarySecondary: linear-gradient(#727b97, #b8b3c7);
+    --linearPrimaryAccent: linear-gradient(#727b97, #9b8eac);
+    --linearSecondaryAccent: linear-gradient(#b8b3c7, #9b8eac);
+    --radialPrimarySecondary: radial-gradient(#727b97, #b8b3c7);
+    --radialPrimaryAccent: radial-gradient(#727b97, #9b8eac);
+    --radialSecondaryAccent: radial-gradient(#b8b3c7, #9b8eac);
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Poppins", sans-serif;
+    --ff-body: "Poppins", sans-serif;
+
+    --border-radius: 8px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    color: #373232;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: transparent;
+    color: var(--text);
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+#page {
+    --page-padding: 2rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: var(--background);
+}
+
+#page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--page-padding);
+    border-bottom: 1px solid var(--text-200);
+    font-weight: 700;
+    position: relative;
+}
+
+#menu {
+    place-items: center;
+    font-size: 1.5rem;
+    transition: color .3s linear;
+}
+
+#menu:hover {
+    color: var(--accent);
+}
+
+.nav {
+    background: var(--background);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list,
+.nav-buttons,
+.breadcrumbs,
+.article-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-link,
+.fa-chevron-down {
+    transition: color .3s linear;
+}
+
+.nav-item:hover {
+    color: var(--accent);
+}
+
+.btn {
+    padding: .5em 1em;
+    border-radius: 100px;
+    border: 2px solid var(--text);
+    background: var(--button-bg-color, transparent);
+    color: var(--button-text-color, var(--text));
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:hover {
+    color: var(--hover-text-color, var(--background));
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 100% 0% 0% 0%;
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--hover-bg-color, var(--accent));
+    z-index: -1;
+}
+
+.btn:hover::before {
+    inset: 0;
+}
+
+#login {
+    --button-bg-color: var(--background);
+    --button-text-color: var(--text);
+}
+
+#get-started {
+    --button-bg-color: var(--text);
+    --button-text-color: var(--background);
+}
+
+#page-main {
+    display: grid;
+    grid-template-rows: repeat(2, auto) 1fr;
+    padding: var(--page-padding);
+    gap: 1.5rem;
+}
+
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.breadcrumbs {
+    flex-wrap: wrap;
+}
+.breadcrumb {}
+
+.breadcrumb > a {
+    transition: color .3s linear;
+}
+
+.breadcrumb:hover {
+    color: var(--accent);
+}
+
+#search {
+    font-size: 1.5rem;
+}
+
+#search:hover {
+    color: var(--accent);
+    transition: color .3s linear;
+}
+
+.section-title {
+    font-size: var(--fs-900);
+    font-weight: 700;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:4rem;
+}
+
+#featured-article {
+}
+#recent-articles {
+}
+
+.section-hdr {
+    font-size: var(--fs-650);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.articles {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 1.5rem;
+}
+
+article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "img title"
+        "img author";
+    column-gap: 1.5rem;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.featured {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas: 
+        "img"
+        "title"
+        "abstract"
+        "author";
+    column-gap: 0;
+    row-gap: 1.5rem;
+}
+
+.article-img {
+    grid-area: img;
+    aspect-ratio: 1;
+    width: 150px;
+    cursor: pointer;
+    position: relative;
+}
+
+.featured > .article-img {
+    aspect-ratio: 1.75 / 1;
+    width: 100%;
+}
+
+.article-img > img {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.article-title {
+    grid-area: title;
+    align-self: end;
+    text-transform: capitalize;
+    font-size: var(--fs-650);
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.featured > .article-title {
+    font-size: var(--fs-800);
+}
+
+.article-abstract {
+    grid-area: abstract;
+}
+
+.article-author {
+    grid-area: author;
+    align-self: start;
+}
+
+.author-avatar {
+    aspect-ratio: 1;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.author-name {}
+
+/* CSS styles for mobile devices */
+@media (max-width: 1000px) {
+    
+    .page-content {
+        grid-template-columns: 1fr;
+        gap:4rem;
+    }
+}
+
+@media (max-width: 675px) {
+    #menu {
+        display: grid;
+    }
+
+    .nav {
+        position: absolute;
+        top: calc(100% - 2rem);
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .nav.mobile-expanded {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem 2rem;
+        border-bottom: 2px solid var(--text-200);
+    }
+
+    .fa-chevron-down {
+        transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 525px) {
+    
+    #main-header {
+        align-items: start;
+    }
+
+    article {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, min-content);
+        grid-template-areas: 
+            "img"
+            "title"
+            "author";
+        column-gap: 0;
+        row-gap: 1rem;
+    }
+
+    .article-img {
+        aspect-ratio: 2 / 1;
+        width: 100%;
+    }
+}
+

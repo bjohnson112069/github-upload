@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script> 
+    <title>iCodeThis - Search Bar</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="search" class="search">
+
+            <div class="bar">
+                <label class="form-control" for="email">
+                    <div class="input-wrapper">
+                        <input type="text" id="search" name="search" required/>
+                        <span class="placeholder">Enter your search here</span>
+                    </div>
+                </label>
+                <button type="submit" name="submit">
+                    <span>go</span>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn" type="button">
+                    <span>Filters</span>
+                    <span class="fa-solid fa-caret-down"></span>
+                </button>
+                <ul class="filters">
+                    <!-- Experience -->
+                    <li class="filter">
+                        <input type="checkbox" id="experience" name="filter" value="experience">
+                        <label class="filter-label" for="experience">Experience</label>
+                    </li>
+                    <!-- Quality -->
+                    <li class="filter">
+                        <input type="checkbox" id="quality" name="filter" value="quality">
+                        <label class="filter-label" for="quality">Quality</label>
+                    </li>
+                    <!-- Design -->
+                    <li class="filter">
+                        <input type="checkbox" id="design" name="filter" value="design">
+                        <label class="filter-label" for="design">Design</label>
+                    </li>
+                    <!-- Size -->
+                    <li class="filter">
+                        <input type="checkbox" id="size" name="filter" value="size">
+                        <label class="filter-label" for="size">Size</label>
+                    </li>
+                    <!-- Features -->
+                    <li class="filter">
+                        <input type="checkbox" id="features" name="filter" value="features">
+                        <label class="filter-label" for="features">Features</label>
+                    </li>
+                    <!-- Value -->
+                    <li class="filter">
+                        <input type="checkbox" id="value" name="filter" value="value">
+                        <label class="filter-label" for="value">Value</label>
+                    </li>
+                    <!-- Replacement -->
+                    <li class="filter">
+                        <input type="checkbox" id="replacement" name="filter" value="replacement">
+                        <label class="filter-label" for="replacement">Replacement</label>
+                    </li>
+                </ul>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

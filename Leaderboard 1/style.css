@@ -168,7 +168,7 @@ body {
 }
 
 .scale-up {
-    transform: scale(1);
+    transform: scale(1.2);
 }
 
 .scale-down {
@@ -195,7 +195,7 @@ body {
     border-radius: var(--border-radius);
     box-shadow: 0 20px 40px 10px rgba(var(--accent), .1),
         0px -5px 5px 2px rgba(var(--accent), .1);
- 
+    background: rgb(var(--background));
 }
 
 header {
@@ -231,6 +231,8 @@ main {}
 
 .ranking:nth-of-type(2n + 1) {
     background: rgb(var(--primary));
+    background: #F9F9F9;
+    /* outline: 1px solid red; */
 }
 
 .leader {

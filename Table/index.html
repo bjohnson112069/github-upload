@@ -1,0 +1,79 @@
+<html>
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+      <script src="./script.js" defer></script> 
+      <title>iCodeThis - Table</title>
+</head>
+
+<body>
+      <div class="container">
+            <article>
+                  <header>
+                        <form id="show-form">
+                              <label for="entries-control">
+                                    <span>Show</span>
+                                    <select name="entries" id="entries">
+                                          <option value="8">8</option>
+                                          <option value="All">All</option>
+                                    </select>
+                                    <span>entries</span>
+                              </label>
+                        </form>
+                        <form id="search-form">
+                              <label class="search-control" for="search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <div class="input-wrapper">
+                                          <input type="text" id="search" name="search" required/>
+                                          <span class="placeholder">Search</span>
+                                    </div>
+                              </label>
+                        </form>
+                  </header>
+                  <main class="table">
+                        <div class="item sort">
+                              <label for="first-name">
+                                    <input type="checkbox" name="sort" id="first-name" value="first">
+                                    <span>first name</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                              </label>
+                              <label for="last-name">
+                                    <input type="checkbox" name="sort" id="last-name" value="last">
+                                    <span>last name</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                              </label>
+                              <label for="email">
+                                    <input type="checkbox" name="sort" id="email" value="email">
+                                    <span>email</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                              </label>
+                              <label for="created-at">
+                                    <input type="checkbox" name="sort" id="created-at" value="date">
+                                    <span>created at</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                              </label>
+                        </div>
+                        <ul class="list">
+                              <!-- injected by JS -->
+                        </ul>
+                  </main>
+                  <footer>
+                        <div class="pages">
+                              <!-- injected by JS -->
+                        </div>
+                        <div class="buttons">
+                              <button class="btn-page" value="prev">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <span>Previous</span>
+                              </button>
+                              <button class="btn-page" value="next">
+                                    <span>Next</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                              </button>
+                        </div>
+                  </footer>
+            </article>
+      </div>
+</body>
+</html>

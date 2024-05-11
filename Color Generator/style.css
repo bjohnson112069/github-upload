@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    --text: #0B1227;
+    --background: #E8EBF3;
+    --primary: #7D6BCA;
+    --secondary: #FFFFFF;
+    --accent: #9043f4;
+
+    --text-50: #ebeff9;
+    --text-100: #d7def4;
+    --text-200: #afbee9;
+    --text-300: #889ddd;
+    --text-400: #607cd2;
+    --text-500: #385cc7;
+    --text-600: #2d499f;
+    --text-700: #223777;
+    --text-800: #162550;
+    --text-900: #0b1228;
+    --text-950: #060914;
+    
+    --background-50: #eef0f6;
+    --background-100: #dee2ed;
+    --background-200: #bcc5dc;
+    --background-300: #9ba7ca;
+    --background-400: #798ab9;
+    --background-500: #586da7;
+    --background-600: #465786;
+    --background-700: #354164;
+    --background-800: #232c43;
+    --background-900: #121621;
+    --background-950: #090b11;
+    
+    --primary-50: #eeecf8;
+    --primary-100: #dedaf1;
+    --primary-200: #bdb4e4;
+    --primary-300: #9c8fd6;
+    --primary-400: #7b69c9;
+    --primary-500: #5a44bb;
+    --primary-600: #483696;
+    --primary-700: #362970;
+    --primary-800: #241b4b;
+    --primary-900: #120e25;
+    --primary-950: #090713;
+    
+    --secondary-50: #f2f2f2;
+    --secondary-100: #e6e6e6;
+    --secondary-200: #cccccc;
+    --secondary-300: #b3b3b3;
+    --secondary-400: #999999;
+    --secondary-500: #808080;
+    --secondary-600: #666666;
+    --secondary-700: #4d4d4d;
+    --secondary-800: #333333;
+    --secondary-900: #1a1a1a;
+    --secondary-950: #0d0d0d;
+    
+    --accent-50: #f1e7fe;
+    --accent-100: #e2cffc;
+    --accent-200: #c69ff9;
+    --accent-300: #a96ef7;
+    --accent-400: #8d3ef4;
+    --accent-500: #700ef1;
+    --accent-600: #5a0bc1;
+    --accent-700: #430891;
+    --accent-800: #2d0660;
+    --accent-900: #160330;
+    --accent-950: #0b0118;
+
+    /* Gradient Colors */
+    --linearPrimarySecondary: linear-gradient(#7D6BCA, #FFFFFF);
+    --linearPrimaryAccent: linear-gradient(#7D6BCA, #9043f4);
+    --linearSecondaryAccent: linear-gradient(#FFFFFF, #9043f4);
+    --radialPrimarySecondary: radial-gradient(#7D6BCA, #FFFFFF);
+    --radialPrimaryAccent: radial-gradient(#7D6BCA, #9043f4);
+    --radialSecondaryAccent: radial-gradient(#FFFFFF, #9043f4);
+
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Open Sans", sans-serif;
+    --ff-body: "Open Sans", sans-serif;
+
+    --border-radius: 8px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+    gap: 4rem;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.notification {
+    padding: .875rem 2.25rem;
+    border-radius: 100px;
+    text-align: center;
+    background: var(--text);
+    color: var(--secondary);
+    opacity: 0;
+}
+
+.notification.active {
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+}
+
+h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.colors {
+    display: flex;
+    gap:.5rem; 
+    width: 100%;
+    min-height: 300px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    
+    .colors {
+        flex-direction: column;
+        height: 80vh;
+    }
+}
+
+.color {
+    flex: 1;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: .5rem;
+    place-items: center;
+    place-content: center;
+    padding: 1rem;
+    background: var(--secondary);
+    color: var(--secondary);
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 0 0 2px rgba(255,255,255, .1);
+    text-shadow: 1px 1px 2px var(--text);
+    transition:
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background .5s;
+    cursor: pointer;
+    overflow: hidden;
+    outline: 2px solid rgb(0, 0, 0, .1);
+}
+
+.color:hover {
+    flex: 2;
+}
+
+.color:hover > .fa-copy {
+    transform: translateY(0);
+}
+
+.fa-copy {
+    font-size: 2rem;
+    transition: transform 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+    transition: transform 0.7s linear;
+    transform: translateY(-100vh);
+}
+.color-label {
+
+}
+
+.button-bl {
+    display: grid;
+    grid-auto-rows: auto;
+    place-items: center;
+    text-align: center;
+    gap: 1.25rem;
+}
+
+.btn {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent);
+    background: var(--button-bg-color, transparent);
+    color: var(--button-text-color, var(--text));
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:hover {
+    color: var(--hover-text-color, var(--background));
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 50%;
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--hover-bg-color, var(--accent));
+    z-index: -1;
+}
+
+.btn:hover::before {
+    inset: 0;
+}
+
+#generate {
+    --button-text-color: var(--accent);
+    width: 100%;
+    max-width: calc(var(--min-width) - 2rem);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.informational {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: var(--fs-300);
+    padding: .875rem 2.25rem;
+    border-radius: 100px;
+    background: var(--secondary);
+    color: var(--text);
+
+}
+
+.separator {
+    display: inline-block;
+    aspect-ratio: 1;
+    width: 6px;
+    border-radius: 50%;
+    background: var(--text);
+    margin-inline: .25rem;
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 525px) {
+}
+
