@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Upload Media</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="app">
+
+            <!-- Browse Files -->
+            <section id="browse-files">
+                <h1>Upload Photos and Videos</h1>
+                <p>We are glad you decided to join our cause!</p>
+                <div class="drag-and-drop">
+                    <div class="input-group">
+                        <label class="btn" for="browse">Browse</label>
+                        <input class="hidden" id="browse" type="file" accept="image/*">
+                    </div>
+                    <span>or drag and drop</span>
+                </div>
+            </section>
+
+            <!-- Upload Files -->
+            <section id="upload-files">
+                <div class="img-preview">
+                    <img src="" alt="Image Preview">
+                </div>
+                <ul class="tag-list">
+                    <!-- injected by JS -->
+                </ul>
+                <form>
+                    <div class="input-group">
+                        <label for="filename">Name your file</label>
+                        <input type="text" name="filename" id="filename" placeholder="Please enter a name for the file" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="location">Location (optional)</label>
+                        <input type="text" name="location" id="location" placeholder="Eg. On a tree, in the car">
+                    </div>
+                    <div class="input-group">
+                        <label for="tags">Tags (optional)</label>
+                        <input type="text" name="tags" id="tags">
+                        <button class="btn" id="add-tag">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <button class="btn" id="upload">Upload</button>
+                </form>
+            </section>
+
+            <section id="confirmation">
+                <span>Your file has been uploaded</span>
+            </section>
+
+        </article>
+
+    </div>
+</body>
+
+
+</html>

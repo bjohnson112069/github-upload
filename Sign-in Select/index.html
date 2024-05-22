@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Sign-in Select</title>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <article>
+
+            <!-- Users -->
+            <section id="users-container">
+                <header>
+                    <h1>Recommended</h1>
+                    <button class="btn" id="view-all">View All</button>
+                </header>
+                <main>
+                    <ul class="users">
+                            <!-- injeted by JS via API -->
+                    </ul>
+                </main>
+            </section>
+
+            <!-- Menu -->
+            <section id="menu-container" class="slide slide-right">
+                <div class="menu">
+                    <button class="menu-btn">
+                        <img src="" alt="avatar image" class="menu-avatar">
+                        <span class="menu-label"></span>
+                        <span class="menu-selection hidden"></span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <ul class="menu-items">
+                            <li class="menu-item">
+                                <i class="fa-solid fa-gear"></i>
+                                <span>Settings & Privacy</span>
+                            </li>
+                            <li class="menu-item">
+                                <i class="fa-regular fa-circle-question"></i>
+                                <span>Help & Support</span>
+                            </li>
+                            <li class="menu-item">
+                                <i class="fa-regular fa-moon"></i>
+                                <span>Display & Accessibility</span>
+                            </li>
+                            <li class="menu-item">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>Logout</span>
+                            </li>
+                        </ul>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SignIn Container -->
+            <section id="signin-container">
+                <div class="signin">
+                    <main>
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5b5eed03-3715-42fd-8716-9b189aa554ad/d9dtwte-f182fd91-a5a5-42c2-8689-6258747a7c16.png/v1/fill/w_894,h_894/trophy_icon_by_getterstudio_d9dtwte-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzViNWVlZDAzLTM3MTUtNDJmZC04NzE2LTliMTg5YWE1NTRhZFwvZDlkdHd0ZS1mMTgyZmQ5MS1hNWE1LTQyYzItODY4OS02MjU4NzQ3YTdjMTYucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.czjzw5LT-abKpTIfLuMmVUITzdH-W_aln-Woi5pQWIQ" alt="image of a trophy">
+                        <p>Sign in to discover creatives and participate in or post a challenge.</p>
+                    </main>
+                    <button class="btn" id="sign-in">Sign In</button>
+                </div>
+            </section>
+    
+        </article>
+        
+    </div>
+</body>
+
+</html>

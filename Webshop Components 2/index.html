@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Webshop Components 2</title>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <article id="components">
+            
+            <!-- Notifications -->
+            <section id="notifications-container">
+                <div class="notifications">
+                    <div class="notification">
+                        <i class="fa-solid fa-check"></i>
+                        <span>30 days open purchase</span>
+                    </div>
+                    <div class="notification">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Safe home delivery</span>
+                    </div>
+                    <div class="notification">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Free shipping over $70</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product -->
+            <section id="product-container">
+                <div class="product">
+                    <figure>
+                        <img src="https://github.com/bjohnson112069/web-images/blob/main/Webshop%20Components%202/chair.png?raw=true" alt="image of a chair" />
+                        <figcaption>
+                            <span class="title">dixie</span>
+                            <span class="description">Cue Chair, Wood</span>
+                            <div class="price-bl">
+                                <span class="sale-price">$57</span>
+                                <span class="original-price">$120</span>
+                            </div>
+                            <div class="stock-indicator in-stock">
+                                <div class="circle" aria-label="circle indicator"></div>
+                                <span class="stock-label">In stock</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Dropdown Menus -->
+            <section id="menu-container">
+                <nav>
+                    <ul class="menus">
+                        <!-- 365 Products -->
+                        <li class="menu">
+                            <button class="menu-btn">
+                                <span class="menu-label">365 Products</span>
+                            </button>
+                        </li>
+                        <!-- Show -->
+                        <li class="menu">
+                            <button class="menu-btn">
+                                <span class="menu-label">Show</span>
+                                <span class="menu-selection">48</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <ul class="menu-items">
+                                    <li class="menu-item">12</li>
+                                    <li class="menu-item">24</li>
+                                    <li class="menu-item">48</li>
+                                    <li class="menu-item">All</li>
+                                </ul>
+                            </button>
+                        </li>
+                        <!-- Sort By -->
+                        <li class="menu">
+                            <button class="menu-btn">
+                                <span class="menu-label">Sort By</span>
+                                <span class="menu-selection"></span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <ul class="menu-items">
+                                    <li class="menu-item">Most Popular</li>
+                                    <li class="menu-item">Highest Price</li>
+                                    <li class="menu-item">Lowest Price</li>
+                                    <li class="menu-item">Top Rated</li>
+                                </ul>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Price Selector -->
+            <section id="price-container">
+                <div class="slider">
+                    <div class="prices">
+                        <div class="price" id="price-min">$50</div>
+                        <div class="price" id="price-max">$350</div>
+                    </div>
+                    <div class="progress"></div>
+                    <div class="range-input">
+                        <input type="range" class="range-min" min="50" max="350" value="50" step="5">
+                        <input type="range" class="range-max" min="50" max="350" value="350" step="5">
+                    </div>
+                    <div class="tickmarks">
+                        <div class="tickmark" data-value="$50"></div>
+                        <div class="tickmark" data-value="$100"></div>
+                        <div class="tickmark" data-value="$150"></div>
+                        <div class="tickmark" data-value="$200"></div>
+                        <div class="tickmark" data-value="$250"></div>
+                        <div class="tickmark" data-value="$300"></div>
+                        <div class="tickmark" data-value="$350"></div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+
+</body>
+
+
+</html>

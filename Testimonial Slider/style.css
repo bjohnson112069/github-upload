@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #CBCBCB;
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #272b52;
+    --secondary: #bccd9c;
+    --accent: #ff7700;
+    
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #eeeff7;
+    --primary-100: #dcdeef;
+    --primary-200: #babdde;
+    --primary-300: #979cce;
+    --primary-400: #747cbe;
+    --primary-500: #525bad;
+    --primary-600: #41498b;
+    --primary-700: #313668;
+    --primary-800: #212445;
+    --primary-900: #101223;
+    --primary-950: #080911;
+    
+    --secondary-50: #f4f6ee;
+    --secondary-100: #e8eedd;
+    --secondary-200: #d1ddbb;
+    --secondary-300: #bacc99;
+    --secondary-400: #a3bb77;
+    --secondary-500: #8caa55;
+    --secondary-600: #708844;
+    --secondary-700: #546633;
+    --secondary-800: #384422;
+    --secondary-900: #1c2211;
+    --secondary-950: #0e1109;
+    
+    --accent-50: #fff1e5;
+    --accent-100: #ffe4cc;
+    --accent-200: #ffc999;
+    --accent-300: #ffad66;
+    --accent-400: #ff9233;
+    --accent-500: #ff7700;
+    --accent-600: #cc5f00;
+    --accent-700: #994700;
+    --accent-800: #663000;
+    --accent-900: #331800;
+    --accent-950: #1a0c00;
+    
+    
+
+    /* Gradients */
+
+    
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 12px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button,
+input[type="button"] {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input,
+input[type='date'] {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    color: var(--text);
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+#project {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1rem;
+    padding-block: 3rem;
+    place-items: center;
+}
+
+.testimonials-wrapper {
+    width: 100%;
+    max-width: 750px;
+    overflow: hidden;
+}
+
+.testimonials {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    position: relative;
+    left: 0;
+    transition: left .5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.testimonial {
+    --icon-width: 7rem;
+    --border-width: 2px;
+    --triangle-width: 2rem;
+    --avatar-width: 120px;
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    align-items: center;
+    justify-items: end;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 4rem;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+}
+
+.content--outer {
+    background: var(--primary);
+    /* Regerts ... */
+    clip-path: polygon(
+        var(--icon-width) 0%,
+        100% 0%,
+        100% calc(100% - var(--triangle-width)),
+        calc(100% - 60px + var(--triangle-width)) calc(100% - var(--triangle-width)),
+        calc(100% - 60px) 100%,
+        calc(100% - 60px - var(--triangle-width)) calc(100% - var(--triangle-width)),
+        0 calc(100% - var(--triangle-width))
+    );
+}
+
+.content--inner {
+    padding: calc(1rem + var(--border-width));
+    /* Add some padding ot the bottom so we can clip the speech bubble */
+    padding-bottom: calc(1rem + var(--triangle-width) + var(--border-width));
+    background: var(--text-50);
+    /* Same clip-path as the outer minus the border width ... nice ... and ... simple LOL*/
+    clip-path: polygon(
+        calc(var(--icon-width) + var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width)) calc(100% - var(--triangle-width) - var(--border-width)),
+        calc(100% - 60px + var(--triangle-width)) calc(100% - var(--triangle-width) - var(--border-width)),
+        calc(100% - 60px) calc(100% - var(--border-width) - var(--border-width)),
+        calc(100% - 60px - var(--triangle-width)) calc(100% - var(--triangle-width) - var(--border-width)),
+        calc(2 * var(--border-width)) calc(100% - var(--triangle-width) - var(--border-width))
+    );
+}
+
+
+.content--inner > p {
+    max-width: calc(100% - var(--icon-width));
+    text-align: right;
+    margin-left: auto;
+    font-size: var(--fs-600);
+    color: var(--primary);
+}
+
+.icon-quote {
+    width: var(--icon-width);
+    height: var(--icon-width);
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: var(--primary);
+    opacity: .2;
+    z-index: 1;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 
+        "name avatar"
+        "title avatar";
+    column-gap: .5rem;
+    justify-items: end;
+}
+
+.name {
+    grid-area: name;
+    align-self: end;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--accent);
+    color: var(--primary);
+}
+
+.title {
+    grid-area: title;
+    align-self: start;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--text-500);
+}
+
+.avatar {
+    grid-area: avatar;
+    aspect-ratio: 1;
+    width: var(--avatar-width);
+    border-radius: 50%;
+    object-fit: cover;
+    outline: 3px solid var(--secondary);
+}
+
+.dots {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 1rem;
+    place-items: center;
+}
+
+.dot {
+    aspect-ratio: 1;
+    width: 1rem;
+    border-radius: 50%;
+    background: var(--secondary);
+}
+
+.dot:hover {
+    background: var(--accent);
+}
+
+.dot.selected {
+    background: var(--primary);
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 550px) {
+    
+    .content--outer {
+        clip-path: polygon(
+            0 0%,
+            100% 0%,
+            100% calc(100% - var(--triangle-width)),
+            calc(100% - 60px + var(--triangle-width)) calc(100% - var(--triangle-width)),
+            calc(100% - 60px) 100%,
+            calc(100% - 60px - var(--triangle-width)) calc(100% - var(--triangle-width)),
+            0 calc(100% - var(--triangle-width))
+        );
+        
+    }
+
+    .content--inner {
+        clip-path: polygon(
+            var(--border-width) var(--border-width),
+            calc(100% - var(--border-width)) var(--border-width),
+            calc(100% - var(--border-width)) calc(100% - var(--triangle-width) - var(--border-width)),
+            calc(100% - 60px + var(--triangle-width)) calc(100% - var(--triangle-width) - var(--border-width)),
+            calc(100% - 60px) calc(100% - var(--border-width) - var(--border-width)),
+            calc(100% - 60px - var(--triangle-width)) calc(100% - var(--triangle-width) - var(--border-width)),
+            calc(2 * var(--border-width)) calc(100% - var(--triangle-width) - var(--border-width))
+        );
+    }
+
+
+    .content--inner > p {
+        max-width: 100%;
+        text-align: center;
+    }
+}

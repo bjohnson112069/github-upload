@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - User Profile Form</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="user-profile" class="scale">
+
+            <div class="panel-one">
+                <img src="https://github.com/bjohnson112069/web-images/blob/main/User%20Profile%20Form/pexels-chetanvlad-2923156.png?raw=true" alt="image of a man jumping" title="Photo by Vlad Chețan: https://www.pexels.com/photo/low-angle-photography-of-man-jumping-2923156/">
+            </div>
+            <div class="panel-two">
+                <div class="forms">
+                    <!-- Form 1 -->
+                    <form id="form-one" data-form="1">
+                        <h1>tell us about yourself ...</h1>
+                        <!-- name -->
+                        <div class="input-group">
+                            <label>my name</label>
+                            <div class="inputs col--2">
+                                <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                                <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <!-- sex -->
+                        <div class="input-group">
+                            <label>sex</label>
+                            <div class="inputs col--2">
+                                <button type="button" name="dropdown-sex" class="dropdown-btn">
+                                    <span class="dropdown-value" aria-label="dropdown value">------</span>
+                                    <div class="arrow">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <ul class="dropdown" id="sex">
+                                        <li class="dropdown-item">Male</li>
+                                        <li class="dropdown-item">Female</li>
+                                    </ul>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- birthday -->
+                        <div class="input-group">
+                            <label>birthday</label>
+                            <div class="inputs col--1">
+                                <input type="date" name="birthday" id="birthday">
+                            </div>
+                        </div>
+                        <!-- country -->
+                        <div class="input-group">
+                            <label>i live in</label>
+                            <div class="inputs col--1">
+                                <input type="text" name="country" id="country" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <div class="buttons">
+                                <button class="btn submit">submit</button>
+                                <button class="btn skip" value="2">skip</button>
+                            </div>
+                            <div class="circles">
+                                <div class="circle active" data-form="1" aria-label="circle"></div>
+                                <div class="circle" data-form="2" aria-label="circle"></div>
+                                <div class="circle" data-form="3" aria-label="circle"></div>
+                            </div>                    
+                        </div>
+        
+                    </form>
+
+                    <!-- Form 2 -->
+                    <form id="form-two" data-form="2">
+                        <h1>some lorem ...</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, exercitationem aperiam molestiae explicabo eius magnam similique magni alias aut? Id aperiam quibusdam deleniti distinctio, sed eligendi delectus quos odit dolorem!</p>
+                        <div class="controls">
+                            <div class="buttons">
+                                <button class="btn submit">submit</button>
+                                <button class="btn skip" value="3">skip</button>
+                            </div>
+                            <div class="circles">
+                                <div class="circle" data-form="1" aria-label="circle"></div>
+                                <div class="circle active" data-form="2" aria-label="circle"></div>
+                                <div class="circle" data-form="3" aria-label="circle"></div>
+                            </div>                    
+                        </div>
+
+                    </form>
+
+                    <!-- Form 3 -->
+                    <form id="form-three" data-form="3">
+                        <h1>some more lorem ...</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod possimus vel fugiat distinctio a eius aliquid facilis veritatis molestias qui recusandae in sed quos rem, error accusamus dignissimos illo iusto.</p>
+                        <div class="controls">
+                            <div class="buttons">
+                                <button class="btn submit">submit</button>
+                            </div>
+                            <div class="circles">
+                                <div class="circle" data-form="1" aria-label="circle"></div>
+                                <div class="circle" data-form="2" aria-label="circle"></div>
+                                <div class="circle active" data-form="3" aria-label="circle"></div>
+                            </div>                    
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+    
+        </div>
+
+            <div id="confirmation" class="scale scale-down">
+                <h2>Thank you.  You will receive an email once your profile is active.</h2>
+            </div>
+
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - User Type Select</title>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <article id="user-types" class="scale">
+
+            <header>
+                <h1>select user type</h1>
+            </header>
+    
+            <main>
+                <div class="types-wrapper">
+                    <div class="types">
+                        <div class="type" data-type="1">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/User%20Type%20Select/intelligent.png?raw=true" alt="image of Knowledgeable Ally">
+                            <div class="text-overlay">
+                                <span>Knowledgeable Ally</span>
+                                <small>"Ah, that rare beast, the IT equivalent of the mythical unicorn: The user who understands technical concepts, but who also is aware of what they don’t know."</small>
+                            </div>
+                        </div>
+                        <div class="type" data-type="2">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/User%20Type%20Select/know-it-all.png?raw=true" alt="image of All-Knowing Expert">
+                            <div class="text-overlay">
+                                <span>All-Knowing "Expert"</span>
+                                <small>"These are the users who THINK they are technical experts because they know some jargon and once read the Docker Wikipedia article. But when it really comes down to it, they have no idea what they’re talking about."</small>
+                            </div>
+                        </div>
+                        <div class="type" data-type="3">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/User%20Type%20Select/executive.png?raw=true" alt="image of Dictator Executive">
+                            <div class="text-overlay">
+                                <span>Dictator Executive</span>
+                                <small>"This is the high-ranking manager or executive who does not care about the details, but simply expects things to get done."</small>
+                            </div>
+                        </div>
+                        <div class="type" data-type="4">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/User%20Type%20Select/ignorant.png?raw=true" alt="image of Ignorant User">
+                            <div class="text-overlay">
+                                <span>Ignorant User</span>
+                                <small>"This is your worst user. Not only can they do nothing with computers, but they call very regularly asking basic questions. If there ever is an outbreak of malware in your environment, this user is probably where it started."</small>
+                            </div>
+                        </div>
+                        <div class="type" data-type="5">
+                            <img src="https://github.com/bjohnson112069/web-images/blob/main/User%20Type%20Select/shy.png?raw=true" alt="image of Shy, Low-Confidence User">
+                            <div class="text-overlay">
+                                <span>Shy, Low-Confidence User</span>
+                                <small>"Quiet and reserved, this user type is too afraid to discuss technical subjects openly for fear of showing that they do not understand. Ironically, they may even actually understand technical concepts, but they would rather just keep quiet than risk showing possible ignorance."</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dots">
+                    <button class="dot selected" value="1" aria-label="slide indicator"></button>
+                    <button class="dot" value="2" aria-label="slide indicator"></button>
+                    <button class="dot" value="3" aria-label="slide indicator"></button>
+                    <button class="dot" value="4" aria-label="slide indicator"></button>
+                    <button class="dot" value="5" aria-label="slide indicator"></button>
+                </div>        
+            </main>
+    
+            <footer>
+                <button class="btn" id="continue">continue</button>
+            </footer>
+    
+        </article>
+
+
+    </div>
+    <!-- Quote Citation: https://blog.paessler.com/5-common-it-user-types-and-how-to-deal-with-them -->
+
+</body>
+
+
+</html>
