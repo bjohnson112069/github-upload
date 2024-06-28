@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Charts</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="project">
+
+            <section id="recycled" class="slide slide-right">
+                <header>
+                    <h1>Recycled</h1>
+                    <button class="btn" id="options">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                </header>
+                <main>
+                    <div class="chart">
+                        <div class="conical">
+                            <div class="conical-label">
+                                <span>Total</span>
+                                <span class="total">$47.1K</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="legend">
+                        <li><span class="percentage" data-legend="text">30%</span>Text</li>
+                        <li><span class="percentage" data-legend="images">25%</span>Images</li>
+                        <li><span class="percentage" data-legend="documents">34%</span>Documents</li>
+                        <li><span class="percentage" data-legend="videos">11%</span>Videos</li>
+                    </ul>
+                </main>
+                <footer>
+                    <button class="btn" id="full-report">
+                        <span>Read full report</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </footer>
+            </section>
+            <section id="goals" class="slide">
+                <button class="btn" id="exit">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <header>
+                    <h1>Goals</h1>
+                    <button class="btn dropdown-btn" id="goals-pulldown">
+                        <span>This Month</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </header>
+                <main>
+                    <div class="goal" data-goal="direct">
+                        <span class="goal-label">Direct</span>
+                        <span class="goal-value">3,183</span>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="goal" data-goal="organic">
+                        <span class="goal-label">Organic</span>
+                        <span class="goal-value">3,846</span>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="goal" data-goal="social">
+                        <span class="goal-label">Social</span>
+                        <span class="goal-value">1,058</span>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <div class="goal" data-goal="referral">
+                        <span class="goal-label">Referral</span>
+                        <span class="goal-value">174</span>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </main>
+            </section>
+
+        </article>
+
+    </div>
+</body>
+
+</html>

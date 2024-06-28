@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Contraction Timer</title>
+</head>
+
+<body>
+    <div class="container">
+
+    <article id="timer">
+        <header>
+            <button class="btn" id="go-back">
+                <i class="fa-solid fa-reply"></i>
+            </button>
+            <h1>contraction timer</h1>
+            <button class="btn" id="notifications">
+                <i class="fa-solid fa-bell"></i>
+            </button>
+        </header>
+        <main>
+            <section id="section-top">
+                <div class="timer">
+                    <span id="hours">00</span>
+                    <span>:</span>
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </div>
+                <div class="last-contraction-bl">
+                    <span>Time since last contraction</span>
+                    <span class="last-contraction">00:00:00</span>
+                </div>
+                <button class="btn" id="toggle-timer">
+                    <div class="timer-btn--icon"><!-- BG Image --></div>
+                    <span class="timer-btn--label">Start Timer</span>
+                </button>
+            </section>
+            <section id="section-bottom">
+            <div class="contractions--header">
+                <span>Length</span>
+                <span>Time apart</span>
+                <span>Start & end time</span>
+            </div>
+            <ul class="contractions">
+                <!-- injected by JS -->
+            </ul>
+            </section>
+        </main>
+    </article>
+
+    </div>
+
+</body>
+
+</html>

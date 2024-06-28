@@ -1,0 +1,276 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Analytics Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <button class="btn" id="info">
+                <i class="fa-solid fa-circle-info"></i>
+            </button>
+            <button class="btn" id="notifications">
+                <i class="fa-solid fa-bell"></i>
+            </button>
+            <button class="btn" id="avatar">
+                <img src="https://github.com/bjohnson112069/web-images/raw/main/Analytics%20Dashboard/51070.webp" alt="user profile avatar">
+            </button>
+        </header>
+
+        <main>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Audience</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Behaviour</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Conversions</a></li>
+                </ul>
+                <button class="btn" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <button class="btn" id="customize">Customize</button>
+            </nav>
+            <section class="dashboard">
+
+                <section class="container-left">
+                    <div class="row" id="row-1">
+                        <div class="module active-users">
+                            <div class="module-title">
+                                <span>Active Users</span>
+                            </div>
+                            <h1 id="active-users-raw">72</h1>
+                            <a href="#" class="referrals">
+                                <span>view referrals</span>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                        <div class="module page-views">
+                            <div class="module-title">
+                                <span>Page views per minutes</span>
+                            </div>
+                            <div class="chart">
+                                <ul class="bars">
+                                    <li class="bar" data-value="25"></li>
+                                    <li class="bar" data-value="100"></li>
+                                    <li class="bar" data-value="90"></li>
+                                    <li class="bar" data-value="80"></li>
+                                    <li class="bar" data-value="85"></li>
+                                    <li class="bar" data-value="15"></li>
+                                    <li class="bar" data-value="25"></li>
+                                    <li class="bar" data-value="10"></li>
+                                    <li class="bar" data-value="5"></li>
+                                    <li class="bar" data-value="20"></li>
+                                    <li class="bar" data-value="90"></li>
+                                    <li class="bar" data-value="80"></li>
+                                    <li class="bar" data-value="70"></li>
+                                    <li class="bar" data-value="10"></li>
+                                    <li class="bar" data-value="15"></li>
+                                    <li class="bar" data-value="10"></li>
+                                    <li class="bar" data-value="80"></li>
+                                    <li class="bar" data-value="70"></li>
+                                    <li class="bar" data-value="15"></li>
+                                    <li class="bar" data-value="90"></li>
+                                    <li class="bar" data-value="100"></li>
+                                    <li class="bar" data-value="80"></li>
+                                    <li class="bar" data-value="70"></li>
+                                    <li class="bar" data-value="90"></li>
+                                    <li class="bar" data-value="20"></li>
+                                    <li class="bar" data-value="30"></li>
+                                    <li class="bar" data-value="10"></li>
+                                    <li class="bar" data-value="15"></li>
+                                    <li class="bar" data-value="10"></li>
+                                    <li class="bar" data-value="5"></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="referrals">
+                                <span>view referrals</span>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>    
+                    </div>
+                    <div class="row" id="row-2">
+                        <div class="module metric">
+                            <div class="module-title">
+                                <span>Users</span>
+                                <span class="trend upward" id="users-trend">268%</span>
+                            </div>
+                            <h1 id="users-value">15K</h1>
+                        </div>
+                        <div class="module metric">
+                            <div class="module-title">
+                                <span>Sessions</span>
+                                <span class="trend upward" id="sessions-trend">268%</span>
+                            </div>
+                            <h1 id="sessions-value">17K</h1>
+                        </div>
+                        <div class="module metric">
+                            <div class="module-title">
+                                <span>Bounce Rate</span>
+                                <span class="trend downward" id="bounce-trend">19.6%</span>
+                            </div>
+                            <h1 id="bounce-value">62.57%</h1>
+                        </div>
+                        <div class="module metric">
+                            <div class="module-title">
+                                <span>Session Duration</span>
+                                <span class="trend downward" id="duration-trend">29.7%</span>
+                            </div>
+                            <h1 id="duration-value">1m 37s</h1>
+                        </div>
+                    </div>
+                    <div class="row" id="row-3">
+                        <div class="module alerts">
+                            <i class="fa-solid fa-bell"></i>
+                            <div class="alert">
+                                <span class="title">No alerts set</span>
+                                <span>Get notified when your data drastically changes</span>
+                            </div>
+                            <button class="btn" id="set-alert">set alert</button>
+                        </div>
+                    </div>
+                    <div class="row" id="row-4">
+                        <div class="module devices">
+                            <div class="module-title">
+                                <span>Devices</span>
+                            </div>
+                            <div class="months">
+                                <button class="month active" value="May">May</button>
+                                <button class="month" value="June">June</button>
+                                <button class="month" value="July">July</button>
+                                <button class="month" value="August">August</button>
+                            </div>
+                            <div class="devices-content">
+                                <div class="device-type" data-type="desktop">
+                                    <div class="device-title">
+                                        <span>Desktop</span>
+                                        <span>|</span>
+                                        <span>50%</span>
+                                    </div>
+                                    <div class="device-bar" data-value="52%"></div>
+                                </div>
+                                <div class="device-type" data-type="tablet">
+                                    <div class="device-title">
+                                        <span>Tablet</span>
+                                        <span>|</span>
+                                        <span>15%</span>
+                                    </div>
+                                    <div class="device-bar" data-value="15%"></div>
+                                </div>
+                                <div class="device-type" data-type="mobile">
+                                    <div class="device-title">
+                                        <span>Mobile</span>
+                                        <span>|</span>
+                                        <span>35%</span>
+                                    </div>
+                                    <div class="device-bar" data-value="35%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module traffic">
+                            <div class="module-title">
+                                <span>Traffic</span>
+                                <button class="btn" id="more-traffic">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                            </div>
+                            <ul class="traffic-items">
+                                <li class="traffic-item" data-type="direct">
+                                    <span>Direct</span>
+                                    <span class="traffic-value">24</span>
+                                </li>
+                                <li class="traffic-item" data-type="organic">
+                                    <span>Organic</span>
+                                    <span class="traffic-value">14</span>
+                                </li>
+                                <li class="traffic-item" data-type="social">
+                                    <span>Social</span>
+                                    <span class="traffic-value">5</span>
+                                </li>
+                                <li class="traffic-item" data-type="referral">
+                                    <span>Referral</span>
+                                    <span class="traffic-value">5</span>
+                                </li>
+                                <li class="traffic-item" data-type="affiliate">
+                                    <span>Affiliate</span>
+                                    <span class="traffic-value">2</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="container-right">
+                    <div class="module top-pages">
+                        <div class="module-title">
+                            <span>Top pages</span>
+                            <span>Visits</span>
+                        </div>
+                        <ul class="page-items">
+                            <li class="page-item">
+                                <span class="page-info">/</span>
+                                <span class="page-visits">23,956</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/about</span>
+                                <span class="page-visits">565</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/license</span>
+                                <span class="page-visits">477</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/posts/sketch-help-ce...links-search-day-1120</span>
+                                <span class="page-visits">458</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/posts/sketch-pricing...n-card-cards-day-1116</span>
+                                <span class="page-visits">447</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/posts/sketch-stats-ca...istics-cards-day-1119</span>
+                                <span class="page-visits">785</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/posts/sketch-dark-c...ogress-bar-day-1112</span>
+                                <span class="page-visits">962</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/posts/sketch-messages-me...-messaging-ui-kit-day-5951</span>
+                                <span class="page-visits">558</span>
+                            </li>
+                            <li class="page-item">
+                                <span class="page-info">/posts/sketch-modal-discount-day-1061</span>
+                                <span class="page-visits">1</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="module more-stats">
+                        <div class="module-title">
+                            <span>More stats</span>
+                            <button class="btn" id="expand-stats">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="stat">
+                            <span>More stats</span>
+                            <h1 id="more-stats-raw">42K</h1>
+                        </div>
+                        <div class="stat">
+                            <span>More stats</span>
+                            <h1 id="more-stats-percent">47.45%</h1>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+        </main>
+
+    </div>
+</body>
+
+</html>

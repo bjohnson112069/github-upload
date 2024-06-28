@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Boardme Signup</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="sign-up">
+            <div class="bg-circle" id="circle-1"></div>
+            <div class="bg-circle" id="circle-2"></div>
+            <div class="bg-box" id="box-1"></div>
+            <div class="bg-box" id="box-2"></div>
+
+            <section id="hero">
+                <div class="brand">
+                    <div class="logo">
+                        <span>b.</span>
+                    </div>
+                    <span>boardme</span>
+                </div>
+                <h1>Implement user <span class="underline">onboarding</span> experiences with just a few clicks</h1>
+                <p>Guide your customer on a fantastic journey within your web app.</p>
+            </section>
+
+            <div class="sections-container">
+                
+                <div class="sections">
+
+                    <section id="get-started">
+                        <h1 class="section-header">Get started</h1>
+                        <div class="sign-ups">
+                            <button class="neumorphic sign-up" id="redirect-create" data-section="create-new-account">
+                                <i class="fa-regular fa-envelope"></i>
+                                <span>Sign up with email</span>
+                            </button>
+                            <button class="neumorphic sign-up">
+                                <i class="fa-brands fa-twitter"></i>
+                                <span>Sign up with Twitter</span>
+                            </button>
+                            <button class="neumorphic sign-up">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span>Sign up with email</span>
+                            </button>
+                        </div>
+                        <p>Already have an account?  <a href="#" id="redirect-login">Log in</a></p>
+                    </section>
+    
+                    <section id="create-new-account">
+                        <button class="btn" id="redirect-signup" title="back to previous screen" data-section="get-started">
+                            <i class="fa-solid fa-reply"></i>
+                        </button>
+                        <h1 class="section-header">Create your account</h1>
+                        <form id="form" class="form">
+    
+                            <!-- First Name -->
+                            <div class="form-control">
+                                <label for="first-name">First</label>
+                                <div class="input-wrapper">
+                                    <input type="text" placeholder="First" id="first-name" name="first-name" />
+                                    <!-- Checkmark Icon -->
+                                    <i class="fa-solid fa-circle-check icon check-icon"></i>
+                                    <!-- Exclamation Icon -->
+                                    <i class="fa-solid fa-circle-exclamation icon exclamation-icon"></i>
+                                </div>
+                                <small class="error-message" data-field="first-name">Error message</small>
+                            </div>
+                            
+                            <!-- Last Name -->
+                            <div class="form-control">
+                                <label for="last-name">Last</label>
+                                <div class="input-wrapper">
+                                    <input type="text" placeholder="Last" id="last-name" name="last-name" />
+                                    <!-- Checkmark Icon -->
+                                    <i class="fa-solid fa-circle-check icon check-icon"></i>
+                                    <!-- Exclamation Icon -->
+                                    <i class="fa-solid fa-circle-exclamation icon exclamation-icon"></i>
+                                </div>
+                                <small class="error-message" data-field="last-name">Error message</small>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="form-control">
+                                <label for="email">Email</label>
+                                <div class="input-wrapper">
+                                    <input type="email" placeholder="email@user.com" id="email" name="email" />
+                                    <!-- Checkmark Icon -->
+                                    <i class="fa-solid fa-circle-check icon check-icon"></i>
+                                    <!-- Exclamation Icon -->
+                                    <i class="fa-solid fa-circle-exclamation icon exclamation-icon"></i>
+                                </div>
+                                <small class="error-message" data-field="email">Error message</small>
+                            </div>
+                            
+                            <!-- Password -->
+                            <div class="form-control">
+                                <label for="password">Password</label>
+                                <div class="input-wrapper">
+                                    <input type="password" placeholder="Password" id="password" name="password" />
+                                    <!-- Checkmark Icon -->
+                                    <i class="fa-solid fa-circle-check icon check-icon"></i>
+                                    <!-- Exclamation Icon -->
+                                    <i class="fa-solid fa-circle-exclamation icon exclamation-icon"></i>
+                                </div>
+                                <small class="error-message" data-field="password">Error message</small>
+                            </div>
+                            
+                            <!-- Confirm Password -->
+                            <div class="form-control">
+                                <label for="confirm-password">Confirm Password</label>
+                                <div class="input-wrapper">
+                                    <input type="password" placeholder="Confirm Password" id="confirm-password" name="confirm-password" />
+                                    <!-- Checkmark Icon -->
+                                    <i class="fa-solid fa-circle-check icon check-icon"></i>
+                                    <!-- Exclamation Icon -->
+                                    <i class="fa-solid fa-circle-exclamation icon exclamation-icon"></i>
+                                </div>
+                                <small class="error-message" data-field="confirm-password">Error message</small>
+                            </div>
+                            <button class="btn" id="create-account" aria-label="submit the form">Sign Up</button>
+                        </form>
+                        <p>Having trouble?  <a href="#" id="get-help">Get help</a></p>
+                    </section>    
+    
+                </div>
+
+            </div>
+
+
+        </article>
+
+    </div>
+</body>
+
+</html>

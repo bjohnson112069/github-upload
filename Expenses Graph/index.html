@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Expenses Graph</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="app">
+
+            <h1 class="title">Expenses</h1>
+
+            <section id="options">
+                <div class="filters">
+                    <button class="filter active" value="weekly">Weekly</button>
+                    <button class="filter" value="monthly">Monthly</button>
+                    <button class="filter" value="yearly">Yearly</button>
+                </div>
+                <button id="more-options" aria-label="more options">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+            </section>
+
+            <section id="expenses-chart">
+
+                <div class="chart">
+                    <div class="y-axis">
+                        <div class="line" data-value="4K" aria-label="y-axis legend line"></div>
+                        <div class="line" data-value="3K" aria-label="y-axis legend line"></div>
+                        <div class="line" data-value="2K" aria-label="y-axis legend line"></div>
+                        <div class="line" data-value="1K" aria-label="y-axis legend line"></div>
+                        <div class="line" data-value="0" aria-label="y-axis legend line"></div>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="label" data-legend="income">
+                        <div class="dot" aria-label="color indicator"></div>
+                        <span>Income</span>
+                    </div>
+                    <div class="label" data-legend="expenses">
+                        <div class="dot" aria-label="color indicator"></div>
+                        <span>Expenses</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </article>
+
+    </div>
+</body>
+
+</html>

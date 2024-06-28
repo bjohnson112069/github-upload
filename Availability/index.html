@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Availability</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <form class="scale">
+            <header>
+                <h1>Edit availability</h1>
+                <p>Add a "Hire me" button to let people know that you're available for new opportunities</p>
+            </header>
+            <main>
+                <label class="checkbox-control" for="option-1">
+                    <input type="checkbox" id="option-1" name="availability" value="fulltime">
+                    <div class="checkmark">
+                        <svg class="icon">
+                            <use xlink:href="#check-mark-svgrepo-com"></use>
+                        </svg>
+                    </div>
+                    <span>Full time</span>
+                </label>
+                <label class="checkbox-control" for="option-2">
+                    <input type="checkbox" id="option-2" name="availability" value="freelance">
+                    <div class="checkmark">
+                        <svg class="icon">
+                            <use xlink:href="#check-mark-svgrepo-com"></use>
+                        </svg>
+                    </div>
+                    <span>Freelance & Projects</span>
+                </label>
+            </main>
+            <footer>
+                <button class="btn" id="done">Done</button>
+                <button class="btn" id="cancel">Cancel</button>
+            </footer>
+        </form>
+
+    </div>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="check-mark-svgrepo-com">
+        <path d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z"></path>
+        </symbol>
+    </svg>
+</body>
+
+</html>

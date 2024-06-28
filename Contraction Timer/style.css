@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #ffffff;
+    --background: #0f0f17;
+    --primary: #5059c1;
+    --secondary: #323873;
+    --accent: #c4c7e8;
+    /* --primary: #c4c7e8; */
+    /* --secondary: #323873; */
+    /* --accent: #5059c1; */
+    
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f0f0f5;
+    --background-100: #e0e0eb;
+    --background-200: #c1c1d7;
+    --background-300: #a2a2c3;
+    --background-400: #8484ae;
+    --background-500: #65659a;
+    --background-600: #51517b;
+    --background-700: #3c3c5d;
+    --background-800: #28283e;
+    --background-900: #14141f;
+    --background-950: #0a0a0f;
+    
+    --primary-50: #edeef8;
+    --primary-100: #dadcf1;
+    --primary-200: #b6b9e2;
+    --primary-300: #9196d4;
+    --primary-400: #6c74c6;
+    --primary-500: #4751b8;
+    --primary-600: #394193;
+    --primary-700: #2b306e;
+    --primary-800: #1d2049;
+    --primary-900: #0e1025;
+    --primary-950: #070812;
+    
+    --secondary-50: #edeef7;
+    --secondary-100: #dcdeef;
+    --secondary-200: #b8bce0;
+    --secondary-300: #959bd0;
+    --secondary-400: #7179c1;
+    --secondary-500: #4e58b1;
+    --secondary-600: #3e468e;
+    --secondary-700: #2f356a;
+    --secondary-800: #1f2347;
+    --secondary-900: #101223;
+    --secondary-950: #080912;
+    
+    --accent-50: #ecedf8;
+    --accent-100: #d9dbf2;
+    --accent-200: #b4b8e4;
+    --accent-300: #8e94d7;
+    --accent-400: #6870ca;
+    --accent-500: #424cbd;
+    --accent-600: #353d97;
+    --accent-700: #282e71;
+    --accent-800: #1b1f4b;
+    --accent-900: #0d0f26;
+    --accent-950: #070813;
+
+
+     /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Roboto", sans-serif;
+    --ff-body: "Open Sans", sans-serif;
+
+    --border-radius: 16px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    background: url("https://wallpapers.com/images/high/watch-background-sf20g4rm9svgciyf.webp") no-repeat center;
+    background-size: cover;
+    color: var(--text);
+    position: relative;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;    
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0% 0% 0%;
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+#timer {
+    width: 100%;
+    max-width: 340px;
+    display: grid;
+    grid-auto-rows: min-content;
+    padding: 1rem;
+    background: var(--background);
+    background: linear-gradient(180deg, var(--background-900), var(--background), var(--background-950));
+    border-radius: var(--border-radius);
+    border: 5px solid var(--primary);
+}
+
+header {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    place-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: var(--fs-650);
+    font-weight: 700;
+}
+
+#go-back,
+#notifications {
+    --btn-text-color: var(--text);
+    --btn-hover-text-color: var(--primary);
+}
+
+main {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 2rem;
+}
+    
+#section-top {
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    font-size: 2.75rem;
+    font-weight: 500;
+}
+
+.last-contraction-bl {
+    display: grid;
+    grid-auto-rows: min-content;
+    justify-items: center;
+}
+
+.last-contraction {
+    font-size: var(--fs-300);
+    font-weight: 700;
+}
+
+#toggle-timer {
+    --border-radius: 6px;
+    --btn-bg-color: var(--background);
+    --btn-text-color: var(--text);
+    --btn-border-color: var(--primary);
+    --btn-hover-border-color: var(--primary);
+    --btn-hover-bg-color: var(--primary);
+    --btn-hover-text-color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: .5rem;
+    width: 160px;
+}
+
+#toggle-timer.active > .timer-btn--icon {
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/45a4981284784f44c14dc29e8b312c0972421762/Contraction%20Timer/face-frown-regular.svg") no-repeat center;
+}
+
+.timer-btn--icon {
+    background: url("https://raw.githubusercontent.com/bjohnson112069/web-images/45a4981284784f44c14dc29e8b312c0972421762/Contraction%20Timer/face-smile-regular.svg") no-repeat center;
+    background-size: 1.5rem;
+    aspect-ratio: 1;
+    width: 1.5rem;
+}
+
+.timer-btn--label {
+    font-weight: 700;
+}
+
+#section-bottom {
+    display: grid;
+    grid-auto-rows: min-content;
+    padding-block: 1rem;
+    font-size: var(--fs-300);
+}
+.contractions {
+    display: grid;
+    grid-auto-rows: min-content;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.contractions--header,
+.contraction {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.contractions--header {
+    color: var(--text-400);
+    font-weight: 500;
+}
+
+.contraction {
+    --border-radius: 6px;
+    padding: .5rem;
+    border-radius: var(--border-radius);
+}
+
+.contraction:nth-of-type(2n + 1) {
+    background: var(--background);
+}
+    
+.contraction:nth-of-type(2n) {
+    background: var(--secondary);
+}
+
+.contraction-header span,
+.contraction span {
+    min-width: min-content;
+    text-wrap: nowrap;
+}
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 800px) {
+
+}
+

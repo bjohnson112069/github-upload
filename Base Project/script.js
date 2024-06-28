@@ -1,36 +1,31 @@
-/*
-    The idea is to first sort the array and find the longest subarray with consecutive elements. After sorting the array and removing the multiple occurrences of elements, run a loop and keep a count and max (both initially zero). Run a loop from start to end and if the current element is not equal to the previous (element+1) then set the count to 1 else increase the count. Update max with a maximum of count and max. 
 
-*/
+async function loadContent() {
+  const canWakeLock = () => 'wakeLock' in navigator;
+  let wakelock;
+  async function lockWakeState() {
+    if(!canWakeLock()) return;
+    try {
+      debugger
+      wakelock = await navigator.wakeLock.request();
+      wakelock.addEventListener('release', () => {
+        console.log('Screen Wake State Locked:', !wakelock.released);
+      });
+      console.log('Screen Wake State Locked:', !wakelock.released);
+    } catch(e) {
+      console.error('Failed to lock wake state with reason:', e.message);
+    }
+  }
 
-function longestConsecutiveSequence(arr) {
-  let valuesSoFar = Object.create(null);
-  let countValue = 1; 
-  let maxcountValue = 1
+  function releaseWakeState() {
+    if(wakelock) wakelock.release();
+    wakelock = null;
+  }
+  await lockWakeState();
 
-  const result = arr.sort((a, b) => a > b)
-    .filter((item , i, array) => {
-      let value = array[i];
-      if (value in valuesSoFar) {
-          return false; /* do NOT keep */
-      }
-      valuesSoFar[value] = true;
-      return true; /* keep */
-    }).reduce((max, item , i, array) => {
-      if (array[i - 1] + 1 === array[i]) { 
-        countValue++; 
-      } else if (array[i - 1] !== array[i]) { 
-        countValue = 1; 
-      } 
-      maxcountValue = Math.max(maxcountValue, countValue);
-      return maxcountValue; 
-    }, 0);
+  setTimeout(releaseWakeState, 5000);
+  // On page load... 
 
-  return result;
+  // Event Listeners
 }
 
-console.log('Output:', longestConsecutiveSequence([100, 4, 200, 1, 3, 2]));
-console.log('Output:', longestConsecutiveSequence([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
-console.log('Output:', longestConsecutiveSequence([]));
-console.log('Output:', longestConsecutiveSequence([10, 5, 12, 3]));
-
+window.addEventListener('DOMContentLoaded', loadContent);

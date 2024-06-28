@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Social Profile 2</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="user-profile">
+
+            <header>
+                <button class="btn" id="arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="btn" id="ellipsis">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+            </header>
+
+            <main>
+
+                <section class="user-info">
+
+                    <div class="profile">
+                        <img src="https://github.com/bjohnson112069/web-images/raw/main/Social%20Profile%202/pexels-photo-4917824.webp" alt="avatar image" class="avatar">
+                        <div class="name-bl">
+                            <span class="name">Dorothy Carter</span>
+                            <span class="title">Photographer</span>
+                        </div>
+                        <button class="btn" id="follow">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>follow</span>
+                        </button>
+                    </div>
+
+                    <div class="socials">
+                        <button class="btn" id="social-twitter" aria-label="social media icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                        <button class="btn" id="social-facebook" aria-label="social media icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                        <button class="btn" id="social-behance" aria-label="social media icon">
+                            <i class="fa-brands fa-behance"></i>
+                        </button>
+                        <button class="btn" id="social-youtube" aria-label="social media icon">
+                            <i class="fa-brands fa-youtube"></i>
+                        </button>
+                        <button class="btn" id="social-pinterest" aria-label="social media icon">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </button>
+                    </div>
+
+                </section>
+
+                <section class="user-metrics">
+
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="value">2589</span>
+                            <span>Followers</span>
+                        </div>
+                        <div class="metric">
+                            <span class="value">1896</span>
+                            <span>Following</span>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="user-media">
+                    <div class="tabs">
+                        <button class="tab" value="all">All</button>
+                        <button class="tab active" value="photo">Photos</button>
+                        <button class="tab" value="video">Videos</button>
+                    </div>
+                    <div class="thumbnails">
+                        <!-- injected by JS -->
+                    </div>
+                </section>
+
+            </main>
+
+            <section class="modal">
+                <button class="btn" id="modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="large-thumbnail">
+                    <img src="./images/pexels-photo-4917824.webp" alt="Enlarged user image">
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</body>
+
+</html>

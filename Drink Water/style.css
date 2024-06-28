@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #042145;
+    --background: #BEE6FB;
+    --primary: #062970;
+    --secondary: #376BB0;
+    --accent: #8CC7F6;
+
+    /* shades */
+    --text-50: #e7f1fe;
+    --text-100: #cfe3fc;
+    --text-200: #9fc7f9;
+    --text-300: #6eacf7;
+    --text-400: #3e90f4;
+    --text-500: #0e74f1;
+    --text-600: #0b5dc1;
+    --text-700: #084691;
+    --text-800: #062e60;
+    --text-900: #031730;
+    --text-950: #010c18;
+    
+    --background-50: #e7f6fd;
+    --background-100: #cfecfc;
+    --background-200: #9fd9f9;
+    --background-300: #6fc7f6;
+    --background-400: #3fb4f3;
+    --background-500: #0fa1f0;
+    --background-600: #0c81c0;
+    --background-700: #096190;
+    --background-800: #064060;
+    --background-900: #032030;
+    --background-950: #021018;
+    
+    --primary-50: #e7eefe;
+    --primary-100: #cfdefc;
+    --primary-200: #9ebdfa;
+    --primary-300: #6e9cf7;
+    --primary-400: #3d7af5;
+    --primary-500: #0d59f2;
+    --primary-600: #0a47c2;
+    --primary-700: #083691;
+    --primary-800: #052461;
+    --primary-900: #031230;
+    --primary-950: #010918;
+    
+    --secondary-50: #ecf1f9;
+    --secondary-100: #d8e4f3;
+    --secondary-200: #b1c8e7;
+    --secondary-300: #8badda;
+    --secondary-400: #6492ce;
+    --secondary-500: #3d77c2;
+    --secondary-600: #315f9b;
+    --secondary-700: #254774;
+    --secondary-800: #182f4e;
+    --secondary-900: #0c1827;
+    --secondary-950: #060c13;
+    
+    --accent-50: #e7f3fd;
+    --accent-100: #d0e8fb;
+    --accent-200: #a1d0f7;
+    --accent-300: #71b9f4;
+    --accent-400: #42a2f0;
+    --accent-500: #138aec;
+    --accent-600: #0f6fbd;
+    --accent-700: #0b538e;
+    --accent-800: #08375e;
+    --accent-900: #041c2f;
+    --accent-950: #020e18;
+
+
+     /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 20px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    background: url('https://wallpapers.com/images/high/water-background-vmsw07a5khxg3shy.webp') no-repeat center;
+    background-size: cover;
+    color: var(--background-50);
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+#app {
+    width: 100%;
+    max-width: 420px;
+    display: grid;
+    grid-auto-rows: min-content;
+    background: var(--primary);
+    backdrop-filter: blur(16px) saturate(100%);
+    -webkit-backdrop-filter: blur(16px) saturate(100%);
+    background-color: rgba(6, 41, 112, 0.25);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 
+        inset 3px 3px 6px -2px var(--primary-300), 
+        inset -3px -3px 6px -2px var(--primary-800), 
+        0 10px 20px -2px rgb(0, 0, 0, 0.5);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+}
+
+.btn {
+    text-transform: capitalize;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;    
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0% 0% 0%;
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+#menu,
+#notifications {
+    --btn-hover-text-color: var(--accent);
+    font-size: var(--fs-800);
+}
+
+main {
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+    font-size: var(--fs-650);
+}
+
+.day-label {
+    font-size: var(--fs-400);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+main > p {
+    font-weight: 700;
+}
+
+.bottle {
+    aspect-ratio: 1;
+    width: 250px;
+    margin-block: 1rem;
+    background: url('https://raw.githubusercontent.com/bjohnson112069/web-images/a113066326452173b5f72d1ee14ddd614ff9d676/Drink%20Water/water-bottle.svg') no-repeat center, var(--background-200);
+    background-size: cover;
+    -webkit-mask-image: url('https://raw.githubusercontent.com/bjohnson112069/web-images/a113066326452173b5f72d1ee14ddd614ff9d676/Drink%20Water/water-bottle-mask.svg');
+    mask-image: url('https://raw.githubusercontent.com/bjohnson112069/web-images/a113066326452173b5f72d1ee14ddd614ff9d676/Drink%20Water/water-bottle-mask.svg');
+    mask-size: cover;
+    position: relative;
+}
+
+.fill-line {
+    --fill-percentage: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: calc(100% - var(--fill-percentage));
+    left: 0;
+    background: var(--primary);
+    opacity: 0.5;
+    transition: top .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+#drink {
+    --btn-bg-color: var(--secondary);
+    --btn-text-color: var(--background-50);
+    --btn-border-color: var(--secondary);
+    --btn-hover-bg-color: var(--accent);
+    --btn-hover-text-color: var(--text);
+    --btn-hover-border-color: var(--accent);
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: .75em 3em;
+    border-radius: 100px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+
+}
+
+footer {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    font-size: var(--fs-600);
+}
+
+footer > h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--fs-500);
+    font-weight: 500;
+}
+
+.days {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.day {
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+    gap: 1rem;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.day > span {
+    width: 2rem;
+    outline: 2px solid transparent;
+    border-radius: 2px;
+    transition: outline .3s linear, background .3s linear;
+}
+
+.day.selected > span {
+    outline-color: var(--accent);
+    background: var(--secondary);
+    font-weight: 700;
+}
+
+.day:hover > span {
+    outline-color: var(--accent);
+}
+
+.circle {
+    display: grid;
+    place-items: center;
+    grid-template-areas: "stacked";
+    aspect-ratio: 1;
+    width: 30px;
+    border-radius: 50%;
+    background: var(--secondary-200);
+    transition: outline .5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-circle {
+    grid-area: stacked;
+    aspect-ratio: 1;
+    width: 100%;
+    max-width: 50%;
+    border-radius: inherit;
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--primary);
+}
+
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 775px) {
+}
+
