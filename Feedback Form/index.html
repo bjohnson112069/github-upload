@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Feedback Form</title>
+</head>
+
+<body>
+    <div class="bg initial" id="bg-right"></div>
+    <div class="bg initial" id="bg-left"></div>
+    <div class="container">
+        <form class="scale">
+
+            <header>
+                <h1>Send us some feedback!</h1>
+                <p>Do you have a suggestion or found some bug?  Let us know in the field below.</p>
+            </header>
+            <main>
+
+                <label class="text-control" for="message">
+                    <textarea name="messasge" id="message" autocomplete="messasge" required></textarea>
+                    <span><i class="fa-regular fa-message"></i>Describe your issue or idea...</span>
+                </label>
+
+                <div class="options">
+                    <label for="radio-one" class="radio-control">
+                        <input type="radio" id="radio-one" name="radio" value="Bug" required>
+                        <div class="checkmark">
+                            <svg class="icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>Bug</span>
+                    </label>
+                    <label for="radio-two" class="radio-control">
+                        <input type="radio" id="radio-two" name="radio" value="Comment" required>
+                        <div class="checkmark">
+                            <svg class="icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>Comment</span>
+                    </label>
+                    <label for="radio-three" class="radio-control">
+                        <input type="radio" id="radio-three" name="radio" value="Other" required>
+                        <div class="checkmark">
+                            <svg class="icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>Other</span>
+                    </label>
+                </div>
+
+            </main>
+
+            <footer>
+                <button type="submit" class="btn" id="send-feedback">Send Feedback</button>
+            </footer>
+
+        </form>
+    </div>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="check-mark-svgrepo-com">
+            <path
+                d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z">
+            </path>
+        </symbol>
+    </svg>
+
+</body>
+
+</html>

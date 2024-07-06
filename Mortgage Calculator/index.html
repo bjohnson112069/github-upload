@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Mortgage Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <form id="mortgage-calculator">
+            <header>
+                <h1>Mortgage Calculator</h1>
+            </header>
+            <main>
+                <section id="calculator-input">
+                    <!-- Purchase Price -->
+                    <div class="input-group">
+                        <label for="purchase-price">
+                            <span>Purchase Price:</span>
+                            <div class="value-bl">
+                                <span>$</span>
+                                <span class="value">0</span>
+                            </div>
+                        </label>
+                        <input name="purchase-price" id="purchase-price" type="range" min="0" max="1000000" value="450000" step="1000">
+                    </div>
+                    <!-- Equity -->
+                    <div class="input-group">
+                        <label for="equity">
+                            <span>Equity:</span>
+                            <div class="value-bl">
+                                <span>$</span>
+                                <span class="value">0</span>
+                            </div>
+                        </label>
+                        <input name="equity" id="equity" type="range" min="0" max="1000000" value="135000" step="1000">
+                    </div>
+                    <!-- Repayment Term -->
+                    <div class="input-group">
+                        <label for="repayment-term">
+                            <span>Repayment Term:</span>
+                            <div class="value-bl">
+                                <span class="value">0</span>
+                                <span>years</span>
+                            </div>
+                        </label>
+                        <input name="repayment-term" id="repayment-term" type="range" min="1" max="30" value="25" step="1">
+                    </div>
+                    <!-- Interest Rate -->
+                    <div class="input-group">
+                        <label for="interest-rate">
+                            <span>Interest Rate:</span>
+                            <div class="value-bl">
+                                <span class="value">0</span>
+                                <span>% APR</span>
+                            </div>
+                        </label>
+                        <input name="interest-rate" id="interest-rate" type="range" min="0" max="10" value="4.125" step="0.125">
+                    </div>
+                </section>
+                <section id="calculator-output">
+                    <!-- Loan Amount -->
+                    <label for="loan-amount" id="loan-amount">
+                        <span>Loan amount:</span>
+                        <div class="value-bl">
+                            <span>$</span>
+                            <span class="value">0</span>
+                        </div>
+                    </label>
+                    <!-- Monthly Payment -->
+                    <label for="monthly-payment" id="monthly-payment">
+                        <span>Monthly Payment:</span>
+                        <div class="value-bl">
+                            <span>$</span>
+                            <span class="value">0</span>
+                        </div>
+                    </label>
+                    <!-- Total Cost -->
+                    <label for="total-cost" id="total-cost">
+                        <span>Total Cost:</span>
+                        <div class="value-bl">
+                            <span>$</span>
+                            <span class="value">0</span>
+                        </div>
+                    </label>
+                </section>
+            </main>
+            <footer>
+                <button type="submit" class="btn" id="get-quote">Get a mortgage quote</button>
+            </footer>
+        </form>
+        
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Chatbox</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="chat-app">
+            <section class="open" id="chat-box">
+                <header>
+                    <div class="agents">
+                        <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="image of an agent" class="avatar">
+                        <img src="https://randomuser.me/api/portraits/women/49.jpg" alt="image of an agent" class="avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="image of an agent" class="avatar">
+                    </div>
+                    <div class="title-bl">
+                        <h1>Elnora, Leila, Lucinda</h1>
+                        <p>We typically reply in a few minutes</p>
+                    </div>
+                </header>
+                <main>
+                    <ul class="messages">
+                        <!-- injected by JS -->
+                    </ul>
+                </main>
+                <footer>
+                    <form id="message-form">
+                        <input type="text" name="new-message" id="new-message" placeholder="Type your message" required>
+                        <button type="submit" class="btn" id="send-message">Send</button>
+                    </form>
+                    <div id="privacy-policy">
+                        <p>By using the chat, I confirm that I have read the <a href="#">privacy policy</a> and do not object to the use of my personal data.</p>
+                        <button class="btn" id="consent-button">I agree</button>
+                    </div>
+                </footer>
+            </section>
+            <button type="button" class="expanded" id="toggle-chat-button" title="chat with an agent"></button>    
+        </article>
+        
+    </div>
+
+</body>
+
+</html>
