@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Poll</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <form id="survey">
+            <header>
+                <h1>
+                    If you write a book about failure, and it doesn't sell, is it called a success?
+                </h1>
+            </header>
+            <main class="options">
+                <!-- Option #1 -->
+                <div class="option">
+                    <input type="radio" class="radiobox" id="radio-one" name="radio" value="1" required>
+                    <label for="radio-one" class="radio-control">
+                        <div class="checkmark">
+                            <svg class="icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>Definitley a success.</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="track">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="value"></div>
+                    </div>
+                </div>
+                <!-- Option #2 -->
+                <div class="option">
+                    <input type="radio" class="radiobox" id="radio-two" name="radio" value="2" required>
+                    <label for="radio-two" class="radio-control">
+                        <div class="checkmark">
+                            <svg class="icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>No.</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="track">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="value"></div>
+                    </div>
+                </div>
+                <!-- Option #3 -->
+                <div class="option">
+                    <input type="radio" class="radiobox" id="radio-three" name="radio" value="3" required>
+                    <label for="radio-three" class="radio-control">
+                        <div class="checkmark">
+                            <svg class="icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>Only if it's in the How To section of the library.</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="track">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="value"></div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <button type="submit" class="btn" id="submit">Submit</button>
+            </footer>
+        </form>
+    </div>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="check-mark-svgrepo-com">
+            <path
+                d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z">
+            </path>
+        </symbol>
+    </svg>
+
+</body>
+
+</html>

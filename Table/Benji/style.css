@@ -1,0 +1,5 @@
+/* active filter button */
+[data-active-filter="true"] {
+    color: #2563eb !important;
+    transform: rotate(-0deg) !important;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" rel="stylesheet">
+  <title>Incident Reports</title>
+</head>
+
+<body class="grid place-items-center bg-gray-100 text-neutral-800 overflow-x-hidden">
+  <main class="p-10 max-w-[700px] my-12">
+
+    <header class="flex items-center justify-between mb-6">
+      <h1 class="font-bold text-lg sm:text-2xl">Incident History</h1>
+      
+      <button type="button" id="add-incident" class="flex items-center justify-center text-sm w-fit py-1 px-2 border-2 border-neutral-800 rounded">
+        <span class="hidden">Add incident</span>
+        <i class="material-symbols-outlined text-2xl">add</i>
+      </button>
+    </header>
+    
+    <div id="incident-list" class="relative space-y-10">
+      
+      <div class="absolute left-10 top-0 -z-10 h-full w-0.5 bg-gray-400"></div>
+      
+      <div class="bg-white p-6 rounded-md shadow-md">
+        <p class="font-semibold text-xs mb-1">March 8th, 2024</p>
+        <h2 class="flex items-start sm:items-center font-bold text-lg">Users are unable to access their profile settings 
+          <span id="progress" class="rounded-md p-2 text-xs bg-green-600 text-white ml-auto sm:ml-5">RESOLVED</span>
+        </h2>
+        
+        <p class="text-sm text-gray-700 my-5">Our development team has corrected the issue and are monitoring for any further issues relating to this matter.</p>
+        
+        <button class="view-full-report flex items-center gap-2 text-sm rounded-sm border border-neutral-800 bg-gray-100 px-3 py-1 hover:bg-gray-200">
+          Full Report
+          <i class="material-symbols-outlined text-lg text-gray-600">east</i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Adding incident modal -->
+    <div id="report-modal" class="hidden bg-white rounded-md p-6 shadow-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden w-[85%] sm:w-[600px]">
+      
+      <h2 class="font-bold text-lg mb-6">Add incident report</h2>
+      
+      <label for="title" class="font-semibold">Title:</label>
+      <input type="text" id="title" class="block mb-4 text-sm border rounded-md p-2 bg-gray-100 w-full">
+      
+      <label for="date" class="font-semibold">Date:</label>
+      <input type="date" id="date" class="block mb-4 text-sm border rounded-md p-2 bg-gray-100 w-full">
+      
+      <label for="status" class="font-semibold">Status:</label>
+      <select id="status" class="block mb-4 text-sm border rounded-md p-2 bg-gray-100 w-full">
+        <option value="RESOLVED">Resolved</option>
+        <option value="INVESTIGATION">Investigating</option>
+        <option value="MONITORING">Monitoring</option>
+      </select>
+      
+      <label for="created-by" class="font-semibold">Created by:</label>
+      <input type="text" id="created-by" class="block mb-4 text-sm border rounded-md p-2 bg-gray-100 w-full">
+      
+      <label for="comment" class="font-semibold">Comment:</label>
+      <input type="text" id="comment" class="block mb-10 text-sm border rounded-md p-2 bg-gray-100 w-full">
+      
+      <button id="cancel-report" class="border border-red-600 text-sm py-1 px-3 rounded-sm mr-2">Cancel</button>
+      <button id="new-report" class="border border-neutral-800 text-sm py-1 px-3 rounded-sm">Add new report</button>
+    </div>
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+
+</html>

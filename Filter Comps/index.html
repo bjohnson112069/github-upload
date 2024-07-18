@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Filter Comps</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <nav>
+                <!-- Dropdown Background Box -->
+                <div class="dropdown-bg">
+                    <span class="arrow"></span>
+                </div>
+                <ul class="nav-list">
+                    <!-- Categories -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                        <div class="dropdown" id="categories">
+                            <div class="search">
+                                <input type="search" name="search-categories" placeholder="Search" id="search-categories">
+                                <svg class="search-icon">
+                                    <use xlink:href="#magnifying-glass-solid"></use>
+                                </svg>
+                            </div>
+                            <h2 class="list-header">all categories</h2>
+                            <ul class="dropdown-list" id="categories-list">
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon magic-fountain" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Artwork</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon pink-bite" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Support</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon cockatoo" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Coding</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon exit-light" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Contests</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon energos" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Game Engine</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon sunny-festival" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Jobs</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon orange-crush" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">General Forums</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon red-rampage" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Promotions</a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </li>
+                    <!-- All -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All</a>
+                        <div class="dropdown" id="all">
+                            <div class="search">
+                                <input type="search" name="search-all" id="search-all" placeholder="Search">
+                                <svg class="search-icon">
+                                    <use xlink:href="#magnifying-glass-solid"></use>
+                                </svg>
+                            </div>
+                            <h2 class="list-header">all</h2>
+                            <ul class="dropdown-list" id="categories-list">
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon pink-bite" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Item 1</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon magic-fountain" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Item 2</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon orange-crush" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Item 3</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon exit-light" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Item 4</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon red-rampage" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Item 5</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon cockatoo" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Item 6</a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </li>
+                    <!-- Tags -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All Tags</a>
+                        <div class="dropdown" id="all-tags">
+                            <div class="search">
+                                <input type="search" name="search-tags" id="search-tags" placeholder="Search">
+                                <svg class="search-icon">
+                                    <use xlink:href="#magnifying-glass-solid"></use>
+                                </svg>
+                            </div>
+                            <h2 class="list-header">all tags</h2>
+                            <ul class="dropdown-list" id="categories-list">
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon cockatoo" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Tag 1</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon sunny-festival" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Tag 2</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon magic-fountain" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Tag 3</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon orange-crush" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Tag 4</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="dropdown-icon energos" aria-label="icon"></div>
+                                    <a class="dropdown-link" href="#">Tag 5</a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="chevron-down-solid">
+            <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="magnifying-glass-solid">
+            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+        </symbol>
+    </svg>
+
+</body>
+
+</html>

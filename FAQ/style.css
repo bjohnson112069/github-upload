@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #448ad0;
+    --secondary: #c085e0;
+    --accent: #d968cd;
+
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #ebf2fa;
+    --primary-100: #d6e5f5;
+    --primary-200: #adcceb;
+    --primary-300: #85b2e0;
+    --primary-400: #5c99d6;
+    --primary-500: #337fcc;
+    --primary-600: #2966a3;
+    --primary-700: #1f4c7a;
+    --primary-800: #143352;
+    --primary-900: #0a1929;
+    --primary-950: #050d14;
+    
+    --secondary-50: #f5ebfa;
+    --secondary-100: #ead6f5;
+    --secondary-200: #d5aeea;
+    --secondary-300: #c085e0;
+    --secondary-400: #ab5dd5;
+    --secondary-500: #9634cb;
+    --secondary-600: #782aa2;
+    --secondary-700: #5a1f7a;
+    --secondary-800: #3c1551;
+    --secondary-900: #1e0a29;
+    --secondary-950: #0f0514;
+    
+    --accent-50: #faebf8;
+    --accent-100: #f5d6f2;
+    --accent-200: #ebade4;
+    --accent-300: #e085d7;
+    --accent-400: #d65cca;
+    --accent-500: #cc33bd;
+    --accent-600: #a32997;
+    --accent-700: #7a1f71;
+    --accent-800: #52144b;
+    --accent-900: #290a26;
+    --accent-950: #140513;
+
+     /* Gradients */
+
+
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3.5rem;
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 16px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-800);
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #ead6f5FF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #3c1551FF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #9634cbFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #d5aeeaFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #d968cd9C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #1f4c7aF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #337fccF5 24%, #073AFF00 100%),linear-gradient(125deg, #448ad0FF 1%, #4C00FCFF 100%);
+    color: var(--text);
+    position: relative;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--btn-border-color, transparent);
+    border-right: 5px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;    
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0% 0% 0%;
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+#faq {
+    width: 100%;
+    max-width: 550px;
+    display: grid;
+    grid-auto-rows: min-content;
+    border-radius: var(--border-radius);
+    background: var(--background);
+    color: var(--text);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.bg-object {
+    aspect-ratio: 1;
+    width: 200px;
+    position: absolute;
+    z-index: -1;
+    background: rgb(163, 41, 151, 0.3);
+}
+
+.bg-object-1 {
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -40%);
+}
+
+.bg-object-2 {
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 40%);
+    clip-path: polygon(calc(100% - 2rem) 0, 100% 0, 100% 100%, 0 100%, 0 calc(100% - 2rem), calc(100% - 2rem) calc(100% - 2rem));
+}
+
+#faq > header {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+h1 {
+    width: 100%;
+    font-size: var(--fs-800);
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 18ch;
+}
+
+.accordion {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1.5rem;
+    padding: 2rem;
+    font-size: var(--fs-300);
+}
+
+.panel {
+    --icon-size: 1.75rem;
+    --padding: 1.5rem;
+    --gap: 1rem;
+    --panel-border-color: var(--accent);
+    --panel-bg-color: var(--accent-50);
+    display: grid;
+    grid-auto-rows: min-content;
+    height: fit-content;
+    position: relative;
+    background: var(--panel-bg-color, transparent);
+    border-left: 5px solid var(--panel-border-color, transparent);
+    border-right: 5px solid var(--panel-border-color, transparent);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.panel:has(input[type="checkbox"]:checked) {
+    --panel-border-color: var(--primary);
+    --panel-bg-color: var(--primary-100);
+    box-shadow: 0px 5px 10px -2px rgb(0, 0, 0, 0.5);
+    color: var(--text);
+}
+
+.panel:has(input[type="checkbox"]:checked):hover > label {
+    color: var(--primary);
+}
+
+.panel:hover > label {
+    color: var(--accent);
+    transition: color .3s linear;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+label {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    gap: var(--gap);
+    padding: var(--padding);
+    font-size: clamp(1rem, 0.7321rem + 1.1429vw, 1.125rem);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.icon {
+    --icon-bg-color: var(--accent, black);
+    aspect-ratio: 1;
+    width: var(--icon-size);
+    position: relative;
+    background: rgb(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.line {
+    background: var(--icon-bg-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100px;
+    transform: translate(-50%, -50%);
+    transition: transform .3s linear;
+}
+
+.h-line {
+    width: 1rem;
+    height: 2px;
+}
+
+.v-line {
+    height: 1rem;
+    width: 2px;
+}
+
+.panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: var(--padding);
+    transition: max-height .5s ease-in-out, padding 0.2s .3s linear;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+input[type="checkbox"]:checked ~ .panel-content {
+    padding-block: var(--padding);
+    max-height: 20rem;
+    visibility: visible;
+}
+
+input[type="checkbox"]:checked ~ label {
+    background: var(--primary-200);
+}
+
+input[type="checkbox"]:checked ~ label .v-line {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+input[type="checkbox"]:checked ~ label .line {
+    background: var(--primary);
+}
+
+button[type="button"] {
+    --btn-bg-color: var(--accent-50);
+    --btn-text-color: var(--background);
+    --btn-border-color: var(--accent);
+    --btn-hover-bg-color: var(--primary-100);
+    --btn-hover-text-color: var(--background);
+    --btn-hover-border-color: var(--primary);
+    padding: 1rem 1.5rem;
+    min-width: fit-content;
+    text-wrap: nowrap;
+    width: 170px;
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 850px) {
+}
+

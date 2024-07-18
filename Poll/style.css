@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #07B3D6;
+    --secondary: #89a6e5;
+    --accent: #5c64da;
+    --clr-option-1: #4edf00;
+    --clr-option-2: #ed0800;
+    --clr-option-3: #ff6e00;
+
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --primary-50: #e6fafe;
+    --primary-100: #cef5fd;
+    --primary-200: #9cecfc;
+    --primary-300: #6be2fa;
+    --primary-400: #39d9f9;
+    --primary-500: #08cff7;
+    --primary-600: #06a6c6;
+    --primary-700: #057c94;
+    --primary-800: #035363;
+    --primary-900: #022931;
+    --primary-950: #011519;
+    
+    --secondary-50: #eaeffa;
+    --secondary-100: #d5e0f6;
+    --secondary-200: #abc0ed;
+    --secondary-300: #82a1e3;
+    --secondary-400: #5881da;
+    --secondary-500: #2e62d1;
+    --secondary-600: #254ea7;
+    --secondary-700: #1c3b7d;
+    --secondary-800: #122754;
+    --secondary-900: #09142a;
+    --secondary-950: #050a15;
+    
+    --accent-50: #eaebfa;
+    --accent-100: #d5d8f6;
+    --accent-200: #acb0ec;
+    --accent-300: #8289e3;
+    --accent-400: #5961d9;
+    --accent-500: #2f3ad0;
+    --accent-600: #262ea6;
+    --accent-700: #1c237d;
+    --accent-800: #131753;
+    --accent-900: #090c2a;
+    --accent-950: #050615;
+
+    --clr-option-1-50: #eeffe5;
+    --clr-option-1-100: #deffcc;
+    --clr-option-1-200: #bdff99;
+    --clr-option-1-300: #9cff66;
+    --clr-option-1-400: #7aff33;
+    --clr-option-1-500: #59ff00;
+    --clr-option-1-600: #47cc00;
+    --clr-option-1-700: #369900;
+    --clr-option-1-800: #246600;
+    --clr-option-1-900: #123300;
+    --clr-option-1-950: #091a00;
+
+    --clr-option-2-50: #ffe6e5;
+    --clr-option-2-100: #ffcecc;
+    --clr-option-2-200: #ff9c99;
+    --clr-option-2-300: #ff6b66;
+    --clr-option-2-400: #ff3a33;
+    --clr-option-2-500: #ff0900;
+    --clr-option-2-600: #cc0700;
+    --clr-option-2-700: #990500;
+    --clr-option-2-800: #660300;
+    --clr-option-2-900: #330200;
+    --clr-option-2-950: #1a0100;
+
+    --clr-option-3-50: #fff1e5;
+    --clr-option-3-100: #ffe2cc;
+    --clr-option-3-200: #ffc599;
+    --clr-option-3-300: #ffa866;
+    --clr-option-3-400: #ff8b33;
+    --clr-option-3-500: #ff6e00;
+    --clr-option-3-600: #cc5800;
+    --clr-option-3-700: #994200;
+    --clr-option-3-800: #662c00;
+    --clr-option-3-900: #331600;
+    --clr-option-3-950: #1a0b00;
+    
+     /* Gradients */
+
+
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3.5rem;
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 8px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-800);
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #07B3D6FF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #82a1e39C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #5961d9F5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #08cff7F5 24%, #073AFF00 100%),linear-gradient(125deg, #5c64daFF 1%, #4C00FCFF 100%);
+    color: var(--text);
+    position: relative;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;    
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0% 0% 0%;
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+#survey {
+    width: 100%;
+    max-width: 580px;
+    display: grid;
+    grid-auto-rows: min-content;
+    border-radius: 16px;
+    background: var(--background);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8), 5px 10px 20px -2px rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+#survey > * {
+    padding: 1.5rem;
+}
+
+header {
+    background: var(--secondary-100);
+}
+
+h1 {
+    font-size: var(--fs-500);
+    font-weight: 500;
+    max-width: 30ch;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.options {
+    display: grid;
+    grid-auto-rows: min-content;
+}
+
+.option {
+    display: grid;
+    grid-template-rows: min-content 0;
+    gap: .5rem;
+    padding-block: 1rem;
+    position: relative;
+    border-bottom: 2px solid var(--text-50);
+}
+
+.option:has(.progress-bar.visible) {
+    grid-template-rows: repeat(2, min-content);
+}
+
+.radiobox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.radiobox:checked ~ .radio-control > .checkmark {
+    background: var(--primary-50);
+    border-color: var(--primary);
+}
+
+.radiobox:checked ~ .radio-control > .checkmark > .icon {
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .4s .2s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.radio-control {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    color: var(--text-700);
+    position: relative;
+}
+
+.checkmark {
+    aspect-ratio: 1;
+    width: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    border: 2px solid var(--text-200);
+    background: var(--background);
+    transition: border-radius .5s cubic-bezier(0, 0, 0.2, 1), border .5s cubic-bezier(0, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.icon {
+    aspect-ratio: 1;
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    fill: var(--primary);
+}
+
+.progress-bar {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 1rem;
+    align-items: center;
+    transform: rotateX(90deg);
+    transition: transform 1s linear;
+}
+
+.progress-bar.visible {
+    transform: rotateX(0);
+}
+
+.track {
+    width: 100%;
+    height: 1rem;
+    display: grid;
+    grid-template-areas: "stacked";
+    border-radius: 100px;
+    background: var(--text-50);
+    box-shadow: inset 2px 2px 4px 0px rgb(0, 0, 0, 0.2), inset -1px -1px 1px 0px rgb(255, 255, 255, 0.9);
+}
+
+.progress {
+    grid-area: stacked;
+    width: 100%;
+    max-width: 0%;
+    border-radius: inherit;
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    background: var(--progress-bg-color, transparent);
+    transition: max-width .8s linear, outline .5s linear;
+}
+
+.radiobox[value="1"] ~ .progress-bar .progress {
+    --progress-bg-color: linear-gradient(to right, var(--clr-option-1-500), var(--clr-option-1), var(--clr-option-1-600));
+}
+
+.radiobox[value="2"] ~ .progress-bar .progress {
+    --progress-bg-color: linear-gradient(to right, var(--clr-option-2-500), var(--clr-option-2), var(--clr-option-2-600));
+}
+
+.radiobox[value="3"] ~ .progress-bar .progress {
+    --progress-bg-color: linear-gradient(to right, var(--clr-option-3-400), var(--clr-option-3), var(--clr-option-3-600));
+}
+
+.value {
+    width: 125px;
+    font-size: var(--fs-700);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent-600);
+    transform: rotateX(90deg);
+    transition: transform 1s .8s linear;
+}
+
+.value.visible {
+    transform: rotateX(0);
+}
+
+
+footer {
+    display: grid;
+    place-items: center;
+}
+
+#submit {
+    --btn-bg-color: var(--primary);
+    --btn-text-color: var(--background);
+    --btn-border-color: var(--primary);
+    --btn-hover-bg-color: var(--secondary);
+    --btn-hover-text-color: var(--secondary-700);
+    --btn-hover-border-color: var(--secondary);
+    padding: 1rem 1.5rem;
+    min-width: fit-content;
+    text-wrap: nowrap;
+    font-size: var(--fs-500);
+    font-weight: 700;
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 850px) {
+}
+

@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>iCodeThis - Photograph Profile</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <article id="photograph-profile">
+            <header>
+                <button type="button" class="btn" id="back">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <span>Back</span>
+                </button>
+                <button type="button" class="btn" id="more-options" aria-label="more options">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+                <h1 class="profile-name">David Rost</h1>
+                <img class="profile-avatar" src="https://i.pravatar.cc/90?img=54" alt="David Rost Profile Pic">
+                <div class="metrics">
+                    <div class="metric" id="followers">
+                        <span class="value">230</span>
+                        <span>Followers</span>
+                    </div>
+                    <div class="metric" id="following">
+                        <span class="value">140</span>
+                        <span>Following</span>
+                    </div>
+                    <div class="metric" id="albums">
+                        <span class="value">15</span>
+                        <span>Albums</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="button" class="btn" id="follow">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>Follow</span>
+                    </button>
+                    <button type="button" class="btn" id="message">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>Message</span>
+                    </button>
+                </div>
+            </header>
+            <main>
+                <div class="controls">
+                    <button type="button" class="btn arrow" id="goToPrev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="portrait-bl">
+                        <span>Portraits</span>
+                        <p><span id="photo-count">0</span>Photos</p>
+                    </div>
+                    <button type="button" class="btn arrow" id="goToNext">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="gallery">
+                    <div class="photos">
+                        <!-- injected by JS -->
+                    </div>
+                </div>
+            </main>
+
+        </article>
+
+    </div>
+
+</body>
+
+</html>

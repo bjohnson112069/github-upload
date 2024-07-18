@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.tip-calculator {
+    border: 1px solid #989899;
+    border-radius: 8px;
+    box-shadow: 0 6px 0 #090201;
+    max-width: 25rem;
+    margin: 3rem auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tip-calculator div {
+    margin-bottom: 1rem;
+}
+
+.tip-calculator label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tip-calculator input[type="number"] {
+    border: 1px solid #989899;
+    border-radius: 5px;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.calculate-tip-btn {
+    background-color: #aae6c0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 #090201;
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, box-shadow 0.1s ease;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.calculate-tip-btn:hover {
+    background-color: #45a049;
+}
+
+.calculate-tip-btn:active {
+    box-shadow: 0 0 0;
+}
+
+.total span {
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
