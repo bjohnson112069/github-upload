@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #ffffff;
+    --background: #26906E;
+    
+
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #ebfaf5;
+    --background-100: #d7f4eb;
+    --background-200: #aeead7;
+    --background-300: #86dfc3;
+    --background-400: #5ed4af;
+    --background-500: #36c99b;
+    --background-600: #2ba17c;
+    --background-700: #20795d;
+    --background-800: #15513e;
+    --background-900: #0b281f;
+    --background-950: #05140f;
+    
+     /* Gradients */
+     --clr-grad-1: #81BD64;
+     --clr-grad-2: #71B855;
+     --clr-grad-3: #55AD59;
+     --clr-grad-4: #379A6B;
+     --clr-grad-5: #1A866F;
+     --clr-grad-6: #0C736E;
+     --clr-grad-7: #07646A;
+     
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3.5rem;
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 6px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--text);
+    color: var(--background);
+    position: relative;
+}
+
+.grid-container {
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: 
+        radial-gradient(18% 28% at 24% 50%, #71B855FF 7%, #073AFF00 100%),
+        radial-gradient(18% 28% at 18% 71%, #55AD5959 6%, #073AFF00 100%),
+        radial-gradient(70% 53% at 36% 76%, #81BD64FF 0%, #073AFF00 100%),
+        radial-gradient(42% 53% at 15% 94%, #81BD64FF 7%, #073AFF00 100%),
+        radial-gradient(42% 53% at 34% 72%, #379A6BFF 7%, #073AFF00 100%),
+        radial-gradient(18% 28% at 35% 87%, #55AD59FF 7%, #073AFF00 100%),
+        radial-gradient(31% 43% at 7% 98%, #71B855FF 24%, #073AFF00 100%),
+        radial-gradient(21% 37% at 72% 23%, #81BD649C 24%, #073AFF00 100%),
+        radial-gradient(35% 56% at 91% 74%, #0C736EF5 9%, #073AFF00 100%),
+        radial-gradient(74% 86% at 67% 38%, #1A866FF5 24%, #073AFF00 100%),
+        linear-gradient(125deg, #81BD64FF 1%, #07646AFF 100%);
+
+    overflow: hidden;
+}
+
+.grid {
+    --box-size: 30px;
+    --num-columns: 10;
+    --num-rows: 10;
+    display: grid;
+    grid-template-columns: repeat(var(--num-columns), var(--box-size));
+    grid-template-rows: repeat(var(--num-rows), var(--box-size));
+    place-items: start;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;    
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0% 0% 0%;
+    box-shadow: inset 2px 2px 4px -2px rgb(0, 0, 0, 0.8), inset -2px -2px 4px -2px rgb(255, 255, 255, 0.8);
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+
+.box {
+    aspect-ratio: 1;
+    width: 100%;
+
+    box-shadow: 
+        inset 1px 1px 2px -1px rgb(255, 255, 255, 0.8), 
+        inset -1px -1px 2px -1px rgb(255, 255, 255, 0.8);
+    position: relative;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    aspect-ratio: 1;
+    width: 6px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.4), 
+        inset -2px -2px 4px -2px rgb(255, 255, 255, 0.4);
+}
+
+.box::before {
+    top: 0;
+    left: 0;
+}
+
+.box.selected::before {
+    background: var(--text); /* white */
+    filter: brightness(2);
+}
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 565px) {
+
+}
+
