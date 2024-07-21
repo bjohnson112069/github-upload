@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: #000000;
+    --background: #ffffff;
+    --clr-desktop: #f80d14;
+    --clr-mobile: #fd890a;
+    --clr-tablet: #42ebf9;
+    
+
+    /* shades */
+    --text-50: #f2f2f2;
+    --text-100: #e6e6e6;
+    --text-200: #cccccc;
+    --text-300: #b3b3b3;
+    --text-400: #999999;
+    --text-500: #808080;
+    --text-600: #666666;
+    --text-700: #4d4d4d;
+    --text-800: #333333;
+    --text-900: #1a1a1a;
+    --text-950: #0d0d0d;
+    
+    --background-50: #f2f2f2;
+    --background-100: #e6e6e6;
+    --background-200: #cccccc;
+    --background-300: #b3b3b3;
+    --background-400: #999999;
+    --background-500: #808080;
+    --background-600: #666666;
+    --background-700: #4d4d4d;
+    --background-800: #333333;
+    --background-900: #1a1a1a;
+    --background-950: #0d0d0d;
+    
+    --clr-desktop-50: #fee6e7;
+    --clr-desktop-100: #fdcecf;
+    --clr-desktop-200: #fc9c9f;
+    --clr-desktop-300: #fa6b6f;
+    --clr-desktop-400: #f93940;
+    --clr-desktop-500: #f70810;
+    --clr-desktop-600: #c6060d;
+    --clr-desktop-700: #940509;
+    --clr-desktop-800: #630306;
+    --clr-desktop-900: #310203;
+    --clr-desktop-950: #190102;
+    
+    --clr-mobile-50: #fff3e6;
+    --clr-mobile-100: #fee6cd;
+    --clr-mobile-200: #fece9a;
+    --clr-mobile-300: #fdb568;
+    --clr-mobile-400: #fd9c35;
+    --clr-mobile-500: #fc8403;
+    --clr-mobile-600: #ca6902;
+    --clr-mobile-700: #974f02;
+    --clr-mobile-800: #653501;
+    --clr-mobile-900: #321a01;
+    --clr-mobile-950: #190d00;
+    
+    --clr-tablet-50: #e6fcfe;
+    --clr-tablet-100: #cef9fd;
+    --clr-tablet-200: #9cf4fc;
+    --clr-tablet-300: #6beefa;
+    --clr-tablet-400: #39e9f9;
+    --clr-tablet-500: #08e3f7;
+    --clr-tablet-600: #06b6c6;
+    --clr-tablet-700: #058894;
+    --clr-tablet-800: #035b63;
+    --clr-tablet-900: #022d31;
+    --clr-tablet-950: #011719;
+    
+    
+    
+     /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: 3.5rem;
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 6px;
+    --max-width: 1240px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--text);
+    background: url('https://wallpapers.com/images/hd/abstract-blue-geometric-patterns-bbai94uzkoc6xnn0.webp') no-repeat center;
+    background-size: cover;
+    color: var(--background);
+    position: relative;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;    
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100% 0% 0% 0%;
+    box-shadow: inset 2px 2px 4px -2px rgb(0, 0, 0, 0.8), inset -2px -2px 4px -2px rgb(255, 255, 255, 0.8);
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+#project {
+    /* width: 100%;
+    max-width: 700px; */
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 2rem;
+    padding: 1rem;
+    justify-items: center;
+    border-radius: 16px;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: inset 2px 2px 4px -2px rgb(0, 0, 0, 0.8), inset -2px -2px 4px -2px rgb(255, 255, 255, 0.8);
+}
+
+header {
+
+}
+
+h1 {
+    font-size: var(--fs-650);
+    font-weight: 700;
+}
+
+main {
+}
+
+.chart {
+    margin: 0 auto;
+    aspect-ratio: 1;
+    width: 150px;
+}
+
+.conical {
+    --mobile-percent: 31.6;
+    --tablet-percent: 19;
+    --desktop-percent: 49.4;
+    --point-1: calc(360 * var(--mobile-percent) / 100 * 1deg);
+    --point-2: calc(var(--point-1) + (360 * var(--tablet-percent) / 100 * 1deg));
+    --point-3: calc(var(--point-2) + (360 * var(--desktop-percent) / 100 * 1deg));
+    --circle-offset: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(var(--clr-mobile) var(--point-1),
+        var(--clr-tablet) var(--point-1) var(--point-2),
+        var(--clr-desktop) var(--point-2) var(--point-3));
+    position: relative;
+    filter: drop-shadow(2px 2px 10px rgb(0, 0, 0, 1))
+}
+
+.conical-label {
+    aspect-ratio: 1;
+    width: calc(100% - var(--circle-offset));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: var(--background-50);
+    background: radial-gradient(
+        var(--background), var(--background-50), var(--background-100)
+    );
+    box-shadow: inset 2px 2px 4px -2px rgb(0, 0, 0, 0.8), inset -2px -2px 4px -2px rgb(255, 255, 255, 0.8);
+    color: var(--text);
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    font-size: var(--fs-300);
+    justify-content: center;
+}
+
+.legend-item {
+    display: grid;
+    grid-auto-rows: min-content;
+    place-items: center;
+    gap: .25rem;
+    padding: 1rem;
+    color: var(--text);
+}
+
+.legend-item[data-legend="desktop"] {
+    --clr-indicator-bg: var(--clr-desktop);
+}
+
+.legend-item[data-legend="mobile"] {
+    --clr-indicator-bg: var(--clr-mobile);
+}
+
+.legend-item[data-legend="tablet"] {
+    --clr-indicator-bg: var(--clr-tablet);
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+
+}
+
+.indicator {
+    aspect-ratio: 1;
+    width: .75rem;
+    border-radius: 50%;
+    background: var(--clr-indicator-bg, var(--text));
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+}
+
+.percentage {
+    width: 40px;
+    height: 20px;
+    border-radius: 100px;
+    color: var(--clr-content-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 565px) {
+
+}
+
