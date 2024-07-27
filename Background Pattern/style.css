@@ -34,14 +34,14 @@
     --background-950: #05140f;
     
      /* Gradients */
-     --clr-grad-1: #81BD64;
-     --clr-grad-2: #71B855;
-     --clr-grad-3: #55AD59;
-     --clr-grad-4: #379A6B;
-     --clr-grad-5: #1A866F;
-     --clr-grad-6: #0C736E;
-     --clr-grad-7: #07646A;
-     
+    --clr-grad-1: #81BD64;
+    --clr-grad-2: #71B855;
+    --clr-grad-3: #55AD59;
+    --clr-grad-4: #379A6B;
+    --clr-grad-5: #1A866F;
+    --clr-grad-6: #0C736E;
+    --clr-grad-7: #07646A;
+
     /* Typography */
     --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
     --fs-900: 3.5rem;
@@ -121,7 +121,7 @@ body {
     font-family: var(--ff-body);
     font-size: var(--fs-400);
     font-weight: 400;
-    max-width: var(--max-width);
+    /* max-width: var(--max-width); */
     min-width: var(--min-width);
     min-height: 100vh;
     margin: auto;

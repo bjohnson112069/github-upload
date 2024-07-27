@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Projects Chart</title>
+</head>
+
+<body>
+    <div class="container">
+        <article id="projects-chart">
+            <header>
+                <h1>Projects</h1>
+            </header>
+            <main>
+                <div class="chart">
+                    <div class="conical">
+                        <div class="conical-label">
+                            <span id="total-projects">314</span>
+                            <span>Total</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="avatar image">
+                            <div class="avatar-text">
+                                <span id="name">Jane Doe</span>
+                                <span id="title">UI/UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <ul class="legend">
+                    <li class="legend-item" data-legend="completed">
+                        <div class="label">
+                            <span class="indicator" aria-label="legend color indicator"></span>
+                            <span>Completed</span>
+                        </div>
+                        <span class="legend-value">167</span>
+                    </li>
+                    <li class="legend-item" data-legend="overdue">
+                        <div class="label">
+                            <span class="indicator" aria-label="legend color indicator"></span>
+                            <span>Overdue</span>
+                        </div>
+                        <span class="legend-value">24</span>
+                    </li>
+                    <li class="legend-item" data-legend="inprogress">
+                        <div class="label">
+                            <span class="indicator" aria-label="legend color indicator"></span>
+                            <span>In Progress</span>
+                        </div>
+                        <span class="legend-value">123</span>
+                    </li>
+                </ul>
+            </footer>
+        </article>
+    </div>
+</body>
+
+
+</html>

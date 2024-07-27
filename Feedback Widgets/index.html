@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Feedback Widgets</title>
+</head>
+
+<body>
+    <article id="feedback-forms" class="scale">
+        <div class="forms">
+            <!-- Form #1 -->
+            <form class="current" data-form="1">
+                <button type="button" class="btn" id="exit" aria-label="close window">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header>
+                    <h1>How likely are you to answer this question?</h1>
+                </header>
+                <main>
+                    <div class="emojiis">
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-1" name="option" value="1">
+                            <label for="opt-1" class="emojii">☹️</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-2" name="option" value="2">
+                            <label for="opt-2" class="emojii">😐</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-3" name="option" value="3">
+                            <label for="opt-3" class="emojii">😄</label>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <button type="button" class="btn" id="skip">Skip</button>
+                    <button type="submit" class="btn" id="submit">Submit</button>
+                </footer>
+            </form>
+            <!-- Form #2 -->
+            <form data-form="2">
+                <button type="button" class="btn" id="exit" aria-label="close window">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header>
+                    <h1>How likely are you to answer this question?</h1>
+                </header>
+                <main>
+                    <div class="numerics">
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-4" name="option" value="1">
+                            <label for="opt-4" class="btn numeric">0</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-5" name="option" value="1">
+                            <label for="opt-5" class="btn numeric">1</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-6" name="option" value="1">
+                            <label for="opt-6" class="btn numeric">2</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-7" name="option" value="1">
+                            <label for="opt-7" class="btn numeric">3</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-8" name="option" value="1">
+                            <label for="opt-8" class="btn numeric">4</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-9" name="option" value="1">
+                            <label for="opt-9" class="btn numeric">5</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-10" name="option" value="1">
+                            <label for="opt-10" class="btn numeric">6</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-11" name="option" value="1">
+                            <label for="opt-11" class="btn numeric">7</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-12" name="option" value="1">
+                            <label for="opt-12" class="btn numeric">8</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-13" name="option" value="1">
+                            <label for="opt-13" class="btn numeric">9</label>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <button type="button" class="btn" id="skip">Skip</button>
+                    <button type="submit" class="btn" id="submit">Submit</button>
+                </footer>
+            </form>
+            <!-- Form #3 -->
+            <form data-form="3">
+                <button type="button" class="btn" id="exit" aria-label="close window">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header>
+                    <h1>How likely are you to answer this question?</h1>
+                </header>
+                <main>
+                    <div class="emojiis">
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-14" name="option" value="1">
+                            <label for="opt-14" class="emojii">☹️</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-15" name="option" value="2">
+                            <label for="opt-15" class="emojii">😐</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-16" name="option" value="3">
+                            <label for="opt-16" class="emojii">😄</label>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <label for="message-emojiis">Tell us how we can improve</label>
+                        <textarea name="message-emojiis" id="message-emojiis" placeholder="Write your message here" rows="4"></textarea>
+                    </div>
+                </main>
+                <footer>
+                    <button type="button" class="btn" id="skip">Skip</button>
+                    <button type="submit" class="btn" id="submit">Submit</button>
+                </footer>
+            </form>
+            <!-- Form #4 -->
+            <form data-form="4">
+                <button type="button" class="btn" id="exit" aria-label="close window">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header>
+                    <h1>How likely are you to answer this question?</h1>
+                </header>
+                <main>
+                    <div class="numerics">
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-17" name="option" value="1">
+                            <label for="opt-17" class="btn numeric">0</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-18" name="option" value="1">
+                            <label for="opt-18" class="btn numeric">1</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-19" name="option" value="1">
+                            <label for="opt-19" class="btn numeric">2</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-20" name="option" value="1">
+                            <label for="opt-20" class="btn numeric">3</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-21" name="option" value="1">
+                            <label for="opt-21" class="btn numeric">4</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-22" name="option" value="1">
+                            <label for="opt-22" class="btn numeric">5</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-23" name="option" value="1">
+                            <label for="opt-23" class="btn numeric">6</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-24" name="option" value="1">
+                            <label for="opt-24" class="btn numeric">7</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-25" name="option" value="1">
+                            <label for="opt-25" class="btn numeric">8</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="visually-hidden" id="opt-26" name="option" value="1">
+                            <label for="opt-26" class="btn numeric">9</label>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <label for="message-numerics">Tell us how we can improve</label>
+                        <textarea name="message-numerics" id="message-numerics" placeholder="Write your message here" rows="4"></textarea>
+                    </div>
+                </main>
+                <footer>
+                    <button type="button" class="btn" id="skip">Skip</button>
+                    <button type="submit" class="btn" id="submit">Submit</button>
+                </footer>
+            </form>
+            <!-- Form #5 - Confirmation -->
+            <form data-form="5">
+                <button type="button" class="btn" id="exit" aria-label="close window">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <header>
+                    <h1>Thank you for your feedback</h1>
+                </header>
+            </form>
+        </div>
+    </article>
+</body>
+
+
+</html>
