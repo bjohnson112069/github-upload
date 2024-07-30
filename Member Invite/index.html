@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Member Invite</title>
+</head>
+
+<body>
+    <form id="member-invite">
+        <header>
+            <h1>invite members</h1>
+            <p>Enter below the name or email of the people you want to add to this group</p>
+            <label class="form-control" for="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="input-wrapper">
+                    <input type="text" id="search" name="search" required/>
+                    <span class="placeholder">Find people</span>
+                </div>
+            </label>
+        </header>
+        <footer>
+            <div class="footer-bl">
+                <h2>Members</h2>
+                <button type="button" class="btn" id="view-all">
+                    <span id="view-label">View All</span>
+                    <span id="member-count">27</span>
+                </button>
+            </div>
+            <div class="members"></div>
+        </footer>
+        <section id="profile-card" class="slide-up">
+            <button type="button" class="btn" id="exit">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="profile">
+                <img class="avatar" src="" alt="avatar">
+                <div class="details">
+                    <div class="name-bl">
+                        <span class="detail" id="first-name"></span>
+                        <span class="detail" id="last-name"></span>
+                        <span class="detail" id="age"></span>    
+                    </div>
+                    <span class="detail" id="email"></span>
+                    <span class="detail" id="location"></span>
+                </div>
+            </div>
+            <button type="button" class="btn" id="invite">Send Invite</button>
+        </section>
+    </form>
+</body>
+
+
+</html>
