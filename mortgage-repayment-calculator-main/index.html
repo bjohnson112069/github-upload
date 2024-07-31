@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+
+<body>
+    <article id="mortgage-calculator">
+        <form id="user-form">
+            <header>
+                <h1>Mortgage Calculator</h1>
+                <button type="button" class="btn" id="clear-all">Clear All</button>
+                <!-- <a href="#" id="clear-all">Clear All</a> -->
+            </header>
+            <main>
+                <!-- Mortgage Amount -->
+                <div class="form-control">
+                    <label for="mortgage-amount">Mortgage Amount</label>
+                    <div class="input-wrapper">
+                        <!-- Input Icon -->
+                        <div class="input-icon">$</div>
+                        <input type="number" id="mortgage-amount" name="mortgage-amount" min="0" />
+                    </div>
+                    <small class="error-message" data-field="mortgage-amount">This field is required</small>
+                </div>
+                <!-- Mortgage Term -->
+                <div class="form-control">
+                    <label for="mortgage-term">Mortgage Term</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="mortgage-term" name="mortgage-term" min="1" />
+                        <!-- Input Icon -->
+                        <div class="input-icon">years</div>
+                    </div>
+                    <small class="error-message" data-field="mortgage-term">This field is required</small>
+                </div>
+                <!-- Interest Rate -->
+                <div class="form-control">
+                    <label for="interest-rate">Interest Rate</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="interest-rate" name="interest-rate" min="0" max="100" step=".25" />
+                        <!-- Input Icon -->
+                        <div class="input-icon">%</div>
+                    </div>
+                    <small class="error-message" data-field="interest-rate">This field is required</small>
+                </div>
+                <!-- Mortgage Types -->
+                <div class="form-control">
+                    <span class="legend">Mortgage Type</span>
+                    <!-- Option #1: Repaymnet -->
+                    <div class="option">
+                        <input type="radio" class="radiobox" id="radio-one" name="option" value="repayment">
+                        <label for="radio-one" class="radio-control">
+                            <div class="checkmark">
+                                <svg class="checkmark-icon">
+                                    <use xlink:href="#check-mark-svgrepo-com"></use>
+                                </svg>
+                            </div>
+                            <span>Repayment</span>
+                        </label>
+                    </div>
+                    <!-- Option #2: Interest Only -->
+                    <div class="option">
+                        <input type="radio" class="radiobox" id="radio-two" name="option" value="interest">
+                        <label for="radio-two" class="radio-control">
+                            <div class="checkmark">
+                                <svg class="checkmark-icon">
+                                    <use xlink:href="#check-mark-svgrepo-com"></use>
+                                </svg>
+                            </div>
+                            <span>Interest Only</span>
+                        </label>
+                    </div>
+                    <small class="error-message" data-field="interest-rate">This field is required</small>
+                </div>
+            </main>
+            <footer>
+                <button type="submit" class="btn" id="calculate">
+                    <svg class="calculator-icon">
+                        <use xlink:href="#icon-calculator"></use>
+                    </svg>
+                    <span>Calculate Repayments</span>
+                </button>
+            </footer>
+        </form>
+        <section id="results-container">
+            <div class="results">
+                <div class="result" id="result-empty">
+                    <img src="./images/illustration-empty.svg" alt="illustration of a calculator">
+                    <h1>Results shown here</h1>
+                    <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+                </div>
+                <div class="result" id="result-full">
+                    <h1>Your results</h1>
+                    <p>Your results are shown below based on the information you provided.  To adjust the results, edit the form and click “calculate repayments”  again.</p>
+                    <div class="payment">
+                        <div class="payment-wrapper" id="payment-top">
+                            <span class="label">Your monthly repayments</span>
+                            <span class="value">$0</span>
+                        </div>
+                        <div class="payment-wrapper" id="payment-bottom">
+                            <span class="label">Total you'll repay over the term</span>
+                            <span class="value">$0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="icon-calculator">
+            <path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="check-mark-svgrepo-com">
+            <path
+                d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z">
+            </path>
+        </symbol>
+    </svg>
+</body>
+
+
+</html>

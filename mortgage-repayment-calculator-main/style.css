@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    
+    /* ### Primary */
+    --clr-lime: hsl(61, 70%, 52%);
+    --clr-red: hsl(4, 69%, 50%);
+    
+    /* ### Neutral */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-slate-100: hsl(202, 86%, 94%);
+    --clr-slate-300: hsl(203, 41%, 72%);
+    --clr-slate-500: hsl(200, 26%, 54%);
+    --clr-slate-700: hsl(200, 24%, 40%);
+    --clr-slate-900: hsl(202, 55%, 16%);
+
+    /* shades */
+
+    /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: clamp(2.5rem, 1.96428571428571rem + 2.28571428571429vw, 3.25rem);
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Plus Jakarta Sans", sans-serif;
+    --ff-body: "Plus Jakarta Sans", sans-serif;
+
+    --border-radius: 6px;
+    --gutter-width: 1rem;
+    --container-width: 900px;
+    --max-width: 1440px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    min-block-size: 100svh;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        minmax(var(--gutter-width), 1fr) min(100% - calc(2 * var(--gutter-width)), var(--container-width)) minmax(var(--gutter-width), 1fr);
+    grid-template-rows: 1fr min-content;
+    align-items: center;
+    row-gap: 1.5rem;
+
+    background: var(--clr-slate-100);
+    color: var(--clr-slate-700);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color, inherit);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1), border .5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    background: var(--btn-hover-bg-color, inherit);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+#mortgage-calculator {
+    grid-column: 2 / 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    border-radius: 1rem;
+    box-shadow: 
+        inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), 
+        inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8),
+        0px 5px 10px -2px rgb(0, 0, 0, 0.5);
+    background: var(--clr-white);
+    position: relative;
+    overflow: hidden;
+}
+
+#mortgage-calculator > * {
+    padding: clamp(1rem, 0.285714285714286rem + 3.04761904761905vw, 2rem);
+}
+
+/* ### USER-FORM SECTION ### */
+#user-form {
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: .5rem;
+}
+
+h1 {
+    font-size: var(--fs-650);
+    font-weight: 700;
+}
+
+header > h1 {
+    color: var(--clr-slate-900);
+}
+
+#clear-all {
+    --btn-border-color: none;
+    --btn-hover-text-color: var(--clr-slate-900);
+    --btn-hover-border-color: none;
+    --border-radius: 0pc;
+    box-shadow: none;
+    transition: color .3s linear;
+    text-wrap: nowrap;
+}
+
+#clear-all:hover {
+    color: var(--clr-slate-900);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    row-gap: .5rem;
+    column-gap: 1rem;
+    padding-block: 1rem;
+    border-radius: var(--border-radius);
+}
+
+main > * {
+    grid-column: span 2;
+}
+
+.form-control {
+    grid-column: span 2;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: .5rem;
+    border-radius: inherit;
+    padding-bottom: 1.25rem;
+    position: relative;
+}
+
+.form-control:nth-of-type(2),
+.form-control:nth-of-type(3) {
+    grid-column: span 1;
+}
+
+.form-control > label {
+    text-transform: capitalize;
+}
+
+.form-control.error .input-wrapper {
+    border-color: var(--clr-red);
+}
+
+.form-control.error .input-icon {
+    background: var(--clr-red);
+    color: var(--clr-white);
+}
+.form-control.error .error-message {
+    visibility: visible;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    border: 2px solid var(--clr-slate-500);
+    transition: border-color .3s linear;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-control:not(.error) > .input-wrapper:has(:focus),
+.form-control:not(.error) > .input-wrapper:has(:focus):hover {
+    border-color: var(--clr-lime);
+}
+
+.form-control:not(.error) > .input-wrapper:has(:focus) > .input-icon {
+    background: var(--clr-lime);
+}
+
+.input-wrapper:hover {
+    border-color: var(--clr-slate-900);
+}
+
+/* Chrome, Safari, Edge, Opera: Numeric Input reset*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox: Numeric Input reset */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.input-wrapper > input {
+    width: 100%;
+    padding: .75rem 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    color: var(--clr-slate-900);
+}
+
+.input-icon {
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+    height: 100%;
+    font-size: var(--fs-500);
+    font-weight: 500;
+    background: var(--clr-slate-100);
+    transition: background .3s linear;
+}
+
+.error-message {
+    color: var(--clr-red);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.legend {    
+}
+
+.option {
+    border-radius: inherit;
+    color: var(--clr-slate-900);
+    transition: background .3s linear, border-color .3s linear;
+    position: relative;
+}
+
+.radiobox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.radiobox:checked ~ .radio-control {
+    background: hsl(61, 70%, 52%, 20%);
+    border-color: var(--clr-lime);
+}
+
+.radiobox:checked ~ .radio-control > .checkmark {
+    background: transparent;
+    border-color: var(--clr-lime);
+    border-radius: var(--border-radius);
+}
+
+.radiobox:checked ~ .radio-control > .checkmark > .checkmark-icon {
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .4s .2s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.radio-control {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    border-radius: inherit;
+    border: 2px solid var(--clr-slate-500);
+    font-size: var(--fs-500);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s linear, border-color .3s linear;
+    position: relative;
+}
+
+.radio-control:hover,
+.radiobox:focus ~ .radio-control {
+    border-color: var(--clr-lime);
+}
+
+
+.checkmark {
+    aspect-ratio: 1;
+    width: 1.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    border-radius: 50%;
+    border: 2px solid var(--clr-slate-500);
+    transition: border-radius .5s cubic-bezier(0, 0, 0.2, 1), border .5s cubic-bezier(0, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.checkmark-icon {
+    aspect-ratio: 1;
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    fill: var(--clr-slate-900);
+}
+
+footer {
+
+}
+
+#calculate {
+    --btn-bg-color: var(--clr-lime);
+    --btn-text-color: var(--clr-slate-900);
+    --btn-border-color: none;
+    --btn-hover-bg-color: hsl(100, 100%, 100%, 50%);
+    --btn-hover-text-color: var(--clr-slate-900);
+    --btn-hover-border-color: none;
+    --border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    text-wrap: nowrap;
+}
+
+.calculator-icon {
+    aspect-ratio: 1;
+    width: 1.5rem;
+    fill: var(--clr-slate-900);
+}
+
+
+/* ### RESULTS SECTION ### */
+
+#results-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    color: var(--clr-slate-300);
+}
+
+.results {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    border-radius: inherit;
+    position: relative;
+    left: 0;
+    transition: left .3s linear;
+}
+
+.result {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1.5rem;
+    align-content: center;
+    justify-items: center;
+    padding: 2rem;
+    text-align: center;
+    background: var(--clr-slate-900);
+    background: hsl(202, 55%, 16%, 95%);
+    border-radius: 0 0 0 100px;
+    transition: border-radius .5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+#result-full {
+    align-content: start;
+    justify-items: start;
+    text-align: left;
+}
+
+.result > h1 {
+    color: var(--clr-white);
+}
+.payment {
+    width: 100%;
+    background: var(--clr-slate-900);
+    border-radius: var(--border-radius);
+    border-top: 5px solid var(--clr-lime);
+    padding: .75rem 1.5rem;
+}
+
+.payment-wrapper {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: .75rem;
+    padding-block: 1.5rem;
+
+}
+.payment-wrapper > .label {
+    font-size: var(--fs-300);
+}
+
+.payment-wrapper > .value {
+    font-weight: 700;
+    line-height: 1;
+}
+
+#payment-top {
+    border-bottom: 1px solid var(--clr-slate-700);
+}
+
+#payment-top > .value {
+    color: var(--clr-lime);
+    font-size: var(--fs-900);
+}
+
+#payment-bottom > .value {
+    font-size: var(--fs-600);
+    color: var(--clr-white);
+}
+
+.attribution { 
+    grid-column: 2 / 3;
+    font-size: 11px; text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 550px) {
+    .form-control:nth-of-type(2),
+    .form-control:nth-of-type(3) {
+        grid-column: span 2;
+    }
+
+    .result {
+        border-radius: 0px;
+    }    
+
+}
