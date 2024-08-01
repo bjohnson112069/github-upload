@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+    <article id="newsletter" class="slide">
+        <form id="signup-form" novalidate>
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="benefits">
+                <li class="benefit">
+                    <svg class="list-icon">
+                        <use xlink:href="#icon-list"></use>
+                    </svg>
+                    <span>Product discovery and building what matters</span>
+                </li>
+                <li class="benefit">
+                    <svg class="list-icon">
+                        <use xlink:href="#icon-list"></use>
+                    </svg>
+                    <span>Measuring to ensure updates are a success</span>
+                </li>
+                <li class="benefit">
+                    <svg class="list-icon">
+                        <use xlink:href="#icon-list"></use>
+                    </svg>
+                    <span>And much more!</span>
+                </li>
+            </ul>
+            <!-- Email -->
+            <div class="form-control">
+                <label for="email">Email address</label>
+                <input type="email" placeholder="email@company.com" id="email" name="email" />
+                <small class="error-message" data-field="email">Error message</small>
+            </div>
+            <button type="submit" class="btn" id="subscribe" aria-label="submit the form">Subscribe to monthly newsletter</button>
+        </form>
+        <section id="hero">
+            <!-- <img src="./images/illustration-sign-up-desktop.svg" alt="hero image"> -->
+        </section>
+    </article>
+    <article id="notification" class="slide">
+        <div class="wrapper">
+            <svg class="success-icon">
+                <use xlink:href="#icon-success"></use>
+            </svg>
+            <h1>Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <a href="#">ash@loremcompany.com</a>.  Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button type="button" class="btn" id="dismiss">Dismiss message</button>
+    </article>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" id="icon-list">
+            <g fill="none">
+                <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"></circle>
+                <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"></path>
+            </g>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="icon-success">
+            <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#FF6A3A"></stop>
+                <stop offset="100%" stop-color="#FF527B"></stop>
+                </linearGradient>
+            </defs>
+            <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)"></circle>
+                <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"></path>
+            </g>
+        </symbol>
+    </svg>
+</body>
+
+
+</html>

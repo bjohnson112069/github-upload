@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    
+    /* ### Primary */
+    --clr-tomato: hsl(4, 100%, 67%);
+    --clr-grad-1: hsl(346, 100%, 66%);
+    --clr-grad-2: hsl(1, 100%, 68%);
+    --clr-grad-3: hsl(14, 100%, 62%);
+    
+    /* ### Neutral */
+    --clr-dark-slate-grey: hsl(234, 29%, 20%);
+    --clr-charcoal-grey: hsl(235, 18%, 26%);
+    --clr-grey: hsl(231, 7%, 60%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /* Colors */
+    --clr-body-bg: var(--clr-charcoal-grey);
+    
+    /* shades */
+
+    /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: clamp(2.5rem, 1.78571428571429rem + 3.04761904761905vw, 3.5rem);
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Roboto", sans-serif;
+    --ff-body: "Roboto", sans-serif;
+
+    --border-radius: 6px;
+    --gutter-width: 1rem;
+    --container-width: 900px;
+    --max-width: 1440px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    min-block-size: 100svh;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        minmax(var(--gutter-width), 1fr) min(100% - calc(2 * var(--gutter-width)), var(--container-width)) minmax(var(--gutter-width), 1fr);
+    grid-template-rows: 1fr min-content;
+    align-items: center;
+    row-gap: 1.5rem;
+
+    background: var(--clr-body-bg);
+    color: var(--clr-dark-slate-grey);
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color, inherit);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1), border .5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8), 0px 10px 20px -2px var(--btn-shadow-color, transparent);
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    background: var(--btn-hover-bg-color, inherit);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+#newsletter {
+    grid-column: 2 / 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(375px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-template-areas: "signup hero";
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 
+        inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), 
+        inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8),
+        0px 5px 10px -2px rgb(0, 0, 0, 0.5);
+    background: var(--clr-white);
+}
+
+#newsletter.inactive {
+    transform: translateY(calc(100vw + 100%));
+}
+
+#signup-form {
+    grid-area: signup;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1.25rem;
+    padding: 4rem 1rem;
+}
+
+h1 {
+    font-size: var(--fs-900);
+    font-weight: 700;
+}
+
+.benefits {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: .65rem;
+    margin-block: 1rem;
+}
+
+.benefit {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list-icon {
+    aspect-ratio: 1;
+    width: 1.25rem;
+}
+
+.form-control {
+    display: grid;
+    justify-items: start;
+    position: relative;
+}
+
+.form-control > label {
+    font-size: var(--fs-300);
+    font-weight: 700;
+}
+
+.form-control.error input {
+    border-color: var(--clr-tomato);
+    color: var(--clr-tomato);
+    background: hsl(4, 100%, 67%, 20%);
+}
+
+.form-control > input {
+    width: 100%;
+    padding: .75rem 1rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--clr-grey);
+}
+
+.form-control:not(.error) > input:focus {
+    border-color: var(--clr-dark-slate-grey);
+}
+
+.error-message {
+    color: var(--clr-tomato);
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+#subscribe,
+#dismiss {
+    --btn-bg-color: var(--clr-dark-slate-grey);
+    --btn-text-color: var(--clr-white);
+    --btn-border-color: none;
+    --btn-hover-bg-color: linear-gradient(90deg, 
+        var(--clr-grad-1), 
+        var(--clr-grad-2), 
+        var(--clr-grad-3));
+    --btn-hover-text-color: var(--clr-white);
+    --btn-hover-border-color: none;
+    padding: 1rem;
+    width: 100%;
+    transition: box-shadow .1s linear;
+}
+
+#subscribe:hover,
+#dismiss:hover {
+    --btn-shadow-color: var(--clr-tomato);
+    transition: box-shadow .2s .3s linear;
+}
+
+#hero {
+    width: 100%;
+    height: 100%;
+    grid-area: hero;
+    position: relative;
+    border-radius: 1rem;
+    background: url('./images/illustration-sign-up-desktop.svg') no-repeat center;
+    background-size: cover;
+}
+
+#notification {
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    align-items: center;
+    padding: 4rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-100vh - 100%));
+    border-radius: 1rem;
+    background: var(--clr-white);
+    z-index: 1;
+}
+
+#notification .wrapper {
+    display: grid;
+    grid-auto-rows: min-content;
+}
+
+#notification.active{
+    transform: translate(-50%, -50%);
+}
+
+.success-icon {
+    aspect-ratio: 1;
+    width: 3.75rem;
+    margin-bottom: 2rem;
+}
+
+.wrapper > h1 {
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.wrapper > p {
+    margin-bottom: 2.25rem;
+}
+
+.wrapper a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.attribution { 
+    grid-column: 2 / 3;
+    font-size: 11px; text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 825px) {
+    body {
+        align-items: start;
+    }
+    
+    #newsletter {
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr;
+        grid-template-areas: "hero"
+        "signup";
+        padding: 0;
+        border-radius: 0px;
+    }
+    
+    #signup-form {
+        padding: 4rem 1.5rem;
+    }
+
+    #hero {
+        background: url('./images/illustration-sign-up-mobile.svg') no-repeat center;
+        background-size: cover;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    #notification {
+        max-width: 100%;
+        position: fixed;
+        inset: 0;
+        transform: translate(0%, calc(-100vh - 100%));
+        border-radius: 0px;
+        padding: 1rem;
+    }
+    
+    #notification.active{
+        transform: translate(0, 0);
+    }
+}
