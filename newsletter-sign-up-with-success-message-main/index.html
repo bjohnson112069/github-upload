@@ -50,13 +50,13 @@
             <button type="submit" class="btn" id="subscribe" aria-label="submit the form">Subscribe to monthly newsletter</button>
         </form>
         <section id="hero">
-            <!-- <img src="./images/illustration-sign-up-desktop.svg" alt="hero image"> -->
         </section>
     </article>
     <article id="notification" class="slide">
         <div class="wrapper">
             <svg class="success-icon">
-                <use xlink:href="#icon-success"></use>
+                <!-- when using inline SVG, the linerGradient does not work in Chrome; BG image used instead -->
+                <!-- <use xlink:href="#icon-success"></use> -->
             </svg>
             <h1>Thanks for subscribing!</h1>
             <p>A confirmation email has been sent to <a href="#">ash@loremcompany.com</a>.  Please open it and click the button inside to confirm your subscription.</p>
@@ -68,6 +68,7 @@
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Brian Johnson</a>.
     </div>
+    <!-- SVGs -->
     <svg width="0" height="0" class="hidden">
         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" id="icon-list">
             <g fill="none">
@@ -75,11 +76,13 @@
                 <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"></path>
             </g>
         </symbol>
+    </svg>
+    <svg width="0" height="0" class="hidden">
         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="icon-success">
             <defs>
                 <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
-                <stop offset="0%" stop-color="#FF6A3A"></stop>
-                <stop offset="100%" stop-color="#FF527B"></stop>
+                    <stop offset="0%" stop-color="#FF6A3A"></stop>
+                    <stop offset="100%" stop-color="#FF527B"></stop>
                 </linearGradient>
             </defs>
             <g fill="none">
