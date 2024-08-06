@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Top Charts</title>
+</head>
+
+<body>
+    <div class="bg" id="bg-top" aria-label="top background image"></div>
+    <article id="top-charts">
+        <header>
+            <button type="button" class="btn" id="go-back">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h1>top 10 most listened songs</h1>
+            <span>in the past week</span>
+        </header>
+        <main>
+            <ul class="songs">
+                <!-- Song #1 -->
+                <li class="song">
+                    <span class="rank">1</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1f/37/43/1f374304-2e04-2be3-53ea-41dd6f0b6fb8/00602567892410.rgb.jpg/600x600bb.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-1">
+                        <label for="panel-1">
+                            <span class="title">In My Feelings</span>
+                            <span class="number">2,089,766</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Drake</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #2 -->
+                <li class="song">
+                    <span class="rank">2</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6a/f7/6c/6af76c1c-4d8e-c761-8856-34d273b4703b/075679873682.jpg/600x600bb.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-2">
+                        <label for="panel-2">
+                            <span class="title">I Like it</span>
+                            <span class="number">1,864,874</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Card B & Bad Bunny & J Balvin</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #3 -->
+                <li class="song">
+                    <span class="rank">3</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7e/3c/4e/7e3c4ef6-daa7-cc10-57d0-45f5a562eaf5/18UMGIM22101.rgb.jpg/600x600bb.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-3">
+                        <label for="panel-3">
+                            <span class="title">Better Now</span>
+                            <span class="number">1,543,632</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Post Malone</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #4 -->
+                <li class="song">
+                    <span class="rank">4</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/94/2b/34/942b341a-9c01-18ce-ee8e-a2861a02c434/00602557411799.rgb.jpg/600x600bb.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-4">
+                        <label for="panel-4">
+                            <span class="title">Boo'd Up</span>
+                            <span class="number">1,234,877</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Ella Mai</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #5 -->
+                <li class="song">
+                    <span class="rank">5</span>
+                    <img  class="album-cover" src="https://i.scdn.co/image/ab67616d0000b2739cf12cef382235aed22437f8" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-5">
+                        <label for="panel-5">
+                            <span class="title">Nice for What</span>
+                            <span class="number">1,122,879</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Drake</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #6 -->
+                <li class="song">
+                    <span class="rank">6</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b2/21/04/b22104c5-b230-4e99-2b98-e99c664b88c7/18UMGIM28345.rgb.jpg/600x600bb.jpg"image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-6">
+                        <label for="panel-6">
+                            <span class="title">Yes Indeed</span>
+                            <span class="number">986,884</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Lil Baby & Drake</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #7 -->
+                <li class="song">
+                    <span class="rank">7</span>
+                    <img  class="album-cover" src="https://images.genius.com/66f34ae7035fc97e0f284c9be2e5c5ff.1000x1000x1.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-7">
+                        <label for="panel-7">
+                            <span class="title">Love Lies</span>
+                            <span class="number">765,864</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Khalid & Normani</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #8 -->
+                <li class="song">
+                    <span class="rank">8</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7c/98/07/7c98072e-e826-d77c-e829-daa87f5706b9/075679874580.jpg/600x600bb.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-8">
+                        <label for="panel-8">
+                            <span class="title">Mine</span>
+                            <span class="number">732,771</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Bazzi</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #9 -->
+                <li class="song">
+                    <span class="rank">9</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/17/dc/67/17dc6706-52b8-dacc-b581-5ec6e7ddf249/197342567183_cover.jpg/600x600bb.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-9">
+                        <label for="panel-9">
+                            <span class="title">A Bar Song (Tipsy)</span>
+                            <span class="number">689,877</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Shaboozey</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+                <!-- Song #10 -->
+                <li class="song">
+                    <span class="rank">10</span>
+                    <img  class="album-cover" src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e1/b7/09/e1b7098f-d6e1-2b18-fd6f-8390110908eb/24UMGIM50612.rgb.jpg/600x600bb.jpg" alt="image of album cover">
+                    <div class="panel">
+                        <input type="checkbox" class="visually-hidden" name="accordion" id="panel-10">
+                        <label for="panel-10">
+                            <span class="title">I Had Some Help</span>
+                            <span class="number">534,877</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </label>
+                        <div class="panel-content">
+                            <div class="content-wrapper">
+                                <span class="artist">Post Malone Featuring Morgan Wallen</span>
+                                <div class="song-writers">
+                                    <h2>Songwriter(s)</h2>
+                                    <p>A.R.Post, M.C.Wallen, L.B.Bell, Charlie Handsome, E.K.Smith, J.J.Hoskins, C.P.Walters, A.G.Gorley</p>
+                                </div>
+                                <div class="producers">
+                                    <h2>Producer(s)</h2>
+                                    <p>L.Bell, Charlie Handsome, Hoskins</p>
+                                </div>
+                                <div class="promotion-label">
+                                    <h2>Imprint/Promotion Label:</h2>
+                                    <p>Mercury/Big Loud/Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" id="play-snippet">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <small>30 secs</small>
+                    </button>
+                </li>
+            </ul>
+        </main>
+    </article>
+</body>
+
+
+</html>

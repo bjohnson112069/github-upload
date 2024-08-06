@@ -1,0 +1,83 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Additional resets for elements */
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Remove default anchor underline */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove focus outlines */
+:focus {
+    outline: 0;
+}
+
+/* Display block for images, SVGs, buttons, inputs, textareas */
+img, svg, button, input, textarea {
+    display: block;
+    outline: 0;
+    border: 0;
+    background: transparent;
+}
+
+/* Ensure forms look consistent */
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove default fieldset border */
+fieldset {
+    border: none;
+}
+
+/* Reset form element margin in older browsers */
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea {
+    margin: 0;
+}

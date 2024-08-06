@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+
+    /* ### Primary */
+    --clr-light-cyan: hsl(193, 38%, 86%);
+    --clr-neon-green: hsl(150, 100%, 66%);
+    
+    /* ### Neutral */
+    --clr-grayish-blue: hsl(217, 19%, 38%);
+    --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+    --clr-dark-blue: hsl(218, 23%, 16%);
+
+    /* shades */
+
+    /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: clamp(2.5rem, 1.96428571428571rem + 2.28571428571429vw, 3.25rem);
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Manrope", sans-serif;
+    --ff-body: "Manrope", sans-serif;;
+
+    --border-radius: 6px;
+    --gutter-width: 1rem;
+    --container-width: 520px;
+    --max-width: 1440px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    min-block-size: 100svh;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        minmax(var(--gutter-width), 1fr) min(100% - calc(2 * var(--gutter-width)), var(--container-width)) minmax(var(--gutter-width), 1fr);
+    grid-template-rows: 1fr min-content;
+    align-items: center;
+    row-gap: 1.5rem;
+
+    background: var(--clr-dark-blue);
+    color: var(--clr-light-cyan);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* --------------------- */
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color, inherit);
+    cursor: pointer;
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1), border .5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    background: var(--btn-hover-bg-color, inherit);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+body > * {
+    grid-column: 2 / 3;
+}
+
+#advice-generator {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    border-radius: 1rem;
+    font-size: var(--fs-700);
+    font-weight: 800;
+    text-align: center;
+    box-shadow: 
+        inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), 
+        inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8),
+        0px 5px 10px -2px rgb(0, 0, 0, 0.5);
+    background: var(--clr-white);
+    position: relative;
+    z-index: 1;
+}
+
+.slides-wrapper {
+    width: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.slides {
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    position: relative;
+    left: 0;
+    transition: left .5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.slide {
+    display: grid;
+    grid-auto-rows: min-content;
+    align-content: center;
+    gap: 2rem;
+    padding-block: 2.75rem;
+    background: var(--clr-dark-grayish-blue);
+}
+
+.slide > * {
+    padding-inline: 2.75rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: var(--fs-300);
+    letter-spacing: 2px;
+    color: var(--clr-neon-green);
+}
+
+blockquote {
+    padding-inline: 1rem !important;
+}
+
+.content {
+    margin: auto;
+    text-align:center;
+    line-height: 1.3;
+    max-width: 25ch;
+}
+
+.content::before {
+    content: '\201C';
+}
+
+.content::after {
+    content: '\201D';
+}
+
+.divider-icon {
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#next-advice {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    justify-self: center;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    background: var(--clr-neon-green);
+    aspect-ratio: 1;
+    padding: 1.25rem;
+    z-index: 0;
+}
+
+#next-advice::before {
+    content: '';
+    aspect-ratio: 1;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--clr-neon-green);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    z-index: -1;
+}
+
+#next-advice:hover::before {
+    opacity: 1;
+}
+
+.dice-icon {
+    aspect-ratio: 1;
+    width: 1.5rem;
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 550px) {
+
+}

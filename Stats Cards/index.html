@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Stats Cards</title>
+</head>
+
+<body>
+    <article id="stats-cards" class="scale">
+
+        <section id="bar-chart">
+
+            <div class="chart">
+                <div class="axis">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="bars">
+                    <div class="bar" data-legend="Current" aria-label="Current">
+                        <div class="bar-value" data-value="12.2%" aria-label="value of bar"></div>
+                    </div>
+                    <div class="bar" data-legend="All" aria-label="All">
+                        <div class="bar-value" data-value="34.8%" aria-label="value of bar"></div>
+                    </div>
+                    <div class="bar" data-legend="Average" aria-label="Average">
+                        <div class="bar-value" data-value="28.7%" aria-label="value of bar"></div>
+                    </div>    
+                </div>
+            </div>
+
+        </section>
+
+        <section id="twitter-analytics">
+
+            <div class="analytics">
+                <div class="analytic slide slide-up" id="tweets">
+                    <span class="analytic-value">0</span>
+                    <span>Tweets</span>
+                </div>
+                <div class="analytic slide slide-down" id="clicks">
+                    <span class="analytic-value">98</span>
+                    <span>Clicks</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="email-overview">
+
+            <div class="overview">
+                <h1>Overview</h1>
+                <ul class="items">
+                    <div class="item slide slide-right">
+                        <span class="item-label">Deliveries</span>
+                        <span class="trend-indicator" aria-label="trend indicator">
+                            <svg class="icon trend-up">
+                                <use xlink:href="#arrow-up-solid"></use>
+                            </svg>    
+                        </span>
+                        <span class="item-value">99.7%</span>
+                    </div>
+                    <div class="item slide slide-left">
+                        <span class="item-label">Total opens</span>
+                        <span class="trend-indicator trend-up" aria-label="trend indicator"></span>
+                        <span class="item-value">857</span>
+                    </div>
+                    <div class="item slide slide-right">
+                        <span class="item-label">Deliveries</span>
+                        <span class="trend-indicator" aria-label="trend indicator">
+                            <svg class="icon trend-down">
+                                <use xlink:href="#arrow-down-solid"></use>
+                            </svg>    
+                        </span>
+                        <span class="item-value">71</span>
+                    </div>
+                </ul>
+            </div>
+        </section>
+
+    </article>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="arrow-down-solid">
+            <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="arrow-up-solid">
+            <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+        </symbol>
+    </svg>
+</body>
+
+
+</html>
