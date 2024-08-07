@@ -59,13 +59,20 @@ body {
 
 
 main {
-  outline: 1px solid yellow;
+
+  height: 50vh;
+  width: 100%;
+  background: lightgoldenrodyellow;
+  /* position: relative; */
+}
+
+.logo {
   position: relative;
   z-index: 1;
 }
 
 /* logo */
-.logo {
+.bottom-curve {
   display: grid;
   place-items: center;
   
@@ -91,12 +98,12 @@ main {
   /* z-index: 1; */
 }
 
-.logo::before {
+.bottom-curve::before {
   content: '';
   aspect-ratio: 1;
   width: 200%;
   border-radius: 50%;
-  background: rgb(0, 0, 0, .8);
+  background: red;
   box-shadow: 0 0 0 15px #171717, 0 0 0 20px #fff;
   /* clip-path: polygon(-10px 50%, calc(100% + 10px) 50%, calc(100% + 10px) calc(100% + 10px), 0 calc(100% + 10px)); */
   position: absolute;

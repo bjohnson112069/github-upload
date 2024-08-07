@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+
+    /* ### Primary */
+    --clr-gradient-start: hsl(6, 100%, 80%);
+    --clr-gradient-end: hsl(335, 100%, 65%);
+    
+    /* ### Neutral */
+    --clr-pale-blue: hsl(243, 100%, 93%);
+    --clr-grayish-blue: hsl(229, 7%, 55%);
+    --clr-dark-blue: hsl(228, 56%, 26%);
+    --clr-very-dark-blue: hsl(229, 57%, 11%);
+    --clr-medium-blue: hsl(228.22, 55.44%, 62.16%);
+
+    /* shades */
+
+    /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: clamp(2.5rem, 1.96428571428571rem + 2.28571428571429vw, 3.25rem);
+    --fs-850: 2.5rem;
+    --fs-825: 2.375rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Raleway", sans-serif;
+    --ff-body: "Raleway", sans-serif;
+
+    --border-radius: 6px;
+    --gutter-width: 1rem;
+    --container-width: 100%;
+    --max-width: 1440px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    min-block-size: 100svh;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        minmax(var(--gutter-width), 1fr) min(100% - calc(2 * var(--gutter-width)), var(--container-width)) minmax(var(--gutter-width), 1fr);
+    grid-template-rows: 1fr min-content;
+    align-items: center;
+    row-gap: 1.5rem;
+
+    background: var(--clr-very-dark-blue);
+    color: var(--clr-pale-blue);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* --------------------- */
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color, inherit);
+    cursor: pointer;
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1), border .5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    background: var(--btn-hover-bg-color, inherit);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+body > * {
+    grid-column: 2 / 3;
+}
+
+#fylo-data-storage-component {
+    width: 100%;
+    height: 100%;
+    max-height: 840px;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    background: url('./images/bg-desktop.png') no-repeat bottom left var(--clr-very-dark-blue);
+    position: relative;
+    z-index: 1;
+    /* outline: 1px solid white; */
+}
+
+.sections {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: end;
+    gap: 1.5rem;
+}
+
+.section {
+    box-shadow: 
+        inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), 
+        inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    background: var(--clr-dark-blue);
+    padding: 2.5rem;
+}
+
+#section-files {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1.25rem;
+    justify-items: start;
+    border-radius: 1rem 100px 1rem 1rem;
+}
+
+.logo {
+    aspect-ratio: 2.75 / 1;
+    width: 125px;
+}
+
+.buttons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+}
+
+button[type="button"] {
+    --btn-bg-color: var(--clr-very-dark-blue);
+    --btn-text-color: var(--clr-medium-blue);
+    --btn-border-color: none;
+    --btn-hover-bg-color: var(--clr-medium-blue);
+    --btn-hover-text-color: var(--clr-very-dark-blue);
+    --btn-hover-border-color: none;
+    padding: .75rem;
+    display: grid;
+    place-items: center;
+}
+
+.icon {
+    aspect-ratio: 1;
+    width: 1.5rem;
+    fill: currentColor;
+}
+
+#section-storage {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1rem;
+    border-radius: 1rem;
+    font-size: var(--fs-300);
+    position: relative;
+}
+
+#storage-value {
+    text-transform: uppercase;
+}
+
+.progress-bar {
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: var(--fs-200);
+    font-weight: 700;
+}
+
+.progress-bar::before,
+.progress-bar::after {
+    position: absolute;
+    top: calc(100% + .5rem);
+}
+
+.progress-bar::before {
+    content: attr(data-min);
+    left: 0;
+}
+
+.progress-bar::after {
+    content: attr(data-max);
+    right: 0;
+}
+
+.track {
+    width: 100%;
+    height: 1rem;
+    display: grid;
+    grid-template-areas: "stacked";
+    align-items: center;
+    background: var(--clr-very-dark-blue);
+    border-radius: 100px;
+    box-shadow: inset 2px 2px 4px 0px rgb(0, 0, 0, 0.2), inset -1px -1px 1px 0px rgb(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+
+.progress {
+    grid-area: stacked;
+    height: .75rem;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(to right, 
+        var(--clr-gradient-start), 
+        var(--clr-gradient-end));
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    width: 0;
+    transition: width 1s cubic-bezier(0.25, .4, 0.55, 1.4);
+    position: relative;
+}
+
+.progress::after {
+    content: '';
+    aspect-ratio: 1;
+    height: .875rem;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    border-radius: 50%;
+    background: hsl(0, 0%, 100%);
+    box-shadow: inset 1px 1px 2px -1px rgb(255, 255, 255, 0.8), inset -1px -1px 2px -1px rgb(0, 0, 0, 0.8);
+}
+
+.remaining-storage {
+    --triangle-height: 1.25rem;
+    position: absolute;
+    bottom: calc(100% - 1.5rem);
+    right: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .25rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    font-size: var(--fs-200);
+    font-weight: 700;
+    background: hsl(0, 0%, 100%);
+    color: var(--clr-grayish-blue);
+    min-height: var(--triangle-height);
+    z-index: 1;
+}
+
+.remaining-storage::after {
+    content: '';
+    aspect-ratio: 1;
+    width: 0rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-top: var(--triangle-height) solid transparent;
+    border-bottom: var(--triangle-height) solid transparent; 
+    border-right: var(--triangle-height) solid hsl(0, 0%, 100%); 
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+#remaining-storage-value {
+    font-size: var(--fs-825);
+    color: var(--clr-very-dark-blue);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 750px) {
+
+    
+    #fylo-data-storage-component {
+        background: url('./images/bg-mobile.png') no-repeat top left var(--clr-very-dark-blue);
+        background-size: cover;
+    }
+
+    .sections {
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+    }
+
+    .remaining-storage {
+        bottom: unset;
+        top: 100%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .remaining-storage::after {
+        display: none;
+    }
+
+}
