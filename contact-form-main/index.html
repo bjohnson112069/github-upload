@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body>
+    <!-- CONTACT FORM -->
+    <form id="contact-form" class="">
+
+        <h1>Contact Us</h1>
+
+        <!-- First Name -->
+        <div class="form-control">
+            <label for="first-name">First Name</label>
+            <input type="text" placeholder="First" id="first-name" name="first-name" />
+            <small class="error-message" data-field="first-name">Error message</small>
+        </div>
+        
+        <!-- Last Name -->
+        <div class="form-control">
+            <label for="last-name">Last Name</label>
+            <input type="text" placeholder="Last" id="last-name" name="last-name" />
+            <small class="error-message" data-field="last-name">Error message</small>
+        </div>
+        
+        <!-- Email -->
+        <div class="form-control">
+            <label for="email">Email Address</label>
+            <input type="email" placeholder="email@user.com" id="email" name="email" />
+            <small class="error-message" data-field="email">Error message</small>
+        </div>
+
+        <!-- Query Types -->
+        <div class="form-control">
+            <span class="legend">Query Type</span>
+            <div class="options">
+                <!-- Option #1: General Enquiry -->
+                <div class="option">
+                    <input type="radio" class="radiobox visually-hidden" id="radio-one" name="query-type" value="general">
+                    <label for="radio-one" class="radio-control">
+                        <div class="checkmark">
+                            <svg class="checkmark-icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>General Enquiry</span>
+                    </label>
+                </div>
+                <!-- Option #2:Support Request -->
+                <div class="option">
+                    <input type="radio" class="radiobox visually-hidden" id="radio-two" name="query-type" value="support">
+                    <label for="radio-two" class="radio-control">
+                        <div class="checkmark">
+                            <svg class="checkmark-icon">
+                                <use xlink:href="#check-mark-svgrepo-com"></use>
+                            </svg>
+                        </div>
+                        <span>Support Request</span>
+                    </label>
+                </div>
+            </div>
+            <small class="error-message" data-field="query-type">Error message</small>
+        </div>
+        
+        <!-- Message -->
+        <div class="form-control">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="3" placeholder="Message"></textarea>
+            <small class="error-message" data-field="message">Error message</small>
+        </div>
+        
+        <!-- Consent -->
+        <div class="form-control">
+                <!-- Option #1: Consent -->
+                <div class="option">
+                <input type="checkbox" class="checkbox visually-hidden" id="checkbox-one" name="consent" value="true">
+                <label for="checkbox-one" class="checkbox-control">
+                    <div class="checkmark">
+                        <svg class="checkmark-icon">
+                            <use xlink:href="#check-mark-svgrepo-com"></use>
+                        </svg>
+                    </div>
+                    <span>I consent to being contacted by the team</span>
+                </label>    
+            </div>
+            <small class="error-message" data-field="query-type">Error message</small>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn" id="submit" aria-label="submit the form">submit</button>
+
+    </form>
+
+    <!-- CONFIRMATION -->
+    <div class="confirmation">
+        <div class="wrapper">
+            <div>
+                <svg class="success-icon">
+                    <use xlink:href="#circle-check-regular"></use>
+                </svg>
+                <span>Message Sent!</span>
+            </div>
+            <p>Thanks for completing the form.  We'll be in touch soon!</p>    
+        </div>
+    </div>
+
+    <!-- ATTRIBUTION -->
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+
+    <!-- INLINE SVG -->
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="check-mark-svgrepo-com">
+            <path
+                d="M17.47 250.9C88.82 328.1 158 397.6 224.5 485.5c72.3-143.8 146.3-288.1 268.4-444.37L460 26.06C356.9 135.4 276.8 238.9 207.2 361.9c-48.4-43.6-126.62-105.3-174.38-137z">
+            </path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="circle-check-regular">
+            <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"></path>
+        </symbol>
+    </svg>
+</body>
+
+
+</html>

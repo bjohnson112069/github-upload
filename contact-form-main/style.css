@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    
+    /* ### Primary */
+    --clr-green-200: hsl(148, 38%, 91%);
+    --clr-green-600: hsl(169, 82%, 27%);
+    --clr-red: hsl(0, 66%, 54%);
+    
+    /* ### Neutral */
+    
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-500: hsl(186, 15%, 59%);
+    --clr-grey-900: hsl(187, 24%, 22%);
+
+    /* shades */
+
+    /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
+    --fs-900: clamp(2.5rem, 1.96428571428571rem + 2.28571428571429vw, 3.25rem);
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Karla", sans-serif;
+    --ff-body: "Karla", sans-serif;
+
+    --border-radius: 8px;
+    --gutter-width: 1rem;
+    --container-width: 715px;
+    --max-width: 1440px;
+    --min-width: 375px;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* ul {
+    list-style-type: none;
+}
+
+* ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    min-block-size: 100svh;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        minmax(var(--gutter-width), 1fr) min(100% - calc(2 * var(--gutter-width)), var(--container-width)) minmax(var(--gutter-width), 1fr);
+    grid-template-rows: 1fr min-content;
+    place-items: center;
+    row-gap: 1.5rem;
+
+    background: var(--clr-green-200);
+    color: var(--clr-grey-900);
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color, inherit);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1), border .5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    border-radius: inherit;
+    background: var(--btn-hover-bg-color, inherit);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+#contact-form {
+    grid-column: 2 / 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, min-content);
+    column-gap: 1rem;
+    row-gap: .25rem;
+    padding: clamp(1rem, -0.654411764705882rem + 7.05882352941176vw, 2.5rem);
+    border-radius: 1rem;
+    box-shadow: 
+        inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), 
+        inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8),
+        0px 5px 10px -2px rgb(0, 0, 0, 0.5);
+    background: var(--clr-white);
+}
+
+#contact-form > * {
+    grid-column: span 2;
+}
+
+#contact-form > h1 {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: .5rem;
+    justify-items: start;
+    padding-bottom: 1.25rem;
+    position: relative;
+}
+
+.form-control.error .error-message {
+    visibility: visible;
+}
+
+.form-control:nth-of-type(1),
+.form-control:nth-of-type(2) {
+    grid-column: span 1 !important;
+}
+
+.form-control > label {
+    font-weight: 700;
+    position: relative;
+}
+
+.form-control > label::after {
+    content: '*';
+    font: inherit;
+    position: absolute;
+    top: 0%;
+    right: -1rem;
+    color: var(--clr-green-600);
+}
+
+.form-control.error input,
+.form-control.error textarea {
+    border-color: var(--clr-red);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: .75rem 1rem;
+    border: 2px solid var(--clr-grey-500);
+    border-radius: var(--border-radius);
+    background: inherit;
+    font: inherit;
+    resize: none;
+    outline: none;
+    transition: background .3s linear, border-color .3s linear;
+}
+
+.form-control:not(.error) > input[type="text"]:hover,
+.form-control:not(.error) > input[type="email"]:hover,
+.form-control:not(.error) > textarea:hover,
+.form-control:not(.error) > input[type="text"]:focus,
+.form-control:not(.error) > input[type="email"]:focus,
+.form-control:not(.error) > textarea:focus {
+        border-color: var(--clr-green-600);
+}
+
+.legend {
+    font-weight: 700; 
+}
+
+.options {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 1rem;
+}
+
+.option {
+    border-radius: inherit;
+    transition: background .3s linear, border-color .3s linear;
+    position: relative;
+}
+
+.radiobox:checked ~ .radio-control {
+    background: hsl(169, 82%, 27%, 10%);
+    border-color: var(--clr-green-600);
+}
+
+.radiobox:checked ~ .radio-control > .checkmark {
+    background: transparent;
+    border-color: var(--clr-green-600);
+    border-radius: 4px;
+}
+
+.radiobox:checked ~ .radio-control > .checkmark > .checkmark-icon {
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .4s .2s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.radio-control,
+.checkbox-control {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--clr-grey-500);
+    font-size: var(--fs-500);
+    font-weight: 400 !important;
+    cursor: pointer;
+    transition: background .3s linear, border-color .3s linear;
+    position: relative;
+}
+
+.radio-control:hover,
+.radiobox:focus ~ .radio-control,
+.checkbox-control:hover > .checkmark,
+.checkbox:focus ~ .checkbox-control > .checkmark {
+    border-color: var(--clr-green-600);
+}
+
+/* Spacing for the checkbox control */
+.form-control:last-of-type {
+    margin-block: 1rem;
+}
+
+.checkbox-control {
+    padding: 0;
+    border-radius: 0px;
+    border: none;
+    font-size: var(--fs-400);
+}
+
+.checkbox-control > .checkmark {
+    border-radius: 4px;
+}
+
+.checkbox-control .checkmark-icon {
+    fill: var(--clr-white);
+}
+
+.checkbox:checked ~ .checkbox-control {
+}
+
+.checkbox:checked ~ .checkbox-control > .checkmark {
+    background: var(--clr-green-600);
+}
+
+.checkbox:checked ~ .checkbox-control > .checkmark > .checkmark-icon {
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .4s .2s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.checkmark {
+    aspect-ratio: 1;
+    width: 1.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--clr-grey-500);
+    transition: border-radius .5s cubic-bezier(0, 0, 0.2, 1), border .5s cubic-bezier(0, 0, 0.2, 1), background .5s cubic-bezier(0, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.checkmark-icon {
+    aspect-ratio: 1;
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    fill: var(--clr-green-600);
+}
+
+.error-message {
+    color: var(--clr-red);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+#submit {
+    --btn-bg-color: var(--clr-green-600);
+    --btn-text-color: var(--clr-white);
+    --btn-border-color: none;
+    --btn-hover-bg-color: hsl(0, 0%, 0%, 50%);
+    --btn-hover-text-color: var(--clr-white);
+    --btn-hover-border-color: none;
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--fs-500);
+    text-transform: capitalize;
+    text-wrap: nowrap;
+}
+
+.confirmation {
+    position: fixed;
+    top: -100vh;
+    left: 50%;
+    width: 100%;
+    max-width: var(--min-width);
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    background: var(--clr-green-600);
+    color: var(--clr-white);
+    transition: top 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.confirmation.active {
+    top: 50%;
+}
+
+.confirmation > .wrapper {
+    padding: 1.5rem;
+    font-size: var(--fs-400);
+    border-radius: inherit;
+    background: hsl(0, 0%, 0%, 50%);
+
+    & div {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: var(--fs-600);
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+}
+
+.success-icon {
+    aspect-ratio: 1;
+    width: 1.5rem;
+    fill: currentColor;
+}
+
+.attribution { 
+    grid-column: 2 / 3;
+    font-size: 11px; text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* CSS styles for mobile devices */
+@media (max-width: 450px) {
+    .form-control:nth-of-type(1),
+    .form-control:nth-of-type(2) {
+        grid-column: span 2 !important;
+    }
+
+    /* Additional spacing for the long error message */
+    .form-control:last-of-type {
+        padding-bottom: 2.25rem;
+    }
+    
+
+    .options {
+        grid-auto-flow: row;
+        grid-auto-rows: 1fr;
+        row-gap: 1rem;
+    }
+}
