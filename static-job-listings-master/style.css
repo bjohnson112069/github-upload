@@ -269,6 +269,7 @@ main > * {
     display: grid;
     grid-template-columns: 1fr min-content;
     align-items: center;
+    gap: .75rem;
     font-size: var(--fs-300);
     font-weight: 700;
     border-radius: var(--border-radius);
