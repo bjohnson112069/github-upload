@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Groups</title>
+</head>
+
+<body>
+    <article id="project" class="">
+        <aside>
+            <button type="button" class="btn">
+                <span class="material-symbols-outlined">chat</span>
+            </button>
+            <button type="button" class="btn active">
+                <span class="material-symbols-outlined">group</span>
+            </button>
+            <button type="button" class="btn">
+                <span class="material-symbols-outlined">apps</span>
+            </button>
+            <button type="button" class="btn">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </aside>
+
+        <main>
+            <header>
+                <div class="title">
+                    <button type="button" class="btn" id="go-back">
+                        <span class="material-symbols-outlined">arrow_left_alt</span>
+                    </button>
+                    <h1>Groups</h1>
+                </div>
+                <div class="views">
+                    <button type="button" class="btn active" id="grid-view">
+                        <span class="material-symbols-outlined">view_cozy</span>
+                    </button>
+                    <button type="button" class="btn" id="split-view">
+                        <span class="material-symbols-outlined">splitscreen</span>
+                    </button>
+                </div>
+            </header>
+            <section>
+                <!-- Groups -->
+                <div class="form-control">
+                    <span class="legend visually-hidden">Groups</span>
+                    <div class="groups">
+                        <!-- Create Group -->
+                        <div class="group">
+                            <button type="button" class="btn" id="create-group">
+                                <div class="icon icon-plus">
+                                    <span class="material-symbols-outlined">add</span>
+                                </div>
+                                <span>create group</span>
+                            </button>
+                        </div>
+                        <!-- Option #1: cuisine -->
+                        <div class="input-wrapper group">
+                            <input type="checkbox" class="checkbox visually-hidden" id="checkbox-one" name="group" value="cuisine" checked>
+                            <span class="selection-indicator" aria-label="selection indicator"></span>
+                            <label for="checkbox-one" class="checkbox-label">
+                                <div class="icon">
+                                    <img src="https://raw.githubusercontent.com/bjohnson112069/web-images/main/Groups/pexels-tonyleong81-2092906.jpg" alt="icon image" title="Photo by Anthony Leong: https://www.pexels.com/photo/shrimp-pasta-served-on-gray-plate-2092906/">
+                                </div>
+                                <span>cuisine</span>
+                                <span class="members">36 members</span>
+                            </label>
+                        </div>
+                        <!-- Option #2: art -->
+                        <div class="input-wrapper group">
+                            <input type="checkbox" class="checkbox visually-hidden" id="checkbox-two" name="group" value="art">
+                            <span class="selection-indicator" aria-label="selection indicator"></span>
+                            <label for="checkbox-two" class="checkbox-label">
+                                <div class="icon">
+                                    <img src="https://raw.githubusercontent.com/bjohnson112069/web-images/main/Groups/pexels-steve-1585325.jpg" alt="icon image" title="Photo by Steve Johnson: https://www.pexels.com/photo/orange-red-and-green-abstract-painting-1585325/">
+                                </div>
+                                <span>art</span>
+                                <span class="members">9 members</span>
+                            </label>
+                        </div>
+                        <!-- Option #3: workout -->
+                        <div class="input-wrapper group">
+                            <input type="checkbox" class="checkbox visually-hidden" id="checkbox-three" name="group" value="workout" checked>
+                            <span class="selection-indicator" aria-label="selection indicator"></span>
+                            <label for="checkbox-three" class="checkbox-label">
+                                <div class="icon">
+                                    <img src="https://raw.githubusercontent.com/bjohnson112069/web-images/main/Groups/pexels-karolina-grabowska-4498294.jpg" alt="icon image" title="Photo by Karolina Kaboompics: https://www.pexels.com/photo/purple-dumbbells-in-hands-of-positive-sportswoman-4498294/">
+                                </div>
+                                <span>workout</span>
+                                <span class="members">27 members</span>
+                            </label>
+                        </div>
+                        <!-- Option #4: gaming -->
+                        <div class="input-wrapper group">
+                            <input type="checkbox" class="checkbox visually-hidden" id="checkbox-four" name="group" value="gaming" checked>
+                            <span class="selection-indicator" aria-label="selection indicator"></span>
+                            <label for="checkbox-four" class="checkbox-label">
+                                <div class="icon">
+                                    <img src="https://raw.githubusercontent.com/bjohnson112069/web-images/main/Groups/pexels-stasknop-1298601.jpg" alt="icon image" title="Photo by Stas Knop: https://www.pexels.com/photo/black-microsoft-xbox-game-controller-1298601/">
+                                </div>
+                                <span>gaming</span>
+                                <span class="members">105 members</span>
+                            </label>
+                        </div>
+                        <!-- Option #5: hiking -->
+                        <div class="input-wrapper group">
+                            <input type="checkbox" class="checkbox visually-hidden" id="checkbox-five" name="group" value="hiking">
+                            <span class="selection-indicator" aria-label="selection indicator"></span>
+                            <label for="checkbox-five" class="checkbox-label">
+                                <div class="icon">
+                                    <img src="https://raw.githubusercontent.com/bjohnson112069/web-images/main/Groups/pexels-ozgomz-868097.jpg" alt="icon image" title="Photo by Oziel Gómez: https://www.pexels.com/photo/men-s-blue-leather-jacket-and-brown-backpack-868097/">
+                                </div>
+                                <span>hiking</span>
+                                <span class="members">97 members</span>
+                            </label>
+                        </div>
+                        <!-- Option #6: yoga -->
+                        <div class="input-wrapper group">
+                            <input type="checkbox" class="checkbox visually-hidden" id="checkbox-six" name="group" value="yoga">
+                            <span class="selection-indicator" aria-label="selection indicator"></span>
+                            <label for="checkbox-six" class="checkbox-label">
+                                <div class="icon">
+                                    <img src="https://raw.githubusercontent.com/bjohnson112069/web-images/main/Groups/pexels-alexy-almond-3758127.jpg" alt="icon image" title="Photo by Alexy Almond: https://www.pexels.com/photo/photo-of-woman-meditating-3758127/">
+                                </div>
+                                <span>yoga</span>
+                                <span class="members">65 members</span>
+                            </label>
+                        </div>
+                    </div>
+                    <small class="error-message visually-hidden" data-field="groups">Error message</small>
+                </div>
+            </section>
+        </main>
+
+    </article>
+</body>
+
+
+</html>

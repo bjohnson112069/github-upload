@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Product Page</title>
+</head>
+
+<body>
+    <form id="product-page" class="">
+        <main>
+            <div class="products">
+                <div class="product">
+                    <button type="button" class="slide slide-up" id="bag" arial-label="shopping bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="item-count">0</span>
+                    </button>
+                    <header>
+                        <h1 class="product-name">Bag<br>Rotterdam Blick</h1>
+                        <p class="product-description">This trapezium bag measures 31 x 15 x 30 cm and has 2 exterior and 3 interior pockets.  It's made of faux leather, has etched patterns and is <span class="color-name">fluorescent red</span>.  Wear it with jeans and a daiquiri.</p>
+                    </header>
+                    <section class="product-details">
+                        <div class="prices">
+                            <div class="product-price">$99.95</div>
+                            <div class="product-sale-price">$79.95</div>
+                        </div>
+                        <!-- Product Colors -->
+                        <div class="form-control product-colors">
+                            <span class="legend">color</span>
+                            <div class="colors">
+                                <!-- Option #1: Yellow -->
+                                <div class="input-wrapper color" data-color-name="pickeled ginger" data-hue="42" data-saturation="99" data-brightness="99">
+                                    <input type="radio" class="radiobox visually-hidden" id="color-one" name="color" value="1">
+                                    <label for="color-one" class="color-preview" aria-label="color preview"></label>
+                                </div>
+                                <!-- Option #2: Red -->
+                                <div class="input-wrapper color" data-color-name="sango red" data-hue="0" data-saturation="97" data-brightness="99">
+                                    <input type="radio" class="radiobox visually-hidden" id="color-two" name="color" value="2" checked>
+                                    <label for="color-two" class="color-preview" aria-label="color preview"></label>
+                                </div>
+                                <!-- Option #3: Black -->
+                                <div class="input-wrapper color" data-color-name="jet black" data-hue="353" data-saturation="0" data-brightness="35">
+                                    <input type="radio" class="radiobox visually-hidden" id="color-three" name="color" value="3">
+                                    <label for="color-three" class="color-preview" aria-label="color preview"></label>
+                                </div>
+                            </div>
+                            <small class="error-message visually-hidden" data-field="product-colors">Error message</small>
+                        </div>
+                        <!-- Product Sizes -->
+                        <div class="form-control product-sizes">
+                            <span class="legend">size</span>
+                            <div class="sizes">
+                                <!-- Option #1: U -->
+                                <div class="input-wrapper size">
+                                    <input type="radio" class="radiobox visually-hidden" id="size-one" name="size" value="U" checked>
+                                    <label for="size-one" class="size-preview" aria-label="size preview">
+                                        <i class="fa-solid fa-u"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <small class="error-message visually-hidden" data-field="product-sizes">Error message</small>
+                        </div>
+                    </section>
+                    <section class="product-preview">
+                        <img src="https://github.com/bjohnson112069/web-images/blob/main/Product%20Page/bag-rotterdam-blick.png?raw=true" alt="product image" class="product-img">
+                        <button type="submit" class="btn" id="add-to-bag">add to bag</button>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span>sharing is loving</span>
+            <div class="brands">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+                <i class="fa-brands fa-tumblr"></i>
+                <i class="fa-brands fa-facebook-f"></i>    
+            </div>
+        </footer>
+    </form>
+</body>
+
+
+</html>
