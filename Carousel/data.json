@@ -1,0 +1,231 @@
+{
+  "photography": [
+    {
+      "id": 1724764596000,
+      "item_name": "Team meeting",
+      "completed": false,
+      "filtered": false
+    },
+    {
+      "id": 1724764596001,
+      "item_name": "Generate Key Performance Indicators (KPI)",
+      "completed": false,
+      "filtered": false
+    }
+  ]
+}
+
+
+
+{
+  "REMINDER_LIST":
+  {
+    "list_name": "REMINDERS",
+    "reminders": [
+      {
+        "id": 1724764596000,
+        "item_name": "Team meeting",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596001,
+        "item_name": "Generate Key Performance Indicators (KPI)",
+        "completed": false,
+        "filtered": false
+      }
+    ]
+  },
+  "TODO_LIST":
+  {
+    "list_name": "TO DO LIST",
+    "to dos": [
+      {
+        "id": 1724764596002,
+        "item_name": "Exercise for 1 hour",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596003,
+        "item_name": "Walk the dog",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596004,
+        "item_name": "Read a book",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596005,
+        "item_name": "Pick up groceries",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596006,
+        "item_name": "Complete daily iCodeThis challenge",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596007,
+        "item_name": "Organize office",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596008,
+        "item_name": "Learn How To SVG (*cringes*)",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596009,
+        "item_name": "Forget to mark To Dos complete",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596010,
+        "item_name": "Contemplate life choices",
+        "completed": false,
+        "filtered": false
+      }
+    ]
+  },
+  "SHOPPING_LIST":
+  {
+    "list_name": "SHOPPING LIST",
+    "groceries": [
+      {
+        "id": 1724764596011,
+        "item_name": "Butter",
+        "completed": true,
+        "filtered": false
+      },
+      {
+        "id": 1724764596012,
+        "item_name": "Orange Juice",
+        "completed": true,
+        "filtered": false
+      },
+      {
+        "id": 1724764596013,
+        "item_name": "Cheese",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596014,
+        "item_name": "Chocolate",
+        "completed": true,
+        "filtered": false
+      },
+      {
+        "id": 1724764596015,
+        "item_name": "Corn Flakes",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596016,
+        "item_name": "Potatoes",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596017,
+        "item_name": "Avocado",
+        "completed": false,
+        "filtered": false
+      }
+    ],
+    "electronics": [
+      {
+        "id": 1724764596018,
+        "item_name": "OLED TV",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596019,
+        "item_name": "Smartphone",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596020,
+        "item_name": "Oura Ring",
+        "completed": false,
+        "filtered": false
+      }
+    ],
+    "books": [
+      {
+        "id": 1724764596021,
+        "item_name": "A Tale of Two Cities",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596022,
+        "item_name": "Harry Potter and the Philosopher's Stone",
+        "completed": true,
+        "filtered": false
+      },
+      {
+        "id": 1724764596023,
+        "item_name": "And Then There Were None",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596024,
+        "item_name": "The Hobbit",
+        "completed": false,
+        "filtered": false
+      }
+    ],
+    "car": [
+      {
+        "id": 1724764596025,
+        "item_name": "Get Gas",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596026,
+        "item_name": "Wash car",
+        "completed": false,
+        "filtered": false
+      }
+    ]
+  },
+  "OTHER_LIST":
+  {
+    "list_name": "OTHER",
+    "other": [
+      {
+        "id": 1724764596027,
+        "item_name": "Find a new playlist",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596028,
+        "item_name": "Catch up on politics (ugh)",
+        "completed": false,
+        "filtered": false
+      },
+      {
+        "id": 1724764596029,
+        "item_name": "Find a new job",
+        "completed": false,
+        "filtered": false
+      }
+    ]
+  }
+}
