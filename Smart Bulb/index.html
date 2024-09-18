@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Smart Bulb</title>
+</head>
+
+<body>
+    <article id="smart-bulb">
+        <div class="sections">
+            <section id="section-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="197" viewBox="0 0 128 197">
+                    <path id="lamp-fill" fill="#69f" d="M63.93 68.03a7.48 7.48 0 0 0-7.5 7.5v6.94a42 42 0 0 0-34.5 41.2 4.74 4.74 0 0 0 .25 9.49h83.5a4.74 4.74 0 0 0 .25-9.5 42 42 0 0 0-34.5-41.27v-6.86c0-4.16-3.34-7.5-7.5-7.5z" />
+                    <path id="lamp-stroke" d="M62 0v66.46a9.53 9.53 0 0 0-7.5 9.29v5.22a44.05 44.05 0 0 0-34.46 41.29 6.78 6.78 0 0 0-4.54 6.36 6.78 6.78 0 0 0 6.75 6.75h13.01A31.01 31.01 0 0 0 64 154.94a31.01 31.01 0 0 0 28.74-19.55h13.01c3.7 0 6.75-3.05 6.75-6.75 0-2.93-1.9-5.45-4.54-6.37a44.05 44.05 0 0 0-34.46-41.3v-5.22a9.53 9.53 0 0 0-7.5-9.29V0Zm2 70.25c3.08 0 5.5 2.42 5.5 5.5v4.54a44.24 44.24 0 0 0-11 0v-4.54c0-3.08 2.42-5.5 5.5-5.5zm0 13.68a39.97 39.97 0 0 1 39.95 37.94h-79.9A39.97 39.97 0 0 1 64 83.94Zm-41.75 41.94h83.5a2.7 2.7 0 0 1 2.75 2.75 2.7 2.7 0 0 1-2.75 2.75h-83.5a2.7 2.7 0 0 1-2.75-2.75 2.7 2.7 0 0 1 2.75-2.75zm17.45 9.5h48.6A26.93 26.93 0 0 1 64 150.94a26.92 26.92 0 0 1-24.3-15.56zm-12.18 7.4a2 2 0 0 0-1 .27L1.38 157.56a2 2 0 0 0-.73 2.73 2 2 0 0 0 2.73.73l25.14-14.51a2 2 0 0 0 .73-2.73 2 2 0 0 0-1.21-.93 2 2 0 0 0-.52-.07zm72.96 0a2 2 0 0 0-.52.08 2 2 0 0 0-1.21.93 2 2 0 0 0 .73 2.73l25.14 14.51a2 2 0 0 0 2.73-.73 2 2 0 0 0-.73-2.73l-25.14-14.52a2 2 0 0 0-1-.26zm-57.67 15.4a2 2 0 0 0-.51.07 2 2 0 0 0-1.22.93l-14.51 25.14a2 2 0 0 0 .73 2.73 2 2 0 0 0 2.74-.73l14.5-25.14a2 2 0 0 0-.73-2.73 2 2 0 0 0-1-.27zm42.38 0a2 2 0 0 0-1 .27 2 2 0 0 0-.73 2.73l14.5 25.14a2 2 0 0 0 2.74.73 2 2 0 0 0 .73-2.73l-14.51-25.14a2 2 0 0 0-1.21-.93 2 2 0 0 0-.52-.07zM64 163.9a2 2 0 0 0-2 2v29.02a2 2 0 0 0 2 2 2 2 0 0 0 2-2V165.9a2 2 0 0 0-2-2z" color="#000" style="-inkscape-stroke: none" />
+                </svg>
+                <form>
+                    <label for="username">USERNAME</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username">
+                    <label for="password">PASSWORD</label>
+                    <input type="text" name="password" id="password" placeholder="Enter password">
+                    <button type="submit" id="login">LOG IN</button>
+                </form>
+            </section>
+            <section id="section-bulb">
+                <div class="slider">
+                    <div class="track"></div>
+                    <div class="thumb"></div>
+                </div>
+                <button type="button" class="switch" value="false">OFF</button>
+            </section>
+        </div>
+    </article>
+
+    <!-- Inline SVG -->
+</body>
+
+</html>

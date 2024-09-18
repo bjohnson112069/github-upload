@@ -1,92 +1,105 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
     <title>iCodeThis - Multi Toggle</title>
-    <script src="./script.js" defer></script> 
 </head>
 
 <body>
-      <div class="container">
-            <form id="browse" class="slide slide-up">
-                  <header class="slide slide-left">
-                        <h1>Browse by interests</h1>
-                        <p>Select some interests to help us personalize your experience on Edmondo.</p>
-                  </header>
-                  <main class="interests">
-                        <!-- Math -->
-                        <div class="interest slide slide-left">
-                              <input type="checkbox" id="math" name="interest" value="math">
-                              <label for="math">
-                                    <span>Math</span>
-                              </label>
-                        </div>
-                        <!-- Science -->
-                        <div class="interest slide slide-up">
-                              <input type="checkbox" id="science" name="interest" value="science">
-                              <label for="science">
-                                    <span>Science</span>
-                              </label>
-                        </div>
-                        <!-- English -->
-                        <div class="interest slide slide-right">
-                              <input type="checkbox" id="english" name="interest" value="english" checked>
-                              <label for="english">
-                                    <span>English</span>
-                              </label>
-                        </div>
-                        <!-- World Languages -->
-                        <div class="interest slide slide-left">
-                              <input type="checkbox" id="world-languages" name="interest" value="world-languages">
-                              <label for="world-languages">
-                                    <span>World Languages</span>
-                              </label>
-                        </div>
-                        <!-- Health & PE -->
-                        <div class="interest slide slide-right">
-                              <input type="checkbox" id="health-pe" name="interest" value="health-pe" checked>
-                              <label for="health-pe">
-                                    <span>Health & PE</span>
-                              </label>
-                        </div>
-                        <!-- Special Education -->
-                        <div class="interest slide slide-right">
-                              <input type="checkbox" id="special-education" name="interest" value="special-education">
-                              <label for="special-education">
-                                    <span>Special Education</span>
-                              </label>
-                        </div>
-                        <!-- Development -->
-                        <div class="interest slide slide-left">
-                              <input type="checkbox" id="development" name="interest" value="development">
-                              <label for="development">
-                                    <span>Development</span>
-                              </label>
-                        </div>
-                        <!-- Technology -->
-                        <div class="interest slide slide-down">
-                              <input type="checkbox" id="technology" name="interest" value="technology">
-                              <label for="technology">
-                                    <span>Technology</span>
-                              </label>
-                        </div>
-                        <!-- Social Studies -->
-                        <div class="interest slide slide-right">
-                              <input type="checkbox" id="social-studies" name="interest" value="social-studies" checked>
-                              <label for="social-studies">
-                                    <span>Social Studies</span>
-                              </label>
-                        </div>
-
-                  </main>
-                  <footer class="slide slide-down">
-                        <div class="buttons">
-                              <button class="btn" id="skip">Skip</button>
-                              <button class="btn" id="save">Save</button>
-                        </div>
-                  </footer>
-            </form>
-      </div>
+    <form id="browse" class="slide slide-up">
+        <header class="slide slide-left">
+            <h1>Browse by interests</h1>
+            <p>Select some interests to help us personalize your experience on Edmondo.</p>
+        </header>
+        <main class="interests">
+            <!-- Math -->
+            <div class="interest slide slide-left">
+                <input type="checkbox" class="visually-hidden" id="math" name="interest" value="math">
+                <label for="math" class="btn">
+                    <span>Math</span>
+                </label>
+            </div>
+            <!-- Science -->
+            <div class="interest slide slide-up">
+                <input type="checkbox" class="visually-hidden" id="science" name="interest" value="science">
+                <label for="science" class="btn">
+                    <span>Science</span>
+                </label>
+            </div>
+            <!-- English -->
+            <div class="interest slide slide-right">
+                <input type="checkbox" class="visually-hidden" id="english" name="interest" value="english" checked>
+                <label for="english" class="btn">
+                    <span>English</span>
+                </label>
+            </div>
+            <!-- World Languages -->
+            <div class="interest slide slide-left">
+                <input type="checkbox" class="visually-hidden" id="world-languages" name="interest" value="world-languages">
+                <label for="world-languages" class="btn">
+                    <span>World Languages</span>
+                </label>
+            </div>
+            <!-- Health & PE -->
+            <div class="interest slide slide-right">
+                <input type="checkbox" class="visually-hidden" id="health-pe" name="interest" value="health-pe" checked>
+                <label for="health-pe" class="btn">
+                    <span>Health & PE</span>
+                </label>
+            </div>
+            <!-- Special Education -->
+            <div class="interest slide slide-right">
+                <input type="checkbox" class="visually-hidden" id="special-education" name="interest" value="special-education">
+                <label for="special-education" class="btn">
+                    <span>Special Education</span>
+                </label>
+            </div>
+            <!-- Development -->
+            <div class="interest slide slide-left">
+                <input type="checkbox" class="visually-hidden" id="development" name="interest" value="development">
+                <label for="development" class="btn">
+                    <span>Development</span>
+                </label>
+            </div>
+            <!-- Technology -->
+            <div class="interest slide slide-down">
+                <input type="checkbox" class="visually-hidden" id="technology" name="interest" value="technology">
+                <label for="technology" class="btn">
+                    <span>Technology</span>
+                </label>
+            </div>
+            <!-- Social Studies -->
+            <div class="interest slide slide-right">
+                <input type="checkbox" class="visually-hidden" id="social-studies" name="interest" value="social-studies" checked>
+                <label for="social-studies" class="btn">
+                    <span>Social Studies</span>
+                </label>
+            </div>
+    
+        </main>
+        <footer class="slide slide-down">
+            <div class="buttons">
+                <button type="button" class="btn" id="skip">Skip</button>
+                <button type="button" class="btn" id="save">Save</button>
+            </div>
+        </footer>
+    </form>    
 </body>
+
+
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e1428b0a9e.js" crossorigin="anonymous"></script>
+</head>
+<body class="grid place-items-center md:min-h-screen bg-blue-50">
+
+    <div id="ball" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+    
+    <nav class="flex flex-col sm:flex-row items-center gap-5 w-4/5 max-w-[1200px] p-5 rounded-lg shadow-lg bg-blue-50/70 border-8 border-white mt-12 z-10">
+        <ul class="flex items-center flex-wrap gap-6">
+            <li>FRAMEWORK</li>
+            <li>DEMOS</li>
+            <li id="open-submenu" class="relative cursor-poiter flex items-center gap-2">
+                RESOURCES <i class="fa fa-chevron-up"></i>
+                <div class="absolute left-0 top-full w-52 sm:w-72 bg-white overflow-hidden rounded-lg max-h-0 shadow-lg text-sm transition-all duration-300">           
+                    <div class="grid sm:grid-cols-2 gap-4 p-5 ">
+                        <ul class="space-y-2">
+                            <h3 class="font-bold">TOP CHANNELS</h3>
+                            <li>Grid</li>
+                            <li>Chart</li>
+                            <li>Controls</li>
+                            <li>Financial Chart</li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <h3 class="font-bold">TOP CONTROLS</h3>
+                            <li>API</li>
+                            <li>Blogs</li>
+                            <li>Knowldge Base</li>
+                            <li>Videos</li>
+                            <li>Forums</li>
+                            <li>Licensing</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>DOCUMENTATION</li>
+        </ul>
+
+        <button class="md:ml-auto py-2 w-24 text-sm font-semibold shrink-0">LOG IN</button>
+        <button class=" py-2 w-24 text-sm font-semibold rounded-md bg-neutral-800 text-white shrink-0">SIGN UP</button>
+    </nav>
+    
+</body>
+</html>

@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
 :root {
+    /* Colors */
     --text: #efeff4;
-    --background: #23232C;
+    /* --text: #1f1f1f; */
+    /* --background: #23232C; */
+    --background: #121212;
     --primary: #1C1C25;
     --secondary: #5b5640;
     --accent: #a3ff00;
@@ -76,23 +80,35 @@
     --radialSecondaryAccent: radial-gradient(#5b5640, #a3ff00);
     
     /* Typography */
-    --fs-1000: clamp(3rem, -0.0347rem + 12.9480vw, 10rem);
-    --fs-900: 3rem;
+    --fs-1000: clamp(2.5rem, -1.61290322580645rem + 12.9032258064516vw, 10rem);
+    --fs-1000: 10rem;
+    --fs-900: 5rem;
+    --fs-900: clamp(3rem, 1.51485148514851rem + 6.33663366336634vw, 5rem);
+    --fs-850: 2.5rem;
+    --fs-850: clamp(1.5rem, 0.757425742574257rem + 3.16831683168317vw, 2.5rem);
     --fs-800: 2rem;
+    --fs-750: 1.875rem;
     --fs-700: 1.75rem;
+    --fs-700: clamp(1rem, 0.814356435643564rem + 0.792079207920792vw, 1.25rem);
     --fs-650: 1.5rem;
+    --fs-625: 1.375rem;
     --fs-600: 1.25rem;
     --fs-500: 1.125rem;
     --fs-400: 1rem;
     --fs-300: .875rem;
     --fs-200: .75rem;
-    --ff-header: "Inter", sans-serif;
-    --ff-body: "Inter", sans-serif;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Montserrat", sans-serif;
+    --ff-body: "Lato", sans-serif;
 
     --border-radius: 8px;
+    --gutter-width: 1rem;
+    --container-width: 600px;
+    --max-width: 100%;
+    --min-width: 375px;
 }
 
-
+/* CSS Reset  */
 *,
 *::before,
 *::after {
@@ -101,13 +117,24 @@
     padding: 0;
 }
 
-* ul {
+ul {
     list-style-type: none;
 }
 
-* ul a {
+a {
     color: inherit;
     text-decoration: none;
+}
+
+p,
+li,
+figcaption {
+    text-wrap: pretty;
+    max-width: 70ch;
+}
+
+img {
+    display: block;
 }
 
 input,
@@ -117,6 +144,55 @@ select {
     font: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+  /* For IE10 */
+select::-ms-expand {
+    display: none;
+}
+
+/* Container queries */
+body > :is(header, footer),
+main,
+section, 
+article {
+    /* container-type: inline-size; */
+}
+
 body {
     line-height: 1.5;
     font-family: var(--ff-body);
@@ -124,25 +200,44 @@ body {
     font-weight: 400;
     max-width: var(--max-width);
     min-width: var(--min-width);
-    min-height: 100vh;
+
+    min-block-size: 100svh;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ededed;
-    color: #373232;
-}
-.container {
-    margin: auto;
-    width: 100%;
-    min-height: 100vh;
     display: grid;
+    grid-template-columns: 
+        minmax(var(--gutter-width), 1fr)
+        min(100% - calc(2 * var(--gutter-width)), var(--container-width))
+        minmax(var(--gutter-width), 1fr);
     place-items: center;
-    gap: 1rem;
-    padding: 1rem;
+
+
     background: var(--background);
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: radial-gradient(75% 75% at 50% 50%, #1a1a1aFF 0%, #000000FF 100%);
     color: var(--text);
+    position: relative;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
     overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.disable-scrolling {
+    overflow-y: hidden;
 }
 
 /* --------------------- */
@@ -164,7 +259,7 @@ body {
 }
 
 .scale-up {
-    transform: scale(1);
+    transform: scale(1.2);
 }
 
 .scale-down {
@@ -178,21 +273,59 @@ body {
 .scale,
 .slide,
 .rotate {
-    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
 }
 
 /* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1), border .5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+body > * {
+    grid-column: 2 / 3;
+}
 
 #browse {
     display: grid;
     grid-auto-rows: auto;
     gap: 1rem;
-    background: var(--primary);
+    background: var(--primary-800);
     border-radius: var(--border-radius);
     padding-block: 1rem;
-    box-shadow: 0 5px 10px 5px rgb(255, 255, 255, .1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8), 0px 5px 10px -2px rgb(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 600px;
     overflow: hidden;
 }
 
@@ -202,7 +335,7 @@ header {
     margin: 0 auto;
 
     h1 {
-        font-size: var(--fs-500);
+        font-size: var(--fs-650);
         font-weight: 700;
         margin-bottom: .5rem;
     }
@@ -220,7 +353,6 @@ header {
     place-items: center;
     padding: 1rem 2rem;
     gap: 1rem;
-    /* overflow: hidden; */
 }
 
 .interest {
@@ -228,36 +360,38 @@ header {
     place-items: center;
     width: 100%;
     position: relative;
+    border-radius: var(--border-radius);
+    outline: 2px solid transparent;
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35), outline .3s linear;
 }
 
-.interest:hover > label {
-    border-color: var(--accent);
+.interest:has(:checked) {
+    outline-color: var(--accent);
 }
 
 label {
+    --btn-bg-color: var(--primary);
+    --btn-text-color: var(--text);
+    --btn-border-color: none;
+    --btn-hover-bg-color: rgb(255, 255, 255, 10%);
+    --btn-hover-text-color: var(--text);
+    --btn-hover-border-color: none;
     width: 100%;
     padding-block: 1rem;
-    border-radius: var(--border-radius);
-    border: 2px solid transparent;
-    background: var(--background-900);
+    border-radius: inherit;
     text-align: center;
     cursor: pointer;
     transition: all .3s linear;
 }
 
-input[type="checkbox"] {
-    position: absolute;
-    top: 1rem;
-    right: 0;
-    visibility: hidden;
-
-}
-
 input[type="checkbox"]:checked ~ label {
-    box-shadow: 0px 1px 2px var(--accent-opaque), 
-    0px 2px 4px var(--accent-opaque), 
-    0px 4px 8px var(--accent-opaque), 
-    0px 8px 16px var(--accent-opaque);
+    --btn-bg-color: var(--background);
+    --btn-text-color: var(--accent);
+    --btn-border-color: none;
+    --btn-hover-bg-color: rgb(255, 255, 255, 10%);
+    --btn-hover-text-color: var(--text);
+    --btn-hover-border-color: none;
+    box-shadow: none;
 }
 
 footer {
@@ -271,49 +405,32 @@ footer {
     gap: 1rem;
 }
 
-.btn {
-    outline: none;
-    border: none;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background: inherit;
-    padding: .5em 1em;
-    font-weight: 700;
-    border-radius: var(--border-radius);
-    border: 2px solid transparent;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
+.buttons > .btn {
+    box-shadow: none;
+    padding: .5rem 2rem;
 }
 
-.btn::before {
-    content: "";
-    position: absolute;
-    inset: 100%;
-    background: transparent;
-    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
+#skip {
+    --btn-bg-color: none;
+    --btn-text-color: var(--text);
+    --btn-border-color: none;
+    --btn-hover-bg-color: none;
+    --btn-hover-text-color: var(--accent);
+    --btn-hover-border-color: none;
 }
 
-.btn:hover::before {
-    inset: 0;
-    border-color: var(--accent);
-    background: var(--accent-opaque);
 
-}
-
-#skip:hover {
-    color: var(--accent);
-}
-#skip:hover::before {
-    background: none;
-}
 #save {
-    border-color: var(--accent);
+    --btn-bg-color: var(--primary);
+    --btn-text-color: var(--text);
+    --btn-border-color: var(--accent);
+    --btn-hover-bg-color: var(--accent);
+    --btn-hover-text-color: var(--background);
+    --btn-hover-border-color: var(--accent);
 }
 
 /* CSS styles for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
 }
+

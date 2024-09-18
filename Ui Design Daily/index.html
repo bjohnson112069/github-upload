@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Ui Design Daily</title>
+</head>
+
+<body>
+    <article id="ui-design-daily">
+        <header>
+            <a href="#" class="logo">
+                <img src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/65448dc5e7199c24f9d5a9d1_uidesigndaily.svg" alt="logo image">
+            </a>
+            <button type="button" id="mobile-menu-button" aria-label="mobile menu button"></button>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link active">Free designs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">License</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Articles</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contributors</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                </ul>
+                <div class="nav-auth">
+                    <a href="#" class="btn" id="login">Log In</a>
+                    <a href="#" class="btn" id="sign-up">Sign Up</a>
+                </div>    
+            </nav>
+        </header>
+        <main>
+            <section id="day">
+                <span>Day 1384</span>
+            </section>
+            <section id="search-designs">
+                <h1>Free UI resources for everyone</h1>
+                <p>The largest database of 100% free UI components and designs available in the formats popular by UI designers.</p>
+                <!-- Search Form -->
+                <form id="search-form">
+                    <!-- Search Dropdown List -->
+                    <div class="dropdown" id="dropdown-search">
+                        <button type="button" class="dropdown-btn" value="designs">
+                            <span id="dropdown-choice">Free designs</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list" id="search-list">
+                                <li class="dropdown-item btn">
+                                    <a class="dropdown-link" href="#">Free designs</a>
+                                </li>
+                                <li class="dropdown-item btn">
+                                    <a class="dropdown-link" href="#">Free components</a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </div>
+                    <!-- Search Text Input -->
+                    <div class="input-wrapper">
+                        <label for="search" class="visually-hidden">Search</label>
+                        <input type="text" placeholder="Search" id="search" name="search" />
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </form>
+            </section>
+            <section id="gallery">
+                <!-- Filters -->
+                <div class="filters-bl">
+                    <div class="filters" id="quick-filters">
+                        <button type="button" class="filter active" value="latest">Latest</button>
+                        <button type="button" class="filter" value="popular">Popular</button>
+                    </div>
+                    <div class="filters" id="category-filters">
+                        <button type="button" class="filter active" value="all">All</button>
+                        <button type="button" class="filter" value="web">Web</button>
+                        <button type="button" class="filter" value="mobile">Mobile</button>
+                        <button type="button" class="filter" value="kit">UI Kit</button>
+                        <button type="button" class="filter" value="coded">Coded</button>
+                    </div>
+                    <!-- need to refactor for checkboxes (future) -->
+                    <div class="filters" id="format-filters">
+                        <button type="button" class="filter" value="figma" aria-label="figma format">
+                            <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544b2d5ff8b6c207fb4464c_Bramd%3DFigma.svg" alt="figma icon">
+                        </button>
+                        <button type="button" class="filter" value="sketch" aria-label="3D sketch format">
+                            <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf465f4ecf984a28ee91_Bramd%3DSketch.svg" alt="3D sketch icon">
+                        </button>
+                        <button type="button" class="filter" value="studio" aria-label="3D studio format">
+                            <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf46aaf3e6a930122047_Bramd%3DStudio.svg" alt="3D studio icon">
+                        </button>
+                        <button type="button" class="filter" value="xd" aria-label="adobe Xd format">
+                            <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf46f00a24ab8c1f61fb_Bramd%3DXD.svg" alt="adbobe Xd icon">
+                        </button>
+                        <button type="button" class="filter" value="photoshop" aria-label="adobe photoshop format">
+                            <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf459fa568e14078aec9_Bramd%3DPhotoshop.svg" alt="adobe photoshop icon">
+                        </button>
+                    </div>
+                </div>
+                <!-- Slider/Thumbnails -->
+                <div class="slider">
+                    <div class="thumbnails">
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <img src="https://uidesigndaily.fra1.digitaloceanspaces.com/uploads/1400/day_1400_thumb.png" alt="thumbnail image">
+                            <div class="overlay">
+                                <div class="icon">
+                                    <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544b2d5ff8b6c207fb4464c_Bramd%3DFigma.svg" alt="figma icon">
+                                </div>
+                                <div class="publisher">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/150?img=1" alt="avatar image">
+                                        <p>by <span class="name">Jenny Molla</span></p>
+                                    </div>
+                                    <div class="stats">
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code-fork"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <img src="https://uidesigndaily.fra1.digitaloceanspaces.com/uploads/1401/day_1401_thumb.png" alt="thumbnail image">
+                            <div class="overlay">
+                                <div class="icon">
+                                    <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf465f4ecf984a28ee91_Bramd%3DSketch.svg" alt="3D sketch icon">
+                                </div>
+                                <div class="publisher">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/150?img=1" alt="avatar image">
+                                        <p>by <span class="name">Jenny Molla</span></p>
+                                    </div>
+                                    <div class="stats">
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code-fork"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <img src="https://uidesigndaily.fra1.digitaloceanspaces.com/uploads/1402/day_1402_thumb.png" alt="thumbnail image">
+                            <div class="overlay">
+                                <div class="icon">
+                                    <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf46aaf3e6a930122047_Bramd%3DStudio.svg" alt="3D studio icon">
+                                </div>
+                                <div class="publisher">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/150?img=1" alt="avatar image">
+                                        <p>by <span class="name">Jenny Molla</span></p>
+                                    </div>
+                                    <div class="stats">
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code-fork"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <img src="https://uidesigndaily.fra1.digitaloceanspaces.com/uploads/1403/day_1403_thumb.png" alt="thumbnail image">
+                            <div class="overlay">
+                                <div class="icon">
+                                    <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf46f00a24ab8c1f61fb_Bramd%3DXD.svg" alt="adbobe Xd icon">
+                                </div>
+                                <div class="publisher">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/150?img=1" alt="avatar image">
+                                        <p>by <span class="name">Jenny Molla</span></p>
+                                    </div>
+                                    <div class="stats">
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code-fork"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thumbnail -->
+                        <div class="thumbnail">
+                            <img src="https://uidesigndaily.fra1.digitaloceanspaces.com/uploads/1404/day_1404_thumb.png" alt="thumbnail image">
+                            <div class="overlay">
+                                <div class="icon">
+                                    <img class="sprite" src="https://cdn.prod.website-files.com/572cc412e8e48c8223fa0e57/6544bf459fa568e14078aec9_Bramd%3DPhotoshop.svg" alt="adobe photoshop icon">
+                                </div>
+                                <div class="publisher">
+                                    <div class="user">
+                                        <img src="https://i.pravatar.cc/150?img=1" alt="avatar image">
+                                        <p>by <span class="name">Jenny Molla</span></p>
+                                    </div>
+                                    <div class="stats">
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                        <div class="stat">
+                                            <i class="fa-solid fa-code-fork"></i>
+                                            <span class="stat-value">25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </article>
+
+</body>
+
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Dashboard Ui</title>
+</head>
+
+<body>
+    <article id="dashboard-ui">
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Users</a></li>
+                </ul>
+            </nav>
+            <div class="extras">
+                <button type="button" class="btn" id="add-new-segment">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add new segment</span>
+                </button>
+                <button type="button" id="notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span id="num-notifications">3</span>
+                </button>
+                <div class="avatar">
+                    <img src="https://i.pravatar.cc/150?img=1" alt="avatar image">
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="section-upgrade">
+                <i class="fa-solid fa-square-up-right"></i>
+                <p>Upgrade to <strong>PRO</strong> to unlock more features</p>
+                <button type="button" class="btn" id="upgrade">UPGRADE</button>
+            </section>
+            <section id="section-boards">
+                <section id="board-users">
+                    <span>Users</span>
+                    <h1 class="num-users">9,452</h1>
+                    <div class="chart">
+                        <canvas id="users"></canvas>
+                    </div>
+                </section>
+                <section id="board-new-users">
+                    <span>New users</span>
+                    <h1 id="num-new-users">6,245</h1>
+                    <div class="chart">
+                        <canvas id="new-users"></canvas>
+                    </div>
+                </section>
+                <section id="board-interactions">
+                    <div class="interactions">
+                        <!-- Direct -->
+                        <div class="interaction" id="direct">
+                            <div class="legend">
+                                <span class="circle" aria-label="color indicator"></span>
+                                <span id="legend-value">24%</span>
+                                <span id="legend-title">Direct</span>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                        <!-- Social -->
+                        <div class="interaction" id="social">
+                            <div class="legend">
+                                <span class="circle" aria-label="color indicator"></span>
+                                <span id="legend-value">31%</span>
+                                <span id="legend-title">Social</span>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                        <!-- Organic -->
+                        <div class="interaction" id="organic">
+                            <div class="legend">
+                                <span class="circle" aria-label="color indicator"></span>
+                                <span id="legend-value">45%</span>
+                                <span id="legend-title">Organic</span>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </section>    
+            </section>
+        </main>
+    </article>
+</body>
+
+</html>
