@@ -276,26 +276,16 @@ body > * {
 }
 
 .grid-panel {
-    --gutter-width: 1.75rem;
-    --container-width: 100%;
     display: grid;
-    grid-template-columns: 
-        minmax(var(--gutter-width), 1fr)
-        min(100% - calc(2 * var(--gutter-width)), var(--container-width))
-        minmax(var(--gutter-width), 1fr);
     grid-auto-rows: min-content;
     align-content: center;
     align-items: center;
-    row-gap: var(--gap, 1rem);
-    padding-block: 1.75rem;
+    gap: var(--gap, 1rem);
+    padding: 1.75rem;
     grid-column: span 1;
     border-radius: var(--border-radius);
     background: var(--clr-white);
-    /* overflow: hidden; */
-}
-
-.grid-panel > * {
-    grid-column: 2;
+    overflow: hidden;
 }
 
 .grid-panel img {
@@ -303,10 +293,8 @@ body > * {
 }
 
 .img-wrapper {
-    grid-column: 2 / -1;
     width: 100%;
     position: relative;
-    overflow: hidden;
 }
 
 .img-wrapper > img {
@@ -366,7 +354,7 @@ h1 {
 }
 
 #schedule > .img-wrapper {
-    aspect-ratio: 1 / 1.4;
+    aspect-ratio: 1 / 1.5;
 }
 
 #schedule img {
@@ -403,24 +391,13 @@ h1 {
 }
 
 #maintain {
-    --gap: 0;
     grid-row: 12 / span 9;
-    padding: 0;
-    grid-template-rows: 1.75rem repeat(2, 1fr) 1.75rem;
     align-content: start;
     background: var(--clr-yellow-500);
 }
 
 #maintain > h1 {
-    grid-row: 2;
-    margin-bottom: 1.5rem;
     font-size: 2rem;
-}
-
-#maintain > .img-wrapper {
-    grid-column: 2 / span 1; /* override default bleed */
-    grid-row: 3 / -1;
-    height: 100%;
 }
 
 #maintain img {
@@ -441,16 +418,12 @@ h1 {
     grid-row: 21 / span 9;
     grid-column: span 2;
     display: grid;
-    grid-template-columns: 
-    minmax(var(--gutter-width), 1fr)
-    repeat(2, calc(min(100% - calc(2 * var(--gutter-width)), var(--container-width)) / 2) )
-    minmax(var(--gutter-width), 1fr);
+    grid-template-columns: 215px 1fr;
     background: var(--clr-purple-500);
     color: var(--clr-white);
 }
 
 #followers > h1 {
-    grid-column: 3;
     font-size: 2.25rem;
 }
 
@@ -472,7 +445,7 @@ h1 {
     
     #followers {
         grid-column: 1;
-        grid-row: 30 / span 11;
+        grid-row: 30 / span 8;
         grid-column: span 2;
     }
 
@@ -515,7 +488,7 @@ h1 {
 
     #followers {
         grid-column: 1;
-        grid-row: 54 / span 11;
+        grid-row: 54 / span 8;
         grid-column: span 2;
     }
 }
@@ -530,19 +503,7 @@ h1 {
     .grid-panel {
         grid-column: 1 / span 1 !important;
     }
-
-    .img-wrapper {
-        aspect-ratio: 1;
-        grid-column: 2 / span 1;
-        outline: 1px solid red;
-    }
-
-    .img-wrapper > img {
-        /* max-width: 100%; */
-        inset: 0;
-        object-fit: cover;
-    }
-        
+    
     #ai {
         grid-row: 1 / span 12;
     }
@@ -558,10 +519,6 @@ h1 {
     #manage {
         grid-row: 44 / span 9;
         grid-column: 2;
-    }
-
-    #manage > .img-wrapper {
-        aspect-ratio: 1 / .2;
     }
 
     #maintain {
@@ -582,13 +539,9 @@ h1 {
         aspect-ratio: 1;
     }
 
-    #schedule img {
-        max-width: 100%;
-    }
-
     #followers {
         grid-column: 1;
-        grid-row: 96 / span 11;
+        grid-row: 96 / span 8;
     }
 }
 
@@ -601,16 +554,7 @@ h1 {
 
     #followers {
         grid-row: 96 / span 19;
-        grid-template-columns: 
-        minmax(var(--gutter-width), 1fr)
-        min(100% - calc(2 * var(--gutter-width)), var(--container-width))
-        minmax(var(--gutter-width), 1fr);
-        grid-auto-flow: row;
-        grid-auto-rows: min-content;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
     }
-    
-    #followers > h1 {
-        grid-column: 2;
-    }
-
 }

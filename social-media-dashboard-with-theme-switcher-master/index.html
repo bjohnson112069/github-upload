@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Social Media Dashboard with Theme Switcher</title>
+</head>
+
+<body>
+    <div class="bg-top" arial-label="decorate top background pattern"></div>
+    <article id="social-media-dashboard-with-theme-switcher-master">
+        <header>
+            <div>
+                <h1>Social Media Dashboard</h1>
+                <p>Total Followers: <span id="follower-count">0</span></p>
+            </div>
+            <input type="checkbox" id="color-theme" name="theme" class="visually-hidden" />
+            <label for="color-theme" class="theme-switcher">
+                <span>Dark Mode</span>
+                <div class="switch">
+                    <span class="toggle"></span>
+                </div>
+            </label>
+        </header>
+        <main>
+            <!-- DETAILS (TOP) -->
+            <section id="details-top">
+                <div class="grid-content" id="details">
+                    <!-- injected by JS -->
+                </div>
+            </section>
+            <!-- OVERVIEW (BOTTOM) -->
+            <section id="overview-today">
+                <h2>Overview - Today</h2>
+                <div class="grid-content" id="overview">
+                    <!-- injected by JS -->
+                </div>
+            </section>
+        </main>
+
+    </article>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+</body>
+
+
+</html>

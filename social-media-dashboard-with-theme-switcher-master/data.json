@@ -1,0 +1,83 @@
+{
+  "total": 23004,
+  "details": [
+    {
+      "platform": "facebook",
+      "user": "@nathanf",
+      "label": "followers",
+      "count": "1987",
+      "trend": 12
+    },
+    {
+      "platform": "twitter",
+      "user": "@nathanf",
+      "label": "followers",
+      "count": "1044",
+      "trend": 99
+    },
+    {
+      "platform": "instagram",
+      "user": "@realnathanf",
+      "label": "followers",
+      "count": "11k",
+      "trend": 1099
+    },
+    {
+      "platform": "youtube",
+      "user": "Nathan F.",
+      "label": "subscribers",
+      "count": "8239",
+      "trend": -144
+    }
+  ],
+  "overview": [
+    {
+      "platform": "facebook",
+      "label": "page views",
+      "count": "87",
+      "trend": 3
+    },
+    {
+      "platform": "facebook",
+      "label": "likes",
+      "count": "52",
+      "trend": -2
+    },
+    {
+      "platform": "instagram",
+      "label": "likes",
+      "count": 5462,
+      "trend": 2257
+    },
+    {
+      "platform": "instagram",
+      "label": "profile views",
+      "count": "52k",
+      "trend": 1375
+    },
+    {
+      "platform": "twitter",
+      "label": "retweets",
+      "count": "117",
+      "trend": 303
+    },
+    {
+      "platform": "twitter",
+      "label": "likes",
+      "count": "507",
+      "trend": 553
+    },
+    {
+      "platform": "youtube",
+      "label": "likes",
+      "count": 107,
+      "trend": -19
+    },
+    {
+      "platform": "youtube",
+      "label": "total views",
+      "count": 1407,
+      "trend": -12
+    }
+  ]
+}
