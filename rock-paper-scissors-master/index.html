@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Rock, Paper, Scissors, Lizard, Spock</title>
+</head>
+
+<body>
+    <article id="rock-paper-scissors-lizard-spock">
+        <header>
+            <img src="./images/logo-bonus.svg" alt="logo" widt="115" height="114">
+            <div class="scoreboard">
+                <span>SCORE</span>
+                <h1 class="score">0</h1>
+            </div>
+        </header>
+        <main>
+            <div class="sections">
+                <section class="section-left">
+                    <div class="choices">
+                        <button type="button" class="choice rock" value="rock" arial-label="rock">
+                            <div class="icon"> 
+                                <!-- BG image -->
+                            </div>
+                        </button>
+                        <button type="button" class="choice paper" value="paper" arial-label="paper">
+                            <div class="icon"> 
+                                <!-- BG image -->
+                            </div>
+                        </button>
+                        <button type="button" class="choice scissors" value="scissors" arial-label="scissors">
+                            <div class="icon"> 
+                                <!-- BG image -->
+                            </div>
+                        </button>
+                        <button type="button" class="choice lizard" value="lizard" arial-label="lizard">
+                            <div class="icon"> 
+                                <!-- BG image -->
+                            </div>
+                        </button>
+                        <button type="button" class="choice spock" value="spock" arial-label="spock">
+                            <div class="icon"> 
+                                <!-- BG image -->
+                            </div>
+                        </button>
+                    </div>    
+                </section>
+                <section class="section-right">
+                    <div class="results">
+                        <div class="result" id="player">
+                            <h2>YOU PICKED</h2>
+                            <div class="choice">
+                                <div class="icon"> 
+                                    <!-- BG image -->
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="winner">
+                            <h1>YOU <span class="win-lose">LOSE</span></h1>
+                            <button type="button" class="btn" id="play-again">PLAY AGAIN</button>
+                        </div>
+                        <div class="result" id="computer">
+                            <h2>THE HOUSE PICKED</h2>
+                            <div class="choice">
+                                <div class="icon"> 
+                                    <!-- BG image -->
+                                </div>    
+                            </div>
+                        </div>
+                    </div>        
+                </section>
+            </div>
+        </main>
+        <footer>
+            <button type="button" class="btn" id="rules">RULES</button>
+        </footer>
+    </article>
+    <section class="outer-modal">
+        <div class="inner-modal">
+            <h3>RULES</h3>
+            <img src="./images/image-rules-bonus.svg" alt="image of the rules">
+            <button type="button" id="close-modal" aria-label="close rules">
+                <svg class="icon-close">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </button>    
+        </div>    
+    </section>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+    <!-- Inline SVG -->
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="icon-close">
+            <path fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z"></path>
+        </symbol>
+    </svg>
+</body>
+
+
+</html>
