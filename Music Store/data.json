@@ -1,0 +1,113 @@
+{
+  "explore": [
+    {
+      "album": "Like A G6 (with Naeleck)",
+      "artist": "Timmy Trumpet & POLTERGST feat. Naeleck",
+      "rating": 3.4,
+      "cover": "https://m.media-amazon.com/images/I/51DdIpnhWEL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 1.29
+    },
+    {
+      "album": "Blue Skies: The Remixes",
+      "artist": "Lenka",
+      "rating": 4.2,
+      "cover": "https://m.media-amazon.com/images/I/41K1-Lt6cwL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 5.16
+    },
+    {
+      "album": "Ratata (Outsiders Remix)",
+      "artist": "La Fuente & Outsiders",
+      "rating": 5,
+      "cover": "https://m.media-amazon.com/images/I/51wF-Sv6ywL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 1.29
+    },
+    {
+      "album": "Unstoppable",
+      "artist": "Zatox",
+      "rating": 4.8,
+      "cover": "https://m.media-amazon.com/images/I/51lC49M30+L._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 8.99
+    }
+  ],
+  "top": [
+    {
+      "album": "Nighttime",
+      "artist": "Dolf",
+      "rating": 4.1,
+      "cover": "https://m.media-amazon.com/images/I/51DbM3-WsPL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 4.99
+    },
+    {
+      "album": "Blow The Speakers",
+      "artist": "Dr Phunk & Maikki",
+      "rating": 5,
+      "cover": "https://m.media-amazon.com/images/I/517qTXW0XNL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 1.29
+    },
+    {
+      "album": "Dark Night Sweet Light",
+      "artist": "Hermitude",
+      "rating": 3.9,
+      "cover": "https://m.media-amazon.com/images/I/512KMlWFXjL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 8.99
+    }
+  ],
+  "recommended": [
+    {
+      "album": "I'd Love To Change The World (Matstubs Remix)",
+      "artist": "Jetta",
+      "rating": 4.2,
+      "cover": "https://m.media-amazon.com/images/I/51iYtHLUldL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 1.29
+    },
+    {
+      "album": "Make Dem (feat. Kédo Rebelle)",
+      "artist": "JRND & VMK feat. Kédo Rebelle",
+      "rating": 5,
+      "cover": "https://m.media-amazon.com/images/I/41Q3MMq5vzL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 0.99
+    },
+    {
+      "album": "Blood, Sweat & 3 Years",
+      "artist": "Cash Cash",
+      "rating": 3.8,
+      "cover": "https://m.media-amazon.com/images/I/51VgG-fnp5L._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 9.49
+    },
+    {
+      "album": "Gimme Bass",
+      "artist": "Outsiders",
+      "rating": 4.5,
+      "cover": "https://m.media-amazon.com/images/I/51PECh85GpL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 1.29
+    },
+    {
+      "album": "Run For Cover (feat. Maikki)",
+      "artist": "Wildstylez & Coone",
+      "rating": 5,
+      "cover": "https://m.media-amazon.com/images/I/51wHR49RieL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 2.58
+    },
+    {
+      "album": "The Silence (Of My Sins)",
+      "artist": "Sub Zero Project",
+      "rating": 4.1,
+      "cover": "https://m.media-amazon.com/images/I/51gLECh9gkL._UX500_FMwebp_QL85_.jpg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed ducimus sunt saepe, reiciendis fugiat a nobis maxime et dolor dolore ut enim ipsa aliquid, placeat, necessitatibus doloribus velit repudiandae",
+      "price": 0.99
+    }
+  ]
+
+}

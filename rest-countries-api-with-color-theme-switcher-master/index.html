@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | REST Countries API</title>
+</head>
+
+<body>
+    <article id="rest-countries-api">
+        <header class="grid-container">
+            <div class="header-wrapper">
+                <h1>Where in the world?</h1>
+                <input type="checkbox" id="color-theme" name="theme" class="visually-hidden" />
+                <label for="color-theme" class="theme-switcher">
+                    <div class="icon-mode">
+                        <!-- BG Image -->
+                    </div>
+                    <span>Dark Mode</span>
+                </label>    
+            </div>
+        </header>
+        <main class="grid-container">
+            <div class="sections">
+                <!-- SECTION: HOME PAGE -->
+                <section class="home">
+                    <!-- FORM: FILTERS -->
+                    <form class="filters">
+                        <!-- Search Text Input -->
+                        <div class="input-wrapper">
+                            <label for="search" class="visually-hidden">Search</label>
+                            <input type="text" placeholder="Search for a  country..." id="search" name="search" />
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <!-- Search Dropdown List -->
+                        <div class="dropdown" id="dropdown-search">
+                            <button type="button" class="dropdown-btn" value="designs">
+                                <span id="dropdown-choice">Filter by Region</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <ul class="dropdown-list" id="search-list">
+                                    <!-- <li class="dropdown-item btn">
+                                        <a href="#" class="dropdown-link">Africa</a>
+                                    </li>
+                                    <li class="dropdown-item btn">
+                                        <a href="#" class="dropdown-link">America</a>
+                                    </li>
+                                    <li class="dropdown-item btn">
+                                        <a href="#" class="dropdown-link">Asia</a>
+                                    </li>
+                                    <li class="dropdown-item btn">
+                                        <a href="#" class="dropdown-link">Europe</a>
+                                    </li>
+                                    <li class="dropdown-item btn">
+                                        <a href="#" class="dropdown-link">Oceania</a>
+                                    </li> -->
+                                </ul>    
+                            </div>
+                        </div>
+                    </form>
+                    <!-- SECTION: COUNTRIES -->
+                    <section class="countries-home">
+                        <ul class="countries">
+                            <!-- <li class="country" data-name="Germany">
+                                <div class="flag">
+                                    <img src="./images/moon-solid.svg" alt="image of the country's flag">
+                                </div>
+                                <div class="stat-bl">
+                                    <h2 class="name">Germany</h2>
+                                    <div class="stat">
+                                        <span class="label">Population:</span>
+                                        <span class="value">81,770,900</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Region:</span>
+                                        <span class="value">Europe</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Capital:</span>
+                                        <span class="value">Berlin</span>
+                                    </div>    
+                                </div>
+                            </li> -->
+                        </ul>
+                    </section>    
+                </section>
+                <!-- SECTION: DETAILS -->
+                <section class="countries-detail">
+                    <button type="button" class="btn" id="back">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                        <span>Back</span>
+                    </button>
+                    <div class="details">
+                        <div class="flag"></div>
+                        <div class="detail">
+                            <h2 class="name">Germany</h2>
+                            <div class="stats">
+                                <div class="stat-bl">
+                                    <div class="stat">
+                                        <span class="label">Native Name:</span>
+                                        <span class="value">Belgie</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Population:</span>
+                                        <span class="value">81,770,900</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Region:</span>
+                                        <span class="value">Europe</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Sub Region:</span>
+                                        <span class="value">Western Europe</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Capital:</span>
+                                        <span class="value">Berlin</span>
+                                    </div>    
+                                </div>
+                                <div class="stat-bl">
+                                    <div class="stat">
+                                        <span class="label">Top Level Domain:</span>
+                                        <span class="value">.be</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Currencies:</span>
+                                        <span class="value">Euro</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Languages:</span>
+                                        <span class="value">Dutch, French, German, Dutch, French, German</span>
+                                    </div>    
+                                </div>        
+                            </div>
+                            <div class="stat" id="borders">
+                                <span class="label">Border Countries:</span>
+                                <span class="value">France</span>
+                                <span class="value">Germany</span>
+                                <span class="value">Netherlands</span>
+                                <span class="value">France</span>
+                                <span class="value">Germany</span>
+                                <span class="value">Netherlands</span>
+                            </div>    
+                        </div>
+                    </div>
+                </section>
+            </div>    
+        </main>
+    </article>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+    <!-- Inline SVG -->
+
+</body>
+
+
+</html>
