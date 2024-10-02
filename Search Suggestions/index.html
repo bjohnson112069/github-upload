@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Search Suggestions</title>
+</head>
+
+<body>
+    <article id="search-suggestions">
+        <!-- Search Form -->
+        <form>
+            <!-- Search Text Input -->
+            <div class="input-wrapper">
+                <label for="search" class="visually-hidden">Search</label>
+                <input type="text" placeholder="Apple" id="search" name="search" />
+                <!-- Search Dropdown List -->
+                <div class="dropdown" id="dropdown-launguages">
+                    <button type="button" class="dropdown-btn" value="EN">
+                        <span id="dropdown-choice">EN</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <ul class="dropdown-list" id="search-list">
+                            <li class="dropdown-item btn">
+                                <a href="#" class="dropdown-link">EN</a>
+                            </li>
+                            <li class="dropdown-item btn">
+                                <a href="#" class="dropdown-link">FR</a>
+                            </li>
+                            <li class="dropdown-item btn">
+                                <a href="#" class="dropdown-link">ES</a>
+                            </li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+            <!-- Search Button -->
+            <button type="button" class="btn" id="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <!-- Search Results -->
+        <section class="search-results visually-hidden">
+            <ul class="results">
+                <!-- injected by JS -->
+            </ul>
+        </section>
+    </article>
+    <!-- Inline SVG -->
+</body>
+
+
+</html>
