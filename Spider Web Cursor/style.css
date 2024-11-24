@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+:root {
+    /* Colors */
+    --clr-body-bg: #202020;
+    --text: hsl(0, 0%, 17%);
+    --background: hsl(0, 0%, 100%);
+    --primary: hsl(257, 72%, 64%);
+    --secondary: hsl(68, 10%, 72%);
+    --accent: hsl(92, 10%, 63%);    
+    --clr-reddit: hsl(16.24, 100%, 50%);
+    --clr-facebook: hsl(217.17, 100%, 51.57%);
+    --clr-x: hsl(0, 0%, 0%);
+    
+    /* shades */
+    --text-50: hsl(0, 0%, 95%);
+    --text-100: hsl(0, 0%, 90%);
+    --text-200: hsl(0, 0%, 80%);
+    --text-300: hsl(0, 0%, 70%);
+    --text-400: hsl(0, 0%, 60%);
+    --text-500: hsl(0, 0%, 50%);
+    --text-600: hsl(0, 0%, 40%);
+    --text-700: hsl(0, 0%, 30%);
+    --text-800: hsl(0, 0%, 20%);
+    --text-900: hsl(0, 0%, 10%);
+    --text-950: hsl(0, 0%, 5%);
+    
+    --background-50: hsl(0, 0%, 95%);
+    --background-100: hsl(0, 0%, 90%);
+    --background-200: hsl(0, 0%, 80%);
+    --background-300: hsl(0, 0%, 70%);
+    --background-400: hsl(0, 0%, 60%);
+    --background-500: hsl(0, 0%, 50%);
+    --background-600: hsl(0, 0%, 40%);
+    --background-700: hsl(0, 0%, 30%);
+    --background-800: hsl(0, 0%, 20%);
+    --background-900: hsl(0, 0%, 10%);
+    --background-950: hsl(0, 0%, 5%);
+    
+    --primary-50: hsl(257, 69%, 95%);
+    --primary-100: hsl(258, 73%, 90%);
+    --primary-200: hsl(257, 73%, 80%);
+    --primary-300: hsl(257, 73%, 70%);
+    --primary-400: hsl(257, 72%, 60%);
+    --primary-500: hsl(257, 72%, 50%);
+    --primary-600: hsl(257, 72%, 40%);
+    --primary-700: hsl(257, 73%, 30%);
+    --primary-800: hsl(257, 73%, 20%);
+    --primary-900: hsl(258, 73%, 10%);
+    --primary-950: hsl(257, 69%, 5%);
+    
+    --secondary-50: hsl(80, 12%, 95%);
+    --secondary-100: hsl(72, 10%, 90%);
+    --secondary-200: hsl(66, 10%, 80%);
+    --secondary-300: hsl(68, 10%, 70%);
+    --secondary-400: hsl(69, 10%, 60%);
+    --secondary-500: hsl(67, 10%, 50%);
+    --secondary-600: hsl(69, 10%, 40%);
+    --secondary-700: hsl(68, 10%, 30%);
+    --secondary-800: hsl(66, 10%, 20%);
+    --secondary-900: hsl(72, 10%, 10%);
+    --secondary-950: hsl(60, 12%, 5%);
+    
+    --accent-50: hsl(100, 12%, 95%);
+    --accent-100: hsl(96, 10%, 90%);
+    --accent-200: hsl(90, 10%, 80%);
+    --accent-300: hsl(92, 10%, 70%);
+    --accent-400: hsl(93, 10%, 60%);
+    --accent-500: hsl(91, 10%, 50%);
+    --accent-600: hsl(93, 10%, 40%);
+    --accent-700: hsl(92, 10%, 30%);
+    --accent-800: hsl(90, 10%, 20%);
+    --accent-900: hsl(96, 10%, 10%);
+    --accent-950: hsl(80, 12%, 5%);
+
+    --clr-facebook-50: hsl(217, 100%, 95%);
+    --clr-facebook-100: hsl(216, 100%, 90%);
+    --clr-facebook-200: hsl(217, 100%, 80%);
+    --clr-facebook-300: hsl(217, 100%, 70%);
+    --clr-facebook-400: hsl(217, 100%, 60%);
+    --clr-facebook-500: hsl(217, 100%, 50%);
+    --clr-facebook-600: hsl(217, 100%, 40%);
+    --clr-facebook-700: hsl(217, 100%, 30%);
+    --clr-facebook-800: hsl(217, 100%, 20%);
+    --clr-facebook-900: hsl(216, 100%, 10%);
+    --clr-facebook-950: hsl(217, 100%, 5%);
+
+    --clr-x-50: hsl(0, 0%, 95%);
+    --clr-x-100: hsl(0, 0%, 90%);
+    --clr-x-200: hsl(0, 0%, 80%);
+    --clr-x-300: hsl(0, 0%, 70%);
+    --clr-x-400: hsl(0, 0%, 60%);
+    --clr-x-500: hsl(0, 0%, 50%);
+    --clr-x-600: hsl(0, 0%, 40%);
+    --clr-x-700: hsl(0, 0%, 30%);
+    --clr-x-800: hsl(0, 0%, 20%);
+    --clr-x-900: hsl(0, 0%, 10%);
+    --clr-x-950: hsl(0, 0%, 5%);
+
+    --clr-reddit-50: hsl(16, 100%, 95%);
+    --clr-reddit-100: hsl(16, 100%, 90%);
+    --clr-reddit-200: hsl(16, 100%, 80%);
+    --clr-reddit-300: hsl(16, 100%, 70%);
+    --clr-reddit-400: hsl(16, 100%, 60%);
+    --clr-reddit-500: hsl(16, 100%, 50%);
+    --clr-reddit-600: hsl(16, 100%, 40%);
+    --clr-reddit-700: hsl(16, 100%, 30%);
+    --clr-reddit-800: hsl(16, 100%, 20%);
+    --clr-reddit-900: hsl(16, 100%, 10%);
+    --clr-reddit-950: hsl(16, 100%, 5%);
+
+    /* Gradients */
+
+    /* Typography */
+    --fs-1000: clamp(2.5rem, -1.61290322580645rem + 12.9032258064516vw, 10rem);
+    /* --fs-1000: 10rem; */
+    --fs-900: 5rem;
+    --fs-850: 2.5rem;
+    --fs-800: 2rem;
+    --fs-750: 1.875rem;
+    --fs-700: 1.75rem;
+    --fs-650: 1.5rem;
+    --fs-625: 1.375rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: .875rem;
+    --fs-200: .75rem;
+    --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
+    --ff-header: "Inter", sans-serif;
+    --ff-body: "Inter", sans-serif;
+
+    --border-radius: 8px;
+    --gutter-width: 0px;
+    --container-width: 100%;
+    --max-width: 100%;
+    --min-width: 375px;
+}
+
+/* CSS Reset  */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p,
+li,
+figcaption {
+    text-wrap: pretty;
+    max-width: 70ch;
+}
+
+img {
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-header);
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+}
+
+select {
+    appearance: none;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+  /* For IE10 */
+select::-ms-expand {
+    display: none;
+}
+
+/* Container queries */
+body > :is(header, footer),
+main,
+section, 
+article {
+    /* container-type: inline-size; */
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-300);
+    font-weight: 400;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    min-block-size: 100svh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 
+        minmax(var(--gutter-width), 1fr)
+        min(100% - calc(2 * var(--gutter-width)), var(--container-width))
+        minmax(var(--gutter-width), 1fr);
+    place-items: center;
+
+    background: var(--text);
+    background: linear-gradient(225deg, var(--text-800), var(--text), var(--text-900));
+    color: var(--text);
+    position: relative;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.disable-scrolling {
+    overflow-y: hidden;
+}
+
+/* --------------------- */
+
+.slide-left {
+    transform: translateX(-100vw);
+}
+
+.slide-right {
+    transform: translateX(100vw);
+}
+
+.slide-up {
+    transform: translateY(-100vh);
+}
+
+.slide-down {
+    transform: translateY(100vh);
+}
+
+.scale-up {
+    transform: scale(1.2);
+}
+
+.scale-down {
+    transform: scale(0);
+}
+
+.rotate-25 {
+    transform: rotateX(.25turn);
+}
+
+.scale,
+.slide,
+.rotate {
+    transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+/* --------------------- */
+
+.btn {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--btn-border-color, transparent);
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.4, 0, 0.2, 1), border .5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8), inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 100%;
+    background: var(--btn-hover-bg-color);
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--btn-hover-text-color, transparent);
+    border-color: var(--btn-hover-border-color, transparent);
+}
+
+.btn:hover::after {
+    inset: 0;
+}
+
+/* --------------------- */
+
+body > * {
+    grid-column: 2 / 3;
+}
+
+#spider-web-cursor {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--text);
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    background: transparent;
+    color: var(--background);
+    position: relative;
+    isolation: isolate;
+}
+
+h1, 
+h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: var(--fs-1000);
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: var(--fs-650);
+    font-weight: 700;
+    color: var(--background-300);
+}
+
+#contact-me {
+    --btn-bg-color: linear-gradient(to bottom, 
+    var(--background-50), 
+    var(--background), 
+    var(--background-100));
+    --btn-text-color: var(--primary);
+    --btn-border-color: var(--primary);
+    --btn-hover-bg-color: var(--primary);
+    --btn-hover-text-color: var(--background);
+    --btn-hover-border-color: var(--background);
+    --border-radius: 100px;
+    box-shadow: none;
+    padding: 1em 1.5em;
+    margin-top: 1rem;
+    width: 250px;
+    font-size: var(--fs-500);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#banner-dots {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* CSS styles for mobile devices */
+@media (max-width: 865px) {
+}
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- Split Type -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>GSAP Services Slider</title>
+</head>
+
+<body>
+
+    <header class="content-container">
+        <div class="wrapper">
+            <img src="./images/logoclearbg-90.webp" alt="logo image" class="logo">
+            <div class="name-bl">
+                <h1 class="name">Jean Marie Johnson</h1>
+                <h2 class="title">LICSW, Therapist</h2>
+            </div>    
+        </div>
+    </header>
+    <section id="hero" class="content-container">
+        <img src="./images/logoclearbg-700.webp" alt="logo image" class="logo">
+        <div class="name-bl">
+            <h1 class="name">Jean Marie Johnson</h1>
+            <h2 class="title">LICSW, Therapist</h2>
+        </div>
+    </section>
+    <!-- https://www.youtube.com/watch?v=iBcjzaOvE94 -->
+
+    <section id="my-services" class="content-container">
+        <h1 class="section-header">SERVICES</h1>
+
+        <!-- Slider -->
+        <div class="slider">
+
+            <!-- List Items/Services -->
+            <div class="services">
+
+                <!-- Item/Service -->
+                <div class="service active">
+                    <img src="./images/pexels-fauxels-3184398.jpg" alt="image placeholder">
+                    <div class="content">
+                        <h2>CBT</h2>
+                        <h3>Cognitive Behavioral Therapy</h3>
+                        <p>A common type of talk therapy (psychotherapy). You work with a mental health counselor (psychotherapist or therapist) in a structured way, attending a limited number of sessions.</p>
+                    </div>
+                </div>
+
+                <!-- Item/Service -->
+                <div class="service">
+                    <img src="./images/pexels-shvets-production-7176224.jpg" alt="image 
+                    placeholder">
+                    <div class="content">
+                        <h2>TF-CBT</h2>
+                        <h3>Trauma-Focused Cognitive Behavioral Therapy</h3>
+                        <p>Evidence-based treatment for children and adolescents, and their caregivers, to deal with the negative impact of traumatic events, such as witnessing violence, experiencing sexual or physical abuse, an unexpected death, or a natural disaster. It incorporates a trauma-sensitive model and interventions with cognitive behavioral, family and humanistic techniques.</p>
+                    </div>
+                </div>
+
+                <!-- Item/Service -->
+                <div class="service">
+                    <img src="./images/pexels-shvets-production-7176302.jpg" alt="image placeholder">
+                    <div class="content">
+                        <h2>SF-BT</h2>
+                        <h3>Solution-Focused Brief Therapy</h3>
+                        <p>Concentrates on finding solutions in the present time and exploring one’s hope for the future to find quicker resolution of one’s problems. This method takes the approach that you know what you need to do to improve your own life and, with the appropriate coaching and questioning, are capable of finding the best solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Item/Service -->
+                <div class="service">
+                    <img src="./images/pexels-edward-jenner-4031710.jpg" alt="image 
+                    placeholder">
+                    <div class="content">
+                        <h2 class="visually-hidden"></h2>
+                        <h3>Telehealth Therapy</h3>
+                        <p>I am happy to offer my clients the option of secure telehealth/online therapy.  Easy and confidential access from wherever you are (home, work, car) with no additional drive time in your schedule.  Ensures your physical health and safety from COVID (or other illnesses).  Most insurance companies will cover Telehealth the same as in office meetings.</p>
+                    </div>
+                </div>
+
+                <!-- Item/Service -->
+                <div class="service">
+                    <img src="./images/pexels-thirdman-5256816.jpg" alt="image placeholder">
+                    
+                    <div class="content">
+                        <h2 class="visually-hidden"></h2>
+                        <h3>Treatment Focus Areas</h3>
+                        <p>Anxiety, Depression, Trauma, Obsessive Complusive Disorder (OCD), Attention-deficit/hyperactivity disorder (ADHD).</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Button Arrows -->
+            <div class="arrows">
+                <button type="button" id="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button type="button" id="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="thumbnails">
+                <!-- Thumbnail -->
+                <div class="thumbnail active">
+                    <img src="./images/pexels-fauxels-3184398.jpg" alt="image placeholder">
+                    <div class="content">
+                        <h3>Cognitive Behavioral Therapy</h3>
+                    </div>
+                </div>
+                <!-- Thumbnail -->
+                <div class="thumbnail">
+                    <img src="./images/pexels-shvets-production-7176224.jpg" alt="image 
+                    placeholder">
+                    <div class="content">
+                        <h3>Trauma-Focused Cognitive Behavioral Therapy</h3>
+                    </div>
+                </div>
+                <!-- Thumbnail -->
+                <div class="thumbnail">
+                    <img src="./images/pexels-shvets-production-7176302.jpg" alt="image 
+                    placeholder">
+                    <div class="content">
+                        <h3>Solution-Focused Brief Therapy</h3>
+                    </div>
+                </div>
+                <!-- Thumbnail -->
+                <div class="thumbnail">
+                    <img src="./images/pexels-edward-jenner-4031710.jpg" alt="image 
+                    placeholder">
+                    <div class="content">
+                        <h3>Telehealth Therapy</h3>
+                    </div>
+                </div>
+                <!-- Thumbnail -->
+                <div class="thumbnail">
+                    <img src="./images/pexels-thirdman-5256816.jpg" alt="image placeholder">
+                    <div class="content">
+                        <h3>Treatment Focus Areas</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+    <!-- Inline SVG -->
+</body>
+
+
+</html>

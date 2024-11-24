@@ -1,0 +1,19 @@
+{
+     "folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../JavaScript/Codepen Projects/Beginner JavaScript"
+		},
+		{
+			"path": "../../JavaScript/Codepen Projects/Beginner JavaScript/beginner-javascript-master/exercises"
+		},
+		{
+			"path": "../../JavaScript/Codepen Projects/JavaScript30-master"
+		}
+	],
+     "settings": {
+          "liveServer.settings.multiRootWorkspaceName": "CodePen Projects"
+     }
+}

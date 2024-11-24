@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>iCodeThis - Statistics 2</title>
+</head>
+
+<body>
+    <article id="project-statistics">
+        <article class="panel" id="panel-1">
+            <section id="projects-by-type">
+                <h1 class="section-title">Projects by Type</h1>
+                <div class="types">
+                    <div class="type" data-value="software">
+                        <div class="conical">
+                            <div class="conical-label">
+                                <span class="value">26%</span>
+                            </div>
+                        </div>
+                        <span class="type-label">Software Development</span>
+                    </div>
+                    <div class="type" data-value="marketing">
+                        <div class="conical">
+                            <div class="conical-label">
+                                <span class="value">63%</span>
+                            </div>
+                        </div>
+                        <span class="type-label">Marketing</span>
+                    </div>
+                    <div class="type" data-value="sales">
+                        <div class="conical">
+                            <div class="conical-label">
+                                <span class="value">8%</span>
+                            </div>
+                        </div>
+                        <span class="type-label">Sales</span>
+                    </div>
+                    <div class="type" data-value="business">
+                        <div class="conical">
+                            <div class="conical-label">
+                                <span class="value">3%</span>
+                            </div>
+                        </div>
+                        <span class="type-label">Business</span>
+                    </div>
+                </div>
+            </section>
+            <section id="revenue">
+                <header>
+                    <h1 class="section-title">Revenue</h1>
+                    <div class="weeks">
+                        <button type="button" class="week active" value="current">
+                            <span>Current Week</span>
+                            <span class="value">$25,008.20</span>
+                        </button>
+                        <button type="button" class="week" value="previous">
+                            <span>Previous Week</span>
+                            <span class="value">$33,263.74</span>
+                        </button>    
+                    </div>
+                </header>
+                <main>
+                    <div class="revenue">
+                        <div class="y-axis">
+                            <div class="line" data-value="$40,000" aria-label="y-axis line"></div>
+                            <div class="line" data-value="$30,000" aria-label="y-axis line"></div>
+                            <div class="line" data-value="$20,000" aria-label="y-axis line"></div>
+                            <div class="line" data-value="$10,000" aria-label="y-axis line"></div>
+                            <div class="line" data-value="$0" aria-label="y-axis line"></div>
+                        </div>
+                        <div class="x-axis">
+                            <div class="tick" data-value="Mon" aria-label="X-axis tick"></div>
+                            <div class="tick" data-value="Tue" aria-label="X-axis tick"></div>
+                            <div class="tick" data-value="Wed" aria-label="X-axis tick"></div>
+                            <div class="tick" data-value="Thu" aria-label="X-axis tick"></div>
+                            <div class="tick" data-value="Fri" aria-label="X-axis tick"></div>
+                            <div class="tick" data-value="Sat" aria-label="X-axis tick"></div>
+                            <div class="tick" data-value="Sun" aria-label="X-axis tick"></div>
+                        </div>
+                        <canvas id="revenue-chart"></canvas>
+                    </div>
+                </main>
+            </section>
+        </article>
+        <article class="panel" id="panel-2">
+            <section id="projects-by-managers">
+                <h1 class="section-title">Project by Managers</h1>
+                <p>As a business owner or manager, the decision to opt for offshore software development can.</p>
+                <ul class="managers">
+                    <li class="manager">
+                        <span class="name">Jessi Olohan</span>
+                        <div class="progress-bar">
+                            <span class="bar">
+                                <span class="progress"></span>
+                            </span>
+                            <span class="value">43%</span>    
+                        </div>
+                    </li>
+                    <li class="manager">
+                        <span class="name">Marci Vlasov</span>
+                        <div class="progress-bar">
+                            <span class="bar">
+                                <span class="progress"></span>
+                            </span>
+                            <span class="value">24%</span>    
+                        </div>
+                    </li>
+                    <li class="manager">
+                        <span class="name">Robbyn Rogeron</span>
+                        <div class="progress-bar">
+                            <span class="bar">
+                                <span class="progress"></span>
+                            </span>
+                            <span class="value">31%</span>    
+                        </div>
+                    </li>
+                    <li class="manager">
+                        <span class="name">Lucio O'Lyhane</span>
+                        <div class="progress-bar">
+                            <span class="bar">
+                                <span class="progress"></span>
+                            </span>
+                            <span class="value">12%</span>    
+                        </div>
+                    </li>
+                    <li class="manager">
+                        <span class="name">Elwin Couttes</span>
+                        <div class="progress-bar">
+                            <span class="bar">
+                                <span class="progress"></span>
+                            </span>
+                            <span class="value">6%</span>    
+                        </div>
+                    </li>
+                    <li class="manager">
+                        <span class="name">Caroline Caldwell</span>
+                        <div class="progress-bar">
+                            <span class="bar">
+                                <span class="progress"></span>
+                            </span>
+                            <span class="value">1%</span>    
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <button type="button" class="btn" id="view-all">View All</button>
+        </article>
+    </article>
+    <!-- Inline SVG -->
+
+</body>
+
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Linearly Scaling Font Size Calculator</title>
+</head>
+
+<body>
+    <article id="respoonsive-font-size-calculator">
+        <form>
+            <div class="input-wrapper">
+                <label for="max-font-size">Max Font Size (rem)</label>
+                <input type="text" name="max-font-size" id="max-font-size" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="min-font-size">Min Font Size (rem)</label>
+                <input type="text" name="min-font-size" id="min-font-size" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="max-view-size">Max Viewport Size (pixels)</label>
+                <input type="text" name="max-view-size" id="max-view-size" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="min-view-size">Min Viewport Size (pixels)</label>
+                <input type="text" name="min-view-size" id="min-view-size" required>
+            </div>
+            <button type="submit" class="btn" id="calculate">Calculate</button>
+        </form>
+        <section>
+            <div class="output"></div>
+            <button type="button" class="btn" id="copy-to-clipboard" aria-label="copy to clipboard">
+                <i class="fa-regular fa-copy"></i>
+            </button>
+        </section>
+    </article>
+    <!-- Inline SVG -->
+</body>
+
+
+</html>

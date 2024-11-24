@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+
+<body>
+    <article class="container">
+        <header class="logo">
+            <img class="logo-image" src="./images/logo.svg" alt="logo image">
+        </header>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="./images/hero-desktop.jpg" type="image/webp">
+                <source media="(max-width: 800px)" srcset="./images/hero-mobile.jpg" type="image/webp">
+                <img class="hero-image" src="./images/hero-desktop.jpg" alt="hero image">
+            </picture>
+        </section>
+        <main>
+            <form>
+                <h1>WE'RE <strong>COMING SOON</strong></h1>
+                <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+                <!-- Email -->
+                <div class="form-control">
+                    <label for="email" class="visually-hidden">Email Address</label>
+                    <input type="email" placeholder="Email Address" id="email" name="email" />
+                    <!-- Error Icon/Message -->
+                    <svg class="icon-error">
+                        <use xlink:href="#icon-error"></use>
+                    </svg>
+                    <small class="error-message" data-field="email">Error message</small>
+                    <!-- Submit -->
+                    <button type="submit" class="btn" id="submit" aria-label="submit the form">
+                        <svg class="icon-arrow">
+                            <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                    </button>
+                    <!-- Confirmation -->
+                    <small class="confirmation">Thank you for subscribing.</small>
+                </div>
+            </form>
+        </main>
+    </article>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+    <!-- Inline SVG -->
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 20" id="icon-arrow">
+            <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-error">
+            <g fill="none" fill-rule="evenodd">
+            <circle cx="12" cy="12" r="12" fill="#F96464"></circle>
+            <path fill="#FFF" fill-rule="nonzero" d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"></path>
+            </g>
+        </symbol>
+    </svg>
+</body>
+
+
+</html>
