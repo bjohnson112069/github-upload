@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- Split Type -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>GSAP SVG Text Animation</title>
+</head>
+
+<body>
+    <article id="text-animation">
+
+        <div class="circle" id="circle-1"></div>
+        <div class="circle" id="circle-2"></div>
+        <div class="circle" id="circle-3"></div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com">
+            <defs>
+                <style bx:fonts="Bebas Neue">@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+            </defs>
+            <g>
+                <text style="font-family: Bebas Neue; font-size: 55px; white-space: pre;" x="177.399" y="98.165">ANIMATE</text>
+                <text style="font-family: Bebas Neue; font-size: 100px; white-space: pre;" x="190.445" y="200.501">SVG</text>
+                <text style="font-family: Bebas Neue; font-size: 55px; white-space: pre;" x="204.628" y="268.354">WITH</text>
+                <text style="font-family: Bebas Neue; font-size: 100px; white-space: pre;" x="172.648" y="373.472">GSAP</text>
+            </g>
+        </svg>
+    </article>
+    <!-- Inline SVG -->
+</body>
+
+
+</html>
