@@ -151,9 +151,12 @@ async function loadContent() {
             return `<!-- LIST ITEM -->
                 <li class="dessert" data-id="${item.id}">
                     <!-- IMAGE -->
-                    <div class="image">
+                    <picture class="image">
+                        <source media="(min-width: 1024px)" srcset="${item.image.desktop}" type="image/jpg">
+                        <source media="(min-width: 768px) and (max-width: 1024px)" srcset="${item.image.tablet}" type="image/jpg">                        
+                        <source media="(max-width: 768px)" srcset="${item.image.mobile}" type="image/jpg">
                         <img src="${item.image.desktop}" alt="${item.name}">
-                    </div>
+                    </picture>
                     <!-- ACTIONS -->
                     <div class="actions">
                         <button class="action" id="add-to-cart">
@@ -263,7 +266,7 @@ async function loadContent() {
         setTimeout(() => {
 
             window.scrollTo({ top: '0', behavior: 'smooth' });
-        }, 1000)
+        }, 1);
     }
     
     // Function to fet data from a specified end point

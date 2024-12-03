@@ -293,6 +293,7 @@ h1 {
 .desserts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 235px), 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 235px), 300px)); */
     gap: 1.25rem;
 }
 
@@ -309,6 +310,7 @@ h1 {
     transition: border-color .3s linear;
     overflow: hidden;
 }
+
 
 .dessert.selected .image {
     border-color: var(--clr-red);
@@ -708,8 +710,30 @@ h1 {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 /* CSS styles for mobile devices */
-@media (max-width: 550px) {
+@media (min-width: 1024px) {
+    .image {
+        aspect-ratio: 1.05 / 1;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
     .container {
         grid-template-columns: 1fr;
+    }
+    .image {
+        aspect-ratio: 1 / 1;
+
+    }
+    .cart-form {
+        justify-self: center;
+        width: min(500px, 100%);
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .image {
+
+        aspect-ratio: 1.54 / 1;
     }
 }
