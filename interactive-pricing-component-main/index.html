@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <!-- Google fonts -->
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+
+<body>
+    <article class="container">
+        <header>
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial. No credit card required.</p>
+            <svg class="pattern-circles" xmlns="http://www.w3.org/2000/svg" width="146" height="145"><g fill="none" fill-rule="evenodd" stroke="#CFD8EF"><circle cx="63" cy="82" r="62.5"/><circle cx="105" cy="41" r="40.5"/></g></svg>
+        </header>
+
+        <form>
+            <section class="top">
+                <!-- Pageviews Slider -->
+                <div class="range-input-group">
+                    <label for="page-views" id="page-views-label">
+                        <span class="num-pages">100K</span>
+                        <span>PAGEVIEWS</span>
+                    </label>
+                    <label id="pricing-label">
+                        <span class="price">$16.00</span>
+                        <span>/</span>
+                        <span class="frequency">month</span>
+                    </label>
+                    <input name="page-views" id="page-views" type="range" min="10000" max="200000" value="100000" step="10000">
+                </div>
+                <!-- Billing -->
+                <div class="checkbox-input-group">
+                    <input type="checkbox" class="visually-hidden" id="billing" name="billing" value="monthly">
+                    <label for="billing" id="billing-label">
+                        <span class="switch-label" id="monthly">Monthly Billing</span>
+                        <div class="switch">
+                            <span class="toggle"></span>
+                        </div>
+                        <span class="switch-label" id="yearly">Yearly Billing</span>
+                    </label>
+                </div>
+            </section>
+            <section class="bottom">
+                <ul class="features">
+                    <li class="feature">
+                        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+                        <span>Unlimited websites</span>
+                    </li>
+                    <li class="feature">
+                        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+                        <span>100% data ownership</span>
+                    </li>
+                    <li class="feature">
+                        <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+                        <span>Email reports</span>
+                    </li>
+                </ul>
+                <button type="button" class="btn" id="start-trial">Start my trial</button>
+            </section>
+        </form>
+    </article>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Brian Johnson</a>.
+    </div>
+    <!-- Inline SVG -->
+</body>
+
+
+</html>
