@@ -171,7 +171,7 @@ body {
         min(100% - calc(2 * var(--gutter-width)), var(--container-width))
         minmax(var(--gutter-width), 1fr);
     grid-template-rows: 1fr min-content;
-    align-items: center;
+    align-items: start;
 
     background: var(--clr-very-pale-blue);
     color: var(--clr-grayish-blue);
@@ -292,7 +292,7 @@ body > * {
     display: grid;
     grid-auto-rows: min-content;
     gap: 3rem;
-    margin-block: 1rem;
+    margin-block: 4rem;
     position: relative;
     overflow: hidden;
     padding: 10px;
@@ -333,7 +333,7 @@ form {
     box-shadow: 
         inset 2px 2px 4px -2px hsl(0, 0%, 100%, 80%), 
         inset -2px -2px 4px -2px hsl(0, 0%, 0%, 80%), 
-        0px 5px 10px -2px hsl(0, 0%, 0%, 50%);
+        0px 5px 10px -2px hsl(0, 0%, 0%, 20%);
     background: var(--clr-white);
     overflow: hidden;
 }
