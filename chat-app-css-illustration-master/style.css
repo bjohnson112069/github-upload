@@ -295,7 +295,7 @@ body > * {
     border-radius: 0 0 100vw 100vw;
     transform: translate(-35%, -63%);
     background: linear-gradient(to bottom, 
-        var(--clr-very-light-magenta), 
+        var(--clr-very-light-magenta) 60%, 
         var(--clr-light-violet));
 
 }
