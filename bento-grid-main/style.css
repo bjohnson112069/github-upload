@@ -534,7 +534,6 @@ h1 {
     .img-wrapper {
         aspect-ratio: 1;
         grid-column: 2 / span 1;
-        outline: 1px solid red;
     }
 
     .img-wrapper > img {
