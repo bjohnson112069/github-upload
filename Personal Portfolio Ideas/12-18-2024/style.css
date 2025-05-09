@@ -566,8 +566,9 @@ section {
 /* <!-- SECTION: ABOUT --> */
 #section__about {
      /* background-color: var(--background-200); */
-     background-color: var(--text);
-     color: var(--background);
+     /* background-color: var(--text);
+     color: var(--background); */
+     background-color: var(--background-50);
 }
 
 .about__wrapper {
@@ -582,7 +583,8 @@ section {
 
 .about__image {
      /* --image-fade--clr: var(--background-200); */
-     --image-fade--clr: var(--text);
+     /* --image-fade--clr: var(--text); */
+     --image-fade--clr: var(--background-50);
      border-radius: var(--border-radius);
      overflow: hidden;
      position: relative;
