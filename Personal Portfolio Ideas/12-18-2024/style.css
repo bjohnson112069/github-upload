@@ -16,7 +16,7 @@
      --text-500: hsl(0, 0%, 50%);
      --text-600: hsl(0, 0%, 40%);
      --text-700: hsl(0, 0%, 30%);
-     --text-800: hsl(0, 0%, 20%);
+     --text-800: hsl(0, 0%, 22%);
      --text-900: hsl(0, 0%, 10%);
      --text-950: hsl(0, 0%, 5%);
 
@@ -294,7 +294,8 @@ body {
 
 .faded-top-right::after {
      /* --image-fade--clr: red; */
-     box-shadow: inset -6rem 2rem 6rem 0rem var(--image-fade--clr, transparent);
+     /* box-shadow: inset -6rem 2rem 6rem 0rem var(--image-fade--clr, transparent); */
+     box-shadow: inset -6rem 6rem 3rem 0rem var(--image-fade--clr, transparent);
 }
 
 .faded-top-left::after {
@@ -476,6 +477,7 @@ section {
      font-weight: 400;
      font-size: var(--fs-300);
      letter-spacing: 2px;
+     color: hsl(0, 0%, 80%);
 }
 
 .hero__content--headline {
@@ -563,7 +565,9 @@ section {
 
 /* <!-- SECTION: ABOUT --> */
 #section__about {
-     background-color: var(--background-200);
+     /* background-color: var(--background-200); */
+     background-color: var(--text);
+     color: var(--background);
 }
 
 .about__wrapper {
@@ -577,7 +581,8 @@ section {
 }
 
 .about__image {
-     --image-fade--clr: var(--background-200);
+     /* --image-fade--clr: var(--background-200); */
+     --image-fade--clr: var(--text);
      border-radius: var(--border-radius);
      overflow: hidden;
      position: relative;
@@ -609,6 +614,7 @@ section {
      font-size: var(--fs-850);
      max-width: 30ch;
      text-transform: uppercase;
+     color: var(--primary);
 }
 
 .about__content--description {
@@ -619,7 +625,7 @@ section {
 
      & h3 {
           font-size: inherit;
-          margin-block: 0.5rem;
+          margin-block: 1rem;
           text-wrap: unset;
      }
 }
@@ -650,7 +656,9 @@ section {
 
 /* <!-- SECTION: EXPERIENCE --> */
 #section__experience {
-     background-color: var(--background);
+     /* background-color: var(--background); */
+     background-color: var(--text-800);
+     color: var(--background)
 }
 
 .experience__wrapper {
@@ -855,6 +863,7 @@ symbol path {
      box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8),
           inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8),
           0px 5px 10px -2px rgb(0, 0, 0, 0.5);
+     color: var(--text);
 }
 
 .event:nth-of-type(2n + 1) .content {
@@ -958,7 +967,8 @@ symbol path {
 
 /* <!-- SECTION: SKILLS--> */
 #section__skills {
-     background-color: var(--background-200);
+     /* background-color: var(--background-200); */
+     background-color: var(--background);
 }
 
 .skills__wrapper {
@@ -1019,8 +1029,13 @@ symbol path {
      display: grid;
      place-items: center;
      border: 5px solid var(--background);
-     background-color: var(--background-200);
+     /* background-color: var(--background-200); */
+     background-color: var(--text);
      font-size: var(--fs-900);
+
+     & i {
+          color: var(--background);
+     }
 }
 
 .skills__card > main {
