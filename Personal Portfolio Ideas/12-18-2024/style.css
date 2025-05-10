@@ -477,7 +477,7 @@ section {
      font-weight: 400;
      font-size: var(--fs-300);
      letter-spacing: 2px;
-     color: hsl(0, 0%, 80%);
+     color: var(--text-200);
 }
 
 .hero__content--headline {
@@ -681,7 +681,7 @@ section {
           font-size: var(--fs-850);
           font-weight: 700;
           text-align: center;
-          color: var(--primary);
+          /* color: var(--primary); */
           text-transform: uppercase;
      }
 
@@ -954,12 +954,18 @@ symbol path {
 
 .view-more-button.expanded ~ .more__information {
      grid-template-rows: 1fr;
-     padding-block: 0.75rem;
+     /* padding-block: 0.75rem; */
+     /* outline: 1px solid green; */
 }
 
 .more__information--list {
      display: grid;
      grid-auto-rows: min-content;
+
+     & span {
+          margin-block: 1rem .5rem;
+          font-weight: 600;
+     }
 }
 
 .more__information--list > li:not(:last-child) {
