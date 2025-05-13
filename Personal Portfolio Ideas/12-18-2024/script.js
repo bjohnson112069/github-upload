@@ -2,6 +2,7 @@ import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.169.0/
 
 function loadContent() {
     // configuration parameters
+    const scrollDown = document.querySelector('.scroll-down--icon')
     const header = document.querySelector('header');
     const navbar = document.querySelector('#navbar');
     const openNavbar = document.querySelector('#open-navbar-button');
@@ -61,6 +62,12 @@ function loadContent() {
     `;
 
     // FUNCTIONS
+    
+    function handleScrollDownLinkClick() {
+        // update the custom property for vertical scroll padding (sticky nav)
+        document.documentElement.style.setProperty('--scroll-padding', `0px`);
+    }
+
     function openSidebar() {
         navbar.classList.add('show');
         openNavbar.setAttribute('aria-expanded', 'true');
@@ -395,6 +402,7 @@ function loadContent() {
     closeNavbar.addEventListener('click', closeSidebar);
     overlay.addEventListener('click', closeSidebar);
     media.addEventListener('change', (e) => updateNavbar(e));
+    scrollDown.addEventListener('click', handleScrollDownLinkClick);
     navLinks.forEach(link => link.addEventListener('click', handleNavLinkClick));
     moreButtons.forEach(button => button.addEventListener('click', handleViewMoreClick));
 }
