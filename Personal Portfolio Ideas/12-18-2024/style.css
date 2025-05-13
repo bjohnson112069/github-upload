@@ -49,10 +49,9 @@
      /* Gradients */
 
      /* Typography */
-     --fs-1000: clamp(2.5rem, -1.61290322580645rem + 12.9032258064516vw, 10rem);
-     --fs-1000: 10rem;
+     --fs-1000: clamp( 2rem, 1.295774647887324rem + 3.004694835680751vw, 4rem );
      --fs-900: 3rem;
-     --fs-850: 2.5rem;
+     --fs-850: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem);
      --fs-800: 2rem;
      --fs-750: 1.875rem;
      --fs-700: 1.75rem;
@@ -61,6 +60,7 @@
      --fs-600: 1.25rem;
      --fs-500: 1.125rem;
      --fs-400: 1rem;
+     --fs-350: clamp( 0.875rem, 0.7869718309859155rem + 0.3755868544600939vw, 1.125rem );
      --fs-300: 0.875rem;
      --fs-200: 0.75rem;
      --fs-100: clamp(0.625rem, 0.3365rem + 1.2308vw, 0.875rem);
@@ -509,28 +509,21 @@ section {
 .hero__content--kicker {
      text-transform: uppercase;
      font-weight: 400;
-     /* font-size: var(--fs-300); */
-     font-size: 1.125rem;
+     font-size: var(--fs-350);
      letter-spacing: 4px;
      color: var(--text-200);
      margin-bottom: 1rem;
 }
 
 .hero__content--headline {
-     --fs-850: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem);
      font-weight: 400;
-     /* font-size: var(--fs-850); */
-     font-size: 4rem;
+     font-size: var(--fs-1000);
+     /* font-size: 4rem; */
      /* max-width: 30ch; */
 
      & span {
-          /* color: var(--primary); */
-          /* text-decoration: underline 5px var(--primary); */
-          /* -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: var(--background);
-          color: transparent; */
           background: linear-gradient(45deg, var(--primary-100), var(--primary-300));
-          /* background: linear-gradient(120deg, var(--background-200), var(--background-400)); */
+          background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           filter: drop-shadow(2px 2px 4px hsl(0, 0%, 0%));
@@ -670,7 +663,6 @@ section {
 }
 
 .about__content--headline {
-     --fs-850: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem);
      font-weight: 700;
      font-size: var(--fs-850);
      max-width: 30ch;
@@ -733,11 +725,6 @@ section {
 .section__title {
      justify-self: center;
      & h1 {
-          --fs-850: clamp(
-               2rem,
-               1.823943661971831rem + 0.7511737089201878vw,
-               2.5rem
-          );
           font-size: var(--fs-850);
           font-weight: 700;
           text-align: center;
