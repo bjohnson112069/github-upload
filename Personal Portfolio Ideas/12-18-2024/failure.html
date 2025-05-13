@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Not Sent - Something Went Wrong</title>
+  <style>
+    :root {
+      --text: hsl(0, 0%, 17%);
+      --background: hsl(0, 0%, 100%);
+      --primary: hsl(0, 92%, 36%);
+      --error: hsl(0, 80%, 50%);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .failure-container {
+      text-align: center;
+      background: var(--background);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      max-width: 420px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .failure-container h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--error);
+    }
+
+    .failure-container p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: var(--error);
+    }
+
+    .failure-container a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--error);
+      color: var(--background);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .failure-container a:hover {
+      background-color: hsl(0, 75%, 40%);
+    }
+
+    .sad-emoji {
+      display: inline-block;
+      animation: shake 0.5s infinite;
+      transform-origin: center center;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      50% { transform: rotate(10deg); }
+      75% { transform: rotate(-10deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="failure-container">
+    <div class="sad-emoji">😞</div>
+    <h1>Something Went Wrong</h1>
+    <p>Oops! There was an issue sending your message.<br>Please try again later.</p>
+    <a href="home.html">Return to Home</a>
+  </div>
+</body>
+</html>

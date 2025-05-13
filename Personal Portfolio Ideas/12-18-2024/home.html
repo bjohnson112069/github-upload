@@ -21,7 +21,12 @@
 
 <body>
     <!-- TEXT CONTAINER: SHADER -->
-    <section id="textContainer"></section>
+    <section id="textContainer">
+        <div class="scroll-down--icon">
+            <i class="fa-solid fa-angles-down"></i>
+            <span>Scroll Down</span>
+        </div>
+    </section>
     
     <!-- HEADER -->
     <header class="container">
@@ -53,7 +58,7 @@
                             <a href="#section__skills" class="nav__link">Skills</a>
                         </li>
                         <li class="nav__item">
-                            <a href="mailto: johnson-brian@verizon.net" target="_blank" class="nav__link" id="nav__link--contact">Contact Me</a>
+                            <a href="#contactForm" class="nav__link" id="nav__link--contact">Contact Me</a>
                         </li>
                     </ul>
                 </nav>
@@ -126,7 +131,7 @@
             <!-- SECTION TITLE -->
             <div class="section__title">
                 <h1>Professional Experience</h1>
-                <p>Below is a chronological summary of my work experience.  For more detailed information, please refer to my <a href="./resume/BrianJohnson 07-14-2023 Resume.docx" target="_blank" class="redirect-link">resume</a>.  Feel free to <a href="mailto: johnson-brian@verizon.net" target="_blank" class="redirect-link">contact me</a> with any questions.</p>
+                <p>Below is a chronological summary of my work experience.  For more detailed information, please refer to my <a href="./resume/BrianJohnson 07-14-2023 Resume.docx" target="_blank" class="redirect-link">resume</a>.  Feel free to <a href="#contactForm" class="redirect-link">contact me</a> with any questions.</p>
             </div>
 
             <!-- TIMELINE -->
@@ -326,9 +331,10 @@
             </div>
 
             <!-- GO TO SKILLS -->
-            <!-- <div class="experience__content--buttons">
+            <div class="experience__content--buttons">
                 <a href="#section__skills" class="btn" id="my-skills">My Skills</a>
-            </div> -->
+            </div>
+            
         </div>
     </section>
 
@@ -497,8 +503,20 @@
     <!-- FOOTER -->
     <footer class="container">
         <div class="footer__wrapper">
-            <!-- LINKS -->
-            <div class="links__wrapper">
+
+            <!-- CONNECT INFO -->
+            <div class="connect__info--wrapper">
+
+                <!-- LOGO -->
+                <h1 class="logo">Brian Johnson</h1>
+
+                <!-- CONTACT -->
+                <div class="contact__info--wrapper">
+                    <p class="contact__info">68 Long Hill Dr., Leominster MA 01453</p>
+                    <a href="mailto: johnson-brian@verizon.net" class="contact__info contact__info--link">johnson-brian@verizon.net</a>
+                    <a href="tel: +1-978-340-2643" class="contact__info contact__info--link">1-978-340-2643</a>
+                </div>
+
                 <!-- SOCIAL MEDIA -->
                 <div class="social__media--wrapper">
                     <a href="https://www.facebook.com/profile.php?id=100002816259928" target="_blank" class="btn fab fa-facebook" aria-label="Go to Facebook"></a>
@@ -507,6 +525,8 @@
                     <a href="http://www.linkedin.com/in/brian-johnson-15717880" target="_blank" class="btn fab fa-linkedin" aria-label="Go to LinkedIn"></a>
                     <a href="mailto: johnson-brian@verizon.net" target="_blank" class="btn fa fa-envelope" aria-label="Send Email"></a>
                 </div>
+
+                
                 <!-- NAVIGATION -->
                 <nav id="navbar">
                     <ul class="nav__list">
@@ -527,28 +547,49 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- CONTACT -->
-                <div class="contact__info--wrapper">
-                    <p class="contact__info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>68 Long Hill Dr., Leominster MA 01453</span>
-                    </p>
-                    <a href="mailto: johnson-brian@verizon.net" class="contact__info contact__info--link">
-                        <i class="fas fa-envelope"></i>
-                        <span>johnson-brian@verizon.net</span>
-                    </a>
-                    <a href="tel: +1-978-340-2643" class="contact__info contact__info--link">
-                        <i class="fas fa-mobile"></i>
-                        <span>1-978-340-2643</span>
-                    </a>
-                </div>
             </div>
-            <!-- SECTION TITLE -->
-            <div class="section__title">
-                <h1 class="logo">Brian Johnson</h1>
-                <small>Powered by X<span class="exponent">4</span>designs &copy; 2024</small>
+            
+
+            <!-- CONTACT FORM -->
+            <div class="contact__form--wrapper">
+                <h2 class="contact__form--title">Get in Touch</h2>
+
+
+                <form name="frm" id="contactForm" class="contact__form" action="https://formsubmit.co/aab1448a1c4ef541c1a652d31ceae674" method="post" novalidate>
+
+                    <!-- Required hidden config fields -->
+                    <input type="hidden" name="_subject" value="You have a Message from Your Site">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/Personal%20Portfolio%20Ideas/12-18-2024/thank-you.html">
+                    <input type="hidden" name="_failure" value="http://127.0.0.1:5501/Personal%20Portfolio%20Ideas/12-18-2024//failure.html">
+
+                    <div class="form__group">
+                        <input type="text" id="name" name="name" class="form__input" placeholder="Your Name" required>
+                        <span class="form__error" id="nameError"></span>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" id="email" name="email" class="form__input" placeholder="Your Email" required>
+                        <span class="form__error" id="emailError"></span>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" id="phone" name="phone" class="form__input" placeholder="Your Phone (optional)">
+                        <span class="form__error" id="phoneError"></span>
+                    </div>
+                    <div class="form__group">
+                        <textarea id="message" name="message" class="form__input form__textarea" placeholder="Your Message" required></textarea>
+                        <span class="form__error" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn form__submit">Send Message</button>
+                </form>
+
             </div>
         </div>
+
+        <!-- COPYRIGHT -->
+        <div class="copyright--wrapper">
+            <small>&copy; 2025 Brian Johnson</small>
+            <small>Leominster, MA</small>
+        </div>        
     </footer>
     <!-- Inline SVG -->
     <svg width="0" height="0" class="hidden">

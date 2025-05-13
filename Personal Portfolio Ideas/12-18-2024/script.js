@@ -117,7 +117,7 @@ function loadContent() {
         // Calculate the font size dynamically based on window width (or height)
         const fontSize = size || Math.floor(canvasWidth * 0.1); // 10% of window width
 
-        const fontFamily = font || 'Inter';
+        const fontFamily = font || 'Oswald';
         const fontStr = `${fontWeight} ${fontSize}px "${fontFamily}"`;
         
         ctx.font = fontStr;
@@ -204,7 +204,7 @@ function loadContent() {
     }
 
     function reloadTexture() {
-        const newTexture = createTextTexture('BRIAN JOHNSON', 'Inter', null, '#ffffff', '700');
+        const newTexture = createTextTexture('BRIAN JOHNSON', 'Oswald', null, '#ffffff', '700');
     
         // Update the texture in the shader material
         planeMesh.material.uniforms.u_texture.value = newTexture;
@@ -275,10 +275,10 @@ function loadContent() {
     gsap.registerPlugin(ScrollTrigger);
 
     // make sure the font is loaded ...
-    document.fonts.load('400 16px Inter').then(() => {
+    document.fonts.load('400 16px Oswald').then(() => {
         // console.log('font loaded')
         initializeScene(
-            createTextTexture('BRIAN JOHNSON', 'Inter', null, '#ffffff', '700')
+            createTextTexture('BRIAN JOHNSON', 'Oswald', null, '#ffffff', '700')
         );
         
         animateScene();
@@ -291,6 +291,104 @@ function loadContent() {
     });
     
     updateNavbar(media);
+
+    
+    // Contact Form Validation
+    const contactForm = document.getElementById('contactForm');
+    const formInputs = contactForm.querySelectorAll('.form__input');
+
+    // Validation patterns
+    const patterns = {
+        name: /^[a-zA-Z\s]{2,50}$/,
+        email: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+        phone: /^(\+\d{1,3}[- ]?)?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{4}$/,
+        message: /^[\s\S]{10,500}$/
+    };
+
+    // Error messages
+    const errorMessages = {
+        name: 'Please enter a valid name (2-50 characters, letters only)',
+        email: 'Please enter a valid email address',
+        phone: 'Please enter a valid phone number',
+        message: 'Please enter a message between 10 and 500 characters'
+    };
+
+    // Validate single input
+    function validateInput(input) {
+        const inputName = input.name;
+        const inputValue = input.value.trim();
+        const errorElement = document.getElementById(`${inputName}Error`);
+        
+        // Skip validation for empty optional fields
+        if (inputName === 'phone' && inputValue === '') {
+            return true;
+        }
+        
+        // Check if input matches pattern
+        const isValid = patterns[inputName].test(inputValue);
+        
+        // Update UI
+        if (isValid) {
+            input.classList.remove('error');
+            input.classList.add('success');
+            errorElement.classList.remove('show');
+        } else {
+            input.classList.remove('success');
+            input.classList.add('error');
+            errorElement.textContent = errorMessages[inputName];
+            errorElement.classList.add('show');
+        }
+        
+        return isValid;
+    }
+
+    // Add input event listeners
+    formInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            validateInput(input);
+        });
+        
+        input.addEventListener('blur', () => {
+            validateInput(input);
+        });
+    });
+
+    // Form submission
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        let isValid = true;
+        
+        // Validate all inputs
+        formInputs.forEach(input => {
+            if (!validateInput(input)) {
+                isValid = false;
+            }
+        });
+        
+        if (isValid) {
+            // Here you would typically send the form data to your server
+            console.log('Form is valid, ready to submit!');
+            contactForm.submit();
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'form__success';
+            successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            contactForm.appendChild(successMessage);
+            
+            // Reset form
+            contactForm.reset();
+            formInputs.forEach(input => {
+                input.classList.remove('success', 'error');
+            });
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        }
+    });
 
     // Event Listeners
     openNavbar.addEventListener('click', openSidebar);

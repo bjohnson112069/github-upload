@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Sent - Thank You!</title>
+  <style>
+    :root {
+      --text: hsl(0, 0%, 17%);
+      --background: hsl(0, 0%, 100%);
+      --primary: hsl(0, 92%, 36%);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .thank-you-container {
+      text-align: center;
+      background: var(--background);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      max-width: 420px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .thank-you-container h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .thank-you-container p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .thank-you-container a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--primary);
+      color: var(--background);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .thank-you-container a:hover {
+      background-color: hsl(0, 85%, 28%);
+    }
+
+    .wave-emoji {
+      display: inline-block;
+      animation: wave 2s infinite;
+      transform-origin: 70% 70%;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      15% { transform: rotate(14deg); }
+      30% { transform: rotate(-8deg); }
+      40% { transform: rotate(14deg); }
+      50% { transform: rotate(-4deg); }
+      60% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-container">
+    <div class="wave-emoji">👋</div>
+    <h1>Thanks for Reaching Out!</h1>
+    <p>Your message has been sent.<br>I’ll get back to you shortly.</p>
+    <a href="home.html">Return to Home</a>
+  </div>
+</body>
+</html>
