@@ -13,6 +13,7 @@ function loadContent() {
     const moreButtons = document.querySelectorAll('.view-more-button');
     let isMobile = false;
     const textContainer = document.querySelector('#textContainer');
+    const locationField = document.querySelector('#location');
     let easeFactor = 0.02;
     let scene, camera, renderer, planeMesh;
     let mousePosition = { x: 0.5, y: 0.5 };
@@ -376,24 +377,30 @@ function loadContent() {
         if (isValid) {
             // Here you would typically send the form data to your server
             console.log('Form is valid, ready to submit!');
-            contactForm.submit();
             
-            // Show success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'form__success';
-            successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-            contactForm.appendChild(successMessage);
+            // query the current HREF location and set it for the form redirect(s)
+            let href = location.href;
+            let loc = href.slice(0, href.indexOf('home.html') );
+            locationField.value = loc;
+
+            // update the HREF location information for the Thank You redirect field
+            const thanksRedirect = document.querySelector('input[name="_next"]');
+            let pageRef = thanksRedirect.value;
+            thanksRedirect.value = `${loc}${pageRef}`;
+
+            // update the HREF location information for the Failure redirect field
+            const failureRedirect = document.querySelector('input[name="_failure"]');
+            pageRef = failureRedirect.value;
+            failureRedirect.value = `${loc}${pageRef}`;
+            
+            // Submit the form
+            contactForm.submit();
             
             // Reset form
             contactForm.reset();
             formInputs.forEach(input => {
                 input.classList.remove('success', 'error');
-            });
-            
-            // Remove success message after 5 seconds
-            setTimeout(() => {
-                successMessage.remove();
-            }, 5000);
+            });            
         }
     });
 
