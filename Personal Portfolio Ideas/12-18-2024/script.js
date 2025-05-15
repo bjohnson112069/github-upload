@@ -11,9 +11,11 @@ function loadContent() {
     const media = window.matchMedia('(width <= 780px)');
     const navLinks = document.querySelectorAll('.nav__link');
     const moreButtons = document.querySelectorAll('.view-more-button');
-    let isMobile = false;
     const textContainer = document.querySelector('#textContainer');
     const locationField = document.querySelector('#location');
+    const images = document.querySelectorAll(".img__fade");
+    let imageIndex = 0;
+    let isMobile = false;
     let easeFactor = 0.02;
     let scene, camera, renderer, planeMesh;
     let mousePosition = { x: 0.5, y: 0.5 };
@@ -279,6 +281,12 @@ function loadContent() {
         reloadTexture();
     }
 
+    function swapImages() {
+        images[imageIndex].classList.remove("active");
+        imageIndex = (imageIndex + 1) % images.length;
+        images[imageIndex].classList.add("active");
+    }
+
     // on page load ...
     gsap.registerPlugin(ScrollTrigger);
 
@@ -300,6 +308,10 @@ function loadContent() {
     
     updateNavbar(media);
 
+    // Start with the first (about me) image
+    images[imageIndex].classList.add('active');
+    // Change image every 3 seconds
+    setInterval(swapImages, 3000);
     
     // Contact Form Validation
     const contactForm = document.getElementById('contactForm');
@@ -315,10 +327,10 @@ function loadContent() {
 
     // Error messages
     const errorMessages = {
-        name: 'Please enter a valid name (2-50 characters, letters only)',
+        name: 'Please enter a valid name (2-50 letters)',
         email: 'Please enter a valid email address',
         phone: 'Please enter a valid phone number',
-        message: 'Please enter a message between 10 and 500 characters'
+        message: 'Please enter a message between 10-500 characters'
     };
 
     // Validate single input
