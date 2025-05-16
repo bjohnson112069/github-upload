@@ -654,11 +654,13 @@ section {
      -webkit-mask-size: 100% 100%;
      mask-size: 100% 100%;
      opacity: 0;
+     visibility: hidden;
 }
 
 
 .about__image > img.active {
      opacity: .9;
+     visibility: visible;
 }
 
 .about__content {
@@ -1163,6 +1165,7 @@ symbol path {
 }
 
 .skills__name {
+     font-size: var(--fs-650);
      margin-top: 40px;
 }
 

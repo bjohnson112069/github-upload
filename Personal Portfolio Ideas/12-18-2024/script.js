@@ -288,7 +288,6 @@ function loadContent() {
     }
 
     // on page load ...
-    gsap.registerPlugin(ScrollTrigger);
 
     // make sure the font is loaded ...
     document.fonts.load('400 16px Oswald').then(() => {
@@ -310,8 +309,8 @@ function loadContent() {
 
     // Start with the first (about me) image
     images[imageIndex].classList.add('active');
-    // Change image every 3 seconds
-    setInterval(swapImages, 3000);
+    // Change image every 4 seconds
+    setInterval(swapImages, 4000);
     
     // Contact Form Validation
     const contactForm = document.getElementById('contactForm');
