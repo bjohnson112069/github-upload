@@ -394,6 +394,7 @@ header {
 /* LOGO */
 .logo {
      min-width: max-content;
+     font-family: var(--ff-header);
      font-size: var(--fs-800);
      font-weight: 700;
 }
@@ -727,7 +728,7 @@ section {
 .section__title {
      justify-self: center;
 
-     & h1 {
+     & h2 {
           font-size: var(--fs-850);
           font-weight: 700;
           text-align: center;
@@ -1071,7 +1072,7 @@ symbol path {
 }
 
 #section__skills .section__title {
-     & h1 {
+     & h2 {
           color: unset;
      }
 }
@@ -1166,6 +1167,7 @@ symbol path {
 
 .skills__name {
      font-size: var(--fs-650);
+     font-weight: 700;
      margin-top: 40px;
 }
 
@@ -1380,6 +1382,7 @@ footer .nav__link:hover {
 
 .contact__form--title {
      font-size: var(--fs-850);
+     font-weight: 700;
      color: var(--background);
      margin-bottom: 2rem;
      text-align: center;
