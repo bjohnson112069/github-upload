@@ -349,14 +349,19 @@ body {
      flex-direction: column;
      gap: 1rem;
      align-items: center;
-     z-index: 1;
-     
-     & i {
-          color: var(--text-800);
-          font-size: clamp( 3rem, 2.647887323943662rem + 1.5023474178403755vw, 4rem );
-          animation: pulsate 1.5s ease-in-out alternate-reverse infinite;
-     }
+     z-index: 1;     
 }
+.angles-down-icon {
+     width: clamp( 3rem, 2.647887323943662rem + 1.5023474178403755vw, 4rem );
+     aspect-ratio: 1;
+     animation: pulsate 1.5s ease-in-out alternate-reverse infinite;
+}
+
+symbol path {
+     fill: var(--primary);
+}
+
+
 
 @keyframes pulsate {
      100% {
@@ -866,9 +871,6 @@ section {
      height: 100%;
 }
 
-symbol path {
-     fill: var(--primary);
-}
 
 .details {
      grid-area: details;
