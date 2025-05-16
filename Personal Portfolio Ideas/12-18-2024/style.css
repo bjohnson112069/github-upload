@@ -1,5 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* Local Fonts */
+@font-face {
+     font-family: 'Inter';
+     src: url('./fonts/Inter-Regular.woff2') format('woff2');
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+}
+
+@font-face {
+     font-family: 'Inter';
+     src: url('./fonts/Inter-SemiBold.woff2') format('woff2');
+     font-weight: 600;
+     font-style: normal;
+     font-display: swap;
+}
+
+@font-face {
+     font-family: 'Inter';
+     src: url('./fonts/Inter-Bold.woff2') format('woff2');
+     font-weight: 700;
+     font-style: normal;
+     font-display: swap;
+}
+
+@font-face {
+     font-family: 'Oswald';
+     src: url('./fonts/oswald-latin-wght-normal.woff2') format('woff2');
+     font-weight: 400 700; /* Variable range limited to 400 & 700 */
+     font-style: normal;
+     font-display: swap;
+}
+
 
 :root {
      /* Colors */
@@ -70,6 +101,7 @@
      --ff-header: "Oswald", sans-serif;
      --ff-body: "Inter", sans-serif;
 
+     /* Custom Properties */
      --border-radius: 6px;
      --gutter-width: 2rem;
      --container-width: 1440px;
@@ -170,6 +202,7 @@ html {
 body {
      line-height: 1.5;
      font-family: var(--ff-body);
+       /* font-family: 'Inter', sans-serif; */
      font-size: var(--fs-400);
      font-weight: 400;
      max-width: var(--max-width);
@@ -578,7 +611,7 @@ section {
      --btn-hover-bg-color: var(--primary-700);
      --btn-hover-text-color: var(--background);
      --btn-hover-border-color: none;
-     font-weight: 600;
+     font-weight: 700;
      grid-template-columns: repeat(2, max-content);
      place-content: center;
      gap: 0.5rem;
@@ -915,7 +948,7 @@ section {
 .date {
      grid-area: date;
      min-width: max-content;
-     font-weight: 900;
+     font-weight: 700;
      padding: 1.25rem;
      width: 100%;
      height: 100%;
@@ -970,7 +1003,7 @@ section {
 }
 
 .company-name {
-     font-weight: var(--fw-500);
+     font-weight: 400;
      color: var(--text-200);
 }
 
@@ -1348,7 +1381,6 @@ footer {
      --btn-hover-text-color: var(--background);
      --btn-hover-border-color: none;
      box-shadow: none;
-     font-weight: 600;
      font-size: var(--fs-800);
      align-self: start;
      padding: 0.5rem;
