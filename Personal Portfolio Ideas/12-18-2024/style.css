@@ -1131,27 +1131,27 @@ symbol path {
 }
 
 #general__skills {
-     --icon-image: url("./images/general-skills-icon-removebg-preview.png");
+     --icon-image: url("./images/general-skills-icon.webp");
 }
 
 #nos__skills {
-     --icon-image: url("./images/network-os-icon-removebg-preview.png");
+     --icon-image: url("./images/network-os-icon.webp");
 }
 
 #hardware__skills {
-     --icon-image: url("./images/hardware-icon-removebg-preview.png");
+     --icon-image: url("./images/hardware-icon.webp");
 }
 
 #software__skills .skills__card--icon {
-     --icon-image: url("./images/network-tools-icon-removebg-preview.png");
+     --icon-image: url("./images/network-tools-icon.webp");
 }
 
 #programming__skills .skills__card--icon {
-     --icon-image: url("./images/programming-icon-removebg-preview.png");
+     --icon-image: url("./images/programming-icon.webp");
 }
 
 #productivity__skills .skills__card--icon {
-     --icon-image: url("./images/productivity-icon-removebg-preview.png");
+     --icon-image: url("./images/productivity-icon.webp");
 }
 
 .skills__card > main {
