@@ -101,6 +101,9 @@
      --ff-header: "Oswald", sans-serif;
      --ff-body: "Inter", sans-serif;
 
+       --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free'
+
      /* Custom Properties */
      --border-radius: 6px;
      --gutter-width: 2rem;
@@ -1373,7 +1376,7 @@ footer {
 }
 
 .social__media--wrapper > .btn {
-     --border-radius: unset;
+     --border-radius: 6px;
      --btn-bg-color: var(--text);
      --btn-text-color: var(--background);
      --btn-border-color: none;
@@ -1384,6 +1387,8 @@ footer {
      font-size: var(--fs-800);
      align-self: start;
      padding: 0.5rem;
+     aspect-ratio: 1;
+     width: 3rem;
 }
 
 /* <!-- NAVIGATION --> */
