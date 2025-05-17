@@ -177,6 +177,8 @@ function loadContent() {
         scene = new THREE.Scene();
 
         const aspectRatio = window.innerWidth / window.innerHeight;
+        const containerRect = textContainer.getBoundingClientRect();
+
         camera = new THREE.OrthographicCamera(
             -1,
             1,
@@ -207,7 +209,8 @@ function loadContent() {
 
         renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setClearColor(0xffffff, 1);
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        // renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(containerRect.width, containerRect.height);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
         textContainer.appendChild(renderer.domElement);
@@ -266,7 +269,8 @@ function loadContent() {
 
     function onWindowResize() {
         const aspectRatio = window.innerWidth / window.innerHeight;
-        
+        const containerRect = textContainer.getBoundingClientRect();
+
         // Update camera aspect ratio and projection matrix
         camera.left = -1;
         camera.right = 1;
@@ -275,7 +279,8 @@ function loadContent() {
         camera.updateProjectionMatrix();
     
         // Resize the renderer to match the new window size
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        // renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(containerRect.width, containerRect.height);
     
         // Reload the texture with updated canvas size
         reloadTexture();
