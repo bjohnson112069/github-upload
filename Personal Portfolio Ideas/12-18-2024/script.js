@@ -12,8 +12,9 @@ function loadContent() {
     const navLinks = document.querySelectorAll('.nav__link');
     const moreButtons = document.querySelectorAll('.view-more-button');
     const textContainer = document.querySelector('#textContainer');
-    const locationField = document.querySelector('#location');
     const images = document.querySelectorAll(".img__fade");
+    const skillCards = document.querySelectorAll('.skills__card');
+    const isTouchDevice = matchMedia('(hover: none) and (pointer: coarse)').matches;
     let imageIndex = 0;
     let isMobile = false;
     let easeFactor = 0.02;
@@ -107,6 +108,34 @@ function loadContent() {
 
         span.textContent = this.matches('.expanded') ? 'View Less' : 'View More';
     }
+
+    function handleSkillsCardHover(e) {
+        // handle MOUSEENTER event
+        if (e.type === 'mouseenter') {
+            this.classList.add('skills__card--active');
+
+        }
+
+        // handle MOUSELEAVE event
+        if (e.type === 'mouseleave') {
+            // iterate through all cards
+            // remove active class from all cards
+            skillCards.forEach(card => card.classList.remove('skills__card--active'));
+        }
+    }
+
+    function handleSkillsCardClick(e) {
+        // emulate hover behavior; one card active at any point in time
+        skillCards.forEach(card => {
+            if (card.id === this.id) {
+                card.classList.toggle('skills__card--active');
+            } else {
+                card.classList.remove('skills__card--active');
+            }
+        })
+
+    }
+
     function createTextTexture(text, font, size, color, fontWeight = "100") {
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
@@ -393,21 +422,25 @@ function loadContent() {
         if (isValid) {
             // Here you would typically send the form data to your server
             console.log('Form is valid, ready to submit!');
+
+            const locationField = document.querySelector("#location");
             
-            // query the current HREF location and set it for the form redirect(s)
-            // let href = location.href;
-            // let loc = href.slice(0, href.indexOf('home.html') );
-            // locationField.value = loc;
+            // Just use origin, which is protocol + domain + port (no path, no hash, no query)
+            const base = window.location.origin;
 
-            // update the HREF location information for the Thank You redirect field
-            // const thanksRedirect = document.querySelector('input[name="_next"]');
-            // let pageRef = thanksRedirect.value;
-            // thanksRedirect.value = `${loc}${pageRef}`;
+            if (locationField) {
+                locationField.value = base;
+            }
 
-            // update the HREF location information for the Failure redirect field
-            // const failureRedirect = document.querySelector('input[name="_failure"]');
-            // pageRef = failureRedirect.value;
-            // failureRedirect.value = `${loc}${pageRef}`;
+            const thanksRedirect = document.querySelector('input[name="_next"]');
+            const failureRedirect = document.querySelector('input[name="_failure"]');
+
+            if (thanksRedirect) {
+                thanksRedirect.value = `${base}/thank-you.html`;
+            }
+            if (failureRedirect) {
+                failureRedirect.value = `${base}/failure.html`;
+            }
             
             // Submit the form
             contactForm.submit();
@@ -416,7 +449,7 @@ function loadContent() {
             contactForm.reset();
             formInputs.forEach(input => {
                 input.classList.remove('success', 'error');
-            });            
+            });
         }
     });
 
@@ -428,6 +461,15 @@ function loadContent() {
     scrollDown.addEventListener('click', handleScrollDownLinkClick);
     navLinks.forEach(link => link.addEventListener('click', handleNavLinkClick));
     moreButtons.forEach(button => button.addEventListener('click', handleViewMoreClick));
+    skillCards.forEach(card => {
+        if (isTouchDevice) {
+            card.addEventListener('click', handleSkillsCardClick);
+        }
+        else {
+            card.addEventListener('mouseenter', handleSkillsCardHover);
+            card.addEventListener('mouseleave', handleSkillsCardHover);
+        }
+    });
 }
 
 window.addEventListener('DOMContentLoaded', loadContent);

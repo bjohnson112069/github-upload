@@ -462,19 +462,6 @@ header {
 .nav__link:focus {
      background-color: hsl(0, 0%, 0%, 20%);
 }
-/* 
-@media (hover: hover) {
-     .nav__link:hover {
-          background-color: hsl(0, 0%, 0%, 20%);
-     }
-}
-@media (hover: none) {
-     .nav__link:active,
-     .nav__link:focus {
-          background-color: hsl(0, 0%, 0%, 20%);
-     }
-} */
-
 
 .nav__link--active {
      border-color: var(--primary);
@@ -703,8 +690,6 @@ section {
      mask-size: 100% 100%;
      position: relative;
      overflow: hidden;
-     /* z-index: -1; */
-     outline: 2px solid green;
 
 }
 
@@ -1055,23 +1040,26 @@ section {
      font-weight: 700;
      background: transparent;
      transition: color 0.3s ease-in-out;
+     color: var(--text-400);
 }
 
 .view-more-button:hover,
-.view-more-button:active,
+
 .view-more-button:focus {
-     color: var(--text-400);
+     color: var(--background);
 }
 
 .view-more-button > i {
      transition: transform 0.3s linear;
 }
 
-.view-more-button.expanded {
+.view-more-button.expanded,
+.view-more-button:active {
      color: var(--primary-100);
 }
 
-.view-more-button.expanded > i {
+.view-more-button.expanded > i,
+.view-more-button:active > i {
      transform: rotate(0.5turn);
 }
 
@@ -1257,15 +1245,11 @@ section {
      z-index: 8;
 }
 
-.skills__card:hover > .skills__overlay,
-.skills__card:active > .skills__overlay,
-.skills__card:focus > .skills__overlay {
+.skills__card--active > .skills__overlay {
      transform: translateX(0);
 }
 
-.skills__card:hover .skill::before,
-.skills__card:active .skill::before,
-.skills__card:focus .skill::before {
+.skills__card--active .skill::before {
      animation: load 2s 0s;
      -webkit-animation: load 2s 0s;
      -moz-animation: load 2s 0s;
