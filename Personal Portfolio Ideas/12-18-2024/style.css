@@ -313,7 +313,7 @@ body {
 
 .btn:hover::after,
 .btn:active::after,
-.btn:focus {
+.btn:focus::after {
      inset: 0;
 }
 
@@ -418,6 +418,7 @@ header {
      top: 0;
      left: 0;
      background-color: var(--background-20);
+     border-bottom: 1px solid hsl(0, 0%, 0%, 20%);
      z-index: 10;
 }
 
@@ -425,7 +426,6 @@ header {
      display: flex;
      align-items: center;
      justify-content: space-between;
-     border-bottom: 1px solid hsl(0, 0%, 0%, 20%);
 }
 
 /* LOGO */
@@ -457,9 +457,24 @@ header {
      transition-property: background-color, color, border;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:active,
+.nav__link:focus {
      background-color: hsl(0, 0%, 0%, 20%);
 }
+/* 
+@media (hover: hover) {
+     .nav__link:hover {
+          background-color: hsl(0, 0%, 0%, 20%);
+     }
+}
+@media (hover: none) {
+     .nav__link:active,
+     .nav__link:focus {
+          background-color: hsl(0, 0%, 0%, 20%);
+     }
+} */
+
 
 .nav__link--active {
      border-color: var(--primary);
@@ -471,7 +486,9 @@ header {
      min-width: max-content;
 }
 
-#nav__link--contact:hover {
+#nav__link--contact:hover,
+#nav__link--contact:active,
+#nav__link--contact:focus {
      background-color: var(--primary-700);
 }
 
@@ -484,7 +501,11 @@ header {
 }
 
 #open-navbar-button:hover,
-#close-navbar-button:hover {
+#open-navbar-button:active,
+#open-navbar-button:focus,
+#close-navbar-button:hover,
+#close-navbar-button:active,
+#close-navbar-button:focus {
      color: hsl(0, 0%, 0%, 20%);
 }
 
@@ -636,11 +657,23 @@ section {
      object-fit: cover;
      position: relative;
      z-index: 0;
+
+     /* Combine both gradients into one using multiply effect */
+     -webkit-mask-image: 
+     linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 98%),
+     linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+     -webkit-mask-composite: destination-in;
+     mask-composite: intersect;
+
+     /* Ensure it's recognized as a mask in Safari */
      mask-image: 
      linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 98%),
      linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
      mask-composite: intersect;
-     -webkit-mask-composite: destination-in;
+
+     /* Additional compatibility properties */
+     -webkit-mask-size: cover;
+     -webkit-mask-repeat: no-repeat;
      mask-size: cover;
      mask-repeat: no-repeat;
 }
@@ -658,14 +691,21 @@ section {
 }
 
 .about__image {
+     --image-fade--clr: var(--background-75);
      display: grid;
      grid-template-areas: "image-stack";
-     --image-fade--clr: var(--background-75);
      border-radius: var(--border-radius);
-     overflow: hidden;
+     -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+     mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+     -webkit-mask-repeat: no-repeat;
+     mask-repeat: no-repeat;
+     -webkit-mask-size: 100% 100%;
+     mask-size: 100% 100%;
      position: relative;
-     /* margin-right: -15%; */
-     z-index: -1;
+     overflow: hidden;
+     /* z-index: -1; */
+     outline: 2px solid green;
+
 }
 
 .about__image::after {
@@ -675,7 +715,6 @@ section {
      box-shadow: inset 0 0 1rem 1rem var(--image-fade--clr, transparent);
 }
 
-
 .about__image > img {
      grid-area: image-stack;
      width: 100%;
@@ -683,18 +722,12 @@ section {
      aspect-ratio: 1/1.5;
      object-fit: cover;
      object-position: 50% 50%;
-     filter: drop-shadow(2px 2px 14px hsl(0, 0%, 0%, 25%));
      transition: opacity .8s ease-in-out;
-     -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-     mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-     -webkit-mask-repeat: no-repeat;
-     mask-repeat: no-repeat;
-     -webkit-mask-size: 100% 100%;
-     mask-size: 100% 100%;
+     -webkit-mask-image: none;
+     mask-image: none;
      opacity: 0;
      visibility: hidden;
 }
-
 
 .about__image > img.active {
      opacity: .9;
@@ -789,7 +822,9 @@ section {
                transition: color 0.3s ease-in-out;
           }
 
-          & a:hover {
+          & a:hover,
+          & a:active,
+          & a:focus {
                color: var(--primary-100);
           }
      }
@@ -930,7 +965,9 @@ section {
      transition: opacity 0.3s ease-in-out;
 }
 
-.details:hover::after {
+.details:hover::after,
+.details:active::after,
+.details:focus::after {
      opacity: 1;
 }
 
@@ -1020,7 +1057,9 @@ section {
      transition: color 0.3s ease-in-out;
 }
 
-.view-more-button:hover {
+.view-more-button:hover,
+.view-more-button:active,
+.view-more-button:focus {
      color: var(--text-400);
 }
 
@@ -1218,11 +1257,15 @@ section {
      z-index: 8;
 }
 
-.skills__card:hover > .skills__overlay {
+.skills__card:hover > .skills__overlay,
+.skills__card:active > .skills__overlay,
+.skills__card:focus > .skills__overlay {
      transform: translateX(0);
 }
 
-.skills__card:hover .skill::before {
+.skills__card:hover .skill::before,
+.skills__card:active .skill::before,
+.skills__card:focus .skill::before {
      animation: load 2s 0s;
      -webkit-animation: load 2s 0s;
      -moz-animation: load 2s 0s;
@@ -1355,7 +1398,9 @@ footer {
      transition: width 0.3s ease-in-out;
 }
 
-.contact__info--link:hover {
+.contact__info--link:hover,
+.contact__info--link:active,
+.contact__info--link:focus {
      color: var(--background);
 
      &::after {
@@ -1403,7 +1448,9 @@ footer .nav__link {
      color: var(--text-400);
 }
 
-footer .nav__link:hover {
+footer .nav__link:hover,
+footer .nav__link:active,
+footer .nav__link:focus {
      color: var(--primary-100);
      background-color: unset;
 }
@@ -1449,7 +1496,7 @@ footer .nav__link:hover {
 .form__input:focus {
      outline: none;
      border-color: var(--primary-color);
-     box-shadow: 0 0 0 3px var(--primary-color-light);
+     box-shadow: 0 0 0 3px var(--primary-color-100);
 }
 
 .form__textarea {
@@ -1492,7 +1539,9 @@ footer .nav__link:hover {
      transition: all 0.3s ease;
 }
 
-.form__submit:hover {
+.form__submit:hover,
+.form__submit:active,
+.form__submit:focus {
      background: var(--primary-color-dark);
      transform: translateY(-2px);
 }

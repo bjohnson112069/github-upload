@@ -395,19 +395,19 @@ function loadContent() {
             console.log('Form is valid, ready to submit!');
             
             // query the current HREF location and set it for the form redirect(s)
-            let href = location.href;
-            let loc = href.slice(0, href.indexOf('home.html') );
-            locationField.value = loc;
+            // let href = location.href;
+            // let loc = href.slice(0, href.indexOf('home.html') );
+            // locationField.value = loc;
 
             // update the HREF location information for the Thank You redirect field
-            const thanksRedirect = document.querySelector('input[name="_next"]');
-            let pageRef = thanksRedirect.value;
-            thanksRedirect.value = `${loc}${pageRef}`;
+            // const thanksRedirect = document.querySelector('input[name="_next"]');
+            // let pageRef = thanksRedirect.value;
+            // thanksRedirect.value = `${loc}${pageRef}`;
 
             // update the HREF location information for the Failure redirect field
-            const failureRedirect = document.querySelector('input[name="_failure"]');
-            pageRef = failureRedirect.value;
-            failureRedirect.value = `${loc}${pageRef}`;
+            // const failureRedirect = document.querySelector('input[name="_failure"]');
+            // pageRef = failureRedirect.value;
+            // failureRedirect.value = `${loc}${pageRef}`;
             
             // Submit the form
             contactForm.submit();
