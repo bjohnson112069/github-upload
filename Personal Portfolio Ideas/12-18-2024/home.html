@@ -19,36 +19,57 @@
     <meta name="twitter:description" content="Experienced in network security, optimization, and leadership.">
     <meta name="twitter:image" content="https://xfourdesigns.com/images/hero-image.webp">
 
-    <!-- CSS Style Sheet -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- CSS Style Sheets for local Font Awesome fonts -->
-    <link rel="stylesheet" href="./all.css" crossorigin="anonymous">
 
     <!-- Local fonts (Google & Font Awesome)-->
+    <link rel="preload" href="./fonts/oswald-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/oswald-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+    <!-- CSS Style Sheet -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="preload" href="./style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./style.css"></noscript>
+
+    <!-- CSS Style Sheets for local Font Awesome fonts -->
+
+    <!-- Non-blocking load of Font Awesome CSS -->
+    <link rel="preload" href="./all.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+    <noscript><link rel="stylesheet" href="./all.css" crossorigin="anonymous"></noscript>
+
     <!-- Canonical Tag - to prevent duplicate content -->
-    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="canonical" href="https://xfourdesigns.com/">
     <!-- JSON-LD structured data -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+    "@context": "https://schema.org",
+    "@graph": [
+        {
         "@type": "Person",
         "name": "Brian Johnson",
         "jobTitle": "Network Supervisor",
         "url": "https://xfourdesigns.com",
         "sameAs": [
             "https://github.com/bjohnson112069",
-            "http://www.linkedin.com/in/brian-johnson-15717880"
+            "https://www.linkedin.com/in/brian-johnson-15717880"
         ]
+        },
+        {
+        "@type": "WebSite",
+        "name": "XFour Designs",
+        "url": "https://xfourdesigns.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://xfourdesigns.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+        }
+    ]
     }
     </script>
+
     <!-- Javascript -->
     <script type="module" src="script.js" defer></script>
     <title>Brian Johnson | Network Supervisor & IT Leader</title>
@@ -58,7 +79,7 @@
     <!-- TEXT CONTAINER: SHADER -->
     <section id="textContainer">
         <a href="#section__header" class="scroll-down--icon">
-            <svg class="angles-down-icon">
+            <svg class="angles-down-icon" role="img" aria-label="arrows pointing down">
                 <use xlink:href="#angles-down-solid"></use>
             </svg>
             <span>Scroll Down</span>
@@ -120,7 +141,12 @@
                 </div>
             </div>
             <div class="hero__image">
-                <img src="./images/hero-image.webp" alt="Brian Johnson professional headshot in IT attire">
+                <img src="./images/hero-image.webp"
+                    alt="Brian Johnson professional headshot in IT attire"
+                    loading="lazy"
+                    decoding="async"
+                    width="534"
+                    height="467">
             </div>    
         </div>
     </section>
@@ -185,8 +211,8 @@
                 <div class="event">
                     <div class="icon">
                         <div class="sprite">
-                            <svg class="marquee__logo">
-                                <use xlink:href="#hcltech-new-logo" aria-label="HCL Tech logo"></use>
+                            <svg class="marquee__logo" role="img" aria-label="HCL Tech logo">
+                                <use xlink:href="#hcltech-new-logo"></use>
                             </svg>
                         </div>
                     </div>
@@ -218,8 +244,8 @@
                 <div class="event">
                     <div class="icon">
                         <div class="sprite">
-                            <svg class="marquee__logo">
-                                <use xlink:href="#att-logo" aria-label="AT&T logo"></use>
+                            <svg class="marquee__logo" role="img" aria-label="AT&T logo">
+                                <use xlink:href="#att-logo"></use>
                             </svg>
                         </div>
                     </div>
@@ -235,7 +261,7 @@
                             </button>
                             <div class="more__information">
                                 <ul class="more__information--list">
-                                    <span>Supervisor – Security Compliance Services:</span>
+                                    <li class="more__information--position">Supervisor – Security Compliance Services:</li>
                                     <li>Led global security compliance operations for 140+ commercial accounts across North America, Europe, and Latin America.</li>
                                     <li>Established and led a global Security Compliance Center of Excellence (CoE), improving governance and standardization across regional teams.</li>
                                     <li>Directed key compliance initiatives, including Health Checks, Identity and Access Management (IAM), Patch and Vulnerability Management, and Security Policy Reviews, ensuring continuous audit readiness and risk mitigation.</li>
@@ -244,12 +270,12 @@
                                     <li>Led cross-functional investigations of compliance variances, producing actionable reports that supported timely remediation and reduced repeat incidents.</li>
                                     <li>Improved team performance through strategic staffing, clear KPI alignment, and targeted coaching—resulting in increased team compliance scores and reduced turnover.</li>
                                     <li>Mentored global team members, fostering professional growth and maintaining high standards through consistent feedback, development planning, and documentation best practices.</li>
-                                    <span>Supervisor - LAN Services:</span>
+                                    <li class="more__information--position">Supervisor - LAN Services:</li>
                                     <li>Led cross-functional teams overseeing enterprise network operations for Fortune 500 financial clients, managing both traditional Core/Distribution/Access and modern Spine-Leaf POD architectures.</li>
                                     <li>Directed 24/7 MACD (Moves, Adds, Changes, Deletes) service teams, maintaining high availability, performance, and compliance with critical uptime SLAs.</li>
                                     <li>Partnered with internal stakeholders and clients to review operational KPIs, drive process improvements, and consistently exceed SLA commitments.</li>
                                     <li>Drove pre-sales and financial planning efforts—including network sizing, budgeting, and cost recovery strategies—aligning with executive leadership to support strategic initiatives.</li>
-                                    <span>Engineering Services:</span>
+                                    <li class="more__information--position">Engineering Services:</li>
                                     <li>Led cross-functional teams through the design and deployment of complex, large-scale network infrastructure projects—enhancing performance and boosting reliability.</li>
                                 </ul>
                             </div>
@@ -260,8 +286,8 @@
                 <div class="event">
                     <div class="icon">
                         <div class="sprite">
-                            <svg class="marquee__logo">
-                                <use xlink:href="#att-logo" aria-label="AT&T logo"></use>
+                            <svg class="marquee__logo" role="img" aria-label="AT&T logo">
+                                <use xlink:href="#att-logo"></use>
                             </svg>
                         </div>
                     </div>
@@ -290,8 +316,8 @@
                 <div class="event">
                     <div class="icon">
                         <div class="sprite">
-                            <svg class="marquee__logo">
-                                <use xlink:href="#ibm-logo" aria-label="IBM logo"></use>
+                            <svg class="marquee__logo" role="img" aria-label="IBM logo">
+                                <use xlink:href="#ibm-logo"></use>
                             </svg>
                         </div>
                     </div>
@@ -319,8 +345,8 @@
                 <div class="event">
                     <div class="icon">
                         <div class="sprite">
-                            <svg class="marquee__logo">
-                                <use xlink:href="#ibm-logo" aria-label="IBM logo"></use>
+                            <svg class="marquee__logo" role="img" aria-label="IBM logo">
+                                <use xlink:href="#ibm-logo"></use>
                             </svg>
                         </div>
                     </div>
@@ -347,8 +373,8 @@
                 <div class="event">
                     <div class="icon">
                         <div class="sprite">
-                            <svg class="marquee__logo">
-                                <use xlink:href="#isa-logo" aria-label="ISA logo"></use>
+                            <svg class="marquee__logo" role="img" aria-label="ISA logo">
+                                <use xlink:href="#isa-logo"></use>
                             </svg>
                         </div>
                     </div>
@@ -394,7 +420,7 @@
                 <!-- General -->
                 <li class="skills__card" id="general__skills">
                     <header>
-                        <div class="skills__card--icon" aria-label="General Skills Icon"></div>
+                        <div class="skills__card--icon" role="img" aria-label="General Skills Icon"></div>
                     </header>
                     <main>
                         <h3 class="skills__name">General</h3>
@@ -420,7 +446,7 @@
                 <!-- Network Operating Systems -->
                 <li class="skills__card" id="nos__skills">
                     <header>
-                        <div class="skills__card--icon" aria-label="Network Operating Skills Icon"></div>
+                        <div class="skills__card--icon" role="img" aria-label="Network Operating Skills Icon"></div>
                     </header>
                     <main>
                         <h3 class="skills__name">Network Operating Systems</h3>
@@ -440,7 +466,7 @@
                 <!-- Network Hardware -->
                 <li class="skills__card" id="hardware__skills">
                     <header>
-                        <div class="skills__card--icon" aria-label="Network & Security Hardware Icon"></div>
+                        <div class="skills__card--icon" role="img" aria-label="Network & Security Hardware Icon"></div>
                     </header>
                     <main>
                         <h3 class="skills__name">Network & Security Hardware</h3>
@@ -460,7 +486,7 @@
                 <!-- Network Tools -->
                 <li class="skills__card" id="software__skills">
                     <header>
-                        <div class="skills__card--icon" aria-label="Network Tools Icon"></div>
+                        <div class="skills__card--icon" role="img" aria-label="Network Tools Icon"></div>
                     </header>
                     <main>
                         <h3 class="skills__name">Network Tools</h3>
@@ -487,7 +513,7 @@
                 <!-- Programming Languages -->
                 <li class="skills__card" id="programming__skills">
                     <header>
-                        <div class="skills__card--icon" aria-label="Programming Languages Icon"></div>
+                        <div class="skills__card--icon" role="img" aria-label="Programming Languages Icon"></div>
                     </header>
                     <main>
                         <h3 class="skills__name">Programming Languages</h3>
@@ -508,7 +534,7 @@
                 <!-- Productivity Applications -->
                 <li class="skills__card" id="productivity__skills">
                     <header>
-                        <div class="skills__card--icon" aria-label="Productivity Applications Icon"></div>
+                        <div class="skills__card--icon" role="img" aria-label="Productivity Applications Icon"></div>
                     </header>
                     <main>
                         <h3 class="skills__name">Productivity Applications</h3>

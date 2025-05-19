@@ -383,22 +383,32 @@ body {
      align-items: center;
      z-index: 1;     
 }
+
 .angles-down-icon {
      width: clamp( 3rem, 2.647887323943662rem + 1.5023474178403755vw, 4rem );
-     aspect-ratio: 1;
+     aspect-ratio: 448 / 512;
+     height: auto;
      animation: pulsate 1.5s ease-in-out alternate-reverse infinite;
+     transform: scale(1);
+     transform-origin: center;
+     will-change: transform;
+     pointer-events: none;
 }
 
 symbol path {
      fill: var(--primary);
 }
 
-
-
 @keyframes pulsate {
      100% {
-          scale: 1.2;
+          transform: scale(1.2);
           color: var(--primary);
+     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+     .angles-down-icon {
+          animation: none;
      }
 }
 
@@ -831,10 +841,12 @@ section {
 }
 
 .event:nth-of-type(2n + 1) {
+     --line-direction: -1;
      grid-template-columns: 1fr min-content;
      grid-template-areas: "details icon";
 }
 .event:nth-of-type(2n) {
+     --line-direction: 1;
      grid-template-columns: min-content 1fr;
      grid-template-areas: "icon details";
 }
@@ -857,29 +869,34 @@ section {
      background: var(--primary);
      box-shadow: inset 2px 2px 4px -2px rgb(255, 255, 255, 0.8),
           inset -2px -2px 4px -2px rgb(0, 0, 0, 0.8);
+     will-change: width, height;
      z-index: -1;
 }
 
 .icon::before {
      top: 50%;
-     left: 0%;
-     width: 0;
+     width: calc(50% + var(--event-gap));
      height: var(--line-thickness);
-     transform: translate(calc(-1 * var(--event-gap)), -50%);
+     transform: scaleX(0);
+     transform-origin: left center;
      animation: fillHorizontal 2s forwards 2s ease-in-out;
 }
 
 .event:nth-child(2n) .icon::before {
      left: 50%;
-     transform: translate(0%, -50%);
+}
+
+.event:nth-child(2n+1) .icon::before {
+     right: 50%;
 }
 
 .icon::after {
      top: 50%;
      left: 50%;
      width: var(--line-thickness);
-     height: 0;
-     transform: translate(-50%, 0%);
+     height: calc(50% + var(--timeline-gap));
+     transform: scaleY(0);
+     transform-origin: center top;
 }
 
 .event:not(:last-of-type) .icon::after {
@@ -887,14 +904,14 @@ section {
 }
 
 @keyframes fillHorizontal {
-     100% {
-          width: calc(50% + var(--event-gap));
+     to {
+          transform: scaleX(1);
      }
 }
 
 @keyframes fillVertical {
-     100% {
-          height: calc(50% + var(--timeline-gap));
+     to {
+          transform: scaleY(1);
      }
 }
 
@@ -921,6 +938,7 @@ section {
 .marquee__logo {
      width: 100%;
      height: 100%;
+     object-fit: contain;
 }
 
 
@@ -1081,19 +1099,21 @@ section {
 .more__information--list {
      display: grid;
      grid-auto-rows: min-content;
-
-     & span {
-          margin-block: 1rem .5rem;
-          font-weight: 600;
-     }
 }
 
 .more__information--list > li {
      padding-block: 0.5rem;
+     border-bottom: 1px solid hsl(0, 0%, 100%, 30%);
 }
 
-.more__information--list > li:not(:last-child) {
-     border-bottom: 1px solid hsl(0, 0%, 100%, 30%);
+.more__information--position,
+.more__information--list > li:last-child {
+     border-bottom: none !important;
+}
+
+.more__information--position {
+     margin-block: 1rem .5rem;
+     font-weight: 600;
 }
 
 
@@ -1657,22 +1677,20 @@ footer .nav__link:focus {
      }
 
      .event:nth-of-type(n) .content {
-
           border-radius: 0 0 var(--border-radius) var(--border-radius);
      }
 
      .event:nth-of-type(n) .icon::before {
+          top: 50%;
           left: 50%;
-          transform: translate(-50%, 0%);
           width: var(--line-thickness);
-          height: 0;
-          animation: mobileFillEventGap 2s forwards 2s ease-in-out;
+          height: calc(50% + var(--event-gap));
      }
 
      .event:nth-of-type(n) .icon::after {
-          top: 0;
-          transform: translate(-50%, calc(-1 * var(--timeline-gap)));
-          animation: mobileFillTimelineGap 2s forwards 2s ease-in-out;
+          top: calc(-1 * var(--timeline-gap));
+          transform-origin: center bottom;
+          animation: fillVertical 2s forwards 2s ease-in-out;
      }
 
      .event:first-of-type .icon::after {
